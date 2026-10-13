@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-216,
+				472
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "GODFIELD I"
+		},
+		{
+			"offsets": [
+				-250,
+				391
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "GODFIELD L"
+		},
+		{
+			"offsets": [
+				-370,
+				569
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GODFIELD D"
+		},
+		{
+			"offsets": [
+				-336,
+				570
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "GODFIELD U"
+		},
+		{
+			"offsets": [
+				-210,
+				498
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "GODFIELD R"
+		},
+		{
+			"offsets": [
+				-220,
+				467
+			],
+			"loop": false,
+			"fps": 34,
+			"anim": "transformation",
+			"indices": [],
+			"name": "GODFIELD T"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GODFIELD_ALTO",
+	"position": [
+		-110,
+		190
+	],
+	"healthicon": "god-real",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		100,
+		-470
+	],
+	"sing_duration": 6.1,
+	"scale": 1.6,
+	"_editor_isPlayer": false
+}

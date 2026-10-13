@@ -1,0 +1,142 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				285,
+				136
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BlueBf__Alt L"
+		},
+		{
+			"offsets": [
+				315,
+				140
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "idle",
+			"loop": false,
+			"name": "BlueBf__Alt I"
+		},
+		{
+			"offsets": [
+				330,
+				120
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"fps": 14,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BlueBf__Alt down"
+		},
+		{
+			"offsets": [
+				324,
+				117
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			"fps": 14,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BlueBf__Alt up"
+		},
+		{
+			"offsets": [
+				382,
+				133
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BlueBf__Alt R"
+		},
+		{
+			"offsets": [
+				407,
+				129
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "BlueBf__Alt left_miss"
+		},
+		{
+			"offsets": [
+				355,
+				140
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "BlueBf__Alt down_miss"
+		},
+		{
+			"offsets": [
+				276,
+				132
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "BlueBf__Alt rigth_miss"
+		},
+		{
+			"offsets": [
+				344,
+				108
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "BlueBf__Alt up_miss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/BlueBf__Alt",
+	"position": [
+		-150,
+		450
+	],
+	"healthicon": "Bf_Blue_Icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		103,
+		114,
+		169
+	],
+	"camera_position": [
+		-250,
+		350
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

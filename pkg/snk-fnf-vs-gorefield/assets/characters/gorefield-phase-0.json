@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "GOREFIELD IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GOREFIELD L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-70
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "GOREFIELD DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				50
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "GOREFIELD U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GOREFIELD R",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "damage",
+			"loop": false,
+			"name": "GOREFIELD DAMAGE"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gorefield-phase-0",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gorefield-phase-0",
+	"flip_x": false,
+	"healthbar_colors": [
+		136,
+		193,
+		112
+	],
+	"camera_position": [
+		-230,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,413 @@
+{
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"loopHold": false,
+	"startingAnimation": "idle",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			-10
+		],
+		"iconDivisor": null,
+		"scale": 1,
+		"color": null,
+		"isBopable": null,
+		"id": "defaultStatic",
+		"flipX": false
+	},
+	"assetPath": "embded:characters/defaultStatic",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"loopHoldFrame": 3,
+	"scale": 1,
+	"name": "Default Static",
+	"cameraOffsets": [
+		0,
+		-10
+	],
+	"flipX": true,
+	"isPixel": false,
+	"singTime": 4,
+	"pixelIcon": {
+		"originOffsets": [
+			0,
+			0
+		],
+		"id": "bf",
+		"flipX": false
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "idle",
+			"flipX": false,
+			"name": "idle",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				88,
+				133
+			],
+			"frameRate": 24,
+			"prefix": "left",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				88,
+				133
+			],
+			"frameRate": 24,
+			"prefix": "left",
+			"frameIndices": [
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singLEFT-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				88,
+				133
+			],
+			"frameRate": 24,
+			"prefix": "left",
+			"frameIndices": [
+				5,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT-end"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				23,
+				318
+			],
+			"frameRate": 24,
+			"prefix": "up",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				23,
+				318
+			],
+			"frameRate": 24,
+			"prefix": "up",
+			"frameIndices": [
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singUP-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				23,
+				318
+			],
+			"frameRate": 24,
+			"prefix": "up",
+			"frameIndices": [
+				5,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singUP-end"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				75,
+				-88
+			],
+			"frameRate": 24,
+			"prefix": "down",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				75,
+				-88
+			],
+			"frameRate": 24,
+			"prefix": "down",
+			"frameIndices": [
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singDOWN-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				75,
+				-88
+			],
+			"frameRate": 24,
+			"prefix": "down",
+			"frameIndices": [
+				5,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN-end"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				37,
+				243
+			],
+			"frameRate": 24,
+			"prefix": "right",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				37,
+				243
+			],
+			"frameRate": 24,
+			"prefix": "right",
+			"frameIndices": [
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singRIGHT-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				37,
+				243
+			],
+			"frameRate": 24,
+			"prefix": "right",
+			"frameIndices": [
+				5,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT-end"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-45,
+				72
+			],
+			"frameRate": 24,
+			"prefix": "missup",
+			"flipX": false,
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-45,
+				72
+			],
+			"frameRate": 24,
+			"prefix": "missup",
+			"frameIndices": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singUPmiss-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				38,
+				-20
+			],
+			"frameRate": 24,
+			"prefix": "missleft",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				38,
+				-20
+			],
+			"frameRate": 24,
+			"prefix": "missleft",
+			"frameIndices": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singLEFTmiss-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				30,
+				-180
+			],
+			"frameRate": 24,
+			"prefix": "missdown",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				30,
+				-180
+			],
+			"frameRate": 24,
+			"prefix": "missdown",
+			"frameIndices": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singDOWNmiss-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-75,
+				-60
+			],
+			"frameRate": 24,
+			"prefix": "missright",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-75,
+				-60
+			],
+			"frameRate": 24,
+			"prefix": "missright",
+			"frameIndices": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "singRIGHTmiss-hold"
+		}
+	]
+}

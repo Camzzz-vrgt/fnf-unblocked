@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				200,
+				821
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "GOD CAT I"
+		},
+		{
+			"offsets": [
+				166,
+				869
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "GOD CAT L"
+		},
+		{
+			"offsets": [
+				210,
+				720
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GOD CAT D"
+		},
+		{
+			"offsets": [
+				63,
+				1050
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "GOD CAT U"
+		},
+		{
+			"offsets": [
+				191,
+				817
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "GOD CAT R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GOD_CAT",
+	"position": [
+		20,
+		952
+	],
+	"healthicon": "lasagnacat-god",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-100,
+		-670
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

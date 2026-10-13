@@ -1,0 +1,164 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "garfield depresivo idle"
+		},
+		{
+			"offsets": [
+				177,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "garfield depresivo left miss"
+		},
+		{
+			"offsets": [
+				35,
+				-89
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "garfield depresivo down miss"
+		},
+		{
+			"offsets": [
+				-46,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "garfield depresivo up miss"
+		},
+		{
+			"offsets": [
+				74,
+				-26
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "garfield depresivo left"
+		},
+		{
+			"offsets": [
+				-48,
+				-7
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "garfield depresivo right"
+		},
+		{
+			"offsets": [
+				-36,
+				-43
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "garfield depresivo up"
+		},
+		{
+			"offsets": [
+				60,
+				-231
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "garfield depresivo down"
+		},
+		{
+			"offsets": [
+				-44,
+				22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "garfield depresivo right miss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gatito",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "garsad",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		122,
+		40
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				639,
+				9
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "Binky i"
+		},
+		{
+			"offsets": [
+				719,
+				20
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Binky d"
+		},
+		{
+			"offsets": [
+				594,
+				30
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Binky u"
+		},
+		{
+			"offsets": [
+				641,
+				26
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Binky l"
+		},
+		{
+			"offsets": [
+				662,
+				30
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Binky r"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/Binky",
+	"position": [
+		-150,
+		-50
+	],
+	"healthicon": "Binky_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		50,
+		119
+	],
+	"camera_position": [
+		-220,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

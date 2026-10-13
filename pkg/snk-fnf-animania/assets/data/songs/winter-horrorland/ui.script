@@ -1,0 +1,404 @@
+
+import flixel.text.FlxTextBorderStyle;
+import funkin.Highscore;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.ui.FlxFixedText;
+import funkin.play.components.CutsceneHandler;
+import funkin.input.Control;
+
+import flixel.text.FlxTextFormat;
+import flixel.text.FlxTextFormatMarkerPair;
+
+function onCreate()
+{
+	trace("Create this Script");
+
+	if (isChartingMode)
+		return;
+
+	skipCountDown = true;
+
+	poopBarUp = new FunkinSprite();
+	poopBarUp.zoomFactor = 0;
+	poopBarUp.scrollFactor.set();
+	poopBarUp.shouldDraw = true;
+	poopBarUp.makeGraphic(1, 1, FlxColor.BLACK);
+	poopBarUp.scale.set(FlxG.width * 1.5, FlxG.height * 1.25);
+	poopBarUp.updateHitbox();
+	poopBarUp.x = (FlxG.width - poopBarUp.width) / 2;
+	poopBarUp.y = (FlxG.height - poopBarUp.height * 2) / 2;
+	poopBarUp.y -= 200;
+	add(poopBarUp);
+
+	poopBarDown = new FunkinSprite();
+	poopBarDown.zoomFactor = 0;
+	poopBarDown.scrollFactor.set();
+	poopBarDown.shouldDraw = true;
+	poopBarDown.makeGraphic(1, 1, FlxColor.BLACK);
+	poopBarDown.scale.set(FlxG.width * 1.5, FlxG.height * 1.25);
+	poopBarDown.updateHitbox();
+	poopBarDown.x = (FlxG.width - poopBarDown.width) / 2;
+	poopBarDown.y = FlxG.height / 2;
+	poopBarDown.y += 200;
+	add(poopBarDown);
+}
+
+var allowEnd:Bool = false;
+function onEndSong()
+{
+	if (!allowEnd)
+	{
+		allowEnd = true;
+		breakConductor = true;
+
+		new FlxTimer().start(1, _ -> endSong());
+		return false;
+	}
+	return true;
+}
+
+var playedCutscene:Bool = false;
+function onCoundDownStart()
+{
+	if (!playedCutscene && !isChartingMode && !PlayState.seenCutscene)
+	{
+		handleCutscene();
+		playedCutscene = true;
+		//new FlxTimer().start(7.8, _ -> startCountdown());
+		doDeathHint = true;
+		return false;
+	} else if (PlayState.seenCutscene) {
+		tweenCameraZoom(1.6, 0, false);
+		neededZoom = 1.6 * stageZoom;
+
+		var blackScreen = new FunkinSprite();
+		blackScreen.zIndex = 25500;
+		blackScreen.scrollFactor.set();
+		blackScreen.zoomFactor = 0;
+		blackScreen.makeGraphic(1, 1, FlxColor.BLACK);
+		blackScreen.scale.set(FlxG.width, FlxG.height);
+		blackScreen.updateHitbox();
+		add(blackScreen);
+
+		FlxTween.tween(blackScreen, {alpha: 0}, 1.8, {ease: FlxEase.backOut});
+		refresh();
+
+	}
+	PlayState.seenCutscene = true;
+	PlayState.instance.isInCutscene = false;
+	chromaEffect(.05, 2, "sineInOut");
+	return true;
+}
+
+var cutsceneSound:FunkinSound;
+var cutsceneBf:FlxAtlasSprite;
+var handler:CutsceneHandler;
+function handleCutscene()
+{
+	handler = new CutsceneHandler(PlayState?.instance);
+	add(handler);
+	trace("added handler");
+	PlayState.instance.isInCutscene = true;
+
+	handler.endTime = 7.8;
+	memorySeen = true;
+	var ogUpY = poopBarUp.y;
+	var ogDownY = poopBarDown.y;
+	chromaEffect(.1, .0, "sineOut");
+
+	var blackScreen = new FunkinSprite();
+	blackScreen.zIndex = 25500;
+	blackScreen.scrollFactor.set();
+	blackScreen.zoomFactor = 0;
+	blackScreen.makeGraphic(1, 1, FlxColor.BLACK);
+	blackScreen.scale.set(FlxG.width, FlxG.height);
+	blackScreen.updateHitbox();
+	add(blackScreen);
+
+	handler.onStart.add(() -> {
+		poopBarUp.y -= 100;
+		poopBarDown.y += 100;
+
+		FunkinMemory.cacheSound(Paths.soundStr("songs/lemon-intro"));
+		cutsceneSound = FunkinSound.load(Paths.sound("songs/lemon-intro"), 1, false, true, false);
+
+		cutsceneBf = new FunkinSprite(currentStage.getBoyfriend().x + 592, currentStage.getBoyfriend().y + 208, Paths.animateAtlas("stages/xMassCityMallNasty/intro-cutscene", "shared"));
+		cutsceneBf.zIndex = currentStage.getBoyfriend().zIndex + 15;
+		cutsceneBf.applyStageMatrix = false;
+		currentStage.getBoyfriend().visible = false;
+		cutsceneBf.animation.onFinish.add(name -> {
+			cutsceneBf.visible = false;
+			currentStage.getBoyfriend().visible = true;
+		});
+
+		var colorShader = new AdjustColorShader();
+		colorShader.hue = -10;
+		colorShader.saturation = -20;
+		colorShader.contrast = 0;
+		colorShader.brightness = 0;
+		cutsceneBf.shader = colorShader;
+		currentStage.add(cutsceneBf);
+
+		currentStage.getNamedProp("snowman").x += 350;
+		currentStage.refresh();
+		refresh();
+	});
+
+	handler.timer(.15, () -> {
+		cutsceneSound.play(true);
+		cutsceneBf.animation.play('spritemap', true);
+		FlxTween.tween(blackScreen, {alpha: 0}, .5, {ease: FlxEase.sineOut});
+
+		tweenCameraZoom(2, 0, false);
+		neededZoom = 2 * stageZoom;
+
+		tweenCameraZoom(1.8, .75, false, FlxEase.cubeOut);
+	});
+
+
+	handler.timer(.15 + 33/24, () -> { // 13/24
+		tweenCameraZoom(1.7, 13/24, false, FlxEase.quadInOut);
+		tweenCameraToPosition(cameraFollowPoint.x + 120, cameraFollowPoint.y - 50, 13/24, FlxEase.quadInOut);
+		chromaEffect(0, .15, "sineOut");
+		FlxTween.tween(poopBarUp, {y: ogUpY - 75}, 1.1, {ease: FlxEase.backOut});
+		FlxTween.tween(poopBarDown, {y: ogDownY + 75}, 1.1, {ease: FlxEase.backOut});
+	});
+
+	handler.timer(.15 + 90/24, () -> { // 13/24
+		tweenCameraZoom(.9, 26/24, false, FlxEase.quadInOut);
+		tweenCameraToPosition(-250, -500, 26/24, FlxEase.quadInOut);
+
+		FlxTween.tween(poopBarUp, {y: ogUpY - 125}, 1.1, {ease: FlxEase.backOut});
+		FlxTween.tween(poopBarDown, {y: ogDownY + 125}, 1.1, {ease: FlxEase.backOut});
+
+	});
+
+	handler.timer(.15 + 97/24, () -> { // 13/24
+		currentStage.getDad().playAnimation("trans");
+		FlxTween.tween(poopBarUp, {y: ogUpY - 80}, .35, {startDelay: .6, ease: FlxEase.backOut});
+		FlxTween.tween(poopBarDown, {y: ogDownY + 80}, .35, {startDelay: .6, ease: FlxEase.backOut});
+		currentStage.getDad().animation.onFinish.addOnce(name -> {
+			currentStage.getDad().playAnimation("singRIGHT-alt");
+			tweenCameraZoom(1.1, .35, false, FlxEase.backOut);
+
+			FlxTween.tween(poopBarUp, {y: ogUpY - 80}, .35, {startDelay: .6, ease: FlxEase.backOut});
+			FlxTween.tween(poopBarDown, {y: ogDownY + 80}, .35, {startDelay: .6, ease: FlxEase.backOut});
+		});
+	});
+
+	handler.timer(.15 + 114/24, () -> {
+		chromaEffect(.25, .15, "sineOut");
+		camGame.shake(0.0025, 15/25);
+		darkLight.alpha = .5;
+		FlxTween.tween(darkLight, {alpha: .6}, 24/24, {ease:FlxEase.bounceIn});
+		FlxTween.tween(darkLight, {alpha: .9}, 25/24, {startDelay: 1, onStart: _ -> chromaEffect(0.05, 1, "cubeOut"), ease:FlxEase.quadOut});
+	});
+	handler.onFinish.add(() -> startCountdown());
+}
+
+var dark = null;
+var darkLight = null;
+
+var poopBarUp;
+var poopBarDown;
+
+function onOpponentNoteHit(note, sus, event)
+{
+	if (health > .1)
+	{
+		health -= !sus ? .0075 : 0.05 * FlxG.elapsed;
+	}
+}
+
+var hintText:FlxFixedText;
+var doDeathHint:Bool = false;
+function onCreatePost()
+{
+	if (subtitles != null)
+	{
+		subtitles.subtitleText.font = Paths.font('RuthlessSketch.ttf');
+		subtitles.subtitleText.alpha = .8;
+		subtitles.subtitleText.size = 26;
+	}
+	if (PlayState.startTimestamp <= 10)
+	{
+		var camPos = currentStage.getBoyfriend()?.requiredCameraPos;
+		tweenCameraToPosition(camPos.x + 450, camPos.y + 300, 0);
+	}
+
+	opponentStrumline.x -= FlxG.width/1.5;
+	opponentStrumline.alpha = 0;
+
+	if (isChartingMode)
+	{
+		currentStage?.getNamedProp("darkLight").alpha = 0;
+		return;
+	}
+
+	dark = currentStage?.getNamedProp("horrorlight");
+	darkLight = currentStage?.getNamedProp("darkLight");
+
+	currentStage?.getNamedProp("blend2").alpha = .25;
+
+	camHUD.alpha = 0;
+
+	playerStrumline.changeMode(false, 0.95);
+
+	var dodgename:String = controls.getDialogueNameFromToken("MECHANIC", true);
+	hintText = new FlxFixedText(0, 0, FlxG.width, 'PRESS <m>$dodgename<m> to dodge or attack'.toUpperCase(), 32);
+	hintText .scrollFactor.set();
+	hintText.camera = camOther;
+	hintText.font = Paths.font("Blueprint.ttf");
+	hintText.alignment = "center";
+	hintText.y = FlxG.height - 65;
+	hintText.useFilters = false;
+	hintText.color = FlxColor.PINK;
+	hintText.visible = currentDifficulty == "hard";
+	hintText.alpha = 0;
+	add(hintText);
+
+    // смотри, это на случай если это ТОЧНО не после катсцеы 
+	if (!doDeathHint) 
+	{
+		// тут типо если надо показать хуйню от смерти проверка
+		doDeathHint = !Preferences.hints && PlayState.deathCounter >= 5;
+		// а тут хуйня изза смерти
+		if (doDeathHint) hintText.text = "You can enable <m>HINTS<m> in Options".toUpperCase();
+	}
+
+	if (currentDifficulty != "hard")
+		doDeathHint = false;
+	var subMark = new FlxTextFormatMarkerPair(new FlxTextFormat(0xFFD11B36), '<M>');
+	hintText.applyMarkup(hintText.text, [subMark]);
+
+}
+
+function onStartSong()
+{
+	FlxG.sound.music.volume = 0;
+	FlxG.sound.music.fadeOut(1, 1);
+}
+
+//var beatEvent = [];
+// {beat: int, func: ()}
+
+var ass = [];
+function createHahaha(xx, yy)
+{
+	var ha = new FunkinSprite(xx, yy);
+	ha.loadGraphic(Paths.image("stages/xMassCityMallNasty/ha"));
+	ha.zIndex = 10000;
+	ha.angle = FlxG.random.float(-10, 10);
+	currentStage.add(ha);
+	ha.scrollFactor.set(1, 1);
+	currentStage.refresh();
+	ass.push(ha);
+	ha.scale.set(.9, .9);
+	FlxTween.tween(ha, {"scale.x": 1.1, "scale.y": 1.1, angle: ha.angle + FlxG.random.float(-7, 7)}, .15, {ease: FlxEase.cubeOut});
+
+}
+
+function onBeatHit(beat)
+{
+	//if (beat == 1)
+	//	currentStage.getBoyfriend().playAnimation("fuck you", true, true);
+
+	if (isChartingMode)
+		return;
+
+	switch(beat)
+	{
+		case 8:
+			chromaEffect(.35, 0, "sineOut");
+			chromaEffect(.15,  41/24, "cubeOut");
+			darkLight.alpha = .4;
+			currentStage?.getNamedProp("blend2").alpha = 1;
+			FlxTween.tween(darkLight, {alpha: .7}, 41/24, {ease:FlxEase.cubeOut});
+			FlxTween.tween(currentStage?.getNamedProp("blend2"), {alpha: .6}, 41/24, {ease:FlxEase.cubeOut});
+
+			FlxTween.tween(poopBarUp, {y: ((FlxG.height - poopBarUp.height * 2) / 2) - 250}, 1.1, {ease: FlxEase.backOut});
+			FlxTween.tween(poopBarDown, {y: (FlxG.height / 2) + 250}, 1.1, {ease: FlxEase.backOut});
+
+			if (currentStage.getNamedProp("snowman").x > 350) currentStage.getNamedProp("snowman").x -= 350;
+
+			//forceFocusedPos = true;
+			//forceFocusedZoom = true;
+			
+			if (Preferences.hints || doDeathHint) FlxTween.tween(hintText, {"scale.x": 1.1, "scale.y": 1.1, alpha: 1}, 1.25, {ease: FlxEase.cubeOut});
+		case 16:
+			if (Preferences.hints || doDeathHint) FlxTween.tween(hintText, {"scale.x": 0.9, "scale.y": 0.9, alpha: 0}, 2.25, {ease: FlxEase.sineIn});
+
+		case 22:
+			FlxTween.tween(darkLight, {alpha: .85}, 15/24, {ease:FlxEase.linear});
+			FlxTween.tween(camHUD, {alpha: 1}, 1.25, {ease:FlxEase.backOut});
+
+			if (Preferences.downscroll)
+			{
+				playerStrumline.y += 25;
+				playerStrumline.alpha = 0;
+				FlxTween.tween(playerStrumline, {y: playerStrumline.y - 25, alpha: 1}, .5, {ease:FlxEase.cubeOut});
+
+				healthBar.y -= 25;
+				FlxTween.tween(healthBar, {y: healthBar.y + 25}, .5, {ease:FlxEase.cubeOut});
+			} else {
+				playerStrumline.y -= 25;
+				playerStrumline.alpha = 0;
+				FlxTween.tween(playerStrumline, {y: playerStrumline.y + 25, alpha: 1}, .5, {ease:FlxEase.cubeOut});
+
+				healthBar.y += 25;
+				FlxTween.tween(healthBar, {y: healthBar.y - 25}, .5, {ease:FlxEase.cubeOut});
+			}
+			chromaEffect(.075, 3, "sineOut");
+
+		case 24:
+			FlxTween.tween(poopBarUp, {y: ((FlxG.height - poopBarUp.height * 2) / 2) - 550}, 1.1, {ease: FlxEase.backOut});
+			FlxTween.tween(poopBarDown, {y: (FlxG.height / 2) + 550}, 1.1, {ease: FlxEase.backOut});
+
+		case 40:
+			FlxTween.tween(darkLight, {alpha: 1}, 25/24, {ease:FlxEase.quadInOut});
+
+		case 56:
+			FlxTween.tween(darkLight, {alpha: .6}, 30/24, {ease:FlxEase.quadInOut});
+
+		case 72:
+			FlxTween.tween(darkLight, {alpha: 1}, 56/24, {ease:FlxEase.linear});
+
+		case 84:
+			FlxTween.tween(darkLight, {alpha: 0}, 12/24, {ease:FlxEase.cubeOut});
+			createHahaha(-800, -800);
+
+		case 85:
+			createHahaha(-1150, -665);
+
+		case 86:
+			createHahaha(-1350, -1115);
+
+		case 87:
+			createHahaha(-850, -1150);
+
+		case 88:
+			currentStage?.getNamedProp("blend2").alpha = 1;
+			FlxTween.tween(currentStage?.getNamedProp("blend2"), {alpha: .7}, 18/24, {ease:FlxEase.cubeOut});
+			for (ha in ass)
+				FlxTween.tween(ha, {"scale.x": .5, "scale.y": .5, angle: ha.angle + FlxG.random.float(-10, 10), alpha: 0}, .25, {onComplete: _ -> {
+					currentStage.remove(ha);
+					ha.kill();
+					ha.destroy();
+					ass.remove(ha);
+				}, ease: FlxEase.cubeOut});
+
+		case 386:
+			var screeeen = new FunkinSprite();
+			screeeen.makeGraphic(1, 1, FlxColor.BLACK);
+			screeeen.scale.set(2000, 2000);
+			screeeen.screenCenter();
+			screeeen.camera = camOther;
+			screeeen.alpha = 0;
+			add(screeeen);
+
+			FlxTween.tween(screeeen, {alpha: 1}, 1.5, {ease: FlxEase.sineOut});
+	}
+}

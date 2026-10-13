@@ -1,0 +1,168 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				157,
+				220
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF IDLE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				180,
+				210
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BF L"
+		},
+		{
+			"offsets": [
+				180,
+				214
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "BF MISS R"
+		},
+		{
+			"offsets": [
+				160,
+				160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BF DOWN"
+		},
+		{
+			"offsets": [
+				160,
+				160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "BF MISS DOWN"
+		},
+		{
+			"offsets": [
+				110,
+				230
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BF UP"
+		},
+		{
+			"offsets": [
+				100,
+				230
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "BF MISS UP"
+		},
+		{
+			"offsets": [
+				120,
+				200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BF RIGHT"
+		},
+		{
+			"offsets": [
+				120,
+				200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "BF MISS L"
+		},
+		{
+			"offsets": [
+				360,
+				240
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "damage-left",
+			"loop": false,
+			"name": "BF ESQUIVE LEFT"
+		},
+		{
+			"offsets": [
+				160,
+				180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "damage-down",
+			"loop": false,
+			"name": "BF ESQUIVE DOWN"
+		},
+		{
+			"offsets": [
+				190,
+				430
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "damage-up",
+			"loop": false,
+			"name": "BF ESQUIVE UP"
+		},
+		{
+			"offsets": [
+				80,
+				250
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "damage-right",
+			"loop": false,
+			"name": "BF ESQUIVE RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/bf-pixel",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-pixel",
+	"flip_x": true,
+	"healthbar_colors": [
+		82,
+		127,
+		58
+	],
+	"camera_position": [
+		230,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 0.5,
+	"_editor_isPlayer": true
+}

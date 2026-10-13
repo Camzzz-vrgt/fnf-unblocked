@@ -1,0 +1,164 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-142,
+				61
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "garfield infidelidoso idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				89
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "garfield infidelidoso left miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-127,
+				61
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "garfield infidelidoso down miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-96,
+				237
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "garfield infidelidoso up miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-164,
+				142
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "garfield infidelidoso right miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				65
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "garfield infidelidoso left",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-148,
+				56
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "garfield infidelidoso right",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-108,
+				224
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "garfield infidelidoso up",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-130,
+				20
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "garfield infidelidoso down",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/garfield_infidelidad",
+	"position": [
+		550,
+		150
+	],
+	"healthicon": "garsad",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		122,
+		40
+	],
+	"camera_position": [
+		110,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.6,
+	"_editor_isPlayer": true
+}

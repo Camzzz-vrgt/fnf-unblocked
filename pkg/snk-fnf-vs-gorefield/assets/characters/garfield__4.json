@@ -1,0 +1,164 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-35,
+				30
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "garfield negocia idle"
+		},
+		{
+			"offsets": [
+				27,
+				59
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "garfield negocia left miss"
+		},
+		{
+			"offsets": [
+				-15,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "garfield negocia down miss"
+		},
+		{
+			"offsets": [
+				-46,
+				137
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "garfield negocia up miss"
+		},
+		{
+			"offsets": [
+				-104,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "garfield negocia right miss"
+		},
+		{
+			"offsets": [
+				-48,
+				-7
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "garfield negocia right"
+		},
+		{
+			"offsets": [
+				-26,
+				67
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "garfield negocia up"
+		},
+		{
+			"offsets": [
+				10,
+				-41
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "garfield negocia down"
+		},
+		{
+			"offsets": [
+				35,
+				4
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "garfield negocia left"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/garfield_negocia",
+	"position": [
+		170,
+		-50
+	],
+	"healthicon": "garsad",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		122,
+		40
+	],
+	"camera_position": [
+		110,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.1,
+	"_editor_isPlayer": true
+}

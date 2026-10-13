@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-390,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "ULTRA G I"
+		},
+		{
+			"offsets": [
+				-381,
+				21
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "ULTRA G L"
+		},
+		{
+			"offsets": [
+				-390,
+				-30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "ULTRA G D"
+		},
+		{
+			"offsets": [
+				-386,
+				130
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "ULTRA G U"
+		},
+		{
+			"offsets": [
+				-390,
+				27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "ULTRA G R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/ULTRA GOREFIELD 0",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "ultra-0",
+	"flip_x": false,
+	"healthbar_colors": [
+		68,
+		60,
+		60
+	],
+	"camera_position": [
+		150,
+		-30
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

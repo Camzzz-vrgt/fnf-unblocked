@@ -1,0 +1,102 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				-140
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Garfield L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-150
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Garfield D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				-140
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Garfield U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				52,
+				-135
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Garfield R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				-140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Garfield idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				38,
+				-153
+			],
+			"anim": "i see you",
+			"fps": 24,
+			"name": "te veo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				65,
+				-137
+			],
+			"anim": "transicion",
+			"fps": 24,
+			"name": "transicion",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/garfield",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "garfield",
+	"flip_x": false,
+	"healthbar_colors": [
+		212,
+		77,
+		41
+	],
+	"camera_position": [
+		30,
+		230
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-23,
+				-115
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "GARFIELD LOOP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				338
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "GARFIELD END",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "GARFIELD DIES"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GAME_OVER_GARFIELD",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

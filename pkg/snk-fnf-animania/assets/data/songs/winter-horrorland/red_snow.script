@@ -1,0 +1,172 @@
+import funkin.graphics.video.FunkinVideoSprite;
+import funkin.data.event.SongEventRegistry;
+import flixel.util.FlxGradient;
+import funkin.graphics.extra.FunkinAttachedSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.graphics.shaders.DropShadowShader;
+
+var sshh = "
+#pragma header
+
+uniform float iTime;
+uniform int iLayers;
+uniform float iDepth;
+uniform float iWidth;
+uniform float iSpeed;
+
+const vec2 EFFECT_SCALE = vec2(6.0, 4.0);
+
+float snowing(in vec2 uv)
+{
+    const mat3 p = mat3(13.323122, 23.5112, 21.71123,
+                        21.1212, 28.7312, 11.9312,
+                        21.8112, 14.7212, 61.3934);
+    uv.y = 1.0 - uv.y;
+    float depth = iDepth;
+    float width = iWidth;
+    float speed = iSpeed;
+    float acc = 0.0;
+    float dof = 5.0 * sin(iTime * 0.1);
+
+    float angle = iTime * 2.0;
+    float s = sin(angle);
+    float c = cos(angle);
+    const float cos1 = 0.5403023058681398;
+    const float sin1 = 0.8414709848078965;
+
+    for (int fi = 0; fi < iLayers; fi++)
+    {
+        float fi_f = float(fi);
+        vec2 q = uv * (1.0 + fi_f * depth);
+        float w = width * fract(fi_f * 7.238917) - width * 0.1 * s;
+        q += vec2(q.y * w, speed * iTime / (1.0 + fi_f * depth * 0.03));
+
+        vec3 n = vec3(floor(q), 31.189 + fi_f);
+        vec3 m = floor(n) * 0.00001 + fract(n);
+
+        vec3 pm = vec3(dot(p[0], m), dot(p[1], m), dot(p[2], m));
+        vec3 r = fract((31415.9 + m) / fract(pm));
+
+        vec2 s_xy = abs(mod(q, 1.0) - 0.5 + 0.9 * r.xy - 0.45);
+        s_xy += 0.01 * abs(2.0 * fract(10.0 * q.yx) - 1.0);
+        float d = 0.6 * max(s_xy.x - s_xy.y, s_xy.x + s_xy.y) + max(s_xy.x, s_xy.y) - 0.01;
+        float edge = 0.05 + 0.05 * min(0.5 * abs(fi_f - 5.0 - dof), 1.0);
+        acc += smoothstep(edge, -edge, d) * (r.x / (1.0 + 0.02 * fi_f * depth));
+
+        float new_s = s * cos1 + c * sin1;
+        float new_c = c * cos1 - s * sin1;
+        s = new_s;
+        c = new_c;
+    }
+    return (acc + acc * acc) / 1.75;
+}
+
+void main()
+{
+    vec4 texColor = flixel_texture2D(bitmap, openfl_TextureCoordv);
+    float alpha = snowing(openfl_TextureCoordv.xy * EFFECT_SCALE) * 1.25;
+    vec3 flakeColor = texColor.rgb;
+    gl_FragColor = vec4(flakeColor * alpha, alpha * texColor.a);
+}";
+
+public var snowTimeSpeed = 1.0;
+
+var snowShader = null;
+var snowSpr = null;
+
+function onCreatePost()
+{
+	if (!Preferences.shaders) return;
+	snowShader = new FlxRuntimeShader(sshh);
+	snowShader.setFloat("iTime", 0);
+
+	snowSpr = new FunkinSprite();
+	snowSpr.makeSolidColor(FlxG.width * 4, FlxG.height * 4, FlxColor.WHITE);
+	snowSpr.zIndex = 395;
+	currentStage.add(snowSpr);
+	currentStage.refresh();
+	snowSpr.scrollFactor.set(1.5, 1.5);
+	snowSpr.zoomFactor = 0.9;
+	snowSpr.screenCenter();
+	snowSpr.x -= 1200;
+	snowSpr.y -= 1100;
+	snowSpr.shader = snowShader;
+	snowSpr.color = 0xFFDEADB9; // true - redar
+
+	snowShader.setFloatArray("uResolution", [snowSpr.width, snowSpr.height]);
+
+	snowShader.setInt("iLayers", 30);
+	snowShader.setFloat("iDepth", 0.3);
+	snowShader.setFloat("iWidth", 0.2);
+	snowShader.setFloat("iSpeed", 0.6);
+	snowSpr.alpha = 0.55;
+
+}
+
+var vvv:Float = 0;
+
+function onUpdatePost(e)
+{
+	if (!Preferences.shaders) return;
+	snowShader.setFloat("iTime", vvv += e * snowTimeSpeed);
+}
+
+function onBeatHit(beat)
+{
+	if (!Preferences.shaders) return;
+
+	//i hate myself
+	switch(beat)
+	{
+		case 85:
+			snowSpr.alpha = 0;
+			snowSpr.color = 0xFFEB6083;
+			// snowShader.setFloat("uOpacity", 0.0);
+
+		case 86:
+
+			snowShader.setFloat("iSpeed", 0.9);
+			// snowShader.setFloat("uDensity", 0.3);
+			// snowShader.setFloat("uFlakeSize", 1.1);
+			// snowShader.setFloat("uFallSpeed", 1.1);
+			// snowShader.setFloat("uWindStrength", 1.7);
+			// snowShader.setFloat("uTwinkle", 0.9);
+
+
+		case 87:
+			FlxTween.num(0.0, 1.0, 1.6, {ease:FlxEase.sineInOut}, snowSpr.set_alpha);
+			FlxTween.num(snowTimeSpeed, 5, 1.6, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+			FlxTween.num(snowShader.getFloat("iWidth"), 0.9, 1.6, {ease:FlxEase.sineInOut}, v -> snowShader.setFloat("iWidth", v));
+
+
+		case 120:
+			FlxTween.num(snowTimeSpeed, 4.3, 1, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 152:
+			FlxTween.num(snowTimeSpeed, 3.8, 1, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 184:
+			FlxTween.num(snowTimeSpeed, 5.7, .3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 216:
+			FlxTween.num(snowTimeSpeed, .4, .3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+			FlxTween.num(1.0, .6, 1, {ease:FlxEase.sineInOut}, snowSpr.set_alpha);
+
+		case 240:
+			FlxTween.num(snowTimeSpeed, 3.2, 3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+			FlxTween.num(.6, 1, 3, {ease:FlxEase.sineInOut}, snowSpr.set_alpha);
+
+		case 264:
+			FlxTween.num(snowTimeSpeed, .3, 3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 280:
+			FlxTween.num(snowTimeSpeed, 5, 3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 312:
+			FlxTween.num(snowTimeSpeed, 2.4, 3, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+		case 344:
+			FlxTween.num(snowTimeSpeed, 7, 4, {ease:FlxEase.sineInOut}, v -> snowTimeSpeed = v);
+
+	}
+}

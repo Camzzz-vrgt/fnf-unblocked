@@ -1,0 +1,71 @@
+{
+  "version": "2.2.4",
+  "songName": "Cocoa",
+  "artist": "simnsnd",
+  "charter": "PurSnake",
+  "divisions": 96,
+  "looped": false,
+	"playerSkin": "bf-xmas",
+	"girlfriendSkin": "gf-xmas",
+  "diskName": "cocoa",
+  "diskOffsets": [
+    0,
+    0
+  ],
+  "freeplayTheme": "Base",
+	"weekName": "WEEK5",
+	"freeplayLayer": "christmas",
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {
+      "parents-christmas": 0,
+      "bf-christmas": 0
+    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "bf-christmas",
+      "girlfriend": "gf-christmas",
+      "opponent": "parents-christmas",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocal": "parents-christmas",
+      "playerVocal": "bf-christmas"
+    },
+    "stage": "xMasCityMallAmTake",
+    "noteStyle": "amtake-xmas",
+    "ratings": {
+      "easy": 5,
+      "hard": 7,
+      "normal": 6
+    },
+    "album": "expansionMini",
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin': Animania! - v0.6.0 DEVELOPER",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 117,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

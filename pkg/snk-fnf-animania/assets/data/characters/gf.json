@@ -1,0 +1,131 @@
+{
+	"version": "1.0.0",
+	"name": "Girlfriend (NoSpeakers)",
+	"renderType": "animateatlas",
+	"assetPath": "shared:characters/amtake/gf/gf-standart",
+	"flipX": false,
+	"singTime": 6.1,
+	"loopHold": true,
+	"loopHoldFrame": 2,
+	"offsets": [0, -200],
+	"cameraOffsets": [700, 350],
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false,
+		"swfMode": false
+	},
+	"startingAnimation": "danceRight",
+	"healthIcon": {
+		"id": "gf",
+		"offsets": [0, 0],
+		"color": "#FF0000"
+	},
+	"pixelIcon": {
+		"id": "gf"
+	},
+	"animations": [
+		{
+			"name": "danceLeft",
+			"frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+			"prefix": "idle"
+		},
+		{
+			"name": "danceRight",
+			"frameIndices": [
+				15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+			],
+			"prefix": "idle"
+		},
+		{
+			"name": "count three",
+			"prefix": "count three"
+		},
+		{
+			"name": "count two",
+			"prefix": "count two"
+		},
+		{
+			"name": "count one",
+			"prefix": "count one"
+		},
+		{
+			"name": "cheer",
+			"prefix": "cheer"
+		},
+		{
+			"name": "hey",
+			"prefix": "cheer"
+		},
+		{
+			"name": "combo100",
+			"prefix": "cheer"
+		},
+		{
+			"name": "sob",
+			"prefix": "sob"
+		},
+		{
+			"name": "drop80",
+			"prefix": "sob"
+		},
+
+		{
+			"name": "singLEFT",
+			"prefix": "left"
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "down"
+		},
+		{
+			"name": "singUP",
+			"prefix": "up"
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "right"
+		},
+		{
+			"name": "fresh solo",
+			"prefix": "fresh solo"
+		},
+
+		{
+			"name": "danceLeft-drop",
+			"prefix": "drop dance left"
+		},
+		{
+			"name": "danceRight-drop",
+			"prefix": "drop dance right"
+		},
+
+		{
+			"name": "pre-dance",
+			"prefix": "pre dance"
+		},
+		{
+			"name": "danceLeft-dance",
+			"prefix": "dance left"
+		},
+		{
+			"name": "danceRight-dance",
+			"prefix": "dance right"
+		},
+		{
+			"name": "end-dance",
+			"prefix": "end dance"
+		},
+		{
+			"name": "normal-talk",
+			"looped": true,
+			"prefix": "normal talk"
+		},
+		{
+			"name": "happy-talk",
+			"looped": true,
+			"prefix": "happy talk"
+		}
+	]
+}

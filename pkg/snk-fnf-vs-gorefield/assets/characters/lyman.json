@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				169,
+				-101
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "lyman i"
+		},
+		{
+			"offsets": [
+				170,
+				-100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "lyman d"
+		},
+		{
+			"offsets": [
+				174,
+				-100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "lyman l"
+		},
+		{
+			"offsets": [
+				164,
+				-99
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "lyman u"
+		},
+		{
+			"offsets": [
+				163,
+				-101
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "lyman right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/lyman_prison",
+	"position": [
+		150,
+		-150
+	],
+	"healthicon": "Binky_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		50,
+		119
+	],
+	"camera_position": [
+		-50,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

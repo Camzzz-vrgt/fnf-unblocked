@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-285,
+				-290
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "Blue_bf i",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-285,
+				-286
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "Blue_bf l",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-290,
+				-301
+			],
+			"anim": "singDOWN",
+			"fps": 14,
+			"name": "Blue_bf d",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-296,
+				-283
+			],
+			"anim": "singUP",
+			"fps": 14,
+			"name": "Blue_bf u",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-298,
+				-287
+			],
+			"anim": "singRIGHT",
+			"fps": 14,
+			"name": "Blue_bf r",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-293,
+				-291
+			],
+			"anim": "singLEFTmiss",
+			"fps": 14,
+			"name": "Blue_bf miss_l",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-305,
+				-299
+			],
+			"anim": "singDOWNmiss",
+			"fps": 14,
+			"name": "Blue_bf miss_d",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-306,
+				-283
+			],
+			"anim": "singUPmiss",
+			"fps": 14,
+			"name": "Blue_bf miss_u",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-304,
+				-288
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 14,
+			"name": "Blue_bf miss_r",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/blue_bf",
+	"position": [
+		50,
+		400
+	],
+	"healthicon": "Bf_Blue_Icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		103,
+		114,
+		169
+	],
+	"camera_position": [
+		-250,
+		350
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

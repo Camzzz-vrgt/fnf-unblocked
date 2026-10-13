@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-171,
+				-360
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "WALTER IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-49,
+				-400
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "WALTER LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-171,
+				-411
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "WALTER DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-156,
+				-310
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "WALTER UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-200,
+				-314
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "WALTER RIGHT",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/WALTER_CAT",
+	"position": [
+		140,
+		-170
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		33,
+		16,
+		53
+	],
+	"camera_position": [
+		350,
+		409
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

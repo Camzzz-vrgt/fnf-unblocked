@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-6,
+				-80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "LASAGNA BOY UP"
+		},
+		{
+			"offsets": [
+				0,
+				-220
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "LASAGNA BOY DOWN"
+		},
+		{
+			"offsets": [
+				12,
+				-110
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LASAGNA BOY L"
+		},
+		{
+			"offsets": [
+				-50,
+				-113
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "LASAGNA BOY R"
+		},
+		{
+			"offsets": [
+				0,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "LASAGNA BOY I"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/lasagnaboy-pixel",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "lasagnaboy-pixel",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		127,
+		58
+	],
+	"camera_position": [
+		300,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5,
+	"_editor_isPlayer": false
+}

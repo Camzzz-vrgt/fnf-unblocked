@@ -1,0 +1,140 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "CRUZ NERMALL U"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "CRUZ NERMALL R"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "CRUZ NERMALL L"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "CRUZ MISS L"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "CRUZ MISS D"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "CRUZ MISS U"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "CRUZ MISS R"
+		},
+		{
+			"offsets": [
+				205,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "CRUZ NERMALL D"
+		},
+		{
+			"offsets": [
+				205,
+				-69
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0,
+				1,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34
+			],
+			"name": "CRUZ NERMALL IDLE"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/NERMALL_CRUCI",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "nermal-god",
+	"flip_x": true,
+	"healthbar_colors": [
+		153,
+		153,
+		153
+	],
+	"camera_position": [
+		100,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-320,
+				-200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "SAD LYMAN IDLE"
+		},
+		{
+			"offsets": [
+				-319,
+				-200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SAD LYMAN LEFT"
+		},
+		{
+			"offsets": [
+				-320,
+				-200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SAD LYMAN DOWN"
+		},
+		{
+			"offsets": [
+				-317,
+				-200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SAD LYMAN UP"
+		},
+		{
+			"offsets": [
+				-320,
+				-203
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SAD LYMAN RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/sadgotes",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "Bigotes_sad",
+	"flip_x": false,
+	"healthbar_colors": [
+		54,
+		34,
+		83
+	],
+	"camera_position": [
+		170,
+		280
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,48 @@
+{
+	"renderType": "sparrow",
+	"startingAnimation": "idle",
+	"assetPath": "embded:ui/chart_dare",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"flipX": true,
+	"name": "CHART BETA",
+	"singTime": 4,
+	"animations": [
+		{
+			"prefix": "beta idle",
+			"name": "idle"
+		},
+		{
+			"prefix": "beta left",
+			"offsets": [
+				20,
+				-7
+			],
+			"name": "singLEFT"
+		},
+		{
+			"prefix": "beta down",
+			"offsets": [
+				-16,
+				1
+			],
+			"name": "singDOWN"
+		},
+		{
+			"prefix": "beta up",
+			"offsets": [
+				-9,
+				45
+			],
+			"name": "singUP"
+		},
+		{
+			"prefix": "beta right",
+			"offsets": [
+				-27,
+				-6
+			],
+			"name": "singRIGHT"
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				210
+			],
+			"anim": "idle",
+			"fps": 8,
+			"name": "SR BIGotes IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				341,
+				90
+			],
+			"anim": "singLEFT",
+			"fps": 8,
+			"name": "SR BIGotes LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 8,
+			"name": "SR BIGotes DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				250
+			],
+			"anim": "singUP",
+			"fps": 8,
+			"name": "SR BIGotes UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				47
+			],
+			"anim": "singRIGHT",
+			"fps": 8,
+			"name": "SR BIGotes RIGHT",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bigotes",
+	"position": [
+		0,
+		50
+	],
+	"healthicon": "big",
+	"flip_x": false,
+	"healthbar_colors": [
+		227,
+		31,
+		230
+	],
+	"camera_position": [
+		-220,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

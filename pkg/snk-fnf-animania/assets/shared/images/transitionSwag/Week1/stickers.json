@@ -1,0 +1,25 @@
+{
+	"name": "Week1",
+	"artist": "KerSive",
+	"stickers": {
+		"stuff": [
+				"bf1", "bf2",
+				"gf1", "gf2",
+				"dad1", "dad2",
+				"stage1",
+				"stage2",
+				"stage3"
+			],
+		"player": [
+			"bf1", "bf2"
+		],
+		"spectator": [
+			"gf1", "gf2"
+		]
+	},
+	"stickerPacks": {
+	  "all": ["stuff"],
+       "player": ["bf1", "bf2"],
+       "spectator": ["gf1", "gf2"]
+	}
+}

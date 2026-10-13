@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "NERMAL DEATH",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-231,
+				0
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "NERMALL LOOP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-182,
+				406
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "NERMAL CONFIRM",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/nermal-dead-cry",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "nermal-cry",
+	"flip_x": true,
+	"healthbar_colors": [
+		220,
+		106,
+		106
+	],
+	"camera_position": [
+		-70,
+		-190
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

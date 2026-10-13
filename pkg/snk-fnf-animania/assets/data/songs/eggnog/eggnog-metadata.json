@@ -1,0 +1,55 @@
+{
+	"version": "2.2.3",
+	"songName": "Eggnog",
+	"artist": "d4rkWinged feat. Simon",
+	"charter": "PurSnake + d4rkwinged",
+	"divisions": 96,
+	"looped": false,
+	"freeplayLayer": "christmas",
+	"offsets": {
+		"instrumental": 0,
+		"altInstrumentals": {},
+		"vocals": {
+			"bf-christmas": 0,
+			"parents-christmas": 0
+		}
+	},
+	"diskName": "eggnog",
+	"weekName": "WEEK5",
+	"playerSkin": "bf-xmas",
+	"girlfriendSkin": "gf-xmas",
+	"playData": {
+		"songVariations": [],
+		"difficulties": ["easy", "normal", "hard"],
+
+		"characters": {
+			"player": "bf-christmas",
+			"girlfriend": "gf-christmas",
+			"opponent": "parents-christmas",
+			"instrumental": "",
+			"altInstrumentals": []
+		},
+		"stage": "xMasCityMallAmTakeDark",
+        "noteStyle": "amtake-xmas",
+		"ratings": {
+			"easy": 5,
+			"normal": 7,
+			"hard": 8
+		},
+		"album": "animania05",
+		"previewStart": 0,
+		"previewEnd": 0
+	},
+	"generatedBy": "Friday Night Funkin': Animania! - v0.5(r)",
+	"timeFormat": "ms",
+	"timeChanges": [
+		{
+			"t": 0,
+			"b": 0,
+			"bpm": 145,
+			"n": 4,
+			"d": 4,
+			"bt": [4, 4, 4, 4]
+		}
+	]
+}

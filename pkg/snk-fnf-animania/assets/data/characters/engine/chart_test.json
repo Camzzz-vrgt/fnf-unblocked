@@ -1,0 +1,36 @@
+{
+	"renderType": "sparrow",
+	"startingAnimation": "idle",
+	"assetPath": "embded:ui/chart_test",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"flipX": false,
+	"name": "CHART TEST",
+	"singTime": 4,
+	"animations": [
+		{
+			"prefix": "test idle",
+			"name": "idle"
+		},
+		{
+			"prefix": "test left",
+			"offsets": [23, -2],
+			"name": "singLEFT"
+		},
+		{
+			"prefix": "test down",
+			"offsets": [-11, -14],
+			"name": "singDOWN"
+		},
+		{
+			"prefix": "test up",
+			"offsets": [-14, 66],
+			"name": "singUP"
+		},
+		{
+			"prefix": "test right",
+			"offsets": [-43, 2],
+			"name": "singRIGHT"
+		}
+	]
+}

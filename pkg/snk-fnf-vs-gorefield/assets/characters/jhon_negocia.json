@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-410,
+				81
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "jhon negocia idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-350,
+				70
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "jhon negocia left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-386,
+				69
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "jhon negocia down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-406,
+				100
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "jhon negocia up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-400,
+				77
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "jhon negocia r"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jhon_negocia",
+	"position": [
+		0,
+		-90
+	],
+	"healthicon": "pololos",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		210,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				-35
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "GOD DEATH LOOP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-36
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "GOD DEATH CONFIRM",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "GOD DEATH0"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GOD_DEATH",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "nermal-god",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

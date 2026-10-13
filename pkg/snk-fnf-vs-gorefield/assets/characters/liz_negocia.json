@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-49,
+				61
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "liz negocia idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				50
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "liz negocia left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				40
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "liz negocia down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-46,
+				70
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "liz negocia up"
+		},
+		{
+			"offsets": [
+				-70,
+				47
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "liz negocia right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/liz_negocia",
+	"position": [
+		-350,
+		-110
+	],
+	"healthicon": "jippy",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		210,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

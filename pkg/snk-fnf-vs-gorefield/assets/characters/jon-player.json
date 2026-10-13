@@ -1,0 +1,146 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "JON I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				35,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "JON L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-21
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "JON DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				27
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "JON U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "JON RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				-11
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "JON MISS L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				45,
+				-39
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "JON MISS D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				37
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "JON MISS U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				2
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "JON MISS R",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				210
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shoot",
+			"loop": false,
+			"name": "JON DISPARO"
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "recharger",
+			"loop": false,
+			"name": "JON RECARGA"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jon-player",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "jon",
+	"flip_x": true,
+	"healthbar_colors": [
+		46,
+		94,
+		92
+	],
+	"camera_position": [
+		-260,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

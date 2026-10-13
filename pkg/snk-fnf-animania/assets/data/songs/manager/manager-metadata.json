@@ -1,0 +1,48 @@
+{
+  "version": "2.2.3",
+  "songName": "Manager",
+  "artist": "simnsnd & d4rkwinged, feat. Nessie",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playerSkin": "bf-animania",
+  "girlfriendSkin": "gf-animania",
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "screen-player",
+      "girlfriend": "",
+      "opponent": "extra/manager/nessie",
+      "instrumental": "",
+      "opponentVocal": "nessie",
+      "altInstrumentals": []
+    },
+
+    "stage": "extra/managerStage",
+        "noteStyle": "amtake-base",
+    "ratings": {
+      "normal": 0,
+      "hard": 0
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin': Animania! - v0.5.1 DEVELOPER",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 114,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

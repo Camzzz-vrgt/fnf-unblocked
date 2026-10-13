@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-235,
+				-10
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "LASAGNA GOD I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-180,
+				-91
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "LASAGNA GOD D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-256,
+				57
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "LASAGNA GOD U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-257,
+				23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "LASAGNA GOD R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-205,
+				14
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LASAGNA GOD L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-183,
+				9
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MISS L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-175,
+				-89
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MISS D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-237,
+				57
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MISS U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-244,
+				12
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MISS R",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GOD_LASAGNA",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "lasagnaboy-god",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-100,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

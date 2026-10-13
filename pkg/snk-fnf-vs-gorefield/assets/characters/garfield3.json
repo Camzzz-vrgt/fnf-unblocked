@@ -1,0 +1,196 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				775,
+				140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "g i",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				700,
+				110
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "g down",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				744,
+				207
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "g up",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"offsets": [
+				766,
+				136
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "g left"
+		},
+		{
+			"offsets": [
+				793,
+				123
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "g right"
+		},
+		{
+			"offsets": [
+				735,
+				238
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "g up MISS"
+		},
+		{
+			"offsets": [
+				786,
+				122
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "g right MISS"
+		},
+		{
+			"offsets": [
+				716,
+				100
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "g down MISS"
+		},
+		{
+			"offsets": [
+				758,
+				139
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "g left MISS"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/garfield3",
+	"position": [
+		50,
+		550
+	],
+	"healthicon": "Bf_Blue_Icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		103,
+		114,
+		169
+	],
+	"camera_position": [
+		-250,
+		350
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

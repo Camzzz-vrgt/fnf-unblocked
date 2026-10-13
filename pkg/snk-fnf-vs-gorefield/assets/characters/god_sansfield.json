@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-240,
+				180
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SANSFIELD L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-260,
+				130
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SANSFIELD D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-266,
+				200
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SANSFIELD U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-380,
+				197
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SANSFIELD R",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-320,
+				161
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "SANS I"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GOD_SANSFIELD_ASSETS",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "sansfield_GOD",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		200,
+		-30
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8,
+	"_editor_isPlayer": false
+}

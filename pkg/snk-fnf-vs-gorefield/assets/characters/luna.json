@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				520,
+				21
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				464,
+				77
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				476,
+				83
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				539,
+				75
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "left miss poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				515,
+				18
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "down miss poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				474,
+				87
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "up miss poses instancia 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				483,
+				66
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "right miss poses instancia 1",
+			"indices": []
+		},
+		{
+			"offsets": [
+				498,
+				70
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle instancia 1"
+		},
+		{
+			"offsets": [
+				543,
+				68
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left poses instancia 1"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/luna",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "team2",
+	"flip_x": false,
+	"healthbar_colors": [
+		32,
+		16,
+		53
+	],
+	"camera_position": [
+		90,
+		200
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

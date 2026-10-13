@@ -1,0 +1,104 @@
+import funkin.graphics.shaders.Glitch2;
+
+var phoneCallPhoneSpr:FunkinSprite;
+var glitchShader:Glitch2;
+var glitchTween;
+
+function createPost()
+{
+	glitchShader = new Glitch2(0);
+	if (Preferences.shaders) FlxG.camera.addShader(glitchShader);
+	trace("АХУЙ");
+	phoneCallPhoneSpr = FunkinSprite.createSparrow(FlxG.width - 510, 300, "animania-freeplay/skinSelector/phone");
+	phoneCallPhoneSpr.animation.addByPrefix("y", "Phone fall", 24, false);
+	phoneCallPhoneSpr.animation.play("y", true);
+	phoneCallPhoneSpr.visible = false;
+	phoneCallPhoneSpr.zIndex = 5;
+	add(phoneCallPhoneSpr);
+
+	refresh();
+}
+
+function update(e)
+{
+	glitchShader.update(e);
+}
+function onChangeSelection(songData)
+{
+	//trace(songData);
+	if (!tvIntroDone)
+		return;
+
+
+	if (songData != null && songData.songId == "winter-horrorland")
+	{
+		if (glitchTween != null)
+			glitchTween.cancel();
+
+		if (currentPlayer.skinAtlas != null && !currentPlayer.skinAtlas.anims.paused)
+			currentPlayer.skinAtlas.anims.pause();
+		if (currentGirlfriend.skinAtlas != null && !currentGirlfriend.skinAtlas.anims.paused)
+			currentGirlfriend.skinAtlas.anims.pause();
+
+		currentPlayer.censureBlock.setPosition(FlxG.width - 545, 350);
+		currentPlayer.censureBlock.visible = true;
+		currentGirlfriend.censureBlock.visible = true;
+		currentGirlfriend.censureBlock.setPosition(FlxG.width - 299, 330);
+
+		glitchTween = FlxTween.num(glitchShader.strength, 0.0125, 1.5, {ease: FlxEase.circOut, onComplete: _ -> glitchTween = null}, glitchShader.set_strength);
+
+		//currentGirlfriend.visible = false;
+	} else {
+		if (glitchTween != null)
+			glitchTween.cancel();
+
+		if (currentPlayer.skinAtlas != null && currentPlayer.skinAtlas.anims.paused)
+			currentPlayer.skinAtlas.anims.resume();
+		if (currentGirlfriend.skinAtlas != null && currentGirlfriend.skinAtlas.anims.paused)
+			currentGirlfriend.skinAtlas.anims.resume();
+
+		currentPlayer.censureBlock.visible = false;
+		currentGirlfriend.censureBlock.visible = false;
+
+		glitchTween = FlxTween.num(glitchShader.strength, 0, .25, {ease: FlxEase.circIn, onComplete: _ -> glitchTween = null}, glitchShader.set_strength);
+
+		//currentGirlfriend.visible = true;
+	}
+
+	if (songData != null && songData.songId == "phone-call")
+	{
+		currentPlayer.onPopCallback = () -> {
+			checkBed("none");
+			phoneCallPhoneSpr.visible = true;
+			phoneCallPhoneSpr.animation.play("y", true);
+			return false;
+		}
+		currentGirlfriend.onPopCallback = () -> return false;
+
+		currentPlayer.alpha = currentGirlfriend.alpha = 1;
+		currentPlayer.animation.play("switch", true);
+		currentGirlfriend.animation.play("switch", true);
+
+		//phoneCallPhoneSpr.visible = true;
+		//phoneCallPhoneSpr.animation.play("y", true);
+	} else {
+		phoneCallPhoneSpr.visible = false;
+		currentPlayer.onPopCallback = () -> return true;
+		currentGirlfriend.onPopCallback = () -> return true;
+	}
+}
+
+function onExit()
+{
+	FlxG.camera.removeShader(glitchShader);
+	currentPlayer.censureBlock.visible = false;
+	currentGirlfriend.censureBlock.visible = false;
+	
+	if (currentPlayer.skinAtlas != null && currentPlayer.skinAtlas.anims.paused)
+		currentPlayer.skinAtlas.anims.resume();
+	if (currentGirlfriend.skinAtlas != null && currentGirlfriend.skinAtlas.anims.paused)
+		currentGirlfriend.skinAtlas.anims.resume();
+
+
+
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				799,
+				325
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "LASAGNA CAT I"
+		},
+		{
+			"offsets": [
+				831,
+				320
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LASAGNA CAT LEFT"
+		},
+		{
+			"offsets": [
+				850,
+				250
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "LASAGNA CAT D"
+		},
+		{
+			"offsets": [
+				653,
+				490
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "LASAGNA CAT U"
+		},
+		{
+			"offsets": [
+				759,
+				337
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "LASAGNA CAT R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/lasagnacat-pixel",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "lasagnacat-pixel",
+	"flip_x": false,
+	"healthbar_colors": [
+		82,
+		127,
+		58
+	],
+	"camera_position": [
+    -20,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5,
+	"_editor_isPlayer": false
+}

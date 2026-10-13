@@ -1,0 +1,103 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.PlayState;
+import funkin.play.Countdown;
+import funkin.play.CountdownStep;
+import funkin.play.PlayStatePlaylist;
+
+function onCreate()
+{
+	if (isChartingMode) return;
+		skipCountDown = true;
+}
+
+function onCoundDownStart()
+{
+	if (isChartingMode) return;
+
+	camHUD.alpha = 0;
+
+	tweenCameraToPosition(currentStage.getGirlfriend().requiredCameraPos.x, currentStage.getGirlfriend().requiredCameraPos.y, 0);
+	tweenCameraZoom(1.4, 0, false);
+	FlxTimer.wait(Conductor.instance.beatLengthMs / 1000, () -> tweenCameraZoom(1.2, Conductor.instance.beatLengthMs * 4 / 1000, false, FlxEase.cubeOut));
+	//var targetZoom = zoom * (isDirectMode ? FlxCamera.defaultZoom : PlayState.instance.stageZoom);
+	//PlayState.instance.neededZoom = targetZoom;
+}
+
+function onStartSong()
+{
+	//FlxTween.tween(camHUD, {alpha: 1}, Conductor.instance.beatLengthMs / 1000, {ease: FlxEase.cubeOut});
+	//PlayState.instance.cancelCameraZoomTween();
+	//PlayState.instance.neededZoom = stageZoom;
+	if (isChartingMode)
+	{
+		FlxTween.tween(camHUD, {alpha: 1}, Conductor.instance.beatLengthMs / 1000, {ease: FlxEase.cubeOut});
+	}
+}
+
+function onBeatHit(beat)
+{
+	if (currentSong.id != "cocoa" || isPlayerDying)
+		return;
+
+	switch (beat)
+	{
+		case 12:
+			FlxTween.tween(camHUD, {alpha: 1}, Conductor.instance.beatLengthMs / 1000, {ease: FlxEase.cubeOut});
+			PlayState.instance.cancelCameraZoomTween();
+			PlayState.instance.neededZoom = stageZoom;
+
+		case 146: //32
+			moveIn();
+
+		case 184: //40
+			moveOut();
+
+		case 256:
+			if (PlayStatePlaylist.isStoryMode)
+			{
+				var screeen = new FunkinSprite();
+				screeen.makeGraphic(1, 1, 0xFF4D3A99);
+				screeen.scale.set(2000, 2000);
+				screeen.screenCenter();
+				screeen.camera = camHUD;
+				screeen.alpha = 0;
+				screeen.blend = 11;
+				add(screeen);
+				FlxTween.tween(screeen, {alpha: 1}, 4, {ease: FlxEase.sineOut});
+
+				var screeeen = new FunkinSprite();
+				screeeen.makeGraphic(1, 1, FlxColor.BLACK);
+				screeeen.scale.set(2000, 2000);
+				screeeen.screenCenter();
+				screeeen.camera = camHUD;
+				screeeen.alpha = 0;
+				add(screeeen);
+				FlxTween.tween(screeeen, {alpha: 1}, 4, {ease: FlxEase.sineOut});
+			}
+	}
+}
+
+function moveIn()
+{
+	//var offset = (Preferences.downscroll ? -200 : 200);
+
+	//for (item in healthBarGroup.members)
+	//	FlxTween.tween(item, {y: item.y + offset}, 10, {ease: FlxEase.sineInOut});
+
+	opponentStrumline.useRenderTexture = true;
+    FlxTween.tween(opponentStrumline, {x: opponentStrumline.x - 40, alpha: 0.75}, 1.75, {ease: FlxEase.sineOut});
+    FlxTween.num(opponentStrumline.strumlineScale.x, .95, 1.75, {ease: FlxEase.sineOut}, (value:Float) -> opponentStrumline.changeMode(false, value));
+
+    FlxTween.tween(playerStrumline, {x: playerStrumline.x - FlxG.width/10 + 20}, 1.55, {ease: FlxEase.backOut});
+    FlxTween.num(playerStrumline.strumlineScale.x, 1.05, 1.55, {ease: FlxEase.backOut}, (value:Float) -> playerStrumline.changeMode(false, value));
+}
+
+function moveOut()
+{
+    FlxTween.tween(opponentStrumline, {x: opponentStrumline.x + 40, alpha: 1}, 4.65, {ease: FlxEase.backOut});
+    FlxTween.num(opponentStrumline.strumlineScale.x, 1, 4.65, {ease: FlxEase.backOut}, (value:Float) -> opponentStrumline.changeMode(false, value));
+
+    FlxTween.tween(playerStrumline, {x: playerStrumline.x + FlxG.width/10 - 20}, 4.45, {ease: FlxEase.cubeOut});
+    FlxTween.num(playerStrumline.strumlineScale.x, 1, 4.45, {ease: FlxEase.cubeOut}, (value:Float) -> playerStrumline.changeMode(false, value));
+}

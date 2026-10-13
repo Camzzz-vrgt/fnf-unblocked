@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-84
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "SANS I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				71,
+				-61
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "SANSFIELD L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				-130
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "SANSFIELD D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				54,
+				-39
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "SANSFIELD U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				-54
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "SANSFIELD R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-57
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "SANSFIELD GUITAR I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-25,
+				46
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "SANSFIELD GUITAR R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-160
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "SANSFIELD GUITAR D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "SANSFIELD GUITAR U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				-70
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "SANSFIELD GUITAR L",
+			"indices": []
+		},
+		{
+			"offsets": [
+				30,
+				-200
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "zzz",
+			"loop": true,
+			"name": "SANSFIELD ZZZ"
+		},
+		{
+			"offsets": [
+				75,
+				74
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "guitar",
+			"loop": false,
+			"name": "SANS GUITAR AP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sansfield-black",
+	"position": [
+		330,
+		-550
+	],
+	"healthicon": "sansfield",
+	"flip_x": false,
+	"healthbar_colors": [
+		211,
+		225,
+		255
+	],
+	"camera_position": [
+		-250,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

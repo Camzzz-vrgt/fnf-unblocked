@@ -1,0 +1,12 @@
+var assCount:Int = 1;
+function new()
+{
+	trace("NEW mainmenuscreen", assCount);
+	trace(assCount++);
+}
+
+function destroy()
+{
+	trace(assCount);
+	trace("BYEBYE");
+}

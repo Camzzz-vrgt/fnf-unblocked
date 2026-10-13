@@ -1,0 +1,27 @@
+{
+	"name": "Week5",
+	"artist": "KerSive",
+	"stickers": {
+		"guys": [
+				"bf1", "bf2",
+				"gf1", "gf2",
+				"hominid1", "hominid2",
+				"lil1", "lil2",
+				"miku1", "miku2",
+				"monster1", "monster2",
+				"parents1", "parents2",
+				"straw1", "straw2","straw3"
+			],
+		"player": [
+			"bf1", "bf2"
+		],
+		"spectator": [
+			"gf1", "gf2"
+		]
+	},
+	"stickerPacks": {
+	  "all": ["guys"],
+       "player": ["bf1", "bf2"],
+       "spectator": ["gf1", "gf2"]
+	}
+}

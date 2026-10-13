@@ -1,0 +1,166 @@
+import funkin.play.PlayState;
+import funkin.FunkinMemory;
+
+function onCreatePost()
+{
+    //opponentStrumline.alpha = .35;
+	FunkinMemory.cacheTexture(Paths.imageStr('stages/mainStageAmTake/gf_event', 'shared'));
+	FunkinMemory.cacheTexture(Paths.imageStr('stages/mainStageAmTake/solotime_cardboard', 'shared'));
+
+	//healthBarGroup.useRenderTexture = false;
+	//healthBarGroup.alpha = .5;
+
+	//Modchart.ease("twister", .5, 0, 1000);
+	///Modchart.easeField("dizzy", "radius", 200, 0, 1000);
+	//Modchart.easeField("dizzy", "speed", 4, 0, 1000);
+	//Modchart.ease("fadeIn", 14.0, 0, 10000, null, "player");
+	//Modchart.set("fadeIn", 64.0, 0x01);
+    //Modchart.set("wave", .25);
+	//Modchart.set("bump", 1.0);
+	//Modchart.set("tipToe", 1.0);
+	//Modchart.set("tornado", 1.0);
+	//Modchart.set("perspective", .25, "player");
+	//Modchart.set("shrinkLinear", 1.25, "player");
+	//Modchart.set("tanWave", .5, "player");
+	//Modchart.setField("tanWave", "amplitude", 10, "player");
+	//Modchart.setField("tanWave", "frequency", .75, "player");
+	
+	//Modchart.set("tipToe", 1.0);
+
+	//Modchart.ease("zWave", .1, 0, 800, FlxEase.quadOut, "player");
+	//Modchart.ease("zWave", -.1, 0, 800, FlxEase.quadOut, "opponent");
+	//Modchart.ease("shrinkLinear", 0.2, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("fadeIn", 2.9, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("orbit", 0.2, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("tanWave", 25, 0, 5000, FlxEase.quadOut, "opponent");
+	//Modchart.ease("tanWave", -3, 0, 25000, FlxEase.quadOut, "player");
+	//Modchart.ease("roll", 12, 0, 800, FlxEase.quadOut);
+		
+	//Modchart.ease("drunk", .15, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("zigzag", 0.15, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("tipsy", 0.5, 0, 800, FlxEase.quadOut);
+	//Modchart.ease("spiral", 25, 0, 800, FlxEase.quadOut);
+}
+
+function onUpdatePost(e)
+{
+
+	//camHUD.zoom = 0.9;
+}
+
+var _phase = -1;
+
+function onCreate()
+{
+    var mgr = Modchart;
+
+	//mgr.set("wave", .5);
+	//mgr.set("xOffset", FlxG.width / 2, 0x02);
+	//mgr.set("alpha", .2, 0x02);
+	//mgr.setField("tanWave", "amplitude", 150, 0x01);
+	//mgr.setField("tanWave", "amplitude", -150, 0x02);
+	//mgr.setField("tanWave", "frequency", 0.6);
+    //mgr.setField("shrinkLinear", "minScale", 0.7);
+   // mgr.set("fadeIn", 4.0);
+   // mgr.setField("fadeIn", "startAt", 0.8);
+   // mgr.set("speed", 1);
+        //mgr.ease("rotate", -20, 0, 5000, FlxEase.sineInOut, 0x01);
+        //gr.ease("rotate", 10, 5000, 500, FlxEase.circOut, 0x01);
+        //mgr.ease("roll", 10, 5000, 500, FlxEase.circOut, 0x01);
+        //mgr.ease("skew", 20, 5000, 500, FlxEase.circOut, 0x01);
+        
+       // mgr.ease("xOffset", FlxG.widht/2, 0, 2500, null, 0x02);
+        //mgr.ease("invert", 0.1, 0, 10000);
+        //mgr.ease("hidden", 0.0, 0, 2000);
+        //mgr.ease("fadeIn", 1.0, 0, 150);
+        //mgr.ease("speed", 3.25, 0, 2500, null, 0x02);
+}
+
+
+var weDoALittleThnigie:Bool = false;
+function onBeatHit(beat)
+{
+	if (currentSong.id != "bopeebo")
+		return;
+
+	if (weDoALittleThnigie)
+	{
+		Modchart.set("scale", 1.1, "player");
+		Modchart.ease("scale", 0.95, Conductor.instance.songPosition, Conductor.instance.beatLengthMs, FlxEase.sineOut, "player");
+	}
+
+	if (beat == 96)
+	{
+		moveIn(); weDoALittleThnigie = true;
+		var vin2 = currentStage.getNamedProp('vin2');
+		FlxTween.tween(vin2, {alpha: 0.6}, .25 , {ease: FlxEase.cubeIn, onComplete: _ -> FlxTween.tween(vin2, {alpha: 0}, 9, {ease: FlxEase.sineInOut})});
+
+		var aa = Preferences.downscroll ? 1 : -1;
+		FlxTween.tween(camHUD, {scrollAngle: -2, "scroll.y": -15 * aa}, 17, {ease: FlxEase.sineInOut});
+		FlxTween.tween(PlayState.instance, {defaultHUDCameraZoom: 0.75}, 13, {startDelay: 5, ease: FlxEase.sineInOut});
+		Modchart.ease("bump", .75, Conductor.instance.songPosition, 16000, FlxEase.sineInOut, "player");
+		Modchart.ease("tanWave", 1.25, Conductor.instance.songPosition, 16000, FlxEase.sineInOut, "player");
+	}
+
+	if (beat == 128)
+	{
+		FlxTween.tween(camHUD, {scrollAngle: 0, "scroll.y": 0}, .6, {ease: FlxEase.cubeOut});
+		FlxTween.cancelTweensOf(PlayState.instance, ["defaultHUDCameraZoom"]);
+		PlayState.instance.defaultHUDCameraZoom = 1;
+		moveOut(); weDoALittleThnigie = false;
+		Modchart.ease("bump", 0, Conductor.instance.songPosition, 800, FlxEase.circOut, "player");
+		Modchart.ease("tanWave", 0, Conductor.instance.songPosition, 800, FlxEase.circOut, "player");
+		Modchart.ease("scale", 1, Conductor.instance.songPosition, 800, FlxEase.circOut, "player");
+	}
+
+	if (beat == 131)
+	{
+		disableKeys = true;
+		Modchart.clear("player");
+	}
+
+	if (beat == 132)
+		FlxTween.tween(playerStrumline, {alpha: 0.1}, .15, {ease: FlxEase.sineOut});
+
+
+	if (beat == 135)
+	{
+		disableKeys = false;
+		playerStrumline.strumlineNotes.members[2].playStatic();
+		FlxTween.tween(playerStrumline, {alpha: 1}, .5, {ease: FlxEase.sineInOut});
+	}
+}
+
+function moveIn()
+{
+	var offset = (Preferences.downscroll ? -300 : 300);
+
+	//for (item in healthBarGroup.members)
+	//	FlxTween.tween(item, {y: item.y + offset}, 10, {ease: FlxEase.sineInOut});
+
+	FlxTween.tween(healthBarGroup, {y: healthBarGroup.y + offset, alpha: 0}, 6.26, {ease: FlxEase.sineInOut});
+
+	FlxTween.tween(opponentStrumline, {y: opponentStrumline.y + 25, alpha: 0.75}, 14, {ease: FlxEase.sineInOut});
+	FlxTween.num(opponentStrumline.strumlineScale.x, .9, 14, {ease: FlxEase.sineInOut}, (value:Float) -> opponentStrumline.changeMode(false, value));
+
+	FlxTween.tween(playerStrumline, {x: playerStrumline.x - 150}, 16, {ease: FlxEase.sineInOut});
+	FlxTween.num(playerStrumline.strumlineScale.x, 1.075, 16, {ease: FlxEase.sineInOut}, (value:Float) -> playerStrumline.changeMode(false, value));
+}
+
+function moveOut()
+{
+	var offset = (Preferences.downscroll ? -300 : 300);
+
+	//for (item in healthBarGroup.members)
+	//	FlxTween.tween(item, {y: item.y - offset}, .26, {ease: FlxEase.sineInOut});
+
+	FlxTween.tween(healthBarGroup, {y: healthBarGroup.y - offset, alpha: 1}, .26, {ease: FlxEase.sineInOut});
+
+
+    FlxTween.tween(opponentStrumline, {y: opponentStrumline.y - 25, alpha: 1}, 1, {ease: FlxEase.backOut});
+    FlxTween.num(opponentStrumline.strumlineScale.x, 1, 1, {ease: FlxEase.backOut}, (value:Float) -> opponentStrumline.changeMode(false, value));
+
+    FlxTween.tween(playerStrumline, {x: playerStrumline.x + 150}, 1, {ease: FlxEase.cubeOut});
+    FlxTween.num(playerStrumline.strumlineScale.x, 1, 1, {ease: FlxEase.cubeOut}, (value:Float) -> playerStrumline.changeMode(false, value));
+}
+

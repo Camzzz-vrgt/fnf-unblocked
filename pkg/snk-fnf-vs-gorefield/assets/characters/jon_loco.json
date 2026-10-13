@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-720,
+				-195
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "jon right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-761,
+				-181
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "jon i"
+		},
+		{
+			"offsets": [
+				-656,
+				-140
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "jon u"
+		},
+		{
+			"offsets": [
+				-578,
+				-201
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "jon l"
+		},
+		{
+			"offsets": [
+				-581,
+				-392
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "jon d"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jon_loco",
+	"position": [
+		450,
+		-150
+	],
+	"healthicon": "Binky_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		50,
+		119
+	],
+	"camera_position": [
+		120,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

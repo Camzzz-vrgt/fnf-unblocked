@@ -1,0 +1,161 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				135,
+				-70
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "g1 i",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				-89
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "g1 down",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				124,
+				-3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "g1 up",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"offsets": [
+				115,
+				-74
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "g1 left"
+		},
+		{
+			"offsets": [
+				150,
+				-57
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "g1 right"
+		},
+		{
+			"offsets": [
+				111,
+				-74
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "g1 left MISS"
+		},
+		{
+			"offsets": [
+				146,
+				-58
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "g1 right MISS"
+		},
+		{
+			"offsets": [
+				124,
+				18
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "g1 up MISS"
+		},
+		{
+			"offsets": [
+				138,
+				-76
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "g1 down MISS"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/garfield1",
+	"position": [
+		210,
+		400
+	],
+	"healthicon": "Bf_Blue_Icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		103,
+		114,
+		169
+	],
+	"camera_position": [
+		80,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

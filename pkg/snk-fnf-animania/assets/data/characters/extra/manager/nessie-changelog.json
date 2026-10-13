@@ -1,0 +1,112 @@
+{
+	"renderType": "multianimateatlas",
+	"loopHold": true,
+	"startingAnimation": "danceLeft",
+	"assetPath": "preload:menus/changelog/nessie",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"loopHoldFrame": 3,
+	"flipSingAnimations": false,
+	"name": "Nessie (Changelog)",
+	"cameraOffsets": [0, 0],
+	"offsets": [-40, 100],
+	"singTime": 8,
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"uniqueInCache": true
+	},
+	"animations": [
+		{
+			"prefix": "vineboom",
+			"frameRate": 24,
+			"name": "vineboom",
+			"looped": true
+		},
+		{
+			"prefix": "shoked",
+			"frameRate": 24,
+			"name": "shoked",
+			"looped": true
+		},
+		{
+			"prefix": "stupid",
+			"frameRate": 24,
+			"name": "stupid",
+			"looped": true
+		},
+		{
+			"prefix": "sad",
+			"frameRate": 24,
+			"name": "sad",
+			"looped": true
+		},
+		{
+			"prefix": "heh",
+			"frameRate": 24,
+			"name": "heh",
+			"looped": true
+		},
+		{
+			"prefix": "happy",
+			"frameRate": 24,
+			"name": "happy",
+			"looped": true
+		},
+		{
+			"prefix": "normal",
+			"frameRate": 24,
+			"name": "normal",
+			"looped": true
+		},
+		{
+			"prefix": "appear",
+			"frameRate": 24,
+			"name": "appear",
+			"looped": false
+		},
+		{
+			"prefix": "um actually",
+			"frameRate": 24,
+			"name": "um actually",
+			"looped": true
+		},
+		{
+			"prefix": "normal",
+			"frameRate": 24,
+			"name": "normal",
+			"looped": true
+		},
+		{
+			"prefix": "azu",
+			"frameRate": 24,
+			"name": "azu",
+			"looped": true
+		},
+		{
+			"prefix": "static",
+			"frameRate": 24,
+			"name": "static",
+			"looped": true
+		},
+		{
+			"prefix": "ehm",
+			"frameRate": 24,
+			"name": "ehm",
+			"looped": true
+		},
+		{
+			"prefix": "blink",
+			"frameRate": 24,
+			"name": "idle",
+			"looped": true
+		},
+		{
+			"animType": "symbol",
+			"prefix": "lalala",
+			"assetPath": "shared:characters/extra/manager/lalala",
+			"offsets": [-621, -107],
+			"name": "lalala",
+			"looped": false
+		}
+	]
+}

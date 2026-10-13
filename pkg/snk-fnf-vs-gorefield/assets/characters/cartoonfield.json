@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-1410,
+				-230
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "CARTOONFIELD IDLE"
+		},
+		{
+			"offsets": [
+				-1399,
+				-210
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "CARTOONFIELD LEFT"
+		},
+		{
+			"offsets": [
+				-1394,
+				-251
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "CARTOONFIELD DOWN"
+		},
+		{
+			"offsets": [
+				-1356,
+				-30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "CARTOONFIELD UP"
+		},
+		{
+			"offsets": [
+				-1342,
+				-193
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "CARTOONFIELD RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/CARTOONFIELD",
+	"position": [
+		50,
+		0
+	],
+	"healthicon": "team",
+	"flip_x": false,
+	"healthbar_colors": [
+		32,
+		16,
+		53
+	],
+	"camera_position": [
+		730,
+		140
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

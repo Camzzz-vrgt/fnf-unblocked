@@ -1,0 +1,116 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				61,
+				-90
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "JON LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-79
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "JON",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-120
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "JON DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				44,
+				-70
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "JON UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-93
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "JON RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				0
+			],
+			"anim": "death",
+			"fps": 24,
+			"name": "JON DEATH SANSFIELD",
+			"indices": []
+		},
+		{
+			"offsets": [
+				110,
+				-71
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "where",
+			"loop": false,
+			"name": "JON PIPE"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jon-black",
+	"position": [
+		-250,
+		150
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		200,
+		20
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

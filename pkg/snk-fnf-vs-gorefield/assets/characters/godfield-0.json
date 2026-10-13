@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-320,
+				161
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "GARFIELD JIPI"
+		},
+		{
+			"offsets": [
+				-270,
+				160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "GARFIELD JIPI L"
+		},
+		{
+			"offsets": [
+				-320,
+				100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "GARFIELD JIPI D"
+		},
+		{
+			"offsets": [
+				-316,
+				190
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "GARFIELD JIPI U"
+		},
+		{
+			"offsets": [
+				-330,
+				177
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "GARFIELD JIPI R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/JIPPI",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "JIPPI",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		210,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8,
+	"_editor_isPlayer": false
+}

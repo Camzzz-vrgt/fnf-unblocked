@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				238,
+				-180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "BF 2 I"
+		},
+		{
+			"offsets": [
+				255,
+				-182
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BF 2 L"
+		},
+		{
+			"offsets": [
+				230,
+				-181
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BF 2 DOWN"
+		},
+		{
+			"offsets": [
+				234,
+				-183
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BF 2 U"
+		},
+		{
+			"offsets": [
+				222,
+				-187
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BF 2 R"
+		},
+		{
+			"offsets": [
+				267,
+				-191
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "BF 2 MISS L"
+		},
+		{
+			"offsets": [
+				225,
+				-189
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "BF 2 MISS  DOWN"
+		},
+		{
+			"offsets": [
+				234,
+				-193
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "BF 2 MISS UP"
+		},
+		{
+			"offsets": [
+				226,
+				-188
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "BF 2 MISS R"
+		},
+		{
+			"offsets": [
+				260,
+				-180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "fall",
+			"loop": false,
+			"name": "BF FALL"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/BF_fall",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-final",
+	"flip_x": true,
+	"healthbar_colors": [
+		32,
+		16,
+		53
+	],
+	"camera_position": [
+		90,
+		200
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

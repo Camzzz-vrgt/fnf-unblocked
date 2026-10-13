@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-591,
+				-291
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "jon d",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-529,
+				-221
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "jon l",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-536,
+				-140
+			],
+			"anim": "singUP",
+			"fps": 14,
+			"name": "jon u",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-560,
+				-235
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "jon right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-601,
+				-211
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "jon i"
+		},
+		{
+			"offsets": [
+				-450,
+				-170
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "laugh",
+			"loop": false,
+			"name": "jon risas"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jon_loco2",
+	"position": [
+		250,
+		0
+	],
+	"healthicon": "Binky_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		50,
+		119
+	],
+	"camera_position": [
+		-220,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

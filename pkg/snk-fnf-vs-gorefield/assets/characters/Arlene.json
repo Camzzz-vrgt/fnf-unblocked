@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				265,
+				21
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "Arlene I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				285,
+				24
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "Arlene L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				310,
+				19
+			],
+			"anim": "singDOWN",
+			"fps": 14,
+			"name": "Arlene D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				264,
+				17
+			],
+			"anim": "singUP",
+			"fps": 14,
+			"name": "Arlene U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				272,
+				24
+			],
+			"anim": "singRIGHT",
+			"fps": 14,
+			"name": "Arlene R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				287,
+				29
+			],
+			"anim": "singLEFTmiss",
+			"fps": 14,
+			"name": "Arlene Miss_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				305,
+				22
+			],
+			"anim": "singDOWNmiss",
+			"fps": 14,
+			"name": "Arlene Miss_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				262,
+				17
+			],
+			"anim": "singUPmiss",
+			"fps": 14,
+			"name": "Arlene Miss_up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				286,
+				23
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Arlene Miss_rigth"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Arlene",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "Arlene_Icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		103,
+		114,
+		169
+	],
+	"camera_position": [
+		270,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

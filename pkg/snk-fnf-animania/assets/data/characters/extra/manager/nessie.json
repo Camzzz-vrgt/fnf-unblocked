@@ -1,0 +1,90 @@
+{
+	"renderType": "multianimateatlas",
+	"loopHold": false,
+	"startingAnimation": "danceLeft",
+	"assetPath": "shared:characters/extra/manager/nessie",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"flipSingAnimations": false,
+	"name": "Nessie",
+	"cameraOffsets": [0, 0],
+	"offsets": [320, 230],
+	"singTime": 8,
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"uniqueInCache": true
+	},
+	"animations": [
+		{
+			"prefix": "dance left",
+			"frameRate": 24,
+			"name": "danceLeft",
+			"looped": false
+		},
+		{
+			"prefix": "dance right",
+			"frameRate": 24,
+			"name": "danceRight",
+			"looped": false
+		},
+		{
+			"prefix": "nesseft",
+			"frameRate": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "nessown",
+			"frameRate": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"prefix": "nessup",
+			"frameRate": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "nessaltup",
+			"frameRate": 24,
+			"name": "singUP-alt",
+			"looped": false
+		},
+		{
+			"prefix": "nessight",
+			"frameRate": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "nessgetit",
+			"frameRate": 24,
+			"name": "getit",
+			"looped": false
+		},
+		{
+			"prefix": "nessendsong",
+			"frameRate": 24,
+			"name": "theend",
+			"looped": false
+		},
+		{
+			"animType": "symbol",
+			"prefix": "AnimsToPlay/about song",
+			"assetPath": "shared:characters/extra/manager/nessie-cut",
+			"offsets": [647, 85],
+			"frameIndices": [0],
+			"name": "icut",
+			"looped": false
+		},
+		{
+			"animType": "symbol",
+			"prefix": "AnimsToPlay/about song",
+			"assetPath": "shared:characters/extra/manager/nessie-cut",
+			"offsets": [647, 85],
+			"name": "cut",
+			"looped": false
+		}
+	]
+}

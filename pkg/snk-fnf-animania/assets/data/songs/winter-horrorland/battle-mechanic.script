@@ -1,0 +1,746 @@
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.util.MathUtil;
+import flixel.tweens.FlxEase;
+import flixel.effects.FlxFlicker;
+import funkin.util.tools.FloatTools;
+import funkin.util.Constants;
+import flixel.math.FlxRect;
+import flixel.math.FlxPoint;
+import flixel.math.FlxMath;
+import funkin.graphics.extra.FunkinAttachedSprite;
+import funkin.play.scoring.Scoring;
+import funkin.effects.FunkinTrail;
+import funkin.ui.FlxFixedText;
+import funkin.play.GameOverSubState;
+import flixel.text.FlxTextFormat;
+import flixel.text.FlxTextFormatMarkerPair;
+import funkin.input.Control;
+
+
+var battleSplash:FunkinSprite;
+var uiCross:FunkinSprite;
+var mode:String = "dodge";
+
+var iconMoveTween:FlxTween;
+var crossTween:FlxTween;
+
+var inFocus = null;
+
+var eventBeats:Int = 0;
+var currentBeatInEvent:Int = 0;
+var isEventActive:Bool = false;
+var eventStartBeat:Float = 0;
+var activeDots:Array<FunkinSprite> = [];
+var activeStripes:Array<FunkinSprite> = [];
+var targetFinalBeat:Float = 0;
+var canHitFinal:Bool = false;
+var hitTimeDiff:Float = 0;
+
+var FINAL_PRE_WINDOW:Float = 0.65;
+var FINAL_POST_WINDOW:Float = 0.5;
+
+var DOT_SPEED:Float = 1.0;
+var DOT_OFFSET:Float = 180;
+var DOT_Z_INDEX:Int = 1650;
+var FINAL_STRIPE_Z_INDEX:Int = 1750;
+var POSITION_OFFSET:Int = 26;
+
+var allDots:Array<FunkinSprite> = [];
+var allStripes:Array<FunkinSprite> = [];
+var hitFlicker:FlxFlicker;
+var hitFlickerIcon:FlxFlicker;
+var dodgeTrail:FunkinTrail = null;
+
+var healtSucked:Float = 1;
+var suckBar:FunkinAttachedSprite;
+
+var funnyHintText:FlxFixedText;
+
+var activeB:Bool = true;
+function onCreatePost() {
+	generateUIElements();
+	activeB = (currentDifficulty == "hard");
+
+	currentStage.getDad().ignoreExclusionPref = ["hit"];
+	if (!Preferences.lowQuality)
+	{
+		var bf = currentStage.getBoyfriend();
+		dodgeTrail = new FunkinTrail(bf, 4, 0, 3);
+		dodgeTrail.zIndex = bf.zIndex + 3;
+		dodgeTrail.alphaHead = 0.5;
+		dodgeTrail.alphaTail = 0.5;
+		dodgeTrail.useDefaultFade = false;
+		dodgeTrail.color = 0xFF66FFFF;
+		dodgeTrail.blend = BlendMode.ADD;
+
+		currentStage.add(dodgeTrail);
+		currentStage.refresh();
+		dodgeTrail.onSpawnShadow = (s, a, t) -> {
+			//s.x += 150;
+			// 682,15 - 451,65
+			s.alpha = 0.8;
+			FlxTween.tween(s, {x: s.x + (tentacleSide == "Left" ? 230.5 : -230.5), alpha: 0}, 1.0, {ease:FlxEase.cubeOut});
+			s.shader = bf.shader;
+			s.blend = BlendMode.ADD;
+			//s.blend = 11;
+		}
+	}
+}
+
+function generateUIElements() {
+
+	healthBarGroup.useRenderTexture = true;
+	battleSplash = new FunkinSprite();
+	battleSplash.camera = camHUD;
+	battleSplash.zIndex = 1700;
+	battleSplash.frames = Paths.getSparrowAtlas("mechanincs/fighting_splash");
+	battleSplash.animation.addByPrefix("y", "splash", 24, false);
+	battleSplash.animation.play("y", true);
+	battleSplash.screenCenter(0x01);
+	battleSplash.x -= 5;
+	battleSplash.y = Preferences.downscroll ? 0 : FlxG.height * 0.65;
+	battleSplash.animation.onFinish.add((name) -> battleSplash.visible = false);
+	battleSplash.visible = false;
+	add(battleSplash);
+
+
+	funnyHintText = new FlxFixedText(0, 0, playerStrumline.width, "3", 48);
+	funnyHintText.scrollFactor.set();
+	//funnyHintText.y = FlxG.height + 25;
+	funnyHintText.useFilters = false;
+	funnyHintText.camera = camHUD;
+	funnyHintText.zIndex = 9999;
+	funnyHintText.font = Paths.font("Blueprint.ttf");
+	funnyHintText.alignment = "center";
+	add(funnyHintText);
+	if (Preferences.downscroll) 
+		funnyHintText.y = 550;
+	else
+		funnyHintText.y = 150;
+	funnyHintText.x = playerStrumline.x;
+	funnyHintText.alpha = 0; //.8;
+
+	uiCross = new FunkinSprite();
+	uiCross.camera = camHUD;
+	uiCross.zIndex = 2000;
+	uiCross.loadGraphic(Paths.image("mechanincs/FIGHTING_UI"));
+	uiCross.x = battleSplash.x + 35;
+	uiCross.y = battleSplash.y + 35;
+	uiCross.alpha = 0;
+	add(uiCross);
+
+	healtSucked = (currentDifficulty == "hard") ? 1 : 0;
+
+	suckBar = new FunkinAttachedSprite();
+	suckBar.loadGraphic(Paths.image("ui/healthbar/WHITEBAR"));
+	suckBar.zIndex = 805;
+	suckBar.objToAttach = healthBar.leftBar;
+	suckBar.clipRect = FlxRect.get(0, 0, (suckBar.width / 2) * healtSucked, suckBar.height);
+	//suckBar.blend = BlendMode.ADD;
+	suckBar.color = 0xFF362B4D;
+	suckBar.alpha = 1;
+	suckBar.flipY = Preferences.downscroll;
+	suckBar.attachFunc = obj -> {
+		suckBar.x = obj.x - 2;
+		suckBar.y = obj.y;
+
+		suckBar.clipRect.width = (suckBar.width / 2) * healtSucked;
+		suckBar.clipRect = suckBar.clipRect; //huh
+	}
+	healthBar.insert(2, suckBar);
+	refresh();
+}
+
+function spawnRating(rating:String)
+{
+	var rat = new FunkinSprite();
+	rat.frames = Paths.getSparrowAtlas("mechanincs/ratings");
+	rat.animation.addByPrefix("y", rating, 24, false);
+	rat.animation.play("y", true);
+	rat.screenCenter();
+	rat.camera = camHUD;
+	rat.y = uiCross.y - rat.height - 10;
+	if (Preferences.downscroll)
+		rat.y = uiCross.y + uiCross.height + 10;
+
+	rat.acceleration.y = 550;
+	rat.velocity.y -= FlxG.random.int(140, 175);
+	rat.velocity.x -= FlxG.random.int(0, 10);
+	rat.angle = FlxG.random.int(-5, 5);
+	rat.angularVelocity = FlxG.random.int(-5, 5);
+		rat.scale.x *= 0.85;
+		rat.scale.y *= 0.85;
+		FlxTween.tween(rat, {"scale.x": rat.scale.x / 0.85, "scale.y": rat.scale.y / 0.85}, Conductor.instance.beatLengthMs * 0.001 / 2, {ease: FlxEase.bounceOut});
+		FlxTween.tween(rat, {alpha: 0, angle: FlxG.random.int(-8, 8)}, 0.1,
+		{
+			onComplete: function(tween:FlxTween) {
+				remove(rat, true);
+				rat.destroy();
+			},
+			startDelay: Conductor.instance.beatLengthMs * 0.001
+		});
+	add(rat);
+}
+
+function createDot() {
+	var dot = new FunkinSprite();
+	dot.camera = camHUD;
+	dot.zIndex = DOT_Z_INDEX;
+	dot.loadGraphic(Paths.image("mechanincs/beat-dot"));
+	dot.visible = false;
+	dot.active = false;
+	dot.alpha = 0.4;
+	allDots.push(dot);
+	add(dot);
+	return dot;
+}
+
+function createStripe() {
+	var stripe = new FunkinSprite();
+	stripe.camera = camHUD;
+	stripe.zIndex = FINAL_STRIPE_Z_INDEX;
+	stripe.loadGraphic(Paths.image("mechanincs/beat-stripe"));
+	stripe.visible = false;
+	stripe.active = false;
+	stripe.alpha = 1.0;
+	allStripes.push(stripe);
+	add(stripe);
+	return stripe;
+}
+
+function onUpdatePost(e) {
+	if (controls.MECHANIC_P) {
+		if (canHitFinal && isEventActive) {
+			if (isWithinFinalWindow()) {
+				hitFinalBeat();
+			} else {
+				trace('Too early/late for final hit.');
+			}
+		} else if (!isEventActive) {
+			/*battleSplash.angle = FlxG.random.float(-50, 50);
+			battleSplash.animation.play("y", true);
+			battleSplash.visible = true;*/
+		}
+	}
+
+	health = FloatTools.clamp(health, 0, Constants.HEALTH_MAX - healtSucked);
+}
+
+function test2(name:String) {
+	triggerEvent(name == "dodge", 5);
+}
+
+var semiBeatHits:Int = -1;
+function triggerEvent(isDodge:Bool, beatReserve:Float, skipCameraShit:Bool) {
+	if (isEventActive) return;
+
+	if (!activeB) return;
+
+	mode = isDodge ? "dodge" : "attack";
+
+	eventBeats = Std.int(beatReserve);
+	currentBeatInEvent = 0;
+	trace(eventBeats);
+	if (eventBeats == 2) semiBeatHits = 1;
+
+	if (Preferences.hints)
+	{
+		FlxTween.cancelTweensOf(funnyHintText, ['alpha']);
+		FlxTween.tween(funnyHintText, {alpha: .9}, .5, {ease: FlxEase.cubeOut});
+		funnyHintText.text = eventBeats - 1;
+		funnyHintText.color = FlxColor.WHITE;
+	} else funnyHintText.alpha = 0;
+
+
+	if (isDodge)
+	{
+		if (!skipCameraShit)
+		{
+			forceFocusedPos = true;
+			forceFocusedZoom = true;
+			forceFocusedAngle = true;
+			resetCamera(false, false, false);
+			cancelCameraFollowTween();
+
+			cameraFollowPoint.x = currentStage.getBoyfriend().requiredCameraPos.x + 200;
+			cameraFollowPoint.y = currentStage.getBoyfriend().requiredCameraPos.y + 200;
+
+			var targetZoom = 1.4 * stageZoom;
+			cancelCameraZoomTween();
+			neededZoom = targetZoom;
+
+			cancelCameraAngleTween();
+			cameraAngleTween = FlxTween.tween(camGame, {scrollAngle: 0}, .35, {ease: FlxEase.backOut});
+		}
+		FlxTween.cancelTweensOf(currentStage.getNamedProp("snowman"));
+		FlxTween.tween(currentStage.getNamedProp("snowman"), {alpha: .4}, .25, {ease:FlxEase.backOut});
+	}
+
+	isEventActive = true;
+	eventStartBeat = Conductor.instance.currentBeat;
+	canHitFinal = false;
+
+	var icon = isDodge ? iconP1 : iconP2;
+	setupCross(true);
+	moveIcon(icon, true);
+}
+
+function onStepHit(step) {
+	if (!isEventActive || inFocus == null || uiCross == null) return;
+
+	if (!activeB) return;
+
+	if (step % 4 == 2 && semiBeatHits > 0)
+	{	var snd = FunkinSound.playOnce(Paths.sound('mechanics/cowbell'));
+		if (snd != null)
+			snd?.pitch = 1.25;
+		
+		trace(semiBeatHits);
+		if (mode == "dodge")
+		{
+			currentStage.getNamedProp("tentacle" + tentacleSide).alpha = 1;
+			currentStage.getNamedProp("tentacle" + tentacleSide).animation.play("tick", true);
+		}
+		semiBeatHits--;
+	}
+}
+
+function onBeatHit(beat) {
+	funnyIconBop();
+
+	if (!isEventActive || inFocus == null || uiCross == null) return;
+
+	if (!activeB) return;
+	
+	var beatsPassed = Math.floor(Conductor.instance.currentBeat - eventStartBeat);
+
+	if (beatsPassed >= 0 && beatsPassed < eventBeats) {
+		currentBeatInEvent = beatsPassed;
+		var snd = FunkinSound.playOnce(Paths.sound('mechanics/cowbell'));
+		if (snd != null && mode == "attack")
+			snd?.pitch = 1.1;
+
+		if (snd != null && semiBeatHits > 0)
+			snd?.pitch = 1.25;
+
+		if (mode == "dodge")
+		{
+			currentStage.getNamedProp("tentacle" + tentacleSide).alpha = 1;
+			currentStage.getNamedProp("tentacle" + tentacleSide).animation.play("tick", true);
+		}
+
+		tickHint(eventBeats - beatsPassed - 1);
+		if (beatsPassed < eventBeats - 1) {
+			spawnDotPair();
+		} else {
+			// final beat
+			if (mode == "attack") currentStage.getBoyfriend().playAnimation("pre attack", true, true);
+			spawnFinalStripes();
+			canHitFinal = true;
+			tickHint(controls.getDialogueNameFromToken("MECHANIC", true), 0xffFF6D96);
+		}
+		
+	}
+}
+
+function tickHint(text, ?dColor)
+{
+	if (!Preferences.hints) {
+		funnyHintText.alpha = 0;
+		return;
+	}
+
+	dColor ??= FlxColor.WHITE;
+	FlxTween.cancelTweensOf(funnyHintText, ['scale.x', 'scale.y']);
+	funnyHintText.scale.set(1.2, 1.2);
+	funnyHintText.color = dColor;
+	FlxTween.tween(funnyHintText, {"scale.x": 1, "scale.y": 1}, .25, {ease: FlxEase.cubeOut});
+	funnyHintText.text = text;
+}
+
+function spawnDotPair() {
+	if (uiCross == null) return;
+
+	var crossCenterX = uiCross.x + uiCross.width / 2;
+	var crossCenterY = uiCross.y + uiCross.height / 2;
+
+	var dot1 = createDot();
+	dot1.x = crossCenterX - DOT_OFFSET * 2.0;
+	dot1.y = crossCenterY - dot1.height / 2;
+	dot1.visible = true;
+	dot1.active = true;
+	dot1.alpha = 0;
+	activeDots.push(dot1);
+	FlxTween.tween(dot1, {alpha: .5}, .15, {ease: FlxEase.quadOut});
+
+	var dot2 = createDot();
+	dot2.x = crossCenterX + DOT_OFFSET * 1.8;
+	dot2.y = crossCenterY - dot2.height / 2;
+	dot2.visible = true;
+	dot2.active = true;
+	dot2.alpha = 0;
+	activeDots.push(dot2);
+	FlxTween.tween(dot2, {alpha: .5}, .15, {ease: FlxEase.quadOut});
+
+	var targetX = crossCenterX - dot1.width / 2;
+	var targetY = crossCenterY - dot1.height / 2;
+
+	var beatDuration = 60 / Conductor.instance.bpm;
+	var animationDuration = beatDuration * DOT_SPEED;
+
+	FlxTween.tween(dot1, {x: targetX, y: targetY}, animationDuration, {
+		ease: FlxEase.linear,
+		onComplete: function(t:FlxTween) {
+			dot1.visible = false;
+			dot1.active = false;
+			activeDots.remove(dot1);
+		}
+	});
+
+	FlxTween.tween(dot2, {x: targetX, y: targetY}, animationDuration, {
+		ease: FlxEase.linear,
+		onComplete: function(t:FlxTween) {
+			dot2.visible = false;
+			dot2.active = false;
+			activeDots.remove(dot2);
+		}
+	});
+	refresh();
+}
+
+function spawnFinalStripes() {
+	if (uiCross == null) return;
+
+	var crossCenterX = uiCross.x + uiCross.width / 2;
+	var crossCenterY = uiCross.y + uiCross.height / 2;
+
+	var stripe1 = createStripe();
+	stripe1.x = crossCenterX - DOT_OFFSET * 2.3;
+	stripe1.y = crossCenterY - stripe1.height / 2;
+	stripe1.visible = true;
+	stripe1.active = true;
+	stripe1.alpha = 0;
+	activeStripes.push(stripe1);
+	FlxTween.tween(stripe1, {alpha: 1}, .1, {ease: FlxEase.quadOut});
+
+	var stripe2 = createStripe();
+	stripe2.x = crossCenterX + DOT_OFFSET * 2.1;
+	stripe2.y = crossCenterY - stripe2.height / 2;
+	stripe2.visible = true;
+	stripe2.active = true;
+	stripe2.alpha = 0;
+	stripe2.flipX = true;
+	activeStripes.push(stripe2);
+	FlxTween.tween(stripe2, {alpha: 1}, .1, {ease: FlxEase.quadOut});
+
+	var targetX = crossCenterX - stripe1.width / 2;
+	var targetY = crossCenterY - stripe1.height / 2;
+
+	var beatDuration = 60 / Conductor.instance.bpm;
+	var animationDuration = beatDuration * (DOT_SPEED * 0.9);
+
+	FlxTween.tween(stripe1, {x: targetX, y: targetY}, animationDuration, {
+		ease: FlxEase.linear,
+		onComplete: function(t:FlxTween) {
+			stripe1.visible = false;
+			stripe1.active = false;
+			activeStripes.remove(stripe1);
+		}
+	});
+
+	FlxTween.tween(stripe2, {x: targetX, y: targetY}, animationDuration, {
+		ease: FlxEase.linear,
+		onComplete: function(t:FlxTween) {
+			stripe2.visible = false;
+			stripe2.active = false;
+			activeStripes.remove(stripe2);
+		}
+	});
+
+	targetFinalBeat = Conductor.instance.currentBeatTime + 1.0;
+	canHitFinal = true;
+
+	refresh();
+}
+
+function hitFinalBeat() {
+	if (!canHitFinal) return;
+
+	if (!isWithinFinalWindow()) {
+		trace('Attempted to hit final outside of allowed window');
+		return;
+	}
+
+	canHitFinal = false;
+
+	var currentBeatTime:Float = Conductor.instance.currentBeatTime;
+	var beatDiff:Float = currentBeatTime - targetFinalBeat;
+
+	var msDiff:Float = beatDiff * Conductor.instance.beatLengthMs;
+	var noteDiff:Int = Std.int(msDiff);
+
+	hitTimeDiff = beatDiff;
+
+	var daRating:String = null;
+	//try {
+		daRating = Scoring.judgeNote(noteDiff, "PBOT1");
+	/*} catch(e:Dynamic) {
+		var absDiff = Math.abs(noteDiff);
+		if (absDiff <= 45) daRating = "sick";
+		else if (absDiff <= 90) daRating = "good";
+		else if (absDiff <= 150) daRating = "bad";
+		else daRating = "shit";
+	}*/
+
+	trace('BossHitRating: ${daRating} (diffMs=${noteDiff})');
+
+	//try {
+	//var score = Scoring.scoreNote(noteDiff, "PBOT1");
+	//} catch(e:Dynamic) {}
+
+	battleSplash.angle = FlxG.random.float(-50, 50);
+	battleSplash.animation.play("y", true);
+	battleSplash.visible = true;
+
+	for (stripe in activeStripes) {
+		FlxTween.cancelTweensOf(stripe);
+		stripe.visible = false;
+		stripe.active = false;
+	}
+	activeStripes = [];
+
+	endEvent(true, daRating);
+}
+
+function missFinalBeat() {
+	canHitFinal = false;
+	endEvent(false, "miss");
+}
+
+function checkEventTimeout() {
+	if (isEventActive && canHitFinal) {
+		var beatsPassed = Math.floor(Conductor.instance.currentBeat - eventStartBeat);
+		if (beatsPassed >= eventBeats + 1) {
+			missFinalBeat();
+		}
+	}
+}
+
+function endEvent(success:Bool, rating:String) {
+	if (Preferences.hints)
+	{
+		FlxTween.cancelTweensOf(funnyHintText, ['alpha']);
+		FlxTween.tween(funnyHintText, {alpha: 0}, .5, {ease: FlxEase.cubeOUt});
+	}  else funnyHintText.alpha = 0;
+
+	forceFocusedPos = false;
+	forceFocusedZoom = false;
+	forceFocusedAngle = false;
+
+	FlxTween.tween(currentStage.getNamedProp("snowman"), {alpha: 1}, .25, {ease:FlxEase.backOut, startDelay: .8});
+
+	if (rating == "miss")
+		success = false;
+
+	spawnRating(success ? rating : "missed");
+
+	isEventActive = false;
+	currentBeatInEvent = 0;
+	canHitFinal = false;
+
+	if (inFocus != null) {
+		setupCross(false);
+		moveIcon(inFocus, false);
+	}
+
+	for (dot in activeDots) {
+		FlxTween.cancelTweensOf(dot);
+		dot.visible = false;
+		dot.active = false;
+	}
+	activeDots = [];
+
+	for (stripe in activeStripes) {
+		FlxTween.cancelTweensOf(stripe);
+		stripe.visible = false;
+		stripe.active = false;
+	}
+	activeStripes = [];
+
+	trace("ANIMATION ASJOFAJIOPSF");
+
+	if (success)
+	{
+		if (mode == "dodge")
+		{
+			currentStage.getNamedProp("tentacle" + tentacleSide).alpha = 1;
+			currentStage.getNamedProp("tentacle" + tentacleSide).animation.play("attack", true);
+			if (health > .5)
+			{
+				FunkinSound.playOnce(Paths.sound('mechanics/dodge'));
+				FunkinSound.playOnce(Paths.sound('mechanics/tentacle ' + FlxG.random.int(1, 2)));
+
+				if (tentacleSide == "Left") currentStage.getBoyfriend().playAnimation("dodge" + (FlxG.random.bool(50) ? 1 : 2), true, true);
+				else currentStage.getBoyfriend().playAnimation("dodge" + (FlxG.random.bool(50) ? 1 : 3), true, false);
+				if (dodgeTrail != null)
+					dodgeTrail.capture();
+			} else {
+				FunkinSound.playOnce(Paths.sound('mechanics/parry'));
+				FunkinSound.playOnce(Paths.sound('mechanics/tentacle ' + FlxG.random.int(1, 2)));
+				currentStage.getBoyfriend().playAnimation("parry", true, true);
+				new FlxTimer().start(.5, _ -> health += .45);
+			}
+		}
+		else
+		{
+			var snd = FunkinSound.playOnce(Paths.sound('mechanics/attack'));
+			if (snd != null)
+				snd?.pitch = FlxG.random.float(.9, 1.1);
+
+			FunkinSound.playOnce(Paths.sound('mechanics/success'), .8);
+
+			var loseSuck = 0;
+			loseSuck = switch (rating)
+			{
+				case "sick" : .5;
+				case "good" : .335;
+				case "shit" : .15;
+				case "bad"  : .05;
+				default     : 0;
+			}
+			currentStage.getBoyfriend().canPlayOtherAnims = true;
+			currentStage.getBoyfriend().playAnimation("attack", true, true);
+			FunkinSound.playOnce(Paths.sound('mechanics/attack'));
+			new FlxTimer().start(.15, _ -> {
+				currentStage.getDad().playAnimation("hit", true, true);
+				camGame.shake(.005, .15);
+				FlxTween.num(healtSucked, healtSucked - loseSuck, .25, {ease: FlxEase.sineInOut}, (value:Float) -> healtSucked = value);
+			});
+			new FlxTimer().start(.5, _ -> currentStage.getBoyfriend().canPlayOtherAnims = true);
+			new FlxTimer().start(.45, _ -> currentStage.getDad().canPlayOtherAnims = true);
+
+			new FlxTimer().start(.15, _ -> {
+				hitFlickerIcon = FlxFlicker.flicker(iconP2, 1, 1 / 30, true, true, _ -> {
+					hitFlickerIcon = FlxFlicker.flicker(iconP2, 0.5, 1 / 60, true, true, _ -> {
+						hitFlickerIcon = null;
+					});
+				});
+			});
+
+			health += .35;
+		}
+	} else {
+		if (mode == "dodge")
+		{
+			currentStage.getNamedProp("tentacle" + tentacleSide).alpha = 1;
+			currentStage.getNamedProp("tentacle" + tentacleSide).animation.play("attack", true);
+
+			FunkinSound.playOnce(Paths.sound('mechanics/bfhit'));
+			FunkinSound.playOnce(Paths.sound('mechanics/tentacle ' + FlxG.random.int(1, 2)));
+			currentStage.getBoyfriend().playAnimation(tentacleSide.toLowerCase() + " hit", true, true);
+
+			new FlxTimer().start(.15, _ -> {
+				hitFlicker = FlxFlicker.flicker(currentStage.getBoyfriend(), 1, 1 / 30, true, true, _ -> {
+					hitFlicker = FlxFlicker.flicker(currentStage.getBoyfriend(), 0.5, 1 / 60, true, true, _ -> {
+						hitFlicker = null;
+					});
+				});
+
+				hitFlickerIcon = FlxFlicker.flicker(iconP1, 1, 1 / 30, true, true, _ -> {
+					hitFlickerIcon = FlxFlicker.flicker(iconP1, 0.5, 1 / 60, true, true, _ -> {
+						hitFlickerIcon = null;
+					});
+				});
+			});
+
+			new FlxTimer().start(.1, _ -> camGame.shake(.005, .15));
+			health -= .4;
+		}
+		else
+		{
+			FunkinSound.playOnce(Paths.sound('mechanics/failed'));
+			currentStage.getBoyfriend().playAnimation("singLEFTmiss", true, true);
+		}
+	}
+}
+
+function moveIcon(ico, to:Bool) {
+	iconMoveTween?.cancel();
+	var icon = ico;
+	if (to) {
+		inFocus = icon;
+		icon.setGraphicSize(125);
+		icon.autoUpdate = false;
+		healthBarGroup.remove(icon, false);
+		icon.camera = camHUD;
+		icon.zIndex = 1800;
+		icon.playAnimation("idle");
+		add(icon);
+		iconMoveTween = FlxTween.tween(icon, {x: uiCross.x + uiCross.frameWidth/2 - icon.frameWidth/2 + 35, y: uiCross.y + uiCross.frameHeight/2 - icon.frameHeight/2 + 40, angle: 0}, 9/24, {ease: FlxEase.quartIn, onComplete: _ -> iconMoveTween = null});
+	} else {
+		icon.zIndex = 850;
+		remove(icon, false);
+		healthBarGroup.add(icon);
+		var pointX = (icon.playerId == 0) ? (healthBar.centerPoint.x - POSITION_OFFSET) : (healthBar.centerPoint.x - (icon.width - POSITION_OFFSET));
+		var pointY = healthBar.centerPoint.y - (icon.height / 2);
+		iconMoveTween = FlxTween.tween(icon, {x: pointX, y: pointY, angle: 0}, 9/24, {ease: FlxEase.quartIn, onComplete: _ -> {
+			icon.autoUpdate = true;
+			inFocus = null;
+			iconMoveTween = null;
+		}});
+	}
+	refresh();
+}
+
+function setupCross(in:Bool) {
+	crossTween?.cancel();
+	if (in) {
+		uiCross.angle = -55;
+		uiCross.scale.set(1.5, 1.5);
+		uiCross.alpha = 0;
+		crossTween = FlxTween.tween(uiCross, {angle: 0, "scale.x": 1, "scale.y": 1, alpha: .6}, 18/24, {ease: FlxEase.cubeOut});
+	} else {
+		uiCross.scale.set(.9, .9);
+		crossTween = FlxTween.tween(uiCross, {"scale.x": 1.4, "scale.y": 1.4, alpha: 0}, 7/24, {startDelay: 1/24, ease: FlxEase.quartOut});
+	}
+}
+
+var tentacleSide = "Left";
+function funnyIconBop() {
+	if (inFocus == null || iconMoveTween != null || !isEventActive)
+		return;
+
+	inFocus.setGraphicSize(0, Std.int(inFocus.height + (125 * inFocus.size.y * .2)));
+	FlxTween.tween(inFocus.scale, {x: 100/150, y: 100/150}, .2, {ease:FlxEase.sineOut});
+}
+
+function onUpdate(e) {
+	if (isEventActive) {
+		checkEventTimeout();
+	}
+}
+
+function isWithinFinalWindow():Bool {
+	if (!canHitFinal) return false;
+	var currentBeatTime:Float = Conductor.instance.currentBeatTime;
+	var diff:Float = currentBeatTime - targetFinalBeat;
+	return (diff >= -FINAL_PRE_WINDOW && diff <= FINAL_POST_WINDOW);
+}
+
+function onEvent(event) {
+	if (!activeB) return;
+	
+	if (event.eventKind == "Blank")
+	{
+		switch(event.getString("value1").toLowerCase())
+		{
+			case "dodge":
+				triggerEvent(true, event.getInt("value2") + 1, event.getString("value3") == "yah");
+				tentacleSide = (FlxG.random.bool(50) ? "Left" : "Right");
+
+			case "attack":
+				triggerEvent(false, event.getInt("value2") + 1, false);
+		}
+	}
+}

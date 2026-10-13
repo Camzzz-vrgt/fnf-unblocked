@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				-104
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				85,
+				-96
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-121
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				-83
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				-107
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF RIGHT",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GOD_BF_SANS",
+	"position": [
+		150,
+		450
+	],
+	"healthicon": "bf-black",
+	"flip_x": true,
+	"healthbar_colors": [
+		153,
+		153,
+		153
+	],
+	"camera_position": [
+		230,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": true
+}

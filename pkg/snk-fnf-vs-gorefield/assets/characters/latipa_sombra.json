@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-320,
+				161
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "la tipa esa sombra",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-300,
+				160
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "la tipa esa sombra left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-320,
+				120
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "la tipa esa sombra down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-316,
+				180
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "la tipa esa sombra up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-320,
+				167
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "la tipa esa sombra right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/latipa esa sombra",
+	"position": [
+		-530,
+		0
+	],
+	"healthicon": "jippy",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		210,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6,
+	"_editor_isPlayer": false
+}

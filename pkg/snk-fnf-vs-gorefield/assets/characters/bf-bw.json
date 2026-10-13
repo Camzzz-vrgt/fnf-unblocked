@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-285,
+				-290
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "BF I"
+		},
+		{
+			"offsets": [
+				-285,
+				-286
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BF L"
+		},
+		{
+			"offsets": [
+				-290,
+				-301
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BF D"
+		},
+		{
+			"offsets": [
+				-296,
+				-283
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BF U"
+		},
+		{
+			"offsets": [
+				-298,
+				-287
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BF R"
+		},
+		{
+			"offsets": [
+				-293,
+				-291
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "MISS L"
+		},
+		{
+			"offsets": [
+				-305,
+				-299
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "MISS D"
+		},
+		{
+			"offsets": [
+				-306,
+				-283
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "MISS U"
+		},
+		{
+			"offsets": [
+				-304,
+				-288
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "MISS R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf-bw",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-bw",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-250,
+		350
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

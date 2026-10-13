@@ -1,0 +1,116 @@
+import funkin.audio.FunkinSound;
+import funkin.audio.visualize.dsp.FlxSoundAnalyzer;
+import funkin.util.PlatformUtil;
+import funkin.util.assets.SoundUtil;
+import Math;
+
+var special:String = "";
+function onLoadParams(playParams)
+{
+	bgSuffix = switch(playParams?.targetSong?.id.toLowerCase())
+	{
+		case "tutorial" | "bopeebo" | "fresh": "-week1";
+		case "dadbattle": "-week1-dadbattle";
+		case "phone-call" | "how2funk": "-komi";
+		case "winter-horrorland": "-wh";
+		default: "";
+	}
+}
+
+var analyzer:FlxSoundAnalyzer;
+var dadbattleViz = [];
+function onCreateBG()
+{
+	switch(bgSuffix)
+	{
+		case "-wh":
+			FlxTween.tween(FlxG.sound.music, {pitch: 0.1}, 2.5, {ease:FlxEase.expoOut});
+			box.visible = bfMudbang.visible = loadNoodle.visible = false;
+
+			pressEnter.color = FlxColor.GRAY;
+			pressEnter.scale.set(.7, .7);
+			bgColor = FlxColor.BLACK;
+
+			var blackScreeen = new FunkinSprite();
+			blackScreeen.makeSolidColor(2000, 2000, FlxColor.BLACK);
+			blackScreeen.screenCenter();
+			add(blackScreeen);
+			FlxTween.tween(blackScreeen, {alpha: 0}, 2, {ease: FlxEase.cictOut});
+
+		case "-week1-dadbattle":
+			if (FlxG.sound.music != null)
+			{
+				FlxG.sound.music.fadeTween?.cancel();
+				FlxG.sound.music.stop();
+				FlxG.sound.music.kill();
+			}
+			FlxG.sound.music = FunkinSound.load(Paths.musicStr("loadingThemeLol/loadingThemeLol-dadbattle"), 0, true, false, true);
+			FlxG.sound.music.fadeIn(4.0, 0.0, 1.0);
+			box.visible = loadNoodle.visible = bfMudbang.visible = false;
+
+			var vizFrames = Paths.getAnimateAtlas('loadingScreen/dadbattleviz');
+			for (i in 1...12)
+			{
+				trace(i);
+				var viz = new FunkinSprite();
+				viz.frames = vizFrames;
+				add(viz);
+				viz.scale.set(bg.scale.x, bg.scale.y);
+				viz.updateHitbox();
+				viz.screenCenter();
+				viz.x += 5;
+				viz.y += 3;
+				
+				viz.animation.addByFrameLabel("y", "viz" + i, 24, false);
+				viz.animation.play('y', true);
+				viz.animation.curAnim.finish();
+				viz.animation.curAnim.curFrame = 0;
+				dadbattleViz.push(viz);
+			}
+			analyzer = new FlxSoundAnalyzer(FlxG.sound.music, 11, 0.1, 30);
+
+			var blackScreeen = new FunkinSprite();
+			blackScreeen.makeSolidColor(2000, 2000, FlxColor.BLACK);
+			blackScreeen.screenCenter();
+			add(blackScreeen);
+			FlxTween.tween(blackScreeen, {alpha: 0}, 2, {ease: FlxEase.cictOut});
+		default:
+	}
+}
+
+function onUpdatePost(e)
+{
+	switch(bgSuffix)
+	{
+		case "-wh":
+
+		case "-week1-dadbattle":
+			doDadbattleTTF();
+		default:
+	}
+
+}
+
+var levels = null;
+var _lvl:Float = 0;
+function doDadbattleTTF()
+{
+	levels = analyzer.getLevels(levels);
+
+
+	//0 - 6
+
+	for (i in 0...11)
+	{
+		_lvl = dadbattleViz[i].animation.curAnim.curFrame;
+
+		var animFrame:Float = levels[i].value * 20;
+		animFrame = Math.min(13, animFrame);
+		animFrame = Math.max(0, animFrame);
+
+		_lvl = FlxMath.lerp(_lvl, animFrame, FlxMath.bound(FlxG.elapsed * 50, 0, 1));
+
+		dadbattleViz[i].animation.curAnim.curFrame = Math.round(_lvl);
+	}
+
+}
