@@ -1,0 +1,204 @@
+{
+  "renderType": "multisparrow",
+  "offsets": [0, 10],
+  "death": {
+    "cameraOffsets": [100, 20]
+  },
+  "startingAnimation": "idle",
+  "assetPath": "characters/darnell-car",
+  "healthIcon": {
+    "isPixel": false,
+    "offsets": [0, 0],
+    "scale": 1,
+    "id": "darnell",
+    "flipX": false
+  },
+  "generatedBy": "Nova Character Editor v3.0.1",
+  "version": "1.0.0",
+  "danceEvery": 2,
+  "scale": 1,
+  "name": "Darnell (Car)",
+  "cameraOffsets": [0, 0],
+  "flipX": false,
+  "isPixel": false,
+  "singTime": 4,
+  "flipY": false,
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "darnell-car Idle",
+      "flipX": false,
+      "looped": false,
+      "name": "idle",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [12, 13],
+      "prefix": "darnell-car Idle",
+      "flipX": false,
+      "looped": true,
+      "name": "idle-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [41, 0],
+      "frameIndices": [],
+      "prefix": "darnell-car right",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFT",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [-1, 12],
+      "frameIndices": [],
+      "prefix": "MISSRIGHT0",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHTmiss",
+      "flipY": false,
+      "assetPath": "characters/playable darnell anims",
+      "frameRate": 24
+    },
+    {
+      "offsets": [41, 0],
+      "frameIndices": [10, 11, 12, 13],
+      "prefix": "darnell-car right",
+      "flipX": false,
+      "looped": true,
+      "name": "singLEFT-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [16, -36],
+      "frameIndices": [],
+      "prefix": "darnell-car down",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWN",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [31, 7],
+      "frameIndices": [],
+      "prefix": "MISSDOWN0",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWNmiss",
+      "flipY": false,
+      "assetPath": "characters/playable darnell anims",
+      "frameRate": 24
+    },
+    {
+      "offsets": [16, -36],
+      "frameIndices": [10, 11, 12, 13],
+      "prefix": "darnell-car down",
+      "flipX": false,
+      "looped": true,
+      "name": "singDOWN-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [-22, 30],
+      "frameIndices": [],
+      "prefix": "darnell-car up",
+      "flipX": false,
+      "looped": false,
+      "name": "singUP",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [-5, 101],
+      "frameIndices": [],
+      "prefix": "MISSUP0",
+      "flipX": false,
+      "looped": false,
+      "name": "singUPmiss",
+      "flipY": false,
+      "assetPath": "characters/playable darnell anims",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-22, 30],
+      "frameIndices": [10, 11, 12, 13],
+      "prefix": "darnell-car up",
+      "flipX": false,
+      "looped": true,
+      "name": "singUP-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [-5, -1],
+      "frameIndices": [],
+      "prefix": "darnell-car left",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHT",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [65, 47],
+      "frameIndices": [],
+      "prefix": "MISSLEFT",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFTmiss",
+      "flipY": false,
+      "assetPath": "characters/playable darnell anims",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-5, -1],
+      "frameIndices": [10, 11, 12, 13],
+      "prefix": "darnell-car left",
+      "flipX": false,
+      "looped": true,
+      "name": "singRIGHT-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [434, 367],
+      "frameIndices": [],
+      "prefix": "SYMBOL0",
+      "flipX": false,
+      "looped": false,
+      "name": "firstDeath",
+      "flipY": false,
+      "assetPath": "characters/darnell-gameover",
+      "frameRate": 24
+    },
+    {
+      "offsets": [226, -268],
+      "frameIndices": [],
+      "prefix": "GAMEOV END0",
+      "flipX": false,
+      "looped": false,
+      "name": "deathConfirm",
+      "flipY": false,
+      "assetPath": "characters/darnell-gameover",
+      "frameRate": 24
+    }
+  ]
+}

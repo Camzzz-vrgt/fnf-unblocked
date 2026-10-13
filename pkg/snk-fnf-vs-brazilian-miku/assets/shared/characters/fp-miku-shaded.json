@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "FP Miku Idle Dance",
+			"indices": []
+		},
+		{
+			"offsets": [595, 170],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "FP Miku Left"
+		},
+		{
+			"offsets": [76, -63],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "FP Miku Down"
+		},
+		{
+			"offsets": [135, 142],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "FP Miku Up"
+		},
+		{
+			"offsets": [221, 123],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "FP Miku Right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/FP Miku-shaded",
+	"position": [150, 0],
+	"healthicon": "BrazilMiku",
+	"flip_x": true,
+	"healthbar_colors": [17, 193, 188],
+	"camera_position": [0, 50],
+	"sing_duration": 4,
+	"scale": 1.5,
+	"_editor_isPlayer": false
+}

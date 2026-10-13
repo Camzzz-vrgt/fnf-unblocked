@@ -1,0 +1,54 @@
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterType;
+import funkin.play.stage.Stage;
+import haxe.io.Path;
+
+class SchoolNeneStage extends Stage
+{
+	function new()
+	{
+		super('schoolNene');
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+	{
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+
+		var rim = new DropShadowShader();
+		rim.setAdjustColor(-66, -10, 24, -23);
+		rim.antialiasAmt = 0;
+		rim.color = 0xFF52351d;
+		rim.attachedSprite = character;
+		rim.distance = 5;
+
+		var maskPath = Path.withoutDirectory(character._data.assetPath);
+		maskPath = 'assets/images/weeb/erect/masks/' + maskPath + '_mask.png';
+
+		character.shader = rim;
+
+		// if (Assets.exists(maskPath))
+		rim.altMaskImage = Assets.getBitmapData(maskPath);
+		rim.maskThreshold = 1;
+		rim.useAltMask = rim.altMaskImage != null;
+
+		switch (charType)
+		{
+			case CharacterType.BF:
+				rim.angle = 90;
+				character.animation.onFrameChange.add(() -> if (getBoyfriend() != null) rim.updateFrameInfo(getBoyfriend().frame));
+
+			case CharacterType.GF:
+				rim.angle = 90;
+				rim.distance = 2;
+				character.animation.onFrameChange.add(() -> if (getGirlfriend() != null) rim.updateFrameInfo(getGirlfriend().frame));
+
+			case CharacterType.DAD:
+				rim.angle = 75;
+				character.animation.onFrameChange.add(() -> if (getDad() != null) rim.updateFrameInfo(getDad().frame));
+			default:
+		}
+	}
+}

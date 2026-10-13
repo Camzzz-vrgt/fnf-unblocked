@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "eppa0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				225,
+				121
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "eppa up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				314,
+				-189
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "eppa down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "eppa left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				86,
+				-103
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "eppa right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				104
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "eppa fino",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/eppa",
+	"position": [
+		300,
+		320
+	],
+	"healthicon": "eppa",
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		125,
+		175
+	],
+	"camera_position": [
+		140,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

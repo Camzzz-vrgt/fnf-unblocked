@@ -1,0 +1,33 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import flixel.FlxG;
+import funkin.play.PlayState;
+
+class FriendsOfDarnellCharacter extends MultiSparrowCharacter
+{
+	function new() 
+    {
+        super('friends');
+    }
+
+    function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        if (PlayState.instance != null && PlayState.instance.currentStage != null) {
+            switch (PlayState.instance.currentStage.id) // This thing sets different offsets for different stages.
+            {
+                case "tankmanBattlefieldDarnell", "phillyStreetsDarnell", "tankmanBattlefieldErect", "phillyStreetsErect": 
+                    this.globalOffsets = [0, 30]; // Replacement for friends-vsdarnell.json
+
+                case "mainStageErect": 
+                    this.globalOffsets = [80, 10]; // Replacement for friends-vsdad.json
+
+                case "qtStage": 
+                    this.globalOffsets = [0, 100]; // I'm not planning to make QT mod collab, just tested something.
+
+                default:
+                    this.globalOffsets = [0, 10]; // Default offsets.
+            }
+        }
+	}
+}

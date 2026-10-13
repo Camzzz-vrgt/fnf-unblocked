@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Brazilian BF Idle dance"
+		},
+		{
+			"offsets": [2, 3],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Brazilian BF Left0"
+		},
+		{
+			"offsets": [23, 3],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Brazilian BF Down0"
+		},
+		{
+			"offsets": [7, 22],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Brazilian BF Up0"
+		},
+		{
+			"offsets": [-3, -14],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Brazilian BF Right0"
+		},
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Brazilian BF Left miss"
+		},
+		{
+			"offsets": [24, 4],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Brazilian BF Down Miss"
+		},
+		{
+			"offsets": [5, 17],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Brazilian BF Up Miss"
+		},
+		{
+			"offsets": [-1, -14],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Brazilian BF Right Miss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Brazil BF-shaded",
+	"position": [0, 230],
+	"healthicon": "brazilbf",
+	"flip_x": true,
+	"healthbar_colors": [103, 102, 205],
+	"camera_position": [0, 0],
+	"sing_duration": 4,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

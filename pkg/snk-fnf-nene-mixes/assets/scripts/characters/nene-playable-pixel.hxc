@@ -1,0 +1,93 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.play.GameOverSubState;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import flixel.FlxSprite;
+import flixel.FlxG;
+import funkin.modding.base.ScriptedFunkinSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import flixel.effects.FlxFlicker;
+import funkin.play.PauseSubState;
+import funkin.modding.module.ModuleHandler;
+import flixel.tweens.FlxTween;
+import funkin.Preferences;
+
+class NenePlayablePixelCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('nene-playable-pixel');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+		// NOTE: this.x and this.y are not properly set here.
+		GameOverSubState.musicSuffix = '-nene-pixel';
+		GameOverSubState.blueBallSuffix = '-nene';
+		PauseSubState.musicSuffix = '-nene';
+	}
+
+	override function onSongRetry(event:ScriptEvent):Void {
+		super.onSongRetry(event);
+		// Reset to standard death animation.
+		GameOverSubState.musicSuffix = '-nene-pixel';
+		GameOverSubState.blueBallSuffix = '-nene';
+		PauseSubState.musicSuffix = '-nene';
+		this.visible = true;
+	}
+
+
+	function onUpdate(event:UpdateScriptEvent):Void
+	{
+		super.onUpdate(event);
+	}
+
+	var ass = [];
+	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+		if (name == "firstDeath") {
+			shader = null;
+			GameOverSubState.instance.cameraFollowPoint.x += 10;
+			GameOverSubState.instance.cameraFollowPoint.y += 80;
+			if (!debug)
+			{
+				ass.push(new FlxTimer().start(1.5, _ -> {
+					GameOverSubState.instance.cameraFollowPoint.y += 50;
+				}));
+				ass.push(new FlxTimer().start(2.1, _ -> {
+					GameOverSubState.instance.cameraFollowPoint.y += 50;
+				}));
+			}
+		} else if (name == "deathConfirm") {
+			
+		} else {
+			super.playAnimation(name, restart, ignoreOther);
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+	}
+
+
+	function onNoteHit(event:HitNoteScriptEvent)
+  	{
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "laugh":
+        holdTimer = 0;
+        this.playAnimation('laugh', true, false);
+        return;
+      case "laugh end":
+        holdTimer = 0;
+        this.playAnimation('laugh end', true, true);
+        return;
+      default:
+        super.onNoteHit(event);
+    }
+  }
+}

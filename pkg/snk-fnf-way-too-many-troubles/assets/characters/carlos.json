@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-1070,
+				-70
+			],
+			"anim": "idle",
+			"fps": 10,
+			"name": "carlos idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1140,
+				-70
+			],
+			"anim": "singRIGHT",
+			"fps": 10,
+			"name": "carlos left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1030,
+				-70
+			],
+			"anim": "singLEFT",
+			"fps": 10,
+			"name": "carlos right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1070,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 10,
+			"name": "carlos down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1070,
+				-70
+			],
+			"anim": "singUP",
+			"fps": 10,
+			"name": "carlos up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/carlos",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "carlosicon",
+	"flip_x": true,
+	"healthbar_colors": [
+		172,
+		41,
+		26
+	],
+	"camera_position": [
+		720,
+		160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

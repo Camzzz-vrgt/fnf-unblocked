@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Pixel)",
+  "assetPath": "weeb/portrait-darnell",
+  "flipX": false,
+  "isPixel": true,
+  "scale": 4.5,
+  "offsets": [50, -220],
+  "animations": [
+    {
+      "name": "talkEnter",
+      "prefix": "d enter default",
+      "frameRate": 6
+    },
+    {
+      "name": "talk",
+      "prefix": "d talk default"
+    },
+    {
+      "name": "talkEnterPissed",
+      "prefix": "d enter pissed",
+      "frameRate": 6
+    },
+    {
+      "name": "talkPissed",
+      "prefix": "d talk pissed"
+    },
+    {
+      "name": "talkEnterAngry",
+      "prefix": "d enter angr",
+      "frameRate": 6
+    },
+    {
+      "name": "talkAngry",
+      "prefix": "d talk angr"
+    }
+  ]
+}

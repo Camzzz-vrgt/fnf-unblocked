@@ -1,0 +1,34 @@
+{
+  "version": "2.2.4",
+  "songName": "Spookeez (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "Sveklo1d",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "darnell-dark",
+      "girlfriend": "friends-dark",
+      "opponent": "spooky-dark",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "stage": "spookyMansionErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 4, "normal": 5, "hard": 5 },
+    "album": "darnellmix1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

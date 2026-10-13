@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-20,
+				-100
+			],
+			"indices": [],
+			"fps": 8,
+			"anim": "idle",
+			"loop": false,
+			"name": "metal idle"
+		},
+		{
+			"offsets": [
+				-10,
+				-100
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "metal left"
+		},
+		{
+			"offsets": [
+				-90,
+				-100
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "metal right"
+		},
+		{
+			"offsets": [
+				-20,
+				-100
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singUP",
+			"loop": false,
+			"name": "metal up"
+		},
+		{
+			"offsets": [
+				-20,
+				-100
+			],
+			"indices": [],
+			"fps": 10,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "metal down"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/metal",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "metalicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		62,
+		66,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

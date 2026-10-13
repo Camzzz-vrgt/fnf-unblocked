@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-160,
+				340
+			],
+			"loop": false,
+			"fps": 7,
+			"anim": "idle",
+			"indices": [],
+			"name": "pepe idle"
+		},
+		{
+			"offsets": [
+				-160,
+				340
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "pepe down"
+		},
+		{
+			"offsets": [
+				-160,
+				340
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "pepe left"
+		},
+		{
+			"offsets": [
+				-160,
+				340
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "pepe right"
+		},
+		{
+			"offsets": [
+				-160,
+				340
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "pepe up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pepe3",
+	"position": [
+		-10,
+		10
+	],
+	"healthicon": "pepe2icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		41,
+		6,
+		117
+	],
+	"camera_position": [
+		210,
+		-150
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

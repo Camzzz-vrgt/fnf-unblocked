@@ -1,0 +1,157 @@
+import StringTools;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import funkin.Paths;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxSprite;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.play.PlayState;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.character.AnimateAtlasCharacter;
+
+class CassandraBoomCharacterWeek7 extends AnimateAtlasCharacter {
+	function new() {
+		super('cassandra-boom-week7');
+	}
+
+	var pupilRight:Bool = false;
+	var boom:FlxSprite;
+	var tanktop:FunkinSprite;
+	var tankbottom:FunkinSprite;
+
+	override function findCountAnimations(prefix:String):Array<Int> // fix atlas thing
+	{
+		var animNames:Array<String> = [for (i in this._data.animations) i.name]; // main change
+
+		var result:Array<Int> = [];
+
+		for (anim in animNames)
+		{
+			if (StringTools.startsWith(anim, prefix))
+			{
+				var comboNum:Null<Int> = Std.parseInt(anim.substring(prefix.length));
+				if (comboNum != null)
+				{
+					result.push(comboNum);
+				}
+			}
+		}
+
+		// Sort numerically.
+		result.sort((a, b) -> a - b);
+		return result;
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		boom = new FunkinSprite();
+		boom.frames = Paths.getSparrowAtlas("characters/cass/base-boom");
+		boom.animation.addByPrefix("boomLeft", "boom-idle-left", 24, false);
+		boom.animation.addByPrefix("boomRight", "boom-idle-right", 24, false);
+
+    		tanktop = new FunkinSprite(0, 0, Paths.animateAtlas("characters/cass/week7-tankmen-top", "shared", {useRenderTexture: true}));
+		tankbottom = new FunkinSprite(0, 0, Paths.animateAtlas("characters/cass/week7-tankmen-bottom", "shared", {useRenderTexture: true}));
+
+		updateBoomBoxParams();
+
+	}
+
+	function updateBoomBoxParams()
+	{
+		boom.x = this.x - 195 + globalOffsets[0];
+		boom.y = this.y + 330 + globalOffsets[1];
+		boom.zIndex = this.zIndex - 1;
+
+		tankbottom.x = this.x - 275;
+   		tankbottom.y = this.y + 260;
+    		tankbottom.zIndex = boom.zIndex - 1;
+		tankbottom.color = 0xFFDFEF3C;
+
+		tanktop.x = this.x - 301;
+   		tanktop.y = this.y + 143;
+    		tanktop.zIndex = boom.zIndex + 2;
+
+		//tanktop.x = this.x - 0;
+    		//tanktop.y = this.y - 0;
+    		//tanktop.zIndex = this.zIndex + 1;
+
+		
+		var fastRim = (obj, dist) -> 
+		{
+			var rim = new DropShadowShader();
+			rim.setAdjustColor(-46, -38, -25, -20);
+			rim.color = 0xFFDFEF3C;
+			obj.shader = rim;
+			rim.attachedSprite = obj;
+			obj.animation.onFrameChange.add(() -> if (obj!= null) rim.updateFrameInfo(obj.frame));
+
+			rim.distance = dist;
+		}
+		fastRim(boom, 15);
+		fastRim(tanktop, 8);
+		fastRim(tankbottom, 0);
+	}
+
+	function dance(forceRestart:Bool) {
+		if (boom != null)
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", true);
+
+		if (tankbottom != null)
+			tankbottom.animation.play('idle-bottom', true);
+
+		if (tanktop != null)
+			tanktop.animation.play('idle-top', true);
+		
+		super.dance(forceRestart);
+	}
+
+	var refershedLol:Bool = false;
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+	{
+		super.onSongEvent(scriptEvent);
+		if (scriptEvent.eventData.eventKind == "FocusCamera")
+		{
+			var eventProps = scriptEvent.eventData.value;
+			var char = eventProps.char;
+			if (char == null)
+				char = eventProps; // hUh?
+			switch (Std.parseInt(char)) {
+				case 0:
+					pupilRight = true;
+				case 1:
+					pupilRight = false;
+				default:
+			}
+			var oldFrame = boom.animation.frameIndex;
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", false, false, oldFrame);
+		}
+
+	}
+
+
+	function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+
+		// Set the visibility of ABot to match Nene's.
+		boom.visible = this.visible;
+
+
+		// refreshes just for the zIndex shit!
+		if (!refershedLol)
+		{
+			updateBoomBoxParams();
+			if (PlayState.instance != null)
+			{
+				PlayState.instance.currentStage.add(tankbottom);
+
+				PlayState.instance.currentStage.add(boom);
+				PlayState.instance.currentStage.add(tanktop);
+				PlayState.instance.currentStage.refresh();
+			}
+			refershedLol = true;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "FLIQPY IDLE",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "FLIQPY IDLE",
+			"indices": [
+				16,
+				17,
+				18,
+				19
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				36
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "FLIQPY LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-147,
+				-55
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "FLIQPY DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-164,
+				103
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "FLIQPY UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-131,
+				24
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "FLIQPY RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				80
+			],
+			"anim": "scream",
+			"fps": 24,
+			"name": "FLIQPY SCREAM",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Fliqpy_Bloody",
+	"position": [
+		0,
+		310
+	],
+	"healthicon": "fliqpy",
+	"flip_x": false,
+	"healthbar_colors": [
+		153,
+		253,
+		148
+	],
+	"camera_position": [
+		170,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF_Peppa0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-16
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF_Peppa down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF_Peppa left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				6
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF_Peppa right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				27
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF_Peppa up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				87,
+				19
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Bf death confirm",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				87,
+				-38
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Bf death loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				14
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "death bf",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-3,
+				9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "miis bf 1 ci"
+		},
+		{
+			"offsets": [
+				17,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "bf miss 4 si"
+		},
+		{
+			"offsets": [
+				10,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "bf miss 3 si"
+		},
+		{
+			"offsets": [
+				16,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "bf miss 2 si"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				18,
+				15
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF_Peppa yeah!",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF_CANIVAL",
+	"position": [
+		200,
+		370
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		270,
+		-90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

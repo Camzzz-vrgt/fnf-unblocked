@@ -1,0 +1,35 @@
+{
+  "version": "2.2.4",
+  "songName": "Lit Up (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "Sveklo1d",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "darnell-gun",
+      "girlfriend": "friends",
+      "opponent": "darnell",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "stage": "phillyStreetsDarnell",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 6, "hard": 9 },
+    "album": "darnellexp1",
+    "stickerPack": "bonus-2darnell",
+    "previewStart": 0,
+    "previewEnd": 14800
+  },
+  "generatedBy": "",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 176,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

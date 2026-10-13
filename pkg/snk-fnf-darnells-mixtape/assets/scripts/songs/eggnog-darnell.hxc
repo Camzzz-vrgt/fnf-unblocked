@@ -1,0 +1,20 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+class EggnogDarnellSong extends Song
+{
+  function new()
+  {
+    super('eggnog',
+      {
+        variation: 'darnell'
+      });
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'darnell') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+
+    return false;
+  }
+}

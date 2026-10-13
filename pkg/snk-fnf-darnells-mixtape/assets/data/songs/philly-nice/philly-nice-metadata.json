@@ -1,0 +1,38 @@
+{
+  "version": "2.2.4",
+  "songName": "Philly Nice (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "JamSkrimer + Sveklo1d",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "darnell-player",
+      "girlfriend": "friends",
+      "opponent": "pico",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "stage": "phillyTrainErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 7,
+      "hard": 13,
+      "normal": 9
+    },
+    "album": "darnellexp1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 175,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

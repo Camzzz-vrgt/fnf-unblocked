@@ -1,0 +1,45 @@
+{
+	"renderType": "multisparrow",
+	"offsets": [
+		15,
+		20
+	],
+	"startingAnimation": "danceRight",
+	"death": null,
+	"assetPath": "characters/cass/cass-pixel",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"scale": 6,
+	"flipSingAnimations": false,
+	"cameraOffsets": [80,150],
+	"flipX": false,
+	"name": "Cassandra (Pixel)",
+	"singTime": 8,
+	"isPixel": true,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "idle",
+			"frameIndices": [
+				0, 1, 2, 3, 4, 5, 6, 7, 8
+			],
+			"name": "danceRight",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "idle",
+			"frameIndices": [
+				9, 10, 11, 12, 13, 14, 15, 16, 17
+			],
+			"name": "danceLeft",
+			"frameRate": 24
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "name": "That fucking bird that I hate",
+  "assetPath": "characters/mouse",
+  "flipX": false,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "IDLE",
+      "offsets": [0, 0],
+			  "frameRate": 12
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "RIGHT",
+      "offsets": [0, 0],
+			  "frameRate": 12
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "DOWN",
+      "offsets": [0, 0],
+			  "frameRate": 12
+    },
+    {
+      "name": "singUP",
+      "prefix": "UP",
+      "offsets": [0, 0],
+			  "frameRate": 12
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "LEFT",
+      "offsets": [0, 0]
+    }
+  ]
+}

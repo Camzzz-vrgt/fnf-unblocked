@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Brazilian Miku idle dance"
+		},
+		{
+			"offsets": [
+				88,
+				-24
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Brazilian Miku Right"
+		},
+		{
+			"offsets": [
+				-73,
+				-60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Brazilian Miku Down"
+		},
+		{
+			"offsets": [
+				-9,
+				75
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Brazilian Miku Up"
+		},
+		{
+			"offsets": [
+				-81,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Brazilian Miku Left"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Brazil miku-shaded",
+	"position": [
+		-50,
+		0
+	],
+	"healthicon": "BrazilMiku",
+	"flip_x": true,
+	"healthbar_colors": [
+		17,
+		193,
+		188
+	],
+	"camera_position": [
+		0,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

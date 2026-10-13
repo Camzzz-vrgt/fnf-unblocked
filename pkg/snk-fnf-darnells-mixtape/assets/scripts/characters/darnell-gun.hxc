@@ -1,0 +1,154 @@
+import funkin.play.character.MultiSparrowCharacter;
+import flixel.FlxG;
+import flixel.util.FlxTimer;
+import funkin.play.character.BaseCharacter;
+import funkin.play.PlayState;
+import funkin.play.PauseSubState;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.character.SparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.play.character.CharacterDataParser;
+import StringTools;
+import funkin.Preferences;
+import funkin.audio.FunkinSound;
+import funkin.util.Constants;
+import flixel.effects.FlxFlicker;
+
+class DarnellGunCharacter extends MultiSparrowCharacter
+{
+	function new()
+	{
+		super('darnell-gun');
+	}
+
+  var isExplode:Bool = false;
+
+	function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+		
+		GameOverSubState.musicSuffix = '-darnell';
+		GameOverSubState.blueBallSuffix = '-darnell';
+
+		PauseSubState.musicSuffix = '-darnell';
+
+	}
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		// Override the hit note animation.
+
+		if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+		{
+			switch (event.note.kind)
+			{
+				case "ugh":
+					holdTimer = 0;
+					this.playAnimation('hey', true);
+				case "laugh":
+					holdTimer = 0;
+					this.playAnimation('laughnote', true);
+				case "weekend-1-firegun":
+					holdTimer = 0;
+					this.playAnimation('shoot', true);
+       FunkinSound.playOnce(Paths.soundRandom('shot', 1, 4));
+				case "lightcan":
+					holdTimer = 0;
+					this.playAnimation('lightCan', true);
+				case "weekend-1-cockgun":
+					holdTimer = 0;
+					this.playAnimation('cockCutscene', true);
+				default:
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false);
+			}
+		}
+	}
+
+  function onNoteMiss(event:NoteScriptEvent)
+  {
+    // Override the miss note animation.
+    switch (event.note.kind)
+    {
+      case "weekend-1-firegun":
+					this.playAnimation('shootMISS', true);
+       FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
+      default:
+        super.onNoteMiss(event);
+    }
+  }
+
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    if (GameOverSubState.blueBallSuffix == '-darnell-explode') isExplode = true;
+
+    if (isExplode)
+    {
+      super.playAnimation(name + '-explode', restart, ignoreOther);
+    }
+    else
+    {
+      super.playAnimation(name, restart, ignoreOther);
+    }
+  }
+
+  var picoFlicker:FlxFlicker = null;
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+
+    if (name == 'shootMISS' && PlayState.instance.health > 0.0 && !PlayState.instance.isPlayerDying)
+    {
+      // ERIC: You have to use super instead of this or it breaks.
+      // This is because typeof(this) is PolymodAbstractClass.
+      picoFlicker = FlxFlicker.flicker(super, 1, 1 / 30, true, true, function(_) {
+        picoFlicker = FlxFlicker.flicker(super, 0.5, 1 / 60, true, true, function(_) {
+          picoFlicker = null;
+        });
+      });
+    }
+  }
+
+	override function onGameOver(event:ScriptEvent):Void {
+		super.onGameOver(event);
+	}
+
+  public override function onPause(event:PauseScriptEvent)
+  {
+    super.onPause(event);
+
+    if (picoFlicker != null)
+    {
+      picoFlicker.pause();
+      this.visible = true;
+    }
+  }
+
+  public override function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+
+    if (picoFlicker != null)
+    {
+      picoFlicker.resume();
+    }
+  }
+
+	override function onSongRetry(event:ScriptEvent):Void {
+		super.onSongRetry(event);
+
+		// Don't let these pile up.
+
+		// Reset to standard death animation.
+		GameOverSubState.musicSuffix = '-darnell';
+		GameOverSubState.blueBallSuffix = '-darnell';
+
+		PauseSubState.musicSuffix = '-darnell';
+
+   isExplode = false;
+		this.visible = true;
+	}
+}

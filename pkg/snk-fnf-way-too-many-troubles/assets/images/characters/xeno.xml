@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="xeno.png">
+<SubTexture name="xeno idle0000" x="768" y="920" width="784" height="896" frameX="-72" frameY="-72" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0001" x="0" y="1824" width="784" height="888" frameX="-72" frameY="-80" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0002" x="1568" y="1824" width="784" height="880" frameX="-72" frameY="-88" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0003" x="3088" y="0" width="784" height="880" frameX="-72" frameY="-96" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0004" x="3088" y="0" width="784" height="880" frameX="-72" frameY="-104" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0005" x="2304" y="0" width="784" height="890" frameX="-72" frameY="-104" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0006" x="784" y="1824" width="784" height="882" frameX="-72" frameY="-112" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0007" x="2304" y="890" width="784" height="890" frameX="-72" frameY="-104" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno idle0008" x="2304" y="890" width="784" height="890" frameX="-72" frameY="-96" frameWidth="900" frameHeight="1000" />
+<SubTexture name="xeno left0000" x="3088" y="880" width="736" height="872" frameX="-224" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno left0001" x="3088" y="1752" width="752" height="872" frameX="-200" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno left0002" x="1552" y="920" width="736" height="872" frameX="-208" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno left0003" x="2352" y="1824" width="720" height="872" frameX="-216" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno right0000" x="1904" y="2712" width="624" height="840" frameX="-568" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno right0001" x="2528" y="2712" width="624" height="840" frameX="-576" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno right0002" x="3152" y="2712" width="624" height="840" frameX="-584" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno right0003" x="3872" y="0" width="624" height="840" frameX="-576" frameY="-272" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno up0000" x="768" y="0" width="768" height="904" frameX="-296" frameY="-200" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno up0001" x="0" y="0" width="768" height="920" frameX="-296" frameY="-176" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno up0002" x="1536" y="0" width="768" height="904" frameX="-296" frameY="-184" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno up0003" x="0" y="920" width="768" height="904" frameX="-296" frameY="-184" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno down0000" x="944" y="3552" width="928" height="808" frameX="-200" frameY="-352" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno down0001" x="0" y="3552" width="944" height="824" frameX="-192" frameY="-344" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno down0002" x="0" y="2712" width="960" height="840" frameX="-184" frameY="-336" frameWidth="1300" frameHeight="1400" />
+<SubTexture name="xeno down0003" x="960" y="2712" width="944" height="840" frameX="-192" frameY="-328" frameWidth="1300" frameHeight="1400" />
+</TextureAtlas>

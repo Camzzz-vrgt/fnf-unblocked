@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "timeFormat": "ms",
+  "artist": "JamSkrimer",
+  "charter": "JamSkrimer",
+  "playData": {
+    "album": "darnellmix1",
+    "stage": "phillyTrainErect",
+    "characters": {
+      "player": "darnell-player",
+      "girlfriend": "friends",
+      "opponent": "pico",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "difficulties": ["easy", "normal", "hard"],
+    "ratings": { "easy": 7, "normal": 11, "hard": 11 },
+    "noteStyle": "funkin"
+  },
+  "songName": "Pico (Darnell Mix)",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ],
+  "generatedBy": ""
+}

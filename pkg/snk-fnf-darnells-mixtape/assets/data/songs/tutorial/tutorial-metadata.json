@@ -1,0 +1,24 @@
+{
+  "version": "2.2.4",
+  "songName": "Tutorial (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "Sveklo1d",
+  "timeFormat": "ms",
+  "timeChanges": [{ "t": 0, "bpm": 100, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "ratings": { "easy": 0, "normal": 1, "hard": 2 },
+    "characters": {
+      "player": "darnell-player",
+      "opponent": "gf",
+      "girlfriend": "nothing",
+      "instrumental": "darnell"
+    },
+    "stage": "mainStageErect",
+    "noteStyle": "funkin",
+    "album": "darnellmix1",
+    "previewStart": 0,
+    "previewEnd": 4650
+  },
+  "generatedBy": ""
+}

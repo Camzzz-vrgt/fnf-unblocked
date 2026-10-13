@@ -1,0 +1,108 @@
+import openfl.utils.Assets;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.ui.freeplay.dj.AnimateAtlasFreeplayDJ;
+import funkin.ui.freeplay.dj.FreeplayDJState;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.util.Constants;
+import funkin.Paths;
+
+using StringTools;
+
+class NeneDJ extends AnimateAtlasFreeplayDJ
+{
+
+  public function new(x:Float, y:Float, characterId:String)
+  {
+    super(x, y, characterId);
+	IDLE_EGG_PERIOD = 90;
+  }
+
+  public override function getMusicPreviewMult():Float
+  {
+    return 1;
+  }
+	
+	override function update(e:Float)
+	{
+		super.update(e);
+		
+		//if (FlxG.keys.justPressed.V)
+		//{
+		//	currentState = FreeplayDJState.IdleEasterEgg;
+		//}
+
+		//if (FlxG.keys.justPressed.C)
+		//{
+		//	currentState = FreeplayDJState.Idle;
+		//}
+	}
+
+	override function onFinishAnim(name:String)
+	{
+
+	    if (name == playableCharData?.getAnimationPrefix('intro'))
+    {
+
+      currentState = FreeplayDJState.Idle;
+      onIntroDone.dispatch();
+    }
+    else if (name == playableCharData?.getAnimationPrefix('idle'))
+    {
+      // trace('Finished idle');
+
+      if (timeIdling >= IDLE_EGG_PERIOD && !seenIdleEasterEgg)
+      {
+        currentState = FreeplayDJState.IdleEasterEgg;
+      }
+    }
+    else if (name == playableCharData?.getAnimationPrefix('confirm'))
+    {
+      // trace('Finished confirm');
+    }
+    else if (name == playableCharData?.getAnimationPrefix('fistPump'))
+    {
+      // trace('Finished fist pump');
+      currentState = FreeplayDJState.Idle;
+    }
+    else if (name == playableCharData?.getAnimationPrefix('idleEasterEgg'))
+    {
+      // trace('Finished spook');
+      //currentState = FreeplayDJState.IdleEasterEgg;
+    }
+    else if (name == playableCharData?.getAnimationPrefix('loss'))
+    {
+      // trace('Finished loss reaction');
+      currentState = FreeplayDJState.Idle;
+    }
+    else if (name == playableCharData?.getAnimationPrefix('newUnlock'))
+    {
+      // Animation should loop.
+    }
+    else if (name == playableCharData?.getAnimationPrefix('charSelect'))
+    {
+      onCharSelectComplete();
+    }
+    else
+    {
+      trace('Finished ${name}');
+    }
+
+	}
+
+  public override function onConfirm():Void
+  {
+    super.onConfirm();
+  }
+
+  public override function toCharSelect():Void
+  {
+    super.toCharSelect();
+  }
+
+  public override function destroy():Void
+  {
+    super.destroy();
+
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": "2.2.4",
+  "songName": "Spookeez (Nene Mix)",
+  "artist": "rofoshristo (feat. d4rkwinged)",
+  "charter": "PurSnake",
+  "offsets": { "instrumental": 0 },
+  "playData": {
+    "difficulties": ["normal", "hard"],
+    "characters": {
+      "player": "nene-playable-dark",
+      "girlfriend": "cassandra-boom-week2",
+      "opponent": "spooky-dark",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["spooky-dark"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "spookyMansionErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 1,
+      "normal": 2,
+      "hard": 3
+    },
+    "album": "nenemixes1",
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.4",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

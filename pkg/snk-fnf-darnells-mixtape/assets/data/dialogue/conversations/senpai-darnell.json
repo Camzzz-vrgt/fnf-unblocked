@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "enter",
+
+      "text": ["Eugh...", "You're one of THOSE people."]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["And you're bringing lighters to school...", " Do you hoodlums even know proper school safety etiquette??"]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Seems like I'll have to report this to the dean."]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkEnterAngry",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["...are you really gonna-"]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["And that attire of yours...", " Do you all always go out of the house dressed as bums?"]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkEnterAngry",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Dude, do you ever-"]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Maybe I should take things into my own hands..."]
+    },
+    {
+      "speaker": "senpai",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["And teach you through song!"]
+    },
+    {
+      "speaker": "senpai-bwuh",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": ["Just like I did with that orange haired freak..."]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkAngry",
+      "box": "roses",
+      "boxAnimation": "speaking",
+
+      "text": [
+        "..."
+      ]
+    }
+  ]
+}

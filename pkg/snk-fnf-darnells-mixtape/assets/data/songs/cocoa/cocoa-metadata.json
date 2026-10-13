@@ -1,0 +1,36 @@
+{
+  "version": "2.2.4",
+  "timeFormat": "ms",
+  "artist": "JamSkrimer",
+  "charter": "JamSkrimer",
+  "playData": {
+    "album": "darnellexp1",
+    "stage": "mallXmasDarnell",
+    "characters": {
+        "player": "darnell-christmas",
+        "girlfriend": "friends-christmas",
+        "opponent": "parents-christmas",
+        "instrumental": "darnell"
+    },
+    "difficulties": ["easy", "normal", "hard"],
+    "ratings": { "easy": 4, "normal": 5, "hard": 6},
+    "noteStyle": "funkin"
+  },
+  "songName": "Cocoa (Darnell Mix)",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 100,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "generatedBy": ""
+}

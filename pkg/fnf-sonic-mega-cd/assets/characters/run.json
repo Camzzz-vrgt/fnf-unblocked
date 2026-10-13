@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				21,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "run"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				21,
+				0
+			],
+			"anim": "deathConfirm",
+			"fps": 12,
+			"name": "run",
+			"indices": []
+		},
+		{
+			"offsets": [
+				21,
+				0
+			],
+			"indices": [],
+			"fps": 6,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "run"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/run",
+	"position": [
+		10049,
+		-500
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-200,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 1.00000000000002
+}

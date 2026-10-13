@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "Mental idle"
+		},
+		{
+			"offsets": [
+				0,
+				-40
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mental down"
+		},
+		{
+			"offsets": [
+				7,
+				-44
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mental up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				6
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "Mental right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 14,
+			"name": "Mental left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Mental",
+	"position": [
+		-760,
+		70
+	],
+	"healthicon": "metal",
+	"flip_x": true,
+	"healthbar_colors": [
+		56,
+		124,
+		197
+	],
+	"camera_position": [
+		380,
+		-260
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

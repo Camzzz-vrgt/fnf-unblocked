@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="fleetway.png">
+<SubTexture name="fleetway idle0000" x="992" y="0" width="240" height="440" frameX="-120" frameY="-40" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway idle0001" x="992" y="440" width="240" height="440" frameX="-120" frameY="-40" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway idle0002" x="1232" y="0" width="248" height="440" frameX="-112" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway idle0003" x="0" y="952" width="248" height="432" frameX="-112" frameY="-64" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway idle0004" x="1232" y="440" width="240" height="432" frameX="-120" frameY="-64" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway idle0005" x="248" y="952" width="248" height="424" frameX="-112" frameY="-64" frameWidth="500" frameHeight="500" />
+<SubTexture name="fleetway left0000" x="1480" y="832" width="384" height="400" frameX="-40" frameY="-160" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway left0001" x="1480" y="424" width="392" height="408" frameX="-24" frameY="-160" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway left0002" x="0" y="1384" width="384" height="400" frameX="-32" frameY="-160" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway right0000" x="384" y="1384" width="384" height="392" frameX="-264" frameY="-160" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway right0001" x="1144" y="1384" width="392" height="384" frameX="-264" frameY="-168" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway right0002" x="768" y="1384" width="376" height="392" frameX="-272" frameY="-160" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway up0000" x="640" y="488" width="304" height="456" frameX="-176" frameY="-24" frameWidth="600" frameHeight="600" />
+<SubTexture name="fleetway up0001" x="312" y="488" width="328" height="464" frameX="-160" frameY="-8" frameWidth="600" frameHeight="600" />
+<SubTexture name="fleetway up0002" x="0" y="488" width="312" height="464" frameX="-176" frameY="-16" frameWidth="600" frameHeight="600" />
+<SubTexture name="fleetway down0000" x="496" y="952" width="392" height="424" frameX="-160" frameY="-232" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway down0001" x="888" y="952" width="384" height="424" frameX="-168" frameY="-232" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway down0002" x="1480" y="0" width="392" height="424" frameX="-160" frameY="-240" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway hey0000" x="744" y="0" width="248" height="472" frameX="-208" frameY="-56" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway hey0001" x="248" y="0" width="248" height="480" frameX="-208" frameY="-48" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway hey0002" x="0" y="0" width="248" height="488" frameX="-208" frameY="-40" frameWidth="700" frameHeight="700" />
+<SubTexture name="fleetway hey0003" x="496" y="0" width="248" height="480" frameX="-208" frameY="-48" frameWidth="700" frameHeight="700" />
+</TextureAtlas>

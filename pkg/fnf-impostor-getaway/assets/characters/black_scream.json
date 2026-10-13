@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-60,
+				461
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "scream "
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-390,
+				20
+			],
+			"anim": "dark",
+			"fps": 24,
+			"name": "dark",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/cutscene impo",
+	"position": [
+		-320,
+		0
+	],
+	"healthicon": "black",
+	"flip_x": false,
+	"healthbar_colors": [
+		58,
+		27,
+		79
+	],
+	"camera_position": [
+		-70,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

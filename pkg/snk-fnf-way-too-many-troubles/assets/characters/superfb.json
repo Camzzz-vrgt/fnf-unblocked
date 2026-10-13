@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-295,
+				60
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "idle",
+			"indices": [],
+			"name": "super fb idle"
+		},
+		{
+			"offsets": [
+				-265,
+				90
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "super fb down"
+		},
+		{
+			"offsets": [
+				-265,
+				100
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "super fb up"
+		},
+		{
+			"offsets": [
+				-205,
+				90
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "super fb right"
+		},
+		{
+			"offsets": [
+				-305,
+				80
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "super fb left"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/super fb",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "superfbicon",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-50,
+		100
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

@@ -1,0 +1,43 @@
+{
+	"storyName": "Nit Picknickin'",
+	"hideFreeplay": false,
+	"weekBackground": "flippy",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"flippy",
+		"bunfriend",
+		"munkfriend"
+	],
+	"songs": [
+		[
+			"Salute",
+			"flippy-happy",
+			[
+				20,
+				255,
+				20
+			]
+		],
+		[
+			"Mortar",
+			"flippy-happy",
+			[
+				20,
+				255,
+				20
+			]
+		],
+		[
+			"Fury",
+			"fliqpy",
+			[
+				20,
+				255,
+				20
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Flippy"
+}

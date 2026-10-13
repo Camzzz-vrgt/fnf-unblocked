@@ -1,0 +1,81 @@
+import flixel.FlxCameraFollowStyle;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.display.FlxBackdrop;
+import flixel.input.mouse.FlxMouseEvent;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import flixel.math.FlxMath;
+
+import haxe.ds.StringMap;
+import StringTools;
+import String;
+import Array;
+import Std;
+
+import funkin.Paths;
+import funkin.PlayerSettings;
+
+import funkin.play.PlayStatePlaylist;
+import funkin.play.PlayState;
+import funkin.play.PauseSubState;
+import funkin.play.song.Song;
+
+import funkin.data.story.level.LevelRegistry;
+import funkin.data.song.SongRegistry;
+
+import funkin.audio.FunkinSound;
+
+import funkin.ui.AtlasText;
+import funkin.ui.charSelect.CharSelectSubState;
+import funkin.ui.charSelect.Lock;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.options.OptionsState;
+import funkin.ui.title.TitleState;
+import funkin.ui.MusicBeatState;
+import funkin.ui.transition.LoadingState;
+import funkin.ui.transition.stickers.StickerSubState;
+import funkin.ui.freeplay.SongMenuItem;
+import funkin.util.ReflectUtil;
+
+import funkin.graphics.FunkinCamera;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.modding.base.MusicBeatState;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+
+import funkin.input.Cursor;
+
+class NeneCharSelectFixer extends Module
+{
+
+	public function new()
+    {
+		super('NeneCharSelectFixer', 0, { state: CharSelectSubState });
+	}
+
+	function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		var gfChill = FlxG.state.gfChill;
+		if (gfChill != null)
+		{
+			// trace(gfChill.currentGFPath);
+			if (gfChill.currentGFPath == "charSelect/dipshitCass")
+			{
+				if (gfChill.anim.name == "idle")
+				{
+					gfChill.anim.play("idle-loop", true);
+					gfChill.anim.curAnim.looped = true;
+				}
+			}
+		}
+	}
+}

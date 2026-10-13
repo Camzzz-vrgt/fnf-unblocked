@@ -1,0 +1,37 @@
+{
+  "version": "2.2.4",
+  "songName": "Darnell (Nene Mix)",
+  "artist": "Lostel",
+  "charter": "d4rkwinged",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["normal", "hard"],
+    "characters": {
+      "player": "nene-playable",
+      "girlfriend": "cassandra-boom",
+      "opponent": "darnell",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["darnell"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "phillyStreetsErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 5,
+      "normal": 6,
+      "hard": 7
+    },
+    "album": "nenemixes1",
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.4",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 155,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

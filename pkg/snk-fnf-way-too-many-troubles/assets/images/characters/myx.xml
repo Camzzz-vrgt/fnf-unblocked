@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="myx.png">
+<SubTexture name="myx idle0000" x="647" y="465" width="588" height="353" frameX="-12" frameY="-136" frameWidth="700" frameHeight="700" />
+<SubTexture name="myx idle0001" x="2056" y="705" width="604" height="345" frameX="-12" frameY="-144" frameWidth="700" frameHeight="700" />
+<SubTexture name="myx idle0002" x="2056" y="1050" width="603" height="337" frameX="-13" frameY="-152" frameWidth="700" frameHeight="700" />
+<SubTexture name="myx idle0003" x="1254" y="1715" width="610" height="330" frameX="-14" frameY="-159" frameWidth="700" frameHeight="700" />
+<SubTexture name="myx idle0004" x="660" y="1715" width="594" height="337" frameX="-14" frameY="-152" frameWidth="700" frameHeight="700" />
+<SubTexture name="myx up0000" x="0" y="465" width="647" height="449" frameX="-9" frameY="-64" frameWidth="755" frameHeight="750" />
+<SubTexture name="myx up0001" x="647" y="0" width="648" height="457" frameX="-8" frameY="-56" frameWidth="755" frameHeight="750" />
+<SubTexture name="myx up0002" x="0" y="0" width="647" height="465" frameX="-9" frameY="-48" frameWidth="755" frameHeight="750" />
+<SubTexture name="myx down0000" x="0" y="914" width="750" height="417" frameX="-75" frameY="-120" frameWidth="850" frameHeight="800" />
+<SubTexture name="myx down0001" x="1295" y="433" width="755" height="425" frameX="-77" frameY="-112" frameWidth="850" frameHeight="800" />
+<SubTexture name="myx down0002" x="1295" y="0" width="761" height="433" frameX="-71" frameY="-104" frameWidth="850" frameHeight="800" />
+<SubTexture name="myx left0000" x="0" y="1331" width="969" height="384" frameX="-7" frameY="-153" frameWidth="1000" frameHeight="800" />
+<SubTexture name="myx left0001" x="969" y="1331" width="983" height="377" frameX="-1" frameY="-159" frameWidth="1000" frameHeight="800" />
+<SubTexture name="myx left0002" x="750" y="914" width="984" height="385" frameX="0" frameY="-151" frameWidth="1000" frameHeight="800" />
+<SubTexture name="myx right0000" x="2056" y="0" width="652" height="353" frameX="-100" frameY="-184" frameWidth="1000" frameHeight="800" />
+<SubTexture name="myx right0001" x="0" y="1715" width="660" height="353" frameX="-100" frameY="-184" frameWidth="1000" frameHeight="800" />
+<SubTexture name="myx right0002" x="2056" y="353" width="647" height="352" frameX="-113" frameY="-184" frameWidth="1000" frameHeight="800" />
+</TextureAtlas>

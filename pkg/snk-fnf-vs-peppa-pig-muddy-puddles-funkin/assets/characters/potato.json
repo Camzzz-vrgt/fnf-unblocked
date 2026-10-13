@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "potato idle"
+		},
+		{
+			"offsets": [
+				-83,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "potato down"
+		},
+		{
+			"offsets": [
+				21,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "potato left"
+		},
+		{
+			"offsets": [
+				8,
+				-16
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "potato right"
+		},
+		{
+			"offsets": [
+				-46,
+				138
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "potato up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/potato",
+	"position": [
+		-60,
+		-490
+	],
+	"healthicon": "potato",
+	"flip_x": false,
+	"healthbar_colors": [
+		235,
+		215,
+		95
+	],
+	"camera_position": [
+		210,
+		220
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

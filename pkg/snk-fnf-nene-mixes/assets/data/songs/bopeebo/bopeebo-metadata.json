@@ -1,0 +1,29 @@
+{
+  "version": "2.2.4",
+  "songName": "Bopeebo (Nene Mix)",
+  "artist": "ANVISOREAL (feat. d4rkwinged)",
+  "charter": "d4rkwinged",
+  "offsets": { "instrumental": 0 },
+  "playData": {
+    "difficulties": ["normal", "hard"],
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "characters": {
+      "player": "nene-playable",
+      "girlfriend": "cassandra-boom",
+      "opponent": "dad",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["dad"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "mainStageErect",
+    "noteStyle": "funkin",
+    "album": "nenemixes1",
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.4",
+  "timeChanges": [
+    { "t": 0, "b": 0, "bpm": 100, "bt": [4, 4, 4, 4] },
+    { "t": 37322, "b": 62.2033, "bpm": 100, "bt": [4, 4, 4, 4] }
+  ]
+}

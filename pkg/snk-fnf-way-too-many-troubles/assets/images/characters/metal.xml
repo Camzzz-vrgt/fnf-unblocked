@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="metal.png">
+<SubTexture name="metal idle0000" x="0" y="352" width="240" height="320" frameX="-160" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal idle0001" x="488" y="672" width="248" height="312" frameX="-160" frameY="-96" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal idle0002" x="1048" y="0" width="256" height="304" frameX="-160" frameY="-104" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal idle0003" x="1048" y="304" width="256" height="304" frameX="-160" frameY="-104" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal idle0004" x="736" y="672" width="256" height="312" frameX="-160" frameY="-96" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal left0000" x="240" y="352" width="264" height="320" frameX="-96" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal left0001" x="768" y="0" width="280" height="320" frameX="-80" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal left0002" x="768" y="320" width="272" height="320" frameX="-88" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal right0000" x="504" y="352" width="232" height="320" frameX="-144" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal right0001" x="0" y="672" width="248" height="320" frameX="-144" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal right0002" x="248" y="672" width="240" height="320" frameX="-144" frameY="-88" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal up0000" x="512" y="0" width="256" height="336" frameX="-144" frameY="-72" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal up0001" x="0" y="0" width="256" height="352" frameX="-144" frameY="-56" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal up0002" x="256" y="0" width="256" height="344" frameX="-144" frameY="-64" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal down0000" x="0" y="992" width="264" height="288" frameX="-160" frameY="-120" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal down0001" x="528" y="992" width="264" height="272" frameX="-160" frameY="-136" frameWidth="500" frameHeight="600" />
+<SubTexture name="metal down0002" x="264" y="992" width="264" height="280" frameX="-160" frameY="-128" frameWidth="500" frameHeight="600" />
+</TextureAtlas>

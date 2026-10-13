@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Pixel)",
+  "assetPath": "characters/darnell-pixel",
+  "singTime": 8.0,
+	 "danceEvery": 2,
+  "isPixel": true,
+  "flipX": true,
+  "renderType": "multisparrow",
+  "offsets": [0, 10],
+  "death": {
+    "cameraOffsets": [0, 0]
+  },
+  "scale": 6,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "darnell Idle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "darnell Right",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "miss Right",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "darnell Down",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "miss Down",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "darnell Up",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "miss Up",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "darnell Left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "miss Left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "SYMBOL0",
+		  	"flipX": false,
+      "offsets": [5, 15]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "GAMEOV END0",
+		  	"flipX": false,
+      "offsets": [5, 15]
+    }
+  ]
+}

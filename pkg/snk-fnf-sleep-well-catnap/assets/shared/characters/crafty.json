@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				1
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "idle",
+			"indices": [],
+			"name": "crafty idle"
+		},
+		{
+			"offsets": [
+				12,
+				14
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "crafty left"
+		},
+		{
+			"offsets": [
+				7,
+				-32
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "crafty down"
+		},
+		{
+			"offsets": [
+				0,
+				87
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singUP",
+			"indices": [],
+			"name": "crafty up"
+		},
+		{
+			"offsets": [
+				0,
+				20
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "crafty right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/crafty_assets",
+	"position": [
+		90,
+		250
+	],
+	"healthicon": "crafty",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		85,
+		206
+	],
+	"camera_position": [
+		200,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

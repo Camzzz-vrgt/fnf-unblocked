@@ -1,0 +1,49 @@
+{
+  "version": "2.2.4",
+  "songName": "Eggnog (Nene Mix)",
+  "artist": "simnstar (feat. d4rkwinged, rofoshristo)",
+  "charter": "d4rkwinged",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["normal", "hard"],
+    "characters": {
+      "player": "nene-playable-xmas",
+      "girlfriend": "cassandra-boom-krampus",
+      "opponent": "parents-christmas",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["parents-christmas"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "mallXmasNene",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 3,
+      "hard": 6,
+      "normal": 4
+    },
+    "album": "nenemixes1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "danceEvery": 1,
+  "renderType": "animateatlas",
+  "version": "1.0.0",
+  "flipX": false,
+  "name": "Nene (Manifest)",
+  "singTime": 0,
+  "startingAnimation": "danceLeft",
+  "assetPath": "shared:characters/neneRocket",
+  "healthIcon": {
+    "isPixel": false,
+    "id": "nene-manifest"
+  },
+  "generatedBy": "Nova Character Editor REFRESHED v0.1.0",
+  "animations": [
+    {
+      "offsets": [-23, -260],
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "prefix": "Dance",
+      "name": "danceLeft"
+    },
+    {
+      "offsets": [-23, -260],
+      "frameIndices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28
+      ],
+      "prefix": "Dance",
+      "name": "danceRight"
+    },
+    {
+      "offsets": [-23, -260],
+      "prefix": "Huh",
+      "looped": true,
+      "name": "guh"
+    },
+    {
+      "offsets": [-23, -260],
+      "prefix": "Scramble",
+      "looped": true,
+      "name": "neneScramble"
+    }
+  ]
+}

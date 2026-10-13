@@ -1,0 +1,140 @@
+
+{
+	"version": "1.0.0",
+	"name": "Nene (Playable) (Dark)",
+	"renderType": "multisparrow",
+	"assetPath": "characters/nene/spritelists/nene-playable-dark",
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": null,
+	"flipX": true,
+	"offsets": [0, 0],
+	"cameraOffsets": [0, 0],
+	"singTime": 8,
+	"isPixel": false,
+	"danceEvery": 1,
+	"scale": 1,
+	"flipSingAnimations": false,
+	"id": "nene-playble-dark",
+
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [0, 0],
+		"scale": 1,
+		"id": "nene-playble",
+		"flipX": false
+	},
+
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"frameIndices": [],
+			"prefix": "idle",
+			"looped": false,
+			"name": "idle",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [-34, -4],
+			"frameIndices": [],
+			"prefix": "right0",
+			"looped": false,
+			"name": "singRIGHT",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [63, -62],
+			"frameIndices": [],
+			"prefix": "down0",
+			"looped": false,
+			"name": "singDOWN",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [23, 42],
+			"frameIndices": [],
+			"prefix": "up0",
+			"looped": false,
+			"name": "singUP",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [85, -12],
+			"frameIndices": [],
+			"prefix": "left0",
+			"looped": false,
+			"name": "singLEFT",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [85, 29],
+			"frameIndices": [],
+			"prefix": "leftmiss",
+			"looped": false,
+			"name": "singLEFTmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [63, -43],
+			"frameIndices": [],
+			"prefix": "downmiss",
+			"looped": false,
+			"name": "singDOWNmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [20, 77],
+			"frameIndices": [],
+			"prefix": "upmiss",
+			"looped": false,
+			"name": "singUPmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [-33, 5],
+			"frameIndices": [],
+			"prefix": "rightmiss",
+			"looped": false,
+			"name": "singRIGHTmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [27, 9],
+			"frameIndices": [],
+			"prefix": "hey",
+			"looped": false,
+			"name": "cheer",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		}
+	]
+}

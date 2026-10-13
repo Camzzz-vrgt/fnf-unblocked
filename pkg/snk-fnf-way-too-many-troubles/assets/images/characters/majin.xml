@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="majin.png">
+<SubTexture name="majin idle0000" x="0" y="392" width="256" height="368" frameX="-120" frameY="-32" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin idle0001" x="256" y="392" width="256" height="360" frameX="-120" frameY="-40" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin idle0002" x="512" y="392" width="248" height="352" frameX="-128" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin idle0003" x="760" y="392" width="248" height="344" frameX="-128" frameY="-56" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin up0000" x="704" y="0" width="352" height="376" frameX="-88" frameY="-24" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin up0001" x="0" y="0" width="352" height="392" frameX="-88" frameY="-8" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin up0002" x="352" y="0" width="352" height="384" frameX="-88" frameY="-16" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin down0000" x="1376" y="0" width="360" height="304" frameX="-112" frameY="-96" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin down0001" x="1376" y="600" width="352" height="288" frameX="-120" frameY="-112" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin down0002" x="1376" y="304" width="352" height="296" frameX="-120" frameY="-104" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin left0000" x="1056" y="0" width="320" height="352" frameX="-56" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin left0001" x="0" y="760" width="328" height="352" frameX="-40" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin left0002" x="1056" y="352" width="312" height="352" frameX="-48" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin right0000" x="328" y="760" width="328" height="352" frameX="-168" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin right0001" x="656" y="760" width="320" height="352" frameX="-176" frameY="-48" frameWidth="500" frameHeight="500" />
+<SubTexture name="majin right0002" x="976" y="760" width="328" height="352" frameX="-168" frameY="-48" frameWidth="500" frameHeight="500" />
+</TextureAtlas>

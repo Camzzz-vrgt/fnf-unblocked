@@ -1,0 +1,35 @@
+{
+  "version": "2.2.4",
+  "timeFormat": "ms",
+  "artist": "JamSkrimer",
+  "charter": "JamSkrimer",
+  "playData": {
+    "stage": "spookyMansionErect",
+    "characters": {
+      "player": "darnell-dark",
+      "girlfriend": "friends-dark",
+      "opponent": "spooky-dark",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "ratings": { "easy": 5, "normal": 5, "hard": 6 },
+    "difficulties": ["easy", "normal", "hard"],
+    "noteStyle": "funkin",
+    "album": "darnellexp1",
+    "stickerPack": "standart-darnell",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "songName": "South (Darnell Mix)",
+  "generatedBy": "",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 165,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

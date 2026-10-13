@@ -1,0 +1,113 @@
+
+{
+	"version": "1.0.0",
+	"name": "Nene (Playable) (Car)",
+	"id": "nene-playable-car",
+	"renderType": "multianimateatlas",
+	"assetPath": "shared:characters/nene/nene-car",
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": null,
+	"flipX": true,
+	"offsets": [0, 0],
+	"cameraOffsets": [-40, 140],
+	"singTime": 8,
+	"isPixel": false,
+	"danceEvery": 2,
+	"scale": 1,
+	"flipSingAnimations": false,
+
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [0, 0],
+		"scale": 1,
+		"id": "nene-playble",
+		"flipX": false
+	},
+
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"swfMode": true,
+		"useRenderTexture": false,
+		"cacheOnLoad": false,
+		"filterQuality": 1
+	},
+
+	"animations": [
+	    {
+	      "name": "idle",
+	      "prefix": "idle",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "idle-hold",
+	      "prefix": "idle-loop",
+	      "animType": "framelabel",
+	      "looped": true
+	    },
+	    {
+	      "name": "singLEFT",
+	      "prefix": "left",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singLEFT-hold",
+	      "prefix": "left-loop",
+	      "animType": "framelabel",
+	      "looped": true
+	    },
+	    {
+	      "name": "singDOWN",
+	      "prefix": "down",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singDOWN-hold",
+	      "prefix": "down-loop",
+	      "animType": "framelabel",
+	      "looped": true
+	    },
+	    {
+	      "name": "singUP",
+	      "prefix": "up",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singUP-hold",
+	      "prefix": "up-loop",
+	      "animType": "framelabel",
+	      "looped": true
+	    },
+	    {
+	      "name": "singRIGHT",
+	      "prefix": "right",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singRIGHT-hold",
+	      "prefix": "right-loop",
+	      "animType": "framelabel",
+	      "looped": true
+	    },
+	    {
+	      "name": "singLEFTmiss",
+	      "prefix": "leftmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singDOWNmiss",
+	      "prefix": "downmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singUPmiss",
+	      "prefix": "upmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singRIGHTmiss",
+	      "prefix": "rightmiss",
+	      "animType": "framelabel"
+	    }
+	]
+}

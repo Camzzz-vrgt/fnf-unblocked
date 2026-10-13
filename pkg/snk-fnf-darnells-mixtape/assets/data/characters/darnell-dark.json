@@ -1,0 +1,290 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		20,
+		40
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Darnell (Dark)",
+	"flipX": true,
+	"singTime": 8,
+	"healthIcon": {
+		"id": "darnell"
+	},
+	"assetPath": "characters/darnell-dark",
+	"generatedBy": "Nova Character Editor v3.0.1",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"prefix": "IDLE",
+			"name": "idle",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "LEFT0",
+			"name": "singLEFT",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"prefix": "RIGHTMISS0",
+			"name": "singRIGHTmiss",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "LEFTLOOP0",
+			"name": "singLEFT-hold",
+			"looped": true,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "DOWN0",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"prefix": "DOWNMISS",
+			"name": "singDOWNmiss",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"prefix": "DOWNLOOP0",
+			"name": "singDOWN-hold",
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "UP0",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"prefix": "UPMISS",
+			"name": "singUPmiss",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "UPLOOP0",
+			"name": "singUP-hold",
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "RIGHt0",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"prefix": "LEFTMISS0",
+			"name": "singLEFTmiss",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "RIGHTLOOP0",
+			"name": "singRIGHT-hold",
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "LAUGHfull0",
+			"name": "laugh",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				373,
+				264
+			],
+			"frameIndices": [],
+			"prefix": "SYMBOL0",
+			"name": "firstDeath",
+			"looped": false,
+			"flipX": true,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/darnell-gameover"
+		},
+		{
+			"offsets": [
+				165,
+				-371
+			],
+			"frameIndices": [],
+			"prefix": "GAMEOV END0",
+			"name": "deathConfirm",
+			"looped": false,
+			"flipX": true,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/darnell-gameover"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "LAUGHsingle0",
+			"name": "laughnote",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		}
+	]
+}

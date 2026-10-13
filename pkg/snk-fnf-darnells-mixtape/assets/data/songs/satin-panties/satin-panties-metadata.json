@@ -1,0 +1,34 @@
+{
+  "version": "2.2.4",
+  "songName": "Satin Panties (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "LoopyGizzardBuns",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "darnell-car",
+      "girlfriend": "friends-vsdarnell",
+      "opponent": "mom-car",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "stage": "limoRideDarnell",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "album": "darnellexp1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 110,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

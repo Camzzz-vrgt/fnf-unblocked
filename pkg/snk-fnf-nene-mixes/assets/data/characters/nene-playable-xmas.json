@@ -1,0 +1,83 @@
+
+{
+	"version": "1.0.0",
+	"name": "Nene (Playable) (Xmas)",
+	"renderType": "multianimateatlas",
+	"assetPath": "shared:characters/nene/nene-xmas",
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": null,
+	"flipX": true,
+	"offsets": [0, 0],
+	"cameraOffsets": [-18, 70],
+	"singTime": 8,
+	"isPixel": false,
+	"danceEvery": 1,
+	"scale": 1,
+	"flipSingAnimations": false,
+	"id": "nene-playble-xmas",
+
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [0, 0],
+		"scale": 1,
+		"id": "nene-playble",
+		"flipX": false
+	},
+
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"swfMode": true,
+		"useRenderTexture": false,
+		"cacheOnLoad": false,
+		"filterQuality": 1
+	},
+
+	"animations": [
+	    {
+	      "name": "idle",
+	      "prefix": "idle",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singLEFT",
+	      "prefix": "left",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singDOWN",
+	      "prefix": "down",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singUP",
+	      "prefix": "up",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singRIGHT",
+	      "prefix": "right",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singLEFTmiss",
+	      "prefix": "leftmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singDOWNmiss",
+	      "prefix": "downmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singUPmiss",
+	      "prefix": "upmiss",
+	      "animType": "framelabel"
+	    },
+	    {
+	      "name": "singRIGHTmiss",
+	      "prefix": "rightmiss",
+	      "animType": "framelabel"
+	    }
+	]
+}

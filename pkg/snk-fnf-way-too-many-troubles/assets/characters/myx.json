@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				20
+			],
+			"anim": "idle",
+			"fps": 10,
+			"name": "myx idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				50
+			],
+			"anim": "singUP",
+			"fps": 10,
+			"name": "myx up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				190,
+				70
+			],
+			"anim": "singLEFT",
+			"fps": 10,
+			"name": "myx left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				60
+			],
+			"anim": "singDOWN",
+			"fps": 10,
+			"name": "myx down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				100,
+				60
+			],
+			"anim": "singRIGHT",
+			"fps": 10,
+			"name": "myx right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/myx",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "xicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		115,
+		135
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

@@ -1,0 +1,204 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell",
+  "ownedChars": [
+    "darnell-player",
+    "darnell-dark",
+    "darnell-car",
+    "darnell-pixel",
+    "darnell-christmas",
+    "darnell-4tune",
+    "darnell-flash",
+    "darnell-gun",
+    "darnell-blazin-player"
+  ],
+  "showUnownedChars": false,
+  "unlocked": false,
+  "freeplayStyle": "darnell",
+  "stickerPack": "standart-darnell",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-darnell",
+    "text1": "DARNELL",
+    "text2": "Yo, really think so?",
+    "text3": "Зачем вообще нужен этот текст если он отображается только у Бойфренда?",
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 4,
+
+      "loopStartFrame": 4,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 0,
+
+      "loopBadStartFrame": 0,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.75
+    },
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "darnell dj intro",
+        "offsets": [30, -127]
+      },
+      {
+        "name": "idle",
+        "prefix": "Darnell DJ",
+        "offsets": [35, 280]
+      },
+      {
+        "name": "idleEasterEgg",
+        "prefix": "Pico DJ afk",
+        "offsets": [10, 290]
+      },
+      {
+        "name": "confirm",
+        "prefix": "Darnell DJ confirm",
+        "offsets": [30, 250]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "Darnell DJ confirm",
+        "offsets": [30, 250]
+      },
+      {
+        "name": "loss",
+        "prefix": "Pico DJ loss",
+        "offsets": [30, 250]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "Pico DJ to CS",
+        "offsets": [30, 250]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 0,
+    "gf": {
+      "assetPath": "charSelect/friendsChill",
+      "animInfoPath": "charSelect/gfAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT-darnell",
+      "PERFECT": "resultsPERFECT-darnell",
+      "EXCELLENT": "resultsEXCELLENT-darnell",
+      "GREAT": "resultsGOOD-darnell",
+      "GOOD": "resultsGOOD-darnell",
+      "SHIT": "resultsSHIT-darnell"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/P-placeholder/GOLDEN",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/P-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/P-placeholder",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/P-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/E-placeholder",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/E-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultGREAT-placeholder",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultGREAT-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultGOOD-placeholder",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultGOOD-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultLOSS-placeholder",
+        "zIndex": 500,
+        "scale": 1.2,
+        "offsets": [800, -300],
+        "loopFrame": 30
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultLOSS-placeholder/bubble",
+        "zIndex": 500,
+        "offsets": [900, 350],
+        "scale": 0.6,
+        "loopFrameLabel": "LOOP frame"
+      }
+    ]
+  }
+}

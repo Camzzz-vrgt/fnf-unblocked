@@ -1,0 +1,25 @@
+{
+  "version": "2.2.4",
+  "songName": "High (Darnell Mix)",
+  "artist": "JamSkrimer",
+  "charter": "Funkin' Moder + Sveklo1d",
+  "timeFormat": "ms",
+  "timeChanges": [{ "t": 0, "bpm": 125, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "ratings": { "easy": 6, "normal": 6, "hard": 7 },
+    "characters": {
+      "player": "darnell-car",
+      "girlfriend": "friends-vsdarnell",
+      "opponent": "mom-car",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "stage": "limoRideDarnell",
+    "noteStyle": "funkin",
+    "album": "darnellexp1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": ""
+}

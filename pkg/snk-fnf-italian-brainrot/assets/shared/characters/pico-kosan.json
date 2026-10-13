@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		247,
+		119,
+		64
+	],
+	"position": [
+		0,
+		300
+	],
+	"no_antialiasing": false,
+	"scale": 1.2,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/pico-kosan",
+	"sing_duration": 4,
+	"healthicon": "pico-kosan",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idlistical copy0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				4
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up copy0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-6
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left copy0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				-22
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right copy0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				-11
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down copy0"
+		}
+	]
+}

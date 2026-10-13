@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "name": "NenePlayer",
+  "ownedChars": [
+    "nene-playable", "nene-playable-pixel", "nene-playable-car", "nene-playable-xmas", "nene-playable-dark"
+  ],
+  "showUnownedChars": false,
+  "unlocked": true,
+  "freeplayStyle": "nene",
+  "stickerPack": "standard-nene",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-nene",
+    "scriptClass": "NeneDJ",
+    "text1": "ITS NENE",
+    "text2": "ITS NENE",
+    "text3": "ITS NENE",
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 4,
+
+      "loopStartFrame": 4,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 4,
+
+      "loopBadStartFrame": 4,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.45
+    },
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "nene freeplay intro",
+        "offsets": [10, -356]
+      },
+      {
+        "name": "idle",
+        "prefix": "nene freeplay idle",
+        "offsets": [0, 300]
+      },
+      {
+        "name": "confirm",
+        "prefix": "nene freeplay confirm",
+        "offsets": [15, 245]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "nene freeplay rank good",
+        "offsets": [15, 273]
+      },
+
+      {
+        "name": "idleEasterEgg",
+        "prefix": "nene freeplay fat beech",
+        "offsets": [15, 143]
+      },
+      {
+        "name": "loss",
+        "prefix": "nene freeplay rank l",
+        "offsets": [15, 285]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "nene freeplay out",
+        "offsets": [15, 179]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 8,
+    "gf": {
+      "assetPath": "charSelect/dipshitCass",
+      "animInfoPath": "charSelect/dipshitCassAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsCOOL-nene",
+      "PERFECT": "resultsCOOL-nene",
+      "EXCELLENT": "resultsNORMAL-nene",
+      "GREAT": "resultsNORMAL-nene",
+      "GOOD": "resultsGOOD-nene",
+      "SHIT": "resultsSHIT-nene"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsPLACEHOLDER",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [670, 260],
+        "looped": true,
+        "loopFrame": 50
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsPLACEHOLDER",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [670, 260],
+        "looped": true,
+        "loopFrame": 50
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsGREAT",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [-1100, -53],
+        "looped": true,
+        "loopFrame": 617
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsGREAT",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [-1100, -53],
+        "looped": true,
+        "loopFrame": 617
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsGOOD",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [-250, -50],
+        "loopFrame": 83
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-nene/resultsSHIT",
+        "zIndex": 500,
+        "scale": 0.8,
+        "offsets": [-370, -240],
+        "looped": true,
+        "loopFrame": 178
+      }
+    ]
+  }
+}

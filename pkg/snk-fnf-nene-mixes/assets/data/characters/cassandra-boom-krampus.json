@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "name": "Cassandra (Boom-Krampus)",
+  "assetPath": "shared:characters/cass/cass-krampus",
+  "startingAnimation": "danceRight",
+  "renderType": "animateatlas",
+  "offsets": [25, -75],
+  "cameraOffsets": [-200, -80],
+  "singTime": 8.0,
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "danceLeft",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "danceRight",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "combo50",
+      "prefix": "combo 50",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "combo100",
+      "prefix": "combo 100",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "drop70",
+      "prefix": "startLaug",
+      "offsets": [0, 0]
+    }
+  ]
+}

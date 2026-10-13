@@ -1,0 +1,81 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 15,
+			"name": "modonk idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-60
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "modonk right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-60
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "modonk down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				70
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "modonk up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				20,
+				-23
+			],
+			"indices": [
+				2,
+				3
+			],
+			"fps": 16,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "modonk left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/medonk",
+	"position": [
+		-300,
+		130
+	],
+	"healthicon": "cum",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		60,
+		196
+	],
+	"camera_position": [
+		-70,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,204 @@
+{
+	"renderType": "multisparrow",
+	"offsets": [
+		2,
+		9
+	],
+	"startingAnimation": "idle",
+	"death": null,
+	"healthIcon": {
+		"isPixel": true,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "nene-playble-pixel",
+		"flipX": false
+	},
+	"assetPath": "characters/nene/spritelists/nene-playable-pixel",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"scale": 6,
+	"flipSingAnimations": false,
+	"cameraOffsets": [
+		0,
+		130
+	],
+	"flipX": true,
+	"name": "Nene (Playable Pixel)",
+	"singTime": 8,
+	"isPixel": true,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"looped": false,
+			"name": "idle",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "right0",
+			"looped": false,
+			"name": "singRIGHT",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "down0",
+			"looped": false,
+			"name": "singDOWN",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "up0",
+			"looped": false,
+			"name": "singUP",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "left0",
+			"looped": false,
+			"name": "singLEFT",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "leftmiss",
+			"looped": false,
+			"name": "singLEFTmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "downmiss",
+			"looped": false,
+			"name": "singDOWNmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "upmiss",
+			"looped": false,
+			"name": "singUPmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "rightmiss",
+			"looped": false,
+			"name": "singRIGHTmiss",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+
+
+		{
+			"offsets": [
+				25,
+				25
+			],
+			"frameIndices": [],
+			"prefix": "nenedeath0",
+			"looped": false,
+			"name": "firstDeath",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": "characters/nene/spritelists/nene-playable-death-pixel",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				25,
+				25
+			],
+			"frameIndices": [],
+			"prefix": "neneloop0",
+			"looped": true,
+			"name": "deathLoop",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": "characters/nene/spritelists/nene-playable-death-pixel",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				25,
+				25
+			],
+			"frameIndices": [],
+			"prefix": "neneconfirm",
+			"looped": false,
+			"name": "deathConfirm",
+			"flipX": false,
+			"flipY": false,
+			"assetPath": "characters/nene/spritelists/nene-playable-death-pixel",
+			"frameRate": 24
+		}
+	]
+}

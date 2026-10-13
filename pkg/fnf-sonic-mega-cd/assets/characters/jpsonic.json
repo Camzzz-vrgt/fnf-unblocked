@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ChibiSnoc Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ChibiSnoc Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ChibiSnoc Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ChibiSnoc Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 12,
+			"name": "ChibiSnoc Dancy",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				0
+			],
+			"anim": "danceLeft",
+			"fps": 12,
+			"name": "ChibiSnoc Dancy",
+			"indices": [
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ChibiSnoc",
+	"position": [
+		-20,
+		100
+	],
+	"healthicon": "pixelcd",
+	"flip_x": false,
+	"healthbar_colors": [
+		36,
+		36,
+		144
+	],
+	"camera_position": [
+		-160,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 0.999999999999999
+}

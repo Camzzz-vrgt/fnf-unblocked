@@ -1,0 +1,99 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "evilHouse",
+		"player1": "bf-cannival",
+		"player2": "cannival",
+		"player3": null,
+		"events": [
+			[
+				48400,
+				[
+					[
+						"Add Camera Zoom",
+						"0.50",
+						""
+					]
+				]
+			],
+			[
+				56100,
+				[
+					[
+						"Play Animation",
+						"hey",
+						"0"
+					]
+				]
+			],
+			[
+				56400,
+				[
+					[
+						"Add Camera Zoom",
+						"0.50",
+						""
+					]
+				]
+			],
+			[
+				64400,
+				[
+					[
+						"Add Camera Zoom",
+						"0.50",
+						""
+					]
+				]
+			],
+			[
+				72100,
+				[
+					[
+						"Play Animation",
+						"hey",
+						"0"
+					]
+				]
+			],
+			[
+				72400,
+				[
+					[
+						"Add Camera Zoom",
+						"0.50",
+						""
+					]
+				]
+			],
+			[
+				80000,
+				[
+					[
+						"Screen Shake",
+						" 1, 0.08",
+						"1, 0.1"
+					]
+				]
+			],
+			[
+				120900,
+				[
+					[
+						"Play Animation",
+						"hey",
+						"0"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 150,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "bacon"
+	}
+}

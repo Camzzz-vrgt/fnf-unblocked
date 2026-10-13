@@ -1,0 +1,103 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import flixel.FlxG;
+import flixel.util.FlxTimer;
+import funkin.play.character.BaseCharacter;
+import funkin.play.PlayState;
+import funkin.play.PauseSubState;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.play.character.CharacterDataParser;
+import StringTools;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.Preferences;
+import funkin.audio.FunkinSound;
+import funkin.util.Constants;
+import funkin.FunkinMemory;
+
+
+class DarnellPlayerCharacter extends MultiAnimateAtlasCharacter
+{
+	function new()
+	{
+		super('darnell-player');
+	}
+
+	function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+
+		GameOverSubState.musicSuffix = '-darnell';
+		GameOverSubState.blueBallSuffix = '-darnell';
+
+		PauseSubState.musicSuffix = '-darnell';
+
+		// Precache misses sprites.
+    FunkinMemory.cacheTexture(Paths.image("characters/playable-darnell-anims/spritemap1"));
+
+	}
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		// Override the hit note animation.
+
+		if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+		{
+			switch (event.note.kind)
+			{
+				case "ugh":
+					holdTimer = 0;
+					this.playAnimation('hey', true);
+				case "laugh":
+					holdTimer = 0;
+					this.playAnimation('laughnote', true);
+				case "kneecan":
+					holdTimer = 0;
+					this.playAnimation('kneeCan', true);
+				case "lightcan":
+					holdTimer = 0;
+					this.playAnimation('lightCan', true);
+				case "kickcan":
+					holdTimer = 0;
+					this.playAnimation('kickCan', true);
+				default:
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false);
+			}
+		}
+	}
+
+  override function getDeathQuote():Null<String>
+  {
+    // switch (PlayState.instance?.currentStage?.getDad()?.characterId)
+    // {
+    //   case "tankman":
+    //     var randomCensor:Array<Int> = [];
+
+    //     return Paths.sound('jeffGameover-darnell/jeffGameover-' + FlxG.random.int(1, 1));
+    //   default:
+    //     return null;
+    // }
+  }
+
+	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+		super.playAnimation(name, restart, ignoreOther);
+	}
+
+	override function onGameOver(event:ScriptEvent):Void {
+		super.onGameOver(event);
+	}
+
+	override function onSongRetry(event:ScriptEvent):Void {
+		super.onSongRetry(event);
+
+		GameOverSubState.musicSuffix = '-darnell';
+		GameOverSubState.blueBallSuffix = '-darnell';
+
+		PauseSubState.musicSuffix = '-darnell';
+
+		this.visible = true;
+	}
+}

@@ -1,0 +1,75 @@
+{
+  "version": "2.2.4",
+  "songName": "Pico (Nene Mix)",
+  "artist": "smnstar (feat. d4rkwinged)",
+  "charter": "d4rkwinged",
+  "offsets": { "instrumental": 0 },
+  "playData": {
+    "difficulties": ["normal", "hard"],
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "characters": {
+      "player": "nene-playable",
+      "girlfriend": "cassandra-boom",
+      "opponent": "pico",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["pico"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "phillyTrainErect",
+    "noteStyle": "funkin",
+    "album": "nenemixes1",
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.4",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 15016,
+      "b": 37.54,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 33828.5,
+      "b": 84.5712,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 41948.0001,
+      "b": 104.87,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 52647,
+      "b": 131.6175,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 53370,
+      "b": 133.425,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 57275,
+      "b": 143.1875,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 59018,
+      "b": 147.545,
+      "bpm": 150,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

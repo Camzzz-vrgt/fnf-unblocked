@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "Friends (Pixel)",
+  "assetPath": "characters/friends-pixel",
+  "singTime": 8.0,
+	 "danceEvery": 2,
+  "isPixel": true,
+  "flipX": false,
+  "renderType": "multisparrow",
+  "offsets": [0, 17],
+  "death": {
+    "cameraOffsets": [0, 0]
+  },
+  "scale": 6,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "f Idle",
+      "offsets": [0, 0]
+    }
+  ]
+}

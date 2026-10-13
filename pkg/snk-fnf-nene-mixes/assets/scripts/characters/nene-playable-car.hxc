@@ -1,0 +1,103 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.play.GameOverSubState;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import flixel.FlxSprite;
+import flixel.FlxG;
+import funkin.modding.base.ScriptedFunkinSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import flixel.effects.FlxFlicker;
+import funkin.play.PauseSubState;
+import funkin.modding.module.ModuleHandler;
+import flixel.tweens.FlxTween;
+import funkin.Preferences;
+
+class NenePlayableCarCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('nene-playable-car');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+		// NOTE: this.x and this.y are not properly set here.
+		GameOverSubState.musicSuffix = '-nene';
+		GameOverSubState.blueBallSuffix = '-nene';
+		PauseSubState.musicSuffix = '-nene';
+	}
+
+	override function onSongRetry(event:ScriptEvent):Void {
+		super.onSongRetry(event);
+		// Reset to standard death animation.
+		GameOverSubState.musicSuffix = '-nene';
+		GameOverSubState.blueBallSuffix = '-nene';
+		PauseSubState.musicSuffix = '-nene';
+		this.visible = true;
+	}
+
+	var deathSpriteRetry:FlxAtlasSprite;
+
+	/**
+     * Initialize and cache sprites used for the death animation,
+	 * for use later.
+	 */
+	function createDeathSprites() {
+		deathSpriteRetry = new FunkinSprite(this.x - 300, this.y, Paths.animateAtlas("characters/nene/nene-death", "shared"));
+		deathSpriteRetry.zIndex = 1000;
+	}
+
+	function onUpdate(event:UpdateScriptEvent):Void
+	{
+		super.onUpdate(event);
+	}
+
+	function addToStage(sprite:FlxSprite) {
+		if (this.debug) {
+			// We are in the chart editor or something.
+			// TODO: Make this work properly.
+		} else if (PlayState.instance != null && PlayState.instance.currentStage != null) {
+			PlayState.instance.currentStage.add(sprite);
+		} else {
+			trace('Could not add Pico sprite to stage.');
+		}
+	}
+
+	var ass = [];
+	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+		if (name == "firstDeath") {
+			ass.push(new FlxTimer().start(1.5, _ -> {
+				GameOverSubState.instance.cameraFollowPoint.x += 100;
+			}));
+			ass.push(new FlxTimer().start(2.1, _ -> {
+				GameOverSubState.instance.cameraFollowPoint.y += 50;
+			}));
+
+			ass.push(new FlxTimer().start(5, _ -> GameOverSubState.instance.startDeathMusic(1, true)));
+			createDeathSprites();
+			GameOverSubState.instance.add(deathSpriteRetry);
+			this.visible = false;
+			deathSpriteRetry.animation.onFinish.add(onAnimationComplete);
+			deathSpriteRetry.animation.play("fisrt death", 24);
+		} else if (name == "deathConfirm") {
+			doDeathConfirm();
+		} else {
+			super.playAnimation(name, restart, ignoreOther);
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+	}
+
+	function onAnimationComplete(currentAnim:String):Void {
+		if (currentAnim != "comfinrm")
+			deathSpriteRetry.animation.play("loop", true);
+ 	}
+
+	function doDeathConfirm():Void {
+		for (as in ass) if (as != null) as.cancel();
+		GameOverSubState.instance.cameraFollowPoint.x -= 50;
+		deathSpriteRetry.animation.play("comfinrm", true);
+		deathSpriteRetry.animation.onFinish.removeAll();
+	}
+ }

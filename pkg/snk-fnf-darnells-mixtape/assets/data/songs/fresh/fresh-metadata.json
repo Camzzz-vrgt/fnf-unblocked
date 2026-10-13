@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "timeFormat": "ms",
+  "artist": "JamSkrimer (Sveklo1d - Old Instrumental)",
+  "charter": "JamSkrimer",
+  "playData": {
+    "album": "darnellmix1",
+    "stage": "mainStageErect",
+    "characters": {
+      "player": "darnell-player",
+      "girlfriend": "friends",
+      "opponent": "dad",
+      "instrumental": "darnell",
+      "altInstrumentals": []
+    },
+    "ratings": { "easy": 2, "normal": 4, "hard": 6, "nightmare": 35 },
+    "difficulties": ["easy", "normal", "hard"],
+    "noteStyle": "funkin"
+  },
+  "songName": "Fresh (Darnell Mix)",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 120,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ],
+  "generatedBy": ""
+}

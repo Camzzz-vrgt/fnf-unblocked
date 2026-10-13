@@ -1,0 +1,309 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Darnell (With gun)",
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"flipX": false,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"singTime": 8,
+	"flipY": false,
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "darnell",
+		"flipX": false
+	},
+	"assetPath": "characters/darnell-gun",
+	"generatedBy": "Nova Character Editor v3.0.1",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "Darnell Idle gun",
+			"flipX": false,
+			"looped": false,
+			"name": "idle",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				10,
+				2
+			],
+			"frameIndices": [],
+			"prefix": "darnell pose left",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				10,
+				2
+			],
+			"frameIndices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"prefix": "darnell pose left",
+			"flipX": false,
+			"looped": true,
+			"name": "singLEFT-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-16,
+				-41
+			],
+			"frameIndices": [],
+			"prefix": "Darnell Pose Down",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-16,
+				-41
+			],
+			"frameIndices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"prefix": "Darnell Pose Down",
+			"flipX": false,
+			"looped": true,
+			"name": "singDOWN-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-20,
+				73
+			],
+			"frameIndices": [],
+			"prefix": "Darnell pose up",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-20,
+				73
+			],
+			"frameIndices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"prefix": "Darnell pose up",
+			"flipX": false,
+			"looped": true,
+			"name": "singUP-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				11,
+				-19
+			],
+			"frameIndices": [],
+			"prefix": "Darnell pose right0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				11,
+				-19
+			],
+			"frameIndices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"prefix": "Darnell pose right0",
+			"flipX": false,
+			"looped": true,
+			"name": "singRIGHT-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-25,
+				-2
+			],
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"prefix": "darnell laugh",
+			"flipX": false,
+			"looped": false,
+			"name": "laugh",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-25,
+				-2
+			],
+			"frameIndices": [],
+			"prefix": "darnell laugh",
+			"flipX": false,
+			"looped": false,
+			"name": "laughnote",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				374,
+				369
+			],
+			"frameIndices": [],
+			"prefix": "SYMBOL0",
+			"flipX": false,
+			"looped": false,
+			"name": "firstDeath",
+			"flipY": false,
+			"assetPath": "characters/darnell-gameover",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				166,
+				-266
+			],
+			"frameIndices": [],
+			"prefix": "GAMEOV END0",
+			"flipX": false,
+			"looped": false,
+			"name": "deathConfirm",
+			"flipY": false,
+			"assetPath": "characters/darnell-gameover",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				257,
+				333
+			],
+			"frameIndices": [],
+			"prefix": "SHOOTING",
+			"flipX": false,
+			"looped": false,
+			"name": "shoot",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				81,
+				-39
+			],
+			"frameIndices": [],
+			"prefix": "Darnell Gun Prepare",
+			"flipX": false,
+			"looped": false,
+			"name": "cockCutscene",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				81,
+				-39
+			],
+			"frameIndices": [
+				8,
+				9,
+				10
+			],
+			"prefix": "Darnell Gun Prepare",
+			"flipX": false,
+			"looped": true,
+			"name": "cockCutscene-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		}
+	]
+}

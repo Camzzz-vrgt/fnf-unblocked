@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="carlos.png">
+<SubTexture name="carlos idle0000" x="824" y="0" width="232" height="304" frameX="-152" frameY="-136" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos idle0001" x="824" y="304" width="224" height="304" frameX="-152" frameY="-136" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos idle0002" x="424" y="0" width="200" height="320" frameX="-160" frameY="-120" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos idle0003" x="624" y="0" width="200" height="320" frameX="-160" frameY="-120" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos left0000" x="0" y="368" width="304" height="320" frameX="-104" frameY="-120" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos left0001" x="304" y="368" width="304" height="320" frameX="-96" frameY="-120" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos up0000" x="200" y="0" width="224" height="344" frameX="-160" frameY="-96" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos up0001" x="0" y="0" width="200" height="368" frameX="-176" frameY="-72" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos right0000" x="0" y="688" width="248" height="296" frameX="-184" frameY="-144" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos right0001" x="248" y="688" width="272" height="296" frameX="-176" frameY="-144" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos down0000" x="520" y="688" width="328" height="272" frameX="-104" frameY="-168" frameWidth="500" frameHeight="500" />
+<SubTexture name="carlos down0001" x="1056" y="0" width="344" height="264" frameX="-96" frameY="-176" frameWidth="500" frameHeight="500" />
+</TextureAtlas>

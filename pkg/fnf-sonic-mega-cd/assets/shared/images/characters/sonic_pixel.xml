@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="sonic_pixel.png">
+<SubTexture name="sonic_pixel idle0000" x="372" y="534" width="186" height="216" frameX="-120" frameY="-66" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel idle0001" x="624" y="228" width="180" height="222" frameX="-126" frameY="-60" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel idle0002" x="624" y="0" width="186" height="228" frameX="-114" frameY="-54" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel idle0003" x="0" y="534" width="192" height="228" frameX="-108" frameY="-54" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel left0000" x="558" y="534" width="186" height="216" frameX="-114" frameY="-66" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel left0001" x="192" y="534" width="180" height="222" frameX="-120" frameY="-60" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel down0000" x="444" y="0" width="180" height="252" frameX="-156" frameY="-30" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel down0001" x="0" y="282" width="180" height="252" frameX="-156" frameY="-30" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel up0000" x="0" y="0" width="222" height="282" frameX="-72" frameY="0" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel up0001" x="222" y="0" width="222" height="276" frameX="-72" frameY="-6" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel right0000" x="180" y="282" width="162" height="240" frameX="-180" frameY="-42" frameWidth="378" frameHeight="390" />
+<SubTexture name="sonic_pixel right0001" x="342" y="282" width="162" height="240" frameX="-174" frameY="-42" frameWidth="378" frameHeight="390" />
+</TextureAtlas>

@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Playable)",
+  "assetPath": "shared:characters/darnell",
+  "renderType": "multianimateatlas",
+  "offsets": [-50, 91],
+  "healthIcon": {
+    "id": "darnell"
+  },
+  "death": {
+    "cameraOffsets": [-200, -220]
+  },
+  "cameraOffsets": [-18, 40],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Pose Left"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "Left Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Pose Down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "Down Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "Pose Up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "Up Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Pose Right"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "Right Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "laugh",
+      "prefix": "Laugh"
+    },
+    {
+      "name": "laughCutscene",
+      "prefix": "Laugh",
+      "frameIndices": [
+        1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6,
+        1, 2, 3, 4, 5, 6
+      ]
+    },
+    {
+      "name": "lightCan",
+      "prefix": "Light Can"
+    },
+    {
+      "name": "kickCan",
+      "prefix": "Kick Up"
+    },
+    {
+      "name": "kneeCan",
+      "prefix": "Knee Forward"
+    },
+    {
+      "name": "pissed",
+      "prefix": "Gets Pissed"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "asset": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "MISSLEFT"
+    },
+    {
+      "name": "singDOWNmiss",
+      "asset": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "MISSDOWN"
+    },
+    {
+      "name": "singUPmiss",
+      "assetPath": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "MISSUP"
+    },
+    {
+      "name": "singLEFTmiss",
+      "assetPath": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "MISSRIGHT"
+    },
+    {
+      "name": "hey",
+      "assetPath": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "HEY"
+    },
+    {
+      "name": "firstDeath",
+      "asset": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "firstDeath"
+    },
+    {
+      "name": "deathConfirm",
+      "asset": "shared:characters/playable-darnell-anims",
+      "offsets": [141, 278],
+      "prefix": "Retry"
+    }
+  ]
+}

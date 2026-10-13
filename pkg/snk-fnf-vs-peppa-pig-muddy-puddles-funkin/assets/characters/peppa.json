@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Peppa Idle"
+		},
+		{
+			"offsets": [
+				-5,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Peppa Oink"
+		},
+		{
+			"offsets": [
+				4,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Peppa down"
+		},
+		{
+			"offsets": [
+				-50,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Peppa left"
+		},
+		{
+			"offsets": [
+				-24,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Peppa right"
+		},
+		{
+			"offsets": [
+				-45,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Peppa up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Peppa_Sprites",
+	"position": [
+		300,
+		350
+	],
+	"healthicon": "peppa",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		165,
+		242
+	],
+	"camera_position": [
+		120,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

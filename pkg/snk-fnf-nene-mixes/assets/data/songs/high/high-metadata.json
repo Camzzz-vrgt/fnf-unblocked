@@ -1,0 +1,37 @@
+{
+  "version": "2.2.4",
+  "songName": "High (Nene Mix)",
+  "artist": "Leebert (feat. d4rkwinged)",
+  "charter": "d4rkwinged",
+  "offsets": { "instrumental": 0 },
+  "playData": {
+    "difficulties": ["normal", "hard"],
+    "characters": {
+      "player": "nene-playable-car",
+      "girlfriend": "cassandra-boom-car",
+      "opponent": "mom-car",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["mom-car"],
+      "playerVocals": ["nene"]
+    },
+    "stage": "limoRideErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 4,
+      "normal": 6,
+      "hard": 7
+    },
+    "album": "nenemixes1",
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.4",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 125,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mc_sonic.png">
+<SubTexture name="mc_sonic idle0000" x="127" y="0" width="29" height="37" frameX="-15" frameY="-21" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic idle0001" x="37" y="79" width="29" height="38" frameX="-15" frameY="-20" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic idle0002" x="32" y="0" width="31" height="39" frameX="-13" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic idle0003" x="63" y="0" width="29" height="39" frameX="-15" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic left0000" x="0" y="40" width="34" height="39" frameX="-10" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic left0001" x="34" y="40" width="33" height="39" frameX="-11" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic right0000" x="92" y="0" width="35" height="39" frameX="-9" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic right0001" x="0" y="79" width="37" height="39" frameX="-7" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic up0000" x="0" y="0" width="32" height="40" frameX="-12" frameY="-18" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic up0001" x="92" y="39" width="32" height="39" frameX="-12" frameY="-19" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic down0000" x="0" y="118" width="36" height="37" frameX="-8" frameY="-21" frameWidth="64" frameHeight="64" />
+<SubTexture name="mc_sonic down0001" x="66" y="79" width="36" height="38" frameX="-8" frameY="-20" frameWidth="64" frameHeight="64" />
+</TextureAtlas>

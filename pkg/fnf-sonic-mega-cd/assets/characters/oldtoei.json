@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				13
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "toei right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "toei left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "toei up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "toei down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "toei idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/oldtoei",
+	"position": [
+		-300,
+		100
+	],
+	"healthicon": "toei",
+	"flip_x": false,
+	"healthbar_colors": [
+		21,
+		84,
+		137
+	],
+	"camera_position": [
+		-30,
+		60
+	],
+	"sing_duration": 4,
+	"scale": 0.999999999999999
+}

@@ -1,0 +1,112 @@
+import StringTools;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import funkin.Paths;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxSprite;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.play.PlayState;
+import funkin.play.character.AnimateAtlasCharacter;
+
+class CassandraBoomCharacterCar extends AnimateAtlasCharacter {
+	function new() {
+		super('cassandra-boom-car');
+	}
+
+	var pupilRight:Bool = false;
+	var boom:FlxSprite;
+
+	override function findCountAnimations(prefix:String):Array<Int> // fix atlas thing
+	{
+		var animNames:Array<String> = [for (i in this._data.animations) i.name]; // main change
+
+		var result:Array<Int> = [];
+
+		for (anim in animNames)
+		{
+			if (StringTools.startsWith(anim, prefix))
+			{
+				var comboNum:Null<Int> = Std.parseInt(anim.substring(prefix.length));
+				if (comboNum != null)
+				{
+					result.push(comboNum);
+				}
+			}
+		}
+
+		// Sort numerically.
+		result.sort((a, b) -> a - b);
+		return result;
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		boom = new FunkinSprite();
+		boom.frames = Paths.getSparrowAtlas("characters/cass/car-boom");
+		boom.animation.addByPrefix("boomLeft", "boom-idle-left", 24, false);
+		boom.animation.addByPrefix("boomRight", "boom-idle-right", 24, false);
+		updateBoomBoxParams();
+
+	}
+	function updateBoomBoxParams()
+	{
+		boom.x = this.x - 205 + globalOffsets[0];
+		boom.y = this.y + 376 + globalOffsets[1];
+		boom.zIndex = this.zIndex - 1;
+		boom.shader = this.shader;
+	}
+
+	function dance(forceRestart:Bool) {
+		if (boom != null)
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", true);
+
+		super.dance(forceRestart);
+	}
+
+	var refershedLol:Bool = false;
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+	{
+		super.onSongEvent(scriptEvent);
+		if (scriptEvent.eventData.eventKind == "FocusCamera")
+		{
+			var eventProps = scriptEvent.eventData.value;
+			var char = eventProps.char;
+			if (char == null)
+				char = eventProps; // hUh?
+			switch (Std.parseInt(char)) {
+				case 0:
+					pupilRight = true;
+				case 1:
+					pupilRight = false;
+				default:
+			}
+			var oldFrame = boom.animation.frameIndex;
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", false, false, oldFrame);
+		}
+
+	}
+
+
+	function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+
+		// Set the visibility of ABot to match Nene's.
+		boom.visible = this.visible;
+
+
+		// refreshes just for the zIndex shit!
+		if (!refershedLol)
+		{
+			updateBoomBoxParams();
+			if (PlayState.instance != null)
+			{
+				PlayState.instance.currentStage.add(boom);
+				PlayState.instance.currentStage.refresh();
+			}
+			refershedLol = true;
+		}
+	}
+}

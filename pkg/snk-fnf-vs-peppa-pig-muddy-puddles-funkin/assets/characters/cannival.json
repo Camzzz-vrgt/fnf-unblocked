@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Cannival0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				16
+			],
+			"anim": "death",
+			"fps": 24,
+			"name": "Cannival death 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-61,
+				-57
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Cannival down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				24
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Cannival left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-3
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Cannival oink",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				86,
+				-9
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Cannival right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				31
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Cannival up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/cannival",
+	"position": [
+		200,
+		220
+	],
+	"healthicon": "cannival",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		85,
+		155
+	],
+	"camera_position": [
+		190,
+		-10
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

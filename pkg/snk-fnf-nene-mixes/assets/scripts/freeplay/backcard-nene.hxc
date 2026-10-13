@@ -1,0 +1,272 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.math.FlxMath;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.Conductor;
+
+class NeneCard extends BackingCard
+{
+  var scrollBack:FlxBackdrop;
+  var scrollLower:FlxBackdrop;
+  var scrollTop:FlxBackdrop;
+  var scrollMiddle:FlxBackdrop;
+
+  var glow:FlxSprite;
+  var glowDark:FlxSprite;
+  var blueBar:FlxSprite;
+
+  var confirmAtlas:FunkinSprite;
+
+  public function new()
+  {
+    super("neneplayer");
+  }
+
+  public override function enterCharSel():Void
+  {
+    //FlxTween.tween(scrollBack.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    //FlxTween.tween(scrollLower.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    //FlxTween.tween(scrollTop.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    //FlxTween.tween(scrollMiddle.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+  }
+
+  public override function applyExitMovers(?exitMovers:FreeplayState.ExitMoverData, ?exitMoversCharSel:FreeplayState.ExitMoverData):Void
+  {
+    super.applyExitMovers(exitMovers, exitMoversCharSel);
+    /*if (exitMovers == null || exitMoversCharSel == null) return;
+
+    exitMoversCharSel.set([scrollTop],
+      {
+        y: -90,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([scrollMiddle],
+      {
+        y: -80,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([blueBar],
+      {
+        y: -70,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([scrollLower],
+      {
+        y: -60,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([scrollBack],
+      {
+        y: -50,
+        speed: 0.8,
+        wait: 0.1
+      });*/
+  }
+
+
+	var coolBg;
+	var grad;
+
+	var sketchesBack:FlxBackdrop;
+	var sketchesFront:FlxBackdrop;
+	
+	var seal;
+	var sealTimer:Float = -1;
+  public override function onCreate(event:ScriptEvent):Void
+  {
+	FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+	add(pinkBack);
+
+	var bitmap = BitmapUtil.scalePartByWidth(Assets.getBitmapData(Paths.image('freeplay/nenecard/bg')), FreeplayState.CUTOUT_WIDTH);
+	coolBg = new FlxSprite(0, 0).loadGraphic(bitmap);
+	coolBg.scale.x *= 1.05;
+	coolBg.visible = false;
+	add(coolBg);
+
+	sketchesBack = new FlxBackdrop(Paths.image('freeplay/nenecard/sketches'), 0x10);
+	sketchesBack.setPosition(-5, 0);
+	sketchesBack.alpha = .4;
+	sketchesBack.scale.set(1.2 * (coolBg.width / 511), 1.2 * (coolBg.width / 511));
+	sketchesBack.updateHitbox();
+	sketchesBack.alpha = 0;
+	sketchesBack.velocity.y = -30;
+	add(sketchesBack);
+
+	sketchesFront = new FlxBackdrop(Paths.image('freeplay/nenecard/sketches'), 0x10);
+	sketchesFront.setPosition(-5, 0);
+	sketchesFront.alpha = 1.0;
+	sketchesFront.scale.set(1.1 * (coolBg.width / 511), 1.1 * (coolBg.width / 511));
+	sketchesFront.updateHitbox();
+	sketchesFront.y += FlxG.random.float(-300, 300);
+	sketchesFront.velocity.y = -50;
+	sketchesFront.alpha = 0;
+	add(sketchesFront);
+
+	var bitmap = BitmapUtil.scalePartByWidth(Assets.getBitmapData(Paths.image('freeplay/nenecard/grad')), FreeplayState.CUTOUT_WIDTH);
+	grad = new FlxSprite(0, 40).loadGraphic(bitmap);
+	grad.visible = true;
+	grad.alpha = 0;
+	add(grad);
+
+	seal = new FlxSprite(-330, 325);
+	seal.frames = Paths.getSparrowAtlas('freeplay/nenecard/seal');
+	seal.animation.addByPrefix("y", "SEAL ANIM", 24, false);
+	//seal.animation.play("y", true);
+	seal.animation.onFinish.add((name:String) -> sealTimer = FlxG.random.float(10, 20));
+	seal.animation.onFinish.add((name:String) -> seal.visible = false);
+	seal.scale.set((coolBg.width / 511), (coolBg.width / 511));
+	seal.flipX = FlxG.random.bool(50);
+	seal.alpha = 0;
+	add(seal);
+  }
+
+  override public function confirm():Void
+  {
+    /*confirmAtlas.visible = true;
+    confirmAtlas.anim.play("");
+
+    FlxTween.color(instance.backingImage, 10 / 24, 0xFFFFFFFF, 0xFF8A8A8A,
+      {
+        ease: FlxEase.expoOut,
+        onUpdate: function(_) {
+          instance.angleMaskShader.extraColor = instance.backingImage.color;
+        }
+      });
+
+    new FlxTimer().start(10 / 24, function(_) {
+      // shoot
+      FlxTween.color(instance.backingImage, 3 / 24, 0xFF343036, 0xFF696366,
+        {
+          ease: FlxEase.expoOut,
+          onUpdate: function(_) {
+            instance.angleMaskShader.extraColor = instance.backingImage.color;
+          }
+        });
+    });
+
+    new FlxTimer().start(14 / 24, function(_) {
+      // shoot
+      FlxTween.color(instance.backingImage, 3 / 24, 0xFF27292D, 0xFF686A6F,
+        {
+          ease: FlxEase.expoOut,
+          onUpdate: function(_) {
+            instance.angleMaskShader.extraColor = instance.backingImage.color;
+          }
+        });
+    });
+
+    new FlxTimer().start(18 / 24, function(_) {
+      // shoot
+      FlxTween.color(instance.backingImage, 3 / 24, 0xFF2D282D, 0xFF676164,
+        {
+          ease: FlxEase.expoOut,
+          onUpdate: function(_) {
+            instance.angleMaskShader.extraColor = instance.backingImage.color;
+          }
+        });
+    });
+
+    new FlxTimer().start(21 / 24, function(_) {
+      // shoot
+      FlxTween.color(instance.backingImage, 3 / 24, 0xFF29292F, 0xFF62626B,
+        {
+          ease: FlxEase.expoOut,
+          onUpdate: function(_) {
+            instance.angleMaskShader.extraColor = instance.backingImage.color;
+          }
+        });
+    });
+
+    new FlxTimer().start(24 / 24, function(_) {
+      // shoot
+      FlxTween.color(instance.backingImage, 3 / 24, 0xFF29232C, 0xFF808080,
+        {
+          ease: FlxEase.expoOut,
+          onUpdate: function(_) {
+            instance.angleMaskShader.extraColor = instance.backingImage.color;
+          }
+        });
+    });*/
+  }
+
+  public override function introDone():Void
+  {
+	coolBg.alpha = 0;
+	FlxTween.tween(coolBg, {alpha: 1}, 0.15, {ease: FlxEase.sineOut});
+	FlxTween.tween(grad, {alpha: 1}, 0.15, {ease: FlxEase.sineOut});
+
+	FlxTween.tween(sketchesBack, {alpha: .4}, 0.15, {ease: FlxEase.sineOut});
+	FlxTween.tween(sketchesFront, {alpha: 1}, 0.15, {ease: FlxEase.sineOut});
+
+	FlxTween.tween(seal, {alpha: 1}, 0.15, {ease: FlxEase.sineOut});
+	coolBg.visible = true;
+		
+	sealTimer = FlxG.random.float(3, 6);
+  }
+
+  public override function disappear():Void
+  {
+	FlxTween.tween(coolBg, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+	FlxTween.tween(grad, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+	FlxTween.tween(seal, {y: 900, alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+	FlxTween.tween(sketchesBack, {x: -100, alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+	FlxTween.tween(sketchesFront, {x: -100, alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+  }
+
+  override public function update(elapsed:Float):Void
+  {
+    super.update(elapsed);
+
+	if (sealTimer > 0)
+	{
+		sealTimer -= elapsed;
+		if (sealTimer <= 0)
+		{
+			seal.flipX = !seal.flipX;
+			seal.visible = true;
+			seal.animation.play("y", true);
+			sealTimer = -1;
+		}
+	}
+    /*var scrollProgress:Float = Math.abs(scrollTop.x % (scrollTop.frameWidth + 20));
+
+    if (scrollTop.animation.curAnim.finished == true)
+    {
+      if (FlxMath.inBounds(scrollProgress, 500, 700) && scrollTop.animation.curAnim.name != 'sniper')
+      {
+        scrollTop.animation.play('sniper', true, false);
+      }
+
+      if (FlxMath.inBounds(scrollProgress, 700, 1300) && scrollTop.animation.curAnim.name != 'rifle')
+      {
+        scrollTop.animation.play('rifle', true, false);
+      }
+
+      if (FlxMath.inBounds(scrollProgress, 1450, 2000) && scrollTop.animation.curAnim.name != 'rocket launcher')
+      {
+        scrollTop.animation.play('rocket launcher', true, false);
+      }
+
+      if (FlxMath.inBounds(scrollProgress, 0, 300) && scrollTop.animation.curAnim.name != 'uzi')
+      {
+        scrollTop.animation.play('uzi', true, false);
+      }
+    }*/
+  }
+}

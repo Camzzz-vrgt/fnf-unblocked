@@ -1,0 +1,50 @@
+{
+	"storyName": "Sega CD Addon",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "toei",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"toeimenu",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"dashing",
+			"toei",
+			[
+				86,
+				153,
+				255
+			]
+		],
+		[
+			"peelout",
+			"toei",
+			[
+				86,
+				153,
+				255
+			]
+		],
+		[
+			"boom",
+			"toei",
+			[
+				86,
+				153,
+				255
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "WeekCD",
+	"hiddenUntilUnlocked": false
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TextureAtlas imagePath="intro.png" width="605" height="446">
+	<SubTexture name="go0001" x="262" y="273" width="252" height="167" frameX="-0" frameY="-1" frameWidth="252" frameHeight="169"/>
+	<SubTexture name="go0002" x="5" y="273" width="252" height="168" frameX="-0" frameY="-1" frameWidth="252" frameHeight="169"/>
+	<SubTexture name="ready0001" x="5" y="5" width="376" height="129" frameX="-0" frameY="-1" frameWidth="376" frameHeight="130"/>
+	<SubTexture name="ready0002" x="5" y="139" width="375" height="129" frameX="-1" frameY="-1" frameWidth="376" frameHeight="130"/>
+	<SubTexture name="set0001" x="385" y="139" width="214" height="98" frameX="-0" frameY="-0" frameWidth="214" frameHeight="98"/>
+	<SubTexture name="set0002" x="386" y="5" width="214" height="97" frameX="-0" frameY="-1" frameWidth="214" frameHeight="98"/>
+</TextureAtlas>

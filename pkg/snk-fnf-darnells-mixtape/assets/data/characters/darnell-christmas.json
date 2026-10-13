@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Christmas)",
+  "assetPath": "shared:characters/Darnell christma",
+  "renderType": "animateatlas",
+  "offsets": [18, 250],
+	"healthIcon": {
+		"id": "darnell"
+	},
+  "death": {
+    "cameraOffsets": [0, 300]
+  },
+  "cameraOffsets": [0, 300],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Pose Left"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "Left Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Pose Down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "Down Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "Pose Up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "Up Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Pose Right"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "Right Flame Loop",
+      "looped": true
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "MISS LEFT"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "MISS DOWN"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "MISS UP"
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "MISS RIGHT"
+    },
+    {
+      "name": "hey",
+      "prefix": "HEY"
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "firstDeath"
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "Retry"
+    }
+  ]
+}

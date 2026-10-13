@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				20,
+				-20
+			],
+			"loop": false,
+			"fps": 7,
+			"anim": "idle",
+			"indices": [],
+			"name": "guebo idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				30
+			],
+			"anim": "singUP",
+			"fps": 8,
+			"name": "guebo up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				30
+			],
+			"anim": "singRIGHT",
+			"fps": 8,
+			"name": "guebo right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				30
+			],
+			"anim": "singDOWN",
+			"fps": 8,
+			"name": "guebo down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				100,
+				20
+			],
+			"anim": "singLEFT",
+			"fps": 8,
+			"name": "guebo left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/guebo",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gueboicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		60,
+		95
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

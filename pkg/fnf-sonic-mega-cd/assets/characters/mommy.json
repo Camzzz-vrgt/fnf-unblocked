@@ -1,0 +1,75 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "CDGF1 idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-3,
+				2
+			],
+			"loop": false,
+			"fps": 13,
+			"anim": "cheer",
+			"indices": [
+				0,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"name": "CDGF1 up"
+		},
+		{
+			"offsets": [
+				164,
+				134
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"fps": 13,
+			"anim": "sad",
+			"loop": false,
+			"name": "CDGF1 cringe"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mommy",
+	"position": [
+		-170,
+		70
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-180,
+		-140
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

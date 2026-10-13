@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				140,
+				150
+			],
+			"anim": "idle",
+			"fps": 9,
+			"name": "sonicvenezuela idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sonicvenezuela right"
+		},
+		{
+			"offsets": [
+				140,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sonicvenezuela down"
+		},
+		{
+			"offsets": [
+				140,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sonicvenezuela left"
+		},
+		{
+			"offsets": [
+				140,
+				150
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sonicvenezuela up"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/sonicvenezuela",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "fakericon",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		80,
+		135
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.2,
+	"scale": 1
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-140
+			],
+			"anim": "idle",
+			"fps": 10,
+			"name": "Tails idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-140
+			],
+			"anim": "singLEFT",
+			"fps": 10,
+			"name": "Tails Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-140
+			],
+			"anim": "singDOWN",
+			"fps": 10,
+			"name": "Tails Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-140
+			],
+			"anim": "singUP",
+			"fps": 10,
+			"name": "Tails Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-140,
+				-140
+			],
+			"anim": "singRIGHT",
+			"fps": 10,
+			"name": "Tails right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/tails",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "tailsicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		85,
+		85,
+		85
+	],
+	"camera_position": [
+		220,
+		180
+	],
+	"sing_duration": 9.99999999999998,
+	"scale": 1
+}

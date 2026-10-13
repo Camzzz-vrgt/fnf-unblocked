@@ -1,0 +1,349 @@
+{
+	"song": {
+		"speed": 2.8,
+		"stage": "picnic-mortar",
+		"player1": "bf-htf",
+		"player2": "flippy-happy",
+		"player3": null,
+		"events": [
+			[
+				58363.6363636364,
+				[
+					[
+						"Play Animation",
+						"fireworks blue on",
+						""
+					]
+				]
+			],
+			[
+				58500,
+				[
+					[
+						"Play Animation",
+						"fireworks blue off",
+						""
+					]
+				]
+			],
+			[
+				60954.5454545455,
+				[
+					[
+						"Do Trigger Anim",
+						"",
+						""
+					]
+				]
+			],
+			[
+				61090.9090909091,
+				[
+					[
+						"Goodbye Hud",
+						"0",
+						"2"
+					]
+				]
+			],
+			[
+				61090.9090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks pink on",
+						""
+					]
+				]
+			],
+			[
+				61227.2727272728,
+				[
+					[
+						"Play Animation",
+						"fireworks pink off",
+						""
+					]
+				]
+			],
+			[
+				61772.7272727273,
+				[
+					[
+						"Play Animation",
+						"fireworks gold on",
+						""
+					]
+				]
+			],
+			[
+				61909.0909090909,
+				[
+					[
+						"Play Animation",
+						"fireworks gold off",
+						""
+					]
+				]
+			],
+			[
+				63272.7272727273,
+				[
+					[
+						"Play Animation",
+						"fireworks pink on",
+						""
+					]
+				]
+			],
+			[
+				63409.090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks pink off",
+						""
+					]
+				]
+			],
+			[
+				64636.3636363637,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"1"
+					]
+				]
+			],
+			[
+				64909.090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks blue on",
+						""
+					]
+				]
+			],
+			[
+				65045.4545454546,
+				[
+					[
+						"Play Animation",
+						"fireworks blue off",
+						""
+					]
+				]
+			],
+			[
+				65181.8181818182,
+				[
+					[
+						"Play Animation",
+						"fireworks pink 2 on",
+						""
+					]
+				]
+			],
+			[
+				65318.1818181819,
+				[
+					[
+						"Play Animation",
+						"fireworks pink 2 off",
+						""
+					]
+				]
+			],
+			[
+				66409.090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks gold 2 on",
+						""
+					]
+				]
+			],
+			[
+				66545.4545454546,
+				[
+					[
+						"Play Animation",
+						"fireworks gold 2 off",
+						""
+					]
+				]
+			],
+			[
+				66818.1818181819,
+				[
+					[
+						"Play Animation",
+						"fireworks blue 2 on",
+						""
+					]
+				]
+			],
+			[
+				66954.5454545455,
+				[
+					[
+						"Play Animation",
+						"fireworks blue 2 off",
+						""
+					]
+				]
+			],
+			[
+				67090.9090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks pink 2 on",
+						""
+					]
+				]
+			],
+			[
+				67227.2727272728,
+				[
+					[
+						"Play Animation",
+						"fireworks pink 2 off",
+						""
+					]
+				]
+			],
+			[
+				67909.090909091,
+				[
+					[
+						"Play Animation",
+						"fireworks gold 2 on",
+						""
+					]
+				]
+			],
+			[
+				68045.4545454546,
+				[
+					[
+						"Play Animation",
+						"fireworks gold 2 off",
+						""
+					]
+				]
+			],
+			[
+				69818.1818181819,
+				[
+					[
+						"Play Animation",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				72136.3636363637,
+				[
+					[
+						"Play Animation",
+						"fireworks blue 2 on",
+						""
+					]
+				]
+			],
+			[
+				72272.7272727273,
+				[
+					[
+						"Play Animation",
+						"fireworks blue 2 off",
+						""
+					]
+				]
+			],
+			[
+				74045.4545454546,
+				[
+					[
+						"Play Animation",
+						"move shadow",
+						""
+					]
+				]
+			],
+			[
+				77590.9090909091,
+				[
+					[
+						"Funny Camera Notes",
+						"on",
+						"off"
+					]
+				]
+			],
+			[
+				77727.2727272727,
+				[
+					[
+						"Change Character",
+						"dad",
+						"flippy-minie"
+					]
+				]
+			],
+			[
+				77863.6363636364,
+				[
+					[
+						"Goodbye Hud",
+						"1",
+						"0.3"
+					]
+				]
+			],
+			[
+				78545.4545454546,
+				[
+					[
+						"Health Drain",
+						"0.7",
+						"0.01"
+					]
+				]
+			],
+			[
+				113181.818181818,
+				[
+					[
+						"Red Stuff",
+						"0.5",
+						"1"
+					]
+				]
+			],
+			[
+				113318.181818182,
+				[
+					[
+						"Funny Camera Notes",
+						"on",
+						"on"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-htf",
+		"bpm": 110,
+		"arrowSkin": "noteskins/Flippy_Note",
+		"needsVoices": true,
+		"song": "Mortar"
+	}
+}

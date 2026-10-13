@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFB3DFD8"
+  },
+
+  "music": {
+    "asset": "",
+    "fadeTime": 0,
+    "looped": false
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "angrySenpai",
+
+      "text": ["That was the worst 'singing' I've heard in my life."]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["That little orange boy sang better than you and he sounded like a chainsmoker!"]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkEnterPissed",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["dude you're getting ragebaited so hard rn lol i just wanted pizza money"]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talkEnter",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["What is up with society these days and their new buzzwords..."]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["The only thing making me upset is that awful soot covered skin of yours."]
+    },
+    {
+      "speaker": "senpai-angry",
+      "speakerAnimation": "talk",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["You need to go home and wash your filthy body!", " You're completely covered in dirt!"]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkEnterAngry",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": [" "]
+    },
+    {
+      "speaker": "darnell-pixel",
+      "speakerAnimation": "talkAngry",
+      "box": "roses",
+      "boxAnimation": "idle",
+
+      "text": ["no way you just said that"]
+    }
+  ]
+}

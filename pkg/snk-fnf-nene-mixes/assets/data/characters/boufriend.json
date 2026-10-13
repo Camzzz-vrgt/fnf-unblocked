@@ -1,0 +1,160 @@
+{
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"scale": 1,
+	"flipSingAnimations": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"flipX": true,
+	"name": "b",
+	"death": null,
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"isPixel": false,
+	"assetPath": "characters/boufriend",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1.1,
+		"flipX": false,
+		"id": "b"
+	},
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"flipX": false,
+			"name": "idle",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-43,
+				70
+			],
+			"frameIndices": [],
+			"prefix": "right0",
+			"flipX": false,
+			"name": "singRIGHT",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-37,
+				-42
+			],
+			"frameIndices": [],
+			"prefix": "down0",
+			"flipX": false,
+			"name": "singDOWN",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				135,
+				245
+			],
+			"frameIndices": [],
+			"prefix": "up0",
+			"flipX": false,
+			"name": "singUP",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				37,
+				-10
+			],
+			"frameIndices": [],
+			"prefix": "left0",
+			"flipX": false,
+			"name": "singLEFT",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				85,
+				29
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"flipX": false,
+			"name": "singLEFTmiss",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				63,
+				-43
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"flipX": false,
+			"name": "singDOWNmiss",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				20,
+				77
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"flipX": false,
+			"name": "singUPmiss",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-33,
+				5
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"flipX": false,
+			"name": "singRIGHTmiss",
+			"looped": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		}
+	]
+}

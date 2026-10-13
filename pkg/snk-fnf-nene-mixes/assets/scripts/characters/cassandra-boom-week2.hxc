@@ -1,0 +1,138 @@
+import StringTools;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import funkin.Paths;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxSprite;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.play.PlayState;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterDataParser;
+
+class CassandraBoomWeek2Character extends MultiSparrowCharacter {
+	function new() {
+		super('cassandra-boom-week2');
+	}
+
+	var pupilRight:Bool = false;
+	var boom:FlxSprite;
+
+
+	override function set_alpha(val:Float):Float
+	{
+		super.set_alpha(val);
+		if (val != 1) normalChar.alpha = 1;
+		else
+			normalChar.alpha = 0.0001;
+
+		normalChar.boom.alpha = normalChar.alpha;
+
+		boom.alpha = val;
+
+		return val;
+	}
+
+	var normalChar:BaseCharacter;
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		normalChar = CharacterDataParser.fetchCharacter('cassandra-boom-week2layer');
+		normalChar.alpha = 0.0001;
+		normalChar.flipX = false;
+		if (PlayState.instance != null)
+			PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+		boom = new FunkinSprite();
+		boom.frames = Paths.getSparrowAtlas("characters/cass/dark-boom");
+		boom.animation.addByPrefix("boomLeft", "boom-idle-left", 24, false);
+		boom.animation.addByPrefix("boomRight", "boom-idle-right", 24, false);
+
+		normalChar.boom.x = boom.x;
+		normalChar.boom.y = boom.y;
+
+		updateBoomBoxParams();
+	}
+	function updateBoomBoxParams()
+	{
+		boom.x = this.x - 130;
+		boom.y = this.y + 263;
+		boom.zIndex = this.zIndex - 3;
+		normalChar.zIndex = this.zIndex - 2;
+		normalChar.boom.zIndex = this.zIndex - 4;
+		boom.shader = this.shader;
+		normalChar.boom.x = boom.x;
+		normalChar.boom.y = boom.y;
+	}
+
+	function dance(forceRestart:Bool) {
+		if (boom != null)
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", true);
+
+		if (normalChar != null)
+			normalChar.boom.animation.play(pupilRight ? "boomRight" : "boomLeft", true);
+
+		super.dance(forceRestart);
+	}
+
+	var refershedLol:Bool = false;
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+	{
+		super.onSongEvent(scriptEvent);
+		if (scriptEvent.eventData.eventKind == "FocusCamera")
+		{
+			var eventProps = scriptEvent.eventData.value;
+			var char = eventProps.char;
+			if (char == null)
+				char = eventProps; // hUh?
+			switch (Std.parseInt(char)) {
+				case 0:
+					pupilRight = true;
+				case 1:
+					pupilRight = false;
+				default:
+			}
+			var oldFrame = boom.animation.frameIndex;
+			boom.animation.play(pupilRight ? "boomRight" : "boomLeft", false, false, oldFrame);
+			if (normalChar != null)
+				normalChar.boom.animation.play(pupilRight ? "boomRight" : "boomLeft", false, false, oldFrame);
+		}
+
+	}
+
+	function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+
+		// Set the visibility of ABot to match Nene's.
+		boom.visible = this.visible;
+
+		// refreshes just for the zIndex shit!
+		if (!refershedLol)
+		{
+			updateBoomBoxParams();
+
+			if (PlayState.instance != null)
+			{
+				PlayState.instance.currentStage.add(normalChar.boom);
+				PlayState.instance.currentStage.add(boom);
+				PlayState.instance.currentStage.add(normalChar);
+
+				PlayState.instance.currentStage.refresh();
+			}
+			refershedLol = true;
+		}
+	}
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+	{
+		super.playAnimation(name, restart, ignoreOther);
+		if (normalChar != null)
+		{
+			normalChar.playAnimation(name, restart, ignoreOther);
+			normalChar.setPosition(this.x, this.y);
+		}
+	}
+}

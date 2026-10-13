@@ -1,0 +1,32 @@
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.stage.Stage;
+
+class MallXmasNeneStage extends Stage
+{
+	function new()
+	{
+		super('mallXmasNene');
+	}
+
+	var colorShader:AdjustColorShader;
+
+	function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		// Create a single color shader and reuse it.
+    	colorShader = new AdjustColorShader();
+		colorShader.hue = -15;
+		colorShader.saturation = -5;
+		colorShader.contrast = 0;
+		colorShader.brightness = -5;
+
+		getNamedProp('santa').shader = colorShader;
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		//trace('Applied stage shader to ' + character.characterName);
+		character.shader = colorShader;
+	}
+}
