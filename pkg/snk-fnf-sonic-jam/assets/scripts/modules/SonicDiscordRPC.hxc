@@ -1,0 +1,92 @@
+import flixel.FlxG;
+import funkin.api.discord.DiscordClient;
+import funkin.modding.module.Module;
+import funkin.modding.PolymodHandler;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+import funkin.util.tools.StringTools;
+import funkin.util.Constants;
+import funkin.Preferences;
+
+using StringTools;
+
+class SonicDiscordRPC extends Module
+{
+	final ALBUM_URL_MAP:StringMap =
+	[
+		"sonicmix1" => "https://i.imgur.com/GkIBn5f.jpeg",
+		"sonicweek" => "https://i.imgur.com/9pf5ptL.png"
+	];
+
+	var isDevBuild:Bool = false;
+
+	public function new()
+	{
+		super('SonicDiscordRPC', 1000, {
+			state: PlayState
+		});
+
+		// See if this is a developer build depending on the flag in the _polymod_meta.json file.
+		var meta:ModMetadata = PolymodHandler.modFileSystem.getMetadata("sonicjamx");
+		if (meta != null)
+		{
+			isDevBuild = (meta.metadata?.get("isDevBuild") == "true");
+		}
+	}
+
+	public function onSongLoaded(event:SongLoadScriptEvent)
+	{
+		super.onSongLoaded(event);
+
+		// Don't do anything on mobile, since it currently doesn't support Discord RPC.
+		if (FlxG.onMobile) return;
+
+		// Replace the album image and the song name if the album is found in the album map.
+		if (ALBUM_URL_MAP.exists(PlayState.instance.currentChart.album))
+		{
+			PlayState.instance.discordRPCAlbum = ALBUM_URL_MAP.get(PlayState.instance.currentChart.album);
+			this.updateStatus("");
+		}
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		// Do nothing if there's no need to censor the song names, i.e. if the song is not from Sonic Jam or if the build is not a dev one.
+		if (!ALBUM_URL_MAP.exists(PlayState.instance?.currentChart?.album ?? "") || !isDevBuild) return;
+
+		// Update the status to reflect certain submenus being open.
+		if (Std.isOfType(PlayState.instance.subState, PauseSubState))
+		{
+			this.updateStatus("Paused - ");
+			return;
+		}
+
+		if (Std.isOfType(PlayState.instance.subState, GameOverSubState))
+		{
+			this.updateStatus("Game Over - ");
+			return;
+		}
+
+		this.updateStatus("");
+	}
+
+	var oldDetails:String = "";
+	function updateStatus(prefix:String)
+	{
+		var details:String = prefix + PlayState.instance.buildDiscordRPCDetails();
+		if (details == oldDetails) return;
+
+		oldDetails = details;
+
+		DiscordClient.setPresence(
+		{
+			details: details,
+			state: "(Dev Build, No Leaks :P)",
+			largeImageKey: PlayState.instance.discordRPCAlbum,
+			smallImageKey: PlayState.instance.discordRPCIcon
+		});
+	}
+}

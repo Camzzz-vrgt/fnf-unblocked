@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-60,
+				-160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "sad mandy idle"
+		},
+		{
+			"offsets": [
+				14,
+				-161
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "sad mandy left"
+		},
+		{
+			"offsets": [
+				-91,
+				-160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "sad mandy right"
+		},
+		{
+			"offsets": [
+				8,
+				-160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "sad mandy down"
+		},
+		{
+			"offsets": [
+				12,
+				-133
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "sad mandy up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sad_mandy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "mandy",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		5,
+		142
+	],
+	"camera_position": [
+		10,
+		190
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

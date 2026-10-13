@@ -1,0 +1,291 @@
+import flixel.group.FlxTypedGroup;
+import flixel.math.FlxMath;
+import flixel.text.FlxText;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTweenManager;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.save.Save;
+import funkin.util.Constants;
+import funkin.util.TouchUtil;
+import funkin.ui.MusicBeatSubState;
+import flixel.addons.display.FlxTiledSprite;
+import flixel.text.FlxTextBorderStyle;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.math.FlxAngle;
+import funkin.util.SerializerUtil;
+
+class SonicJamCreditsSubState extends MusicBeatSubState
+{
+    var TEXT_SPEED:Float = 110;
+    var TEXT_FONT:String = "Arial"; // i deadass couldnt find the font so youll have to settle with this for now
+
+    public var onComplete:Dynamic = null;
+    public var isPerfect:Bool = false;
+
+    var creditsMusic:FunkinSound;
+    var tweenManager:FlxTweenManager = new FlxTweenManager();
+
+    var creditsTitle:String = "Sonic Jam Staff";
+    var creditsTextEntries:Array<Dynamic> = [];
+    var creditsImageEntries:Array<Dynamic> = [];
+
+    var textGroup:FlxTypedGroup;
+    var imageGroup:FlxTypedGroup;
+
+    var bottomSpikes:FlxTiledSprite;
+    var circle1:FlxSprite;
+    var circle2:FlxSprite;
+    var circle3:FlxSprite;
+
+    public function new()
+    {
+        super();
+        this.isPerfect = (isPerfect ?? false);
+
+        // Load the entries from the file.
+        if (Assets.exists(Paths.json("sonicJamCredits")))
+        {
+            var data:Dynamic = null;
+            try
+            {
+                data = SerializerUtil.fromJSON(Assets.getText(Paths.json("sonicJamCredits")));
+            }
+            catch (e:Error)
+            {
+                trace("[SonicJam] Failed to parse the credits data: " + e);
+            }
+
+            this.creditsTitle = data?.texts?.title ?? "Sonic Jam Staff";
+            this.creditsTextEntries = data?.texts.entries ?? [];
+            this.creditsImageEntries = data?.images ?? [];
+        }
+
+        // Sort the image entries by time from earliest to latest.
+        creditsImageEntries.sort((a, b) -> (a.time ?? FlxMath.MAX_VALUE_INT) - (b.time ?? FlxMath.MAX_VALUE_INT));
+    }
+
+    public function create()
+    {
+        super.create();
+
+        // Replace the font if the player rank is perfect.
+        TEXT_FONT = Paths.font("Helvetica Rounded Bold.ttf");
+
+        var bg:FunkinSprite = new FunkinSprite().makeSolidColor(FlxG.width, FlxG.height, (isPerfect ? 0xFFFFFFFF : 0xFF000000));
+        bg.active = false;
+        add(bg);
+
+        var bluewave = new FlxSprite(FlxG.width - 1600, FlxG.height-850).loadGraphic(Paths.image("freeplay/backingCards/sonic/blueWave"));
+        bluewave.scale.x = 0.75;
+        bluewave.scale.y = 0.75;
+        if (isPerfect) add(bluewave);
+
+        circle3 = new FlxSprite(FlxG.width - 550, FlxG.height-400).loadGraphic(Paths.image("freeplay/backingCards/sonic/circle3"));
+        circle3.scale.x = 0.7;
+        circle3.scale.y = 0.7;
+        if (isPerfect) add(circle3);
+
+        circle2 = new FlxSprite(FlxG.width - 450, FlxG.height-400).loadGraphic(Paths.image("freeplay/backingCards/sonic/circle2"));
+        circle2.scale.x = 0.7;
+        circle2.scale.y = 0.7;
+        if (isPerfect) add(circle2);
+
+        circle1 = new FlxSprite(FlxG.width - 650, FlxG.height-600).loadGraphic(Paths.image("freeplay/backingCards/sonic/circle1"));
+        circle1.scale.x = 0.7;
+        circle1.scale.y = 0.7;
+        if (isPerfect) add(circle1);
+
+        FlxTween.tween(circle1.scale, {x: 0.9, y: 0.9}, 2.0, {ease: FlxEase.sineInOut, type: 4});
+        FlxTween.tween(circle2.scale, {x: 0.8, y: 0.8}, 2.0, {ease: FlxEase.sineInOut, type: 4});
+
+        var borders = new FlxSprite(FlxG.width - 1900, FlxG.height-1200).loadGraphic(Paths.image("freeplay/backingCards/sonic/borders"));
+        borders.scale.x = 0.6;
+        borders.scale.y = 0.6;
+        if (isPerfect) add(borders);
+
+        imageGroup = new FlxTypedGroup();
+        add(imageGroup);
+
+        textGroup = new FlxTypedGroup();
+        add(textGroup);
+
+        // Create the credits title text.
+        var title:FlxText = new FlxText(FlxG.width - 1225, FlxG.height, 0, creditsTitle.toUpperCase());
+        title.setFormat(TEXT_FONT, 48, (isPerfect ? 0xFFffda00 : 0xFFFFFFFF), "left");
+        title.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2.5, 1);
+        if (!isPerfect) title.screenCenter(0x01);
+        title.active = false;
+        textGroup.add(title);
+
+        var titleUnderline:FlxSprite = new FlxSprite(title.x, title.y + title.height).makeGraphic(title.fieldWidth, 2, 0xFFFF0000);
+        titleUnderline.active = false;
+        textGroup.add(titleUnderline);
+
+        bottomSpikes = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/spikedown'), FlxG.width, 84, true, false);
+        bottomSpikes.setPosition(FlxG.width - 1280, FlxG.height - 140);
+        if (isPerfect) add(bottomSpikes);
+
+        var blackbar:FunkinSprite = new FunkinSprite().makeSolidColor(FlxG.width, 80, 0xFF000000);
+        blackbar.setPosition(0, FlxG.height - 60);
+        blackbar.active = false;
+        if (isPerfect) add(blackbar);
+
+        var blackbar2:FunkinSprite = new FunkinSprite().makeSolidColor(FlxG.width, 80, 0xFF000000);
+        blackbar2.setPosition(0, FlxG.height - 725);
+        blackbar2.active = false;
+        if (isPerfect) add(blackbar2);
+
+        scrollText = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/scrollingText'), FlxG.width, 100, true, false);
+        scrollText.setPosition(FlxG.width - 1280, FlxG.height - 712.5);
+        if (isPerfect) add(scrollText);
+
+        var whitebar:FunkinSprite = new FunkinSprite().makeSolidColor(FlxG.width, 60, 0xFFFFFFFF);
+        whitebar.setPosition(0, FlxG.height - 650);
+        whitebar.active = false;
+        if (isPerfect) add(whitebar);
+
+        dottedLine = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/dottedline'), FlxG.width, 84, true, false);
+        dottedLine.setPosition(FlxG.width - 1280, FlxG.height - 625);
+        if (isPerfect) add(dottedLine);
+
+        var deadzone = new FlxSprite(FlxG.width - 1600, FlxG.height).loadGraphic(Paths.image("creditsImages/nextup"));
+        deadzone.scale.x = 1;
+        deadzone.scale.y = 1;
+        add(deadzone);
+
+        new FlxTimer().start(104, timer -> {
+            FlxTween.tween(deadzone, {y: FlxG.height - 1050}, 4.0);
+        });
+
+        // Create the rest of the texts.
+        for (i in 0...creditsTextEntries.length)
+        {
+            var data:Dynamic = creditsTextEntries[i];
+            var vertPos:Float = title.y + 850;
+
+            // If the last added text is not the title text, offset the vertical position.
+            if (i > 0)
+            {
+                var lastTxt:FlxText = textGroup.members[textGroup.members.length - 1];
+                vertPos = lastTxt.y + lastTxt.height + 50;
+            }
+
+            var head:FlxText = new FlxText(FlxG.width * 0.05, vertPos, 0, data.head ?? "No role :[");
+            head.setFormat(TEXT_FONT, 36, (isPerfect ? 0xFF000000 : 0xFFFFFFFF), "left");
+            head.active = false;
+            textGroup.add(head);
+
+            var headUnderline:FlxSprite = new FlxSprite(head.x, head.y + head.height).makeGraphic(head.width, 2, 0xFFFF0000);
+            headUnderline.active = false;
+            textGroup.add(headUnderline);
+
+            var body:FlxText = new FlxText(0, vertPos + 50, FlxG.width * 0.9, data.body ?? "No person :[");
+            body.setFormat(TEXT_FONT, 24, (isPerfect ? 0xFF000000 : 0xFFFFFFFF), "left");
+            body.x = (FlxG.width - body.width) / 2;
+            body.active = false;
+            textGroup.add(body);
+        }
+
+        // Create and play the credits music.
+    	FlxG.sound.cache(Paths.music('sonicJamCredits/sonicJamCredits'));
+    	creditsMusic = FunkinSound.playOnce(Paths.music('sonicJamCredits/sonicJamCredits'), 1);
+        if (onComplete != null) creditsMusic.onComplete = onComplete;
+    }
+
+    public function update(elapsed)
+    {
+        super.update(elapsed);
+        tweenManager.update(elapsed);
+
+        if (isPerfect)
+        {
+            bottomSpikes.scrollX += 110 * elapsed;
+            dottedLine.scrollX -= 150 * elapsed;
+            scrollText.scrollX += 25 * elapsed;
+            circle1.angle += 35 * elapsed;
+            circle2.angle -= 45 * elapsed;
+            circle3.angle += 55 * elapsed;
+        }
+
+        // If pressed enter or tapped on the screen on mobile, make the music and texts go by faster.
+        var speedMult:Float = 1;
+
+        if (hasBeatenSonicWeek())
+        {
+            if (FlxG.keys.pressed.ENTER) speedMult = 3;
+            if (FlxG.onMobile && TouchUtil.pressed) speedMult = 3;
+        }
+
+        creditsMusic.pitch = speedMult;
+
+        // Velocity is somewhat broken so we have to do it like this, which is kinda annoying.
+        textGroup.forEach(function(txt:FlxText)
+        {
+            txt.y -= elapsed * TEXT_SPEED * speedMult;
+
+            // Kill/revive the text depending on if the text is on screen or not.
+            if (txt.isOnScreen())
+            {
+                txt.revive();
+            }
+            else
+            {
+                txt.kill();
+            }
+        });
+
+        // If the first image time is lower than the current song position, tween in the image.
+        if (creditsImageEntries.length > 0 && (creditsImageEntries[0].time ?? FlxMath.MAX_VALUE_INT) < creditsMusic.time)
+        {
+            var data:Dynamic = creditsImageEntries.shift();
+            var image:FlxSprite = imageGroup.recycle(FlxSprite, () -> new FlxSprite());
+
+            // Set the image data from the json data.
+            image.loadGraphic(Paths.image(data.path ?? ""));
+            image.screenCenter();
+            image.x -= (data.offsets ?? [0, 0])[0];
+            image.y -= (data.offsets ?? [0, 0])[1];
+            image.scale.x = (data.scale ?? [1, 1])[0];
+            image.scale.y = (data.scale ?? [1, 1])[1];
+            image.active = false;
+            image.antialiasing = true;
+
+            // Tween in the image in and, after some time, out.
+            image.alpha = 0;
+            tweenManager.tween(image, {alpha: 1}, (data.tween ?? 1) / speedMult,
+            {
+                onComplete: _ -> {
+                    tweenManager.tween(image, {alpha: 0}, (data.tween ?? 1) / speedMult,
+                    {
+                        startDelay: (data.duration ?? 1.0) / speedMult,
+                        onComplete: _ -> image.kill()
+                    });
+                }
+            });
+        }
+    }
+
+    public function destroy()
+    {
+        // Stop any image tweens.
+        tweenManager.clear();
+
+        super.destroy();
+    }
+
+    public function hasBeatenSonicWeek():Bool
+    {
+        // Save.instance.hasBeatenWeek will always return true for now.
+        for (diff in Constants.DEFAULT_DIFFICULTY_LIST)
+        {
+            if ((Save.instance.getLevelScore('sonicWeek', diff)?.score ?? 0) > 0) return true;
+        }
+
+        return false;
+    }
+}

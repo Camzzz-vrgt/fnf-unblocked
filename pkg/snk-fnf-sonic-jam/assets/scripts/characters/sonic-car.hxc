@@ -1,0 +1,98 @@
+import flixel.FlxG;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+import funkin.util.TouchUtil;
+
+class SonicCarCharacter extends MultiSparrowCharacter 
+{
+	var MAX_IDLE_REPEATS:Int = 9;
+	var idles:Int = 0;
+
+	var oldIconChanged:Bool = false;
+
+	function new() 
+	{
+		super('sonic-car');
+	}
+
+	function onCreate(event:ScriptEvent) 
+	{
+		super.onCreate(event);
+
+		GameOverSubState.musicSuffix = '-sonic';
+		GameOverSubState.blueBallSuffix = '-sonic';
+
+		PauseSubState.musicSuffix = '-sonic';
+
+		// Reset the idle count.
+		idles = 0;
+	}
+
+	override public function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+	{
+		// Make sonic bored after 3 idle plays.
+		if (name == "idle" && !ignoreOther && this.getCurrentAnimation() != "waiting") 
+		{
+			idles++;
+
+			if (idles % MAX_IDLE_REPEATS == 0)
+			{
+				idles = 0;
+				super.playAnimation("waiting");
+				return;
+			} 
+		}
+		else 
+		{
+			// Reset the idle count if not idling.
+			idles = 0;
+		}
+
+		super.playAnimation(name, restart, ignoreOther, reversed);
+	}
+
+	public function onSongRetry(event:SongRetryEvent)
+	{
+		super.onSongRetry(event);
+
+		// Restart the idle count. 
+		idles = 0;
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		// Replace the old icon if pressed 9.
+		var state:PlayState = PlayState.instance;
+		if (state == null) return;
+
+		var mobileTap:Bool = (FlxG.onMobile && TouchUtil.justPressed && TouchUtil.overlapsComplex(state.iconP1));
+		if ((FlxG.keys.justPressed.NINE || mobileTap) && state.iconP1 != null) 
+		{
+			FlxG.signals.postUpdate.addOnce(changeOldIcon);
+		}
+	}
+
+	function changeOldIcon()
+	{
+		var state:PlayState = PlayState.instance;
+		if (state == null) return;
+
+		// If the current icon is bf-old, replace it with the needlemouse icon.
+		if (state.iconP1?.characterId == "bf-old")
+		{
+			if (!oldIconChanged)
+			{
+				oldIconChanged = true;
+				state.iconP1.loadCharacter("needlemouse");
+			}
+		}
+		else
+		{
+			oldIconChanged = false;
+		}
+	}
+}

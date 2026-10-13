@@ -1,0 +1,185 @@
+import flixel.FlxG;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import StringTools;
+
+
+class SonicCharacter extends MultiSparrowCharacter
+{
+	var MAX_IDLE_REPEATS:Int = 9;
+	var BADNIK_HEIGHT:Float = 250;
+	var MAX_VELOCITY:Float = -650;
+
+	var idles:Int = 0;
+
+	var timingsSonicJump:Array<Float> = [];
+	var preJumpY:Null<Float> = null;
+
+	function new()
+	{
+		super('sonic');
+		this.ignoreExclusionPref = []; // Set this to an empty array so that singing doesn't override kicking and stuff.
+	}
+
+	override function set_y(value:Float):Float
+	{
+		// While jumping, don't offset Sonic's camera point.
+		var preChange:Float = this.cameraFocusPoint.y;
+
+		super.set_y(value);
+
+		if ((this?.acceleration?.y ?? 0) != 0)
+		{
+			var yDiff:Float = preChange - this.cameraFocusPoint.y;
+			this.cameraFocusPoint.y += yDiff;
+		}
+
+		return this.y;
+	}
+
+	public function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+
+		// Reset some variables.
+		idles = 0;
+	}
+
+	public function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (event.eventCanceled)
+        {
+            // onNoteHit event was cancelled by the gameplay module.
+            return;
+        }
+
+		// If the note is for Eggman, don't let Sonic play his singing animations.
+		if (event.note.kind == "eggmanSing" && PlayState.instance?.currentStage?.getGirlfriend()?.characterId == "eggman")
+		{
+			return;
+		}
+
+		super.onNoteHit(event);
+	}
+
+	override public function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+	{
+		// Make sonic bored after 3 idle plays.
+		if (name == "idle" && this.getCurrentAnimation() == "idle")
+		{
+			idles++;
+
+			if (idles % MAX_IDLE_REPEATS == 0)
+			{
+				idles = 0;
+				super.playAnimation("waiting");
+				return;
+			}
+		}
+		else
+		{
+			// Reset the idle count if not idling.
+			idles = 0;
+		}
+
+		super.playAnimation(name, restart, ignoreOther, reversed);
+
+		// If the jump animation should play, make Sonic actually jump.
+		if (name == "jump")
+		{
+			this.acceleration.y = 1225;
+
+			// The calculation used for velocity will be taked from s = 1/2 * a * t^2 + v * t.
+			// Time here is the difference between the current song position and time for the next jump.
+			if (timingsSonicJump.length > 0)
+			{
+				var timeDiff:Float = timingsSonicJump[0] - Conductor.instance.songPosition;
+
+				if (timeDiff >= Conductor.instance.beatLengthMs * 2)
+				{
+					// If the time till the next jump time is over 2 beats, set the velocity to the maximum.
+					this.velocity.y = MAX_VELOCITY;
+				}
+				else
+				{
+					var inMidAir:Bool = (preJumpY != null);
+					this.velocity.y = ((inMidAir ? 0 : -BADNIK_HEIGHT) - 0.5 * this.acceleration.y * Math.pow(timeDiff / 1000, 2)) / (timeDiff / 1000);
+				}
+			}
+			else
+			{
+				this.velocity.y = MAX_VELOCITY;
+			}
+
+			// Store the y to reset to later.
+			if (preJumpY == null) preJumpY = this.y;
+		}
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		// If the current song position has passed a Sonic jumping time, make Sonic jump.
+		if (timingsSonicJump.length > 0 && timingsSonicJump[0] <= Conductor.instance.songPosition)
+		{
+			timingsSonicJump.shift();
+			this.playAnimation("jump", true, true);
+		}
+
+		// If there is a stored y value and Sonic is below it, reset Sonic to the original value.
+		if (preJumpY != null && this.y > preJumpY)
+		{
+			this.acceleration.y = 0;
+			this.velocity.y = 0;
+
+			this.canPlayOtherAnims = true;
+			this.dance(true);
+			this.y = this.originalPosition.y;
+
+			preJumpY = null;
+		}
+	}
+
+	public function onSongLoaded(event:SongLoadScriptEvent)
+	{
+		super.onSongLoaded(event);
+
+		// Load times for Sonic jumping from the chart's Eggman Sign notes if they have the "Spawn Badnik?" param set to 1.
+		timingsSonicJump = [];
+
+		for (note in event.notes)
+        {
+            if (note.time < PlayState.instance.startTimestamp) continue; // Exclude notes before song starts.
+
+            switch (note.kind)
+            {
+                case "eggmanSing":
+                    // For eggman sing notes, spawn a badnik if the spawn badnik param is set to 1.
+                    if (note.params[1]?.value == 1) timingsSonicJump.push(note.time);
+            }
+        }
+	}
+
+	public function onSongRetry(event:SongRetryEvent)
+	{
+		super.onSongRetry();
+
+		// Restart the idle count.
+		idles = 0;
+	
+		// Ground Sonic if in a middle of a jump.
+		if (preJumpY != null)
+		{
+			this.acceleration.y = 0;
+			this.velocity.y = 0;
+
+			this.canPlayOtherAnims = true;
+			this.dance(true);
+			this.y = this.originalPosition.y;
+
+			preJumpY = null;
+		}
+	}
+}

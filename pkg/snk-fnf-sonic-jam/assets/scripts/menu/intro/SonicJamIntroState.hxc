@@ -1,0 +1,129 @@
+
+
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.text.FlxText;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.MusicBeatState;
+import funkin.util.logging.Perf;
+import funkin.Preferences;
+import funkin.graphics.video.FlxVideo;
+
+class SonicJamIntroState extends MusicBeatState
+{
+	// How much time needs to pass between two taps on mobile for the intro to be skipped.
+	var TAP_TIMER_TIME:Float = 0.5;
+
+	var tapTimer:Perf = null;
+	var introSound:FunkinSound;
+	var prevPause:Bool = false;
+	var videoPlaying:Bool = false;
+	var sageintro:FlxVideo = null;
+
+    override public function create()
+    {
+        super.create();
+
+		prevPause = Preferences.autoPause;
+		Preferences.autoPause = false;
+
+		// For phone positioning
+		var widthOffset:Float = FlxG.width - FlxG.initialWidth;
+		var heightOffset:Float = FlxG.height - FlxG.initialHeight;
+
+		var jamTxt:FlxText = new FlxText(-200 + widthOffset / 2, 500 + heightOffset / 2, FlxG.width - widthOffset, "HTTPS://SONICRETRO.ORG", 64);
+        jamTxt.setFormat(Paths.font("vcr.ttf"), 30, 0xFFFFFFFF, "center");
+
+		var logo:FlxSprite;
+		logo = new FlxSprite(30 + widthOffset / 2, 120 + heightOffset / 2).loadGraphic(Paths.image("sonicRetro/sonicretrologo"));
+
+		var sonic:FlxSprite = new FlxSprite(800 + widthOffset / 2, 100 + heightOffset / 2);
+		sonic.frames = Paths.getSparrowAtlas("sonicRetro/sonisreros");
+		sonic.animation.addByPrefix("idle", "sonicsong", 12, true);
+		sonic.animation.play("idle");
+
+		add(jamTxt);
+		add(logo);
+		add(sonic);
+
+    	FlxG.sound.cache(Paths.music('sonicRetroIntro/sonicRetroIntro'));
+    	introSound = FunkinSound.playOnce(Paths.music('sonicRetroIntro/sonicRetroIntro'), 1);
+
+        FlxTimer.wait(12.7, function()
+        {
+			remove(sonic);
+			remove(logo);
+			remove(jamTxt);
+        });
+
+        FlxTimer.wait(15, function()
+        {
+        	playVideo();
+        });
+	}
+
+	function playVideo()
+	{
+		videoPlaying = true;
+		// Strip the library prefix from the path - FlxVideo needs raw path for NetStream
+		var videoPath:String = Paths.stripLibrary(Paths.videos('iscreamintro'));
+		sageintro = new FlxVideo(videoPath);
+		sageintro.finishCallback = function()
+		{
+			videoPlaying = false;
+			skipIntro();
+		};
+		add(sageintro);
+	}
+
+	override public function update(elapsed:Float)
+	{
+		super.update(elapsed);
+
+		if (FlxG.onMobile && FlxG.touches.getFirst()?.justReleased) // justPressed touches are a little wack
+		{
+			if ((tapTimer?.duration() ?? 0) <= TAP_TIMER_TIME)
+			{
+				// Skip the intro if the two screen taps are within TAP_TIMER_TIME.
+				skipIntro();
+			}
+			else
+			{
+				// Otherwise, start over.
+				tapTimer = new Perf();
+			}
+		}
+
+		// Skip the intro if the user has pressed their ACCEPT keybind.
+		if (this.controls.ACCEPT_P)
+		{
+			skipIntro();
+		}
+	}
+
+	function skipIntro()
+	{
+		if (introSound != null)
+		{
+			introSound.stop();
+			introSound.destroy();
+			introSound = null;
+		}
+
+		if (sageintro != null)
+		{
+			sageintro.destroy();
+			sageintro = null;
+		}
+
+    	FlxTimer.globalManager.clear();
+
+		Preferences.autoPause = prevPause;
+		FlxTransitionableState.skipNextTransIn = true;
+        FlxTransitionableState.skipNextTransOut = true;
+		FlxG.switchState(() -> new MainMenuState());
+	}
+}

@@ -1,0 +1,139 @@
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.modding.module.Module;
+import funkin.save.Save;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.Constants;
+import funkin.FunkinMemory;
+
+using StringTools;
+
+class WhitespaceSongPreviews extends Module
+{
+    var songTimer:FlxTimer = new FlxTimer();
+    var songsWithPreviews:Array<String> = [];
+
+    public function new()
+    {
+        super("WhitespaceSongPreviews", 1000, {
+            state: FreeplayState
+        });
+
+        // List the songs that have the whitespace previews here.
+        for (music in Assets.list("SOUND"))
+        {
+            if (!music.startsWith("assets/music/freeplayPreviews/")) continue;
+        
+            var noDirectory:String = music.replace("assets/music/freeplayPreviews/", "");
+            var splitter:Array<String> = noDirectory.split("/");
+
+            if (!splitter[1].startsWith("preview")) continue;
+
+            if (!songsWithPreviews.contains(splitter[0])) songsWithPreviews.push(splitter[0]);
+        }
+    }
+
+    public function onSubStateOpenEnd(event:SubStateScriptEvent)
+    {
+        super.onSubStateOpenEnd(event);
+
+        // Precache the whitespace previews.
+        for (preview in songsWithPreviews)
+        {
+            var hasIntro:Bool = Assets.exists(Paths.music("freeplayPreviews/" + preview + "/preview-intro"));
+            if (hasIntro) FunkinMemory.cacheSound(Paths.music("freeplayPreviews/" + preview + "/preview-intro"));
+
+            FunkinMemory.cacheSound(Paths.music("freeplayPreviews/" + preview + "/preview"));
+        }
+    }
+
+    public function onSubStateCloseStart(event:SubStateScriptEvent)
+    {
+        super.onSubStateCloseStart(event);
+
+        // Destroy the intro if it's playing.
+        if (intro != null)
+        {
+            intro.destroy();
+            intro = null;
+        }
+
+        // Also cancel the timer to prevent any unintended behavior.
+        songTimer.cancel();
+    }
+
+    public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+        
+        var state:FreeplayState = FlxG.state.subState;
+
+        // Don't replace the music if it's playing. Partial previews don't have any label. so we use it to check if a whitespace preview is already playing.
+        if (!(FlxG.sound.music?.playing ?? false) || (FlxG.sound.music?._label != "unknown")) return;
+
+        var songId:String = state.currentCapsule?.freeplayData?.data?.id ?? "";
+        var songFormat:String = songId + "-" + state.currentVariation;
+
+        // Exclude songs that aren't full-combod (no P or gold P rank).
+        if (!isSongFullCombod(songId, state.currentVariation)) return;
+
+        // Exclude songs that don't have a whitespace preview.
+        if (!songsWithPreviews.contains(songFormat)) 
+        {
+            songTimer.cancel();
+            return;
+        }
+
+        state.clearPreviews(); // Immidiately clear the preview timers so that we don't loop infinitely.
+        FlxG.sound.music.stop();
+
+        songTimer.start(FreeplayState.FADE_IN_DELAY, (_) -> playPreview());
+    }
+
+    var intro:Null<FunkinSound> = null;
+
+    function playPreview()
+    {
+        // If there is already an intro sound playing, destroy it.
+        if (intro != null)
+        {
+            intro.destroy();
+            intro = null;
+        }
+
+        var state:FreeplayState = FlxG.state.subState;
+        var songId:String = state.currentCapsule?.freeplayData?.data?.id ?? "";
+        var songFormat:String = songId + "-" + state.currentVariation;
+
+        var hasIntro:Bool = Assets.exists(Paths.music("freeplayPreviews/" + songFormat + "/preview-intro"));
+        if (hasIntro)
+        {
+            intro = FunkinSound.load(Paths.music("freeplayPreviews/" + songFormat + "/preview-intro"), 0.7, false, true, true, false, function()
+            {
+                this.intro = null;
+
+                var music:FunkinSound = FunkinSound.load(Paths.music("freeplayPreviews/" + songFormat + "/preview"), 0.7, true, true, true, false);
+                FunkinSound.setMusic(music);
+            });
+
+            FunkinSound.setMusic(intro);
+        }
+        else
+        {
+            var music:FunkinSound = FunkinSound.load(Paths.music("freeplayPreviews/" + songFormat + "/preview"), 0.7, true, true, true, false);
+            FunkinSound.setMusic(music);
+        }
+    }
+
+    function isSongFullCombod(songId:String, variation:String)
+    {
+        for (diff in Constants.DEFAULT_DIFFICULTY_LIST_FULL)
+        {
+            var rank:String = (Save.instance.getSongRank(songId, diff, variation) ?? "");
+            if (rank.indexOf("PERFECT") != -1) return true;
+        }
+
+        return false;
+    }
+}

@@ -1,0 +1,90 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				450,
+				540
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "uzi idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				454,
+				537
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "uzi shoot",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				573,
+				530
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "uzi left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				420,
+				576
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "uzi down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				442,
+				544
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "uzi up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				347,
+				507
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "uzi rught",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/UZI3",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "uzi",
+	"flip_x": false,
+	"healthbar_colors": [
+		189,
+		176,
+		209
+	],
+	"camera_position": [
+		-270,
+		-560
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

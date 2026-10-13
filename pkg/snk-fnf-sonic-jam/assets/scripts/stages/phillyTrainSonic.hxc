@@ -1,0 +1,223 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTweenManager;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+import funkin.FunkinMemory;
+
+using StringTools;
+
+class PhillyTrainSonicStage extends Stage
+{
+  // How many beats it takes for a new screen to tween in.
+  var SCREEN_SWITCH_BEATS:Int = 20;
+
+  // Helper function to extract filename from path (replaces haxe.io.Path)
+  function extractFileName(path:String):String {
+    var lastSlash = path.lastIndexOf("/");
+    if (lastSlash == -1) lastSlash = path.lastIndexOf("\\");
+    var name = (lastSlash == -1) ? path : path.substr(lastSlash + 1);
+    var lastDot = name.lastIndexOf(".");
+    return (lastDot == -1) ? name : name.substr(0, lastDot);
+  }
+
+  var possibleScreens:Array<String> = ["screens1", "screens2", "screens3"];
+  var tweeningScreen:FunkinSprite;
+
+  var screenManager:FlxTweenManager = new FlxTweenManager();
+  var screenBeatCount:Int = 0;
+
+  var trainSound:FunkinSound;
+  var trainEnabled:Bool = true;
+
+  function new()
+  {
+    super('phillyTrainSonic');
+
+    // Get all possible screens that can appear in the back.
+    // for (img in Assets.list("IMAGE"))
+    // {
+    //   if (!img.startsWith("assets/week3/images/sonic/screens/")) continue;
+
+    //   possibleScreens.push(extractFileName(img));
+    // }
+  }
+
+
+  function buildStage()
+  {
+    super.buildStage();
+    trainEnabled = true;
+
+    // NOTE: You pass the constructor variables directly, not as an array.
+    trainSound = FunkinSound.load(Paths.sound('train_passes'), 1.0, false, false, false);
+    PlayState.instance.add(trainSound); // Sounds need to be added to the scene for update() to work
+
+    // Precache all screens.
+    for (img in possibleScreens) FunkinMemory.cacheTexture(Paths.image("sonic/screens/" + img));
+
+    // Create and add the tweening screen sprite.
+    var baseScreen:StageProp = getNamedProp("screens");
+    tweeningScreen = new FunkinSprite(baseScreen.x, baseScreen.y + 350);
+    tweeningScreen.loadGraphicFromSprite(baseScreen);
+    tweeningScreen.zIndex = baseScreen.zIndex + 1;
+    tweeningScreen.scale.set(baseScreen.scale.x, baseScreen.scale.y);
+    tweeningScreen.updateHitbox();
+    tweeningScreen.active = false;
+    this.add(tweeningScreen);
+
+    this.refresh();
+  }
+
+  function fetchAssetPaths():Array<String>
+  {
+    var results:Array<String> = super.fetchAssetPaths();
+    results.push(Paths.sound('train_passes'));
+    return results;
+  }
+
+  var trainMoving:Bool = false;
+  var trainFrameTiming:Float = 0;
+  var trainCars:Int = 8;
+  var trainFinishing:Bool = false;
+  var trainCooldown:Int = 0;
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    screenManager?.update(event?.elapsed ?? 0);
+
+    // Update train
+    if (trainEnabled && trainMoving)
+    {
+      trainFrameTiming += event.elapsed;
+
+      if (trainFrameTiming >= 1 / 24)
+      {
+        updateTrainPos();
+        trainFrameTiming = 0;
+      }
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    if (trainEnabled)
+    {
+      // Update train cooldown
+      if (!trainMoving) trainCooldown += 1;
+
+      // Start train
+      if (event.beat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
+      {
+        trainCooldown = FlxG.random.int(-4, 0);
+        trainStart();
+      }
+    }
+
+    // Update the clock of the tweening screen. If it's at the required number of beats, tween the screen.
+    screenBeatCount++;
+
+    if (screenBeatCount % SCREEN_SWITCH_BEATS == 0)
+    {
+      screenBeatCount = 0;
+
+      var baseScreen:StageProp = getNamedProp("screens");
+      baseScreen.loadGraphicFromSprite(tweeningScreen);
+
+      var randomScreen:String = possibleScreens[FlxG.random.int(0, possibleScreens.length - 1)];
+      var currentScreen:String = extractFileName(tweeningScreen.graphic.assetsKey);
+      while (randomScreen == currentScreen)
+      {
+        randomScreen = possibleScreens[FlxG.random.int(0, possibleScreens.length - 1)];
+      }
+
+      tweeningScreen.loadGraphic(Paths.image("sonic/screens/" + randomScreen));
+      tweeningScreen.scale.set(baseScreen.scale.x, baseScreen.scale.y);
+      tweeningScreen.updateHitbox();
+
+      tweeningScreen.y = baseScreen.y + 350;
+      screenManager.tween(tweeningScreen, {y: baseScreen.y}, 2, {ease: FlxEase.quartOut});
+      trace('Screen List = ' + possibleScreens);
+      trace('SCREEEEEEEEEEN = ' + randomScreen);
+    }
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    if (trainEnabled && trainSound?.time >= 4700 && trainMoving)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.75, 0);
+    }
+  }
+
+  public function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    trainMoving = false;
+    trainEnabled = false;
+    if (trainSound != null)
+    {
+      trainSound.stop();
+      trainSound = null;
+    }
+
+    super.onSongEnd(event);
+  }
+
+  function trainStart():Void
+  {
+    trainMoving = true;
+    trainSound.play(true);
+  }
+
+  var startedMoving:Bool = false;
+
+  function updateTrainPos():Void
+  {
+    if (trainSound.time >= 4700)
+    {
+      startedMoving = true;
+      getGirlfriend().playAnimation('hairBlow');
+    }
+
+    if (startedMoving)
+    {
+      var train:FlxSprite = getNamedProp('train');
+      train.x -= 400;
+
+      if (train.x < -2000 && !trainFinishing)
+      {
+        train.x = -1150;
+        trainCars -= 1;
+
+        if (trainCars <= 0) trainFinishing = true;
+      }
+
+      if (train.x < -4000 && trainFinishing) trainReset();
+    }
+  }
+
+  function trainReset():Void
+  {
+    getGirlfriend().playAnimation('hairFall');
+    getNamedProp('train').x = 2000;
+
+    trainMoving = false;
+    trainCars = 8;
+    trainFinishing = false;
+    startedMoving = false;
+  }
+
+  /**
+   * Make sure the train is reset when the song restarts.
+   */
+  public function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    trainReset();
+  }
+}

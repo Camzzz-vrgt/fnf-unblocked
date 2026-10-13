@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "cagaster",
+			"fps": 24,
+			"name": "Cagaste",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Blitzo Bullshit",
+	"position": [
+		-160,
+		-220
+	],
+	"healthicon": "blizto",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		39,
+		72
+	],
+	"camera_position": [
+		160,
+		70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

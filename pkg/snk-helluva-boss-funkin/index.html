@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>Friday Night Funkin': Psych Engine</title>
+	
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://www.snokido.com/game/helluva-boss-funkin" />
+	
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+	<script type="text/javascript" src="./PsychEngine.js"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+		window.addEventListener("keydown", function(e) {if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {e.preventDefault(); }}, false);
+	</script>
+	
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: 'AmazDooMLeft';
+			src: url('assets/fonts/AmazDooMLeft.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/AmazDooMLeft.woff') format('woff'),
+			url('assets/fonts/AmazDooMLeft.ttf') format('truetype'),
+			url('assets/fonts/AmazDooMLeft.svg#AmazDooMLeft') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'AmazDooMRight';
+			src: url('assets/fonts/AmazDooMRight.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/AmazDooMRight.woff') format('woff'),
+			url('assets/fonts/AmazDooMRight.ttf') format('truetype'),
+			url('assets/fonts/AmazDooMRight.svg#AmazDooMRight') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'In your face, Joffrey! ';
+			src: url('assets/fonts/amongus.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/amongus.woff') format('woff'),
+			url('assets/fonts/amongus.ttf') format('truetype'),
+			url('assets/fonts/amongus.svg#In%20your%20face%2C%20Joffrey%21%20') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'PhantomMuff 1.5';
+			src: url('assets/fonts/fnf.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/fnf.woff') format('woff'),
+			url('assets/fonts/fnf.ttf') format('truetype'),
+			url('assets/fonts/fnf.svg#PhantomMuff%201.5') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'PhantomMuff 1.5';
+			src: url('assets/fonts/PhantomMuff.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/PhantomMuff.woff') format('woff'),
+			url('assets/fonts/PhantomMuff.ttf') format('truetype'),
+			url('assets/fonts/PhantomMuff.svg#PhantomMuff%201.5') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pixel Arial 11 Bold';
+			src: url('assets/fonts/pixel.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/pixel.woff') format('woff'),
+			url('assets/fonts/pixel.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'PhantomMuff 1.5';
+			src: url('assets/fonts/vcr.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr.woff') format('woff'),
+			url('assets/fonts/vcr.ttf') format('truetype'),
+			url('assets/fonts/vcr.svg#PhantomMuff%201.5') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('flixel/fonts/nokiafc22.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/nokiafc22.woff') format('woff'),
+			url('flixel/fonts/nokiafc22.ttf') format('truetype'),
+			url('flixel/fonts/nokiafc22.svg#Nokia%20Cellphone%20FC%20Small') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('flixel/fonts/monsterrat.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/monsterrat.woff') format('woff'),
+			url('flixel/fonts/monsterrat.ttf') format('truetype'),
+			url('flixel/fonts/monsterrat.svg#Monsterrat') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+	</style>
+	
+</head>
+<body>
+	
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
+	<div id="openfl-content"></div>
+	
+	<script type="text/javascript">
+		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+	<script>joinUrl = "helluva-boss-funkin";</script>
+	 
+	
+
+</body>
+</html>

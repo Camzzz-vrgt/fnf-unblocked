@@ -1,0 +1,55 @@
+{
+  "version": "1.0.2",
+  "name": "Philly (Streets) [Sonic]",
+  "props": [
+    {
+      "assetPath": "phillyStreets/sonic/sky",
+      "name": "sky",
+      "position": [639.5, 359.5],
+      "scroll": [1.05, 0.95],
+      "zIndex": 0
+    },
+    {
+      "assetPath": "phillyStreets/sonic/sideCar",
+      "name": "sideCar",
+      "position": [589.5, 374.5],
+      "zIndex": 1
+    },
+    {
+      "assetPath": "phillyStreets/sonic/cityBridge",
+      "name": "cityBridge",
+      "position": [1404.5, 359.5],
+      "scroll": [1.12, 0.92],
+      "zIndex": 2
+    },
+    {
+      "assetPath": "phillyStreets/sonic/alley",
+      "name": "alley",
+      "position": [584.5, 359.5],
+      "scale": [1.05, 1],
+      "zIndex": 3
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-200, -100],
+      "position": [2283.2, 1463],
+      "scale": 0.8,
+      "zIndex": 300
+    },
+    "dad": {
+      "cameraOffsets": [250, -100],
+      "position": [1627.2, 1557],
+      "scale": 0.8,
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [1897.9, 1341.6],
+      "scale": 0.65,
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.75,
+  "directory": "weekend1"
+}

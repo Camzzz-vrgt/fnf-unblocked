@@ -1,0 +1,50 @@
+{
+  "version": "2.2.4",
+  "songName": "Azure Skies",
+  "artist": "DingusCola",
+  "charter": "Mr. DJ",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-beach",
+      "girlfriend": "gf-beach",
+      "opponent": "sonic",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["sonic"],
+      "playerVocals": ["bf"]
+    },
+    "stage": "emeraldCoast",
+    "noteStyle": "funkin",
+    "stickerPack": "bonus-sonicweek",
+    "ratings": {
+      "easy": 3,
+      "normal": 4,
+      "hard": 5
+    },
+    "album": "sonicweek",
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 170,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "billy idle"
+		},
+		{
+			"offsets": [
+				70,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "billy left"
+		},
+		{
+			"offsets": [
+				-20,
+				-130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "billy down"
+		},
+		{
+			"offsets": [
+				20,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "billy up"
+		},
+		{
+			"offsets": [
+				49,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "billy right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/billy",
+	"position": [
+		80,
+		170
+	],
+	"healthicon": "billy",
+	"flip_x": false,
+	"healthbar_colors": [
+		106,
+		103,
+		118
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

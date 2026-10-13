@@ -1,0 +1,306 @@
+
+import flixel.addons.display.FlxTiledSprite;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.ui.freeplay.backcards.BackingCard;
+import funkin.ui.freeplay.FreeplayState;
+
+class SonicCard extends BackingCard
+{
+    var blueBack:FlxSprite;
+    var bg:FlxSprite;
+
+    var yellowStripe:FlxSprite;
+    var textUp:FlxTiledSprite;
+    var redStripe:FlxSprite;
+    var textDown:FlxTiledSprite;
+
+    var ringsArray:Array<FlxSprite> = [];
+    var smallGuysArray:Array<FlxSprite> = [];
+
+    var circle:FlxSprite;
+    var topSpikes:FlxTiledSprite;
+    var bottomSpikes:FlxTiledSprite;
+
+    var confirmBlue:FlxSprite;
+    var confirmBlueGradient:FlxSprite;
+    var confirmYellow:FlxSprite;
+    var jamTitle:FlxSprite;
+    var confirmBlackSpike:FlxTiledSprite;
+    var confirmRed:FlxSprite;
+    var confirmRedSpike:FlxTiledSprite;
+    var confirmGetDown:FlxSprite;
+
+    public function new()
+    {
+        super("sonic");
+
+        var wideOffset:Float = (FlxG.width - FlxG.initialWidth) / 2;
+
+        // Initialize backing card sprites.
+        blueBack = new FlxSprite().loadGraphicFromSprite(this.pinkBack);
+        bg = new FlxSprite(0, 50).loadGraphic(Paths.image("freeplay/backingCards/sonic/bg"));
+
+        yellowStripe = new FlxSprite(bg.x, 325).makeGraphic(bg.width, 50, 0xFFFFD801);
+        textUp = new FlxTiledSprite(Paths.image("freeplay/backingCards/sonic/textUp"), bg.width, 28, true, false);
+        redStripe = new FlxSprite(bg.x, 525).makeGraphic(bg.width, 75, 0xFFFF0101);
+        textDown = new FlxTiledSprite(Paths.image("freeplay/backingCards/sonic/textDown"), bg.width, 53, true, false);
+
+        circle = new FlxSprite(250 + wideOffset, 50).loadGraphic(Paths.image("freeplay/backingCards/sonic/circlestuff"));
+        topSpikes = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/spikeup'), bg.width, 84, true, false);
+        bottomSpikes = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/spikedown'), bg.width, 84, true, false);
+
+        confirmBlue = new FlxSprite(bg.x, bg.y).makeGraphic(bg.width, FlxG.height, 0xFFffffff);
+        confirmBlueGradient = new FlxSprite().loadGraphic(Paths.image("freeplay/backingCards/sonic/bluegradient"));
+        confirmYellow = new FlxSprite().makeGraphic(bg.width, FlxG.height * 0.45, 0xFFF0E100);
+        jamTitle = new FlxSprite().loadGraphic(Paths.image("freeplay/backingCards/sonic/jam"));
+        confirmBlackSpike = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/spikeleft'), 84, FlxG.height, false, true);
+        confirmRed = new FlxSprite().makeGraphic(bg.width * 0.1, FlxG.height, 0xFFFF1600);
+        confirmRedSpike = new FlxTiledSprite(Paths.image('freeplay/backingCards/sonic/spikeleft'), 84, FlxG.height, false, true);
+        confirmGetDown = new FlxSprite().loadGraphic(Paths.image("freeplay/backingCards/sonic/getDown"));
+    }
+
+    public function onCreate(event:ScriptEvent)
+    {
+        FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+
+        // Add the assets and give some of their fields a value.
+        blueBack.color = 0xFF2F90F7;
+        add(blueBack);
+
+        bg.kill();
+        add(bg);
+
+        yellowStripe.kill();
+        add(yellowStripe);
+
+        textUp.setPosition(bg.x, yellowStripe.y + yellowStripe.height / 2 - textUp.height / 2);
+        textUp.kill();
+        add(textUp);
+
+        redStripe.kill();
+        add(redStripe);
+
+        textDown.setPosition(bg.x, redStripe.y + redStripe.height / 2 - textDown.height / 2);
+        textDown.kill();
+        add(textDown);
+
+        circle.kill();
+        add(circle);
+
+        // Create the sonic running sprites.
+        var sonisFrames:FlxAtlasFrames = Paths.getSparrowAtlas("freeplay/backingCards/sonic/smallguys");
+        for (i in 0...sonisFrames.frames.length)
+        {
+            var sonis:FlxSprite = new FlxSprite(bg.x + 120 * i, bg.y + 350);
+            sonis.frames = sonisFrames;
+            sonis.animation.addByPrefix("run", "smallguys runnin", 6, true);
+            sonis.animation.play("run", true, false, i);
+            sonis.velocity.x = -48;
+            sonis.kill();
+            add(sonis);
+            smallGuysArray.push(sonis);
+        }
+
+        // Create the rings spinning sprites.
+        var ringFrames:FlxAtlasFrames = Paths.getSparrowAtlas("freeplay/backingCards/sonic/rings");
+        for (i in 0...ringFrames.frames.length * 4)
+        {
+            var ring:FlxSprite = new FlxSprite(bg.x + 49 * i, 250);
+            ring.frames = ringFrames;
+            ring.animation.addByPrefix("spin", "spin", 6, true);
+            ring.animation.play("spin", true, false, i % ringFrames.frames.length);
+            ring.velocity.x = 24;
+            ring.kill();
+            add(ring);
+            ringsArray.push(ring);
+        }
+
+        topSpikes.setPosition(bg.x, 60);
+        topSpikes.kill();
+        add(topSpikes);
+
+        bottomSpikes.setPosition(bg.x, FlxG.height - bottomSpikes.height + 5);
+        bottomSpikes.kill();
+        add(bottomSpikes);
+
+        confirmBlue.kill();
+        add(confirmBlue);
+
+        confirmBlueGradient.kill();
+        add(confirmBlueGradient);
+
+        confirmYellow.setPosition(bg.x + bg.width, FlxG.height - confirmYellow.height);
+        confirmYellow.kill();
+        add(confirmYellow);
+
+        jamTitle.y = confirmYellow.y + 5;
+        jamTitle.kill();
+        add(jamTitle);
+
+        confirmBlackSpike.y = bg.y + 10;
+        confirmBlackSpike.kill();
+        confirmBlackSpike.color = 0xFF000000;
+        add(confirmBlackSpike);
+
+        confirmRed.setPosition(bg.x - confirmRed.width - confirmRedSpike.width, bg.y);
+        confirmRed.kill();
+        add(confirmRed);
+
+        confirmRedSpike.y = confirmRed.y;
+        confirmRedSpike.color = 0xFFFF1600;
+        confirmRedSpike.kill();
+        add(confirmRedSpike);
+
+        confirmGetDown.setPosition(bg.x + (bg.width - confirmGetDown.width) / 2 - 100, bg.y + 100);
+        confirmGetDown.kill();
+        add(confirmGetDown);
+    }
+
+    public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+
+        // Make the Freeplay's ost text reflect Sonic.
+        instance.ostName.text = "SONIC JAM OST";
+
+        // Update the blue back sprite position to match pinkBack so that I don't have to set any exitMovers.
+        blueBack.setPosition(this.pinkBack.x, this.pinkBack.y);
+
+        // Update the blue gradient sprite to have the same positions as the blue background.
+        confirmBlueGradient.setPosition(confirmBlue.x, confirmBlue.y + confirmBlue.height - confirmBlueGradient.height);
+
+        // Update the Sonic Jam title x position on the confirm screen.
+        jamTitle.x = confirmYellow.x + 300 + (FlxG.width - FlxG.initialWidth) / 2;
+
+        // Update the spike positions on the confirm screen.
+        confirmRedSpike.x = confirmRed.x + confirmRed.width;
+        confirmBlackSpike.x = confirmRed.x + confirmRed.width;
+
+        // Make the small guys loop back.
+        if (smallGuysArray.length > 0 && smallGuysArray[0].x < bg.x - smallGuysArray[0].width)
+        {
+            var sonis:FlxSprite = smallGuysArray.shift();
+            sonis.x = bg.x + 120 * smallGuysArray.length;
+            smallGuysArray.push(sonis);
+        }
+
+        if (ringsArray.length > 1 && ringsArray[ringsArray.length - 1].x >  - bg.x + bg.width)
+        {
+            var ring:FlxSprite = ringsArray.pop();
+            ring.x = ringsArray[0].x - 49;
+            ringsArray.unshift(ring);
+        }
+
+        // Update the text movement.
+        textUp.scrollX += 160 * 1.3 * event.elapsed;
+        textDown.scrollX -= 228 * 1.3 * event.elapsed;
+
+        // Update the circle movements.
+        circle.angle += 35 * event.elapsed;
+
+        // Update the spike movements.
+        topSpikes.scrollX -= 110 * event.elapsed;
+        bottomSpikes.scrollX += 110 * event.elapsed;
+    }
+
+    override public function introDone()
+    {
+        super.introDone();
+
+        // Make some assets visible after the DJ finishes the intro.
+        for (spr in [bg, yellowStripe, textUp, redStripe, textDown, circle, topSpikes, bottomSpikes])
+        {
+            spr.revive();
+        }
+
+        for (guy in smallGuysArray) guy.revive();
+        for (ring in ringsArray) ring.revive();
+    }
+
+    override public function disappear()
+    {
+        super.disappear();
+
+        // Make some assets invisible when exiting.
+        for (spr in [bg, yellowStripe, textUp, redStripe, textDown, circle, topSpikes, bottomSpikes])
+        {
+            spr.kill();
+        }
+
+        for (guy in smallGuysArray) guy.kill();
+        for (ring in ringsArray) ring.kill();
+    }
+
+    override public function confirm()
+    {
+        super.confirm();
+
+        // Make the sprites for the Sonic 2-inspired entry appear and tween in.
+
+        // Flash background
+        confirmBlue.revive();
+        confirmBlueGradient.revive();
+        confirmBlue.y = bg.y;
+        FlxTween.color(confirmBlue, 0.2, 0xFFffffff, 0xFF000000);
+        FlxTween.color(confirmBlueGradient, 1, 0xFF00ffff, 0xFF0000ff);
+
+        //Red spikes
+        new FlxTimer().start(0.1, function(tmr) {
+            confirmBlackSpike.revive();
+            confirmRed.revive();
+            confirmRedSpike.revive();
+            confirmRed.x = bg.x;
+            FlxTween.tween(confirmRed, {x: bg.x - 10}, 0.5, {ease: FlxEase.expoOut});
+        });
+
+        //Yellow box
+        new FlxTimer().start(0.2, function(tmr) {
+            confirmYellow.revive();
+            jamTitle.revive();
+            confirmYellow.x = bg.x - 20;
+            FlxTween.tween(confirmYellow, {x: bg.x}, 0.5, {ease: FlxEase.expoOut});
+        });
+
+        //LETS GET DOWN
+        new FlxTimer().start(0.46, function(tmr) {
+            confirmGetDown.revive();
+            // startDelay: 0.25
+            confirmGetDown.x -= 40;
+            FlxTween.tween(confirmGetDown, {x: confirmGetDown.x + 10}, 0.5, {ease: FlxEase.expoOut});
+        });
+    }
+
+    public function onCapsuleSelected(event:CapsuleScriptEvent)
+    {
+        super.onCapsuleSelected(event);
+
+        // Check if the random capsule was hovered over before replacing the sound.
+        if (event.capsule.freeplayData != null) return;
+
+        // Remove the delay timer for the music and start a fresh new one.
+        FlxTimer.globalManager._timers.pop();
+        FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function()
+        {
+            this.instance.clearPreviews();
+
+            var previewVolume:Float = 0.7;
+            if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
+
+            // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
+            var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-sonic',
+            {
+                startingVolume: 0.0,
+                overrideExisting: true,
+                restartTrack: false
+            });
+
+            if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
+        });
+    }
+}

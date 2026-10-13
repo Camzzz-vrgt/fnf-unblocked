@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "PretenderHPinkIdle0"
+		},
+		{
+			"offsets": [
+				20,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "PretenderHPinkLeft0"
+		},
+		{
+			"offsets": [
+				-37,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "PretenderHPinkDown0"
+		},
+		{
+			"offsets": [
+				-114,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "PretenderHPinkUp0"
+		},
+		{
+			"offsets": [
+				-190,
+				57
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "PretenderHPinkRight0"
+		},
+		{
+			"offsets": [
+				-21,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "MissPretenderHPinkLeft0"
+		},
+		{
+			"offsets": [
+				-92,
+				-55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "MissPretenderHPinkDown0"
+		},
+		{
+			"offsets": [
+				-144,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "MissPretenderHPinkUp0"
+		},
+		{
+			"offsets": [
+				-210,
+				67
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "MissPretenderHPinkRight0"
+		},
+		{
+			"offsets": [
+				310,
+				240
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "PinkDies0"
+		},
+		{
+			"offsets": [
+				-119,
+				109
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "PinkDeadLoop0"
+		},
+		{
+			"offsets": [
+				-120,
+				110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "PinkDeadConfirm0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PretenderHPink",
+	"position": [
+		120,
+		150
+	],
+	"healthicon": "hpink2",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		131,
+		195
+	],
+	"camera_position": [
+		-60,
+		70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

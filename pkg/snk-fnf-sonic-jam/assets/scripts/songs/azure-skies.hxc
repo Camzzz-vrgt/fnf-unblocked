@@ -1,0 +1,525 @@
+import flixel.text.FlxTextBorderStyle;
+import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimerManager;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.data.stage.StageRegistry;
+import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.PlayStatePlaylist;
+import funkin.save.Save;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.Constants;
+import funkin.util.TouchUtil;
+import funkin.Conductor;
+import haxe.ds.StringMap;
+import openfl.filters.ShaderFilter;
+import funkin.FunkinMemory;
+
+using StringTools;
+
+class AzureSkiesSong extends Song
+{
+	var CUTSCENE_DURATION:Float = 26;
+
+	// Helper function to extract directory from path (replaces haxe.io.Path.dir)
+	function extractDir(path:String):String {
+		var lastSlash = path.lastIndexOf("/");
+		if (lastSlash == -1) lastSlash = path.lastIndexOf("\\");
+		return (lastSlash == -1) ? "" : path.substr(0, lastSlash);
+	}
+
+	var CAM_FADE_START_STEP:Int = 1440;
+	var CAM_FADE_END_STEP:Int = 1460;
+
+  	var hasPlayedInGameCutscene:Bool = false;
+	var hasPlayedEndingCutscene:Bool = false;
+
+	var cutsceneSoundPaths:StringMap = new StringMap();
+	var sounds:Array<FunkinSound> = [];
+
+	var bf:FunkinSprite;
+	var gf:FunkinSprite;
+	var sonic:FunkinSprite;
+	var iscream:FlxSprite;
+
+	var cutsceneSkipped:Bool = false;
+	var canSkipCutscene:Bool = false;
+	var skipText:FlxText;
+	var timerManager:FlxTimerManager = new FlxTimerManager();
+
+	var rainShader:RuntimeRainShader = new RuntimeRainShader();
+
+	public function new()
+	{
+		super('azure-skies');
+
+		// Use Paths.sound() to get correct path format for the library
+		cutsceneSoundPaths.set("intro", [
+			Paths.sound("cutscenes/azure-skies/intro/backing music", "sonicjamx"),
+			Paths.sound("cutscenes/azure-skies/intro/gf literally only has two sound effects", "sonicjamx"),
+			Paths.sound("cutscenes/azure-skies/intro/sonic cutscene blurbs bf", "sonicjamx"),
+			Paths.sound("cutscenes/azure-skies/intro/sonic cutscene blurbs sonic", "sonicjamx"),
+			Paths.sound("cutscenes/azure-skies/intro/sonic cutscene sound effects", "sonicjamx")
+		]);
+		cutsceneSoundPaths.set("outro", [
+			Paths.sound("cutscenes/azure-skies/outro/de", "sonicjamx")
+		]);
+	}
+
+	public function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+
+		// if (PlayStatePlaylist.isStoryMode){
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/intro/SONIC INTRO", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/intro/BOYFRIEND INTRO", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/intro/GIRLFRIEND INTRO", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/IScream", "sonicjamx"));
+
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/outro/sonic azure post anims", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/outro/bf azure post anims", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/outro/rainbow", "sonicjamx"));
+		// 		FunkinMemory.cacheTexture(Paths.image("emeraldCoast/DAY/outro/orca", "sonicjamx"));
+		// }
+
+		hasPlayedInGameCutscene = false;
+		hasPlayedEndingCutscene = false;
+		cutsceneSkipped = false;
+		canSkipCutscene = false;
+
+		// Initialize the skip text.
+		var control:String = PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true);
+		skipText = new FlxText(936 * (FlxG.width / FlxG.initialWidth), 618 * (FlxG.height / FlxG.initialHeight), 0, 'Skip [ ' + control + ' ]', 20);
+		if (FlxG.onMobile)
+		{
+			skipText.text = 'Skip [Pause Button]';
+			skipText.x -= 136;
+		}
+
+		skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+		skipText.scrollFactor.set();
+		skipText.borderSize = 2;
+		skipText.alpha = 0;
+		skipText.camera = PlayState.instance.camCutscene;
+		skipText.zIndex = 1000;
+		skipText.active = false;
+		PlayState.instance.add(skipText);
+	}
+
+	public function onCountdownStart(event:CountdownScriptEvent):Void
+	{
+		super.onCountdownStart(event);
+
+		// Skip the cutscene if not in story mode or the cutscene is too short.
+		if (!PlayStatePlaylist.isStoryMode) hasPlayedInGameCutscene = true;
+
+		if (!hasPlayedInGameCutscene)
+		{
+			trace('Pausing countdown to play in game cutscene');
+
+			hasPlayedInGameCutscene = true;
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			PlayState.instance.camHUD.alpha = 0;
+			PlayState.instance.isInCutscene = true;
+			PlayState.instance.disableKeys = true;
+			introCutscene();
+		}
+  	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+		timerManager.update(event?.elapsed ?? 0);
+
+		if ((FlxG.camera.filters?.length ?? 0) > 0 && rainShader.intensity > 0)
+		{
+			rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+			rainShader.update(event?.elapsed ?? 0);
+		}
+
+		if (Conductor.instance.currentStepTime >= CAM_FADE_START_STEP && PlayState.instance.camHUD != null)
+		{
+			var realTime:Float = Conductor.instance.songPosition - Conductor.instance.getStepTimeInMs(CAM_FADE_START_STEP);
+			var realEnd:Float = Conductor.instance.getStepTimeInMs(CAM_FADE_END_STEP) - Conductor.instance.getStepTimeInMs(CAM_FADE_START_STEP);
+
+			PlayState.instance.camHUD.alpha = Math.max(0, 1 - (realTime / realEnd));
+		}
+
+		if (!PlayStatePlaylist.isStoryMode || !hasBeatenSonicWeek()) return; // Don't allow skipping if the cutscene isn't long enough or the week isn't finished.
+
+		var state:PlayState = PlayState.instance;
+
+		// Check if either the cutscene skip or the mobile pause button was pressed.
+		var pausePressed:Bool = state.controls.CUTSCENE_ADVANCE;
+		if (FlxG.onMobile && !pausePressed)
+		{
+			pausePressed = TouchUtil.pressAction(state.pauseButton, null, true);
+		}
+
+		// If the cutscene button is pressed, wait for confirmation.
+		if (pausePressed && !cutsceneSkipped)
+		{
+			// Fade in the cutscene skip text, if possible.
+			if (!canSkipCutscene)
+			{
+				FlxTween.globalManager.cancelTweensOf(skipText);
+				FlxTween.tween(skipText, {alpha: 1}, 0.5, {
+					ease: FlxEase.quadOut,
+					onComplete: _ -> {
+						canSkipCutscene = true;
+					}
+				});
+			}
+			else
+			{
+				// Skip the cutscene.
+				cutsceneSkipped = true;
+				skipCutscene();
+			}
+		}
+	}
+
+	function introCutscene()
+	{
+		var state:PlayState = PlayState.instance;
+		var bfPos:Array<Float> = [state.currentStage.getBoyfriend().x, state.currentStage.getBoyfriend().y];
+		var gfPos:Array<Float> = [state.currentStage.getGirlfriend().x, state.currentStage.getGirlfriend().y];
+		var sonicPos:Array<Float> = [state.currentStage.getDad().x, state.currentStage.getDad().y];
+
+		// Make gameplay sprites invisible.
+		state.currentStage.getDad().kill();
+		state.currentStage.getBoyfriend().kill();
+		state.currentStage.getGirlfriend().kill();
+
+		// Initialize the cutscene sprites.
+		sonic = new FunkinSprite(sonicPos[0] - 495, sonicPos[1] - 65).loadTextureAtlas("emeraldCoast/DAY/intro/SONIC INTRO", "sonicjamx");
+		sonic.zIndex = state.currentStage.getBoyfriend().zIndex + 1;
+		sonic.shader = state.currentStage.getDad().shader;
+		sonic.scale.set(1.45, 1.45);
+		state.currentStage.add(sonic);
+
+		bf = new FunkinSprite(bfPos[0] - 95, bfPos[1] + 25).loadTextureAtlas("emeraldCoast/DAY/intro/BOYFRIEND INTRO", "sonicjamx");
+		bf.zIndex = state.currentStage.getBoyfriend().zIndex;
+		bf.shader = state.currentStage.getBoyfriend().shader;
+		bf.scale.set(1.45, 1.45);
+		state.currentStage.add(bf);
+
+		gf = new FunkinSprite(gfPos[0] + 100, gfPos[1] + 50).loadTextureAtlas("emeraldCoast/DAY/intro/GIRLFRIEND INTRO", "sonicjamx");
+		gf.zIndex = state.currentStage.getGirlfriend().zIndex;
+		gf.shader = state.currentStage.getGirlfriend().shader;
+		gf.scale.set(1.45, 1.45);
+		state.currentStage.add(gf);
+
+		// Create the ice cream sprite and add it in.
+		iscream = new FlxSprite(bfPos[0] - 150, bfPos[1] + 317).loadGraphic(Paths.image("emeraldCoast/DAY/IScream"));
+		iscream.shader = bf.shader;
+		iscream.zIndex = bf.zIndex + 1;
+		iscream.visible = false;
+		iscream.scale.set(1.45, 1.45);
+		state.currentStage.add(iscream);
+
+		state.currentStage.refresh();
+
+		// Add the intro sounds.
+		sounds.splice(0, sounds.length);
+		for (snd in cutsceneSoundPaths.get("intro") ?? [])
+        {
+			trace("loading sound " + snd);
+			// Path from Assets.list() is already full path, don't prepend library
+			sounds.push(FunkinSound.load(snd, 1, false, true));
+        }
+
+		// After 0.5 seconds, play the cutscene sounds and animations.
+		new FlxTimer(timerManager).start(0.5, _ -> {
+			for (snd in sounds) snd.play();
+
+			bf.animation.play("BOYFRIEND INTRO", true);
+			gf.animation.play("GIRLFRIEND INTRO", true);
+			sonic.animation.play("SONIC INTRO", true);
+		});
+
+		new FlxTimer(timerManager).start(CUTSCENE_DURATION, _ -> {
+			// Do some stuff after the cutscene ends.
+			onCutsceneEnd();
+		});
+
+		// Two seconds before cutscene end, make the cutscene unskippable.
+		new FlxTimer(timerManager).start(CUTSCENE_DURATION - 2, _ -> {
+			this.cutsceneSkipped = true;
+
+			// Tween out the skip text.
+			FlxTween.globalManager.cancelTweensOf(this.skipText);
+			FlxTween.tween(this.skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+		});
+	}
+
+	function skipCutscene()
+	{
+		// Cancel all timers.
+		timerManager.clear();
+
+		// Tween out the skip text.
+		FlxTween.globalManager.cancelTweensOf(skipText);
+		FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+
+		// Fade out the sound effects.
+		for (snd in sounds) snd.fadeOut(0.5, 0);
+
+		// Fade the camera. Afterwards fade it back in.
+		PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, () -> {
+			PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+
+			// Do some extra stuff after the cutscene ends.
+			onCutsceneEnd();
+		}, true);
+	}
+
+	function onCutsceneEnd()
+	{
+		// If we're in the ending cutscene, just end the song.
+		if (PlayState.instance.isSongEnd)
+		{
+			PlayState.instance.endSong(true);
+			return;
+		}
+
+		// Make the game know we're not in a cutscene anymore.
+		PlayState.instance.disableKeys = false;
+		PlayState.instance.isInCutscene = false;
+		PlayState.instance.mayPauseGame = true;
+		PlayState.instance.startCountdown();
+
+		// Make the player unable to pause for a frame.
+    	PlayState.instance.justUnpaused = true;
+
+		// Stop the sounds completely.
+		while (sounds.length > 0)
+		{
+			var snd:FunkinSound = sounds.pop();
+			if (snd == null) continue;
+
+			snd.stop();
+		}
+
+		// Make the character sprites visible again.
+		PlayState.instance.currentStage.getDad().revive();
+		PlayState.instance.currentStage.getBoyfriend().revive();
+		PlayState.instance.currentStage.getGirlfriend().revive();
+		bf.kill();
+		gf.kill();
+		sonic.kill();
+		iscream.visible = true;
+
+		// Tween back the camHUD alpha.
+		FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5);
+	}
+
+	public function onSongEnd(event:ScriptEvent)
+	{
+		super.onSongEnd(event);
+
+		// Skip the ending cutscene in freeplay mode.
+		if (!PlayStatePlaylist.isStoryMode) hasPlayedEndingCutscene = true;
+
+		if (!hasPlayedEndingCutscene)
+		{
+			hasPlayedEndingCutscene = true;
+
+			event.cancel();
+
+			PlayState.instance.camHUD.alpha = 0;
+			PlayState.instance.isInCutscene = true;
+			PlayState.instance.disableKeys = true;
+
+			cutsceneSkipped = false;
+			canSkipCutscene = false;
+
+			// We have to make the mobile pause buttons visible for skipping.
+			if (FlxG.onMobile)
+			{
+				PlayState.instance.pauseButton.visible = true;
+    			PlayState.instance.pauseCircle.visible = true;
+			}
+
+			endingCutscene();
+		}
+	}
+
+	function endingCutscene()
+	{
+		var state:PlayState = PlayState.instance;
+		var bfPos:Array<Float> = [state.currentStage.getBoyfriend().x, state.currentStage.getBoyfriend().y];
+		var sonicPos:Array<Float> = [state.currentStage.getDad().x, state.currentStage.getDad().y];
+
+		// Make the gameplay sprites invisible.
+		state.currentStage.getDad().visible = false;
+		state.currentStage.getBoyfriend().visible = false;
+
+		// Initialize the cutscene sprites.
+		state.currentStage.remove(sonic, true);
+		state.currentStage.remove(bf, true);
+
+		sonic = new FunkinSprite(sonicPos[0] - 105, sonicPos[1] - 50).loadTextureAtlas("emeraldCoast/DAY/outro/sonic azure post anims", "sonicjamx");
+		sonic.zIndex = state.currentStage.getBoyfriend().zIndex + 1;
+		sonic.shader = state.currentStage.getDad().shader;
+		sonic.scale.set(0.85, 0.85);
+		state.currentStage.add(sonic);
+
+		bf = new FunkinSprite(bfPos[0] - 80, bfPos[1] - 45).loadTextureAtlas("emeraldCoast/DAY/outro/bf azure post anims", "sonicjamx");
+		bf.zIndex = state.currentStage.getBoyfriend().zIndex;
+		bf.shader = state.currentStage.getBoyfriend().shader;
+		bf.scale.set(0.85, 0.85);
+		state.currentStage.add(bf);
+
+		rainbow = new FunkinSprite(0, 0).loadTexture('emeraldCoast/DAY/outro/rainbow');
+		rainbow.zIndex = state.currentStage.getNamedProp("beach")?.zIndex ?? 15;
+		rainbow.x = state.currentStage.getGirlfriend().x - 300;
+		rainbow.y = state.currentStage.getGirlfriend().y - 500;
+        rainbow.alpha = 0.7;
+        rainbow.blend = 0;
+        rainbow.visible = false;
+		state.currentStage.add(rainbow);
+
+		var orca:FlxSprite = new FlxSprite(-450, -350);
+		orca.frames = Paths.getSparrowAtlas("emeraldCoast/DAY/outro/orca");
+		orca.animation.addByPrefix("leap", "splash", 24, false);
+		orca.zIndex = (state.currentStage.getNamedProp("beach")?.zIndex ?? 15) - 1;
+		state.currentStage.add(orca);
+
+		orca.animation.onFinish.addOnce((name) -> {
+			orca.kill();
+		});
+
+		state.currentStage.refresh();
+
+		// Add the outro sounds.
+		sounds.splice(0, sounds.length);
+		for (snd in cutsceneSoundPaths.get("outro") ?? [])
+        {
+			// Path from Assets.list() is already full path, don't prepend library
+			sounds.push(FunkinSound.load(snd, 1, false, true));
+        }
+
+		// Play the animations and the sounds after a bit, since it takes a bit to load everything.
+		new FlxTimer(timerManager).start(0.3, function(_)
+		{
+    		bf.animation.play("", true);
+    		sonic.animation.play("", true);
+			orca.animation.play("leap", true);
+
+			for (snd in sounds) snd.play();
+		});
+
+		// After a bit it should apply the rain shader to the camera and slowly reduce the amount.
+		new FlxTimer(timerManager).start(1.6, function(_)
+		{
+			rainShader.scale = FlxG.height / 200; // adjust this value so that the rain looks nice
+			rainShader.intensity = 0.6;
+            rainbow.visible = true;
+
+			FlxG.camera.filters = [new ShaderFilter(rainShader)];
+
+			FlxTween.tween(rainShader, {intensity: 0}, 1.25, { onComplete: _ -> { FlxG.camera.filters = []; } });
+			FlxTween.tween(rainbow, { alpha: 0 }, 1.25);
+		});
+
+		// After the animation is over, it should tween the camera focus to the sun.
+		new FlxTimer(timerManager).start(3.6, function(_)
+		{
+			var dadCam:FlxPoint = PlayState.instance.currentStage.getDad().cameraFocusPoint;
+			var tweenTime:Float = 5.4;
+
+			FlxTween.tween(FlxG.camera, {zoom: 2 * PlayState.instance.stageZoom}, tweenTime, {ease: FlxEase.cubeOut});
+			PlayState.instance.tweenCameraToPosition(dadCam.x - 500, dadCam.y - 1000, tweenTime, FlxEase.cubeOut);
+		});
+
+		// Afterwards, fade the sky into the sunset variants.
+		new FlxTimer(timerManager).start(9, function(_)
+		{
+			var sunsetStage:StageData = StageRegistry.instance.parseEntryData("emeraldCoastSunset");
+			if (sunsetStage == null)
+			{
+				throw "Couldn't find sunset stage! Try reinstalling the mod.";
+				return;
+			}
+
+			for (prop in ["sky", "sun", "clouds"])
+			{
+				var baseProp:FlxSprite = PlayState.instance.currentStage.getNamedProp(prop);
+				var sunsetProp:FlxSprite = new FlxSprite();
+				sunsetProp.active = false;
+				sunsetProp.zIndex = baseProp.zIndex - 1;
+				PlayState.instance.currentStage.add(sunsetProp);
+				PlayState.instance.currentStage.refresh();
+
+				for (data in sunsetStage.props)
+				{
+					if (data.name == prop)
+					{
+						sunsetProp.loadGraphic(Paths.image(data.assetPath));
+						sunsetProp.setPosition(data.position[0], data.position[1]);
+						sunsetProp.scrollFactor.set(data.scroll[0], data.scroll[1]);
+
+						var scale:Dynamic = data.scale ?? 1;
+						if (Std.string(scale).indexOf(",") != -1)
+						{
+							sunsetProp.scale.set(scale[0], scale[1]);
+						}
+						else
+						{
+							sunsetProp.scale.set(scale, scale);
+						}
+
+						sunsetProp.updateHitbox();
+						break;
+					}
+				}
+
+				FlxTween.tween(baseProp, {alpha: 0}, 1.3);
+			}
+		});
+
+		// Finally, after everything is one, end the song.
+		new FlxTimer(timerManager).start(11.8, _ -> PlayState.instance.endSong(true));
+	}
+
+	public function onSongRetry(event:SongRetryEvent)
+	{
+		super.onSongRetry(event);
+
+		hasPlayedInGameCutscene = true;
+		hasPlayedEndingCutscene = false;
+		cutsceneSkipped = true;
+		canSkipCutscene = false;
+
+		PlayState.instance.camHUD.alpha = 1;
+	}
+
+	public function onDestroy(event:ScriptEvent)
+	{
+		super.onDestroy(event);
+
+		// Clear all timers so that we don't accidentally cause a crash.
+		timerManager.clear();
+	}
+
+	function hasBeatenSonicWeek()
+    {
+        // Save.instance.hasBeatenWeek will always return true for now.
+        for (diff in Constants.DEFAULT_DIFFICULTY_LIST)
+        {
+            if ((Save.instance.getLevelScore('sonicWeek', diff)?.score ?? 0) > 0) return true;
+        }
+
+        return false;
+    }
+}

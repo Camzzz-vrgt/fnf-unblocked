@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "name": "Sonic The Hedgehog",
+  "ownedChars": [
+    "sonic",
+    "sonic-playable",
+    "werehog",
+    "sonic-pixel",
+    "sonic-blazin",
+    "sonic-christmas",
+    "sonic-dark",
+    "sonic-holding-amy",
+    "sonic-car"
+  ],
+  "showUnownedChars": false,
+  "unlocked": false,
+  "freeplayStyle": "sonic",
+  "stickerPack": "standard-sonic",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-sonic",
+
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 43,
+
+      "loopStartFrame": 44,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 28,
+
+      "loopBadStartFrame": 29,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.47
+    },
+    "text1": "SONIC",
+    "text2": "THE MOST FAMOUS HEDGEHOG",
+    "text3": "TAKES AGES TO BE GOOD",
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "sonic dj intro",
+        "offsets": [10, -250]
+      },
+      {
+        "name": "idle",
+        "prefix": "Sonic DJ",
+        "offsets": [10, -250]
+      },
+      {
+        "name": "confirm",
+        "prefix": "sonic dj confirm",
+        "offsets": [10, -250]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "Sonic DJ to CS",
+        "offsets": [10, -250]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "sonic forces",
+        "offsets": [10, -250]
+      },
+      {
+        "name": "loss",
+        "prefix": "sonic dj loss reaction",
+        "offsets": [10, -250]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 7,
+    "gf": {
+      "assetPath": "charSelect/amytailsChill",
+      "animInfoPath": "charSelect/pjAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT-sonic",
+      "PERFECT": "resultsPERFECT-sonic",
+      "EXCELLENT": "resultsEXCELLENT-sonic",
+      "GREAT": "resultsGOOD-sonic",
+      "GOOD": "resultsGOOD-sonic",
+      "SHIT": "resultsSHIT-sonic"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsPERFECT_GOLD",
+        "zIndex": 501,
+        "offsets": [175, -350],
+        "loopFrame": 125
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsPERFECT",
+        "zIndex": 501,
+        "offsets": [175, -350],
+        "loopFrame": 125
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsEXCELLENT",
+        "zIndex": 501,
+        "offsets": [450, 100],
+        "loopFrame": 0
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsGOOD",
+        "zIndex": 501,
+        "offsets": [450, -500],
+        "loopFrame": 42
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsGOOD",
+        "zIndex": 501,
+        "offsets": [450, -500],
+        "loopFrame": 42
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-sonic/resultsSHIT",
+        "zIndex": 501,
+        "offsets": [600, 200],
+        "loopFrame": 80
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+import flixel.FlxG;
+import funkin.data.song.SongRegistry;
+import funkin.play.song.Song;
+import funkin.play.Countdown;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+
+class CoastlineSong extends Song
+{
+	var cachedCamFollowY:Float = 0;
+	var hasSkippedCountdown:Bool = false;
+
+	public function new()
+	{
+		super('coastline');
+
+		// Cache the camera follow point y from the first FocusCamera event.
+		// This is because the first FocusCamera event target differs based on if it's in story mode or not.
+		var chart:Null<SongChartData> = SongRegistry.instance.parseEntryChartData(this.id, this.variation);
+		if (chart == null) return;
+
+		for (songEvent in chart.events)
+		{
+			if (songEvent.eventKind != "FocusCamera" || songEvent.value == null) continue;
+
+			cachedCamFollowY = songEvent.value.y ?? 0;
+			break;
+		}
+	}
+
+  public function onCountdownStart(event:CountdownScriptEvent)
+	{
+		super.onCountdownStart(event);
+
+		// We should skip the countdown when moving to this song from the story mode.
+		// However if we pressed retry, we shouldn't skip the countdown.
+		if (!PlayStatePlaylist.isStoryMode) hasSkippedCountdown = true;
+
+		if (!hasSkippedCountdown)
+		{
+			event.cancel();
+			Countdown.skipCountdown();
+
+			// Position the camera to look nice when transitioning from Azure Skies.
+			var dadCam:FlxPoint = PlayState.instance.currentStage.getDad().cameraFocusPoint;
+
+			PlayState.instance.tweenCameraToPosition(dadCam.x - 500, dadCam.y - 1000, 0);
+			PlayState.instance.tweenCameraZoom(2, 0, false);
+
+			PlayState.instance.isInCountdown = true;
+			PlayState.instance.startingSong = true;
+
+			hasSkippedCountdown = true;
+		}
+	}
+
+	public function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+		hasSkippedCountdown = false;
+	}
+
+	public function onSongLoaded(event:SongLoadScriptEvent)
+	{
+		super.onSongLoaded(event);
+
+		// If on story mode, make the first focus camera event focus on a slightly lower position to look good with the pre-song transition.
+		for (songEvent in event.events)
+		{
+			if (songEvent.eventKind != "FocusCamera" || songEvent.value == null) continue;
+
+			songEvent.value.y = (PlayStatePlaylist.isStoryMode && !PlayState.instance.initialized ? -100 : cachedCamFollowY);
+			break;
+		}
+	}
+}

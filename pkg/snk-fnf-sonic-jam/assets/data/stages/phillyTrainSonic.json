@@ -1,0 +1,83 @@
+{
+  "version": "1.0.2",
+  "name": "Philly (Train) [Sonic]",
+  "props": [
+    {
+      "assetPath": "sonic/screens/screens1",
+      "name": "screens",
+      "position": [565, 215],
+      "scale": 1.1,
+      "zIndex": 2
+    },
+    {
+      "assetPath": "sonic/backStation",
+      "position": [-365, -365],
+      "scale": 1.1,
+      "zIndex": 10
+    },
+    {
+      "assetPath": "sonic/addBloom",
+      "name": "bloom",
+      "position": [490, 169],
+      "scale": 1.1,
+      "blend": "add",
+      "zIndex": 20
+    },
+    {
+      "assetPath": "sonic/train",
+      "name": "train",
+      "position": [2000, 94],
+      "scale": 1.65,
+      "zIndex": 30
+    },
+    {
+      "assetPath": "sonic/station",
+      "position": [-365, 691],
+      "scale": 1.1,
+      "zIndex": 40
+    },
+    {
+      "assetPath": "sonic/pillar1",
+      "position": [-358, -374],
+      "scale": 1.1,
+      "zIndex": 310
+    },
+    {
+      "assetPath": "sonic/pillar2",
+      "position": [2095, -375],
+      "scale": 1.1,
+      "zIndex": 311
+    },
+    {
+      "assetPath": "sonic/objects1",
+      "position": [-373, 521],
+      "scale": 1.1,
+      "zIndex": 320
+    },
+    {
+      "assetPath": "sonic/objects2",
+      "position": [1822, 522],
+      "scale": 1.1,
+      "zIndex": 321
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-275, -100],
+      "position": [1499.5, 893],
+      "zIndex": 300
+    },
+    "dad": {
+      "cameraOffsets": [275, -100],
+      "position": [602, 910],
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [1043.5, 810],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.7,
+  "directory": "week3"
+}

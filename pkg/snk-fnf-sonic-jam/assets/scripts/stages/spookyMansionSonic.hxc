@@ -1,0 +1,189 @@
+import flixel.FlxG;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.util.Constants;
+import funkin.util.HapticUtil;
+import funkin.graphics.shaders.AdjustColorShader;
+
+class SpookyMansionSonicStage extends Stage
+{
+  var lightningStrikeBeat:Int = 0;
+  var lightningStrikeOffset:Int = 8;
+
+  public function new()
+  {
+    super('spookyMansionSonic');
+  }
+
+	public function onCreate(event:ScriptEvent):Void 
+	{
+		super.onCreate(event);
+
+		colorShader = new AdjustColorShader();
+		colorShader.brightness = -30;
+		colorShader.contrast = 12;
+		colorShader.saturation = -18;
+		colorShader.hue = -5;
+	}
+
+	public function addCharacter(character:BaseCharacter, charType:CharacterType):Void 
+	{
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		character.shader = colorShader;
+	}
+
+  function doLightningStrike(playSound:Bool, beat:Int):Void
+  {
+    if (playSound)
+    {
+      FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1.0);
+    }
+
+    lightningStage = getNamedProp("halloweenBG-strike");
+    lightningStrikeBeat = beat;
+    lightningStrikeOffset = FlxG.random.int(8, 24);
+
+    if (getBoyfriend() != null && getBoyfriend().hasAnimation('scared') && getBoyfriend().animation.name != 'cheer')
+    {
+      getBoyfriend().playAnimation('scared', true, true);
+    }
+
+    if (getGirlfriend() != null && getGirlfriend().hasAnimation('scared'))
+    {
+      getGirlfriend().playAnimation('scared', true, true);
+    }
+
+    lightningStage.alpha = 1;
+
+    colorShader.brightness = -100;
+		colorShader.contrast = 100;
+		colorShader.saturation = -50;
+    /*
+    getBoyfriend().alpha = 0;
+    getDad().alpha = 0;
+    getGirlfriend().alpha = 0;
+    */
+
+    new FlxTimer().start(0.06, function(_) {
+      lightningStage.alpha = 0;
+
+      colorShader.brightness = -30;
+		  colorShader.contrast = 12;
+		  colorShader.saturation = -18;
+      /*
+      getBoyfriend().alpha = 1;
+      getDad().alpha = 1;
+      getGirlfriend().alpha = 1;
+      */
+    });
+
+    new FlxTimer().start(0.12, function(_) {
+      lightningStage.alpha = 1;
+      FlxTween.tween(lightningStage, {alpha: 0}, 1.5);
+
+      colorShader.brightness = -100;
+		  colorShader.contrast = 100;
+		  colorShader.saturation = -50;
+      FlxTween.tween(colorShader, { brightness: -30 }, 1.5);
+      FlxTween.tween(colorShader, { contrast: 12 }, 1.5);
+      FlxTween.tween(colorShader, { saturation: -18 }, 1.5);
+      /*
+      getBoyfriend().alpha = 0;
+      getDad().alpha = 0;
+      getGirlfriend().alpha = 0;
+      FlxTween.tween(getBoyfriend(), {alpha: 1}, 1.5);
+      FlxTween.tween(getDad(), {alpha: 1}, 1.5);
+      FlxTween.tween(getGirlfriend(), {alpha: 1}, 1.5);
+      */
+    });
+    
+    triggerLightningHaptics();
+  }
+
+  var doPostShockHaptics:Bool = false;
+
+  function triggerLightningHaptics()
+  {
+    HapticUtil.vibrate(0, 0.05, 1);
+
+    doPostShockHaptics = true;
+  }
+
+  /**
+   * If your stage uses additional assets not specified in the JSON,
+   * make sure to specify them like this, or they won't get cached in the loading screen.
+   */
+  function fetchAssetPaths():Array<String>
+  {
+    var results:Array<String> = super.fetchAssetPaths();
+    results.push(Paths.sound('thunder_1'));
+    results.push(Paths.sound('thunder_2'));
+    return results;
+  }
+
+  public function onBeatHit(event:SongTimeScriptEvent)
+  {
+    super.onBeatHit(event);
+
+    // Play lightning on sync at the start of this specific song.
+    // TODO: Rework this after chart format redesign.
+    if (PlayState.instance.currentSong != null)
+    {
+      if (event.beat == 4 && PlayState.instance.currentSong.id == "spookeez")
+      {
+        doLightningStrike(false, event.beat);
+      }
+    }
+
+    // Play lightning at random intervals.
+    if (FlxG.random.bool(10) && event.beat > (lightningStrikeBeat + lightningStrikeOffset))
+    {
+      doLightningStrike(true, event.beat);
+    }
+  }
+
+  var postShockCounter:Int = 0;
+  var counterTargetNum:Int = 10;
+
+  public function onStepHit(event:SongTimeScriptEvent)
+  {
+    super.onStepHit(event);
+
+    if (doPostShockHaptics)
+    {
+      postShockCounter++;
+
+      var postShockAmplitude:Float = 0.05 * (counterTargetNum - postShockCounter) * 2.5;
+      HapticUtil.vibrate(0, 0.01, postShockAmplitude, 0);
+
+      if (postShockCounter == counterTargetNum)
+      {
+        doPostShockHaptics = false;
+        postShockCounter = 0;
+      }
+    }
+  }
+
+  public function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    // Properly reset lightning when restarting the song.
+    lightningStrikeBeat = 0;
+    lightningStrikeOffset = 8;
+  }
+
+  public function onCountdownStart(event:CountdownScriptEvent)
+  {
+    super.onCountdownStart(event);
+
+    // Reset lightning variables at the start of every song
+    lightningStrikeBeat = 0;
+    lightningStrikeOffset = 8;
+  }
+}

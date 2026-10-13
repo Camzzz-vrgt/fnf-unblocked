@@ -1,0 +1,38 @@
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import funkin.modding.module.Module;
+import funkin.ui.title.TitleState;
+
+class MoveToIntroModule extends Module
+{
+    public function new()
+    {
+        super("MoveToIntroModule", 1000);
+    }
+
+    public function onCreate(event:ScriptEvent)
+    {
+        super.onCreate(event);
+
+        // If the title menu was already initialized, don't do anything and disable the module activity.
+        if (TitleState.initialized) this.active = false;
+    }
+
+    public function onStateChangeEnd(event:StateChangeScriptEvent)
+    {
+        super.onStateChangeEnd(event);
+
+        if (!Std.isOfType(event.targetState, TitleState) || event.eventCanceled) return;
+
+        // Prevent further updates of this module and hald updating any similar modules.
+        event.cancel();
+        this.active = false;
+
+        FlxTransitionableState.skipNextTransIn = true;
+        FlxTransitionableState.skipNextTransOut = true;
+
+        var state:MusicBeatState = new SonicJamIntroState();
+        FlxG.switchState(state);
+    }
+}

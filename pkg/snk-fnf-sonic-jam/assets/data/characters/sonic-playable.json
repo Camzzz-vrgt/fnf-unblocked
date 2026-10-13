@@ -1,0 +1,212 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sonic The Hedgehog (Playable)",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraZoom": 0.9,
+		"cameraOffsets": [
+			125,
+			-80
+		]
+	},
+	"healthIcon": {
+		"id": "sonic"
+	},
+	"assetPath": "characters/sonic/sonic",
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"prefix": "sonic idle dance",
+			"name": "idle"
+		},
+		{
+			"offsets": [75, -20],
+			"assetPath": "characters/sonic/misc/sonic spooky idle",
+			"prefix": "sonic spooky dance",
+			"name": "danceRight",
+			"frameIndices": [0, 1, 2, 3, 4, 5, 6, 7]
+		},
+		{
+			"offsets": [75, -20],
+			"assetPath": "characters/sonic/misc/sonic spooky idle",
+			"prefix": "sonic spooky dance",
+			"name": "danceLeft",
+			"frameIndices": [8, 9, 10, 11, 12, 13, 14, 15]
+		},
+		{
+			"offsets": [-0, 2],
+			"assetPath": "characters/sonic/sonic_waiting",
+			"prefix": "sonic idle waiting",
+			"name": "waiting"
+		},
+		{
+			"offsets": [50, -43],
+			"prefix": "sonic note left",
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [-48, 27],
+			"prefix": "sonic note right",
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [-39, -39],
+			"prefix": "sonic note down",
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [-66, 48],
+			"prefix": "sonic note up",
+			"name": "singUP"
+		},
+		{
+			"offsets": [-66,48],
+			"prefix": "sonic up note miss",
+			"name": "singUPmiss"
+		},
+		{
+			"offsets": [-44, -39],
+			"prefix": "sonic down note miss",
+			"name": "singDOWNmiss"
+		},
+		{
+			"offsets": [-78, 27],
+			"prefix": "sonic right note miss",
+			"name": "singRIGHTmiss"
+		},
+		{
+			"offsets": [-68, -13],
+			"assetPath": "characters/sonic/sonic_cheer",
+			"prefix": "sonic hey!!0",
+			"name": "hey"
+		},
+		{
+			"offsets": [-4, 0],
+			"assetPath": "characters/sonic/taunts/sonic pre taunt",
+			"prefix": "sonic pre taunt instance 1",
+			"name": "preTaunt"
+		},
+		{
+			"offsets": [-25, -3],
+			"assetPath": "characters/sonic/taunts/sonic taunt",
+			"prefix": "sonic taunt instance 1",
+			"name": "taunt1"
+		},
+		{
+			"offsets": [-10, 5],
+			"assetPath": "characters/sonic/taunts/sonic taunt_2",
+			"prefix": "sonic taunt 2",
+			"name": "taunt2"
+		},
+		{
+			"offsets": [-65, -10],
+			"assetPath": "characters/sonic/taunts/sonic taunt_3",
+			"prefix": "sonic taunt 3",
+			"name": "taunt3"
+		},
+		{
+			"offsets": [30, -5],
+			"assetPath": "characters/sonic/misc/sonic shake",
+			"prefix": "sonic idle shaking",
+			"name": "scared"
+		},
+		{
+			"offsets": [49, -38],
+			"prefix": "sonic left note miss",
+			"name": "singLEFTmiss"
+		},
+		{
+			"offsets": [65, 400],
+			"assetPath": "characters/sonic/sonic_death",
+			"prefix": "sonic death0",
+			"name": "firstDeath"
+		},
+		{
+			"offsets": [0, -37],
+			"assetPath": "characters/sonic/misc/sonic ugh",
+			"prefix": "sonic ugh",
+			"name": "sonic ugh"
+		},
+		{
+			"offsets": [-40, 37],
+			"assetPath": "characters/sonic/sonic YEAH cheer",
+			"prefix": "sonic YEAH cheer",
+			"name": "cheer"
+		},
+		{
+			"offsets": [-30, 17],
+			"assetPath": "characters/sonic/misc/sonic shut up man",
+			"prefix": "sonic shut up",
+			"name": "sonic shut up man"
+		},
+		{
+			"offsets": [35, -32],
+			"assetPath": "characters/sonic/misc/sonic raspberry blow",
+			"prefix": "sonic raspberry blow",
+			"name": "sonic raspberry blow"
+		},
+		{
+			"offsets": [22, 400],
+			"assetPath": "characters/sonic/sonic_death",
+			"prefix": "sonic death loop",
+			"looped": true,
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [22, 400],
+			"assetPath": "characters/sonic/sonic_death",
+			"prefix": "sonic death confirm",
+			"name": "deathConfirm"
+		},
+		{
+			"offsets": [-40, -80],
+			"prefix": "idle",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "idle-washed"
+		},
+		{
+			"offsets": [-81, -90],
+			"prefix": "blink",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "waiting-washed"
+		},
+		{
+			"offsets": [15, -90],
+			"prefix": "left0",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "singLEFT-washed"
+		},
+		{
+			"offsets": [-90, -83],
+			"prefix": "down0",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "singDOWN-washed"
+		},
+		{
+			"offsets": [-131, -6],
+			"prefix": "up0",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "singUP-washed"
+		},
+		{
+			"offsets": [-84, -75],
+			"prefix": "right0",
+			"assetPath": "characters/sonic/Better Sonic Sprite",
+			"name": "singRIGHT-washed"
+		}
+	]
+}

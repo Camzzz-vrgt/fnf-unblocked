@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-13,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Izquierda"
+		},
+		{
+			"offsets": [
+				-54,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Abajo"
+		},
+		{
+			"offsets": [
+				-57,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Arriba"
+		},
+		{
+			"offsets": [
+				-69,
+				6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Derecha"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-5
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "Death pose izquierda",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-11
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Death pose abajo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				92
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Death pose arriba",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				8
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Death pose derecha",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/BF-_ALAS",
+	"position": [
+		-150,
+		200
+	],
+	"healthicon": "bfsinner",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		153,
+		102
+	],
+	"camera_position": [
+		-100,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

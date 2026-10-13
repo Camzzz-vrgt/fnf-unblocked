@@ -1,0 +1,271 @@
+import flixel.group.FlxTypedGroup;
+import flixel.tweens.FlxTween;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.play.character.CharacterType;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+
+using StringTools;
+
+class BoyfriendBeachCharacter extends MultiSparrowCharacter
+{
+  // The starting and ending frames of the buzz bomber death fade effect.
+  var FADE_START_FRAME:Int = 43;
+  var FADE_END_FRAME:Int = 65;
+
+  // How many beats it takes for the game over clock to decrement by one.
+  var BEATS_PER_TIME:Int = 2;
+
+  // The maximum time the player has to react before getting booted to the main menu.
+  var MAX_TIME:Int = 10;
+
+  // How much time needs to pass before the game over numbers start fading in.
+  var NUMBER_DELAY:Float = 15.0;
+
+  var gameOverNumsGroup:FlxTypedGroup;
+  var gameOverClock:Int = -NUMBER_DELAY;
+  var shouldClockTick:Bool = false;
+
+  // Initialize eggman gameover sounds in constructor
+  var eggmanGameOverSounds:Array<String> = [];
+
+  function new()
+  {
+    super('bf-beach');
+
+    // Use Paths.sound() to get correct path format for the library
+    eggmanGameOverSounds = [
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover1", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover2", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover3", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover4", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover5", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover6", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover7", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover8", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover9", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover10", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover11", "shared"),
+      Paths.sound("gameplay/eggmanGameover/eggmanGameover12", "shared")
+    ];
+  }
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    var animSuffix:String = "";
+    switch (GameOverSubState.blueBallSuffix)
+    {
+      case "-buzzbomber":
+        // Play an unique death animation when dying to a buzz bomber in Gigglyman.
+        animSuffix = "-buzzbomber";
+    }
+
+    super.playAnimation(name + animSuffix, restart, ignoreOther, reversed);
+  }
+
+  function onAnimationFrame(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1)
+  {
+    super.onAnimationFrame(name, frameNumber, frameIndex);
+
+    if (GameOverSubState.instance != null)
+    {
+      switch (name)
+      {
+        case "firstDeath-buzzbomber":
+          if (gameOverNumsGroup == null || !GameOverSubState.instance.members.contains(gameOverNumsGroup))
+          {
+            // Create the game over numbers and make them invisible for now.
+            createGameOverNumbers();
+            shouldClockTick = false;
+          }
+
+          if (frameNumber >= FADE_START_FRAME && frameNumber <= FADE_END_FRAME)
+          {
+            // If the animation frame is between FADE_START_FRAME and FADE_END_FRAME, progressively fade in.
+            var percentFrame:Int = frameNumber - FADE_START_FRAME;
+            var totalFrames:Int = FADE_END_FRAME - FADE_START_FRAME;
+
+            this.alpha = percentFrame / totalFrames;
+          }
+
+        case "deathConfirm-buzzbomber":
+          // Hide the numbers upon confirmation.
+          for (num in gameOverNumsGroup.members)
+          {
+            FlxTween.globalManager.cancelTweensOf(num);
+            if (num.alive) num.kill();
+          }
+
+          shouldClockTick = false;
+      }
+
+      if (name != "firstDeath-buzzbomber" && this.alpha != 1)
+      {
+        // If the player skipped the fade in, force the opacity to the max.
+        this.alpha = 1;
+      }
+    }
+  }
+
+  function createGameOverNumbers()
+  {
+    var state:GameOverSubState = GameOverSubState.instance;
+
+    gameOverNumsGroup = new FlxTypedGroup();
+    state.add(gameOverNumsGroup);
+
+    for (i in 0...2)
+    {
+      var num:FlxSprite = new FlxSprite(state.boyfriend.x + 165 + 50 * i, state.boyfriend.y + 100);
+      num.frames = Paths.getSparrowAtlas("gameoverNumbers");
+
+      for (j in 0...10) num.animation.addByPrefix(Std.string(j), "gameover" + j, 1, false);
+      num.animation.play("0");
+
+      num.scale.set(2, 2);
+      num.updateHitbox();
+      num.alpha = 0;
+
+      gameOverNumsGroup.add(num);
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    var state:GameOverSubState = GameOverSubState.instance;
+    if (state != null && GameOverSubState.blueBallSuffix == "-buzzbomber")
+    {
+      // Add elapsed time to the clock until it's above 0 if the music is playing.
+      if (!shouldClockTick && (state.gameOverMusic?.playing ?? true) && !(state.deathQuoteSound?.playing ?? false))
+      {
+        gameOverClock += event.elapsed;
+        if (gameOverClock > 0)
+        {
+          // Fade in the numbers after the needed time has passed.
+          for (num in gameOverNumsGroup.members)
+          {
+            if (num.alpha == 0 && !FlxTween.globalManager.containsTweensOf(num)) FlxTween.tween(num, {alpha: 1}, 1.3);
+          }
+
+          gameOverClock = MAX_TIME;
+          shouldClockTick = true;
+        }
+      }
+
+      // If died by a buzz bomber, snap the camera.
+      FlxG.camera.snapToTarget();
+
+      // Also update numbers to reflect the actual time left.
+      var timeCappedString:String = Std.string(Math.min(gameOverClock, Math.pow(10, gameOverNumsGroup.length) - 1));
+      for (i in 0...gameOverNumsGroup.length)
+      {
+        // We have to count from backwards in order to kill the left-most numbers when they shouldn't display a number.
+        var i1:Int = timeCappedString.length - 1 - i;
+        var i2:Int = gameOverNumsGroup.length - 1 - i;
+
+        if (timeCappedString.charAt(i1) == "")
+        {
+          gameOverNumsGroup.members[i2].kill();
+        }
+        else
+        {
+          gameOverNumsGroup.members[i2].animation.play(timeCappedString.charAt(i1));
+        }
+      }
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent)
+  {
+    super.onBeatHit(event);
+
+    var state:GameOverSubState = GameOverSubState.instance;
+    if (state != null && shouldClockTick && event.beat > 0 && !(state.deathQuoteSound?.active ?? false))
+    {
+      // Every BEATS_PER_TIME beats, decrement 1 from the game over clock. If it reaches 0, boot the player back.
+      if (event.beat % BEATS_PER_TIME == 0)
+      {
+        gameOverClock--;
+      }
+
+      if (gameOverClock <= 0)
+      {
+        GameOverSubState.instance.goBack();
+      }
+    }
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteHit event was cancelled by the gameplay module.
+      return;
+    }
+
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "gigglyman-hit":
+            this.playAnimation("attack", true, true);
+            this.holdTimer = 0;
+          return;
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+
+  function onNoteMiss(event:NoteScriptEvent)
+  {
+    if (event.eventCanceled)
+    {
+      // onNoteMiss event was cancelled by the gameplay module.
+      return;
+    }
+
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "gigglyman-hit":
+            this.playAnimation("hit", true, true);
+            this.holdTimer = 0;
+          return;
+        default:
+          super.onNoteMiss(event);
+      }
+    }
+  }
+
+  function onSongRetry(event:SongRetryEvent)
+  {
+    super.onSongRetry(event);
+
+    // Reset the game over stuff, since they might be set from the Gigglyman script.
+    GameOverSubState.musicSuffix = "";
+    GameOverSubState.blueBallSuffix = "";
+
+    // Also reset the game over clock.
+    gameOverClock = -NUMBER_DELAY;
+  }
+
+  override function getDeathQuote():Null<String>
+  {
+    // Play the death voicelines if died by a buzz bomber.
+    if (GameOverSubState.blueBallSuffix == "-buzzbomber")
+    {
+      // Path from Assets.list() is already full path, don't prepend library
+      var randomSnd:String = eggmanGameOverSounds[FlxG.random.int(0, eggmanGameOverSounds.length - 1)];
+      return randomSnd;
+    }
+
+    return null;
+  }
+}

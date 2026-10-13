@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				176,
+				26
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Izquierda instance 1",
+			"indices": []
+		},
+		{
+			"offsets": [
+				156,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down instance 1"
+		},
+		{
+			"offsets": [
+				-5,
+				49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Arriba instance 1"
+		},
+		{
+			"offsets": [
+				110,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Derecha instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Alastor_reamster",
+	"position": [
+		0,
+		-100
+	],
+	"healthicon": "alastor",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		33,
+		81
+	],
+	"camera_position": [
+		0,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

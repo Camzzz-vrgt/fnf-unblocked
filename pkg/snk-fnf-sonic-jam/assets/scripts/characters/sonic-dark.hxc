@@ -1,0 +1,92 @@
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+
+class SonicDarkCharacter extends MultiSparrowCharacter
+{
+	var MAX_IDLE_REPEATS:Int = 9;
+	var idles:Int = 0;
+
+  	var normalChar:BaseCharacter;
+
+	function new()
+	{
+		super('sonic-dark');
+	}
+
+	override function set_alpha(val:Float):Float
+	{
+		super.set_alpha(val);
+
+		// Update the light character alpha.
+		if (val != 1)
+			normalChar.alpha = 1;
+		else
+			normalChar.alpha = 0;
+
+    	return val;
+	}
+
+	override public function playAnimation(name:String, restart:Bool, ignoreOther:Bool) 
+	{
+		if (name == "idle" && !ignoreOther && this.getCurrentAnimation() != "waiting") 
+		{
+			// Increase the idle count if idling.
+			idles++;
+			
+			// Make sonic bored after 3 idle plays.
+			if (idles % MAX_IDLE_REPEATS == 0)
+			{
+				idles = 0;
+				super.playAnimation("waiting");
+
+				normalChar?.playAnimation("waiting");
+				normalChar?.setPosition(this.x, this.y);
+				return;
+			} 
+		}
+		else 
+		{
+			// Reset the idle count if not idling.
+			idles = 0;
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+
+		// Make the light character play the same animations as the dark character.
+		normalChar?.playAnimation(name, restart, ignoreOther);
+		normalChar?.setPosition(this.x, this.y);
+	}
+
+  	public function onCreate(event:ScriptEvent) 
+	{
+		super.onCreate(event);
+
+		GameOverSubState.musicSuffix = '-sonic';
+		GameOverSubState.blueBallSuffix = '-sonic';
+
+		PauseSubState.musicSuffix = '-sonic';
+
+		// Reset the idle count.
+		idles = 0;
+
+		// Create the light version of the character.
+	  	normalChar = CharacterDataParser.fetchCharacter('sonic-playable');
+    	normalChar.zIndex = 199;
+		normalChar.alpha = 0;
+    	normalChar.flipX = false;
+
+		PlayState.instance.currentStage.add(normalChar);
+		PlayState.instance.currentStage.refresh(); // Apply z-index.
+	}
+
+	public function onSongRetry(event:SongRetryEvent)
+	{
+		super.onSongRetry();
+
+		// Restart the idle count. 
+		idles = 0;
+	}
+}

@@ -1,0 +1,56 @@
+import flixel.FlxG;
+import funkin.save.Save;
+import funkin.util.Constants;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.story.Level;
+
+class SonicWeek extends Level
+{
+	function new()
+	{
+		super('sonicWeek');
+	}
+
+  override function isUnlocked():Bool
+  {
+    return true;
+  }
+
+  override function getSongs():Array<String>
+  {
+    var defaultList:Array<String> = super.getSongs();
+
+    // If the menu is the freeplay menu, lock Gigglyman behind week completion.
+    // This is because we still want players to play gigglyman through the story playlists, which use getSongs().
+    // if (Std.isOfType(FlxG.state.subState, FreeplayState) && !hasBeatenSonicWeek())
+    // {
+    //   defaultList.remove("gigglyman");
+    // }
+
+    return defaultList;
+  }
+
+  override function getSongDisplayNames(difficultyId:String):Array<String>
+  {
+    var defaultList:Array<String> = super.getSongDisplayNames(difficultyId);
+
+    if (!hasBeatenSonicWeek())
+    {
+      // Gigglyman is a secret song ;)
+      defaultList.remove("Gigglyman");
+    }
+
+    return defaultList;
+  }
+
+  public function hasBeatenSonicWeek():Bool
+  {
+      // Save.instance.hasBeatenWeek will always return true for now so this is a backup check.
+      for (diff in Constants.DEFAULT_DIFFICULTY_LIST)
+      {
+          if ((Save.instance.getLevelScore('sonicWeek', diff)?.score ?? 0) > 0) return true;
+      }
+
+      return false;
+  }
+}

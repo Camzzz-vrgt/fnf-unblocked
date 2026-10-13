@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-310,
+				-210
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-10,
+				-230
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Abajo"
+		},
+		{
+			"offsets": [
+				-239,
+				-238
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Izquierdo"
+		},
+		{
+			"offsets": [
+				-324,
+				-210
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Derecha"
+		},
+		{
+			"offsets": [
+				-163,
+				-248
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Arriba"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sus",
+	"position": [
+		-150,
+		110
+	],
+	"healthicon": "susy",
+	"flip_x": false,
+	"healthbar_colors": [
+		155,
+		75,
+		35
+	],
+	"camera_position": [
+		-20,
+		90
+	],
+	"sing_duration": 10,
+	"scale": 1.7
+}

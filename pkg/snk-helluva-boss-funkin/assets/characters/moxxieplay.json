@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				66,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-67,
+				-13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-43,
+				33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				8,
+				-130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-37,
+				12
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "miss-up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				163,
+				22
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "miss-left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-72,
+				0
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "miss-right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-130
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "miss-down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/moxxieplayable",
+	"position": [
+		0,
+		250
+	],
+	"healthicon": "moxxie",
+	"flip_x": true,
+	"healthbar_colors": [
+		206,
+		43,
+		48
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

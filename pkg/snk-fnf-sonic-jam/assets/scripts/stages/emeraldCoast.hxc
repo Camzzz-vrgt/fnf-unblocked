@@ -1,0 +1,66 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTweenManager;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.Conductor;
+
+class emeraldCoastStage extends Stage
+{
+	// The ship will swing between this and the negative of this angle.
+	var SHIP_SWING_ANGLE:Float = 3.5;
+
+	// How many seconds does it take for the ship to swing.
+	var SHIP_SWING_TIME:Float = 4.5;
+
+	var totalElapsed:Float = 0.0;
+	var islandStartY:Float = 0.0;
+	var shipTweenMan:FlxTweenManager = new FlxTweenManager();
+
+	public function new()
+	{
+		super('emeraldCoast');
+	}
+
+	public function onCreate(event:ScriptEvent):Void
+	{
+		super.onCreate(event);
+
+		playershader = new AdjustColorShader();
+		playershader.brightness = 5;
+		playershader.contrast = 9;
+		playershader.saturation = 3;
+		playershader.hue = -12;
+
+		totalElapsed = 0;
+		islandStartY = getNamedProp("island").y;
+
+		var ship:FlxSprite = getNamedProp("ship");
+		ship.origin.y = ship.frameHeight * 0.75; // This should put the rotational center to the ship body and not to the sail.
+		ship.angle = -SHIP_SWING_ANGLE;
+		shipTweenMan.tween(ship, {angle: SHIP_SWING_ANGLE}, SHIP_SWING_TIME,
+		{
+			type: 4, // Pingpong
+			ease: FlxEase.quadInOut
+		});
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+		shipTweenMan.update(event?.elapsed ?? 0);
+
+		totalElapsed += event?.elapsed ?? 0; // This resulted in a NOR for some reason????
+		getNamedProp("island").y = islandStartY + Math.cos(totalElapsed) * 15;
+	}
+
+	public function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+	{
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		character.shader = playershader;
+	}
+}

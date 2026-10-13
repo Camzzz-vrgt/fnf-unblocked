@@ -1,0 +1,904 @@
+import flixel.graphics.frames.FlxFrameCollectionType;
+import flixel.graphics.frames.FlxFramesCollection;
+import flixel.group.FlxTypedGroup;
+import flixel.text.FlxTextBorderStyle;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTweenManager;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimerManager;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.scoring.Scoring;
+import funkin.play.song.Song;
+import funkin.play.stage.StageProp;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.ScriptedMusicBeatSubState;
+import funkin.util.Constants;
+import funkin.util.MathUtil;
+import funkin.util.TouchUtil;
+import funkin.Conductor;
+import funkin.FunkinMemory;
+import funkin.Highscore;
+import haxe.ds.StringMap;
+
+using StringTools;
+/**
+ * If the size of this script makes you shiver your timbers, just know that this script handles:
+ *  - Spawning Badniks for Sonic and Bf and destroying them automatically for Sonic.
+ *  - Doing damage when the player misses a buzz bomber hit note.
+ *  - Playing cutscenes for the start and the end of the song.
+ *
+ * A lot of things have comments attached to them so it should be somewhat easier to understand.
+ */
+class GigglymanSong extends Song
+{
+    var BOMBER_FLY_TIME:Float = 5.0; // Time in seconds needed for the bomber to fly in before being attacked.
+
+    // Helper function to extract directory from path (replaces haxe.io.Path.dir)
+    function extractDir(path:String):String {
+        var lastSlash = path.lastIndexOf("/");
+        if (lastSlash == -1) lastSlash = path.lastIndexOf("\\");
+        return (lastSlash == -1) ? "" : path.substr(0, lastSlash);
+    }
+    var BOMBER_HIT_DAMAGE:Float = 0.5; // The damage BF is going to take after taking a hit from the buzz bomber.
+
+    var SONIC_ATTACK_ANIMS:Array<String> = ["kick", "punch"]; // The attack animation pool Sonic can do.
+    var SONIC_ATTACK_TIME:Float = 0.98; // At which percent of the badnik moving tween can Sonic play an attack animation.
+
+    var POSSIBLE_SONIC_BADNIKS:Array<String> = ["motobug", "rhinotank"]; // A pool of Badniks that could spawn for Sonic.
+    var POSSIBLE_SONIC_MOBIANS:Array<String> = ["ricky", "pocky"]; // A pool of Mobians that could spawn when Sonic's Badniks get destroyed.
+
+    var BADNIK_SPAWN_START:Int = 33; // From what beat onwards Sonic Badniks should spawn.
+    var BADNIK_SPAWN_BEAT:Int = 15; // The delay between beats before another Sonic Badnik should spawn.
+    var BADNIK_SPAWN_RATE:Float = 0.1; // The chance of a Sonic Badnik spawning each beat it could spawn on.
+
+    var BADNIK_MOVE_TIME:Float = 10.0; // How long it takes for a Badnik to get to the respective either Sonic or BF.
+
+    // Offsets for the characters for the cutscene.
+    var SONIC_OFFSETS:Array<Float> = [-270, 100];
+    var BF_OFFSETS:Array<Float> = [250, 100];
+
+    var tweenManager:FlxTweenManager = new FlxTweenManager();
+	var timerManager:FlxTimerManager = new FlxTimerManager();
+
+    var lastBadnikSpawnBeat:Int = 0;
+    var allBadniks:FlxTypedGroup = new FlxTypedGroup();
+
+    var timingsSonicJump:Array<Float> = [];
+
+    var timingsBuzzBomber:Array<Float> = [];
+    var queuedBuzzBombers:Array<FlxSprite> = [];
+
+    var badnikFrames:FlxFramesCollection;
+    var flickyExplosion:FlxSprite;
+    var playerExplosion:FlxSprite;
+    var badnikExplosion:FlxSprite;
+
+    var gfFloor:BaseCharacter;
+
+    var sounds:Array<FunkinSound> = [];
+    var sonic:FunkinSprite;
+    var bf:FunkinSprite;
+    var gf:FunkinSprite;
+    var blast:FlxSprite;
+
+    var cutsceneSoundPaths:StringMap = new StringMap();
+    var hasPlayedStartingCutscene:Bool = false;
+    var hasPlayedEndingCutscene:Bool = false;
+    var hasPlayedCredits:Bool = false;
+
+	var cutsceneSkipped:Bool = false;
+	var canSkipCutscene:Bool = false;
+	var skipText:FlxText;
+
+    public function new()
+    {
+        super("gigglyman");
+
+        // Use Paths.sound() to get correct path format for the library
+        cutsceneSoundPaths.set("normal", [
+            Paths.sound("cutscenes/gigglyman/normal/i-made-audio-for-this", "sonicjamx")
+        ]);
+        cutsceneSoundPaths.set("eggman", [
+            Paths.sound("cutscenes/gigglyman/eggman/bf blurps", "sonicjamx"),
+            Paths.sound("cutscenes/gigglyman/eggman/eggman again ingame", "sonicjamx"),
+            Paths.sound("cutscenes/gigglyman/eggman/sonic blurpies", "sonicjamx")
+        ]);
+
+
+    }
+
+    override function getDifficulty(diffId:String, variation:String, variations:Array<String>)
+    {
+        var data:Null<SongDifficulty> = super.getDifficulty(diffId, variation, variations);
+
+        // If we're in Freeplay, override the freeplay icon by replacing the opponent.
+        if (data?.characters?.opponent != null)
+        {
+            var inFreeplay:Bool = Std.isOfType(FlxG.state.subState, FreeplayState);
+            data.characters.opponent = (inFreeplay ? "eggman" : "sonic");
+        }
+
+        return data;
+    }
+
+    public function onCreate(event:ScriptEvent)
+    {
+        super.onCreate(event);
+
+        // if (PlayStatePlaylist.isStoryMode){
+        //     FunkinMemory.cacheTexture(Paths.image("emeraldCoast/SUNSET/intro/GIRLFRIEND INTRO", "sonicjamx"));
+        //     FunkinMemory.cacheTexture(Paths.image("emeraldCoast/SUNSET/intro/SONIC INTRO", "sonicjamx"));
+        //     FunkinMemory.cacheTexture(Paths.image("emeraldCoast/SUNSET/intro/BOYFRIEND INTRO", "sonicjamx"));
+        //     FunkinMemory.cacheTexture(Paths.image("emeraldCoast/SUNSET/massive blast", "sonicjamx"));
+        // }
+
+        // Create a frame collection for all badniks, which will be reused for all badniks as a sort of optimization.
+        badnikFrames = new FlxFramesCollection(null, FlxFrameCollectionType.ATLAS, null);
+
+        var badniksToLoad:Array<String> = ["buzzbomber", "flicky"].concat(POSSIBLE_SONIC_BADNIKS).concat(POSSIBLE_SONIC_MOBIANS);
+        for (badnik in badniksToLoad)
+        {
+            var frames:Null<FlxAtlasFrames> = Paths.getSparrowAtlas("characters/badniks/" + badnik);
+            if (frames == null) continue;
+
+            FunkinMemory.cacheTexture(Paths.image("characters/badniks/" + badnik));
+
+            for (frame in frames.frames) badnikFrames.pushFrame(frame.copyTo());
+        }
+
+        // Reset cutscene-related stuff.
+        hasPlayedStartingCutscene = false;
+        hasPlayedCredits = false;
+        hasPlayedEndingCutscene = false;
+
+        // Pre-create explosion sprites so that there aren't any performance drops during gameplay.
+        if (flickyExplosion?.frames == null)
+        {
+            flickyExplosion = new FlxSprite();
+            flickyExplosion.frames = Paths.getSparrowAtlas("characters/badniks/badnik explosion");
+            flickyExplosion.animation.addByPrefix("boom", "badniks explosion defeat instance 1", 24, false);
+            flickyExplosion.scale.set(0.65, 0.65);
+            flickyExplosion.updateHitbox();
+            flickyExplosion.kill();
+            PlayState.instance.currentStage?.add(flickyExplosion);
+
+            flickyExplosion.animation.onFinish.add(name -> {
+                flickyExplosion.kill();
+            });
+
+            badnikExplosion = new FlxSprite();
+            badnikExplosion.frames = Paths.getSparrowAtlas("characters/bf explosion");
+            badnikExplosion.animation.addByPrefix("boom", "badniks explosion defeat w-0 flickie instance 1", 24, false);
+            badnikExplosion.scale.set(0.75, 0.75);
+            badnikExplosion.updateHitbox();
+            badnikExplosion.kill();
+            PlayState.instance.currentStage?.add(badnikExplosion);
+
+            badnikExplosion.animation.onFinish.add(name -> {
+                badnikExplosion.kill();
+            });
+
+            playerExplosion = new FlxSprite().loadGraphicFromSprite(badnikExplosion);
+            playerExplosion.scale.set(0.65, 0.65);
+            playerExplosion.updateHitbox();
+            playerExplosion.kill();
+            PlayState.instance.currentStage?.add(playerExplosion);
+
+            playerExplosion.animation.onFinish.add(name -> {
+                playerExplosion.kill();
+            });
+        }
+
+        // Add the gf floor character.
+        gfFloor = CharacterDataParser.fetchCharacter("gf-beach-floor");
+        PlayState.instance.currentStage?.addCharacter(gfFloor, CharacterType.OTHER); // We have to add the character first before setting the type so that it doesn't override Eggman.
+        gfFloor.characterType = CharacterType.GF;
+
+        var gfData:StageDataCharacter = PlayState.instance.currentStage?._data?.characters?.gf;
+        if (gfData != null)
+        {
+            // Set the position stuff according to the bf data, if provided. Otherwise, fall back to using the gf data.
+            gfFloor.zIndex = gfData.zIndex + 1;
+            gfFloor.x = gfData.position[0] + 265 - gfFloor.characterOrigin.x;
+            gfFloor.y = gfData.position[1] + 90 - gfFloor.characterOrigin.y;
+            gfFloor.originalPosition.set(gfFloor.x, gfFloor.y);
+
+            var finalScale:Float = gfFloor.getBaseScale() * gfData.scale;
+            gfFloor.setScale(finalScale);
+            gfFloor.cameraFocusPoint.x += gfData.cameraOffsets[0];
+            gfFloor.cameraFocusPoint.y += gfData.cameraOffsets[1];
+
+            gfFloor.scrollFactor.x = gfData.scroll[0];
+            gfFloor.scrollFactor.y = gfData.scroll[1];
+            gfFloor.alpha = gfData.alpha;
+            gfFloor.angle = gfData.angle;
+        }
+
+        // Initialize the skip text.
+		var control:String = PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true);
+		skipText = new FlxText(936 * (FlxG.width / FlxG.initialWidth), 618 * (FlxG.height / FlxG.initialHeight), 0, 'Skip [ ' + control + ' ]', 20);
+		if (FlxG.onMobile)
+		{
+			skipText.text = 'Skip [Pause Button]';
+			skipText.x -= 136;
+		}
+
+		skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+		skipText.scrollFactor.set();
+		skipText.borderSize = 2;
+		skipText.alpha = 0;
+		skipText.camera = PlayState.instance.camCutscene;
+		skipText.zIndex = 1000;
+		skipText.active = false;
+		PlayState.instance.add(skipText);
+
+        PlayState.instance.currentStage?.refresh();
+    }
+
+    public function onCountdownStart(event:CountdownScriptEvent)
+    {
+        super.onCountdownStart(event);
+
+        // Force the camera to focus on the GF character to make the camera not show out of bounds.
+        if (!PlayState.instance.initialized)
+        {
+            offsetCutsceneCamera(0, 0, 0, null, 0.75);
+        }
+
+        // Play the Gigglyman pre-song cutscene in the story mode if not played already.
+        if (!PlayStatePlaylist.isStoryMode) hasPlayedStartingCutscene = true;
+
+        if (!hasPlayedStartingCutscene)
+        {
+            event.cancel();
+            hasPlayedStartingCutscene = true;
+
+			cutsceneSkipped = false;
+			canSkipCutscene = false;
+
+			PlayState.instance.camHUD.alpha = 0.00001;
+			PlayState.instance.isInCutscene = true;
+			PlayState.instance.disableKeys = true;
+
+            introCutscene();
+
+            return;
+        }
+    }
+
+    public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+        tweenManager.update(event?.elapsed ?? 0);
+		timerManager.update(event?.elapsed ?? 0);
+
+        // Don't allow skipping if the cutscene isn't long enough or the week isn't finished.
+        if (PlayStatePlaylist.isStoryMode && hasBeatenSonicWeek())
+        {
+            var state:PlayState = PlayState.instance;
+
+            // Check if either the cutscene skip or the mobile pause button was pressed.
+            var pausePressed:Bool = state.controls.CUTSCENE_ADVANCE;
+            if (FlxG.onMobile && !pausePressed)
+            {
+                pausePressed = TouchUtil.pressAction(state.pauseButton, null, true);
+            }
+
+            // If the cutscene button is pressed, wait for confirmation.
+            if (pausePressed && !cutsceneSkipped)
+            {
+                // Fade in the cutscene skip text, if possible.
+                if (!canSkipCutscene)
+                {
+                    FlxTween.globalManager.cancelTweensOf(skipText);
+                    FlxTween.tween(skipText, {alpha: 1}, 0.5, {
+                        ease: FlxEase.quadOut,
+                        onComplete: _ -> {
+                            canSkipCutscene = true;
+                        }
+                    });
+                }
+                else
+                {
+                    // Skip the cutscene.
+                    cutsceneSkipped = true;
+                    skipCutscene();
+                }
+            }
+        }
+
+        // Spawn a buzz bomber when the timing is reached.
+        if (timingsBuzzBomber.length > 0 && Conductor.instance.songPosition >= timingsBuzzBomber[0])
+        {
+            timingsBuzzBomber.shift();
+            var daBombah:FlxSprite = createBuzzBomber();
+            daBombah.x -= 5000;
+
+            queuedBuzzBombers.push(daBombah);
+            tweenManager.tween(daBombah, {x: daBombah.x + 5000}, BOMBER_FLY_TIME);
+        }
+
+        // Spawn a groundnik when the timing for Sonic jumping is reached.
+        if (timingsSonicJump.length > 0 && Conductor.instance.songPosition >= timingsSonicJump[0])
+        {
+            var timing:Float = timingsSonicJump.shift();
+            var tweenTime:Float = (timing + BADNIK_MOVE_TIME * 1000 - Conductor.instance.songPosition) / 1000; // Make sure groundniks aren't delayed by lag.
+
+            var daBadnik:FlxSprite = createGroundnik();
+            daBadnik.x -= 100;
+
+            // Tween the badnik to Sonic and kill it later.
+            daBadnik.x += 5000;
+            daBadnik.y += 150;
+            tweenManager.tween(daBadnik, {y: daBadnik.y - 150}, tweenTime, {ease: FlxEase.quadIn});
+            tweenManager.tween(daBadnik, {x: daBadnik.x - 5000}, tweenTime,
+            {
+                onComplete: _ -> {
+                    // Play an explosion.
+                    badnikExplosion.x = daBadnik.getMidpoint().x - badnikExplosion.width / 2;
+                    badnikExplosion.y = daBadnik.getMidpoint().y - badnikExplosion.height / 2;
+                    badnikExplosion.zIndex = daBadnik.zIndex + 1;
+                    badnikExplosion.revive();
+                    badnikExplosion.animation.play("boom", true);
+
+                    PlayState.instance.currentStage.add(badnikExplosion);
+                    PlayState.instance.currentStage.refresh();
+
+                    // Play the mobian walk cycle anims and make them go off screen.
+                    daBadnik.animation.play("mobian");
+
+                    tweenManager.tween(daBadnik, {y: daBadnik.y + 150}, BADNIK_MOVE_TIME, {ease: FlxEase.quadIn});
+                    tweenManager.tween(daBadnik, {x: daBadnik.x + 5000}, BADNIK_MOVE_TIME,
+                    {
+                        onComplete: _ -> {
+                            // Remove the badnik from the stage.
+                            daBadnik.kill();
+                        }
+                    });
+                },
+                onUpdate: (twn) -> {
+                    // If the badnik overlaps bf, make it semi-opaque.
+                    // We're not playing the kick animation, since that messes with the attack anims.
+                    var bf:BaseCharacter = PlayState.instance.currentStage?.getBoyfriend();
+                    var overlapsBf:Bool = (bf != null && daBadnik.overlaps(bf));
+
+                    var targetAlpha:Float = (overlapsBf ? 0.3 : 1);
+                    daBadnik.alpha = MathUtil.smoothLerpPrecision(daBadnik.alpha, targetAlpha, FlxG.elapsed * 60, 2);
+                }
+            });
+        }
+    }
+
+    public function onSongEnd(event:ScriptEvent)
+    {
+        super.onSongEnd(event);
+
+        // If not in story mode, don't play credits or any cutscenes.
+        if (!PlayStatePlaylist.isStoryMode)
+        {
+            hasPlayedCredits = true;
+            hasPlayedEndingCutscene = true;
+        }
+
+        // If not played the ending video, play it and cancel the ending.
+        if (!hasPlayedEndingCutscene)
+        {
+            event.cancel();
+            hasPlayedEndingCutscene = true;
+
+            VideoCutscene.play(Paths.videos('PlayestCutscenePlaceholder.mp4'), CutsceneType.ENDING);
+
+            return;
+        }
+
+        // If not played credits, cancel the song ending and play the credits.
+        if (!hasPlayedCredits)
+        {
+            event.cancel();
+            hasPlayedCredits = true;
+            PlayState.instance.isInCutscene = true;
+
+            var isPerfect:Bool = Scoring.tallyCompletion(Highscore.talliesLevel) == 1;
+            var creditsSubState:MusicBeatSubState = ScriptedMusicBeatSubState.init("SonicJamCreditsSubState");
+            creditsSubState.isPerfect = isPerfect;
+            creditsSubState.camera = PlayState.instance.camCutscene;
+            creditsSubState.onComplete = function()
+            {
+                PlayState.instance.endSong(true); // End the song after the credits end.
+            }
+
+            FlxG.state.persistentUpdate = false;
+            FlxG.state.persistentDraw = false;
+            FlxG.state.openSubState(creditsSubState);
+
+            return;
+        }
+    }
+
+    public function onNoteHit(event:HitNoteScriptEvent)
+    {
+        super.onNoteHit(event);
+        if (!event.note.noteData.getMustHitNote()) return;
+
+        var state:PlayState = PlayState.instance;
+        if (state.currentStage?.getBoyfriend() == null) return;
+
+        var bf:BaseCharacter = PlayState.instance.currentStage.getBoyfriend();
+        switch(event.note.kind)
+        {
+            case "gigglyman-hit":
+                // Modify the first queued buzz bomber.
+                if (queuedBuzzBombers.length == 0) return;
+                var daBombah:FlxSprite = queuedBuzzBombers.shift();
+
+                flickyExplosion.zIndex = daBombah.zIndex + 1;
+                flickyExplosion.x = daBombah.getMidpoint().x - flickyExplosion.width / 2;
+                flickyExplosion.y = daBombah.getMidpoint().y - flickyExplosion.height / 2;
+                flickyExplosion.revive();
+                flickyExplosion.animation.play("boom", true);
+
+                // Don't kill the buzz bomber, but rather replace the frames with a flicky and let it fly off screen.
+                daBombah.animation.play("flicky");
+                daBombah.flipX = false;
+                daBombah.y += 50;
+                daBombah.zIndex = (bf?.zIndex ?? 300) - 1;
+
+                // Tween the flicky outside of the view.
+                tweenManager.tween(daBombah, {x: daBombah.x + 5000}, BOMBER_FLY_TIME,
+                {
+                    onComplete: _ -> {
+                        daBombah.kill();
+                    }
+                });
+
+                state.currentStage.refresh();
+        }
+    }
+
+    public function onNoteMiss(event:NoteScriptEvent)
+    {
+        super.onNoteMiss(event);
+        var state:PlayState = PlayState.instance;
+        if (state.currentStage?.getBoyfriend() == null) return;
+
+        var bf:BaseCharacter = state.currentStage.getBoyfriend();
+
+        // Make the buzz bomber play their attack if the player missed a hit note.
+        switch(event.note.kind)
+        {
+            case "gigglyman-hit":
+                event.healthChange = -BOMBER_HIT_DAMAGE;
+
+                // If we're about to die from this, change the game over suffixes to play different anims for bf, as well as different audio.
+                if (state.health + event.healthChange <= 0)
+                {
+                    GameOverSubState.blueBallSuffix = "-buzzbomber";
+                    GameOverSubState.musicSuffix = "-buzzbomber";
+                }
+
+                var daBombah:FlxSprite = queuedBuzzBombers.shift();
+                daBombah.animation.play("attack");
+
+                // Play the player explosion.
+                playerExplosion.zIndex = bf.zIndex + 1;
+                playerExplosion.x = bf.getMidpoint().x - playerExplosion.width / 2;
+                playerExplosion.y = bf.getMidpoint().y - playerExplosion.height / 2;
+                playerExplosion.revive();
+                playerExplosion.animation.play("boom", true);
+                state.currentStage.refresh();
+        }
+    }
+
+    public function onBeatHit(event:SongTimeScriptEvent)
+    {
+        super.onBeatHit(event);
+        if (PlayState.instance?.currentStage == null) return;
+
+        if (event.beat < lastBadnikSpawnBeat) return; // Check if the beat cooldown has passed.
+        if (!FlxG.random.bool(BADNIK_SPAWN_RATE * 100)) return; // Check if the chance is right.
+
+        // Go over every timings where Sonic should jump and if a Groundnik should spawn anywhere in that range, don't spawn a Groundnik.
+        for (timing in timingsSonicJump)
+        {
+            if (timing < Conductor.instance.songPosition + BADNIK_MOVE_TIME * 1000) return;
+        }
+
+        lastBadnikSpawnBeat = event.beat + BADNIK_SPAWN_BEAT;
+
+        var badnik:FlxSprite = createGroundnik();
+
+        // Choose the random animation to be played little before the badnik reaches Sonic.
+        var randIdx:Int = FlxG.random.int(0, SONIC_ATTACK_ANIMS.length - 1);
+        var randAnim:String = SONIC_ATTACK_ANIMS[randIdx];
+        var animPlayed:Bool = false;
+
+        // Tween the badnik to Sonic and kill it later.
+        badnik.x += 5000;
+        badnik.y += 150;
+        tweenManager.tween(badnik, {y: badnik.y - 150}, BADNIK_MOVE_TIME, {ease: FlxEase.quadIn});
+        tweenManager.tween(badnik, {x: badnik.x - 5000}, BADNIK_MOVE_TIME,
+        {
+            onComplete: _ -> {
+                // Play an explosion.
+                badnikExplosion.x = badnik.getMidpoint().x - badnikExplosion.width / 2;
+                badnikExplosion.y = badnik.getMidpoint().y - badnikExplosion.height / 2;
+                badnikExplosion.zIndex = badnik.zIndex + 1;
+                badnikExplosion.revive();
+                badnikExplosion.animation.play("boom");
+
+                PlayState.instance.currentStage.add(badnikExplosion);
+                PlayState.instance.currentStage.refresh();
+
+                // Play the mobian walk cycle anims and make them go off screen.
+                badnik.animation.play("mobian");
+
+                tweenManager.tween(badnik, {y: badnik.y + 150}, BADNIK_MOVE_TIME, {ease: FlxEase.quadIn});
+                tweenManager.tween(badnik, {x: badnik.x + 5000}, BADNIK_MOVE_TIME,
+                {
+                    onComplete: _ -> {
+                        // Remove the badnik from the stage.
+                        badnik.kill();
+                    }
+                });
+
+            },
+            onUpdate: (twn) -> {
+                // Around 98% of the way is where we want the attack animation to play due to the buildup time.
+                if (twn.percent >= SONIC_ATTACK_TIME && !animPlayed)
+                {
+                    animPlayed = true;
+                    PlayState.instance.currentStage?.getDad()?.playAnimation(randAnim, true, true);
+                }
+
+                // If the badnik overlaps bf, make it semi-opaque.
+                var bf:BaseCharacter = PlayState.instance.currentStage?.getBoyfriend();
+                var overlapsBf:Bool = (bf != null && badnik.overlaps(bf));
+
+                var targetAlpha:Float = (overlapsBf ? 0.3 : 1);
+                badnik.alpha = MathUtil.smoothLerpPrecision(badnik.alpha, targetAlpha, FlxG.elapsed * 60, 2);
+
+                // If the badnik overlaps bf, make bf only play the kick animation.
+                if (bf != null)
+                {
+                    if (overlapsBf && bf?.getCurrentAnimation() == "idle") bf.playAnimation("kick", true, true);
+                    bf.canPlayOtherAnims = !overlapsBf;
+                }
+            }
+        });
+    }
+
+    function introCutscene()
+    {
+        var state:PlayState = PlayState.instance;
+		var bfPos:Array<Float> = [state.currentStage.getBoyfriend().x - BF_OFFSETS[0], state.currentStage.getBoyfriend().y - BF_OFFSETS[1]];
+		var gfPos:Array<Float> = [state.currentStage.getGirlfriend().x, state.currentStage.getGirlfriend().y];
+		var sonicPos:Array<Float> = [state.currentStage.getDad().x - SONIC_OFFSETS[0], state.currentStage.getDad().y - SONIC_OFFSETS[1]];
+
+        state.currentStage.getBoyfriend().kill();
+        state.currentStage.getDad().kill();
+        state.currentStage.getGirlfriend().kill();
+        gfFloor.kill();
+
+        // Create the sprites for the cutscene.
+        gf = new FunkinSprite(gfPos[0] - 100, gfPos[1] - 1110).loadTextureAtlas("emeraldCoast/SUNSET/intro/GIRLFRIEND INTRO", "sonicjamx");
+		gf.zIndex = state.currentStage.getGirlfriend().zIndex + 2;
+		gf.shader = state.currentStage.getGirlfriend().shader;
+		state.currentStage.add(gf);
+
+        sonic = new FunkinSprite(sonicPos[0] - 425, sonicPos[1] - 345).loadTextureAtlas("emeraldCoast/SUNSET/intro/SONIC INTRO", "sonicjamx");
+		sonic.zIndex = state.currentStage.getDad().zIndex + 1;
+		sonic.shader = state.currentStage.getDad().shader;
+		state.currentStage.add(sonic);
+
+		bf = new FunkinSprite(bfPos[0] - 30, bfPos[1] - 375).loadTextureAtlas("emeraldCoast/SUNSET/intro/BOYFRIEND INTRO", "sonicjamx");
+		bf.zIndex = state.currentStage.getBoyfriend().zIndex + 1;
+		bf.shader = state.currentStage.getBoyfriend().shader;
+		state.currentStage.add(bf);
+
+        blast = new FlxSprite(-500, -250);
+        blast.frames = Paths.getSparrowAtlas("emeraldCoast/SUNSET/intro/massive blast");
+        blast.animation.addByPrefix("boom", "vfx export", 26, false);
+        blast.zIndex = bf.zIndex + 1;
+        state.currentStage.add(blast);
+
+        state.currentStage.refresh();
+
+        // Load the sounds for this cutscene.
+        var normalSounds:Array<FunkinSound> = [];
+        var eggmanSounds:Array<FunkinSound> = [];
+
+        for (folder in ["normal", "eggman"])
+        {
+            if (!cutsceneSoundPaths.exists(folder)) continue;
+
+            for (snd in cutsceneSoundPaths.get(folder))
+            {
+                // Path from Assets.list() is already full path, don't prepend library
+                switch (folder)
+                {
+                    case "normal": normalSounds.push(FunkinSound.load(snd, 1, false, true));
+                    case "eggman": eggmanSounds.push(FunkinSound.load(snd, 1, false, true));
+                }
+            }
+        }
+
+        sounds = sounds.concat(normalSounds).concat(eggmanSounds);
+
+        // After 0.5 seconds, play the cutscene sounds and animations.
+        var startTime:Float = 0.5;
+        new FlxTimer(timerManager).start(startTime, _ -> {
+			gf.animation.play("", true);
+			bf.animation.play("", true);
+			sonic.animation.play("", true);
+
+            for (snd in normalSounds) snd.play();
+
+            blast.animation.play("boom", true);
+		});
+
+        // The following couple of timers are specifically for camera events, with the center being gf's focus point.
+        var fr:Int = 26;
+
+        new FlxTimer(timerManager).start(startTime + 32 / fr, _ -> offsetCutsceneCamera(58, 20, 31 / fr, FlxEase.quadInOut, 0.85));
+        new FlxTimer(timerManager).start(startTime + 77 / fr, _ -> offsetCutsceneCamera(-81, 20, 21 / fr, FlxEase.quadOut));
+        new FlxTimer(timerManager).start(startTime + 137 / fr, _ -> offsetCutsceneCamera(142, 20, 51 / fr, FlxEase.quadInOut, 0.9));
+        new FlxTimer(timerManager).start(startTime + 199 / fr, _ -> offsetCutsceneCamera(-17, 20, 44 / fr, FlxEase.quadInOut));
+        new FlxTimer(timerManager).start(startTime + 309 / fr, _ -> offsetCutsceneCamera(16, 40, 36 / fr, FlxEase.quadOut));
+
+        new FlxTimer(timerManager).start(startTime + 358 / fr, _ -> offsetCutsceneCamera(-214.40, 52, 36 / fr, FlxEase.quadInOut));
+        new FlxTimer(timerManager).start(startTime + 414 / fr, _ -> offsetCutsceneCamera(-266, 52, 16 / fr, FlxEase.quadOut));
+        new FlxTimer(timerManager).start(startTime + 454 / fr, _ -> offsetCutsceneCamera(-22.4, 79.80, 18 / fr, FlxEase.quadInOut, 0.8));
+
+        new FlxTimer(timerManager).start(startTime + 484 / fr, _ -> offsetCutsceneCamera(5.35, 64.05));
+        new FlxTimer(timerManager).start(startTime + 488 / fr, _ -> FlxG.camera.shake(0.02, 13 / fr));
+        new FlxTimer(timerManager).start(startTime + 501 / fr, _ -> offsetCutsceneCamera(37.4, 15.65));
+        new FlxTimer(timerManager).start(startTime + 530 / fr, _ -> offsetCutsceneCamera(-110.4, 23.65, 29 / fr, FlxEase.quadInOut));
+        new FlxTimer(timerManager).start(startTime + 587 / fr, _ -> offsetCutsceneCamera(160.8, 93.2, 27 / fr, FlxEase.quadInOut, 0.9));
+        new FlxTimer(timerManager).start(startTime + 621 / fr, _ -> offsetCutsceneCamera(180.8, 93.2, 14 / fr, FlxEase.sineOut));
+        new FlxTimer(timerManager).start(startTime + 652 / fr, _ -> offsetCutsceneCamera(-343.8, 132, 64 / fr, FlxEase.sineInOut, 1));
+
+        // Switch to a different music midway through.
+        new FlxTimer(timerManager).start(startTime + 337 / fr, _ -> {
+            for (snd in eggmanSounds) snd.play();
+        });
+
+        // The cutscene lasts for 705 frames, so we should end it after that.
+        new FlxTimer(timerManager).start(startTime + 770 / fr, _ -> onCutsceneEnd());
+    }
+
+    function offsetCutsceneCamera(?x:Float, ?y:Float, ?duration:Float, ?ease:Float->Float, ?zoom:Float)
+    {
+        var gf:BaseCharacter = PlayState.instance.currentStage?.getGirlfriend();
+        var focusPoint:Array<Float> = [gf?.cameraFocusPoint?.x ?? 0, (gf?.cameraFocusPoint?.y ?? 0) - 100];
+
+        PlayState.instance.tweenCameraToPosition(focusPoint[0] + (x ?? 0), focusPoint[1] + (y ?? 0), duration ?? 0, ease ?? FlxEase.linear);
+
+        if (zoom != null)
+        {
+			PlayState.instance.tweenCameraZoom(zoom, duration, true, ease);
+        }
+    }
+
+    function skipCutscene()
+	{
+		// Cancel all timers.
+		timerManager.clear();
+
+		// Tween out the skip text.
+		FlxTween.globalManager.cancelTweensOf(skipText);
+		FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+
+		// Fade out the sound effects.
+		for (snd in sounds) snd.fadeOut(0.5, 0);
+
+		// Fade the camera. Afterwards fade it back in.
+		PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, () -> {
+			PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+
+			// Do some extra stuff after the cutscene ends.
+			onCutsceneEnd();
+		}, true);
+	}
+
+    function onCutsceneEnd()
+    {
+        // Make the game know we're not in a cutscene anymore.
+		PlayState.instance.disableKeys = false;
+		PlayState.instance.isInCutscene = false;
+		PlayState.instance.mayPauseGame = true;
+		PlayState.instance.startCountdown();
+
+		// Make the player unable to pause for a frame.
+    	PlayState.instance.justUnpaused = true;
+
+        // Stop the sounds completely.
+		while (sounds.length > 0)
+		{
+			var snd:FunkinSound = sounds.pop();
+			if (snd == null) continue;
+
+			snd.stop();
+		}
+
+        // Kill the cutscene sprites and revive the gameplay ones.
+        PlayState.instance.currentStage.getBoyfriend().revive();
+        PlayState.instance.currentStage.getDad().revive();
+        PlayState.instance.currentStage.getGirlfriend().revive();
+        gfFloor.revive();
+
+        sonic.kill();
+        bf.kill();
+        gf.kill();
+        blast.kill();
+
+		// Tween back the camHUD alpha.
+		tweenManager.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5);
+    }
+
+    function createBuzzBomber()
+    {
+        var buzzBomber:StageProp = allBadniks.recycle(null, () -> new StageProp());
+        buzzBomber.frames = badnikFrames;
+
+        buzzBomber.animation.addByPrefix("idle", "BUZZBOMBER Charged instance 1", 24, true);
+        buzzBomber.animation.addByPrefix("idleNoCharge", "BUZZBOMBER Idle instance 1", 24, true);
+        buzzBomber.animation.addByPrefix("attack", "buzzbomber attack instance 1", 24, false);
+        buzzBomber.animation.addByPrefix("flicky", "flicky flying loop instance 1", 24, true);
+        buzzBomber.animation.play("idle");
+
+        // After the buzz bomber is done attacking, make it fly off by tweening it to the end of the screen.
+        buzzBomber.animation.onFinish.add(function(name:String)
+        {
+            if (name == "attack")
+            {
+                buzzBomber.animation.play("idleNoCharge");
+                tweenManager.tween(buzzBomber, {x: buzzBomber.x + 5000}, BOMBER_FLY_TIME,
+                {
+                    onComplete: _ -> {
+                        buzzBomber.kill();
+                    }
+                });
+            }
+        });
+
+        buzzBomber.flipX = true;
+        buzzBomber.scale.set(0.65, 0.65);
+        buzzBomber.updateHitbox();
+
+        // Make the buzz bomber render above Sonic.
+        var stage:Stage = PlayState.instance.currentStage;
+
+        var dadData:StageDataCharacter = stage._data.characters.dad;
+        if (dadData != null)
+        {
+            buzzBomber.zIndex = dadData.zIndex + 5;
+        }
+
+        // Position the buzz bomber according to Boyfriend.
+        var bfData:StageDataCharacter = stage._data.characters.bf;
+        if (bfData != null)
+        {
+            buzzBomber.x = bfData.position[0] - 275;
+            buzzBomber.y = bfData.position[1] - 800;
+        }
+
+        allBadniks.add(buzzBomber);
+        stage.addProp(buzzBomber);
+        stage.refresh();
+
+        return buzzBomber;
+    }
+
+    function createGroundnik()
+    {
+        var badnik:StageProp = allBadniks.recycle(null, () -> new StageProp());
+        var randomBadnik:String = POSSIBLE_SONIC_BADNIKS[FlxG.random.int(0, POSSIBLE_SONIC_BADNIKS.length - 1)];
+        var randomMobian:String = POSSIBLE_SONIC_MOBIANS[FlxG.random.int(0, POSSIBLE_SONIC_MOBIANS.length - 1)];
+
+        trace("[SonicJam] Spawning a Badnik " + randomBadnik + ".");
+
+        badnik.frames = badnikFrames;
+
+        badnik.animation.addByPrefix("badnik", randomBadnik, 24, true);
+        badnik.animation.addByPrefix("mobian", randomMobian, 24, true);
+        badnik.animation.play("badnik");
+        badnik.scale.set(0.65, 0.65);
+        badnik.updateHitbox();
+
+        // Position badniks according to the dad character (Sonic).
+        var stage:Stage = PlayState.instance.currentStage;
+        var dadData:StageDataCharacter = stage?._data?.characters?.dad;
+        if (dadData != null)
+        {
+            badnik.x = (stage.getDad()?.originalPosition?.x ?? 0) + 200;
+            badnik.y = dadData.position[1] - badnik.height + 60;
+        }
+
+        badnik.zIndex = (stage.getBoyfriend()?.zIndex ?? 300) + 1;
+
+        allBadniks.add(badnik);
+        stage.addProp(badnik);
+        stage.refresh();
+
+        return badnik;
+    }
+
+    public function onSongRetry(event:SongRetryEvent)
+	{
+		super.onSongRetry(event);
+
+		hasPlayedStartingCutscene = true;
+		cutsceneSkipped = true;
+		canSkipCutscene = false;
+	}
+
+    public function onSongLoaded(event:SongLoadScriptEvent)
+    {
+        super.onSongLoaded(event);
+        tweenManager.clear();
+        timerManager.clear();
+
+        // Kill off any remaining badniks.
+        for (spr in (allBadniks?.members ?? []))
+        {
+            PlayState.instance.currentStage.remove(spr);
+            spr.kill();
+        }
+
+        // Reset a bunch of arrays and sprites.
+        flickyExplosion?.kill();
+        playerExplosion?.kill();
+        timingsSonicJump.splice(0, timingsSonicJump.length);
+        timingsBuzzBomber.splice(0, timingsBuzzBomber.length);
+        queuedBuzzBombers.splice(0, queuedBuzzBombers.length);
+
+        // Set the last beat to the starting one for the cooldown.
+        lastBadnikSpawnBeat = BADNIK_SPAWN_START;
+
+        // Add buzz bombers.
+        if (PlayState.instance.currentStage != null) // Do not add buzz bombers if there isn't a stage to add them to.
+        {
+            for (note in event.notes)
+            {
+                if (note.time < PlayState.instance.startTimestamp) continue; // Exclude notes before song starts.
+
+                switch (note.kind)
+                {
+                    case "gigglyman-hit":
+                        // For gigglyman hit notes bf should throw his mic and we should spawn a Buzz Bomber.
+                        timingsBuzzBomber.push(note.time - (BOMBER_FLY_TIME * 1000));
+
+                    case "eggmanSing":
+                        // For eggman sing notes, spawn a badnik if the spawn badnik param is set to 1.
+                        if (note.params[1]?.value == 1) timingsSonicJump.push(note.time - (BADNIK_MOVE_TIME * 1000));
+                }
+            }
+        }
+
+        trace("[SonicJam] Found " + timingsBuzzBomber.length + " timings for the buzz bomber to appear.");
+    }
+
+    function hasBeatenSonicWeek()
+    {
+        // Save.instance.hasBeatenWeek will always return true for now.
+        for (diff in Constants.DEFAULT_DIFFICULTY_LIST)
+        {
+            if ((Save.instance.getLevelScore('sonicWeek', diff)?.score ?? 0) > 0) return true;
+        }
+
+        return false;
+    }
+}

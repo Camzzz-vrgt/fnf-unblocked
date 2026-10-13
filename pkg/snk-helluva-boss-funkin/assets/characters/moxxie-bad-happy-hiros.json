@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				7,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "beiblei",
+			"indices": [],
+			"name": "Spin"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BadMoxxieHappy Spin",
+	"position": [
+		100,
+		195
+	],
+	"healthicon": "badmoxxie",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		60,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

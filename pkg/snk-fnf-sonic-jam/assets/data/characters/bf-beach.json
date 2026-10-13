@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend (Beach)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/bf_beach",
+  "flipX": true,
+	"healthIcon": {"id": "bf"},
+  "singTime": 8.0,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BF idle dance instance 1",
+      "offsets": [-5, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BF NOTE LEFT instance 1",
+      "offsets": [12, -6]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BF NOTE DOWN instance 1",
+      "offsets": [-10, -50]
+    },
+    {
+      "name": "singUP",
+      "prefix": "BF NOTE UP instance 1",
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BF NOTE RIGHT instance 1",
+      "offsets": [-38, -7]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS instance 1",
+      "offsets": [12, 24]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS instance 1",
+      "offsets": [-11, -19]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS instance 1",
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS instance 1",
+      "offsets": [-30, 21]
+    },
+    {
+      "name": "preAttack",
+      "prefix": "bf pre attack instance 1",
+      "assetPath": "characters/bf beach battle",
+      "offsets": [-30, -40]
+    },
+    {
+      "name": "attack",
+      "prefix": "boyfriend attack instance 1",
+      "assetPath": "characters/bf beach battle",
+      "offsets": [300, 260]
+    },
+    {
+      "name": "kick",
+      "prefix": "BF kick",
+      "assetPath": "characters/bf beach kick",
+      "offsets": [0, -15]
+    },
+    {
+      "name": "dodge",
+      "prefix": "boyfriend dodge instance 1",
+      "assetPath": "characters/bf beach battle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "dodge-hold",
+      "prefix": "boyfriend dodge instance 1",
+      "frameIndices": [10, 11, 12],
+      "looped": true,
+      "assetPath": "characters/bf beach battle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY!! instance 1",
+      "offsets": [7, 4]
+    },
+    {
+      "name": "hit",
+      "prefix": "BF hit instance 1",
+      "assetPath": "characters/bf beach battle",
+      "offsets": [15, 15]
+    },
+    {
+      "name": "hit-hold",
+      "prefix": "BF hit instance 1",
+      "frameIndices": [10, 11],
+      "looped": true,
+      "assetPath": "characters/bf beach battle",
+      "offsets": [15, 15]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "BF dies",
+      "assetPath": "characters/bf beach death",
+      "offsets": [-37, 11]
+    },
+    {
+      "name": "fakeoutDeath",
+      "prefix": "BF dies",
+      "offsets": [-37, 11]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "BF Dead Loop",
+      "looped": true,
+      "assetPath": "characters/bf beach death",
+      "offsets": [-37, 5]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "BF Dead confirm",
+      "assetPath": "characters/bf beach death",
+      "offsets": [-37, 69]
+    },
+    {
+      "name": "firstDeath-buzzbomber",
+      "prefix": "BF Badnik Death instance 1",
+      "offsets": [80, 135],
+      "assetPath": "characters/bf beach badnik death"
+    },
+    {
+      "name": "deathLoop-buzzbomber",
+      "prefix": "BF Badnik Death Loop instance 1",
+      "offsets": [72, 91],
+      "assetPath": "characters/bf beach badnik death",
+      "looped": true
+    },
+    {
+      "name": "deathConfirm-buzzbomber",
+      "prefix": "BF Badnik Death Confirm instance 1",
+      "offsets": [73, 102],
+      "assetPath": "characters/bf beach badnik death"
+    },
+    {
+      "name": "scared",
+      "prefix": "BF idle shaking",
+      "offsets": [-4, 0]
+    },
+    {
+      "name": "waiting",
+      "prefix": "bf coast wait instance 1",
+      "assetPath": "characters/BoyFriend beach waiting",
+      "offsets": [16, 15]
+    }
+  ]
+}

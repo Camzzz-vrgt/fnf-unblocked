@@ -1,0 +1,41 @@
+{
+    "version": "1.0.0",
+    "name": "Girlfriend (Beach, Floor)",
+    "assetPath": "characters/gf_beach_floor",
+    "startingAnimation": "danceRight",
+    "singTime": 8.0,
+    "offsets": [115, 25],
+    "animations": [
+        {
+            "name": "danceLeft",
+            "prefix": "gf danceleft",
+            "offsets": [101, 15]
+        },
+        {
+            "name": "danceRight",
+            "prefix": "gf danceright",
+            "offsets": [101, 15]
+        },
+        {
+            "name": "sad",
+            "prefix": "gf cry",
+            "offsets": [117, 9]
+        },
+        {
+            "name": "cheer",
+            "prefix": "gf cheer",
+            "offsets": [82, 49]
+        },
+        {
+            "name": "combo50",
+            "prefix": "gf cheer",
+            "offsets": [82, 49]
+        },
+        {
+            "name": "drop70",
+            "prefix": "gf cry",
+            "offsets": [117, 9]
+        }
+    ]
+
+}

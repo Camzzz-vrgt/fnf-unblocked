@@ -1,0 +1,78 @@
+{
+  "animations": [
+    {
+      "loop": false,
+      "offsets": [
+        180,
+        -32
+      ],
+      "anim": "idle",
+      "fps": 24,
+      "name": "Idle",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        180,
+        -142
+      ],
+      "anim": "singDOWN",
+      "fps": 24,
+      "name": "Down",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        180,
+        -44
+      ],
+      "anim": "singUP",
+      "fps": 24,
+      "name": "Up",
+      "indices": []
+    },
+    {
+      "offsets": [
+        180,
+        -28
+      ],
+      "loop": false,
+      "fps": 24,
+      "anim": "singLEFT",
+      "indices": [],
+      "name": "Right"
+    },
+    {
+      "offsets": [
+        180,
+        -75
+      ],
+      "loop": false,
+      "fps": 24,
+      "anim": "singRIGHT",
+      "indices": [],
+      "name": "Left"
+    }
+  ],
+  "no_antialiasing": false,
+  "image": "characters/Bodoque",
+  "position": [
+    0,
+    0
+  ],
+  "healthicon": "bodoque",
+  "flip_x": false,
+  "healthbar_colors": [
+    203,
+    17,
+    27
+  ],
+  "camera_position": [
+    -330,
+    0
+  ],
+  "sing_duration": 4,
+  "scale": 1
+}

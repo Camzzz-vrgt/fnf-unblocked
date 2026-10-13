@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "idles",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "lefts",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "downs",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				240
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ups",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-220,
+				40
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rights",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/alastorph2",
+	"position": [
+		-100,
+		-100
+	],
+	"healthicon": "alastor",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		33,
+		81
+	],
+	"camera_position": [
+		-100,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

@@ -1,0 +1,148 @@
+{
+  "version": "1.0.2",
+  "name": "Emerald Coast (Sunset)",
+  "props": [
+    {
+      "assetPath": "emeraldCoast/SUNSET/SkySunset",
+      "name": "sky",
+      "position": [-808, -357],
+      "scale": 1.05,
+      "scroll": [0.2, 0.2],
+      "zIndex": 1
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/SpaceSunset",
+      "name": "cosmos",
+      "alpha": 1,
+      "position": [-790, -400],
+      "scale": 1,
+      "scroll": [0.2, 0.5],
+      "zIndex": 2
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/StarsSunset",
+      "name": "stars",
+      "alpha": 0.95,
+      "blend": "add",
+      "position": [-1032, -312],
+      "scale": 1,
+      "scroll": [0.2, 0.2],
+      "zIndex": 3
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/SunSunset",
+      "name": "sun",
+      "position": [255.5, 330.5],
+      "scale": 1.05,
+      "scroll": [0.2, 0.2],
+      "zIndex": 4
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/eggman",
+      "name": "eggman",
+      "position": [2573, 281],
+      "scale": 0.075,
+      "scroll": [0.2, 0.2],
+      "zIndex": 6
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/CloudSunset",
+      "name": "clouds",
+      "position": [-527, -100],
+      "scale": 1.05,
+      "scroll": [0.2, 0.2],
+      "zIndex": 7
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/AIZSunset",
+      "name": "island",
+      "position": [1195, -157],
+      "scale": 0.9,
+      "scroll": [0.3, 0.3],
+      "zIndex": 10
+    },
+    {
+      "animType": "sparrow",
+      "animations": [
+        {
+          "looped": true,
+          "name": "idle",
+          "prefix": "BaySunset"
+        }
+      ],
+      "assetPath": "emeraldCoast/SUNSET/BaySunset",
+      "name": "bay",
+      "position": [-807, 118],
+      "scale": 1.05,
+      "scroll": [0.5, 0.5],
+      "startingAnimation": "idle",
+      "zIndex": 12
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/BoatSunset",
+      "name": "ship",
+      "position": [1174.5, 399.5],
+      "scale": 1.05,
+      "scroll": [0.5, 0.5],
+      "startingAnimation": "",
+      "zIndex": 13
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/HillSunset",
+      "name": "hill",
+      "position": [-813, -311],
+      "scale": 1.05,
+      "scroll": [1.1, 1.1],
+      "startingAnimation": "",
+      "zIndex": 14
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/BeachSunset",
+      "name": "beach",
+      "position": [-809, 388],
+      "scale": 1.05,
+      "scroll": [1, 1],
+      "zIndex": 15
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/SunGlowSunset",
+      "name": "sunglow",
+      "alpha": 1,
+      "blend": "add",
+      "position": [-1032, -400],
+      "scale": 1,
+      "scroll": [0.2, 0.2],
+      "zIndex": 11
+    },
+    {
+      "assetPath": "emeraldCoast/SUNSET/GlowSunset",
+      "name": "glow",
+      "alpha": 0.17,
+      "blend": "add",
+      "position": [-783, -312],
+      "scale": 1,
+      "scroll": [0.2, 0.2],
+      "startingAnimation": "",
+      "zIndex": 400
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-100, -150],
+      "position": [1140.5, 904],
+      "zIndex": 300
+    },
+    "dad": {
+      "cameraOffsets": [400, -150],
+      "position": [361.5, 894],
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [0, 70],
+      "position": [746.5, 788],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.7,
+  "directory": "sonicjamx"
+}

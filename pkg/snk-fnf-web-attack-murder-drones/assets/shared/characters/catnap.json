@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				419
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Catnap_Rigth",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				490,
+				507
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Catnap_Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-26,
+				621
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Catnap_Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				309,
+				291
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Catnap_Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				240,
+				480
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Catnap Dance Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/catnap",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "catnap",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		35,
+		60
+	],
+	"camera_position": [
+		-570,
+		-450
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

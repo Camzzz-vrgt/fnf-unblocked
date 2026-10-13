@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Scarecrow Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Scarecrow Left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Scarecrow Right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Scarecrow Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Scarecrow Up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Scarecrow",
+	"position": [
+		0,
+		-270
+	],
+	"healthicon": "calabaza",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		20,
+		0
+	],
+	"camera_position": [
+		-380,
+		800
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

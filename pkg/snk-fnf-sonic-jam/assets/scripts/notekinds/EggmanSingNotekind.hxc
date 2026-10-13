@@ -1,0 +1,68 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+
+class EggmanSingNoteKind extends NoteKind
+{
+    public function new()
+    {
+        var noteParams:Array<Dynamic> = [
+            {
+                name: "suffix",
+                description: "Suffix",
+                type: "String",
+                data: null
+            },
+            {
+                name: "spawnBadnik",
+                description: "Spawn Badnik?",
+                type: "Int",
+                data: {
+                    min: 0,
+                    max: 1
+                }
+            }
+        ];
+
+        super("eggmanSing", "Eggman Sing", null, noteParams);
+
+        // Set the params here since they don't really work in the super constructor.
+        this.params = noteParams;
+    }
+
+    public function onNoteHit(event:HitNoteScriptEvent)
+    {
+        if (event.eventCanceled)
+        {
+            // onNoteHit event was cancelled by the gameplay module.
+            return;
+        }
+
+        super.onNoteHit(event);
+
+        // If the spectator character is Eggman, make the character sing.
+        var gf:Null<BaseCharacter> = PlayState.instance?.currentStage?.getGirlfriend();
+        if (gf?.characterId != "eggman") return;
+
+        gf.playSingAnimation(event.note.noteData.getDirection(), false, event.note.params[0]?.value ?? "");
+        gf.holdTimer = 0;
+    }
+
+    public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+
+        // Don't do Eggman updating if not present.
+        var gf:Null<BaseCharacter> = PlayState.instance?.currentStage?.getGirlfriend();
+        if (gf?.characterId != "eggman") return;
+
+        // Make sure Eggman holds his notes until the end.
+		for (holdNote in PlayState.instance.opponentStrumline.holdNotes.members)
+		{
+			if (holdNote == null || !holdNote.alive) continue;
+
+			// While the hold note is being hit, and there is length on the hold note...
+			if (holdNote.hitNote && !holdNote.missedNote && holdNote.sustainLength > 0 && gf.isSinging())
+				gf.holdTimer = 0;
+		}
+    }
+}

@@ -1,0 +1,94 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sonic The Hedgehog",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraZoom": 1,
+		"cameraOffsets": [
+			10,
+			-40
+		]
+	},
+	"healthIcon": {
+		"id": "sonic"
+	},
+	"assetPath": "characters/sonic/sonic",
+	"animations": [
+		{
+			"offsets": [59, 0],
+			"prefix": "sonic idle dance",
+			"name": "idle"
+		},
+		{
+			"offsets": [140, 4],
+			"assetPath": "characters/sonic/sonic_waiting",
+			"prefix": "sonic idle waiting",
+			"name": "waiting"
+		},
+		{
+			"offsets": [15, -40],
+			"prefix": "sonic note left",
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [173, 25],
+			"prefix": "sonic note right",
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [95, -40],
+			"prefix": "sonic note down",
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [142, 47],
+			"prefix": "sonic note up",
+			"name": "singUP"
+		},
+		{
+			"offsets": [152, -5],
+			"assetPath": "characters/sonic/attacks/sonic kick",
+			"prefix": "sonic kick instance 1",
+			"name": "kick"
+		},
+		{
+			"offsets": [46, 4],
+			"assetPath": "characters/sonic/attacks/sonic punch",
+			"prefix": "sonic punch instance 1",
+			"name": "punch"
+		},
+		{
+			"offsets": [10, -190],
+			"assetPath": "characters/sonic/attacks/sonic jump",
+			"prefix": "sonic jumpball",
+			"name": "jump",
+			"looped": true
+		},
+		{
+			"offsets": [78, -8],
+			"assetPath": "characters/sonic/sonic_cheer",
+			"prefix": "sonic hey!!0",
+			"name": "hey"
+		},
+		{
+			"offsets": [119, 0],
+			"assetPath": "characters/sonic/taunts/sonic pre taunt",
+			"prefix": "sonic pre taunt instance 1",
+			"name": "preTaunt"
+		}
+	]
+}

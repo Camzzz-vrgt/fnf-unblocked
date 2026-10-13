@@ -1,0 +1,103 @@
+import flixel.text.FlxTextBorderStyle;
+import flixel.text.FlxText;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.util.Constants;
+
+class PicoSonicSong extends Song 
+{
+  var blackBG:FlxSprite;
+  var warningTxt:FlxText;
+
+	public function new() 
+  {
+		super('pico', 
+    {
+      variation: "sonic"
+    });
+	}
+
+  public function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    // Initialize the warning sprites.
+    var state:PlayState = PlayState.instance;
+
+    blackBG = new FlxSprite().makeGraphic(1, 1, 0xFF000000);
+    blackBG.scale.set(FlxG.width, FlxG.height);
+    blackBG.updateHitbox();
+    blackBG.screenCenter();
+    blackBG.cameras = [state.camHUD];
+    blackBG.zIndex = 9000;
+    blackBG.kill();
+    state.add(blackBG);
+
+    var device:String = (FlxG.onMobile ? "phone" : "computer");
+    warningTxt = new FlxText(0, 0, FlxG.width, "Your " + device + " is unable to process to the immense amounts of notes flying around the screen at this time.\n\nThe genocide will be over in just a moment.\nThank you.");
+    warningTxt.setFormat(Paths.font('vcr.ttf'), 48, 0xFFFFFFFF, "center", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    warningTxt.screenCenter();
+    warningTxt.cameras = [state.camHUD];
+    warningTxt.zIndex = 9001;
+    warningTxt.kill();
+    state.add(warningTxt);
+
+    state.refresh();
+  }
+
+  public function onStepHit(event:SongTimeScriptEvent)
+  {
+    super.onStepHit(event);
+
+    // Revive/kill the warning stuff based on the event step.
+    switch (event.step)
+    {
+      case 20:
+        blackBG.revive();
+        warningTxt.revive();
+
+      case 32:
+        blackBG.kill();
+        warningTxt.kill();
+    }
+  }
+
+  public function onSongRetry(event:SongRetryEvent)
+  {
+    super.onSongRetry(event);
+
+    // Kill the warning stuff.
+    blackBG.kill();
+    warningTxt.kill();
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+	}
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    var superList = super.listAltInstrumentalIds(difficultyId, variationId);
+    var list:Array<String> = [];
+    if (superList != null) {
+        for (item in superList) {
+            list.push(item);
+        }
+    }
+    
+    var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+    var hasBeatenSonicMix = Save.instance.hasBeatenSong(this.id, null, 'sonic');
+    if (!hasBeatenSonicMix) return [];
+
+    if (Constants.DEFAULT_DIFFICULTY_LIST.contains(difficultyId))
+    {
+      if (!hasBeatenPicoMix) list.remove("pico");
+    }
+    
+    return list;
+  }
+}

@@ -1,0 +1,118 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "HGrayIdle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-9
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27
+			],
+			"name": "HGrayIdle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				220,
+				-28
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "HGrayLeft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-58
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "HGrayDown0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				81
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "HGrayUp0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "HGrayRight0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/HGrayAggressive",
+	"position": [
+		120,
+		150
+	],
+	"healthicon": "hgray",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		31,
+		95
+	],
+	"camera_position": [
+		-60,
+		70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

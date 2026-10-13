@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				120,
+				-160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				159,
+				-173
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				127,
+				-147
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				144,
+				25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-133
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": " right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dollSolver",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "doll2",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		55,
+		35
+	],
+	"camera_position": [
+		-30,
+		130
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

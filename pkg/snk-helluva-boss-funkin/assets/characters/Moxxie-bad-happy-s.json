@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Bad Moxxie Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Bad Moxxie Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Bad Moxxie Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Bad Moxxie Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Bad Moxxie Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				14
+			],
+			"anim": "fueralaweba",
+			"fps": 24,
+			"name": "Bad Moxxie Get Up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bad Moxxie Happy Start",
+	"position": [
+		100,
+		195
+	],
+	"healthicon": "badmoxxie",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		60,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

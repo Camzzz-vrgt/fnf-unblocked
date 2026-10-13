@@ -1,0 +1,157 @@
+import flixel.math.FlxMath;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTweenManager;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.CharacterType;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.Conductor;
+
+class emeraldCoastSunsetStage extends Stage
+{
+	var SHIP_SWING_ANGLE:Float = 3.5; // The ship will swing between this and the negative of this angle.
+	var SHIP_SWING_TIME:Float = 4.5; // How many seconds does it take for the ship to swing.
+
+	var characterShading:AdjustColorShader;
+	var objShading:AdjustColorShader;
+
+	var totalElapsed:Float = 0.0;
+	var islandStartY:Float = 0.0;
+	var shipTweenMan:FlxTweenManager = new FlxTweenManager();
+
+	var eggmanStartBeat:Int = -1;
+	var eggmanIsUp:Bool = true;
+	var eggmanAltitudeClock:Float = 0;
+
+	public function new()
+	{
+		super('emeraldCoastSunset');
+	}
+
+	public function onCreate(event:ScriptEvent):Void
+	{
+	    // inicializar los shaders antes de que se cree el stage
+        characterShading = new AdjustColorShader();
+    	characterShading.brightness = -11;
+    	characterShading.contrast = -20;
+    	characterShading.saturation = 2;
+    	characterShading.hue = -6;
+    	
+    	objShading = new AdjustColorShader();
+    	objShading.contrast = -28;
+    	objShading.saturation = 10;
+    	objShading.hue = -9;
+    	objShading.brightness = -3;
+    	
+		super.onCreate(event);
+
+		var ship:FlxSprite = getNamedProp("ship");
+		ship.origin.y = ship.frameHeight * 0.75; // This should put the rotational center to the ship body and not to the sail.
+		ship.angle = -SHIP_SWING_ANGLE;
+		shipTweenMan.tween(ship, {angle: SHIP_SWING_ANGLE}, SHIP_SWING_TIME,
+		{
+			type: 4, // Pingpong
+			ease: FlxEase.quadInOut
+		});
+
+		eggmanStartBeat = -1; // Setting this to -1 makes 
+	}
+
+	public function onSongStart(event:ScriptEvent)
+	{
+		super.onSongStart(event);
+	
+		// Make the beat Eggman should start moving in random between 0 and near the end of the song.
+		// Don't do this if a beat has already been chosen.
+		if (eggmanStartBeat >= 0) return;
+
+		var endBeat:Int = Conductor.instance.getTypeLengthAtMs(FlxG.sound.music.length) - 16;
+		eggmanStartBeat = FlxG.random.int(0, endBeat);
+	}
+
+    // no necesita override?? raron
+    public function addProp(prop:StageProp, ?name:String = null):Void
+    {
+        super.addProp(prop, name);
+        
+        prop.shader = objShading;
+    }
+    
+    public function addBopper(bopper:Bopper, ?name:String = null):Void
+    {
+        super.addBopper(bopper, name);
+        
+        bopper.shader = objShading;
+    }
+    
+	public function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+	{
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		character.shader = characterShading;
+
+		// If the current song is Gigglyman, offset the characters to match the cutscene.
+		if (PlayState.instance.currentSong.id == "gigglyman")
+		{
+			switch (charType)
+			{
+				case CharacterType.BF:
+					var offsets:Array<Float> = PlayState.instance.currentSong.BF_OFFSETS ?? [0, 0];
+					character.x += offsets[0];
+					character.y += offsets[1];
+					character.originalPosition.set(character.x, character.y);
+
+				case CharacterType.DAD:
+					var offsets:Array<Float> = PlayState.instance.currentSong.SONIC_OFFSETS ?? [0, 0];
+					character.x += offsets[0];
+					character.y += offsets[1];
+					character.originalPosition.set(character.x, character.y);
+
+				default:
+					// Do nothing.
+			}
+		}
+	}
+
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+		shipTweenMan.update(event?.elapsed ?? 0);
+
+		totalElapsed += (event?.elapsed ?? 0);
+		getNamedProp("island").y = islandStartY + Math.cos(totalElapsed) * 15;
+
+		// Update the Eggman altitude clock, and if it's above a fraction of a second, toggle his altitude between up and down.
+		// Only do this on Windbreak.
+		if (PlayState.instance.currentSong.id == "windbreak")
+		{
+			eggmanAltitudeClock += (event?.elapsed ?? 0);
+
+			if (eggmanAltitudeClock >= 0.25)
+			{
+				eggmanAltitudeClock = 0;
+				eggmanIsUp = !eggmanIsUp;
+
+				getNamedProp("eggman").y += 5 * (eggmanIsUp ? 1 : -1);
+			}
+		}
+	}
+
+	public function onBeatHit(event:SongTimeScriptEvent)
+	{
+		super.onBeatHit(event);
+
+		// If the song is Windbreak and the beat to start moving to is reached, make the Eggman sillouette start going to the left.
+		var state:PlayState = PlayState.instance;
+		if (state.currentSong.id != "windbreak") return;
+
+		if ((event.beat != eggmanStartBeat && eggmanStartBeat >= 0) || eggmanStartBeat < 0) return;
+
+		var eggman:StageProp = getNamedProp("eggman");
+		eggman.active = true;
+		eggman.velocity.x = -125;
+	}
+}

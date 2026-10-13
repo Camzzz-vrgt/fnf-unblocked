@@ -1,0 +1,554 @@
+import flixel.tweens.FlxTween;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.graphics.shaders.HSVShader;
+import funkin.mobile.input.ControlsHandler;
+import funkin.modding.module.Module;
+import funkin.modding.ModStore;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.util.Constants;
+import funkin.util.HapticUtil;
+import funkin.util.InputUtil;
+import funkin.util.MathUtil;
+import funkin.ui.options.ControlsMenu;
+import funkin.ui.options.OptionsState;
+import funkin.ui.AtlasText;
+import funkin.ui.ButtonStyle;
+import funkin.ui.Prompt;
+import funkin.ui.TextMenuItem;
+import funkin.Conductor;
+import funkin.Highscore;
+import funkin.Preferences;
+import thx.Iterators;
+import StringTools;
+
+// Note to self: how this mechanic works
+// - Check sections when sonic isn't singing
+// - If true, every second beat make it so that sonic can taunt
+// - Also punish spamming
+class SonicTauntMechanic extends Module
+{
+    // Ordered by minCombo => data
+    // spr: the sprite to use (in ui/popup/funkin/)
+    // score: how much score to earn from each taunt
+    var RATING_DATAS:IntMap =
+    [
+      0 => {spr: "shoot", score: 500},
+      4 => {spr: "nice", score: 1000},
+      12 => {spr: "jammin", score: 5000},
+      60 => {spr: "perfect", score: 10000}
+    ];
+
+    // The percentage of the maxCombo needed for the rank to be validated.
+    var MIN_COMBO_REQUIRED:Float = 0.6; // 60%, which means that the maximum combo has to be at least 60 in the case of 100 taunt opportunities
+
+    var SAVE_KEY_KEYBIND:String = "sonicJamTauntKeybind"; // Where the keybind for the taunt mechanic is located in the save file.
+    var SAVE_KEY_TAUNTED:String = "sonicJamHasTaunted"; // What the indicator that the player has taunted this session is saved as.
+    var SAVE_DEFAULT_VALUE:Array<Int> = [32, 0]; // Default keybinds for the taunt mechanic (space, empty).
+    var UNBOUND_TEXT:String = "---"; // The text to display if there isn't a key bound.
+
+    var isPlayerSonic(get, never):Bool;
+    var isTauntingAvailable(get, never):Bool;
+
+    var tauntGrafix:FlxSprite;
+
+    var tauntPenaltyEnabled:Bool = false; // Enable this when taunting is 100% done and dusted!
+
+    var lastNote:NoteSprite = null; // This is used to determine when we can taunt.
+    var shouldTaunt:Bool = false;
+    var couldTauntLastBeat:Bool = false;
+    var potentialTauntTimes:Int = 0;
+
+    var tauntAnims:Array<String> = [];
+    var tauntCombo:Int = 0;
+    var maxTauntCombo:Int = 0;
+    var tauntScoreEarn:Int = RATING_DATAS[0]?.score ?? 10;
+    var shouldDisplayPopup:Bool = true;
+
+    var rebindPrompt:Prompt;
+    var keyUsedToEnterPrompt:Null<Int> = null;
+    var storedIndex:Int = -1;
+
+    public function new()
+    {
+        super("SonicTauntMechanic");
+
+        // Set the save key to use the default values, if the player doesn't have any.
+        if (!Save.instance.modOptions.exists(SAVE_KEY_KEYBIND))
+        {
+            Save.instance.modOptions.set(SAVE_KEY_KEYBIND, SAVE_DEFAULT_VALUE);
+        }
+    }
+
+    override public function onSongLoaded(event:SongLoadScriptEvent)
+    {
+        super.onSongLoaded(event);
+        tauntAnims = [];
+        if (!isPlayerSonic) return;
+
+        var state:PlayState = PlayState.instance;
+        for (anim in state.currentStage.getBoyfriend()._data.animations)
+        {
+            if (StringTools.startsWith(anim.name, "taunt")) tauntAnims.push(anim.name);
+
+            if (!state.currentStage.getBoyfriend().ignoreExclusionPref.contains(anim.name))
+                state.currentStage.getBoyfriend().ignoreExclusionPref.push(anim.name);
+        }
+
+        // Create the taunt grafix sprite.
+        tauntGrafix = new FlxSprite().loadGraphic(Paths.image("tauntGrafix-" + (FlxG.onMobile ? "mobile" : "desktop")));
+        tauntGrafix.setGraphicSize(0, Std.int(FlxG.height / 3));
+        tauntGrafix.updateHitbox();
+        tauntGrafix.screenCenter();
+        tauntGrafix.active = false;
+        tauntGrafix.zIndex = 990;
+        tauntGrafix.alpha = 0;
+        tauntGrafix.camera = state.camHUD;
+
+        // Offset the graphic by preferences.
+        var useMobileLayout:Bool = FlxG.onMobile && !ControlsHandler.usingExternalInputDevice && Preferences.controlsScheme == "Arrows";
+        if (Preferences.downscroll || useMobileLayout)
+        {
+            tauntGrafix.y -= 175;
+        }
+        else
+        {
+            tauntGrafix.y += 175;
+        }
+
+        state.add(tauntGrafix);
+        state.refresh();
+
+        trace("[SonicJam] Found " + tauntAnims.length + " taunting animations.");
+    }
+
+    override public function onSongEnd(event:ScriptEvent)
+    {
+        super.onSongEnd(event);
+        if (!isPlayerSonic) return;
+
+        trace("[SonicJam] Done taunting! Max taunt combo was: " + maxTauntCombo + " times out of the " + Math.floor(potentialTauntTimes * MIN_COMBO_REQUIRED) + " requirement.");
+
+        if (!tauntPenaltyEnabled) return; // Don't penalize if not enabled.
+
+        var isEnoughTaunts:Bool = (maxTauntCombo >= Math.floor(potentialTauntTimes * MIN_COMBO_REQUIRED));
+
+        // Play the corresponding animation of amy and tails (or whoever is the girlfriend character) depending on if the player taunted enough times.
+        PlayState.instance.currentStage?.getGirlfriend()?.playAnimation((isEnoughTaunts ? "cheer" : "sad"), true, true);
+
+        // Penalize the player if they haven't gotten enough taunts.
+        // The penalty is adding upon the total notes until the rank is a Good (or Loss).
+        if (!isEnoughTaunts)
+        {
+            var sicks:Int = Highscore.tallies.sick;
+            var goods:Int = Highscore.tallies.good;
+            var missed:Int = Highscore.tallies.missed;
+            while ((sicks + goods - missed) / Highscore.tallies.totalNotes >= Constants.RANK_GREAT_THRESHOLD)
+                Highscore.tallies.totalNotes += 1;
+        }
+    }
+
+    override public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+
+        // If we're in the options state, update the keybind prompt stuff.
+        if (Std.isOfType(FlxG.state, OptionsState))
+        {
+            updateOptions();
+            return;
+        }
+
+        if (!isPlayerSonic)
+        {
+            // Not Sonic, reset stuff.
+            resetStuff();
+            return;
+        }
+
+        var state:PlayState = PlayState.instance;
+        if (state.isGamePaused) return;
+
+        // Make the grafix visible if the player doesn't already know how to taunt.
+        var destAlpha:Float = (ModStore.get(SAVE_KEY_TAUNTED) == null && isTauntingAvailable ? 1 : 0);
+        if (tauntGrafix != null) tauntGrafix.alpha = MathUtil.smoothLerpPrecision(tauntGrafix.alpha, destAlpha, event?.elapsed ?? 0, 0.75);
+
+        if (isTauntingAvailable)
+        {
+            var inputPressed:Bool = false;
+
+            // If on botplay, automatically press taunt on every beat.
+            if (shouldTaunt && state.isBotplayMode) inputPressed = true;
+
+            // If not, check if the space key has been pressed.
+            if (!inputPressed) {
+                var keybinds = Save.instance.modOptions[SAVE_KEY_KEYBIND];
+                if (keybinds != null) {
+                    var validKeys:Array<Int> = [];
+                    for (key in keybinds) {
+                        if (key != null && key > 0) validKeys.push(key);
+                    }
+                    if (validKeys.length > 0) inputPressed = FlxG.keys.anyJustPressed(validKeys);
+                }
+            }
+
+            // If not, check if we're on mobile and have tapped anywhere on the screen.
+            if (FlxG.onMobile && !inputPressed)
+            {
+                for (point in FlxG.touches.list)
+                {
+                    inputPressed = point.justPressed;
+                    if (inputPressed) break;
+                }
+            }
+
+            // If the taunt input has been activated, do a check if the timing is right.
+            if (inputPressed)
+            {
+                // Player has taunted, so we should no longer show the grafix.
+                ModStore.register(SAVE_KEY_TAUNTED, true);
+
+                if (shouldTaunt)
+                {
+                    // If taunted at the right time, increase the combo and score and possibly play an animation.
+                    tauntCombo += 1;
+
+                    // Give the taunts some of that haptic flare.
+                    if (HapticUtil.hapticsAvailable)
+                    {
+                        HapticUtil.vibrate(0, 0.01, Constants.MAX_VIBRATION_AMPLITUDE * 2.5, 1);
+                    }
+
+                    // If the player passed the limit, force display popup.
+                    if (RATING_DATAS.exists(Std.int(tauntCombo))) displayPopup();
+
+                    maxTauntCombo = Math.max(maxTauntCombo, tauntCombo);
+
+                    // Make the score earn be based on the time difference between current beat time and the beat the taunt was supposed to be on.
+                    var diff:Float = Conductor.instance.currentBeatTime - Conductor.instance.currentBeat;
+                    state.songScore += (1 - diff) * tauntScoreEarn;
+
+                    shouldTaunt = false;
+                    shouldDisplayPopup = true;
+                    if (tauntAnims.length > 0)
+                    {
+                        var randomAnim:String = tauntAnims[FlxG.random.int(0, tauntAnims.length - 1)];
+
+                        // Only play the taunt animations when necessary to not override other unique animations.
+                        var curAnim:String = state.currentStage.getBoyfriend().getCurrentAnimation();
+                        if (["idle", "danceLeft", "danceRight"].contains(curAnim) || tauntAnims.contains(curAnim) || StringTools.startsWith(curAnim, "preTaunt"))
+                        {
+                            state.currentStage.getBoyfriend().playAnimation(randomAnim, true);
+                        }
+                    }
+
+                    trace("[SonicJam] Taunt Combo: " + tauntCombo);
+                }
+                else
+                {
+                    // Break the combo if taunted already, which prevents mashing.
+                    // Also display the popup to let the player know they messed up.
+                    tauntCombo = 0;
+                    trace("[SonicJam] Breaking taunting combo.");
+                    displayPopup();
+                }
+            }
+        }
+        else
+        {
+            if (shouldDisplayPopup)
+            {
+                shouldDisplayPopup = false;
+                displayPopup();
+            }
+        }
+    }
+
+    function displayPopup()
+    {
+        if (PlayState.instance == null) return;
+
+        var state:PlayState = PlayState.instance;
+        var ratingSpr:FlxSprite = new FlxSprite();
+        var ratingPath:String = "";
+
+        // List out all the possible taunt datas and check for the one to display.
+        // I'm avoiding hardcoding by doing this LMAO
+        var ratingKeysArray:Array<Int> = Iterators.toArray(RATING_DATAS.keys());
+        ratingKeysArray.sort((a, b) -> a - b);
+
+        for (key in ratingKeysArray)
+        {
+            if (tauntCombo < key) break;
+
+            ratingPath = RATING_DATAS[key].spr;
+            tauntScoreEarn = RATING_DATAS[key].score;
+        }
+
+        ratingSpr.loadGraphic(Paths.image("taunt/" + ratingPath));
+        ratingSpr.scale.set(1.25, 1.25);
+        ratingSpr.updateHitbox();
+        ratingSpr.zIndex = state.comboPopUps.zIndex + 1;
+        ratingSpr.cameras = state.comboPopUps.cameras;
+
+        // Copied from PopUpStuff. Basically just there to position and accelerate the sprite properly.
+        ratingSpr.x = (FlxG.width * 0.474) - ratingSpr.width / 2 + state.comboPopUps.offsets[0];
+        ratingSpr.y = (FlxG.height * 0.574) - ratingSpr.height / 2 + state.comboPopUps.offsets[1];
+
+        ratingSpr.acceleration.y = 550;
+        ratingSpr.velocity.y -= FlxG.random.int(140, 175);
+        ratingSpr.velocity.x -= FlxG.random.int(0, 10);
+
+        state.add(ratingSpr);
+        FlxTween.tween(ratingSpr, {alpha: 0}, 0.2,
+        {
+            onComplete: function(tween:FlxTween)
+            {
+                state.remove(ratingSpr, true);
+                ratingSpr.destroy();
+            },
+            startDelay: Conductor.instance.beatLengthMs * 0.001
+        });
+    }
+
+    function resetStuff()
+    {
+        // Reset everything regarding taunting that isn't stored in the save file.
+        lastNote = null;
+        tauntCombo = 0;
+        shouldTaunt = false;
+        shouldDisplayPopup = false;
+        tauntScoreEarn = RATING_DATAS[0]?.score ?? 10;
+        potentialTauntTimes = 0;
+    }
+
+    override public function onBeatHit(event:SongTimeScriptEvent)
+    {
+        super.onBeatHit(event);
+        // If taunting is available, set the bool to true.
+        // Also play the pre-taunt animation at the start of "taunt sections".
+
+        if (!isTauntingAvailable)
+        {
+            couldTauntLastBeat = false;
+            return;
+        }
+
+        shouldTaunt = true;
+        potentialTauntTimes += 1;
+        if (!couldTauntLastBeat) PlayState.instance?.currentStage?.getBoyfriend()?.playAnimation("preTaunt", false);
+        couldTauntLastBeat = true;
+    }
+
+    override public function onNoteHit(event:HitNoteScriptEvent)
+    {
+        super.onNoteHit(event);
+
+        // Update the last note for the check.
+        if (event.note.noteData.getMustHitNote()) lastNote = event.note;
+    }
+
+    override public function onNoteMiss(event:NoteScriptEvent)
+    {
+        super.onNoteMiss(event);
+
+        // Update the last note for the check.
+        if (event.note.noteData.getMustHitNote()) lastNote = event.note;
+    }
+
+    override public function onNoteHoldDrop(event:HoldNoteScriptEvent)
+    {
+        super.onNoteHoldDrop(event);
+
+        // Update the last note for the check.
+        if (event.holdNote.noteData.getMustHitNote()) lastNote = event.holdNote;
+    }
+
+    override public function onSongRetry(event:SongRetryEvent)
+    {
+        super.onSongRetry(event);
+        resetStuff();
+    }
+
+    override public function onStateChangeEnd(event:StateChangeScriptEvent)
+    {
+        super.onStateChangeEnd(event);
+        if (!Std.isOfType(FlxG.state, OptionsState)) return;
+
+        // Add a custom keybind setting if available.
+
+        var controlsPage:Page = FlxG.state.optionsCodex.pages["controls"];
+        if (controlsPage == null) return;
+
+         var labels:FlxTypedGroup = controlsPage.labels;
+        var headers:FlxTypedGroup = controlsPage.members[1]; // VERY janky
+        var lastItemY:Float = labels.members[labels.members.length - 1].y;
+
+        // Create the prompt for rebinding.
+        rebindPrompt = new Prompt("\nPress any key to rebind\n\n\nBackspace to unbind\n    Escape to cancel", ButtonStyle.None);
+        rebindPrompt.create();
+        rebindPrompt.createBgFromMargin(100, 0xFFfafd6d);
+        rebindPrompt.back.scrollFactor.set(0, 0);
+        rebindPrompt.exists = false;
+        controlsPage.add(rebindPrompt);
+
+        // Add the texts for the taunt control with a new header and all.
+        lastItemY += 70;
+        headers.add(new AtlasText(0, lastItemY, "SONIC JAM", "bold")).screenCenter(0x01);
+
+        lastItemY += 70;
+        var label = labels.add(new AtlasText(ControlsMenu.CONTROL_BASE_X, lastItemY, "TAUNT", "bold"));
+        label.alpha = 0.6;
+
+        var currentKeys:Array<Int> = Save.instance.modOptions.get(SAVE_KEY_KEYBIND);
+        for (i in 0...currentKeys.length)
+        {
+            var keyName:String = InputUtil.getKeyName(currentKeys[i]);
+            var keyNameReal:String = (currentKeys[i] == 0 ? UNBOUND_TEXT : keyName);
+
+            var item:TextMenuItem = new TextMenuItem(label.x + ControlsMenu.CONTROL_MARGIN_X + i * ControlsMenu.CONTROL_SPACING_X, lastItemY, keyNameReal, "default", () -> openPrompt(i));
+            item.fireInstantly = true;
+            controlsPage.controlGrid.addItem(item.name, item);
+        }
+
+        // Update the onChange function to account for the new items.
+        controlsPage.controlGrid.onChange.removeAll();
+        controlsPage.controlGrid.onChange.add(function(selected:TextMenuItem)
+        {
+            controlsPage.camFollow.y = selected.y;
+
+            labels.forEach((label:FlxSprite) -> label.alpha = 0.6);
+            labels.members[Std.int(controlsPage.controlGrid.selectedIndex / 2)].alpha = 1.0;
+        });
+    }
+
+    function updateOptions()
+    {
+        if (rebindPrompt?.exists)
+        {
+            var key = FlxG.keys.firstJustReleased();
+
+            // If there's a key pressed and it's different from the one used to open the prompt, close it.
+            // Perform some additional behavior when using different keys.
+            if (key != -1 && key != keyUsedToEnterPrompt)
+            {
+                switch (key)
+                {
+                    case 27: // Escape
+                    case 8: // Back
+                        bindKey(0);
+                    default: // Bind
+                        bindKey(key);
+                }
+
+                closePrompt();
+            }
+        }
+    }
+
+    function bindKey(to:Int)
+    {
+        var bindTo:Int = to;
+        var controlsPage:Page = FlxG.state.optionsCodex.pages["controls"];
+        var controlGrid:FlxTypedGroup<AtlasText> = controlsPage.controlGrid;
+
+        // Save the newly binded key.
+        var keyArray:Array<Int> = Save.instance.modOptions.get(SAVE_KEY_KEYBIND);
+        keyArray[storedIndex] = bindTo;
+
+        // Update the current label.
+        var item:AtlasText = controlsPage.controlGrid.selectedItem;
+        var keyName:String = (bindTo == 0 ? UNBOUND_TEXT : InputUtil.getKeyName(bindTo));
+        item.label.text = keyName;
+
+        // Swap left and right items if left is bound and right isn't.
+        if ((bindTo != 0 && keyArray[0] == 0) || (bindTo == 0 && keyArray[1] != 0))
+        {
+            keyArray.reverse();
+
+            if (controlsPage.controlGrid.selectedIndex % 2 == 1)
+            {
+                // Right item was changed.
+                var leftItem:AtlasText = controlsPage.controlGrid.members[controlsPage.controlGrid.selectedIndex - 1];
+
+                leftItem.label.text = (keyArray[0] == 0 ? UNBOUND_TEXT : InputUtil.getKeyName(keyArray[0]));
+                item.label.text = UNBOUND_TEXT;
+            }
+            else
+            {
+                // Left item was changed.
+                var rightItem:AtlasText = controlsPage.controlGrid.members[controlsPage.controlGrid.selectedIndex + 1];
+
+                item.label.text = (keyArray[0] == 0 ? UNBOUND_TEXT : InputUtil.getKeyName(keyArray[0]));
+                rightItem.label.text = UNBOUND_TEXT;
+            }
+        }
+
+        // Save the new input.
+        Save.instance.flush();
+    }
+
+    function openPrompt(index:Int)
+    {
+        var controlsPage:Page = FlxG.state.optionsCodex.pages["controls"];
+        storedIndex = index;
+
+        // Disable input.
+        controlsPage.controlGrid.enabled = false;
+        controlsPage.canExit = false;
+        rebindPrompt.exists = true;
+
+        // Save the key that was used to open the prompt so that we don't accidentally bind to it.
+        keyUsedToEnterPrompt = FlxG.keys.firstJustPressed();
+    }
+
+    function closePrompt()
+    {
+        var controlsPage:Page = FlxG.state.optionsCodex.pages["controls"];
+
+        // Re-enable input.
+        rebindPrompt.exists = false;
+        controlsPage.controlGrid.enabled = true;
+        controlsPage.canExit = true;
+
+        keyUsedToEnterPrompt = null;
+    }
+
+    function get_isPlayerSonic()
+    {
+        // If we're in playstate, have a stage, have a player AND the player's id starts with "sonic", return true.
+        var state:PlayState = PlayState.instance;
+        return StringTools.startsWith(state?.currentStage?.getBoyfriend()?.characterId ?? "", "sonic");
+    }
+
+    function get_isTauntingAvailable()
+    {
+        if (!isPlayerSonic) return false;
+
+        var state:PlayState = PlayState.instance;
+        if ((state?.isGamePaused ?? true)) return false; // Don't allow taunting when paused.
+
+        if (lastNote?.noteData == null) return false;
+
+        var strumlineNotes:Array<SongNoteData> = state.playerStrumline.noteData;
+        var lastNoteIndex:Int = strumlineNotes.indexOf(lastNote.noteData);
+
+        // If the last note could not be found, do not taunt.
+        if (lastNoteIndex < 0) return false;
+
+        // If the last note is a held note, halt off the taunting until it's done.
+        if (Conductor.instance.songPosition < lastNote.strumTime + lastNote.length) return false;
+
+        // If multiple notes have the same time, offset the note to check by one.
+        var indexOffset:Int = 1;
+        while (lastNoteIndex + indexOffset < strumlineNotes.length - 1 && strumlineNotes[lastNoteIndex + indexOffset].time == lastNote.noteData.time)
+            indexOffset += 1;
+
+        // If there is a next note but isn't one measure away, do not taunt.
+        if (strumlineNotes[lastNoteIndex + indexOffset] != null && strumlineNotes[lastNoteIndex + indexOffset].time - (lastNote.strumTime + lastNote.length) <= Conductor.instance.measureLengthMs)
+            return false;
+
+        return true;
+    }
+}

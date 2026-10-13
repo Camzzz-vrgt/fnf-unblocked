@@ -1,0 +1,106 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.modding.module.Module;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.PlayState;
+import funkin.play.ResultState;
+import funkin.save.Save;
+import funkin.ui.story.StoryMenuState;
+import funkin.ui.transition.stickers.StickerSubState;
+
+class SonicAchievements extends Module
+{
+    var SAVE_KEY:String = "sonicJamCompletedAchievements";
+    var ALL_ACHIEVEMENTS:Array<Dynamic> = [
+        {
+            id: "sonicWeekComplete",
+            name: "You're too cool!",
+            icon: "youre-too-cool",
+            song: "gigglyman",
+            story: true
+        }
+    ];
+
+    public function new()
+    {
+        super("SonicAchievements", 1000, {
+            state: ResultState
+        });
+
+        if (!Save.instance.modOptions.exists(SAVE_KEY))
+        {
+            Save.instance.modOptions.set(SAVE_KEY, []);
+        }
+    }
+
+    public function onSubStateOpenEnd(event:SubStateScriptEvent)
+    {
+        super.onSubStateOpenEnd(event);
+
+        // Check for any completed achievements here instead of in onSongEnd because modules activate before songs which contain cutscene code.
+        var state:PlayState = PlayState.instance;
+
+        for (data in ALL_ACHIEVEMENTS)
+        {
+            if ((data.song ?? "") != state.currentSong.id || (data.story ?? false) != PlayStatePlaylist.isStoryMode) continue;
+
+            // Don't play the achievement if it has been completed already.
+            if (data.id != null && Save.instance.modOptions.get(SAVE_KEY).contains(data.id)) continue;
+            Save.instance.modOptions.get(SAVE_KEY).push(data.id);
+
+            // NewgroundsMedalPlugin disabled for HTML5 compatibility
+            // NewgroundsMedalPlugin.play(100, data.name ?? "Unknown", FlxG.bitmap.add(Paths.image("achievements/" + data.icon)));
+        }
+    }
+
+    public function onSubStateOpenBegin(event:SubStateScriptEvent)
+    {
+        super.onSubStateOpenBegin(event);
+
+
+        // If the SubState to be opened is the sticker substate, cancel it if we need to play the notification.
+        if (!Std.isOfType(event.targetState, StickerSubState) || !PlayStatePlaylist.isStoryMode) return;
+        if (PlayStatePlaylist.campaignId != "sonicWeek" || Save.instance.charactersSeen.value.contains("sonic")) return;
+
+        event.cancelEvent();
+
+        // Cancel every timer for every sticker that's about to be generated. This is the only way to stop stickers from spawning. I hate this as much as you do.
+        for (i in 0...event.targetState.grpStickers.length)
+        {
+            FlxTimer.globalManager._timers.pop();
+        }
+
+        var state:ResultState = PlayState.instance.subState;
+
+        // Tween the rank background and a little bit later, the graphic.
+        FlxTween.tween(state.rankBg, {alpha: 1}, 0.5,{ease: FlxEase.expoOut});
+
+        var graphic:FlxSprite = new FlxSprite().loadGraphic(Paths.image("sonicUnlockScreen"));
+        graphic.screenCenter(0x01);
+        graphic.active = false;
+        PlayState.instance.subState.add(graphic);
+
+        graphic.alpha = 0;
+        FlxTween.tween(graphic, {alpha: 1}, 0.75, 
+        {
+            startDelay: 1.1,
+            ease: FlxEase.cubeOut,
+            onStart: function(t)
+            {
+                FlxG.sound.play(Paths.sound('sonic-unlock'));
+            },
+            onComplete: function(t) 
+            {
+                // Fade out the graphic after a bit.
+                FlxTween.tween(graphic, {alpha: 0}, 0.75, 
+                {
+                    startDelay: 1.5,
+                    onComplete: _ -> state.transitionToState(new StoryMenuState(null), null, false, false)
+                });
+            }
+        });
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "version": "2.2.4",
+  "songName": "Spookeez (Sonic Mix)",
+  "artist": "DingusCola",
+  "charter": "Mr. DJ",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "sonic-playable",
+      "girlfriend": "amytails",
+      "opponent": "spooky",
+      "instrumental": "sonic",
+      "altInstrumentals": [],
+      "opponentVocals": ["spooky-kids"],
+      "playerVocals": ["sonic"]
+    },
+    "stage": "spookyMansionSonic",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 2,
+      "hard": 5,
+      "normal": 2
+    },
+    "album": "sonicmix1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 130,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

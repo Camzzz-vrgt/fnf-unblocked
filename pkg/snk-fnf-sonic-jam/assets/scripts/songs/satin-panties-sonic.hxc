@@ -1,0 +1,37 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.util.Constants;
+
+class SatinPantiesSonicSong extends Song 
+{
+    public function new() 
+    {
+		super('satin-panties', 
+        {
+            variation: "sonic"
+        });
+	}
+
+    public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+    {
+        return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    }
+
+    public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+    {
+        var superList = super.listAltInstrumentalIds(difficultyId, variationId);
+        var list:Array<String> = [];
+        if (superList != null) {
+            for (item in superList) {
+                list.push(item);
+            }
+        }
+        
+        var hasBeatenSonicMix = Save.instance.hasBeatenSong(this.id, null, 'sonic');
+        if (!hasBeatenSonicMix) return [];
+        
+        // Satin Panties doesn't currently have a pico mix, so we're skipping the logic for now.
+
+        return list;
+    }
+}

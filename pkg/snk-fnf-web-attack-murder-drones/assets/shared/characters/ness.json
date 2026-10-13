@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				294,
+				267
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "boyfriend attack"
+		},
+		{
+			"offsets": [
+				-40,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "bf pre attack"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				120
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "ness idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				120
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ness left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				106
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ness down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				134
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ness up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				118
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ness right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				70
+			],
+			"anim": "pk flash",
+			"fps": 24,
+			"name": "pk flash",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-183,
+				-205
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "okey",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/ness",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-270,
+		-90
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

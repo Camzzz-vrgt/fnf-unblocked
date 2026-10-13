@@ -1,0 +1,177 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sonic The Hedgehog (Christmas)",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraZoom": 0.9,
+		"cameraOffsets": [
+			125,
+			-80
+		]
+	},
+	"healthIcon": {
+		"id": "sonic"
+	},
+	"assetPath": "characters/sonic/xmas/sonic_xmas",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "sonic idle dance",
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-0,
+				2
+			],
+			"assetPath": "characters/sonic/xmas/sonic_waiting_xmas",
+			"prefix": "sonic idle waiting",
+			"name": "waiting"
+		},
+		{
+			"offsets": [
+				50,
+				-43
+			],
+			"prefix": "sonic note left",
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [
+				-48,
+				27
+			],
+			"prefix": "sonic note right",
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [
+				-39,
+				-39
+			],
+			"prefix": "sonic note down",
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [
+				-66,
+				48
+			],
+			"prefix": "sonic note up",
+			"name": "singUP"
+		},
+		{
+			"offsets": [
+				-66,
+				48
+			],
+			"prefix": "sonic up note miss",
+			"name": "singUPmiss"
+		},
+		{
+			"offsets": [
+				-44,
+				-39
+			],
+			"prefix": "sonic down note miss",
+			"name": "singDOWNmiss"
+		},
+		{
+			"offsets": [
+				-78,
+				27
+			],
+			"prefix": "sonic right note miss",
+			"name": "singRIGHTmiss"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"assetPath": "characters/sonic/taunts/sonic pre taunt_xmas",
+			"prefix": "sonic pre taunt0",
+			"name": "preTaunt"
+		},
+		{
+			"offsets": [
+				-25,
+				-3
+			],
+			"assetPath": "characters/sonic/taunts/sonic taunt_xmas",
+			"prefix": "sonic taunt0",
+			"name": "taunt1"
+		},
+		{
+			"offsets": [
+				-10,
+				5
+			],
+			"assetPath": "characters/sonic/taunts/sonic taunt_2_xmas",
+			"prefix": "sonic taunt 2",
+			"name": "taunt2"
+		},
+		{
+			"offsets": [
+				-65,
+				-10
+			],
+			"assetPath": "characters/sonic/taunts/sonic taunt_3_xmas",
+			"prefix": "sonic taunt 3",
+			"name": "taunt3"
+		},
+		{
+			"offsets": [
+				49,
+				-38
+			],
+			"prefix": "sonic left note miss",
+			"name": "singLEFTmiss"
+		},
+		{
+			"offsets": [
+				65,
+				400
+			],
+			"assetPath": "characters/sonic/xmas/sonic_death_xmas",
+			"prefix": "sonic death0",
+			"name": "firstDeath"
+		},
+		{
+			"offsets": [
+				22,
+				400
+			],
+			"assetPath": "characters/sonic/xmas/sonic_death_xmas",
+			"prefix": "sonic death loop",
+			"looped": true,
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [
+				22,
+				400
+			],
+			"assetPath": "characters/sonic/xmas/sonic_death_xmas",
+			"prefix": "sonic death confirm",
+			"name": "deathConfirm"
+		}
+	]
+}

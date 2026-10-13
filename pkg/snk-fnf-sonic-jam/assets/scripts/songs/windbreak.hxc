@@ -1,0 +1,41 @@
+import funkin.play.song.Song;
+import funkin.play.Countdown;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.PlayState;
+
+class WindbreakSong extends Song
+{
+	var hasSkippedCountdown:Bool = false;
+
+	public function new()
+	{
+		super('windbreak');
+	}
+
+  public function onCountdownStart(event:CountdownScriptEvent)
+	{
+		super.onCountdownStart(event);
+
+		// We should skip the countdown when moving to this song from the story mode.
+		// However if we pressed retry, we shouldn't skip the countdown.
+		if (!PlayStatePlaylist.isStoryMode) hasSkippedCountdown = true;
+
+		if (!hasSkippedCountdown)
+		{
+			event.cancel();
+			Countdown.skipCountdown();
+
+			PlayState.instance.isInCountdown = true;
+			PlayState.instance.startingSong = true;
+
+			hasSkippedCountdown = true;
+		}
+	}
+
+	public function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+
+		hasSkippedCountdown = false;
+	}
+}

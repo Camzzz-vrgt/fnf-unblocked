@@ -1,0 +1,24 @@
+import funkin.save.Save;
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.util.Constants;
+
+class SonicPlayerCharacter extends PlayableCharacter
+{
+    public function new()
+    {
+        super("sonic");
+    }
+
+    public function getCharSelectData()
+    {
+        // Exclude Sonic if Sonic Week hasn't been beaten.
+        if (!hasBeatenSonicWeek()) return null;
+
+        return super.getCharSelectData();
+    }
+
+    function hasBeatenSonicWeek()
+    {
+       true;
+    }
+}

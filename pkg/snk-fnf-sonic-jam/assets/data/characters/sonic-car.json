@@ -1,0 +1,277 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sonic The Hedgehog (Car)",
+	"flipX": true,
+	"cameraOffsets": [
+		-100,
+		0
+	],
+	"isPixel": false,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraZoom": 0.9,
+		"cameraOffsets": [
+			125,
+			-80
+		]
+	},
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"id": "sonic"
+	},
+	"assetPath": "characters/sonic/car/sonic_hair blowing",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic idle dance",
+			"name": "idle",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-0,
+				2
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/car/sonic_waiting_car",
+			"frameRate": 24,
+			"prefix": "sonic idle waiting",
+			"name": "waiting",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				50,
+				-43
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic note left",
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-48,
+				27
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic note right",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-39,
+				-39
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic note down",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-66,
+				48
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic note up",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-66,
+				48
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic up note miss",
+			"name": "singUPmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-44,
+				-39
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic down note miss",
+			"name": "singDOWNmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-78,
+				27
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic right note miss",
+			"name": "singRIGHTmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-68,
+				-13
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/sonic_cheer",
+			"frameRate": 24,
+			"prefix": "sonic hey!!0",
+			"name": "hey",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				49,
+				-38
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sonic left note miss",
+			"name": "singLEFTmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				65,
+				400
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/sonic_death",
+			"frameRate": 24,
+			"prefix": "sonic death0",
+			"name": "firstDeath",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				22,
+				400
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/sonic_death",
+			"frameRate": 24,
+			"prefix": "sonic death loop",
+			"looped": true,
+			"name": "deathLoop",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				22,
+				400
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/sonic_death",
+			"frameRate": 24,
+			"prefix": "sonic death confirm",
+			"name": "deathConfirm",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-9,
+				0
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/taunts/sonic pre taunt",
+			"frameRate": 24,
+			"prefix": "sonic pre taunt instance 1",
+			"name": "preTaunt",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-65,
+				-10
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/taunts/sonic taunt",
+			"frameRate": 24,
+			"prefix": "sonic taunt",
+			"name": "taunt1",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-65,
+				-10
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/taunts/sonic taunt_2",
+			"frameRate": 24,
+			"prefix": "sonic taunt 2",
+			"name": "taunt2",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-65,
+				-10
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/taunts/sonic taunt_3",
+			"frameRate": 24,
+			"prefix": "sonic taunt 3",
+			"name": "taunt3",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-65,
+				-10
+			],
+			"flipY": false,
+			"assetPath": "characters/sonic/misc/sonic ahem",
+			"frameRate": 24,
+			"prefix": "sonic ahem",
+			"name": "ahem",
+			"looped": false,
+			"flipX": false
+		}
+	]
+}

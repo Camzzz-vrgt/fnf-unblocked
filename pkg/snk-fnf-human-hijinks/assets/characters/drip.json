@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				50,
+				160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "DrippostorIdle0"
+		},
+		{
+			"offsets": [
+				197,
+				148
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "DrippostorLeft0"
+		},
+		{
+			"offsets": [
+				56,
+				94
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DrippostorDown0"
+		},
+		{
+			"offsets": [
+				99,
+				195
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "DrippostorUp0"
+		},
+		{
+			"offsets": [
+				32,
+				122
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "DrippostorRight0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Drippostor",
+	"position": [
+		120,
+		150
+	],
+	"healthicon": "drip",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		71,
+		255
+	],
+	"camera_position": [
+		-60,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
