@@ -1,0 +1,46 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import flixel.FlxSprite;
+import flixel.FlxG;
+
+class NoteCameraModuleTwoHotBFMix extends Module {
+	public function new() {
+		super("Note Camera Movement Edited Version for 2hot BF Mix");
+	}
+
+	override function onNoteHit(event) {
+    	super.onNoteHit(event);
+
+		if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+		if (FlxG.camera.target == null) return;
+		FlxG.camera.targetOffset.set(0,0);
+		
+		switch(event.note.direction)
+		{
+			case 0:
+				FlxG.camera.targetOffset.x = -20;
+				//tweenAngle(-0.3, 0.25);
+			case 1:
+				FlxG.camera.targetOffset.y = 20;
+				//tweenAngle(0, 0.25);
+			case 2:
+				FlxG.camera.targetOffset.y = -20;
+				//tweenAngle(0, 0.25);
+			case 3:
+				FlxG.camera.targetOffset.x = 20;
+				//tweenAngle(0.3, 0.25);
+		}
+  	}
+
+	/*override function onSongEvent(ev){
+
+		if (PlayState.instance != null){
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+			if (ev.eventData.eventKind == "FocusCamera"){
+				PlayState.instance.cameraFollowPoint.setPosition(FlxG.camera.scroll.x+FlxG.camera.width*0.5,FlxG.camera.scroll.y+FlxG.camera.height*0.5);
+			}
+		}
+		super.onSongEvent(ev);
+	}*/
+}

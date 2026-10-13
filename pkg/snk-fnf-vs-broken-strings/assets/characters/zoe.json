@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-12,
+				-24
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "zoe left"
+		},
+		{
+			"offsets": [
+				170,
+				104
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "zoe down"
+		},
+		{
+			"offsets": [
+				136,
+				-13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "zoe right"
+		},
+		{
+			"offsets": [
+				-100,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "ded",
+			"indices": [],
+			"name": "zoe ow"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "idle",
+			"indices": [],
+			"name": "zoe idle"
+		},
+		{
+			"offsets": [
+				115,
+				-11
+			],
+			"loop": false,
+			"fps": 17,
+			"anim": "singUP",
+			"indices": [],
+			"name": "zoe up"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/zoe_low",
+	"position": [
+		-100,
+		-700
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		141,
+		161
+	],
+	"camera_position": [
+		400,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

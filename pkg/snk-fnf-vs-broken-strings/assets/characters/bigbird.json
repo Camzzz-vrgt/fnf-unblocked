@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				265,
+				430
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "big idle"
+		},
+		{
+			"offsets": [
+				264,
+				427
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "big down"
+		},
+		{
+			"offsets": [
+				265,
+				433
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "big up"
+		},
+		{
+			"offsets": [
+				272,
+				431
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "big right"
+		},
+		{
+			"offsets": [
+				278,
+				427
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "big left"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bigbird",
+	"position": [
+		-350,
+		-390
+	],
+	"healthicon": "BigbirdTrio-icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		242,
+		0
+	],
+	"camera_position": [
+		280,
+		-540
+	],
+	"sing_duration": 5.2,
+	"scale": 1.2,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,71 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [25, 32],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [308, 6],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-12, 33],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [162, 6],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [27, 140],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [162, 6],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "Down",
+			"indices": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+		},
+		{
+			"loop": true,
+			"offsets": [27, 140],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "Up",
+			"indices": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jacksteve",
+	"position": [0, 0],
+	"healthicon": "jack",
+	"flip_x": false,
+	"healthbar_colors": [122, 199, 221],
+	"camera_position": [30, 20],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

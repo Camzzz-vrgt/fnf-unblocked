@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				229,
+				487
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "thanos idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				204,
+				486
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "thanos up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				250,
+				483
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "thanos down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				89,
+				484
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "thanos left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				220,
+				479
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "thanos right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				230,
+				485
+			],
+			"anim": "Watching",
+			"fps": 1,
+			"name": "thanos see",
+			"indices": []
+		},
+		{
+			"offsets": [
+				229,
+				486
+			],
+			"indices": [],
+			"fps": 1,
+			"anim": "Fuck",
+			"loop": true,
+			"name": "thanos buu"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/starecrown",
+	"position": [
+		-380,
+		-390
+	],
+	"healthicon": "stare",
+	"flip_x": true,
+	"healthbar_colors": [
+		96,
+		65,
+		142
+	],
+	"camera_position": [
+		0,
+		170
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

@@ -1,0 +1,211 @@
+import Std;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.stage.Stage;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+import funkin.util.Constants;
+import funkin.util.tools.StringTools;
+import funkin.play.event.SongEvent;
+
+import funkin.util.PlatformUtil;
+import funkin.util.HostPlatform;
+
+class lyrics extends SongEvent {
+    function new() {super('lyrics');}
+    override function handleEvent(data) {
+        ModuleHandler.getModule("lyricsHander").scriptCall("lyrics", [data.getString("value1")]);
+    }
+}
+class lyricsHandler extends Module {
+    function new() {
+        super("lyricsHander");
+    }
+
+    var lyricsText:FlxText;
+    var tweenScaleLyrics;
+    override function onCountdownStart(event) {
+        super.onCountdownStart(event);
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+        if (lyricsText != null) PlayState.instance.remove(lyricsText);
+
+        lyricsText = new FlxText(0, 550, FlxG.width, "");
+        lyricsText.setFormat(Paths.font("FridayNight.ttf"), 25, 0xFFffffff, "center");
+        lyricsText.borderStyle = FlxTextBorderStyle.OUTLINE;
+        lyricsText.borderColor = 0xff000000; 
+        lyricsText.borderSize = 5;
+        lyricsText.camera = PlayState.instance.camHUD;
+        lyricsText.zIndex = 10001;
+        PlayState.instance.add(lyricsText);
+        PlayState.instance.refresh();
+    }
+
+    function lyrics(v1) {
+        if (PlayState.instance == null) return;
+        if (tweenScaleLyrics != null) tweenScaleLyrics.cancel();
+        lyricsText.scale.set(1.1, 1.1);
+        lyricsText.text = v1;
+        tweenScaleLyrics = FlxTween.tween(lyricsText.scale, {x: 1, y: 1}, 0.2, {ease: FlxEase.quartOut});
+    }
+
+    /*public override function onSongEvent(e:SongEventScriptEvent) {
+        super.onSongEvent(e);
+        if (e.eventData.eventKind == "lyrics") {
+            lyrics(Std.string(e.eventData.value.value1));
+        }
+    }*/
+}
+
+class SetCamZoom extends SongEvent {
+    function new() {
+        super('Set Cam Zoom');
+    }
+    override function handleEvent(data) {
+        if (data.getString("value2") == "")
+            PlayState.instance.tweenCameraZoom(data.getFloat('value1'), 0.2, true, FlxEase.linear);
+            //FlxG.camera.zoom = data.getFloat("value1");
+        else 
+            PlayState.instance.tweenCameraZoom(data.getFloat('value1'), data.getFloat('value2'), true, FlxEase.sineInOut);
+    }
+}
+
+class CinimaticNotes extends SongEvent {
+    function new() {
+        super('CinimaticNotes');
+    }
+    override function handleEvent(data) {
+        cinimaticNotes(data.getString("value1"), data.getString("value2"));
+    }
+
+    function cinimaticNotes(v1, v2) {
+        var tweenEase = FlxEase.quadOut;
+        if (v2 == "elasticOut") tweenEase = FlxEase.elasticOut;
+
+        if (v1 == "true") {
+            if (!FlxG.onMobile) {
+                FlxTween.tween(PlayState.instance.playerStrumline, {x: (FlxG.width - PlayState.instance.playerStrumline.width)/2}, 0.5, {ease: tweenEase});
+                //FlxTween.tween(PlayState.instance.playerStrumline.noteHoldCovers, {x: (FlxG.width - PlayState.instance.playerStrumline.noteHoldCovers.width)/2}, 0.5, {ease: tweenEase});
+            }
+            FlxTween.tween(PlayState.instance.opponentStrumline, {alpha: 0}, 0.5, {
+                ease: tweenEase,
+                onComplete: function(_) {
+                    PlayState.instance.opponentStrumline.visible = false;
+                }
+            });
+            
+        } else {
+            if (!FlxG.onMobile) {
+                FlxTween.tween(PlayState.instance.playerStrumline, {x: FlxG.width/2 + Constants.STRUMLINE_X_OFFSET}, 0.5, {ease: tweenEase});
+                //FlxTween.tween(PlayState.instance.playerStrumline.noteHoldCovers, {x: FlxG.width/2 + Constants.STRUMLINE_X_OFFSET}, 0.5, {ease: tweenEase});
+            }
+            PlayState.instance.opponentStrumline.visible = true;
+            FlxTween.tween(PlayState.instance.opponentStrumline, {alpha: 1}, 0.5, {ease: tweenEase});
+        }
+    }
+}
+class CinimaticNotesFixed extends Module{
+    function new() {
+        super("idk why hold note covers don't move with the whole strumlines");
+    }
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        if (PlayState.instance == null) return;
+        if (!FlxG.onMobile) PlayState.instance.playerStrumline.noteHoldCovers.x = 0;
+    }
+}
+
+class CameraControl extends SongEvent {
+    function new() {
+        super('CameraControl');
+    }
+    override function handleEvent(data) {
+        var parts = data.getString('value1').split(",");
+        var position = [];
+        for (i in 0...parts.length) {
+            var s = parts[i]; s = StringTools.stripPrefix(s, " ");
+            position.push(Std.parseFloat(s));
+        }
+        PlayState.instance.tweenCameraToPosition(position[0], position[1], 0);
+        PlayState.instance.tweenCameraZoom(data.getFloat('value2'), 0, true);
+    }
+}
+
+class flashCamera extends SongEvent {
+    function new() {
+        super('Flash Camera');
+    }
+    override function handleEvent(data) {
+        PlayState.instance.camCutscene.flash(0xFFffffff, 0.8);
+    }
+}
+
+class CameraFollowPos extends SongEvent {
+    function new() {
+        super('Camera Follow Pos');
+    }
+    override function handleEvent(data) {
+        //PlayState.instance.resetCamera(false, false, false);     
+        PlayState.instance.cancelCameraFollowTween();
+        if (data.getString("value1") == "") 
+            PlayState.instance.cameraFollowPoint.setPosition(PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y,  0.2, FlxEase.linear);
+        else
+            PlayState.instance.cameraFollowPoint.setPosition(data.getFloat("value1"), data.getFloat("value2"), 0.2, FlxEase.linear);
+    }
+}
+
+class SetGFSpeed extends SongEvent {
+    function new() {
+        super('Set GF Speed');
+    }
+    override function handleEvent(data) {
+        PlayState.instance.currentStage.getGirlfriend().danceEvery = data.getInt("value1");
+    }
+}
+
+class PlayAnimation extends SongEvent {
+    function new() {
+        super('Play Animation');
+    }
+    override function handleEvent(data) {
+        var char;
+        switch (data.getString("value2")) {
+            case "darnell": char = PlayState.instance.currentStage.getDad();
+            case "darnell-blazin": char = PlayState.instance.currentStage.getDad();
+            case "dad":  char = PlayState.instance.currentStage.getDad();
+            case "bf":  char = PlayState.instance.currentStage.getBoyfriend();
+            case "gf":  char = PlayState.instance.currentStage.getGirlfriend();
+        }
+        char.playAnimation(data.getString("value1"), true);
+    }
+}
+
+class HeyEvent extends SongEvent {
+    function new() {
+        super('Hey!');
+    }
+    override function handleEvent(data) {
+        PlayState.instance.currentStage.getGirlfriend().playAnimation('cheer', true);   
+    }
+}
+
+class AddCameraZoom extends SongEvent {
+    function new() {
+        super('Add Camera Zoom');
+    }
+    override function handleEvent(data) {
+        if (data.getString("value1") == "") {
+            PlayState.instance.camGame.zoom += 0.015;
+            PlayState.instance.camHUD.zoom += 0.03;
+        } else {
+            PlayState.instance.camGame.zoom += data.getFloat("value1");
+            PlayState.instance.camHUD.zoom += data.getFloat("value2");
+        }
+    }
+}

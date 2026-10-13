@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				-100
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "guy idle"
+		},
+		{
+			"offsets": [
+				-86,
+				195
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "guy left"
+		},
+		{
+			"offsets": [
+				-120,
+				212
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "guy down"
+		},
+		{
+			"offsets": [
+				-56,
+				230
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "guy up"
+		},
+		{
+			"offsets": [
+				-50,
+				243
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "guy right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/cookiemonster",
+	"position": [
+		25,
+		1850
+	],
+	"healthicon": "cookiem-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		114,
+		249
+	],
+	"camera_position": [
+		-40,
+		-130
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,43 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PlayState;
+import funkin.Conductor;
+
+class BoyfriendTwoHotCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('bf-hot');
+	}
+
+    override function onNoteHit(event:HitNoteScriptEvent) {
+		if (!event.note.noteData.getMustHitNote()) return;
+		    switch(event.note.kind) {
+			    case "mom":
+                    holdTimer = 0;   
+				    this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
+                case "No Animation":
+                    return;
+                default:
+                    super.onNoteHit(event);
+        }
+    }
+
+    override function onNoteMiss(event) {
+        if ((this.animation.curAnim.name == "attack" || this.animation.curAnim.name == "pre-attack")) {
+            if (Conductor.instance.currentStep >= 2300) return;
+            if (!this.animation.curAnim.finished) return;
+        }
+        super.onNoteMiss(event);
+    }
+
+    override function playSingAnimation(dir, miss, suffix) {
+        if ((this.animation.curAnim.name == "attack" || this.animation.curAnim.name == "pre-attack")) {
+            if (Conductor.instance.currentStep >= 2300) return;
+            if (!this.animation.curAnim.finished) return;
+        }
+        super.playSingAnimation(dir, miss, suffix);
+    }
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+        if (Conductor.instance.currentStep >= 2300) super.playAnimation(name + "-2hot", restart, ignoreOther);
+        else super.playAnimation(name, restart, ignoreOther);
+	}
+}

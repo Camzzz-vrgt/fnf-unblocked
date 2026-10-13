@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				100
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUP",
+			"loop": false,
+			"name": "caine_up"
+		},
+		{
+			"offsets": [
+				0,
+				-75
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "caine_down"
+		},
+		{
+			"offsets": [
+				-60,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "caine_left"
+		},
+		{
+			"offsets": [
+				-75,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "caine_right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "caine_idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Caine",
+	"position": [
+		-990,
+		-500
+	],
+	"healthicon": "caine",
+	"flip_x": false,
+	"healthbar_colors": [
+		228,
+		0,
+		83
+	],
+	"camera_position": [
+		150,
+		210
+	],
+	"sing_duration": 3.9,
+	"scale": 0.8
+}

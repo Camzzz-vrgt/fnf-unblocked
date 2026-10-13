@@ -1,0 +1,478 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Darnell2Hot",
+	"flipX": false,
+	"cameraOffsets": [
+		-155,
+		0
+	],
+	"singTime": 6.1,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "darnell",
+		"flipX": false
+	},
+	"assetPath": "characters/2hotBF/Darnell2Hot",
+	"library": "duedebt",
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				-43,
+				-63
+			],
+			"frameRate": 24,
+			"prefix": "2hot-Idle",
+			"flipX": false,
+			"looped": false,
+			"name": "idle-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-18,
+				-61
+			],
+			"frameRate": 24,
+			"prefix": "2hot-pose left",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-11,
+				-122
+			],
+			"frameRate": 24,
+			"prefix": "2hot-Pose Down",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				6,
+				1
+			],
+			"frameRate": 24,
+			"prefix": "2hot-pose up",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				1,
+				-81
+			],
+			"frameRate": 24,
+			"prefix": "2hot-pose right",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-45,
+				-61
+			],
+			"frameRate": 24,
+			"prefix": "2hot-laugh",
+			"flipX": false,
+			"looped": false,
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "laughCutscene-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-43,
+				-93
+			],
+			"frameRate": 24,
+			"prefix": "2hot-lighting can",
+			"flipX": false,
+			"looped": false,
+			"name": "lightCan-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-26,
+				-34
+			],
+			"frameRate": 24,
+			"prefix": "2hot-can kick",
+			"flipX": false,
+			"looped": false,
+			"name": "kickCan-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-54,
+				-90
+			],
+			"frameRate": 24,
+			"prefix": "2hot-knee action",
+			"flipX": false,
+			"looped": false,
+			"name": "kneeCan-2hot"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Idle0",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				1,
+				0
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Pose Left0",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				1,
+				0
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Left Flame Loop0",
+			"flipX": false,
+			"name": "singLEFT-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Pose Down0",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Down Flame Loop0",
+			"flipX": false,
+			"name": "singDOWN-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				8,
+				5
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Pose Up0",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				8,
+				5
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Up Flame Loop0",
+			"flipX": false,
+			"name": "singUP-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				4,
+				3
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Pose Right0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				4,
+				3
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Right Flame Loop0",
+			"flipX": false,
+			"name": "singRIGHT-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Laugh0",
+			"flipX": false,
+			"looped": false,
+			"name": "laugh"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "Laugh0",
+			"frameIndices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "laughCutscene",
+			"flipY": false,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"frameRate": 24
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				8,
+				1
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Light Can0",
+			"flipX": false,
+			"looped": false,
+			"name": "lightCan"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				15,
+				9
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Kick Up0",
+			"flipX": false,
+			"looped": false,
+			"name": "kickCan"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				33,
+				15
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Knee Forward0",
+			"flipX": false,
+			"looped": false,
+			"name": "kneeCan"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"assetPath": "characters/darnell",
+			"library": "duedebt",
+			"prefix": "Gets Pissed0",
+			"flipX": false,
+			"looped": false,
+			"name": "pissed"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "Gets Pissed0",
+			"frameIndices": [
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39,
+				39
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "quickPiss",
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/darnell"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"prefix": "Gets Pissed0",
+			"frameIndices": [
+				39,
+				39
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "infinitePiss",
+			"flipY": false,
+			"frameRate": 1,
+			"assetPath": "characters/darnell"
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "idle",
+			"indices": [],
+			"name": "bert idle"
+		},
+		{
+			"offsets": [
+				20,
+				-21
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bert down"
+		},
+		{
+			"offsets": [
+				-7,
+				0
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bert up"
+		},
+		{
+			"offsets": [
+				-7,
+				-16
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bert left"
+		},
+		{
+			"offsets": [
+				-67,
+				-42
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bert right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bert_low",
+	"position": [
+		2650,
+		2050
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-640,
+		530
+	],
+	"sing_duration": 5,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

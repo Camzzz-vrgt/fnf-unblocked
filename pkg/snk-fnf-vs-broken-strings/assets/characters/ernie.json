@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				14
+			],
+			"anim": "singDOWN",
+			"fps": 20,
+			"name": "ernie down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				19
+			],
+			"anim": "singUP",
+			"fps": 20,
+			"name": "ernie up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-11
+			],
+			"anim": "singLEFT",
+			"fps": 20,
+			"name": "ernie left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-2
+			],
+			"anim": "singRIGHT",
+			"fps": 20,
+			"name": "ernie right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"indices": [],
+			"fps": 20,
+			"anim": "idle",
+			"loop": false,
+			"name": "ernie idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/ernie_low",
+	"position": [
+		1850,
+		1850
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		110,
+		130
+	],
+	"sing_duration": 5.5,
+	"scale": 1.2,
+	"_editor_isPlayer": false
+}

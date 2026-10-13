@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [47, 46],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [56, 37],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [175, 3],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [64, 25],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [132, 113],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [175, 3],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "Left",
+			"indices": [5, 6, 7]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/steve",
+	"position": [-10, 195],
+	"healthicon": "steve-icon",
+	"flip_x": false,
+	"healthbar_colors": [181, 123, 103],
+	"camera_position": [-40, 10],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

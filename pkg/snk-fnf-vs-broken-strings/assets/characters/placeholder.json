@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-10,
+				-360
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "HOLY SHIT idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/luigi",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		140,
+		0
+	],
+	"camera_position": [
+		-310,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 3.8,
+	"_editor_isPlayer": false
+}

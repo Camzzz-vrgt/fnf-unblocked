@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				623,
+				757
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "criador left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				610,
+				747
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "criador down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				641,
+				741
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "criador right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				580,
+				771
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "criador up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				611,
+				750
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "criador idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/criador",
+	"position": [
+		120,
+		290
+	],
+	"healthicon": "criador",
+	"flip_x": false,
+	"healthbar_colors": [
+		219,
+		117,
+		131
+	],
+	"camera_position": [
+		-220,
+		-260
+	],
+	"sing_duration": 5.7,
+	"scale": 0.5
+}

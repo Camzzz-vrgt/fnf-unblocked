@@ -1,0 +1,56 @@
+{
+  "version": "2.2.4",
+  "songName": "Blazin (BF Mix)",
+  "artist": "HeV (Art4Henry)",
+  "charter": "LeGooey",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "hard"
+    ],
+    "characters": {
+      "player": "bf-blazin",
+      "girlfriend": "gf-2hot",
+      "opponent": "darnell-blazin",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocals": [],
+      "playerVocals": []
+    },
+    "stage": "phillyBlazinBF",
+    "noteStyle": "funkin",
+    "album": "volume3",
+    "stickerPack": "bonus-weekend1",
+    "ratings": {
+      "hard": 12,
+      "normal": 0
+    },
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.5.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 180,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

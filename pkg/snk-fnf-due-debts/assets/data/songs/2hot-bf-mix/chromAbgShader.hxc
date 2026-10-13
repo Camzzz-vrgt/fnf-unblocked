@@ -1,0 +1,68 @@
+//Chromatic Abbretion shader, Original and remaster by sirFerzy!
+import flixel.math.FlxMath;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import funkin.modding.module.Module;
+
+class ShadersChromTwoHotBF extends Module {
+    function new() {
+        super("2hot bf mix shader lol");
+    }
+
+    var game;
+    var ferzyShader;
+    var ferzyShaderFilter;
+
+    var chromStrength;
+    var chromMult;
+    var chromSpeed;
+
+    override function onCountdownStart(e) {
+        super.onCountdownStart(e);
+                if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+
+        game = PlayState.instance;
+
+        ferzyShader = new FlxRuntimeShader(Assets.getText(Paths.frag("ferzyShader")), null);
+        ferzyShaderFilter = new ShaderFilter(ferzyShader);
+
+        chromStrength = 0; //How strong you want the shader, set with setProperty
+        chromMult = 1; //This amplifies the  chromStrength, default is 1
+        chromSpeed = 8; //This is how fast the shader fades out
+
+        game.camHUD.filters = [ferzyShaderFilter];
+        game.camGame.filters.push(ferzyShaderFilter);
+        
+    }
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        
+        if (PlayState.instance == null || PlayState.instance.currentSong == null) return;
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+        if (ferzyShader == null) return;
+
+        var lerpSpeed = chromSpeed;
+        if (Conductor.instance.currentStep >= 2464 && Conductor.instance.currentStep <= 2472)
+            chromStrength = FlxMath.lerp(chromStrength, 0.3, e.elapsed * lerpSpeed);
+        else
+            chromStrength = FlxMath.lerp(chromStrength , 0.0, e.elapsed * lerpSpeed);
+
+        ferzyShader.setFloat('force', chromStrength * chromMult);
+    }
+
+    function onBeatHit(e) {
+        super.onBeatHit(e);
+        if (PlayState.instance == null) return;
+                if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+
+        if (e.step > 2383 && e.step < 2735 || e.step > 846 && e.step < 1023 || e.step > 1039 && e.step < 1105) {
+            if (e.beat % 1 == 0) {
+                PlayState.instance.camHUD.zoom += 0.03;
+                chromStrength += 0.2;
+            }
+        }
+    }
+}

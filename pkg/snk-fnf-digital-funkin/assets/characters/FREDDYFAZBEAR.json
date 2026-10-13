@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 30,
+			"name": "FREDDYFAZBEAR idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 30,
+			"name": "FREDDYFAZBEAR down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 30,
+			"name": "FREDDYFAZBEAR up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 30,
+			"name": "FREDDYFAZBEAR right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 30,
+			"name": "FREDDYFAZBEAR left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/FREDDYFAZBEAR",
+	"position": [
+		-440,
+		100
+	],
+	"healthicon": "FAZBEAR",
+	"flip_x": true,
+	"healthbar_colors": [
+		135,
+		80,
+		20
+	],
+	"camera_position": [
+		40,
+		20
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

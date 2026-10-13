@@ -1,0 +1,177 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import Std;
+
+
+class FuckinShitTonOfNote extends Module {
+	function new() {
+		super("i understand, man");
+	}
+
+	var pl;
+	function onCountdownStart(event:CountdownScriptEvent) {
+		super.onCountdownStart(event);
+		pl = PlayState.instance;
+	}
+
+	override function onNoteHit(e) {
+		super.onNoteHit(e);
+		var t = e.note.kind;
+		var d = e.note.noteData.getDirection();
+
+		if (t == 'BlazinNoteBF' || t == 'BlazinDarnellHitNote' || t == 'BlazinBFStyleNote' || t == 'BlazinBFUppercut' || t == 'BlazinDarnellUppercut' || t == "BlazinTauntNoteBF")
+			shitHit('boyfriend',d,t,false);
+		else if (t == 'BlazinBFHitNote')
+			lolGetFucked('boyfriend',d,t,true);
+
+
+	}
+
+	override function onNoteMiss(e) {
+		super.onNoteMiss(e);
+		var t = e.note.kind;
+		var d = e.note.noteData.getDirection();
+
+		if (t == 'BlazinNoteBF' || t == 'BlazinDarnellHitNote' || t == 'BlazinBFStyleNote' || t == 'BlazinBFHitNote')
+			lolGetFucked('boyfriend',d,t,true);
+		else if (t == 'BlazinBFUppercut' || t == 'BlazinDarnellUppercut' || t == "BlazinTauntNoteBF") {
+			shitHit('boyfriend',d,t,false);
+		}
+	}
+
+	function shitHit(ch, d, t, m) {
+	////////////////////////////////////////////////////////////////////////////////////////// Regular BlazinNote
+		if (t == 'BlazinNoteBF') {
+			var bf = pl.currentStage.getBoyfriend();
+			var dad = pl.currentStage.getDad();
+			if (bf == null || dad == null) return;
+			if (d == 0) {
+				bf.zIndex = 3001;
+				dad.playAnimation('block', true);
+				bf.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+				FlxG.camera.shake(0.002, 0.1);
+			} else if (d == 1) {
+				bf.zIndex = 3001;
+				dad.playAnimation('dodge', true);
+				bf.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+			} else if (d == 2) {
+				bf.zIndex = 2000;
+				dad.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+				bf.playAnimation('dodge', true);
+			} else if (d == 3) {
+				bf.zIndex = 2000;
+				dad.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+				bf.playAnimation('block', true);
+				FlxG.camera.shake(0.002, 0.1);
+			}
+		}
+
+	//////////////////////////////////////////////////////////////////////////////////////////Taunt
+		if (t == 'BlazinTauntNoteBF') {
+			var dad = pl.currentStage.getDad();
+			if (dad == null) return;
+			if (d == 1) {
+				dad.playAnimation('cringe', true);
+			} else if (d == 0) {
+				dad.playAnimation('pissed', true);
+			}
+		}
+
+	//////////////////////////////////////////////////////////////////////////////////////////Darnell gets hit
+		if (t == 'BlazinDarnellHitNote') {
+			var bf = pl.currentStage.getBoyfriend();
+			var dad = pl.currentStage.getDad();
+			if (bf == null || dad == null) return;
+			bf.zIndex = 3001;
+			if (d == 1 || d == 0) {
+				dad.playAnimation('hitHigh', true);
+				bf.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+			} else if (d == 2 || d == 3) {
+				dad.playAnimation('hitLow', true);
+				bf.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+			}
+			FlxG.camera.shake(0.002, 0.1);
+		}
+
+	//////////////////////////////////////////////////////////////////////////////////////////Style on the haters
+		if (t == 'BlazinBFStyleNote') {
+			var bf = pl.currentStage.getBoyfriend();
+			var dad = pl.currentStage.getDad();
+			if (bf == null || dad == null) return;
+			bf.playSingAnimation(d, m, "alt");
+			bf.holdTimer = 0;
+		bf.zIndex = 2000;
+			if (d == 0) {
+				dad.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+			} else if (d == 1) {
+				dad.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+			} else if (d == 2) {
+				dad.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+			} else if (d == 3) {
+				dad.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+			}
+		}
+
+	//////////////////////////////////////////////////////////////////////////////////////////Darnell gets fucked (he's gay)
+		if (t == 'BlazinBFUppercut') {
+			var bf = pl.currentStage.getBoyfriend();
+			var dad = pl.currentStage.getDad();
+			if (bf == null || dad == null) return;
+			if (d == 0 || d == 3) {
+				dad.playAnimation('hitSpin', true);
+				bf.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+			} else if (d == 1) {
+				dad.playAnimation('idle', true);
+				bf.playAnimation('uppercutPrep', true);
+			} else if (d == 2) {
+				dad.playAnimation('uppercutHit', true);
+				bf.playAnimation('uppercut', true);
+			}
+			bf.zIndex = 3001;
+		}
+
+	//////////////////////////////////////////////////////////////////////////////////////////BF gets fucked (he's actually gay)
+		if (t == 'BlazinDarnellUppercut') {
+			var bf = pl.currentStage.getBoyfriend();
+			var dad = pl.currentStage.getDad();
+			if (bf == null || dad == null) return;
+
+			if (d == 0 || d == 3) {
+				bf.playAnimation('hitSpin', true);
+				dad.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+				FlxG.camera.shake(0.002, 0.1);
+			} else if (d == 1) {
+				dad.playAnimation('uppercutPrep', true);
+			} else if (d == 2) {
+				bf.playAnimation('uppercutHit', true);
+				dad.playAnimation('uppercut', true);
+				FlxG.camera.shake(0.002, 0.1);
+			}
+			bf.zIndex = 2000;
+		}
+		PlayState.instance.currentStage.refresh();
+    }
+
+
+	function lolGetFucked(ch, d, t, m) {
+		var bf = pl.currentStage.getBoyfriend();
+		var dad = pl.currentStage.getDad();
+
+		if (bf == null || dad == null) return;
+
+		bf.zIndex = 2000;
+		PlayState.instance.currentStage.refresh();
+		if (d == 1 || d == 0) {
+			bf.playAnimation('hitHigh', true);
+			dad.playAnimation('punchHigh' + Std.string(Std.random(2)+1), true);
+		} else if (d == 2 || d == 3) {
+			bf.playAnimation('hitLow', true);
+			dad.playAnimation('punchLow' + Std.string(Std.random(2)+1), true);
+		}
+		FlxG.camera.shake(0.002, 0.1);
+
+	}
+
+
+}

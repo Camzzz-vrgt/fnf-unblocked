@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				265,
+				430
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": " Dead"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Snuffy",
+	"position": [
+		60,
+		-100
+	],
+	"healthicon": "Elmo-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		242,
+		0
+	],
+	"camera_position": [
+		340,
+		-340
+	],
+	"sing_duration": 5.2,
+	"scale": 1.4,
+	"_editor_isPlayer": true
+}

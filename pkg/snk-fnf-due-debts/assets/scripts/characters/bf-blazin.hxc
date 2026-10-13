@@ -1,0 +1,33 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.PlayState;
+import funkin.Conductor;
+
+class BoyfriendBlazinCharacter extends SparrowCharacter {
+	function new() {
+		super('bf-blazin');
+	}
+
+    override function onNoteHit(event:HitNoteScriptEvent) {
+		if (!event.note.noteData.getMustHitNote()) return;
+		var t = event.note.kind;
+	    if (t == 'BlazinNoteBF' || t == 'BlazinDarnellHitNote' || t == 'BlazinBFStyleNote' || t == 'BlazinBFUppercut' || t == 'BlazinDarnellUppercut' || t == "BlazinTauntNoteBF" || t == "BlazinBFHitNote" || t == "No Animation")
+            return;
+        else if (t == "Hey!")
+            this.playAnimation("hey", true);
+        else
+            super.onNoteHit(event);
+
+    }
+
+    override function onNoteMiss(event) {
+        super.onNoteMiss(event);
+    }
+
+    override function playSingAnimation(dir, miss, suffix) {
+        super.playSingAnimation(dir, miss, suffix);
+    }
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+        super.playAnimation(name, restart, ignoreOther);
+	}
+}

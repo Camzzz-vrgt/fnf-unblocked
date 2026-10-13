@@ -1,0 +1,110 @@
+import funkin.modding.module.Module;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+
+class BlazinBFMix extends Song {
+	function new() {
+		super("blazin-bf-mix");
+	}
+
+	var startblack;
+	var startblack2;
+	var uiStuff;
+	var fakeDarnell;
+	var game;
+	var boyfriend;
+	var dad;
+
+	override function onCreate(e) {
+		super.onCreate(e);
+
+		game = PlayState.instance;
+		if (!FlxG.onMobile) {
+		game.playerStrumline.x = (FlxG.width - game.playerStrumline.width)/2;
+		game.opponentStrumline.visible = false;
+		}
+
+		startblack = new FlxSprite(0, 0).makeGraphic(1, 1, 0xff000000);
+		startblack.setGraphicSize(FlxG.width + 10, FlxG.height + 10);
+		startblack.updateHitbox();
+		startblack.scrollFactor.set();
+		startblack.cameras = [game.camHUD];
+		game.add(startblack);
+
+		startblack2 = new FlxSprite(0, 0).makeGraphic(1, 1, 0xff000000);
+		startblack2.setGraphicSize(FlxG.width + 10, FlxG.height + 10);
+		startblack2.updateHitbox();
+		startblack2.scrollFactor.set();
+		startblack2.cameras = [game.camCutscene];
+		game.add(startblack2);
+
+		uiStuff = [game.healthBarBG, game.healthBar, game.scoreText, game.iconP1, game.iconP2];
+
+		for (ui in uiStuff) {
+			if (ui != null) {
+				ui.visible = false;
+				ui.alpha = 0;
+			}
+		}
+	}
+
+	function onCountdownStart(event:CountdownScriptEvent) {
+		super.onCountdownStart(event);
+		startblack.alpha = 1;
+		startblack2.alpha = 1;
+		PlayState.instance.camGame.visible = true;
+		FlxTween.tween(startblack2, {alpha: 0}, 0.4);
+
+		boyfriend = game.currentStage.getBoyfriend();
+		dad = game.currentStage.getDad();
+		if (boyfriend != null) boyfriend.dance(true);
+
+		fakeDarnell = PlayState.instance.currentStage.getNamedProp("fakeDarnell");
+		fakeDarnell.setPosition(800,550);
+		fakeDarnell.visible = false;
+	}
+
+	override function onStepHit(e) {
+		super.onStepHit(e);
+
+		switch (e.step) {
+			case 1:
+				FlxTween.tween(startblack, {alpha: 0}, 10);
+			case 2:
+				for (ui in uiStuff) {
+					if (ui != null) {
+						ui.visible = true;
+						FlxTween.tween(ui, {alpha: 1}, 3);
+					}
+				}
+			case 384:
+				FlxTween.tween(startblack, {alpha: 1}, 5);
+				startblack2.kill();
+			case 448:
+				startblack.alpha = 1;
+				if (boyfriend != null) {
+					boyfriend.singTimeSteps = 0;
+					if (boyfriend.animation.curAnim != null)
+						boyfriend.animation.curAnim.finish();
+					boyfriend.dance();
+				}
+				if (fakeDarnell != null) fakeDarnell.visible = true;
+				if (dad != null) dad.visible = false;
+			case 453:
+				FlxTween.tween(startblack, {alpha: 0}, 4);
+				if (dad != null) dad.singTimeSteps = 999;
+				if (boyfriend != null) boyfriend.singTimeSteps = 999;
+				if (game.currentStage.getGirlfriend() != null)
+					game.tweenCameraToPosition(game.currentStage.getGirlfriend().cameraFocusPoint.x + 250, game.currentStage.getGirlfriend().cameraFocusPoint.y-90, 10, FlxEase.linear);
+				FlxTween.tween(game, {currentCameraZoom: 0.9}, 8, {ease: FlxEase.sineInOut});
+			case 560:
+				if (fakeDarnell != null) fakeDarnell.visible = false;
+				if (dad != null) dad.visible = true;
+		}
+	}
+}

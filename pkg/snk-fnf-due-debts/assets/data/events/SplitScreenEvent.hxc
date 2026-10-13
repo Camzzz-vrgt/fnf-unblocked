@@ -1,0 +1,176 @@
+import Std;
+import flixel.FlxG;
+import flixel.FlxCamera;
+import flixel.FlxObject;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.math.FlxMath;
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+import funkin.modding.module.Module;
+
+class SplitScreenEvent extends Module {
+    var camLeft:FlxCamera;
+    var camRight:FlxCamera;
+    var camFollowDad:FlxObject;
+    var camFollowBf:FlxObject;
+
+    var dual:Bool = false;
+    var swapped:Bool = false;
+
+    var camLeftZoom:Float = 1;
+    var camRightZoom:Float = 1;
+
+    var game;
+
+    public function onCountdownStart(event:CountdownScriptEvent) {
+        super.onCountdownStart(event);
+        game = PlayState.instance;
+        if (game.currentSong.id != "2hot-bf-mix") return;
+
+        reset();
+
+        camLeft = new FlxCamera();
+        camLeft.width = FlxG.width/2;
+        camLeft.alpha = 0;
+
+        camRight = new FlxCamera();
+        camRight.x = FlxG.width/2;
+        camRight.width = FlxG.width/2;
+        camRight.alpha = 0;
+
+        FlxG.cameras.remove(game.camHUD, false);
+        FlxG.cameras.remove(game.camCutscene, false);
+        FlxG.cameras.remove(game.currentSong.scriptGet("camVideos"), false);
+        FlxG.cameras.add(camLeft);
+        FlxG.cameras.add(camRight);
+        FlxG.cameras.add(game.currentSong.scriptGet("camVideos"), false);
+        FlxG.cameras.add(game.camHUD, false);
+        FlxG.cameras.add(game.camCutscene, false);
+
+        camFollowDad = new FlxObject();
+        splitCameraPos(false);
+        game.add(camFollowDad);
+
+        camFollowBf = new FlxObject();
+        splitCameraPos(true);
+        game.add(camFollowBf);
+
+        camLeft.follow(camFollowDad,"LOCKON", 0);
+        camRight.follow(camFollowBf, "LOCKON", 0);
+
+        camLeft.x = -(FlxG.width/2);
+        camRight.x = FlxG.width;
+        camLeftZoom = game.currentCameraZoom;
+        camRightZoom = game.currentCameraZoom;
+    }
+
+    public override function onSongEvent(e:SongEventScriptEvent) {
+        super.onSongEvent(e);
+        if (game.currentSong.id != "2hot-bf-mix") return;
+
+        if (e.eventData.eventKind == 'Split Screen') {
+            var v1 = e.eventData.value.value1;
+            var v2 = e.eventData.value.value2;
+
+            var values1 = v1.split(',');
+            var values2 = v2.split(',');
+
+            var duration = (values1[0] != '' && values1[0] != null ? values1[0] : 0.001);
+            var ease = (values1[1] != '' && values1[1] != null ? values1[1] : 'linear');
+            var leftZoom = (values1[2] != '' && values1[2] != null ? values1[2] : game.currentCameraZoom);
+            var rightZoom = (values1[3] != '' && values1[3] != null ? values1[3] : game.currentCameraZoom);
+            var swap = (values1[4] == '' && values1[4] != null ? swapped : values1[4] == 'true');
+
+            var leftX = (values2[0] != '' && values2[0] != null ? values2[0] : 0);
+            var leftY = (values2[1] != '' && values2[1] != null ? values2[1] : 0);
+            var rightX = (values2[2] != '' && values2[2] != null ? values2[2] : 0);
+            var rightY = (values2[3] != '' && values2[3] != null ? values2[3] : 0);
+
+            dual = !dual;
+            if (dual) swapped = swap;
+
+            if (Std.parseFloat(duration) <= 0) duration = 0.001;
+
+            camLeft.alpha = camRight.alpha = 1;
+
+            FlxTween.cancelTweensOf(camLeft);
+            FlxTween.cancelTweensOf(camRight);
+            FlxTween.tween(!swapped ? camLeft : camRight, {x: dual ? 0 : -(FlxG.width/2)}, duration,
+            {
+                ease: FlxEase.sineOut,
+                onComplete: function(twn:FlxTween)
+                {
+                    if (!dual) (!swapped ? camLeft : camRight).alpha = 1;
+                }
+            });
+            FlxTween.tween(!swapped ? camRight : camLeft, {x: dual ? FlxG.width/2 : FlxG.width}, duration,
+            {
+                ease: FlxEase.sineOut,
+                onComplete: function(twn:FlxTween)
+                {
+                    if (!dual) (!swapped ? camRight : camLeft).alpha =1;
+                }
+            });
+
+            if (!dual) return;
+
+            splitCameraPos(false, Std.parseFloat(leftX), Std.parseFloat(leftY));
+            splitCameraPos(true, Std.parseFloat(rightX), Std.parseFloat(rightY));
+            if (swapped && dual)
+            {
+                camLeft.x = FlxG.width;
+                camRight.x = -(FlxG.width/2);
+            }
+            camLeftZoom = Std.parseFloat(leftZoom);
+            camRightZoom = Std.parseFloat(rightZoom);
+
+            camLeft.snapToTarget();
+            camRight.snapToTarget();
+        }
+
+    }
+
+    function splitCameraPos(left, ?x = null, ?y = null)
+    {
+        var dad = game.currentStage.getDad();
+        var boyfriend = game.currentStage.getBoyfriend();
+        if (!left)
+        {
+            camFollowDad.setPosition( dad.cameraFocusPoint.x - 500, dad.cameraFocusPoint.y);
+        }
+        else
+        {
+            camFollowBf.setPosition(boyfriend.cameraFocusPoint.x + 300, boyfriend.cameraFocusPoint.y);
+        }
+    }
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        if (game == null) return;
+        if (game.currentSong.id != "2hot-bf-mix") return;
+
+        for (cam in [camLeft, camRight])
+        {
+            if (cam.filters != game.camGame.filters)
+                cam.filters = game.camGame.filters;
+        }
+
+        camLeft.zoom = FlxMath.lerp(camLeftZoom, camLeft.zoom, Math.exp(-e.elapsed * 3.125));
+        camRight.zoom = FlxMath.lerp(camRightZoom, camRight.zoom, Math.exp(-e.elapsed * 3.125));
+    }
+
+
+    override function onGameOver(e) {
+        super.onGameOver(e);
+        if (game.currentSong.id != "2hot-bf-mix") return;
+
+        reset();
+    }
+
+    function reset() {
+        FlxG.cameras.remove(camLeft, true);
+        FlxG.cameras.remove(camRight, true);
+    }
+
+}

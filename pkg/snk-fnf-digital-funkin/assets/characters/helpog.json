@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-170,
+				-159
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "throne",
+			"indices": [],
+			"name": "throne throne"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "jaxplush left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "jaxplush right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "jaxplush down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "jaxplush up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "helpog idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/helpog",
+	"position": [
+		-82,
+		-465
+	],
+	"healthicon": "jax",
+	"flip_x": false,
+	"healthbar_colors": [
+		176,
+		105,
+		240
+	],
+	"camera_position": [
+		-140,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 0.4
+}

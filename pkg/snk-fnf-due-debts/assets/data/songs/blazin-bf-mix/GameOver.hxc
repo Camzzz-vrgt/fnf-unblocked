@@ -1,0 +1,51 @@
+import funkin.graphics.video.FlxVideo;
+import funkin.play.PlayState;
+import funkin.play.GameOverSubState;
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import funkin.play.character.CharacterType;
+import funkin.Paths;
+
+class stupidGameOver extends Module {
+    function new() {
+        super("this is the best game over menu in the world, fr");
+    }
+
+    var vid;
+    function onSubStateOpenEnd(event:SubStateScriptEvent) {
+        super.onSubStateOpenEnd(event);
+        if (Std.isOfType(event.targetState, GameOverSubState)) {
+            if (PlayState.instance.currentSong.id == "blazin-bf-mix") {
+
+                GameOverSubState.blueBallSuffix = 'quiet';
+                playGameOverVideo(Paths.videos("BlazinGameOver", "duedebt"));
+            }
+        }
+    }
+
+    function playGameOverVideo(path:String) {
+        // Strip library prefix for HTML5 NetStream compatibility
+        var videoPath = Paths.stripLibrary(path);
+        var video = new FlxVideo(videoPath);
+        video.camera = PlayState.instance.camCutscene;
+        // FlxVideo automatically sizes to FlxG.width/height in onVideoReady
+        video.scrollFactor.set(0, 0);
+        video.finishCallback = function() {
+            GameOverSubState.instance.remove(video);
+            video.destroy();
+            exitGameOver();
+        };
+        GameOverSubState.instance.add(video);
+        vid = video;
+    }
+
+    function exitGameOver() {
+        //PlayState.instance.currentStage.getBoyfriend().isDead = false;
+        GameOverSubState.instance.remove(GameOverSubState.instance.boyfriend);
+        PlayState.instance.currentStage.addCharacter(GameOverSubState.instance.boyfriend, CharacterType.BF);
+        PlayState.instance.needsReset = true;
+        GameOverSubState.instance.resetCameraZoom();
+        GameOverSubState.instance.close();
+        PlayState.instance.camGame.visible = false;
+    }
+}

@@ -1,0 +1,145 @@
+import flixel.FlxG;
+import funkin.play.event.SongEvent;
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.play.PlayState;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import Std;
+
+class WontCatchMeDeadOrAlive extends Module {
+
+    public function new(){
+        super('deadOrAlive');
+    }
+
+    var deadOrAlive:FlxSprite;
+    var sprites:Array<FlxSprite> = [];
+    var deadOrAliveLyrics:Array<Array<Float>> = [
+            [0,   0,   747, 204],
+            [61,  212, 664, 168],
+            [35,  388, 236, 136],
+            [747, 0,   527, 380],
+            [29,  523, 249, 198],
+            [281, 383, 536, 338],
+            [824, 382, 457, 338]
+    ];
+    var mobileFix1;
+    var mobileFix2;
+                
+    var colorShader:FlxRuntimeShader = null;
+    var shader:ShaderFilter = null;
+
+    public function onCountdownStart(event:CountdownScriptEvent) {
+        super.onCountdownStart(event);
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+        reset();
+
+        colorShader = new FlxRuntimeShader(Assets.getText(Paths.frag("invertColor")), null);
+        shader = new ShaderFilter(colorShader);
+
+        var stupidMobileOffset = (FlxG.width - 1280)/2;
+        for (i in 0...deadOrAliveLyrics.length) {
+            var spr = new FlxSprite(deadOrAliveLyrics[i][0]+stupidMobileOffset, deadOrAliveLyrics[i][1]);
+            spr.makeGraphic(Std.int(deadOrAliveLyrics[i][2]), Std.int(deadOrAliveLyrics[i][3]), 0xFF000000);
+            spr.cameras = [PlayState.instance.camHUD];
+            spr.visible = false;
+            PlayState.instance.add(spr);
+            sprites[i] = spr;
+        }     
+
+        deadOrAlive = new FlxSprite();
+        deadOrAlive.loadGraphic(Paths.image('deadOrAlive', 'duedebt'));
+        deadOrAlive.cameras = [PlayState.instance.camHUD];
+        deadOrAlive.screenCenter();
+        PlayState.instance.add(deadOrAlive);
+        deadOrAlive.alpha = 0;
+
+        mobileFix1 = new FlxSprite();
+        mobileFix1.makeGraphic(Std.int(deadOrAlive.x+20), FlxG.height, 0xFF000000);
+        mobileFix1.cameras = [PlayState.instance.camHUD];
+        mobileFix1.alpha = 0;
+        PlayState.instance.add(mobileFix1);
+
+        mobileFix2 = new FlxSprite(deadOrAlive.x + deadOrAlive.width-20, 0);
+        mobileFix2.makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+        mobileFix2.cameras = [PlayState.instance.camHUD];
+        mobileFix2.alpha = 0;
+        PlayState.instance.add(mobileFix2);
+    }
+
+    function deadOrAliveHandler(cc) {    
+        if (cc < 7 && cc >= 1) sprites[cc].visible = false;
+        else if (cc == 0) {
+            PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y, 0);
+            FlxG.camera.filters.push(shader);
+            for (i in sprites) i.visible = true;
+            sprites[0].visible = false;
+            deadOrAlive.alpha = 1;
+            mobileFix1.alpha = 1;
+            mobileFix2.alpha = 1;
+        }
+        else if (cc == 7) {
+            FlxTween.tween(deadOrAlive.scale, {x: 4, y: 4}, 0.1, {ease: FlxEase.linear});
+            FlxTween.tween(deadOrAlive, {alpha: 0}, 0.1, {ease: FlxEase.linear});
+            PlayState.instance.camGame.filters.pop();
+        }
+    }
+
+    override function onUpdate(e) {
+        super.onUpdate(e);
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+        for (shit in [mobileFix1, mobileFix2, deadOrAlive]) if (shit == null) return;
+
+        mobileFix1.x = deadOrAlive.x - mobileFix1.width + 20;
+        mobileFix2.x = deadOrAlive.x + deadOrAlive.width - 20;
+        mobileFix1.alpha = deadOrAlive.alpha;
+        mobileFix2.alpha = deadOrAlive.alpha;
+    }
+
+    override function onStepHit(e) {
+        super.onStepHit(e);
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != "2hot-bf-mix") return;
+
+        switch (e.step) {
+            case 1024:
+                deadOrAliveHandler(0);
+                for (ui in [PlayState.instance.healthBarBG,PlayState.instance.healthBar,PlayState.instance.scoreText,PlayState.instance.iconP1,PlayState.instance.iconP2]) {
+                    ui.visible = false;
+                }
+            case 1026:
+                deadOrAliveHandler(1);
+            case 1028:
+                deadOrAliveHandler(2);
+            case 1030:
+                deadOrAliveHandler(3);
+            case 1032:
+                deadOrAliveHandler(4);
+            case 1034:
+                deadOrAliveHandler(5);
+            case 1036:
+                deadOrAliveHandler(6);
+            case 1040:
+                deadOrAliveHandler(7);
+                for (ui in [PlayState.instance.healthBarBG,PlayState.instance.healthBar,PlayState.instance.scoreText,PlayState.instance.iconP1,PlayState.instance.iconP2]) {
+                    ui.visible = true;
+                }
+        }
+    }
+
+    function reset() {
+        PlayState.instance.remove(deadOrAlive);
+        for (spr in sprites) {
+            PlayState.instance.remove(spr);
+        }
+        for (ui in [PlayState.instance.healthBarBG,PlayState.instance.healthBar,PlayState.instance.scoreText,PlayState.instance.iconP1,PlayState.instance.iconP2]) {
+                    ui.visible = true;
+                }
+    }
+}

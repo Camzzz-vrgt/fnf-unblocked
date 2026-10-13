@@ -1,0 +1,37 @@
+[
+	{
+		"save": "camNoteFollow",
+		"name": "Camera Follow Note Hit",
+		"type": "bool",
+		"description": "If checked, camera will follow characters' note hits.\nIf unchecked, you have my respect.\n[Default value: Unchecked]",
+		"value": false
+	},
+	{
+		"save": "menuSongList",
+		"name": "Menu Launches on Song List",
+		"type": "bool",
+		"description": "If checked, you won't have to press 'Singleplayer' to access the song list.\n[Default value: Unchecked]",
+		"value": false
+	},
+	{
+		"save": "vSliceNotes",
+		"name": "Force V-Slice Note Settings",
+		"type": "bool",
+		"description": "Uncheck it if you want to use Psych Engine note settings.\n[Default value: Checked]",
+		"value": true
+	},
+	{
+		"save": "subtitles",
+		"name": "Subtitles",
+		"type": "bool",
+		"description": "If checked, turns on subtitles in ONE song.\n[Default value: Checked]",
+		"value": true
+	},
+	{
+		"save": "more3d",
+		"name": "Make Stages More 3D",
+		"type": "bool",
+		"description": "[It better be unchecked]\nMay worsen performance and cause motion sickness.\nIf checked, camera may go out of stage bounds in Papaya.\n[Default value: Unchecked]",
+		"value": false
+	}
+]

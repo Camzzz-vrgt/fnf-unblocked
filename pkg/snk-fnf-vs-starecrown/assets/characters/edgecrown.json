@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				331,
+				600
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "edge3 idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				264,
+				603
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "edge3 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				304,
+				599
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "edge3 down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				600
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "edge3 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				342,
+				597
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "edge3 left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/edge3",
+	"position": [
+		-380,
+		-310
+	],
+	"healthicon": "edge",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		0,
+		135
+	],
+	"camera_position": [
+		-220,
+		-350
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

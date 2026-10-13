@@ -1,0 +1,80 @@
+[
+	{
+		"name" : "steve",
+		"difficulty" : 7,
+		"info" : "Song: #Aetheryx# ft. #LiterallyPio#\nChart: #LiterallyPio#\nSprites: #ShanicMCA#, #sso#\nBackground: #kurkid#",
+		"infoHeight" : 189,
+		"icon" : "stevepixel",
+		"render" : {
+			"name" : "steve",
+			"x" : -550,
+			"y" : -320,
+			"scale" : 0.35
+		}
+	},
+	{
+		"name" : "bountiful",
+		"difficulty" : 17,
+		"info" : "Song: #Aetheryx# ft. #N/A Music#\nChart: #Napstabeats#\nSprites: #Hnwoo#, #StormCentral#, #sso#, #ShanicMCA#\nBackground: #kurkid#, #StormCentral#",
+		"infoHeight" : 236,
+		"icon" : "alexpixel",
+		"render" : {
+			"name" : "alex",
+			"x" : -540,
+			"y" : -320,
+			"scale" : 0.39
+		}
+	},
+	{
+		"name" : "first-night",
+		"difficulty" : 4,
+		"info" : "Song: #N/A Music#\nChart: #CheesyCap#\nSprites: #CheesyCap#, #sso#, #ShanicMCA#\nBackground: #kurkid#",
+		"infoHeight" : 212.5,
+		"icon" : "zombiepixel",
+		"render" : {
+			"name" : "zombie",
+			"x" : -550,
+			"y" : -300,
+			"scale" : 0.355
+		}
+	},
+	{
+		"name" : "blockbuster",
+		"difficulty" : 13,
+		"info" : "Song: #Aetheryx# ft. #N/A Music#\nChart: #Napstabeats#\nSprites: #ShanicMCA#, #sso#\nBackground: #kurkid#",
+		"infoHeight" : 189,
+		"icon" : "jackpixel",
+		"render" : {
+			"name" : "jack",
+			"x" : -550,
+			"y" : -300,
+			"scale" : 0.365
+		}
+	},
+	{
+		"name" : "papaya",
+		"difficulty" : 10,
+		"info" : "Song: #N/A Music#\nChart: #CheesyCap#\nSprites: #CH3ONG#, #enul_micho#, #CheesyCap#, #sso#, #ShanicMCA#\nBackground: #enul_micho#",
+		"infoHeight" : 212.5,
+		"icon" : "amoguspixel",
+		"render" : {
+			"name" : "amogus",
+			"x" : -540,
+			"y" : -300,
+			"scale" : 0.29
+		}
+	},
+	{
+		"name" : "Coming soon",
+		"difficulty" : -1,
+		"infoHeight" : 189,
+		"info" : "",
+		"icon" : "",
+		"render" : {
+			"name" : "v2",
+			"x" : -545,
+			"y" : -330,
+			"scale" : 0.25
+		}
+	}
+]

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				39
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Sing Up0",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "Idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 18,
+			"name": "Sing Down0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				-11
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sing Right0"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sing Left0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Fred_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "fred",
+	"flip_x": true,
+	"healthbar_colors": [
+		24,
+		198,
+		0
+	],
+	"camera_position": [
+		-100,
+		190
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

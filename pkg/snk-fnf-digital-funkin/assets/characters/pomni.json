@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				373,
+				551
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "pom idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				471,
+				647
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "pom up"
+		},
+		{
+			"offsets": [
+				340,
+				550
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "pom right"
+		},
+		{
+			"offsets": [
+				554,
+				577
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "pom left"
+		},
+		{
+			"offsets": [
+				313,
+				250
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "pom down"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/pomni",
+	"position": [
+		110,
+		380
+	],
+	"healthicon": "pomni",
+	"flip_x": false,
+	"healthbar_colors": [
+		226,
+		49,
+		72
+	],
+	"camera_position": [
+		-100,
+		-190
+	],
+	"sing_duration": 4,
+	"scale": 0.500000000000005
+}

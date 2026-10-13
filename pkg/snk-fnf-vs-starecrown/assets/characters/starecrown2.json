@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				190,
+				467
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "stdown idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				204,
+				461
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "stdown up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				202,
+				461
+			],
+			"anim": "Watching",
+			"fps": 1,
+			"name": "stdown see",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				220,
+				465
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "stdown down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				73,
+				460
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "stdown left"
+		},
+		{
+			"offsets": [
+				140,
+				459
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "stdown right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/stdown",
+	"position": [
+		-380,
+		-390
+	],
+	"healthicon": "thanos",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		0,
+		255
+	],
+	"camera_position": [
+		0,
+		170
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

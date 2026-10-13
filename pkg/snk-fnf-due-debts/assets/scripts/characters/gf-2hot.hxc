@@ -1,0 +1,14 @@
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.PlayState;
+import funkin.Conductor;
+
+class GirlfriendTwoHotCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('gf-2hot');
+	}
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+        if (Conductor.instance.currentStep >= 2300) super.playAnimation(name + "-2hot", restart, ignoreOther);
+        else super.playAnimation(name, restart, ignoreOther);
+	}
+}

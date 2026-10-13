@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Oscar Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				-10
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Oscar Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "Oscar Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Oscar Left"
+		},
+		{
+			"offsets": [
+				-20,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Oscar Right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/oscar",
+	"position": [
+		680,
+		1450
+	],
+	"healthicon": "oscar-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		114,
+		249
+	],
+	"camera_position": [
+		-280,
+		150
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				364,
+				457
+			],
+			"anim": "singDOWN",
+			"fps": 20,
+			"name": "Elmo Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				245,
+				459
+			],
+			"anim": "singUP",
+			"fps": 20,
+			"name": "Elmo Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				254,
+				436
+			],
+			"anim": "singLEFT",
+			"fps": 20,
+			"name": "Elmo Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				251,
+				425
+			],
+			"anim": "singRIGHT",
+			"fps": 20,
+			"name": "Elmo Right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				265,
+				430
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "Elmo Idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/ElmoBeeg",
+	"position": [
+		-50,
+		120
+	],
+	"healthicon": "ElmoTrio-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-500,
+		-750
+	],
+	"sing_duration": 5.2,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,420 @@
+import flixel.FlxG;
+import flixel.FlxCamera;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import funkin.Paths;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.stage.Stage;
+import funkin.play.stage.StageProp;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.video.FlxVideo;
+import funkin.audio.FunkinSound;
+import funkin.util.tools.StringTools;
+import funkin.util.Constants;
+import funkin.FunkinMemory;
+import funkin.Preferences;
+
+class TwoHotBFMix extends Song {
+
+    function new() {
+        super("2hot-bf-mix");
+    }
+
+    var pl;
+
+    var rainShaderCover;
+    var boomdark:FunkinSprite;
+    var darkness:FunkinSprite;
+    var fakeDeath:FunkinSprite;
+    var fakeExp:FunkinSprite;
+    var newCan:ScriptedFlxAtlasSprite;
+
+    var camVideos;
+    var currentVideo;
+
+    override function onCreate(event) {
+        super.onCreate(event);
+
+        pl = PlayState.instance;
+
+        camVideos = new FlxCamera(0, 0, FlxG.width, FlxG.height);
+        camVideos.bgColor = 0x00000000;
+        FlxG.cameras.add(camVideos, false);
+        FlxG.cameras.remove(pl.camHUD, false);
+        FlxG.cameras.add(pl.camHUD, false);
+        FlxG.cameras.remove(pl.camCutscene, false);
+        FlxG.cameras.add(pl.camCutscene, false);
+
+        boomdark = new FunkinSprite(-1000, -1000);
+        boomdark.makeGraphic(1, 1, 0xFF000000);
+        boomdark.setGraphicSize(FlxG.width + 10000, FlxG.height + 10000);
+        boomdark.alpha = 0;
+        pl.add(boomdark);
+
+        darkness = new FunkinSprite(-1000, -1000);
+        darkness.makeGraphic(1, 1, 0xFF000000);
+        darkness.setGraphicSize(FlxG.width + 10000, FlxG.height + 10000);
+        darkness.alpha = 0;
+        pl.add(darkness);
+        darkness.zIndex = 66;
+
+        rainShaderCover = new FunkinSprite(0, 0);
+        rainShaderCover.makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+        rainShaderCover.camera = pl.camCutscene;
+        rainShaderCover.zIndex = 1;
+        rainShaderCover.alpha = 0;
+        pl.add(rainShaderCover);
+
+        fakeDeath = new FunkinSprite(pl.currentStage.getBoyfriend().x - 20, pl.currentStage.getBoyfriend().y);
+        fakeDeath.frames = Paths.getSparrowAtlas('characters/bfdead', 'duedebt');
+        fakeDeath.animation.addByPrefix("dies", "BF dies", 24, false);
+        fakeDeath.animation.addByPrefix("confirm", "BF Dead confirm", 24, false);
+        fakeDeath.animation.addByPrefix("loop", "BF Dead Loop", 24, true);
+        fakeDeath.animation.play("dies");
+        fakeDeath.alpha = 0;
+        pl.add(fakeDeath);
+
+        fakeExp = new FunkinSprite(pl.currentStage.getBoyfriend().x - 400, pl.currentStage.getBoyfriend().y - 300);
+        fakeExp.frames = Paths.getSparrowAtlas('phillyStreets/erect/spraypaintExplosionEZ', 'duedebt');
+        fakeExp.animation.addByPrefix("boom", "explosion round 1 short", 24, false);
+        fakeExp.animation.play("boom");
+        fakeExp.zIndex = fakeDeath.zIndex + 1;
+        fakeExp.alpha = 0;
+        pl.add(fakeExp);
+
+        bfFade = new FunkinSprite();
+		bfFade.frames = PlayState.instance.currentStage.getBoyfriend().frames;
+		bfFade.frame = PlayState.instance.currentStage.getBoyfriend().frame;
+		bfFade.updateHitbox();
+		bfFade.x = PlayState.instance.currentStage.getBoyfriend().x;
+		bfFade.y = PlayState.instance.currentStage.getBoyfriend().y;
+		// bfFade.stamp(this, 0, 0);
+		bfFade.alpha = 0;
+        bfFade.zIndex = pl.currentStage.getBoyfriend().zIndex + 1;
+        pl.add(bfFade);
+
+		pl.currentStage.scriptSet("rainShaderStartIntensity", 0.04);
+		pl.currentStage.scriptSet("rainShaderEndIntensity", 0.08);
+        pl.currentStage.getNamedProp("grey1").scale.y = 1.5;
+        pl.currentStage.getNamedProp("grey2").scale.y = 1.5;
+        pl.currentStage.getNamedProp("grey1").y = 150;
+        pl.currentStage.getNamedProp("grey2").y = 150;
+
+        pl.refresh();
+
+        // spraycanAtlas is a TexturePacker atlas loaded via ScriptedFlxAtlasSprite
+        // Cache the spraypaint explosion with correct path
+        FunkinMemory.cacheTexture(Paths.image("spraycanAtlas/spritemap1", "duedebt"));
+        FunkinMemory.cacheTexture(Paths.image('phillyStreets/erect/spraypaintExplosionEZ', 'duedebt'));
+        FunkinMemory.cacheSound(Paths.sound('shot4', 'duedebt'));
+        FunkinSound.playOnce(Paths.sound('shot4', 'duedebt'), 0.1);
+        var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSprite', 0, 0);
+        newCan.scriptCall('playCanStart');
+		PlayState.instance.currentStage.add(newCan);
+        newCan.kill();
+    }
+
+var introed = false;
+    override function onCountdownStart(event:CountdownScriptEvent) {
+        super.onCountdownStart(event);
+
+
+        rainShaderCover.alpha = 0;
+        darkness.alpha = 0;
+        boomdark.alpha = 0;
+        fakeDeath.alpha = 0;
+        fakeExp.alpha = 0;
+
+        if (!FlxG.onMobile)
+            PlayState.instance.playerStrumline.x = FlxG.width/2 + Constants.STRUMLINE_X_OFFSET;
+        PlayState.instance.opponentStrumline.visible = true;
+        PlayState.instance.opponentStrumline.alpha = 1;
+
+        if (!introed) {
+            playVideoIntro(Paths.videos('2HotIntro', 'duedebt'));
+            event.cancel();
+            introed = true;
+            pl.camHUD.alpha = 0;
+            darkness.alpha = 1;
+        }
+    }
+
+    override function onStepHit(event:SongTimeScriptEvent) {
+        super.onStepHit(event);
+        switch (event.step) {
+            case 1034:
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x += 150;
+            case 400:
+                pl.tweenCameraZoom(1, 5, true, FlxEase.sineInOut);
+            case 688:
+                pl.tweenCameraZoom(1.1, 5, true, FlxEase.sineInOut);
+            case 847:
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x -= 150;
+            case 2224:
+                pl.tweenCameraZoom(0.65, 2.2, true, FlxEase.sineInOut);
+                FlxTween.tween(darkness, { alpha: 1 }, 2.5, { ease: FlxEase.linear });
+                FlxTween.tween(pl.camHUD, { alpha: 0 }, 4, { ease: FlxEase.linear });
+                FlxTween.tween(ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText"), { y: ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText").y+100}, 0.1, { ease: FlxEase.quadOut });
+                ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText").camera = pl.camCutscene;
+            case 2256:
+                pl.tweenCameraZoom(1, 0, true, FlxEase.sineInOut);
+                playVideoCutscene(Paths.videos('2hotBFCut1', 'duedebt'), false);
+            case 2320:
+                FlxTween.tween(pl.camHUD, { alpha: 1 }, 5, { ease: FlxEase.linear });
+                FlxTween.tween(ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText"), { y: ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText").y-100}, 5, { ease: FlxEase.quadOut });
+            case 2384:
+                darkness.alpha = 0;
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x -= 90;
+                ModuleHandler.getModule("lyricsHander").scriptGet("lyricsText").camera = pl.camHUD;
+            case 2464:
+                FlxTween.tween(boomdark, { alpha: 0.6 }, 0.7, { ease: FlxEase.linear });
+            case 2472:
+                var gf = PlayState.instance.currentStage.getGirlfriend();
+                if (gf != null && gf.animation.curAnim != null)
+                    gf.animation.curAnim.finish();
+                gf.dance();
+                FlxTween.tween(boomdark, { alpha: 0 }, 0.3, { ease: FlxEase.linear });
+
+            case 1584:
+                pl.currentStage.scriptSet("rainShaderStartIntensity", 0);
+		        pl.currentStage.scriptSet("rainShaderEndIntensity", 0);
+                fakeExp.animation.play('boom', true);
+                fakeDeath.animation.play('dies', false);
+                removeCans();
+                PlayState.instance.camHUD.alpha = 0;
+                fakeDeath.alpha = 1;
+                darkness.alpha = 1;
+                fakeExp.alpha = 1;
+                fakeDeath.zIndex = PlayState.instance.currentStage.getBoyfriend().zIndex;
+                fakeExp.zIndex = fakeDeath.zIndex+1;
+                pl.cameraBopIntensity = 1;
+                allowPause = false;
+                pl.refresh();
+            case 1590:
+                fakeExp.alpha = 0;
+            case 1616:
+                fakeDeath.animation.play('loop', true);
+                fakeDeath.y += 6;
+                PlayState.instance.tweenCameraToPosition(2100, 920, 10, FlxEase.linear);
+                PlayState.instance.tweenCameraZoom(0.9, 10, true, FlxEase.sineInOut);
+            case 1728:
+                fakeDeath.animation.play('confirm', true);
+                fakeDeath.y -= 64;
+                                allowPause = true;
+            case 1738:
+                fakeDeath.alpha = 0;
+                fakeExp.alpha = 0;
+                //FlxG.camera.followLerp = 0.015;
+            case 1744:
+                PlayState.instance.tweenCameraZoom(0.65, 10, true, FlxEase.sineInOut);
+                pl.tweenCameraToPosition(pl.currentStage.getGirlfriend().cameraFocusPoint.x, pl.currentStage.getGirlfriend().cameraFocusPoint.y, 8);
+                darkness.alpha = 0;
+                rainShaderCover.alpha = 1;
+                FlxTween.tween(rainShaderCover, {alpha: 0}, 10, { ease: FlxEase.linear });
+                pl.currentStage.scriptSet("rainShaderStartIntensity", 0.04);
+		        pl.currentStage.scriptSet("rainShaderEndIntensity", 0.08);
+                pl.cameraBopIntensity = Constants.DEFAULT_BOP_INTENSITY;
+            case 1839:
+                FlxTween.tween(PlayState.instance.camHUD, { alpha: 1 }, 1, { ease: FlxEase.linear });
+            case 1455:
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x -= 90;
+            case 1459:
+                PlayState.instance.tweenCameraZoom(1.1, 9, true, FlxEase.sineInOut);
+            case 1669:
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x += 90;
+            case 2512:
+                PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x += 90;
+            case 1196:
+                PlayState.instance.currentStage.getDad().cameraFocusPoint.x -= 200;
+            case 1327:
+                PlayState.instance.currentStage.getDad().cameraFocusPoint.x += 200;
+            case 2736:
+                playVideoCutscene(Paths.videos('2hotBFCut2', 'duedebt'), true);
+
+            case 2748:
+                currentVideo.alpha = 1;
+                darkness.alpha = 1;
+            case 2832:
+                FlxTween.tween(pl.camHUD, { alpha: 0 }, 0.6, { ease: FlxEase.linear });
+            case 2772:
+                for (ui in [PlayState.instance.healthBarBG, PlayState.instance.healthBar,PlayState.instance.scoreText,PlayState.instance.iconP1,PlayState.instance.iconP2]) {
+                    ui.visible = false;
+                }
+            }
+    }
+
+    var allowPause = true;
+    override function onPause(event:PauseScriptEvent) {
+        if (!allowPause) event.cancel();
+        else super.onPause(event);
+    }
+
+    override function onNoteGhostMiss(event) {
+        super.onNoteGhostMiss(event);
+        if (!allowPause) {
+            event.cancel();
+            event.stopPropagation();
+        }
+    }
+
+
+//weekend can stuffs
+    var spawnedCans:Array<ScriptedFlxAtlasSprite> = [];
+	override function onNoteHit(event:HitNoteScriptEvent) {
+		super.onNoteHit(event);
+        if (PlayState.instance.currentStage == null) return;
+		switch (event.note.kind)
+		{
+			case "weekend-1-lightcan":
+			case "weekend-1-kickcan":
+				// This creates the can and starts the animation.
+				// We define the behavior of the can in a separate scripted class,
+				// which allows the can to track and manage its own properties.
+                var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSprite', 0, 0);
+				var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
+
+				newCan.x = spraycanPile.x - 430;
+				newCan.y = spraycanPile.y - 840;
+				newCan.zIndex = spraycanPile.zIndex - 1;
+
+				newCan.scriptCall('playCanStart');
+				PlayState.instance.currentStage.add(newCan);
+				//PlayState.instance.currentStage.refresh();
+				spawnedCans.push(newCan);
+			case "weekend-1-kneecan":
+			case "weekend-1-cockgun":
+			case "weekend-1-firegun": shootNextCan();
+		}
+	}
+
+    function onNoteMiss(event:NoteScriptEvent) {
+		super.onNoteMiss(event.note);
+		switch (event.note.kind) {
+			case "weekend-1-cockgun":
+				event.healthChange = 0.0; // We cause health loss later.
+			case "weekend-1-firegun":
+				gunCocked = false;
+				event.healthChange = 0.0; // We cause health loss elsewhere.
+				missNextCan();
+				PlayState.instance.health -= 1.0;
+			case "weekend-1-firegun-hip":
+				gunCocked = false;
+				event.healthChange = 0.0; // We cause health loss elsewhere.
+				missNextCan();
+				PlayState.instance.health -= 1.0;
+			case "weekend-1-firegun-far":
+				gunCocked = false;
+				event.healthChange = 0.0; // We cause health loss elsewhere.
+				missNextCan();
+				PlayState.instance.health -= 1.0;
+		}
+	}
+
+	public var STATE_ARCING:Int = 2; // In the air.
+	public var STATE_SHOT:Int = 3; // Hit by the player.
+	public var STATE_IMPACTED:Int = 4; // Impacted the player.
+    var bfFade;
+
+    function shootNextCan() {
+		var can = getNextCanWithState(STATE_ARCING);
+		if (can != null) {
+			can.scriptSet('currentState', STATE_SHOT);
+			can.scriptCall('playCanShot');
+            FunkinSound.playOnce(Paths.sound('shot4', 'duedebt'), 2);
+            pl.currentStage.getBoyfriend().playAnimation("attack", true);
+			new FlxTimer().start(1/24, function(tmr) {
+				darkenStageProps();
+			});
+		}
+
+        bfFade.alpha = 0.3;
+		FlxTween.tween(bfFade.scale, {x: 1.3, y: 1.3}, 0.4);
+		FlxTween.tween(bfFade, {alpha: 0}, 0.4);
+	}
+
+    function missNextCan() {
+		var can = getNextCanWithState(STATE_ARCING);
+		if (can != null) {
+			can.scriptSet('currentState', STATE_IMPACTED);
+            //FunkinSound.playOnce(Paths.sound("shot1"), 2);
+            FunkinSound.playOnce(Paths.sound('Pico_Bonk', 'duedebt'));
+            pl.currentStage.getBoyfriend().playAnimation("hit", true);
+		}
+	}
+
+    function getNextCanWithState(desiredState:Int) {
+		for (index in 0...spawnedCans.length) {
+			var can = spawnedCans[index];
+			var canState = can.scriptGet('currentState');
+			if (canState == desiredState) return can;
+		}
+		return null;
+	}
+
+    function darkenStageProps() {
+		for (stageProp in PlayState.instance.currentStage.members) {
+			if (Std.isOfType(stageProp, StageProp)) if (stageProp.name == "bf" || stageProp.name == "dad" || stageProp.name == "gf") continue;
+			if (spawnedCans.contains(stageProp)) continue;
+			if (stageProp.zIndex == (PlayState.instance.currentStage.getBoyfriend().zIndex - 3)) continue;
+            if (stageProp.alpha != 1) continue;
+
+			stageProp.color = 0xFF111111;
+			new FlxTimer().start(1/24, (tmr) -> {
+				stageProp.color = 0xFF222222;
+				FlxTween.color(stageProp, 1.4, 0xFF222222, 0xFFFFFFFF);
+			});
+		}
+	}
+
+    function removeCans() {
+		for (can in spawnedCans)
+			can.kill();
+		spawnedCans = [];
+	}
+
+//video stuffs - HTML5 compatible using FlxVideo
+    function playVideoIntro(path:String) {
+        allowPause = false;
+        // Strip library prefix for HTML5 NetStream compatibility
+        var videoPath = Paths.stripLibrary(path);
+        var video = new FlxVideo(videoPath);
+        video.camera = pl.camCutscene;
+        // FlxVideo automatically sizes to FlxG.width/height in onVideoReady
+        video.scrollFactor.set(0, 0);
+        video.finishCallback = function() {
+            pl.remove(video);
+            video.destroy();
+            allowPause = true;
+            pl.startSong();
+            pl.isInCountdown = true;
+            FlxTween.tween(pl.camHUD, { alpha: 1 }, 0.5, { ease: FlxEase.linear });
+            FlxTween.tween(darkness, { alpha: 0 }, 0.3, { ease: FlxEase.linear });
+        };
+        pl.add(video);
+        currentVideo = video;
+    }
+
+    function playVideoCutscene(path:String, startHidden:Bool) {
+        allowPause = false;
+        // Strip library prefix for HTML5 NetStream compatibility
+        var videoPath = Paths.stripLibrary(path);
+        var video = new FlxVideo(videoPath);
+        video.camera = camVideos;
+        // FlxVideo automatically sizes to FlxG.width/height in onVideoReady
+        video.scrollFactor.set(0, 0);
+        if (startHidden) video.alpha = 0;
+        video.finishCallback = function() {
+            pl.remove(video);
+            video.destroy();
+            allowPause = true;
+        };
+        pl.add(video);
+        currentVideo = video;
+    }
+
+}
