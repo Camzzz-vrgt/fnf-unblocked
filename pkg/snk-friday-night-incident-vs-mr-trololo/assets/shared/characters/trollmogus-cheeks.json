@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 26,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 26,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 26,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [0, 5],
+			"loop": false,
+			"fps": 26,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/freeplay/yoinkySploinky/trollmogus-cheeks",
+	"position": [-20, 320],
+	"healthicon": "freeplay/trollmogus",
+	"flip_x": false,
+	"healthbar_colors": [255, 255, 255],
+	"camera_position": [-20, 50],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

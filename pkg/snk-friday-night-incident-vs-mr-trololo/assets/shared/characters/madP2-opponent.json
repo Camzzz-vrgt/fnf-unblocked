@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle madman"
+		},
+		{
+			"offsets": [347, 286],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down madman"
+		},
+		{
+			"offsets": [266, 232],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up madman"
+		},
+		{
+			"loop": false,
+			"offsets": [156, 84],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [48, 130],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right madman",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/mad/madP2Opponent",
+	"position": [-50, -30],
+	"healthicon": "mad/mischief",
+	"flip_x": false,
+	"healthbar_colors": [233, 232, 231],
+	"camera_position": [-450, -380],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

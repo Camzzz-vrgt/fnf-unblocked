@@ -1,0 +1,39 @@
+{
+	"animations": [
+		{
+			"offsets": [-104, -103],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "treebf_startdeath"
+		},
+		{
+			"offsets": [-104, -106],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "treebf_confirmdeath"
+		},
+		{
+			"loop": true,
+			"offsets": [-104, -107],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "treebf_loopdeath",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf/gameOver-screamingTree",
+	"position": [-190, 190],
+	"healthicon": "bf/infected1",
+	"flip_x": true,
+	"healthbar_colors": [89, 164, 207],
+	"camera_position": [120, 70],
+	"sing_duration": 4,
+	"scale": 0.5,
+	"_editor_isPlayer": true
+}

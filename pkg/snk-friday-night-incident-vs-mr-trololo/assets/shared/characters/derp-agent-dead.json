@@ -1,0 +1,39 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "DerpDieStart",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [633, -106],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "DerpDieLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [1218, 72],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "DerpDieRetry",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/gameOver-derp",
+	"position": [-500, -330],
+	"healthicon": "finalWeek/derp",
+	"flip_x": true,
+	"healthbar_colors": [241, 218, 200],
+	"camera_position": [75, 50],
+	"sing_duration": 6.1,
+	"scale": 1.3,
+	"_editor_isPlayer": true
+}

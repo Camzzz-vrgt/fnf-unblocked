@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 20,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [776, 398],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [188, 88],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [37, 386],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [9, 31],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "singUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [58, 234],
+			"anim": "defend",
+			"fps": 24,
+			"name": "shot",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/auroraBloodlust",
+	"position": [-280, -310],
+	"healthicon": "finalWeek/auroraBloodlust",
+	"flip_x": false,
+	"healthbar_colors": [73, 60, 76],
+	"camera_position": [-220, -230],
+	"sing_duration": 5.5,
+	"scale": 1.5,
+	"_editor_isPlayer": false
+}

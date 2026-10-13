@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="MrTree.png" width="8091" height="7717">
+	<SubTexture name="mrtree_down10000" x="6801" y="1423" width="1285" height="1453" frameX="-24" frameY="-39" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10001" x="5523" y="1423" width="1273" height="1444" frameX="-31" frameY="-49" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10002" x="2477" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10003" x="5" y="2817" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10004" x="3724" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10005" x="1241" y="2825" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10006" x="2477" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10007" x="5" y="2817" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10008" x="3724" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10009" x="1241" y="2825" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10010" x="2477" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10011" x="5" y="2817" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10012" x="3724" y="2825" width="1242" height="1494" frameX="-48" frameY="-0" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_down10013" x="1241" y="2825" width="1231" height="1483" frameX="-54" frameY="-11" frameWidth="1319" frameHeight="1518"/>
+	<SubTexture name="mrtree_idle10000" x="5" y="1378" width="1116" height="1426" frameX="-7" frameY="-11" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10001" x="5" y="1378" width="1116" height="1426" frameX="-7" frameY="-11" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10002" x="1126" y="1378" width="1098" height="1434" frameX="-18" frameY="-3" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10003" x="1126" y="1378" width="1098" height="1434" frameX="-18" frameY="-3" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10004" x="2229" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10005" x="2229" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10006" x="3327" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10007" x="3327" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10008" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10009" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10010" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10011" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10012" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_idle10013" x="4425" y="1383" width="1093" height="1437" frameX="-20" frameY="-0" frameWidth="1123" frameHeight="1440"/>
+	<SubTexture name="mrtree_left10000" x="5" y="5884" width="1562" height="1637" frameX="-23" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10001" x="5293" y="4441" width="1578" height="1620" frameX="-24" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10002" x="1572" y="5884" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10003" x="4662" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10004" x="3117" y="5992" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10005" x="6210" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10006" x="1572" y="5884" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10007" x="4662" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10008" x="3117" y="5992" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10009" x="6210" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10010" x="1572" y="5884" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10011" x="4662" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10012" x="3117" y="5992" width="1540" height="1642" frameX="-88" frameY="-0" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_left10013" x="6210" y="6066" width="1543" height="1646" frameX="-87" frameY="-1" frameWidth="1641" frameHeight="1654"/>
+	<SubTexture name="mrtree_right10000" x="4971" y="2872" width="1318" height="1555" frameX="-16" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10001" x="6294" y="2881" width="1340" height="1555" frameX="-16" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10002" x="5" y="4313" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10003" x="1336" y="4324" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10004" x="2649" y="4324" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10005" x="3980" y="4432" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10006" x="5" y="4313" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10007" x="1336" y="4324" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10008" x="2649" y="4324" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10009" x="3980" y="4432" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10010" x="5" y="4313" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10011" x="1336" y="4324" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10012" x="2649" y="4324" width="1326" height="1555" frameX="-7" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_right10013" x="3980" y="4432" width="1308" height="1555" frameX="-5" frameY="-1" frameWidth="1386" frameHeight="1557"/>
+	<SubTexture name="mrtree_up10000" x="6573" y="5" width="911" height="1413" frameX="-19" frameY="-0" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10001" x="5657" y="5" width="911" height="1408" frameX="-19" frameY="-5" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10002" x="2837" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10003" x="5" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10004" x="3777" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10005" x="949" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10006" x="4717" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10007" x="1893" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10008" x="4717" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10009" x="1893" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10010" x="4717" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10011" x="1893" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10012" x="4717" y="5" width="935" height="1373" frameX="-19" frameY="-42" frameWidth="968" frameHeight="1428"/>
+	<SubTexture name="mrtree_up10013" x="1893" y="5" width="939" height="1368" frameX="-18" frameY="-47" frameWidth="968" frameHeight="1428"/>
+</TextureAtlas>

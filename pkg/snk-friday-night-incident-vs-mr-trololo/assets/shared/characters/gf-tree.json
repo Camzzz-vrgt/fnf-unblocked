@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "gf_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "looking",
+			"fps": 24,
+			"name": "gf_lookingidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				43,
+				1
+			],
+			"anim": "phone",
+			"fps": 24,
+			"name": "gf_phoneidle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gf/screamingTree",
+	"position": [
+		80,
+		500
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-180,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 0.6
+}

@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [-32, 16],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "JoeMama"
+		},
+		{
+			"offsets": [70, -18],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Joe Left"
+		},
+		{
+			"offsets": [-32, 41],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Joe Right"
+		},
+		{
+			"offsets": [-1, 1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Joe Down"
+		},
+		{
+			"offsets": [-10, 121],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Joe Up"
+		},
+		{
+			"offsets": [-72, -70],
+			"indices": [],
+			"fps": 24,
+			"anim": "heyPeter",
+			"loop": false,
+			"name": "hey peter"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/freeplay/trollingGuy/joe",
+	"position": [500, -340],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [155, 120, 60],
+	"camera_position": [-280, -60],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

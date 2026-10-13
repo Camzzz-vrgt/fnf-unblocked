@@ -1,0 +1,131 @@
+{
+	"camera_boyfriend": [
+		-10,
+		-75
+	],
+	"_editorMeta": {
+		"boyfriend": "bf",
+		"gf": "gf",
+		"dad": "madP1-opponent"
+	},
+	"boyfriend": [
+		808,
+		-148
+	],
+	"girlfriend": [
+		275,
+		55
+	],
+	"isPixelStage": false,
+	"objects": [
+		{
+			"x": -344,
+			"y": -583,
+			"scale": [
+				1.25,
+				1.1
+			],
+			"image": "stages/mischief/sky",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "sky",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.1,
+				0.1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -207,
+			"y": -452,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/mischief/buildings",
+			"flipX": false,
+			"filters": 2,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "buildings",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.5,
+				0.5
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -235,
+			"y": -472,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/mischief/wires",
+			"flipX": false,
+			"filters": 2,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "wires",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.65,
+				0.65
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -748,
+			"y": -1234,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/mischief/street",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		}
+	],
+	"defaultZoom": 0.75,
+	"camera_speed": 1.1,
+	"directory": "",
+	"opponent": [
+		-210,
+		-177
+	],
+	"hide_girlfriend": true,
+	"camera_opponent": [
+		100,
+		10
+	]
+}

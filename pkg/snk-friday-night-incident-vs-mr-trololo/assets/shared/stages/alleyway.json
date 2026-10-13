@@ -1,0 +1,224 @@
+{
+	"camera_boyfriend": [
+		0,
+		50
+	],
+	"_editorMeta": {
+		"boyfriend": "derp",
+		"dad": "grafter-calm",
+		"gf": "gf"
+	},
+	"boyfriend": [
+		1418,
+		144
+	],
+	"isPixelStage": false,
+	"stageUI": "bbi",
+	"girlfriend": [
+		400,
+		130
+	],
+	"objects": [
+		{
+			"x": -570,
+			"y": -157,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/farbg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "farBG",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.9,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -475,
+			"y": -178,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		},
+		{
+			"x": -475,
+			"y": -179,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/lampposts",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "lampposts",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -466,
+			"y": -178,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/c",
+			"flipX": true,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "gradientRight",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0.45,
+			"type": "sprite"
+		},
+		{
+			"x": -401,
+			"y": -173,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/light",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "rightLight",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1.1,
+				1.1
+			],
+			"alpha": 0.35,
+			"type": "sprite"
+		},
+		{
+			"x": 2269,
+			"y": -44,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/car",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "car",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1.2,
+				1.2
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -481,
+			"y": -178,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/gradient",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "gradientLeft",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -225,
+			"y": -190,
+			"scale": [
+				0.6,
+				0.6
+			],
+			"image": "stages/grafter/light",
+			"flipX": true,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "leftLight",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1.1,
+				1.1
+			],
+			"alpha": 0,
+			"type": "sprite"
+		}
+	],
+	"defaultZoom": 0.8,
+	"camera_girlfriend": [
+		0,
+		0
+	],
+	"opponent": [
+		243,
+		185
+	],
+	"directory": "",
+	"camera_speed": 1,
+	"hide_girlfriend": true,
+	"camera_opponent": [
+		0,
+		0
+	]
+}

@@ -1,0 +1,1 @@
+function onCreatePost() game.dad.singHealthDrain = 0.004;

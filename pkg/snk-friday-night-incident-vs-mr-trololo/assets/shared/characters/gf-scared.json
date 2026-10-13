@@ -1,0 +1,31 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "scared",
+			"indices": []
+		},
+		{
+			"offsets": [56, 76],
+			"indices": [1,2,3,4,5,6,7,8],
+			"fps": 24,
+			"anim": "scared",
+			"loop": false,
+			"name": "wince"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gf/normal",
+	"position": [400, 160],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [165, 0, 77],
+	"camera_position": [10, -70],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

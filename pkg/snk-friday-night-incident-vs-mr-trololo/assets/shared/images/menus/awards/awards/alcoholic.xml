@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="alcoholic.png" width="500" height="2925" spritePadding="2" borderPadding="2">
+	<SubTexture name="alcoholic0000" x="2" y="771" width="496" height="621" frameX="-2" frameY="0" frameWidth="498" frameHeight="785"/>
+	<SubTexture name="alcoholic0001" x="2" y="2" width="496" height="767" frameX="-2" frameY="0" frameWidth="498" frameHeight="785"/>
+	<SubTexture name="alcoholic0002" x="2" y="1937" width="496" height="492" frameX="-2" frameY="0" frameWidth="498" frameHeight="785"/>
+	<SubTexture name="alcoholic0003" x="2" y="2431" width="496" height="492" frameX="-2" frameY="0" frameWidth="498" frameHeight="785"/>
+	<SubTexture name="alcoholic0004" x="2" y="1394" width="496" height="541" frameX="-2" frameY="0" frameWidth="498" frameHeight="785"/>
+</TextureAtlas>

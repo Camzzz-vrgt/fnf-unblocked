@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				210
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "ThingIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-122,
+				-30
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ThingDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				195
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ThingRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				678,
+				774
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ThingUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				279,
+				55
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ThingLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				64,
+				14
+			],
+			"anim": "defend0",
+			"fps": 24,
+			"name": "ThingDefend0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				114,
+				45
+			],
+			"anim": "defend1",
+			"fps": 24,
+			"name": "ThingDefend1",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/trololoWeek/maestro",
+	"position": [
+		-300,
+		-430
+	],
+	"healthicon": "trololoWeek/maestro",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-160,
+		-410
+	],
+	"sing_duration": 5.1,
+	"scale": 1.3
+}

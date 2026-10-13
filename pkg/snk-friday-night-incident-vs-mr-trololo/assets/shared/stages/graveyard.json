@@ -1,0 +1,113 @@
+{
+	"camera_boyfriend": [
+		-50,
+		-25
+	],
+	"_editorMeta": {
+		"boyfriend": "bf-graveyard",
+		"gf": "gf",
+		"dad": "dood"
+	},
+	"isPixelStage": false,
+	"boyfriend": [
+		975,
+		230
+	],
+	"girlfriend": [
+		350,
+		275
+	],
+	"objects": [
+		{
+			"x": -762,
+			"y": -313,
+			"scale": [
+				0.95,
+				0.95
+			],
+			"image": "stages/resurrection/gravesky",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.25,
+				0.25
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -780,
+			"y": 170,
+			"scale": [
+				0.95,
+				0.95
+			],
+			"image": "stages/resurrection/othergraves",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "graves",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.5,
+				0.5
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -869,
+			"y": 451,
+			"scale": [
+				0.95,
+				0.95
+			],
+			"image": "stages/resurrection/maingrave",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "stageFront",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		}
+	],
+	"camera_girlfriend": [
+		0,
+		0
+	],
+	"defaultZoom": 0.7,
+	"camera_speed": 1,
+	"directory": "",
+	"opponent": [
+		0,
+		220
+	],
+	"camera_opponent": [
+		-50,
+		50
+	],
+	"hide_girlfriend": true
+}

@@ -1,0 +1,277 @@
+{
+	"song": {
+	"events": [
+		[
+			1500,
+			[
+				["Cam Zoomin", "2", "0.03, 0.02"]
+			]
+		],
+		[
+			4875,
+			[
+				["Set Property", "cameraSpeed", "1.1"]
+			]
+		],
+		[
+			6750,
+			[
+				["Camera Follow Pos", "", ""],
+				["Set Property", "defaultCamZoom", "0.85"],
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			7500,
+			[
+				["Set Property", "defaultCamZoom", "0.75"],
+				["Cam Zoomin", "2", "0.035, 0.0225"]
+			]
+		],
+		[
+			24890.625,
+			[
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			24937.5,
+			[
+				["Set Property", "defaultCamZoom", "1.1"],
+				["Set Character Camera Offset", "dad", "0, -150"]
+			]
+		],
+		[
+			25500,
+			[
+				["Set Property", "defaultCamZoom", "0.75"],
+				["Cam Zoomin", "2", "0.035, 0.0225"],
+				["Set Character Camera Offset", "dad", "0, 0"]
+			]
+		],
+		[
+			31500,
+			[
+				["Cam Zoomin", "1", "0.03, 0.0175"]
+			]
+		],
+		[
+			35625,
+			[
+				["Set Property", "defaultCamZoom", "1.1"]
+			]
+		],
+		[
+			36000,
+			[
+				["Set Property", "defaultCamZoom", "0.75"]
+			]
+		],
+		[
+			39000,
+			[
+				["Set Property", "defaultCamZoom", "1"]
+			]
+		],
+		[
+			39375,
+			[
+				["Set Property", "defaultCamZoom", "0.75"]
+			]
+		],
+		[
+			43500,
+			[
+				["Cinematic Bars", "true", "0.3"]
+			]
+		],
+		[
+			43875,
+			[
+				["Set Property", "defaultCamZoom", "0.9"]
+			]
+		],
+		[
+			55500,
+			[
+				["Set Property", "defaultCamZoom", "0.6"],
+				["Cam Zoomin", "2", "0.035, 0.025"],
+				["Camera Follow Pos", "500", "50"]
+			]
+		],
+		[
+			61031.25,
+			[
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			61500,
+			[
+				["Cam Zoomin", "2", "0.035, 0.025"]
+			]
+		],
+		[
+			67500,
+			[
+				["Set Property", "defaultCamZoom", "1"],
+				["Cinematic Bars", "false", "0.5"],
+				["Cam Zoomin", "0", "0, 0"],
+				["Camera Follow Pos", "", ""]
+			]
+		],
+		[
+			72468.75,
+			[
+				["Change Character", "dad", "madP2-opponent"],
+				["Change Scroll Speed", "1.04", "0.001"]
+			]
+		],
+		[
+			72937.5,
+			[
+				["Add Camera Zoom", "0.06", "0"]
+			]
+		],
+		[
+			73500,
+			[
+				["Cam Zoomin", "2", "0.04, 0.0275"]
+			]
+		],
+		[
+			78750,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Set Camera Zoom", "1.1", ""]
+			]
+		],
+		[
+			79500,
+			[
+				["Cam Zoomin", "2", "0.04, 0.0275"]
+			]
+		],
+		[
+			79503.90625,
+			[
+				["Set Camera Zoom", "0.75", ""]
+			]
+		],
+		[
+			84703.125,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Set Camera Zoom", "1.1", ""]
+			]
+		],
+		[
+			85500,
+			[
+				["Cam Zoomin", "2", "0.04, 0.02"],
+				["Set Property", "defaultCamZoom", "0.85"],
+				["Cinematic Bars", "true", "0.3"]
+			]
+		],
+		[
+			96750,
+			[
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			97125,
+			[
+				["Camera Follow Pos", "500", "50"],
+				["Set Property", "defaultCamZoom", "0.6"]
+			]
+		],
+		[
+			97500,
+			[
+				["Cam Zoomin", "2", "0.04, 0.02"]
+			]
+		],
+		[
+			103125,
+			[
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			103500,
+			[
+				["Cam Zoomin", "2", "0.04, 0.02"]
+			]
+		],
+		[
+			109500,
+			[
+				["Cam Zoomin", "1", "0.04, 0.02"],
+				["Set Property", "defaultCamZoom", "0.9"],
+				["Camera Follow Pos", "", ""]
+			]
+		],
+		[
+			120750,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Cinematic Bars", "false", "0.5"],
+				["Set Camera Zoom", "0.9", ""]
+			]
+		],
+		[
+			121500,
+			[
+				["Cam Zoomin", "2", "0.035, 0.02"],
+				["Set Property", "defaultCamZoom", "0.75"]
+			]
+		],
+		[
+			133125,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Set Property", "defaultCamZoom", "1.1"],
+				["Cinematic Bars", "true", "0.5"]
+			]
+		],
+		[
+			133500,
+			[
+				["Cam Zoomin", "2", "0.035, 0.02"],
+				["Set Property", "defaultCamZoom", "0.75"]
+			]
+		],
+		[
+			138890.625,
+			[
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			138937.5,
+			[
+				["Set Character Camera Offset", "dad", "0, -150"],
+				["Set Property", "defaultCamZoom", "1.1"]
+			]
+		],
+		[
+			139500,
+			[
+				["Set Property", "defaultCamZoom", "0.85"],
+				["Cam Zoomin", "2", "0.035, 0.02"]
+			]
+		],
+		[
+			145500,
+			[
+				["Cam Zoomin", "1", "0.035, 0.02"],
+				["Camera Follow Pos", "500", "50"],
+				["Cinematic Bars", "false", "0.6"],
+				["Set Property", "defaultCamZoom", "0.75"]
+			]
+		]
+	],
+	"format": "psych_v1"
+}
+}

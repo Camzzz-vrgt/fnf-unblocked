@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [135, 108],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [11, 3],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [-6, 71],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [99, 294],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [10, 19],
+			"loop": false,
+			"fps": 22,
+			"anim": "sigh",
+			"indices": [],
+			"name": "sigh"
+		},
+		{
+			"loop": false,
+			"offsets": [-20, 20],
+			"anim": "look",
+			"fps": 22,
+			"name": "lookup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [378, 108],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MISSleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [124, 100],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MISSdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [97, 170],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MISSup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [162, 129],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MISSright",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tomophobia/derp",
+	"position": [-110, 50],
+	"healthicon": "tomophobia/derpScared",
+	"flip_x": true,
+	"healthbar_colors": [240, 229, 211],
+	"camera_position": [230, -290],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="trollmogus.png" width="4095" height="2722">
+	<SubTexture name="idle0000" x="712" y="0" width="711" height="282" frameX="-0" frameY="-207" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0001" x="712" y="0" width="711" height="282" frameX="-0" frameY="-207" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0002" x="687" y="1602" width="674" height="317" frameX="-26" frameY="-173" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0003" x="687" y="1602" width="674" height="317" frameX="-26" frameY="-173" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0004" x="2720" y="2088" width="652" height="334" frameX="-38" frameY="-156" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0005" x="2720" y="2088" width="652" height="334" frameX="-38" frameY="-156" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0006" x="3460" y="1365" width="490" height="482" rotated="true" frameX="-134" frameY="-0" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0007" x="3460" y="1365" width="490" height="482" rotated="true" frameX="-134" frameY="-0" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0008" x="2016" y="2240" width="489" height="396" frameX="-122" frameY="-96" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0009" x="1358" y="2340" width="486" height="382" frameX="-129" frameY="-110" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0010" x="1358" y="2340" width="486" height="382" frameX="-129" frameY="-110" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0011" x="1358" y="2340" width="486" height="382" frameX="-129" frameY="-110" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0012" x="1358" y="2340" width="486" height="382" frameX="-129" frameY="-110" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="idle0013" x="1358" y="2340" width="486" height="382" frameX="-129" frameY="-110" frameWidth="711" frameHeight="492"/>
+	<SubTexture name="singDOWN0000" x="2112" y="658" width="681" height="292" frameX="-0" frameY="-28" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0001" x="2112" y="658" width="681" height="292" frameX="-0" frameY="-28" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0002" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0003" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0004" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0005" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0006" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0007" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0008" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0009" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0010" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0011" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0012" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singDOWN0013" x="3446" y="1847" width="644" height="320" frameX="-16" frameY="-1" frameWidth="681" frameHeight="321"/>
+	<SubTexture name="singLEFT0000" x="3460" y="946" width="598" height="419" rotated="true" frameX="-0" frameY="-0" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0001" x="3460" y="946" width="598" height="419" rotated="true" frameX="-0" frameY="-0" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0002" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0003" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0004" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0005" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0006" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0007" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0008" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0009" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0010" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0011" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0012" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singLEFT0013" x="3514" y="494" width="555" height="452" rotated="true" frameX="-42" frameY="-45" frameWidth="494" frameHeight="600"/>
+	<SubTexture name="singRIGHT0000" x="1423" y="0" width="706" height="398" frameX="-9" frameY="-0" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0001" x="1423" y="0" width="706" height="398" frameX="-9" frameY="-0" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0002" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0003" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0004" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0005" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0006" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0007" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0008" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0009" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0010" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0011" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0012" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singRIGHT0013" x="2829" y="406" width="685" height="387" frameX="-0" frameY="-4" frameWidth="715" frameHeight="398"/>
+	<SubTexture name="singUP0000" x="2829" y="0" width="685" height="406" rotated="true" frameX="-1" frameY="-0" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0001" x="2829" y="0" width="685" height="406" rotated="true" frameX="-1" frameY="-0" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0002" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0003" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0004" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0005" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0006" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0007" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0008" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0009" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0010" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0011" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0012" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="singUP0013" x="3514" y="0" width="581" height="494" rotated="true" frameX="-10" frameY="-105" frameWidth="504" frameHeight="686"/>
+	<SubTexture name="go fuck yourself0000" x="2793" y="793" width="667" height="658" rotated="true" frameX="-9" frameY="-3" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0001" x="2793" y="793" width="667" height="658" rotated="true" frameX="-9" frameY="-3" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0002" x="2791" y="1451" width="655" height="637" rotated="true" frameX="-4" frameY="-15" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0003" x="0" y="0" width="712" height="666" frameX="-4" frameY="-4" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0004" x="0" y="0" width="712" height="666" frameX="-4" frameY="-4" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0005" x="712" y="282" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0006" x="712" y="282" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0007" x="712" y="282" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0008" x="700" y="940" width="691" height="662" frameX="-17" frameY="-7" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0009" x="2112" y="950" width="679" height="653" frameX="-14" frameY="-16" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0010" x="1391" y="1056" width="674" height="647" frameX="-14" frameY="-22" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0011" x="1391" y="1056" width="674" height="647" frameX="-14" frameY="-22" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0012" x="0" y="666" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0013" x="0" y="666" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0014" x="0" y="666" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0015" x="0" y="1973" width="670" height="666" rotated="true" frameX="-12" frameY="-0" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0016" x="0" y="1973" width="670" height="666" rotated="true" frameX="-12" frameY="-0" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0017" x="2065" y="1603" width="655" height="637" rotated="true" frameX="-4" frameY="-15" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0018" x="2065" y="1603" width="655" height="637" rotated="true" frameX="-4" frameY="-15" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0019" x="2129" y="0" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0020" x="2129" y="0" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0021" x="1412" y="398" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0022" x="1412" y="398" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0023" x="687" y="1919" width="671" height="668" frameX="-13" frameY="-2" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0024" x="687" y="1919" width="671" height="668" frameX="-13" frameY="-2" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0025" x="1361" y="1703" width="655" height="637" rotated="true" frameX="-4" frameY="-15" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0026" x="1361" y="1703" width="655" height="637" rotated="true" frameX="-4" frameY="-15" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0027" x="0" y="666" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0028" x="0" y="666" width="700" height="658" frameX="-2" frameY="-12" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0029" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0030" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0031" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0032" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0033" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0034" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0035" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+	<SubTexture name="go fuck yourself0036" x="0" y="1324" width="687" height="649" frameX="-0" frameY="-21" frameWidth="717" frameHeight="670"/>
+</TextureAtlas>

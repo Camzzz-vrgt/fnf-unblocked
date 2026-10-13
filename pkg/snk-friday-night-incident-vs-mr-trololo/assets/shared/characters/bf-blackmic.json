@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idleBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				26,
+				7
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "leftBM0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				-19
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "downBM0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				43
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "upBM0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rightbm0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				47,
+				9
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "schlattBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				-19
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "grumpBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				38,
+				41
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "slumpMP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-1
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "raftBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				8
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "leftALTBM",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				15,
+				-20
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "downALTBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				34
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "upALTBM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-5
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "rightALTbm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf/blackMic",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf/normal",
+	"flip_x": true,
+	"healthbar_colors": [
+		89,
+		164,
+		207
+	],
+	"camera_position": [
+		30,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1.025
+}

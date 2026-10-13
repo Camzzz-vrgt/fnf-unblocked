@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [77, -11],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Peter Idle"
+		},
+		{
+			"offsets": [23, -39],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Peter Up"
+		},
+		{
+			"offsets": [32, -50],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "PeterDown"
+		},
+		{
+			"offsets": [-5, -76],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Peter Right"
+		},
+		{
+			"offsets": [-79, -36],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Peter Left"
+		},
+		{
+			"loop": false,
+			"offsets": [-192, 68],
+			"anim": "wellAlright",
+			"fps": 24,
+			"name": "well alright",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/freeplay/trollingGuy/peter",
+	"position": [-700, -700],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [155, 120, 60],
+	"camera_position": [-290, -150],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

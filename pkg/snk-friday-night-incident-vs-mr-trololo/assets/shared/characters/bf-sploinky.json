@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, -14],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [-3, -67],
+			"loop": false,
+			"fps": 26,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [-22, -105],
+			"loop": false,
+			"fps": 26,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [-69, 85],
+			"loop": false,
+			"fps": 26,
+			"anim": "singUP",
+			"indices": [],
+			"name": "singUP"
+		},
+		{
+			"offsets": [-106, -79],
+			"loop": false,
+			"fps": 26,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [3, -67],
+			"loop": false,
+			"fps": 26,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "leftMiss"
+		},
+		{
+			"offsets": [-12, -117],
+			"loop": false,
+			"fps": 26,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "downMiss"
+		},
+		{
+			"offsets": [-112, 124],
+			"loop": false,
+			"fps": 26,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "upMiss"
+		},
+		{
+			"offsets": [-94, -81],
+			"loop": false,
+			"fps": 26,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "rightMiss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf/yoinky",
+	"position": [-140, 190],
+	"healthicon": "bf/sploinky",
+	"flip_x": true,
+	"healthbar_colors": [43, 191, 255],
+	"camera_position": [-60, 70],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

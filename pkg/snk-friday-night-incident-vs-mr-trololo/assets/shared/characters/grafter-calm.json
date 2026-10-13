@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [-130, 20],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [568, 27],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [-106, -8],
+			"loop": false,
+			"fps": 30,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [338, 0],
+			"loop": false,
+			"fps": 30,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [144, 65],
+			"loop": false,
+			"fps": 30,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tomophobia/grafterCalm",
+	"position": [-140, -40],
+	"healthicon": "tomophobia/grafterCalm",
+	"flip_x": false,
+	"healthbar_colors": [0, 0, 0],
+	"camera_position": [50, -210],
+	"sing_duration": 5.89999999999998,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

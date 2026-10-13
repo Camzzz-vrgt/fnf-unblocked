@@ -1,0 +1,48 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-130,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "talk",
+			"indices": [],
+			"name": "export cutscene"
+		},
+		{
+			"offsets": [
+				-130,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0,
+				0
+			],
+			"name": "export cutscene new"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tomophobia/grafterCutscene",
+	"position": [
+		-280,
+		-80
+	],
+	"healthicon": "tomophobia/grafterCalm",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		40,
+		-260
+	],
+	"sing_duration": 5.89999999999998,
+	"scale": 1.4
+}

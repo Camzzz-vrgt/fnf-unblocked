@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"offsets": [77, 21],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left0"
+		},
+		{
+			"offsets": [6, -4],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down0"
+		},
+		{
+			"offsets": [-11, 21],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up0"
+		},
+		{
+			"offsets": [-10, 15],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right0"
+		},
+		{
+			"offsets": [-31, 54],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "shoot"
+		},
+		{
+			"offsets": [77, 21],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "left-miss"
+		},
+		{
+			"offsets": [6, -4],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "down-miss"
+		},
+		{
+			"offsets": [-11, 21],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "up-miss"
+		},
+		{
+			"offsets": [-10, 15],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "right-miss"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/derpBloodlust",
+	"position": [-310, -60],
+	"healthicon": "finalWeek/derp",
+	"flip_x": true,
+	"healthbar_colors": [241, 218, 200],
+	"camera_position": [-270, 280],
+	"sing_duration": 6.1,
+	"scale": 0.55,
+	"_editor_isPlayer": true
+}

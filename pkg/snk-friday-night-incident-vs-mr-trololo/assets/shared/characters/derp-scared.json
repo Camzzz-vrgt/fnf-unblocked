@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-435, 410],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IdleDerp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-321, 492],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LeftDerp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-117, 396],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DownDerp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-73, 485],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UpDerp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [17, 542],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RightDerp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-124, 618],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "DownMiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-38, 812],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "UpMiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-325, 810],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "RightMiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-229, 601],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "LeftMiss",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tomophobia/derpScared",
+	"position": [-550, 420],
+	"healthicon": "tomophobia/derpScared",
+	"flip_x": true,
+	"healthbar_colors": [240, 229, 211],
+	"camera_position": [-210, -640],
+	"sing_duration": 4,
+	"scale": 1.1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,362 @@
+{
+	"song": {
+	"events": [
+		[
+			0,
+			[
+				["Set Camera Zoom", "1", ""]
+			]
+		],
+		[
+			130.057803468208,
+			[
+				["Play Animation", "sigh", "bf"]
+			]
+		],
+		[
+			2080.92485549133,
+			[
+				["Play Animation", "talk", "dad"]
+			]
+		],
+		[
+			2947.97687861272,
+			[
+				["Play Animation", "look", "bf"]
+			]
+		],
+		[
+			3208.09248554913,
+			[
+				["Change Subtitles", "Ahh,", ""],
+				["Set Property", "defaultCamZoom", "0.9"],
+				["Set Character Camera Offset", "bf", "-350"],
+				["Camera Follow Pos", "", ""]
+			]
+		],
+		[
+			4161.84971098266,
+			[
+				["Change Subtitles", "Ahh, smell that air!", ""]
+			]
+		],
+		[
+			5895.95375722543,
+			[
+				["Change Subtitles", "Exhaust fumes,", ""],
+				["Set Character Camera Offset", "dad", "-30, 0"]
+			]
+		],
+		[
+			7283.23699421965,
+			[
+				["Change Subtitles", "Exhaust fumes, burning tires?", ""],
+				["Set Character Camera Offset", "dad", "30, 0"]
+			]
+		],
+		[
+			8323.69942196532,
+			[
+				["Change Subtitles", "Ooooh... Haha, I love this place!", ""],
+				["Set Character Camera Offset", "dad", "0, 30"]
+			]
+		],
+		[
+			9104.04624277457,
+			[
+				["Set Character Camera Offset", "dad", "0, -30"]
+			]
+		],
+		[
+			9364.16184971098,
+			[
+				["Set Character Camera Offset", "dad", "0, -10"]
+			]
+		],
+		[
+			9710.98265895954,
+			[
+				["Set Character Camera Offset", "dad", "0, 10"]
+			]
+		],
+		[
+			10231.2138728324,
+			[
+				["Set Character Camera Offset", "dad", "0, 0"]
+			]
+		],
+		[
+			11098.2658959538,
+			[
+				["Change Subtitles", "", ""],
+				["Change Character", "dad", "grafter-calm"]
+			]
+		],
+		[
+			11445.0867052023,
+			[
+				["Set Property", "defaultCamZoom", "1"]
+			]
+		],
+		[
+			16300.5780346821,
+			[
+				["Set Character Camera Offset", "bf", "125"]
+			]
+		],
+		[
+			33294.7976878613,
+			[
+				["Change Scroll Speed", "1.2", "0.5"],
+				["Set Property", "defaultCamZoom", "0.8"],
+				["Cam Zoomin", "1", "0.025, 0.015"]
+			]
+		],
+		[
+			38497.1098265896,
+			[
+				["Add Camera Zoom", "0.025", "0.025"]
+			]
+		],
+		[
+			43699.4219653179,
+			[
+				["Add Camera Zoom", "0.025", "0.025"]
+			]
+		],
+		[
+			54017.3410404624,
+			[
+				["Set Property", "cameraSpeed", "2"]
+			]
+		],
+		[
+			54797.6878612717,
+			[
+				["Set Property", "defaultCamZoom", "1.1"]
+			]
+		],
+		[
+			54971.0982658959,
+			[
+				["Set Property", "defaultCamZoom", "1.2"]
+			]
+		],
+		[
+			55144.5086705202,
+			[
+				["Set Property", "defaultCamZoom", "1.3"]
+			]
+		],
+		[
+			55231.2138728323,
+			[
+				["Change Scroll Speed", "1.4", "2"]
+			]
+		],
+		[
+			55317.9190751445,
+			[
+				["Set Property", "defaultCamZoom", "1.4"]
+			]
+		],
+		[
+			55491.3294797688,
+			[
+				["Set Camera Zoom", "1", ""],
+				["Change Character", "dad", "grafter"],
+				["Set Character Camera Offset", "dad", "0, -220"],
+				["Cam Zoomin", "0", "0, 0"],
+				["Screen Shake", "0.65, 0.015", "0, 0"],
+				["Change Character", "bf", "derp-scared"]
+			]
+		],
+		[
+			56445.0867052023,
+			[
+				["Set Character Camera Offset", "dad", "40, -40"]
+			]
+		],
+		[
+			57225.4335260115,
+			[
+				["Set Character Camera Offset", "dad", "0, -120"]
+			]
+		],
+		[
+			58265.8959537572,
+			[
+				["Set Camera Zoom", "0.8", ""],
+				["Set Character Camera Offset", "dad", "0, 0"],
+				["Cam Zoomin", "2", "0.03, 0.02"],
+				["Set Property", "cameraSpeed", "1"]
+			]
+		],
+		[
+			102658.959537572,
+			[
+				["Set Property", "defaultCamZoom", "0.9"],
+				["Cam Zoomin", "1", "0.015, 0.0125"]
+			]
+		],
+		[
+			102658.959537572,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			102658.959537572,
+			[
+				["Set Property", "cameraSpeed", "1.25"]
+			]
+		],
+		[
+			105433.526011561,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			108208.092485549,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			110982.658959538,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			113757.225433526,
+			[
+				["Cam Zoomin", "2", "0.035, 0.025"],
+				["Set Property", "defaultCamZoom", "0.825"],
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			116531.791907514,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			119306.358381503,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			122080.924855491,
+			[
+				["Add Camera Zoom", "0.085", "0.05"]
+			]
+		],
+		[
+			124161.849710983,
+			[
+				["Add Camera Zoom", "0.035", "0.03"]
+			]
+		],
+		[
+			124508.670520231,
+			[
+				["Add Camera Zoom", "0.035", "0.03"],
+				["Set Property", "cameraSpeed", "1000"]
+			]
+		],
+		[
+			124855.49132948,
+			[
+				["Change Scroll Speed", "1.2", "0.85"],
+				["Change Character", "dad", "grafter-calm"],
+				["Set Camera Zoom", "0.9", ""],
+				["Cam Zoomin", "0", "0, 0"]
+			]
+		],
+		[
+			125028.901734104,
+			[
+				["Set Property", "cameraSpeed", "0.85"]
+			]
+		],
+		[
+			147052.023121387,
+			[
+				["Change Scroll Speed", "1.45", "0.25"]
+			]
+		],
+		[
+			147052.023121387,
+			[
+				["Set Camera Zoom", "0.7", ""],
+				["Cam Zoomin", "2", "0.0225, 0.0175"]
+			]
+		],
+		[
+			147052.023121387,
+			[
+				["Set Property", "cameraSpeed", "1.15"]
+			]
+		],
+		[
+			150520.231213873,
+			[
+				["Change Character", "dad", "grafter"],
+				["Set Property", "defaultCamZoom", "1"],
+				["Set Property", "cameraSpeed", "1.5"]
+			]
+		],
+		[
+			150867.052023122,
+			[
+				["Set Property", "defaultCamZoom", "0.8"]
+			]
+		],
+		[
+			151213.87283237,
+			[
+				["Set Property", "defaultCamZoom", "0.9"]
+			]
+		],
+		[
+			152601.156069364,
+			[
+				["Set Property", "defaultCamZoom", "0.8"]
+			]
+		],
+		[
+			180346.820809249,
+			[
+				["Set Property", "defaultCamZoom", "0.95"]
+			]
+		],
+		[
+			191271.676300579,
+			[
+				["Set Property", "cameraSpeed", "0.5"],
+				["Set Character Camera Offset", "bf", "-175, 0"]
+			]
+		],
+		[
+			191445.086705203,
+			[
+				["Set Camera Zoom", "0.5", "13"],
+				["Camera Follow Pos", "950", "450"],
+				["Cam Zoomin", "0", "0, 0"],
+				["Add Camera Zoom", "0.055", "0.02"]
+			]
+		],
+		[
+			192789.017341041,
+			[
+				["Set Property", "camZooming", "false"]
+			]
+		]
+	],
+	"format": "psych_v1"
+}
+}

@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": true,
+			"fps": 22,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [342, 694],
+			"loop": false,
+			"fps": 22,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [97, 6],
+			"loop": false,
+			"fps": 22,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [21, 63],
+			"loop": false,
+			"fps": 22,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [65, 308],
+			"loop": false,
+			"fps": 22,
+			"anim": "singUP",
+			"indices": [],
+			"name": "singUP0"
+		},
+		{
+			"offsets": [44, 279],
+			"loop": false,
+			"fps": 22,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "singUP-alt"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/aurora",
+	"position": [-260, -190],
+	"healthicon": "finalWeek/aurora",
+	"flip_x": false,
+	"healthbar_colors": [176, 168, 164],
+	"camera_position": [-330, -240],
+	"sing_duration": 6.79999999999999,
+	"scale": 1.3,
+	"_editor_isPlayer": false
+}

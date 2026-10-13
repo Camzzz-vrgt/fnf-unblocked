@@ -1,0 +1,157 @@
+{
+	"camera_boyfriend": [
+		100,
+		0
+	],
+	"_editorMeta": {
+		"boyfriend": "bf-angry",
+		"gf": "gf-scared",
+		"dad": "aurora"
+	},
+	"isPixelStage": false,
+	"boyfriend": [
+		2049,
+		873
+	],
+	"girlfriend": [
+		1966,
+		959
+	],
+	"defaultZoom": 0.58,
+	"objects": [
+		{
+			"x": -1632,
+			"y": -1085,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/aurora/sky",
+			"flipX": false,
+			"filters": 2,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "sky",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.15,
+				0.15
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -1062,
+			"y": -847,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/aurora/trees",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "trees",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.7,
+				0.7
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -886,
+			"y": -551,
+			"scale": [
+				1,
+				1
+			],
+			"image": "stages/aurora/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		},
+		{
+			"x": -941,
+			"y": -553,
+			"scale": [
+				3.8,
+				3.8
+			],
+			"image": "vignette",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "vignette",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -795,
+			"y": -563,
+			"scale": [
+				1,
+				1
+			],
+			"image": "songs/evacuate/spoopyvignette",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "spoopyVignette",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 0,
+			"type": "sprite"
+		}
+	],
+	"camera_girlfriend": [
+		0,
+		0
+	],
+	"camera_speed": 1,
+	"directory": "",
+	"opponent": [
+		490,
+		860
+	],
+	"camera_opponent": [
+		0,
+		0
+	],
+	"hide_girlfriend": false
+}

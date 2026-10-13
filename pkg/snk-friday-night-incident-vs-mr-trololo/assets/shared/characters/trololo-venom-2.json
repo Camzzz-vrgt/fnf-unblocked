@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				345,
+				-109
+			],
+			"anim": "singLEFT",
+			"fps": 20,
+			"name": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-112,
+				-790
+			],
+			"anim": "singDOWN",
+			"fps": 20,
+			"name": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-440,
+				-72
+			],
+			"anim": "singUP",
+			"fps": 20,
+			"name": "singUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-398,
+				-2
+			],
+			"anim": "singRIGHT",
+			"fps": 20,
+			"name": "singRIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/trololoVenom2",
+	"position": [
+		-230,
+		-780
+	],
+	"healthicon": "finalWeek/trololoVenom2",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-100,
+		-330
+	],
+	"sing_duration": 6.1,
+	"scale": 2.3
+}

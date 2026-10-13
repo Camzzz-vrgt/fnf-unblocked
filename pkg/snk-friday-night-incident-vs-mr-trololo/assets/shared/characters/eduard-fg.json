@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [6, -1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [130, -10],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/freeplay/trollingGuy/eduard",
+	"position": [-285, -540],
+	"healthicon": "freeplay/eduardFG",
+	"flip_x": false,
+	"healthbar_colors": [186, 124, 77],
+	"camera_position": [-180, -140],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

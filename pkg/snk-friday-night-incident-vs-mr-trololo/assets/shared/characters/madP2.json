@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [450, 319],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [63, 241],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [515, 134],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "right madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-68, 83],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "left madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [460, 209],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "down miss madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [63, 251],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "up miss madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [515, 133],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "right miss madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-68, 83],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "left miss madman",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [443, 84],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "game over",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [443, 84],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "game over",
+			"indices": [9, 9]
+		},
+		{
+			"loop": false,
+			"offsets": [443, 84],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "game over",
+			"indices": [9, 9]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/mad/madP2",
+	"position": [-70, 40],
+	"healthicon": "mad/paradox",
+	"flip_x": false,
+	"healthbar_colors": [233, 232, 231],
+	"camera_position": [450, -40],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

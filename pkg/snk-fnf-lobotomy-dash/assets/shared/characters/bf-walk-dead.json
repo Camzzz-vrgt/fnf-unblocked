@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-345,
+				-232
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "bf_phone_dead dead",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-345,
+				-232
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "bf_phone_dead loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-345,
+				-232
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "bf_phone_dead retry",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gameovers/bf_phone_dead",
+	"position": [
+		-860,
+		-710
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		650,
+		450
+	],
+	"sing_duration": 4,
+	"scale": 0.96
+}

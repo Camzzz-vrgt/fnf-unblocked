@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"offsets": [-5, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle nervous"
+		},
+		{
+			"offsets": [24, 8],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "leftnervous"
+		},
+		{
+			"offsets": [14, -19],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down_nervous"
+		},
+		{
+			"offsets": [13, 45],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "upnervous"
+		},
+		{
+			"offsets": [-13, -7],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "rightnervous"
+		},
+		{
+			"offsets": [46, 8],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "schlatt"
+		},
+		{
+			"offsets": [35, -19],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "grump"
+		},
+		{
+			"offsets": [37, 40],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "slump"
+		},
+		{
+			"offsets": [17, -1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "raft"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf/normal",
+	"position": [0, 350],
+	"healthicon": "bf/scared",
+	"flip_x": true,
+	"healthbar_colors": [89, 164, 207],
+	"camera_position": [10, 20],
+	"sing_duration": 4,
+	"scale": 1.025,
+	"_editor_isPlayer": true
+}

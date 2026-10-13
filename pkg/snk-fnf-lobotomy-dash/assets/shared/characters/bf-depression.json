@@ -1,0 +1,232 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "hey",
+			"fps": 24,
+			"name": "bf_depression hey",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bf_depression left note",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-3,
+				-41
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bf_depression down note",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bf_depression up note",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bf_depression right note",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "bf_depression left scared",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "bf_depression down scared",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "bf_depression up scared",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "bf_depression right scared",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "bf_depression idle dance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-39
+			],
+			"loop": false,
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "bf_depression idle scared",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singLEFTmiss-alt",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singDOWNmiss-alt",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singUPmiss-alt",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-39
+			],
+			"anim": "singRIGHTmiss-alt",
+			"fps": 24,
+			"name": "bf_depression miss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf_depression",
+	"position": [
+		-860,
+		-710
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-270,
+		290
+	],
+	"sing_duration": 4,
+	"scale": 0.56
+}

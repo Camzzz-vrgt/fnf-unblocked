@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				121,
+				-243
+			],
+			"loop": false,
+			"fps": 22,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "singLEFT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-260
+			],
+			"anim": "singDOWN",
+			"fps": 22,
+			"name": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-78,
+				54
+			],
+			"anim": "singUP",
+			"fps": 22,
+			"name": "singUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-150,
+				-340
+			],
+			"anim": "singRIGHT",
+			"fps": 22,
+			"name": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-174,
+				-194
+			],
+			"anim": "idle",
+			"fps": 21,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/finalWeek/maestroVenom",
+	"position": [
+		-400,
+		-450
+	],
+	"healthicon": "finalWeek/maestroVenom",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		100,
+		-250
+	],
+	"sing_duration": 7.1,
+	"scale": 1.5
+}

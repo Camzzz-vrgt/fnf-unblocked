@@ -1,0 +1,248 @@
+{
+	"song": {
+	"events": [
+		[
+			0,
+			[
+				["Add Camera Zoom", "0.5", "1"],
+				["Set Camera Zoom", "0.85", "1.2, expoOut"]
+			]
+		],
+		[
+			6000,
+			[
+				["Set Property", "cameraSpeed", "0.5"]
+			]
+		],
+		[
+			11992.1875,
+			[
+				["Set Property", "camZooming", "true"]
+			]
+		],
+		[
+			12000,
+			[
+				["Cam Zoomin", "3", "0.025, 0.02"],
+				["Set Property", "cameraSpeed", "1"]
+			]
+		],
+		[
+			24000,
+			[
+				["Cam Zoomin", "1", "0.025, 0.02"]
+			]
+		],
+		[
+			35250,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Change Scroll Speed", "1.15", "1.8"],
+				["Set Property", "defaultCamZoom", "0.85"]
+			]
+		],
+		[
+			36000,
+			[
+				["Cam Zoomin", "2", "0.0275, 0.025"]
+			]
+		],
+		[
+			59250,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			60000,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			83250,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			84000,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			91875,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			92250,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			98250,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			99000,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			127875,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			128250,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			132000,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			132750,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			137625,
+			[
+				["Change Scroll Speed", "1.215", "0.001"]
+			]
+		],
+		[
+			138000,
+			[
+				["Cam Zoomin", "2", "0.0315, 0.0275"]
+			]
+		],
+		[
+			149250,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			150000,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			157875,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			158250,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			180000,
+			[
+				["Aurora Jumpscare", "true", ""]
+			]
+		],
+		[
+			180750,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			186000,
+			[
+				["Change Scroll Speed", "1", "1"],
+				["Cam Zoomin", "1", "0.0175, 0.02"]
+			]
+		],
+		[
+			198000,
+			[
+				["Cam Zoomin", "3", "0.0175, 0.02"]
+			]
+		],
+		[
+			207000,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			207187.5,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			207750,
+			[
+				["Add Camera Zoom", "0.0215", "0.025"]
+			]
+		],
+		[
+			207937.5,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			208500,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			209062.5,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			209250,
+			[
+				["Add Camera Zoom", "0.0215", "0.025"]
+			]
+		],
+		[
+			209437.5,
+			[
+				["Add Camera Zoom", "0.0175", "0.02"]
+			]
+		],
+		[
+			210000,
+			[
+				["Cam Zoomin", "0", "0, 0"],
+				["Aurora Jumpscare", "false", ""]
+			]
+		],
+		[
+			210750,
+			[
+				["Aurora Jumpscare", "false", ""]
+			]
+		]
+	],
+	"format": "psych_v1"
+}
+}

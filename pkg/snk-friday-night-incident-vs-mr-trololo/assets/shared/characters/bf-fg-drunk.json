@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [-141, 24],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7],
+			"name": "Up"
+		},
+		{
+			"offsets": [-21, -20],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [0, 2, 3, 4, 5, 6, 7],
+			"name": "Left"
+		},
+		{
+			"offsets": [-45, -41],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7],
+			"name": "Down"
+		},
+		{
+			"offsets": [-102, -34],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7],
+			"name": "Right"
+		},
+		{
+			"offsets": [-39, 26],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "LeftMiss"
+		},
+		{
+			"offsets": [-91, -29],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "RightMiss"
+		},
+		{
+			"offsets": [-117, 33],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "UpMiss"
+		},
+		{
+			"offsets": [-16, -46],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "DownMiss"
+		},
+		{
+			"offsets": [-56, 263],
+			"indices": [],
+			"fps": 24,
+			"anim": "drink",
+			"loop": false,
+			"name": "drink"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf/familyGuy-drunk",
+	"position": [-50, 160],
+	"healthicon": "bf/fgDrunk",
+	"flip_x": true,
+	"healthbar_colors": [89, 164, 207],
+	"camera_position": [45, -55],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

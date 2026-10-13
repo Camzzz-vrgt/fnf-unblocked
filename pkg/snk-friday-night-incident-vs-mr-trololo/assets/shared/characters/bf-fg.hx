@@ -1,0 +1,1 @@
+function onGameOverStart() FlxG.camera.followLerp *= 4;
