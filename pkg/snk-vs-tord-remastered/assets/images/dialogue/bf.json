@@ -1,0 +1,50 @@
+{
+	"position": [
+		-120,
+		40
+	],
+	"dialogue_pos": "right",
+	"scale": 1.35,
+	"image": "bf",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_offsets": [
+				0,
+				-4
+			],
+			"anim": "talk",
+			"idle_name": "bf talk",
+			"loop_name": "bf talk"
+		},
+		{
+			"idle_offsets": [
+				0,
+				-11
+			],
+			"anim": "shocked",
+			"loop_offsets": [
+				-4,
+				-6
+			],
+			"idle_name": "bf scared",
+			"loop_name": "bf scared"
+		},
+		{
+			"loop_offsets": [
+				0,
+				1
+			],
+			"anim": "hurt",
+			"idle_offsets": [
+				0,
+				33
+			],
+			"loop_name": "bf hurt",
+			"idle_name": "bf hurt"
+		}
+	]
+}

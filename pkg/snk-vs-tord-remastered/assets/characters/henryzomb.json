@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "henry idle"
+		},
+		{
+			"offsets": [
+				-4,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "henry down"
+		},
+		{
+			"offsets": [
+				28,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "henry left"
+		},
+		{
+			"offsets": [
+				45,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "drool",
+			"loop": false,
+			"name": "henry hurt"
+		},
+		{
+			"offsets": [
+				-23,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "henry right"
+		},
+		{
+			"offsets": [
+				4,
+				23
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "henry up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/henry_assets",
+	"position": [
+		30,
+		140
+	],
+	"healthicon": "henryzomb",
+	"flip_x": false,
+	"healthbar_colors": [
+		92,
+		168,
+		92
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

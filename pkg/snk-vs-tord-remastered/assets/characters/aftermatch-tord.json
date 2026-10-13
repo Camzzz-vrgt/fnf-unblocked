@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tord idle"
+		},
+		{
+			"offsets": [
+				3,
+				-24
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tord down"
+		},
+		{
+			"offsets": [
+				84,
+				-7
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tord left"
+		},
+		{
+			"offsets": [
+				28,
+				22
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tord up"
+		},
+		{
+			"offsets": [
+				25,
+				-8
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tord right"
+		},
+		{
+			"offsets": [
+				33,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "shut up",
+			"loop": false,
+			"name": "tord shutup"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/aftermatchtord",
+	"position": [
+		30,
+		80
+	],
+	"healthicon": "tordhurt",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		40,
+		40
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,37 @@
+{
+	"position": [
+		-120,
+		40
+	],
+	"dialogue_pos": "right",
+	"scale": 1.35,
+	"image": "BF_hurt",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_offsets": [
+				0,
+				-4
+			],
+			"anim": "talk",
+			"idle_name": "bf talk",
+			"loop_name": "bf talk"
+		},
+		{
+			"idle_offsets": [
+				0,
+				-1
+			],
+			"anim": "shocked",
+			"loop_offsets": [
+				-4,
+				-6
+			],
+			"idle_name": "bf scream",
+			"loop_name": "bf scream"
+		}
+	]
+}

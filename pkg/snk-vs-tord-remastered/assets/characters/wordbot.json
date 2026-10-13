@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				597,
+				50
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tordbot idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				507,
+				51
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tordbot left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				584,
+				1400
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tordbot right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				563,
+				78
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tordbot up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				589,
+				-45
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tordbot down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/wordbot",
+	"position": [
+		100,
+		-1330
+	],
+	"healthicon": "wordbot",
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		160,
+		160
+	],
+	"camera_position": [
+		-640,
+		-700
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

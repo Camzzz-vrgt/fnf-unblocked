@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-4,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tord down"
+		},
+		{
+			"offsets": [
+				8,
+				8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tord left"
+		},
+		{
+			"offsets": [
+				-7,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tord right"
+		},
+		{
+			"offsets": [
+				-6,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tord up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tord idle"
+		},
+		{
+			"offsets": [
+				-5,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "drool",
+			"indices": [],
+			"name": "tord drool"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/TordZomb",
+	"position": [
+		30,
+		140
+	],
+	"healthicon": "tordzomb",
+	"flip_x": false,
+	"healthbar_colors": [
+		95,
+		200,
+		120
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

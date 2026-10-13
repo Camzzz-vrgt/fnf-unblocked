@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tord idle0"
+		},
+		{
+			"offsets": [
+				26,
+				-17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tord left"
+		},
+		{
+			"offsets": [
+				-2,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tord down"
+		},
+		{
+			"offsets": [
+				16,
+				22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tord up"
+		},
+		{
+			"offsets": [
+				-24,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tord right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "laugh",
+			"indices": [],
+			"name": "tord laugh"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				-2
+			],
+			"anim": "nomic",
+			"fps": 24,
+			"name": "tord idlenomic",
+			"indices": []
+		},
+		{
+			"offsets": [
+				7,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cutscene",
+			"indices": [],
+			"name": "tord pulloutmic"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/oldtord",
+	"position": [
+		20,
+		40
+	],
+	"healthicon": "oldshaded",
+	"flip_x": false,
+	"healthbar_colors": [
+		186,
+		39,
+		39
+	],
+	"camera_position": [
+		20,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

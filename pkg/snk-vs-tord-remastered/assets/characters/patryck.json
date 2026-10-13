@@ -1,0 +1,190 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				60,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "GF Dancing at Gunpoint"
+		},
+		{
+			"offsets": [
+				60,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"name": "GF Dancing at Gunpoint"
+		},
+		{
+			"offsets": [
+				38,
+				11
+			],
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "GF Dancing at Gunpoint UP PATRYCK"
+		},
+		{
+			"offsets": [
+				58,
+				-8
+			],
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "GF Dancing at Gunpoint RIGHT PATRYCK"
+		},
+		{
+			"offsets": [
+				61,
+				-16
+			],
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "GF Dancing at Gunpoint DOWN PATRYCK"
+		},
+		{
+			"offsets": [
+				60,
+				-7
+			],
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "GF Dancing at Gunpoint LEFT PATRYCK"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/paulandpatryk",
+	"position": [
+		-90,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

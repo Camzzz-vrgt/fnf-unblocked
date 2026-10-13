@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				-1
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tord idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				12
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tord up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tord left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-28,
+				-6
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tord right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				-19
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tord down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "laugh",
+			"indices": [],
+			"name": "tord laugh"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				3
+			],
+			"anim": "shoot",
+			"fps": 24,
+			"name": "tord shoot",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-2,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "gun",
+			"indices": [],
+			"name": "gun"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				16,
+				12
+			],
+			"anim": "fuck",
+			"fps": 24,
+			"name": "ninjatord",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "tord shoot",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "tord shoot"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "tord shoot"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "tord shoot"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Tordnite",
+	"position": [
+		-470,
+		-210
+	],
+	"healthicon": "tord",
+	"flip_x": false,
+	"healthbar_colors": [
+		235,
+		255,
+		115
+	],
+	"camera_position": [
+		180,
+		60
+	],
+	"sing_duration": 4,
+	"scale": 0.900000000000004
+}

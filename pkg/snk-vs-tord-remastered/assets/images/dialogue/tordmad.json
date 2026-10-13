@@ -1,0 +1,37 @@
+{
+	"position": [
+		150,
+		-50
+	],
+	"dialogue_pos": "left",
+	"scale": 1.35,
+	"image": "tordmad",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				1
+			],
+			"anim": "angry",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "tord pissed",
+			"idle_name": "tord pissed"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "crazy",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "tord crazy",
+			"idle_name": "tord crazy"
+		}
+	]
+}

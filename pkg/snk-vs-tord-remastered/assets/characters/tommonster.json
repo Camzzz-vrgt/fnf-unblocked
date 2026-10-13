@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				507,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "monster tom idle"
+		},
+		{
+			"offsets": [
+				590,
+				183
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "monster tom up"
+		},
+		{
+			"offsets": [
+				529,
+				-70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "monster tom down"
+		},
+		{
+			"offsets": [
+				473,
+				49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "monster tom left"
+		},
+		{
+			"offsets": [
+				562,
+				69
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "monster tom right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tommonster",
+	"position": [
+		90,
+		-790
+	],
+	"healthicon": "tommonster",
+	"flip_x": true,
+	"healthbar_colors": [
+		60,
+		50,
+		95
+	],
+	"camera_position": [
+		650,
+		-320
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

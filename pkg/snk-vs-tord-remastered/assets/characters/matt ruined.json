@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-2,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "matt idle"
+		},
+		{
+			"offsets": [
+				2,
+				-26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "matt down"
+		},
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "matt left"
+		},
+		{
+			"offsets": [
+				-29,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "matt right"
+		},
+		{
+			"offsets": [
+				30,
+				22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "matt up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				71,
+				105
+			],
+			"anim": "fire1",
+			"fps": 24,
+			"name": "matt cutscene fire",
+			"indices": []
+		},
+		{
+			"offsets": [
+				65,
+				92
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "fire2",
+			"indices": [],
+			"name": "matt fire run"
+		},
+		{
+			"offsets": [
+				-8,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "transition",
+			"indices": [],
+			"name": "matt transition"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				0
+			],
+			"anim": "walk",
+			"fps": 24,
+			"name": "matt walk",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mattR",
+	"position": [
+		10,
+		80
+	],
+	"healthicon": "ruinedtord",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		215,
+		137
+	],
+	"camera_position": [
+		-70,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

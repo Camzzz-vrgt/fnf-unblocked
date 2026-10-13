@@ -1,0 +1,158 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tordsky idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tordsky down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tordsky left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tordsky right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tordsky up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "tordsky idle"
+		},
+		{
+			"offsets": [
+				-14,
+				3
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singUP-loop",
+			"loop": true,
+			"name": "tordsky up"
+		},
+		{
+			"offsets": [
+				3,
+				-10
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"loop": true,
+			"name": "tordsky down"
+		},
+		{
+			"offsets": [
+				6,
+				0
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"loop": true,
+			"name": "tordsky left"
+		},
+		{
+			"offsets": [
+				-3,
+				-5
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"loop": true,
+			"name": "tordsky right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/aerotord",
+	"position": [
+		-200,
+		140
+	],
+	"healthicon": "tord",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		40,
+		40
+	],
+	"camera_position": [
+		70,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,62 @@
+{
+	"storyName": "Red Fury",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "tordexpanded",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Norway",
+			"tord",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Sliter",
+			"tordnervous",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Target",
+			"tord-angry",
+			[
+				175,
+				0,
+				0
+			]
+		],
+		[
+			"The End",
+			"tordbot",
+			[
+				215,
+				0,
+				0
+			]
+		],
+		[
+			"Aftermatch",
+			"tordhurt",
+			[
+				255,
+				0,
+				40
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "tord"
+}

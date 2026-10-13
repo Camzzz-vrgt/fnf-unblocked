@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tord idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tord left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				-26
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tord down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				20
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tord up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				35,
+				-38
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tord right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				-29
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "tord l miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-25
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "tord d miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-4,
+				23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "tord u miss"
+		},
+		{
+			"offsets": [
+				36,
+				-39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "tord r miss"
+		},
+		{
+			"offsets": [
+				226,
+				171
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "tord dies"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-59,
+				40
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "tord dead",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/commie",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "commie",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

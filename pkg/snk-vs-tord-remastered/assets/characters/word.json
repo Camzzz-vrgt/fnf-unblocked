@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "word idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "word down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				53,
+				-4
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "word left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				30
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "word right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				70
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "word up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/word",
+	"position": [
+		10,
+		80
+	],
+	"healthicon": "word",
+	"flip_x": false,
+	"healthbar_colors": [
+		204,
+		204,
+		204
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

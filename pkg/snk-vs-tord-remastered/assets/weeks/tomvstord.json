@@ -1,0 +1,49 @@
+{
+	"storyName": "TOM VS TORD",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "tomvstord",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Friendamy",
+			"tomvstord",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Foe",
+			"tordtomnervous",
+			[
+				255,
+				0,
+				0
+			]
+		],
+		[
+			"Enemy",
+			"tordbotvsmonstertom",
+			[
+				155,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Tom VS Tord"
+}

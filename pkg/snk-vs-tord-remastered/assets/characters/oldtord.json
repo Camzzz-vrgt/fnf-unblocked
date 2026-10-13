@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tordog idle"
+		},
+		{
+			"offsets": [
+				38,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tordog left"
+		},
+		{
+			"offsets": [
+				-19,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tordog right"
+		},
+		{
+			"offsets": [
+				9,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tordog down"
+		},
+		{
+			"offsets": [
+				3,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tordog up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "tord/paradox/oldtord",
+	"position": [
+		70,
+		100
+	],
+	"healthicon": "oldtord",
+	"flip_x": false,
+	"healthbar_colors": [
+		60,
+		60,
+		60
+	],
+	"camera_position": [
+		80,
+		40
+	],
+	"sing_duration": 12,
+	"scale": 1
+}

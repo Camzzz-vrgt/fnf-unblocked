@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-22,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tord idle"
+		},
+		{
+			"offsets": [
+				9,
+				-80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tord down"
+		},
+		{
+			"offsets": [
+				-9,
+				33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tord left"
+		},
+		{
+			"offsets": [
+				-40,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tord right"
+		},
+		{
+			"offsets": [
+				-44,
+				41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tord up"
+		},
+		{
+			"offsets": [
+				-28,
+				21
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "tord float"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/army_tord",
+	"position": [
+		10,
+		80
+	],
+	"healthicon": "armytord",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		144,
+		41
+	],
+	"camera_position": [
+		80,
+		-430
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

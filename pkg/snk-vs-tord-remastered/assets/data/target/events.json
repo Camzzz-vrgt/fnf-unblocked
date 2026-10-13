@@ -1,0 +1,149 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "eddhouse",
+		"player1": "bf",
+		"player2": "tord-angry",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Set Camera Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				6000,
+				[
+					[
+						"Set Camera Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				13125,
+				[
+					[
+						"Set Camera Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Set Camera Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				24281.25,
+				[
+					[
+						"Set Camera Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				39000,
+				[
+					[
+						"Set Camera Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				50906.25,
+				[
+					[
+						"Set Camera Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				62906.25,
+				[
+					[
+						"Set Camera Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				74911.7647058823,
+				[
+					[
+						"Set Camera Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				86862.1323529411,
+				[
+					[
+						"Set Camera Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				98862.1323529411,
+				[
+					[
+						"Set Camera Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				104862.132352941,
+				[
+					[
+						"Set Camera Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				110955.882352941,
+				[
+					[
+						"Set Camera Zoom",
+						"0.8",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 160,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Target"
+	}
+}
