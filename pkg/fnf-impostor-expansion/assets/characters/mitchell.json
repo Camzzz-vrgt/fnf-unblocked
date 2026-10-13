@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-141,
+				-59
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-196,
+				-110
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-117,
+				-62
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "dance right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-92,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "HEY"
+		},
+		{
+			"offsets": [
+				-113,
+				-18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-113,
+				-62
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "dance left"
+		},
+		{
+			"offsets": [
+				-103,
+				-38
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mitchell",
+	"position": [
+		-40,
+		350
+	],
+	"healthicon": "mitchell",
+	"flip_x": false,
+	"healthbar_colors": [
+		252,
+		213,
+		234
+	],
+	"camera_position": [
+		210,
+		0
+	],
+	"sing_duration": 5,
+	"scale": 1.1
+}

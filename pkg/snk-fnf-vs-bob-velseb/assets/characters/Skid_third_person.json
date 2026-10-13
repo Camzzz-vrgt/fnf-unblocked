@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-410
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Skid IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				-405
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Skid LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				-417
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Skid RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				-386
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Skid UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				69,
+				-423
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Skid DOWN",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/skid/Skid_third_person",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "skid",
+	"flip_x": true,
+	"healthbar_colors": [
+		204,
+		204,
+		204
+	],
+	"camera_position": [
+		140,
+		280
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

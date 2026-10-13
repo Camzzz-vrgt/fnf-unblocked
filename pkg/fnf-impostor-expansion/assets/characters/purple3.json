@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				60,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "purple3 idle"
+		},
+		{
+			"offsets": [
+				29,
+				-18
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "purple3 down"
+		},
+		{
+			"offsets": [
+				249,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "purple3 left"
+		},
+		{
+			"offsets": [
+				109,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "purple3 right"
+		},
+		{
+			"offsets": [
+				-3,
+				-64
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "purple3 up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/purple3",
+	"position": [
+		400,
+		200
+	],
+	"healthicon": "purple3",
+	"flip_x": false,
+	"healthbar_colors": [
+		128,
+		33,
+		156
+	],
+	"camera_position": [
+		0,
+		120
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

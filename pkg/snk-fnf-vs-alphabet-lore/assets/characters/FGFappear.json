@@ -1,0 +1,47 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				12
+			],
+			"name": "F"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "appear",
+			"indices": [],
+			"name": "F"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/F appear",
+	"position": [
+		90,
+		230
+	],
+	"healthicon": "F",
+	"flip_x": true,
+	"healthbar_colors": [
+		60,
+		60,
+		60
+	],
+	"camera_position": [
+		0,
+		-110
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

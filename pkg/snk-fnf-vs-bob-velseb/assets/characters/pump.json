@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-60,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Pump IDLE"
+		},
+		{
+			"offsets": [
+				-17,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Pump LEFT"
+		},
+		{
+			"offsets": [
+				-68,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Pump RIGHT"
+		},
+		{
+			"offsets": [
+				-60,
+				-75
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Pump DOWN"
+		},
+		{
+			"offsets": [
+				-120,
+				16
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Pump UP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pump/Pump",
+	"position": [
+		1600,
+		580
+	],
+	"healthicon": "spooky",
+	"flip_x": false,
+	"healthbar_colors": [
+		213,
+		126,
+		0
+	],
+	"camera_position": [
+		120,
+		380
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

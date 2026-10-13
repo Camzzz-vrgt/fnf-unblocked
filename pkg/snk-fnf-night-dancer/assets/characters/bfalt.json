@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance"
+		},
+		{
+			"offsets": [
+				41,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				-19,
+				-41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF NOTE DOWN0"
+		},
+		{
+			"offsets": [
+				-64,
+				53
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF NOTE UP0"
+		},
+		{
+			"offsets": [
+				-64,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				-12,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF SIN GORRA"
+		},
+		{
+			"offsets": [
+				0,
+				-45
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "ALT 2 BF DOWN"
+		},
+		{
+			"offsets": [
+				7,
+				12
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "ALT 2 BF LEFT"
+		},
+		{
+			"offsets": [
+				-46,
+				34
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "ALT 2 BF RIGHT"
+		},
+		{
+			"offsets": [
+				-66,
+				82
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "ALT 2 BF UP"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "BF idle dance"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				89
+			],
+			"anim": "hey-alt",
+			"fps": 23,
+			"name": "BF SIN GORRA",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF_ZERO_INDIE_CROSS_OG",
+	"position": [
+		120,
+		480
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		260,
+		-190
+	],
+	"sing_duration": 4,
+	"scale": 2.1
+}

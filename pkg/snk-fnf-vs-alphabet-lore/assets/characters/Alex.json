@@ -1,0 +1,148 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				32
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Alex left note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				6
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Alex down"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				3,
+				37
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "Alex idle",
+			"indices": [
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				37
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Alex idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				88
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Alex up note",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Stickman xd"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "Alex Note Miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Alex Note Miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Alex Note Miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Alex Note Miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				40,
+				57
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Alex Right note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Alex",
+	"position": [
+		-50,
+		50
+	],
+	"healthicon": "alex",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		200,
+		0
+	],
+	"camera_position": [
+		60,
+		60
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

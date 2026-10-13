@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-70,
+				-152
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Thieves IDLE"
+		},
+		{
+			"offsets": [
+				14,
+				-149
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Theives DOWN"
+		},
+		{
+			"offsets": [
+				-37,
+				-152
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Thieves UP"
+		},
+		{
+			"offsets": [
+				-55,
+				-150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Thieves alt left"
+		},
+		{
+			"offsets": [
+				-69,
+				-150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Thieves alt right"
+		},
+		{
+			"offsets": [
+				-70,
+				-208
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Thieve alt down"
+		},
+		{
+			"offsets": [
+				-70,
+				-117
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Thieves alt up"
+		},
+		{
+			"offsets": [
+				49,
+				-150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Theives LEFT"
+		},
+		{
+			"offsets": [
+				-70,
+				-150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Theives RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/robbers/Thieves",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "thief",
+	"flip_x": false,
+	"healthbar_colors": [
+		71,
+		78,
+		85
+	],
+	"camera_position": [
+		-20,
+		170
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

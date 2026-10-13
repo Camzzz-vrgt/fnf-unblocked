@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-293
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Skid DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-89,
+				-233
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Skid UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				-234
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Skid RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-246
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Skid LEFT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-55,
+				-240
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Skid scary",
+			"indices": [],
+			"name": "Skid scary"
+		},
+		{
+			"offsets": [
+				-60,
+				-240
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Skid IDLE"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/skid/skid",
+	"position": [
+		630,
+		140
+	],
+	"healthicon": "spooky",
+	"flip_x": false,
+	"healthbar_colors": [
+		213,
+		126,
+		0
+	],
+	"camera_position": [
+		80,
+		330
+	],
+	"sing_duration": 6.09999999999999,
+	"scale": 1
+}

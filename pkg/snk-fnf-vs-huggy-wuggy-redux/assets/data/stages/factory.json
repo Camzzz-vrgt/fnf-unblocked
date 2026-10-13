@@ -1,0 +1,78 @@
+{
+  "version": "1.0.2",
+  "name": "Factory",
+  "props": [
+    {
+      "assetPath": "huggy",
+      "atlasSettings": null,
+      "name": "bg",
+      "position": [-1274, -827],
+      "scale": 1.15,
+      "startingAnimation": null,
+      "zIndex": 10
+    },
+    {
+      "assetPath": "huggylight",
+      "atlasSettings": null,
+      "blend": "softlight",
+      "color": "#FFCE1D",
+      "name": "light",
+      "position": [-1298, -828],
+      "scale": 1.15,
+      "startingAnimation": null,
+      "zIndex": 110
+    },
+    {
+      "alpha": 0.0001,
+      "assetPath": "blue_gradient",
+      "atlasSettings": null,
+      "blend": "multiply",
+      "color": "#5627FF",
+      "name": "gradient",
+      "position": [-1215, -955],
+      "scale": [100, 3.25],
+      "startingAnimation": null,
+      "zIndex": 110
+    },
+    {
+      "assetPath": "blue_gradient",
+      "atlasSettings": null,
+      "blend": "softlight",
+      "color": "#000000",
+      "name": "darkness",
+      "position": [-1215, -955],
+      "scale": [100, 3.25],
+      "startingAnimation": null,
+      "zIndex": 120
+    },
+    {
+      "assetPath": "huggylight",
+      "atlasSettings": null,
+      "blend": "softlight",
+      "color": "#FFCFCF",
+      "name": "bright",
+      "position": [-1199, -848],
+      "scale": 1.15,
+      "startingAnimation": null,
+      "zIndex": 130
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-330, -100],
+      "position": [1171.5, 869],
+      "zIndex": 101
+    },
+    "dad": {
+      "cameraOffsets": [100, -608],
+      "position": [-27, 869],
+      "zIndex": 102
+    },
+    "gf": {
+      "cameraOffsets": [0, 70],
+      "position": [615.5, 718],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.56
+}

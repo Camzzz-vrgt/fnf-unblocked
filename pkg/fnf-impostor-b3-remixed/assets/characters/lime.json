@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				7,
+				-322
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle red"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-317
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right red",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				-405
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down red",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				182,
+				-322
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up red",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				215,
+				-323
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left red",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DUMBASS_WITH_CROWN",
+	"position": [
+		70,
+		0
+	],
+	"healthicon": "lime",
+	"flip_x": false,
+	"healthbar_colors": [
+		113,
+		255,
+		109
+	],
+	"camera_position": [
+		-160,
+		420
+	],
+	"sing_duration": 7,
+	"scale": 1
+}

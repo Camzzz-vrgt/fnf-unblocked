@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-400,
+				-75
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Bob flashback idle"
+		},
+		{
+			"offsets": [
+				-438,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "bob FB RIGHT"
+		},
+		{
+			"offsets": [
+				-400,
+				-125
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "bob fb DOWN"
+		},
+		{
+			"offsets": [
+				-265,
+				-90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "bob fb LEFT"
+		},
+		{
+			"offsets": [
+				-420,
+				-46
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "bob fb UP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bob/flashback_bob",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bob",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		95,
+		115
+	],
+	"camera_position": [
+		40,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

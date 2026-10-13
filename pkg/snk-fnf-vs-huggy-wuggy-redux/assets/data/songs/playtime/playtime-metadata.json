@@ -1,0 +1,38 @@
+{
+  "version": "2.2.4",
+  "songName": "Playtime",
+  "artist": "SleepyOreo (og. by KJ Elliott)",
+  "charter": "lemonaid24, theuseraqua",
+  "looped": false,
+  "offsets": { "instrumental": 0 },
+  "playData": {
+    "difficulties": ["normal", "hard", "easy"],
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "characters": {
+      "player": "bf",
+      "girlfriend": "gf",
+      "opponent": "huggy_wuggy",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["huggy"],
+      "playerVocals": ["bf"]
+    },
+    "stage": "factory",
+    "noteStyle": "funkin",
+    "album": "volume1",
+    "previewStart": 0,
+    "previewEnd": 12500
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.1",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 110,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

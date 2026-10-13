@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-2
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "GF gameover0",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-71,
+				-13
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "GF gameover loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-8
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "GF gameover retry",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GF-death_my-take_assets",
+	"position": [
+		0,
+		150
+	],
+	"healthicon": "v-gf",
+	"flip_x": true,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		100,
+		-40
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,198 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+import openfl.filters.ShaderFilter;
+
+class FactoryStage extends Stage
+{
+  function new()
+  {
+    super('factory');
+  }
+
+  var gradient:FlxSprite;
+  var darkness:FlxSprite;
+  var bright:FlxSprite;
+
+  var trippy_shader:FlxRuntimeShader;
+  var trippy_amt:Float = 0;
+  var trippy_amt_target:Float = 0;
+
+  var jumpy_camera:Bool = false;
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    gradient = getNamedProp('gradient');
+    gradient.alpha = 0;
+
+    darkness = getNamedProp('darkness');
+    darkness.alpha = 0;
+
+    bright = getNamedProp('bright');
+    bright.alpha = 0;
+
+    jumpy_camera = false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    trippy_amt = 0;
+    trippy_shader = new FlxRuntimeShader(Assets.getText(Paths.frag('trippy')));
+    PlayState.instance.camGame.filters = [new ShaderFilter(trippy_shader)];
+
+    PlayState.instance.camGame.height += 10;
+    PlayState.instance.camHUD.height += 10;
+  }
+
+  var total_elapsed:Float = 0;
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    total_elapsed += event.elapsed;
+    trippy_shader.setFloat('iTime', total_elapsed);
+	  trippy_shader.setFloat('intensity', trippy_amt);
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if(jumpy_camera){
+      var camZoom:Float = 0.025;
+      var hudZoom:Float = 0.05;
+
+      FlxG.camera.zoom += camZoom;
+      PlayState.instance.camHUD.zoom += hudZoom;
+
+      FlxTween.tween(PlayState.instance.camHUD, {y: -10}, 0.27, {ease: FlxEase.circOut, onComplete: function(poop:FlxTween){ FlxTween.tween(PlayState.instance.camHUD, {y: 0}, 0.27, {ease: FlxEase.sineIn}); }});
+      FlxTween.tween(PlayState.instance.camGame, {y: -5}, 0.27, {ease: FlxEase.circOut, onComplete: function(poop:FlxTween){ FlxTween.tween(PlayState.instance.camGame, {y: 0}, 0.27, {ease: FlxEase.sineIn}); }});
+    }
+
+    switch(event.beat){
+      case 100:
+        trace(event.beat);
+        FlxTween.tween(gradient, {alpha: 0.2}, 4, {ease: FlxEase.quadOut});
+        FlxTween.num(trippy_amt, 2, 2, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 132:
+        trace(event.beat);
+        FlxTween.tween(gradient, {alpha: 0}, 2, {ease: FlxEase.quadOut});
+        FlxTween.num(trippy_amt, 0, 2, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 163:
+        trace(event.beat);
+        FlxTween.tween(bright, {alpha: 0.2}, 2, {startDelay: 1, ease: FlxEase.quadOut});
+        FlxTween.tween(darkness, {alpha: 0.1}, 2, {startDelay: 1, ease: FlxEase.quadOut});
+
+        FlxTween.num(trippy_amt, 2, 4, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 196:
+        trace(event.beat);
+        FlxTween.num(trippy_amt, 0, 3, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 292:
+        trace(event.beat);
+        FlxTween.tween(gradient, {alpha: 0.2}, 4, {ease: FlxEase.quadOut});
+        FlxTween.num(trippy_amt, 2, 2, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 324:
+        trace(event.beat);
+        FlxTween.tween(gradient, {alpha: 0}, 2, {ease: FlxEase.quadOut});
+        FlxTween.num(trippy_amt, 0, 2, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 356:
+        trace(event.beat);
+        jumpy_camera = true;
+        FlxTween.num(trippy_amt, 2, 4, {onUpdate: (t)->{
+          trippy_amt = t.value;
+        }});
+
+      case 387:
+        jumpy_camera = false;
+        PlayState.instance.camHUD.visible = FlxG.camera.visible = false;
+      case 388:
+        FlxTween.cancelTweensOf(PlayState.instance.currentCameraZoom);
+        FlxG.camera.visible = true;
+        FlxG.camera.flash(FlxColor.BLACK, 3);
+        FlxG.camera.zoom = PlayState.instance.currentCameraZoom = 1.1;
+        FlxTween.tween(PlayState.instance, {currentCameraZoom: 0.67}, 4.1, {ease: FlxEase.quadInOut});
+      case 396:
+        FlxTween.cancelTweensOf(PlayState.instance.currentCameraZoom);
+        FlxG.camera.flash(FlxColor.BLACK, 3);
+        FlxG.camera.zoom = PlayState.instance.currentCameraZoom = 1.7;
+        FlxTween.tween(PlayState.instance, {currentCameraZoom: 0.9}, 4.1, {ease: FlxEase.quadInOut});
+      case 404:
+        FlxTween.cancelTweensOf(PlayState.instance.currentCameraZoom);
+        FlxG.camera.flash(FlxColor.BLACK, 4);
+        FlxG.camera.zoom = PlayState.instance.currentCameraZoom = 1.2;
+
+      case 419:
+        FlxG.camera.visible = false;
+    }
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+  }
+
+  public override function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    super.onSongEnd(event);
+  }
+
+  override function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    reset_everything();
+  }
+
+  function reset_everything(){
+    jumpy_camera = false;
+
+    PlayState.instance.camHUD.visible = true;
+    for(i in [PlayState.instance.camGame, PlayState.instance.camHUD]){
+      FlxTween.cancelTweensOf(i);
+      i.y = 0;
+    }
+
+    for(i in [gradient, bright, darkness]){
+      FlxTween.cancelTweensOf(i);
+      FlxTween.tween(i, {alpha: 0}, 0.3);
+    }
+    FlxTween.cancelTweensOf(trippy_amt);
+    FlxTween.num(trippy_amt, 0, 0.3, {onUpdate: (t)->{ trippy_amt = t.value; }});
+  }
+
+  function kill()
+  {
+    super.kill();
+  }
+}

@@ -1,0 +1,287 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-6,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "Hit"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "LM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "DM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "UM",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "RM",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-36,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "Preattack"
+		},
+		{
+			"offsets": [
+				478,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "Attack"
+		},
+		{
+			"offsets": [
+				-10,
+				19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "Dodge"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				12
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				2,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				2,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				20
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Peace",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				21
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "BL",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				22
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "BR",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				44
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "BU",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				19
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "BD",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-14,
+				18
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "Scared"
+		},
+		{
+			"offsets": [
+				18,
+				34
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss-alt",
+			"indices": [],
+			"name": "LM"
+		},
+		{
+			"offsets": [
+				50,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss-alt",
+			"indices": [],
+			"name": "DM"
+		},
+		{
+			"offsets": [
+				-11,
+				42
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss-alt",
+			"indices": [],
+			"name": "UM"
+		},
+		{
+			"offsets": [
+				-20,
+				32
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss-alt",
+			"indices": [],
+			"name": "RM"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				12
+			],
+			"anim": "rap",
+			"fps": 24,
+			"name": "rap",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/rapping",
+	"position": [
+		5,
+		274
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-100,
+		20
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

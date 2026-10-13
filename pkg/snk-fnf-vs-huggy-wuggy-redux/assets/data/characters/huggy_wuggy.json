@@ -1,0 +1,105 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"danceEvery": 1,
+	"offsets": [
+		0,
+		90
+	],
+	"applyStageMatrix": false,
+	"scale": 1.04,
+	"name": "Huggy",
+	"flipX": false,
+	"cameraOffsets": [
+		-60,
+		200
+	],
+	"startingAnimation": "idle",
+	"singTime": 4,
+	"isPixel": false,
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "huggy",
+		"flipX": false
+	},
+	"assetPath": "characters/thewug",
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"swfMode": true,
+		"useRenderTexture": false,
+		"cacheOnLoad": false,
+		"filterQuality": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				30,
+				216
+			],
+			"frameRate": 24,
+			"prefix": "huggy idle",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-66,
+				518
+			],
+			"frameRate": 24,
+			"prefix": "huggy up",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				130,
+				-375
+			],
+			"frameRate": 24,
+			"prefix": "huggy down",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				385,
+				43
+			],
+			"frameRate": 24,
+			"prefix": "huggy left",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				75,
+				-26
+			],
+			"frameRate": 24,
+			"prefix": "huggy right",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		}
+	]
+}

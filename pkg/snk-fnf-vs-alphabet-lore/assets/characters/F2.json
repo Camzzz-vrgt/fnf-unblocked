@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "F idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "F Right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "F left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "F down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "F up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-95
+			],
+			"anim": "fall",
+			"fps": 24,
+			"name": "F fall",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/F2",
+	"position": [
+		0,
+		270
+	],
+	"healthicon": "F",
+	"flip_x": true,
+	"healthbar_colors": [
+		60,
+		60,
+		60
+	],
+	"camera_position": [
+		0,
+		-110
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}
