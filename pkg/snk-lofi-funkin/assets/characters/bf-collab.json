@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-55,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF car idle"
+		},
+		{
+			"offsets": [
+				-40,
+				-29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF car left"
+		},
+		{
+			"offsets": [
+				-50,
+				-63
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF car down"
+		},
+		{
+			"offsets": [
+				-58,
+				-27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF car right"
+		},
+		{
+			"offsets": [
+				-59,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF car up"
+		},
+		{
+			"offsets": [
+				-40,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF car miss left"
+		},
+		{
+			"offsets": [
+				-46,
+				-31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF car miss down"
+		},
+		{
+			"offsets": [
+				-63,
+				-23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF car miss right"
+		},
+		{
+			"offsets": [
+				-51,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF car miss up"
+		},
+		{
+			"offsets": [
+				305,
+				105
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "bf car dieded"
+		},
+		{
+			"offsets": [
+				21,
+				-172
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "bf car death loop"
+		},
+		{
+			"offsets": [
+				225,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "bf car death confirm"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Collab/BF_lofi_car_assets",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf-car",
+	"flip_x": true,
+	"healthbar_colors": [
+		75,
+		71,
+		120
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,38 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				208,
+				218
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Talk"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/lolyouded",
+	"position": [
+		-10,
+		340
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-210,
+		-280
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

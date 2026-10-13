@@ -1,0 +1,205 @@
+{
+	"animations": [
+		{
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				256,
+				116
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				253,
+				119
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"offsets": [
+				246,
+				146
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				268,
+				105
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				309,
+				111
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				256,
+				116
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Hey"
+		},
+		{
+			"offsets": [
+				255,
+				118
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "MissDown"
+		},
+		{
+			"offsets": [
+				238,
+				146
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "MissUp"
+		},
+		{
+			"offsets": [
+				309,
+				111
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "MissLeft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				268,
+				103
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MissRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				355,
+				249
+			],
+			"anim": "IGTB",
+			"fps": 24,
+			"name": "Believer",
+			"indices": []
+		},
+		{
+			"offsets": [
+				256,
+				114
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "Hey"
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"offsets": [
+				225,
+				96
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Bruh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				225,
+				96
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Bruh",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Parappa",
+	"position": [
+		180,
+		440
+	],
+	"healthicon": "Rappa",
+	"flip_x": true,
+	"healthbar_colors": [
+		224,
+		82,
+		0
+	],
+	"camera_position": [
+		440,
+		-270
+	],
+	"sing_duration": 4,
+	"scale": 1.05
+}

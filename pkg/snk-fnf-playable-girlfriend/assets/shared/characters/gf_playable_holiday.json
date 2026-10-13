@@ -1,0 +1,188 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				42
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GF_Left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				39,
+				-19
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "GF_Down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-53,
+				48
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "GF_Up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-80,
+				31
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GF_Right0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				41,
+				-23
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "GF_Down_MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				71
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "GF_Up_MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				38
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "GF_Cheer",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-68,
+				37
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "GF_Fear",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				32,
+				42
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "GF_Left_MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				29
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "GF_Right_MISS",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-16,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "GF_IdleLeft"
+		},
+		{
+			"offsets": [
+				-64,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "GF_IdleRight"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				31
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "GF_Dead0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				52
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "GF_DeadConfirm",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-44,
+				31
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "GF_DeadLoop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/playable_gf_ass_sets_holiday",
+	"position": [
+		0,
+		-10
+	],
+	"healthicon": "gf",
+	"flip_x": true,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-120,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

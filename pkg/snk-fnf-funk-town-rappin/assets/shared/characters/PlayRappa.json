@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				210,
+				109
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				259,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				238,
+				160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				209,
+				114
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				348,
+				106
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				242,
+				116
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "IGTB",
+			"indices": [],
+			"name": "IGB"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/rappa",
+	"position": [
+		150,
+		280
+	],
+	"healthicon": "Rappa",
+	"flip_x": false,
+	"healthbar_colors": [
+		224,
+		82,
+		0
+	],
+	"camera_position": [
+		290,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 0.95
+}

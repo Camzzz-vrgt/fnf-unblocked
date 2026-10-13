@@ -1,0 +1,83 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				258,
+				119
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "opps"
+		},
+		{
+			"offsets": [
+				272,
+				125
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "Over"
+		},
+		{
+			"offsets": [
+				281,
+				120
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "Hey"
+		},
+		{
+			"offsets": [
+				343,
+				215
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Wait",
+			"indices": [],
+			"name": "Try-Again"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ParappaGameOver",
+	"position": [
+		120,
+		370
+	],
+	"healthicon": "Rappa",
+	"flip_x": true,
+	"healthbar_colors": [
+		224,
+		82,
+		0
+	],
+	"camera_position": [
+		370,
+		-280
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

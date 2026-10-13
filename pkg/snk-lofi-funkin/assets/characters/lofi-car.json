@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-40,
+				-183
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Lofi girl car idle"
+		},
+		{
+			"offsets": [
+				-28,
+				-163
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Lofi girl car left"
+		},
+		{
+			"offsets": [
+				-55,
+				-188
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Lofi girl car down"
+		},
+		{
+			"offsets": [
+				-30,
+				-180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Lofi girl car up"
+		},
+		{
+			"offsets": [
+				-56,
+				-196
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Lofi girl car right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/W3/Lofi_assets",
+	"position": [
+		100,
+		0
+	],
+	"healthicon": "Lofi-car",
+	"flip_x": false,
+	"healthbar_colors": [
+		229,
+		103,
+		23
+	],
+	"camera_position": [
+		-150,
+		180
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,53 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				77,
+				102
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "Bop"
+		},
+		{
+			"offsets": [
+				77,
+				102
+			],
+			"indices": [],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "danceRight",
+			"loop": false,
+			"name": "Bop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PJGF",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

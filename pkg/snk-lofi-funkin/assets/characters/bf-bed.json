@@ -1,0 +1,232 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				7,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"offsets": [
+				15,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "BF hit"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "BF idle shaking"
+		},
+		{
+			"offsets": [
+				71,
+				177
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "boyfriend dodge"
+		},
+		{
+			"offsets": [
+				294,
+				267
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "boyfriend attack"
+		},
+		{
+			"offsets": [
+				-39,
+				-36
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "bf pre attack"
+		},
+		{
+			"offsets": [
+				8,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singleft",
+			"indices": [],
+			"name": "bf bed left"
+		},
+		{
+			"offsets": [
+				-5,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bf bed idle"
+		},
+		{
+			"offsets": [
+				1,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bf bed down"
+		},
+		{
+			"offsets": [
+				-3,
+				25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bf up"
+		},
+		{
+			"offsets": [
+				-22,
+				22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bf bed right"
+		},
+		{
+			"offsets": [
+				3,
+				42
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "bf down miss"
+		},
+		{
+			"offsets": [
+				-20,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "bf right miss"
+		},
+		{
+			"offsets": [
+				-1,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "bf miss up"
+		},
+		{
+			"offsets": [
+				153,
+				171
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF death"
+		},
+		{
+			"offsets": [
+				14,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "bf left miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				21
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bf bed left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-143,
+				108
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "wake up retry",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-136,
+				90
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "death twitches",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/W2/Lofi_Bed_Sprites",
+	"position": [
+		-185,
+		220
+	],
+	"healthicon": "bflofi",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 0.75
+}

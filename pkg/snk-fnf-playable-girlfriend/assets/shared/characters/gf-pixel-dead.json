@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-26,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "gf_dies"
+		},
+		{
+			"offsets": [
+				-26,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "gf_deathloop"
+		},
+		{
+			"offsets": [
+				-26,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "gf_deathconfirm"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/gfPixelsDEAD",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "gf-pixel",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		42,
+		84
+	],
+	"camera_position": [
+		-120,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 6
+}
