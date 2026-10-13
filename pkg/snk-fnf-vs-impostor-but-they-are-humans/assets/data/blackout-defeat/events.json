@@ -1,0 +1,171 @@
+{
+	"song": {
+		"events": [
+			[
+				9600,
+				[
+					[
+						"Flash",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"1",
+						"green2"
+					]
+				]
+			],
+			[
+				19200,
+				[
+					[
+						"Flash",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"1",
+						"black-start"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-defeat-scared"
+					]
+				]
+			],
+			[
+				19950,
+				[
+					[
+						"Play Animation",
+						"start",
+						"dad"
+					],
+					[
+						"Set Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				21600,
+				[
+					[
+						"Change Character",
+						"1",
+						"black"
+					],
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				31200,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				33600,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					],
+					[
+						"Flash",
+						"",
+						""
+					]
+				]
+			],
+			[
+				74400,
+				[
+					[
+						"Flash",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"Grey"
+					]
+				]
+			],
+			[
+				83400,
+				[
+					[
+						"Change Character",
+						"dad",
+						"black"
+					],
+					[
+						"Flash",
+						"",
+						""
+					]
+				]
+			],
+			[
+				112800,
+				[
+					[
+						"Flash",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"red"
+					]
+				]
+			],
+			[
+				115200,
+				[
+					[
+						"Change Character",
+						"dad",
+						"green2"
+					],
+					[
+						"Flash",
+						"",
+						""
+					]
+				]
+			],
+			[
+				124200,
+				[
+					[
+						"Flash",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"black"
+					]
+				]
+			]
+		]
+	}
+}

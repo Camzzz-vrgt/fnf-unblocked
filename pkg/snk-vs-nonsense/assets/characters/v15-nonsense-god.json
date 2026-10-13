@@ -1,0 +1,85 @@
+{
+  "no_antialiasing": false,
+	"image": "characters/v15/nonsense_god, characters/v15/nonsense_god_events",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "v15",
+	"flip_x": false,
+	"healthbar_colors": [
+		255, 0, 0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "god idle",
+      "anim": "idle",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "god right",
+      "anim": "singLEFT",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "god down",
+      "anim": "singDOWN",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "god left-up",
+      "anim": "singUP",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "god left-up",
+      "anim": "singRIGHT",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, -5],
+      "flipY": false,
+      "fps": 24,
+      "name": "god eventconfused",
+      "anim": "confusedEventAnim",
+      "loop": true,
+      "flipX": false
+    },
+    {
+      "offsets": [329, 375],
+      "flipY": false,
+      "fps": 24,
+      "name": "god eventwhat0",
+      "anim": "whatEventAnim",
+      "loop": false,
+      "flipX": false
+    }
+  ]
+}

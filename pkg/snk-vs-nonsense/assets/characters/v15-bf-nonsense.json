@@ -1,0 +1,251 @@
+{
+  "no_antialiasing": false,
+	"image": "characters/BOYFRIEND, characters/v15/bfEvents",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+
+  "animations": [
+    {
+      "offsets": [-5, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF idle dance",
+      "anim": "idle",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [12, -6],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE LEFT0",
+      "anim": "singLEFT",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-10, -50],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE DOWN0",
+      "anim": "singDOWN",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-29, 27],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE UP0",
+      "anim": "singUP",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-38, -7],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE RIGHT0",
+      "anim": "singRIGHT",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [12, 24],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE LEFT MISS",
+      "anim": "singLEFTmiss",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-11, -19],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE DOWN MISS",
+      "anim": "singDOWNmiss",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-29, 27],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE UP MISS",
+      "anim": "singUPmiss",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [-30, 21],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF NOTE RIGHT MISS",
+      "anim": "singRIGHTmiss",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "bf pre attack",
+      "anim": "preAttack",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "boyfriend attack",
+      "anim": "attack",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "boyfriend dodge",
+      "anim": "dodge",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "name": "boyfriend dodge",
+      "indices": [10, 11, 12],
+      "loop": true,
+      "anim": "dodge-hold",
+      "flipX": false,
+      "flipY": false,
+      "fps": 24
+    },
+    {
+      "offsets": [7, 4],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF HEY!!",
+      "anim": "hey",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "Cheer",
+      "anim": "cheer",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF hit",
+      "anim": "hit",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [0, 0],
+      "name": "BF hit",
+      "indices": [10, 11],
+      "loop": true,
+      "anim": "hit-hold",
+      "flipX": false,
+      "flipY": false,
+      "fps": 24
+    },
+    {
+      "offsets": [-5, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF idle shaking",
+      "anim": "scared",
+      "loop": false,
+      "flipX": false
+    },
+    {
+      "offsets": [4, 1],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventSweat",
+      "loop": false,
+      "anim": "sweatEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [34, 3],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventPoint",
+      "loop": false,
+      "anim": "pointEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [-13, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventScared",
+      "loop": false,
+      "anim": "scaredEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [-48, 0],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventMoreScared",
+      "loop": false,
+      "anim": "moreScaredEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [-4, -39],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventDab0",
+      "loop": false,
+      "anim": "dabEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [90, 130],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventFing0",
+      "loop": false,
+      "anim": "fingerEvent",
+      "flipX": false
+    },
+    {
+      "offsets": [120, 144],
+      "flipY": false,
+      "fps": 24,
+      "name": "BF eventFing censored0",
+      "loop": false,
+      "anim": "fingerCensoredEvent",
+      "flipX": false
+    }
+  ]
+}

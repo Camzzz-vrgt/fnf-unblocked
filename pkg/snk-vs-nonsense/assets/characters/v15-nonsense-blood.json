@@ -1,0 +1,156 @@
+{
+	"no_antialiasing": false,
+	"image": "characters/v15/nonsense_blood, characters/v15/nonsensebloodEvents",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "v15",
+	"flip_x": false,
+	"healthbar_colors": [
+		255, 0, 0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"fps": 24,
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			],
+			"name": "idle blood",
+			"anim": "danceRight",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"fps": 24,
+			"indices": [
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33
+			],
+			"name": "idle blood",
+			"anim": "danceLeft",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				151,
+				-33
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "left note blood",
+			"anim": "singLEFT",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				78,
+				-148
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "down note blood",
+			"anim": "singDOWN",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				33,
+				55
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "up note blood",
+			"anim": "singUP",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				6,
+				-19
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "right note blood",
+			"anim": "singRIGHT",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				79,
+				1
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "blood could be better0",
+			"anim": "couldBeBetterEventAnim",
+			"loop": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				8,
+				-4
+			],
+			"flipY": false,
+			"fps": 24,
+			"name": "blood pretty good0",
+			"anim": "prettyGoodEventAnim",
+			"loop": false,
+			"flipX": false
+		}
+	]
+}

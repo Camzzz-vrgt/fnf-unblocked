@@ -1,0 +1,89 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		-10
+	],
+	"scale": 1.2,
+	"no_antialiasing": false,
+	"image": "v15/NHsprite/NH",
+	"camera_position": [
+		-100,
+		0
+	],
+	"sing_duration": 8,
+	"healthicon": "nh",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				-59,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "lmao",
+			"loop": true,
+			"name": "laugh0"
+		},
+		{
+			"offsets": [
+				-1,
+				-4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-28,
+				15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-22,
+				-22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-70,
+				-4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "idle"
+		}
+	]
+}

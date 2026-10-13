@@ -1,0 +1,218 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		100,
+		-20
+	],
+	"scale": 1,
+	"no_antialiasing": false,
+	"image": "characters/Nene_Accuracy",
+	"camera_position": [
+		60,
+		100
+	],
+	"sing_duration": 6.1,
+	"healthicon": "face",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "Nene good Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "Nene good Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "CheerLeft",
+			"loop": false,
+			"name": "Nene good Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"fps": 24,
+			"anim": "CheerRight",
+			"loop": false,
+			"name": "Nene good Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "CringeLeft",
+			"loop": false,
+			"name": "Nene bad Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"fps": 24,
+			"anim": "CringeRight",
+			"loop": false,
+			"name": "Nene bad Idle"
+		},
+		{
+			"offsets": [
+				0,
+				52
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "raiseKnife",
+			"loop": false,
+			"name": "knife bad raise0"
+		},
+		{
+			"offsets": [
+				-99,
+				52
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idleKnife",
+			"loop": false,
+			"name": "knife bad high held0"
+		},
+		{
+			"offsets": [
+				-39,
+				52
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "lowerKnife",
+			"loop": false,
+			"name": "knife bad lower0"
+		}
+	]
+}

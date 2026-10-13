@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				169,
+				-81
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-100
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				61
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				-38
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right ",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle "
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-51
+			],
+			"anim": "boing1",
+			"fps": 24,
+			"name": "boing1 ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				-28
+			],
+			"anim": "boing2",
+			"fps": 24,
+			"name": "boing2 ",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MiraHQ/green",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "green",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		174,
+		56
+	],
+	"camera_position": [
+		-270,
+		-240
+	],
+	"sing_duration": 7.99999999999999,
+	"scale": 1
+}

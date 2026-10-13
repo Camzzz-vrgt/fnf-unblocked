@@ -1,0 +1,85 @@
+{
+	"no_antialiasing": false,
+	"image": "characters/v15/GF, characters/v15/gf_skillcheck",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+
+  "animations": [
+    {
+      "anim": "danceLeft",
+      "name": "GF Dancing Beat",
+      "loop": false,
+      "indices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "danceRight",
+      "name": "GF Dancing Beat",
+      "loop": false,
+      "indices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "danceLeft-good",
+      "name": "GF Dancing good",
+      "loop": false,
+      "indices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "danceRight-good",
+      "name": "GF Dancing good",
+      "loop": false,
+      "indices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "danceLeft-bad",
+      "name": "GF Dancing bad",
+      "loop": false,
+      "indices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "danceRight-bad",
+      "name": "GF Dancing bad",
+      "loop": false,
+      "indices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ],
+      "offsets": [0, -9]
+    },
+    {
+      "anim": "sad",
+      "name": "gf sad",
+      "loop": false,
+      "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "offsets": [-2, -21]
+    },
+    {
+      "anim": "cheer",
+      "name": "GF Cheer",
+      "loop": false,
+      "offsets": [0, 0]
+    }
+  ]
+}
