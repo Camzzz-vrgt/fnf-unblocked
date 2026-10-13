@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "penguinBF idle"
+		},
+		{
+			"offsets": [
+				-5,
+				64
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "penguinBF LEFT"
+		},
+		{
+			"offsets": [
+				-5,
+				59
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "penguinBF DOWN"
+		},
+		{
+			"offsets": [
+				-7,
+				62
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "penguinBF UP"
+		},
+		{
+			"offsets": [
+				-3,
+				64
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "penguinBF RIGHT"
+		},
+		{
+			"offsets": [
+				-5,
+				64
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "penguinBF missLEFT"
+		},
+		{
+			"offsets": [
+				-5,
+				59
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "penguinBF missDOWN"
+		},
+		{
+			"offsets": [
+				-7,
+				62
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "penguinBF missUP"
+		},
+		{
+			"offsets": [
+				-3,
+				64
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "penguinBF missRIGHT"
+		},
+		{
+			"offsets": [
+				-5,
+				62
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "lookUp",
+			"loop": false,
+			"name": "penguinBF lookup"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/penguinBF",
+	"position": [
+		-150,
+		-20
+	],
+	"healthicon": "penguinBF",
+	"flip_x": true,
+	"healthbar_colors": [
+		58,
+		155,
+		203
+	],
+	"camera_position": [
+		150,
+		250
+	],
+	"sing_duration": 4,
+	"scale": 0.6
+}

@@ -1,0 +1,46 @@
+{
+  "version": "1.0.1",
+  "name": "marko-legacy",
+  "renderType": "sparrow",
+  "assetPath": "characters/Marko/markolegacy",
+  "scale": 1,
+  "offsets": [-160, -200],
+  "cameraOffsets": [0, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "frameIndices": [
+        0, 0, 0, 3, 3, 3, 6, 6, 6, 9, 9, 9, 12, 12, 12, 12, 12, 12, 12
+      ]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "frameIndices": [0, 0, 2, 2, 4, 4, 4, 7, 7, 7, 7, 7, 7]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "frameIndices": [0, 0, 2, 2, 4, 4, 4, 7, 7, 7, 7, 7]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "frameIndices": [0, 0, 2, 2, 4, 4, 4, 7, 7, 7, 7, 7]
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "frameIndices": [0, 0, 2, 2, 4, 4, 4, 7, 7, 7, 7, 7]
+    }
+  ],
+  "healthIcon": {
+    "id": "marko",
+    "color": "#661421"
+  },
+  "singTime": 6,
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

@@ -1,0 +1,1276 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.group.FlxTypedGroup;
+import flixel.math.FlxMath;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import funkin.Conductor;
+import funkin.FunkinMemory;
+import funkin.Paths;
+import funkin.data.character.CharacterDataParser;
+import funkin.graphics.FunkinCamera;
+import funkin.graphics.shaders.SserafimShader;
+import funkin.graphics.video.FlxVideo;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterType;
+import funkin.play.song.Song;
+import openfl.Assets;
+import openfl.display.BlendMode;
+import openfl.filters.ShaderFilter;
+
+class CrisisSong extends Song
+{
+  var setupDone:Bool = false;
+  var secondaryReady:Bool = false;
+  var donaldChar = null;
+  var bfChar = null;
+  var donaldBaseGlobalOffsets:Array<Float> = null;
+  var bfBaseGlobalOffsets:Array<Float> = null;
+
+  var camChar:FunkinCamera;
+  var camIntro:FunkinCamera;
+  var camOverlay:FunkinCamera;
+  var introVideo:FlxVideo;
+  var overlayVideo:FlxVideo;
+  var introVideoFitted:Bool = false;
+  var introVideoStarted:Bool = false;
+
+  var vignetteShader:FlxRuntimeShader;
+  var vignetteFilter:ShaderFilter;
+  var trippyShader:FlxRuntimeShader;
+  var trippyFilter:ShaderFilter;
+  var trippyTime:Float = 0;
+  var swapZoomTween:FlxTween;
+
+  var sticker:FlxSprite;
+  var stickerScale:Float = 1;
+  var stickerActive:Bool = false;
+  var stickerChars:Array<String> = ['goofy', 'donald', 'mickey', 'bf', 'gf', 'marko'];
+
+  var legacyScary:FlxSprite;
+  var legacyMainVig:FlxSprite;
+  var legacyFeralVig:FlxSprite;
+  var legacyDonald = null;
+  var legacyGoofy = null;
+
+  var stagePropNames:Array<String> = ['C-outside', 'C-bg', 'C-window', 'C-bgStuff', 'C-fg', 'C-fg3', 'C-fg2'];
+  var currentFocusTarget:Int = 1;
+  // Temporary diagnostics for the Crisis retry/swap issue. These only run at
+  // lifecycle boundaries, never from onUpdate().
+  var crisisRetryCount:Int = 0;
+
+  public function new()
+  {
+    super('crisis');
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    setupDone = false;
+    secondaryReady = false;
+    stickerActive = false;
+    trippyTime = 0;
+    legacyDonald = null;
+    legacyGoofy = null;
+    donaldBaseGlobalOffsets = null;
+    bfBaseGlobalOffsets = null;
+    introVideoFitted = false;
+    introVideoStarted = false;
+    cacheAssets();
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    // if (!introVideoFitted) fitIntroVideoToScreen();
+
+    if (isLegacy())
+    {
+      updateLegacy(event.elapsed);
+      return;
+    }
+
+    updateNormal(event.elapsed);
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    ensureSetup();
+  }
+
+  public override function onCountdownEnd(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownEnd(event);
+    if (!isLegacy()) hideOpponentGameplay();
+  }
+
+  public override function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+    if (!isLegacy())
+    {
+      hideOpponentGameplay();
+      startIntroVideo();
+    }
+  }
+
+  public override function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+    if (isLegacy()) return;
+
+    crisisRetryCount++;
+    resetCrisisForRetry();
+  }
+
+  public override function onSongEvent(event:SongEventScriptEvent):Void
+  {
+    super.onSongEvent(event);
+    if (isLegacy() || event.eventData == null || event.eventData.eventKind != 'FocusCamera') return;
+
+    var target = event.eventData.getInt('char');
+    if (target == null) target = 0;
+    currentFocusTarget = target;
+    applyCrisisCameraEvent(event.eventData, target);
+    event.eventData.activated = true;
+    event.cancelEvent();
+  }
+
+  public override function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+    if (isLegacy() || event.note == null || event.note.noteData == null) return;
+
+    updateCrisisCameraForNote(event.note.noteData.getMustHitNote(), event.note.noteData.getDirection());
+
+    if (!event.note.noteData.getMustHitNote())
+    {
+      PlayState.instance.health = Math.max(PlayState.instance.health - 0.02, 0.003);
+      if (Conductor.instance.currentBeat >= 308) playSecondarySing(donaldChar, event.note.noteData.getDirection(), false);
+    }
+    else if (Conductor.instance.currentBeat >= 308)
+    {
+      playSecondarySing(bfChar, event.note.noteData.getDirection(), false);
+    }
+  }
+
+  public override function onNoteIncoming(event:NoteScriptEvent)
+  {
+    super.onNoteIncoming(event);
+    if (isLegacy() || event.note == null || event.note.noteData == null) return;
+
+    if (!event.note.noteData.getMustHitNote())
+    {
+      hideOpponentNote(event.note);
+      hideOpponentNote(event.note.holdNoteSprite);
+    }
+  }
+
+  public override function onNoteMiss(event:NoteScriptEvent):Void
+  {
+    super.onNoteMiss(event);
+    if (isLegacy() || event.note == null || event.note.noteData == null) return;
+    if (Conductor.instance.currentBeat >= 308 && event.note.noteData.getMustHitNote())
+      playSecondarySing(bfChar, event.note.noteData.getDirection(), true);
+  }
+
+  public override function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (isLegacy()) return;
+  }
+
+  public override function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (isLegacy()) return;
+
+    if (stickerActive && event.beat % 4 == 0) spawnSticker();
+    normalBeat(event.beat);
+  }
+
+  public override function onPause(event:PauseScriptEvent):Void
+  {
+    super.onPause(event);
+    pauseVideos();
+  }
+
+  public override function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+    resumeVideos();
+  }
+
+  public override function onFocusLost(event:FocusScriptEvent):Void
+  {
+    super.onFocusLost(event);
+    pauseVideos();
+  }
+
+  public override function onFocusGained(event:FocusScriptEvent):Void
+  {
+    super.onFocusGained(event);
+    resumeVideos();
+  }
+
+  public override function onSongEnd(event:ScriptEvent):Void
+  {
+    super.onSongEnd(event);
+    cleanupCrisisRuntimeVisuals();
+  }
+
+  public override function onDestroy(event:ScriptEvent):Void
+  {
+    // Do this before the parent/state destroys the camera display objects:
+    // stale global tweens otherwise get one more update on the next frame.
+    cleanupCrisisRuntimeVisuals();
+    clearCameraFilters();
+    removeCrisisCamera(camOverlay);
+    removeCrisisCamera(camIntro);
+    removeCrisisCamera(camChar);
+    super.onDestroy(event);
+  }
+
+  function ensureSetup():Void
+  {
+    if (setupDone || PlayState.instance == null || PlayState.instance.currentStage == null) return;
+    setupDone = true;
+
+    if (isLegacy())
+    {
+      setupLegacy();
+      introVideoFitted = true;
+      return;
+    }
+
+    setupCrisisStrumlines();
+    setupSecondaryCharacters();
+    setupCharacterCamera();
+    setupNormalCharacters();
+    setupNormalShaders();
+    setupSticker();
+    setupVideos();
+    resetNormalState();
+  }
+
+  function setupSecondaryCharacters():Void
+  {
+    if (secondaryReady) return;
+
+    donaldChar = createSecondaryCharacter('donald-feral', 520, 200, 0.45, 210);
+    bfChar = createSecondaryCharacter('bf-alerted', 820, 50, 0.65, 220);
+    donaldBaseGlobalOffsets = copyGlobalOffsets(donaldChar);
+    bfBaseGlobalOffsets = copyGlobalOffsets(bfChar);
+    secondaryReady = donaldChar != null && bfChar != null;
+    PlayState.instance.currentStage.refresh();
+  }
+
+  function createSecondaryCharacter(id:String, x:Float, y:Float, scale:Float, zIndex:Int)
+  {
+    var character = CharacterDataParser.fetchCharacter(id);
+    if (character == null) return null;
+
+    PlayState.instance.currentStage.addCharacter(character, CharacterType.OTHER);
+    character.setScale(scale);
+    character.setPosition(x, y);
+    character.originalPosition.set(x, y);
+    character.resetCameraFocusPoint();
+    character.zIndex = zIndex;
+    character.scrollFactor.set(1, 1);
+    character.visible = true;
+    character.active = true;
+    character.useRenderTexture = false;
+    if (id == 'bf-alerted') character.flipX = false;
+    character.dance(true);
+    return character;
+  }
+
+  function setupCharacterCamera():Void
+  {
+    camChar = new FunkinCamera('crisisCharacters');
+    camChar.bgColor = 0x00000000;
+    PlayState.instance.camGame.followLerp = 0.05;
+
+    var hudIndex:Int = FlxG.cameras.list.indexOf(PlayState.instance.camHUD);
+    if (hudIndex >= 0) FlxG.cameras.insert(camChar, hudIndex, false);
+    else FlxG.cameras.add(camChar, false);
+  }
+
+  function setupNormalCharacters():Void
+  {
+    var dad = getDad();
+    var boyfriend = getBoyfriend();
+    var girlfriend = getGirlfriend();
+
+    if (dad != null)
+    {
+      dad.x += 200;
+      dad.setScale(0.475);
+      dad.x -= 332.5;
+      dad.y -= 492.5;
+      dad.originalPosition.set(dad.x, dad.y);
+      dad.resetCameraFocusPoint();
+      dad.cameras = [camChar];
+      dad.useRenderTexture = false;
+    }
+
+    if (boyfriend != null)
+    {
+      if (dad != null) boyfriend.y = dad.originalPosition.y + 492.5;
+      // The V-Slice sheet is a 96.9% resize of Codename's Crisis sheet.
+      // Its base scale (0.9286) restores Codename's scripted 0.9 visual size.
+      boyfriend.setScale(boyfriend.getBaseScale());
+      boyfriend.x -= 100;
+      boyfriend.y += 34.5;
+      boyfriend.originalPosition.set(boyfriend.x, boyfriend.y);
+      boyfriend.resetCameraFocusPoint();
+      boyfriend.cameras = [camChar];
+      boyfriend.useRenderTexture = false;
+    }
+
+    if (donaldChar != null) donaldChar.cameras = [PlayState.instance.camGame];
+    if (bfChar != null)
+    {
+      bfChar.cameras = [PlayState.instance.camGame];
+      bfChar.flipX = false;
+    }
+    if (girlfriend != null)
+    {
+      girlfriend.useRenderTexture = false;
+      // The original chart applies this at time 0. Apply it after GF exists
+      // so the state cannot be lost during V-Slice's song setup order.
+      girlfriend.idleSuffix = '-worried';
+      girlfriend.dance(true);
+    }
+  }
+
+  function setupNormalShaders():Void
+  {
+    vignetteShader = new FlxRuntimeShader(Assets.getText(Paths.frag('coloredVignette_clip')));
+    vignetteShader.setFloatArray('color', [1.0, 0.44, 0.2]);
+    vignetteShader.setFloat('amount', 0.7);
+    vignetteShader.setFloat('strength', 1.0);
+    vignetteFilter = new ShaderFilter(vignetteShader);
+    PlayState.instance.camGame.filters = [vignetteFilter];
+    camChar.filters = [vignetteFilter];
+
+    for (character in [getGirlfriend(), getBoyfriend(), getDad(), donaldChar, bfChar])
+      applyOrangeCharacterLight(character);
+  }
+
+  function applyOrangeCharacterLight(character):Void
+  {
+    if (character == null) return;
+
+    var shader = new SserafimShader(true);
+    shader.setAdjustColor(-15, 5, 15, 10);
+    shader.pulseLightColor = FlxColor.fromInt(0xFFEB7134);
+    shader.pulseLightStrength = 0.385;
+    shader.truckLightStrength = 0;
+    shader.darkenAmount = 0.15;
+    character.useRenderTexture = false;
+    character.shader = shader;
+  }
+
+  function setupSticker():Void
+  {
+    sticker = new FlxSprite();
+    sticker.loadGraphic(Paths.image('transitionSwag/stickers-set-1/bfSticker1'));
+    sticker.cameras = [PlayState.instance.camHUD];
+    sticker.alpha = 0;
+    sticker.zIndex = 1000;
+    PlayState.instance.add(sticker);
+  }
+
+  function setupVideos():Void
+  {
+    if (Assets.exists(Paths.videos('crisisCutsceneWip')))
+    {
+      camIntro = new FunkinCamera('crisisIntro');
+      camIntro.bgColor = FlxColor.BLACK;
+      camIntro.zoom = 1;
+      camIntro.scroll.set(0, 0);
+      insertCameraBeforeTransition(camIntro);
+
+      introVideo = new FlxVideo(Paths.stripLibrary(Paths.videos('crisisCutsceneWip')));
+      // A non-looping FlxVideo disposes its NetStream at completion. Crisis
+      // needs to seek this same instance again on retry, so keep the stream
+      // alive and pause it once the intro is no longer visible.
+      introVideo.loop = true;
+      introVideo.cameras = [camIntro];
+      introVideo.scrollFactor.set(0, 0);
+      introVideo.scale.set(1, 1);
+      introVideo.x = 0;
+      introVideo.y = 0;
+      introVideo.alpha = 0;
+      introVideo.visible = false;
+      PlayState.instance.add(introVideo);
+      // fitIntroVideoToScreen();
+      // NetStream.play() is issued while the media element initializes. Do
+      // not interrupt that pending request with pause(): keep it hidden and
+      // seek/reveal it only onSongStart.
+    }
+
+    if (Assets.exists(Paths.videos('loop1')))
+    {
+      camOverlay = new FunkinCamera('crisisOverlay');
+      camOverlay.bgColor = 0x00000000;
+      camOverlay.visible = false;
+      camOverlay.crossCameraBlending = true;
+      insertCameraBeforeTransition(camOverlay);
+
+      overlayVideo = new FlxVideo(Paths.stripLibrary(Paths.videos('loop1')));
+      overlayVideo.loop = true;
+      overlayVideo.cameras = [camOverlay];
+      overlayVideo.scrollFactor.set(0, 0);
+      overlayVideo.blend = BlendMode.MULTIPLY;
+      overlayVideo.alpha = 0;
+      overlayVideo.scale.set(2.1, 2.1);
+      overlayVideo.screenCenter();
+      overlayVideo.x -= 350;
+      overlayVideo.y -= 200;
+      PlayState.instance.add(overlayVideo);
+      overlayVideo.pauseVideo();
+    }
+
+    // No intro file means there is nothing for onUpdate to wait on.
+    if (introVideo == null) introVideoFitted = true;
+  }
+
+  function insertCameraBeforeTransition(camera:FunkinCamera):Void
+  {
+    var index:Int = FlxG.cameras.list.indexOf(PlayState.instance.camTransition);
+    if (index < 0) index = FlxG.cameras.list.indexOf(PlayState.instance.camPause);
+    if (index >= 0) FlxG.cameras.insert(camera, index, false);
+    else FlxG.cameras.add(camera, false);
+  }
+
+  function fitIntroVideoToScreen():Void
+  {
+    if (introVideo == null || introVideo.width <= 2 || introVideo.height <= 2) return;
+
+    var scale:Float = Math.min(FlxG.width / introVideo.width, FlxG.height / introVideo.height);
+    introVideo.scale.set(scale, scale);
+    introVideo.updateHitbox();
+    introVideo.x = (FlxG.width - introVideo.width) * 0.5;
+    introVideo.y = (FlxG.height - introVideo.height) * 0.5;
+    introVideoFitted = true;
+  }
+
+  function resetNormalState():Void
+  {
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camGame.scroll.set(850 - FlxG.width / 2, 250 - FlxG.height / 2);
+
+    setOpponentStrums(0, false);
+    stickerActive = false;
+    if (sticker != null) sticker.alpha = 0;
+    if (camOverlay != null) camOverlay.visible = false;
+    if (overlayVideo != null) overlayVideo.alpha = 0;
+  }
+
+  // V-Slice keeps the same PlayState on retry. Restore Crisis' custom
+  // characters and video cameras to the exact state used before countdown.
+  function resetCrisisForRetry():Void
+  {
+    if (swapZoomTween != null) swapZoomTween.cancel();
+    swapZoomTween = null;
+
+    var dad = getDad();
+    var boyfriend = getBoyfriend();
+    for (character in [dad, boyfriend])
+    {
+      if (character == null) continue;
+      FlxTween.cancelTweensOf(character);
+      FlxTween.cancelTweensOf(character.scale);
+      clearCodenameDrawOffset(character);
+      character.alpha = 1;
+      character.visible = true;
+      character.active = true;
+    }
+
+    resetCrisisSecondaryCharacter(donaldChar, 520, 200, 0.45);
+    resetCrisisSecondaryCharacter(bfChar, 820, 50, 0.65);
+    if (bfChar != null) bfChar.flipX = false;
+
+    setupNormalCharacters();
+    setupNormalShaders();
+    resetNormalState();
+    currentFocusTarget = 1;
+
+    if (camIntro != null)
+    {
+      FlxTween.cancelTweensOf(camIntro);
+      camIntro.alpha = 1;
+      camIntro.visible = true;
+    }
+    introVideoStarted = false;
+    if (introVideo != null)
+    {
+      FlxTween.cancelTweensOf(introVideo);
+      introVideo.alpha = 0;
+      introVideo.visible = false;
+    }
+    if (overlayVideo != null)
+    {
+      FlxTween.cancelTweensOf(overlayVideo);
+      overlayVideo.pauseVideo();
+      overlayVideo.alpha = 0;
+      overlayVideo.visible = false;
+    }
+    if (camOverlay != null) camOverlay.visible = false;
+
+    for (name in stagePropNames)
+    {
+      var prop = getStageProp(name);
+      if (prop != null) prop.color = FlxColor.WHITE;
+    }
+  }
+
+  function resetCrisisSecondaryCharacter(character, x:Float, y:Float, scale:Float):Void
+  {
+    if (character == null) return;
+
+    FlxTween.cancelTweensOf(character);
+    FlxTween.cancelTweensOf(character.scale);
+    restoreSecondaryBaseDrawOffset(character);
+    character.setScale(scale);
+    character.setPosition(x, y);
+    character.originalPosition.set(x, y);
+    character.resetCameraFocusPoint();
+    character.cameras = [PlayState.instance.camGame];
+    character.alpha = 1;
+    character.visible = true;
+    character.active = true;
+    character.holdTimer = 0;
+    character.dance(true);
+  }
+
+  function copyGlobalOffsets(character):Array<Float>
+  {
+    if (character == null || character.globalOffsets == null) return [0, 0];
+    return [character.globalOffsets[0], character.globalOffsets[1]];
+  }
+
+  function restoreSecondaryBaseDrawOffset(character):Void
+  {
+    if (character == null) return;
+
+    var baseOffsets = character == donaldChar ? donaldBaseGlobalOffsets : character == bfChar ? bfBaseGlobalOffsets : null;
+    if (baseOffsets == null) baseOffsets = [0, 0];
+    character.globalOffsets = [baseOffsets[0], baseOffsets[1]];
+    if (character.offsetMode == 'codename') character.refreshCodenameOffsets();
+  }
+
+  function describeCrisisCharacter(label:String, character):String
+  {
+    if (character == null) return label + '=null';
+
+    var cameraId = 'none';
+    if (character.cameras != null && character.cameras.length > 0 && character.cameras[0] != null)
+      cameraId = character.cameras[0].id;
+
+    var globalX = character.globalOffsets != null && character.globalOffsets.length > 0 ? character.globalOffsets[0] : 'null';
+    var globalY = character.globalOffsets != null && character.globalOffsets.length > 1 ? character.globalOffsets[1] : 'null';
+    return label + '{x=' + character.x + ', y=' + character.y
+      + ', original=' + character.originalPosition.x + ',' + character.originalPosition.y
+      + ', scale=' + character.scale.x + ',' + character.scale.y
+      + ', offset=' + character.offset.x + ',' + character.offset.y
+      + ', global=' + globalX + ',' + globalY
+      + ', camera=' + cameraId + ', visible=' + character.visible + '}';
+  }
+
+  function clearCodenameDrawOffset(character):Void
+  {
+    if (character == null) return;
+
+    // Do not mutate the cached CharacterData offset array in place.
+    character.globalOffsets = [0, 0];
+    if (character.offsetMode == 'codename') character.refreshCodenameOffsets();
+  }
+
+  function setupCrisisStrumlines():Void
+  {
+    var player = PlayState.instance.playerStrumline;
+    var opponent = PlayState.instance.opponentStrumline;
+
+    if (player != null)
+    {
+      player.strumlineScale.set(1, 1);
+      player.setNoteSpacing(1);
+      player.x = (FlxG.width - player.width) * 0.5;
+      player.y = Preferences.downscroll ? 550 : 24;
+    }
+
+    if (opponent != null)
+    {
+      opponent.strumlineScale.set(1, 1);
+      opponent.setNoteSpacing(1);
+      opponent.x = (FlxG.width - opponent.width) * 0.5;
+      opponent.y = 24;
+      if (opponent.notes != null)
+        for (note in opponent.notes.members)
+          hideOpponentNote(note);
+      if (opponent.holdNotes != null)
+        for (hold in opponent.holdNotes.members)
+          hideOpponentNote(hold);
+    }
+  }
+
+  function updateNormal(elapsed:Float):Void
+  {
+    if (camChar != null)
+    {
+      camChar.scroll.set(PlayState.instance.camGame.scroll.x, PlayState.instance.camGame.scroll.y);
+      camChar.zoom = PlayState.instance.camGame.zoom + 0.475;
+      camChar.angle = PlayState.instance.camGame.angle;
+    }
+
+    updateCharacterDrawOffsets();
+
+    if (sticker != null)
+    {
+      sticker.scale.x = FlxMath.lerp(sticker.scale.x, stickerScale, 0.02);
+      sticker.scale.y = FlxMath.lerp(sticker.scale.y, stickerScale, 0.02);
+    }
+  }
+
+  function normalBeat(beat:Int):Void
+  {
+    switch (beat)
+    {
+      case 96:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 4, {ease: FlxEase.quadOut});
+      case 98:
+        if (camIntro != null) FlxTween.tween(camIntro, {alpha: 0}, 2, {ease: FlxEase.quartOut});
+      case 100, 101, 102, 103:
+        if (camIntro != null) camIntro.visible = false;
+        if (introVideo != null)
+        {
+          introVideo.visible = false;
+          introVideo.pauseVideo();
+        }
+      case 304:
+        beginCharacterSwap();
+      case 308:
+        finishCharacterSwap();
+      case 372:
+        stickerActive = true;
+        if (camOverlay != null) camOverlay.visible = true;
+        if (overlayVideo != null)
+        {
+          overlayVideo.visible = true;
+          overlayVideo.restartVideo();
+          overlayVideo.resumeVideo();
+          FlxTween.tween(overlayVideo, {alpha: 0.7}, 2, {ease: FlxEase.quartOut});
+        }
+      case 436:
+        stickerActive = false;
+        if (overlayVideo != null) FlxTween.tween(overlayVideo, {alpha: 0}, 2, {ease: FlxEase.quartOut});
+      case 444:
+        if (camOverlay != null) camOverlay.visible = false;
+        if (overlayVideo != null)
+        {
+          overlayVideo.visible = false;
+          overlayVideo.pauseVideo();
+        }
+      case 460:
+        fadeCrisisGameplayCameras();
+      default:
+    }
+  }
+
+  function beginCharacterSwap():Void
+  {
+    var dad = getDad();
+    var boyfriend = getBoyfriend();
+
+    tweenIconToBlack(PlayState.instance.iconP1);
+    tweenIconToBlack(PlayState.instance.iconP2);
+
+    if (dad != null)
+    {
+      FlxTween.tween(dad, {x: dad.x - 1600, y: dad.y + 200, alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      FlxTween.tween(dad.scale, {x: dad.scale.x + 2, y: dad.scale.y + 2}, 1, {ease: FlxEase.quadInOut});
+    }
+    if (boyfriend != null)
+    {
+      FlxTween.tween(boyfriend, {x: boyfriend.x + 1600, y: boyfriend.y + 200, alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      FlxTween.tween(boyfriend.scale, {x: boyfriend.scale.x + 2, y: boyfriend.scale.y + 2}, 1, {ease: FlxEase.quadInOut});
+    }
+
+    if (donaldChar != null)
+    {
+      donaldChar.cameras = [camChar];
+      donaldChar.setScale(0.22);
+      donaldChar.setPosition(-20, -110);
+      donaldChar.originalPosition.set(-20, -110);
+      FlxTween.tween(donaldChar.scale, {x: 0.65, y: 0.65}, 1, {ease: FlxEase.quadInOut});
+      FlxTween.tween(donaldChar, {x: 10, y: -70}, 1, {ease: FlxEase.quadInOut});
+    }
+    if (bfChar != null)
+    {
+      bfChar.cameras = [camChar];
+      bfChar.flipX = false;
+      bfChar.setScale(0.335);
+      bfChar.setPosition(622, 145);
+      bfChar.originalPosition.set(622, 145);
+      FlxTween.tween(bfChar.scale, {x: 0.95, y: 0.95}, 1, {ease: FlxEase.quadInOut});
+      FlxTween.tween(bfChar, {x: 895, y: 280}, 1, {ease: FlxEase.quadInOut});
+    }
+
+    // In V-Slice, camGame.zoom is recomputed every frame from
+    // currentCameraZoom. Tween the authoritative value instead.
+    PlayState.instance.cancelCameraZoomTween();
+    if (swapZoomTween != null) swapZoomTween.cancel();
+    swapZoomTween = FlxTween.tween(PlayState.instance, {currentCameraZoom: 1.8}, 1, {
+      ease: FlxEase.quadInOut,
+      onComplete: function(_)
+      {
+        // Codename relaxes back to defaultCamZoom after the punch-in. V-Slice
+        // applies currentCameraZoom directly, so tween it to avoid a hard cut.
+        swapZoomTween = FlxTween.tween(PlayState.instance, {currentCameraZoom: 0.6}, 0.6, {ease: FlxEase.expoOut});
+      }
+    });
+    fadeStage(true);
+  }
+
+  function finishCharacterSwap():Void
+  {
+    var dad = getDad();
+    var boyfriend = getBoyfriend();
+    if (dad != null) dad.visible = false;
+    if (boyfriend != null) boyfriend.visible = false;
+
+    restoreIcon(PlayState.instance.iconP1);
+    restoreIcon(PlayState.instance.iconP2);
+    if (donaldChar != null) donaldChar.initHealthIcon(true);
+    if (bfChar != null) bfChar.initHealthIcon(false);
+  }
+
+  function tweenIconToBlack(icon):Void
+  {
+    if (icon == null) return;
+    FlxTween.color(icon, 1, FlxColor.WHITE, FlxColor.BLACK, {ease: FlxEase.quadOut});
+    FlxTween.tween(icon, {angle: 360}, 1, {ease: FlxEase.quadIn});
+  }
+
+  function restoreIcon(icon):Void
+  {
+    if (icon == null) return;
+    icon.angle = 0;
+    FlxTween.color(icon, 2, FlxColor.BLACK, FlxColor.WHITE, {ease: FlxEase.quadOut});
+  }
+
+  function fadeStage(fade:Bool):Void
+  {
+    var target:Int = fade ? 0xFFADADAD : FlxColor.WHITE;
+    for (name in stagePropNames)
+    {
+      var prop = getStageProp(name);
+      if (prop != null) FlxTween.color(prop, 1, prop.color, target, {ease: FlxEase.quadOut});
+    }
+  }
+
+  function spawnSticker():Void
+  {
+    if (sticker == null) return;
+
+    var charName:String = stickerChars[FlxG.random.int(0, stickerChars.length - 1)];
+    var number:Int = FlxG.random.int(1, 3);
+    sticker.loadGraphic(Paths.image('transitionSwag/stickers-set-1/' + charName + 'Sticker' + number));
+    sticker.x = FlxG.random.float(0, 750);
+    sticker.y = FlxG.random.float(-150, 400);
+    sticker.angle = FlxG.random.float(-15, 15);
+    sticker.scale.set(0.75, 0.75);
+    sticker.alpha = 0.5;
+    sticker.flipX = FlxG.random.bool();
+    stickerScale = 1;
+
+    FlxTween.cancelTweensOf(sticker);
+    FlxTween.tween(sticker, {alpha: 0}, 2, {ease: FlxEase.quadOut});
+    FlxTween.num(1, 0.8, 2, {ease: FlxEase.quadOut}, function(value)
+    {
+      stickerScale = value;
+    });
+  }
+
+  function applyCrisisCameraEvent(data, target:Int):Void
+  {
+    var beat:Int = Std.int(Conductor.instance.currentBeat);
+    var x:Float = isCrisisOpponentFocus(target) ? (beat < 308 ? 725 : 750) : 1000;
+    var y:Float = beat < 308 ? 375 : 350;
+    var character = cameraCharacterForTarget(target);
+    var animName:String = '';
+    if (character != null && character.animation != null && character.animation.curAnim != null && character.animation.curAnim.name != null)
+      animName = character.animation.curAnim.name.toUpperCase();
+
+    if (animName.indexOf('LEFT') != -1) x -= 15;
+    if (animName.indexOf('DOWN') != -1) y += 15;
+    if (animName.indexOf('UP') != -1) y -= 15;
+    if (animName.indexOf('RIGHT') != -1) x += 15;
+
+    x += data.getFloat('x') ?? 0;
+    y += data.getFloat('y') ?? 0;
+
+    var easeName:String = data.getString('ease') ?? 'CLASSIC';
+    if (easeName == 'CLASSIC' || easeName == 'INSTANT')
+    {
+      PlayState.instance.resetCamera(false, false, false);
+      PlayState.instance.cancelCameraFollowTween();
+      PlayState.instance.cameraFollowPoint.setPosition(x, y);
+      return;
+    }
+
+    var duration:Float = data.getFloat('duration') ?? 4;
+    var easeDir:String = data.getString('easeDir') ?? 'In';
+    var ease = resolveEase(easeName, easeDir);
+    PlayState.instance.tweenCameraToPosition(x, y, Conductor.instance.stepLengthMs * duration / 1000, ease);
+  }
+
+  function updateCrisisCameraForNote(mustHit:Bool, direction:Int):Void
+  {
+    var opponentNote:Bool = !mustHit;
+    if (opponentNote && !isCrisisOpponentFocus(currentFocusTarget)) return;
+    if (!opponentNote && !isCrisisPlayerFocus(currentFocusTarget)) return;
+
+    var beat:Int = Std.int(Conductor.instance.currentBeat);
+    var x:Float = opponentNote ? (beat < 308 ? 725 : 750) : 1000;
+    var y:Float = beat < 308 ? 375 : 350;
+
+    switch (direction)
+    {
+      case 0: x -= 15;
+      case 1: y += 15;
+      case 2: y -= 15;
+      case 3: x += 15;
+      default:
+    }
+
+    PlayState.instance.cancelCameraFollowTween();
+    PlayState.instance.cameraFollowPoint.setPosition(x, y);
+  }
+
+  function cameraCharacterForTarget(target:Int)
+  {
+    var swapped:Bool = Conductor.instance.currentBeat >= 308;
+    switch (target)
+    {
+      case 0: return swapped && bfChar != null ? bfChar : getBoyfriend();
+      case 1: return swapped && donaldChar != null ? donaldChar : getDad();
+      case 2: return donaldChar;
+      case 3: return bfChar;
+      default: return getGirlfriend();
+    }
+  }
+
+  function isCrisisOpponentFocus(target:Int):Bool
+  {
+    return target == 1 || target == 2;
+  }
+
+  function isCrisisPlayerFocus(target:Int):Bool
+  {
+    return target == 0 || target == 3;
+  }
+
+  // Codename applies this camera-relative draw offset to the two main
+  // characters throughout the song, then to the swap characters from beat 304.
+  // Keep it local to Crisis: it is part of this scene's composition, not a
+  // general character-positioning rule.
+  function updateCharacterDrawOffsets():Void
+  {
+    var beat:Float = Conductor.instance.currentBeat;
+    if (PlayState.instance == null || PlayState.instance.camGame == null) return;
+
+    var drawX:Float = PlayState.instance.camGame.scroll.x * 0.2;
+    var drawY:Float = PlayState.instance.camGame.scroll.y * 0.2;
+
+    applyCodenameDrawOffset(getBoyfriend(), drawX, drawY);
+    applyCodenameDrawOffset(getDad(), drawX, drawY);
+
+    if (beat < 304) return;
+    applyCodenameDrawOffset(donaldChar, drawX, drawY);
+    applyCodenameDrawOffset(bfChar, drawX, drawY);
+  }
+
+  function applyCodenameDrawOffset(character, drawX:Float, drawY:Float):Void
+  {
+    if (character == null || !character.visible) return;
+
+    var storedX:Float = (character.codenameIsPlayer != character.codenamePlayerOffsets) ? drawX : -drawX;
+    var storedY:Float = -drawY;
+
+    // `globalOffsets` initially references the cached CharacterData array.
+    // Never mutate that array in place: otherwise Donald/BF inherit the last
+    // phase-2 camera offset when Crisis is closed and opened again.
+    character.globalOffsets = [storedX, storedY];
+
+    if (character.offsetMode == 'codename') character.refreshCodenameOffsets();
+  }
+
+  function setOpponentStrums(alpha:Float, visible:Bool):Void
+  {
+    var line = PlayState.instance.opponentStrumline;
+    if (line == null || line.strumlineNotes == null) return;
+    for (strum in line.strumlineNotes.members)
+    {
+      if (strum == null) continue;
+      strum.visible = visible;
+      strum.alpha = alpha;
+    }
+  }
+
+  // Countdown's default arrow fade can restore the receptors after setup.
+  // Run this after countdown and at song start, rather than every frame.
+  function hideOpponentGameplay():Void
+  {
+    var line = PlayState.instance.opponentStrumline;
+    setOpponentStrums(0, false);
+    if (line == null) return;
+
+    if (line.notes != null)
+      for (note in line.notes.members)
+        hideOpponentNote(note);
+    if (line.holdNotes != null)
+      for (hold in line.holdNotes.members)
+        hideOpponentNote(hold);
+  }
+
+  function hideOpponentNote(note):Void
+  {
+    if (note == null) return;
+    note.visible = false;
+    note.alpha = 0;
+    note.x = -2000;
+  }
+
+  function resolveEase(name:String, dir:String)
+  {
+    switch (name)
+    {
+      case 'linear' | 'CLASSIC': return FlxEase.linear;
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      default:
+    }
+
+    switch (name + dir)
+    {
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      default: return FlxEase.linear;
+    }
+  }
+
+  function setupLegacy():Void
+  {
+    setupLegacyStage();
+    setupLegacyCharacters();
+    setupLegacyCamera();
+
+    legacyScary = new FlxSprite(-325, -177.5);
+    legacyScary.frames = Paths.getSparrowAtlas('stages/clubhouse/vehVignette');
+    legacyScary.animation.addByPrefix('i', 'sorry', 24, true);
+    legacyScary.animation.play('i');
+    legacyScary.cameras = [PlayState.instance.camHUD];
+    legacyScary.scrollFactor.set(0, 0);
+    legacyScary.scale.set(0.675, 0.675);
+    legacyScary.alpha = 0.5;
+    PlayState.instance.add(legacyScary);
+
+    legacyMainVig = makeLegacyVignette('stages/clubhouse/altVig');
+    legacyFeralVig = makeLegacyVignette('stages/clubhouse/feralVig2');
+
+    // trippyShader = new FlxRuntimeShader(Assets.getText(Paths.frag('trippy')));
+    // trippyShader.setFloat('darkness', 0.55);
+    // trippyShader.setFloat('intensity', 1.0);
+    // trippyShader.setFloat('iTime', 0);
+    // trippyFilter = new ShaderFilter(trippyShader);
+    // PlayState.instance.camHUD.filters = [trippyFilter];
+  }
+
+  function setupLegacyCharacters():Void
+  {
+    // Codename keeps the Vehement <char> nodes during Crisis, even though their
+    // stage sprites are hidden by Legacy.hx. Recreate those missing characters here.
+    if (legacyDonald == null) legacyDonald = createLegacyStageCharacter('donald', -400, 105, 0.77, 190, true);
+    if (legacyGoofy == null) legacyGoofy = createLegacyStageCharacter('goofy', 1550, 150, 0.85, 290, false);
+
+    if (legacyDonald != null) legacyDonald.visible = true;
+    if (legacyGoofy != null) legacyGoofy.visible = true;
+
+    if (PlayState.instance != null && PlayState.instance.currentStage != null) PlayState.instance.currentStage.refresh();
+  }
+
+  function createLegacyStageCharacter(id:String, x:Float, y:Float, scale:Float, zIndex:Int, multiplyBaseScale:Bool)
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+
+    var character = CharacterDataParser.fetchCharacter(id);
+    if (character == null) return null;
+
+    PlayState.instance.currentStage.addCharacter(character, CharacterType.OTHER);
+    character.setScale(multiplyBaseScale ? character.getBaseScale() * scale : scale);
+    character.setPosition(x, y);
+    character.originalPosition.set(x, y);
+    character.resetCameraFocusPoint();
+    character.zIndex = zIndex;
+    character.scrollFactor.set(1, 1);
+    character.visible = true;
+    character.active = true;
+    character.useRenderTexture = false;
+    character.dance(true);
+    return character;
+  }
+
+  function setupLegacyStage():Void
+  {
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fg', 'fg2', 'donald', 'goofy'])
+      setStagePropVisible(name, false);
+
+    for (name in ['V-outside', 'V-window', 'V-bg', 'V-bgStuff', 'V-fg', 'V-fgA', 'V-lightBulb', 'V-fg3', 'V-fg2'])
+      setStagePropVisible(name, true);
+
+    setStagePropVisible('V-fg', false);
+    setStagePropVisible('V-fgA', true);
+    setStagePropVisible('V-lightBulb', true);
+
+    var bulb = getStageProp('V-lightBulb');
+    if (bulb != null)
+    {
+      bulb.origin.set(bulb.frameWidth / 2, 0);
+      bulb.offset.set(0, 0);
+    }
+  }
+
+  function setupLegacyCamera():Void
+  {
+    if (PlayState.instance == null || PlayState.instance.cameraFollowPoint == null) return;
+
+    PlayState.instance.cancelCameraFollowTween();
+    PlayState.instance.cameraFollowPoint.setPosition(850, 400);
+    PlayState.instance.resetCamera(false, false, true);
+  }
+
+  function makeLegacyVignette(path:String):FlxSprite
+  {
+    var sprite = new FlxSprite(0, 0).loadGraphic(Paths.image(path));
+    sprite.cameras = [PlayState.instance.camHUD];
+    sprite.scrollFactor.set(0, 0);
+    sprite.blend = BlendMode.ADD;
+    sprite.alpha = 0.1;
+    PlayState.instance.add(sprite);
+    return sprite;
+  }
+
+  function updateLegacy(elapsed:Float):Void
+  {
+    trippyTime += elapsed;
+    // if (trippyShader != null) trippyShader.setFloat('iTime', trippyTime);
+
+    var bulb = getStageProp('V-lightBulb');
+    if (bulb != null && bulb.visible)
+      bulb.angle = Math.sin(Conductor.instance.songPosition / 1500) * 12;
+  }
+
+  function playSecondarySing(character, direction:Int, miss:Bool):Void
+  {
+    if (character == null) return;
+    character.visible = true;
+    character.active = true;
+    character.playSingAnimation(direction, miss);
+    character.holdTimer = 0;
+  }
+
+  function pauseVideos():Void
+  {
+    if (introVideo != null) introVideo.pauseVideo();
+    if (overlayVideo != null) overlayVideo.pauseVideo();
+  }
+
+  function resumeVideos():Void
+  {
+    if (introVideoStarted && introVideo != null && introVideo.visible) introVideo.resumeVideo();
+    if (overlayVideo != null && overlayVideo.visible) overlayVideo.resumeVideo();
+  }
+
+  function startIntroVideo():Void
+  {
+    if (introVideo == null || introVideoStarted) return;
+
+    introVideoStarted = true;
+    if (camIntro != null) camIntro.visible = true;
+    introVideo.visible = true;
+    introVideo.alpha = 0;
+    introVideo.restartVideo();
+    introVideo.resumeVideo();
+    FlxTween.tween(introVideo, {alpha: 1}, 0.5, {ease: FlxEase.quartOut});
+  }
+
+  function cleanupCrisisRuntimeVisuals():Void
+  {
+    stickerActive = false;
+    if (swapZoomTween != null) swapZoomTween.cancel();
+
+    // FlxTween lives in the global tween manager.  A retry destroys these
+    // cameras immediately, so any in-progress intro/overlay fade must be
+    // cancelled before FunkinCamera.destroy() clears its display objects.
+    // Otherwise the next frame attempts to set alpha on a destroyed camera.
+    if (camIntro != null) FlxTween.cancelTweensOf(camIntro);
+    if (camOverlay != null) FlxTween.cancelTweensOf(camOverlay);
+    if (introVideo != null) FlxTween.cancelTweensOf(introVideo);
+    if (overlayVideo != null) FlxTween.cancelTweensOf(overlayVideo);
+    if (PlayState.instance != null && PlayState.instance.camHUD != null)
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+
+    if (sticker != null)
+    {
+      FlxTween.cancelTweensOf(sticker);
+      if (PlayState.instance != null) PlayState.instance.remove(sticker);
+      sticker.destroy();
+      sticker = null;
+    }
+
+    if (introVideo != null) introVideo.visible = false;
+    if (overlayVideo != null)
+    {
+      overlayVideo.visible = false;
+      overlayVideo.pauseVideo();
+    }
+    if (camOverlay != null) camOverlay.visible = false;
+    if (camIntro != null) camIntro.visible = false;
+    clearCameraFilters();
+  }
+
+  function fadeCrisisGameplayCameras():Void
+  {
+    if (PlayState.instance == null) return;
+
+    if (PlayState.instance.camGame != null) PlayState.instance.camGame.fade(FlxColor.BLACK, 0.001, false);
+    if (PlayState.instance.camHUD != null) PlayState.instance.camHUD.fade(FlxColor.BLACK, 0.001, false);
+    if (camChar != null) camChar.fade(FlxColor.BLACK, 0.001, false);
+    if (camOverlay != null) camOverlay.fade(FlxColor.BLACK, 0.001, false);
+    if (camIntro != null) camIntro.fade(FlxColor.BLACK, 0.001, false);
+  }
+
+  function clearCameraFilters():Void
+  {
+    if (PlayState.instance != null)
+    {
+      if (PlayState.instance.camGame != null) PlayState.instance.camGame.filters = [];
+      if (PlayState.instance.camHUD != null) PlayState.instance.camHUD.filters = [];
+    }
+    if (camChar != null) camChar.filters = [];
+  }
+
+  function removeCrisisCamera(camera):Void
+  {
+    if (camera != null && FlxG.cameras.list.indexOf(camera) >= 0)
+      FlxG.cameras.remove(camera, true);
+  }
+
+  function cacheAssets():Void
+  {
+    FunkinMemory.cacheTexture(Paths.image('stages/clubhouse/vehVignette'));
+    FunkinMemory.cacheTexture(Paths.image('stages/clubhouse/altVig'));
+    FunkinMemory.cacheTexture(Paths.image('stages/clubhouse/feralVig2'));
+
+    // Crisis picks one of these at random from beat 372 onward. Preload the
+    // whole small set so a new sticker can never trigger a texture upload.
+    // These are reused by StickerSubState when leaving a song or Results.
+    // They must survive the transition's cache purge, otherwise the active
+    // sticker sprites fall back to HaxeFlixel's missing-graphic image.
+    var transitionStickerChars:Array<String> = ['bf', 'costume', 'donald', 'gf', 'goofy', 'marko', 'mickey'];
+    for (character in transitionStickerChars)
+    {
+      var maxNumber:Int = character == 'costume' ? 4 : 3;
+      for (number in 1...(maxNumber + 1))
+        FunkinMemory.permanentCacheTexture(Paths.image('transitionSwag/stickers-set-1/' + character + 'Sticker' + number));
+    }
+  }
+
+  function getStageProp(name:String)
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+    return PlayState.instance.currentStage.getNamedProp(name);
+  }
+
+  function setStagePropVisible(name:String, visible:Bool):Void
+  {
+    var prop = getStageProp(name);
+    if (prop == null) return;
+    prop.visible = visible;
+    prop.active = visible;
+    prop.color = FlxColor.WHITE;
+  }
+
+  function getDad()
+  {
+    return PlayState.instance?.currentStage?.getDad();
+  }
+
+  function getBoyfriend()
+  {
+    return PlayState.instance?.currentStage?.getBoyfriend();
+  }
+
+  function getGirlfriend()
+  {
+    return PlayState.instance?.currentStage?.getGirlfriend();
+  }
+
+  function isLegacy():Bool
+  {
+    return PlayState.instance != null && PlayState.instance.currentVariation.toLowerCase() == 'legacy';
+  }
+}

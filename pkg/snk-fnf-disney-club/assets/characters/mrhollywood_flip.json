@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-7,
+				-15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mrHollywood UP"
+		},
+		{
+			"offsets": [
+				23,
+				-16
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mrHollywood LEFT"
+		},
+		{
+			"offsets": [
+				-41,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mrHollywood RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "mrhollywood DOWN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-2,
+				5
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "mrHollywood idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mrhollywood",
+	"position": [
+		-900,
+		-820
+	],
+	"healthicon": "mrhollywood",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		222,
+		219
+	],
+	"camera_position": [
+		1120,
+		800
+	],
+	"sing_duration": 6.1,
+	"scale": 0.4
+}

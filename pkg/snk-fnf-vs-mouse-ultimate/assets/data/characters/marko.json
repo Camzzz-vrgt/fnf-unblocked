@@ -1,0 +1,49 @@
+{
+  "version": "1.0.1",
+  "name": "marko",
+  "renderType": "multisparrow",
+  "assetPath": "characters/Marko/Phase1/1",
+  "scale": 0.9,
+  "offsets": [0, 0],
+  "cameraOffsets": [150, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "anim_i",
+      "offsets": [124.44, -3.33],
+      "assetPath": "characters/Marko/Phase1/1"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "anim_l",
+      "offsets": [131.12, 3.33],
+      "assetPath": "characters/Marko/Phase1/1"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "anim_d",
+      "offsets": [-34.45, -7],
+      "assetPath": "characters/Marko/Phase1/1"
+    },
+    {
+      "name": "singUP",
+      "prefix": "anim_u",
+      "offsets": [25.56, 37.22],
+      "assetPath": "characters/Marko/Phase1/1"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "anim_r",
+      "offsets": [66.11, -15.56],
+      "assetPath": "characters/Marko/Phase1/1"
+    }
+  ],
+  "healthIcon": {
+    "id": "marko",
+    "color": "#661521"
+  },
+  "singTime": 6,
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

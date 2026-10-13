@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sensei LEFT"
+		},
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sensei DOWN"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sensei UP"
+		},
+		{
+			"offsets": [
+				-11,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sensei RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				20
+			],
+			"anim": "spinStart",
+			"fps": 24,
+			"name": "sensei spinStart",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				10
+			],
+			"anim": "idle-spin",
+			"fps": 24,
+			"name": "sensei spinLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				0
+			],
+			"anim": "spinEnd",
+			"fps": 24,
+			"name": "sensei spinEnd",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				20
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "sensei spinStance0001",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				20
+			],
+			"anim": "spinStance",
+			"fps": 24,
+			"name": "sensei spinStance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "sensei idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sensei",
+	"position": [
+		-850,
+		-500
+	],
+	"healthicon": "sensei",
+	"flip_x": false,
+	"healthbar_colors": [
+		148,
+		161,
+		165
+	],
+	"camera_position": [
+		850,
+		650
+	],
+	"sing_duration": 6.1,
+	"scale": 0.3
+}

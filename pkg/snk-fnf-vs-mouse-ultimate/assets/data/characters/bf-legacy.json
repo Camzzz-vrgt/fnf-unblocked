@@ -1,0 +1,64 @@
+{
+  "version": "1.0.1",
+  "name": "bf-legacy",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Bruno/bf",
+  "scale": 1.1,
+  "offsets": [-350, 570],
+  "cameraOffsets": [300, -300],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BF idle dance"
+    },
+    {
+      "name": "singUP",
+      "prefix": "BF NOTE UP",
+      "offsets": [-305, 265]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BF NOTE LEFT"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BF NOTE RIGHT"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BF NOTE DOWN",
+      "offsets": [-305, 163]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS",
+      "offsets": [-305, 265]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS",
+      "offsets": [-305, 163]
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY!!"
+    }
+  ],
+  "flipX": true,
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "bf_legacy",
+    "color": "#31B0D1"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": true
+}

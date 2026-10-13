@@ -1,0 +1,43 @@
+{
+  "version": "1.0.1",
+  "name": "mickey-preferal",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Mickey/mickey-phase2",
+  "scale": 0.892,
+  "offsets": [485, -168],
+  "cameraOffsets": [-800, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "animations/IDLE_POSE"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "animations/LEFT_POSE",
+      "offsets": [825, -270]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "animations/DOWN_POSE",
+      "offsets": [700, -275]
+    },
+    {
+      "name": "singUP",
+      "prefix": "animations/UP_POSE",
+      "offsets": [580, -65]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "animations/RIGHT_POSE",
+      "offsets": [580, -175]
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "mickey2",
+    "color": "#FF0000"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

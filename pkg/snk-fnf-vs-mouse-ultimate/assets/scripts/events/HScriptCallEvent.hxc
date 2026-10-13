@@ -1,0 +1,116 @@
+import funkin.play.event.ScriptedSongEvent;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+
+class HScriptCallEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('HScript Call', {processOldEvents: false});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var params = data.getArray('params') ?? [];
+    if (params.length < 1) return;
+
+    var callName = Std.string(params[0]);
+    if (callName != 'swapChars') return;
+
+    var args = params.length > 1 ? Std.string(params[1]).split(',') : [];
+    if (args.length < 1) return;
+
+    var strum = Std.parseInt(args[0]);
+    var choice = args.length > 1 ? Std.parseInt(args[1]) : null;
+    if (strum == null) return;
+
+    swapChars(strum, choice);
+  }
+
+  function swapChars(strum, choice):Void
+  {
+    var charId = getCharId(strum, choice);
+    if (charId == null || charId == '') return;
+
+    switch (strum)
+    {
+      case 0:
+        swapStageCharacter(charId, 'dad');
+      case 1:
+        swapStageCharacter(charId, 'bf');
+      case 2:
+        setStagePropVisible('donald', false);
+      case 3:
+        setStagePropVisible('goofy', false);
+      default:
+    }
+  }
+
+  function getCharId(strum, choice)
+  {
+    if (choice == null) choice = 0;
+
+    switch (strum)
+    {
+      case 0:
+        switch (choice)
+        {
+          case 0: return 'mickey';
+          case 1: return 'mickey-preferal';
+          case 2: return 'mickey-preferal-nerves';
+          case 3: return 'mickey-feral';
+          default: return null;
+        }
+      case 1:
+        return choice == 1 ? 'bf-alerted' : 'bf';
+      case 2:
+        return choice == 1 ? 'donald-feral' : 'donald';
+      case 3:
+        switch (choice)
+        {
+          case 0: return 'goofy';
+          case 1: return 'goofy-feral';
+          case 2: return 'goofy-feral-calm';
+          default: return null;
+        }
+      default:
+        return null;
+    }
+  }
+
+  function swapStageCharacter(charId, target):Void
+  {
+    var newChar = CharacterDataParser.fetchCharacter(charId);
+    if (newChar == null) return;
+
+    var stage = PlayState.instance.currentStage;
+    switch (target)
+    {
+      case 'dad':
+        stage.getDad(true);
+        stage.addCharacter(newChar, CharacterType.DAD);
+      case 'bf':
+        stage.getBoyfriend(true);
+        stage.addCharacter(newChar, CharacterType.BF);
+      case 'gf':
+        stage.getGirlfriend(true);
+        stage.addCharacter(newChar, CharacterType.GF);
+      default:
+        return;
+    }
+    stage.refresh();
+  }
+
+  function setStagePropVisible(name, visible):Void
+  {
+    var prop = PlayState.instance.currentStage.getNamedProp(name);
+    if (prop != null)
+    {
+      prop.visible = visible;
+      prop.active = visible;
+    }
+  }
+}

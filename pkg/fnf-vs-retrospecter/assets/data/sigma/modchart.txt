@@ -1,0 +1,335 @@
+local curStepj = 0
+local mainspeed = 0.14
+local whichJump = 1
+local playerTurn = false
+local ignoreturns = true
+local doStepper = true
+local doEIGHTStepper = false
+local stepperlast = true
+local tempspeed = 1
+local curBumpArrow = 0
+local arrowStrength = 40
+local camStrength = 20
+local defCamx = 0
+local defCamy = 0
+local camspeed = 0.1
+local doOverlap = false
+local doLoftyShakes = false
+local playershit = 10
+function start(song)
+	ToCenterShit()
+    defCamx = getCameraX()
+    defCamy = getCameraY()
+end
+
+function update(elapsed)
+	local currentBeat = (songPos / 1000)*(bpm/60)
+
+    if curStep == 62 then -- allows stepper to be on turns
+        ignoreturns = false
+    end
+
+    if curStep == 383 then -- turns off the stepper aka 'pom pom notes'
+        ignoreturns = false
+        doStepper = false
+        ToCenterShitAngleFix()
+    end
+
+    if curStep == 448 then -- turns on the funny move back and forth idk
+        overlapshit(0.5,currentBeat+1400)
+        doLoftyShakes = true
+    end
+
+    if curStep == 576 then -- turns OFF the funny move back and forth idk
+        doOverlap = false
+        doLoftyShakes = false
+        for i=0,3 do
+            tweenFadeIn(i,1,0.2)
+        end
+        ToCenterTime(0.4)
+    end
+
+    if doOverlap then -- the funny move back and forth idk
+        for i=0,3 do
+            setActorX(_G['defaultStrum'..i..'X'] + 300 * math.sin(currentBeat * 0.503) + 350, i)
+        end
+        for i=4,7 do
+            setActorX(_G['defaultStrum'..i..'X'] - 300 * math.sin(currentBeat * 0.503) - 275, i)
+        end
+    end
+
+    if doLoftyShakes == true then -- does the shakes from vsjim lofty. Basicly was really fitting here And I will copy and paste my own code B)
+        loftyShakes(0,false,currentBeat)
+        loftyShakes(4,false,currentBeat)
+    end
+
+    if (curStep == 959) then -- turns on the EIGHTstepper aka 'pom pom notes V2'
+        doEIGHTStepper = true
+    end
+
+    if (curStep == 831) or (curStep == 1086) then -- turns off the EIGHTstepper :sadSpong:
+        ignoreturns = false
+        doEIGHTStepper = false
+        ToCenterShitAngleFix()
+    end
+
+    if (curStep == 1169) then
+		for i=0,7 do
+            tweenFadeOut(i,0,1)
+		end
+    end
+
+    -- camera functions
+    if (curStep == 848) or (curStep == 880) or (curStep == 912) or (curStep == 944) or (curStep == 1096) or (curStep == 1112) or (curStep == 1128) then -- camera go to right
+        tweenCameraPos(defCamx+camStrength+20,defCamY,camspeed) 
+    elseif (curStep == 856) or (curStep == 920) or (curStep == 1104) or (curStep == 1120) or (curStep == 1152) then -- camera zoom out
+        tweenCameraZoomOut(cameraZoom+0.02, camspeed)
+    elseif (curStep == 1144) then -- camera zoom in 
+		tweenCameraZoomIn(cameraZoom-0.02, camspeed)
+    elseif (curStep == 888) or (curStep == 952) or (curStep == 1088) or (curStep == 1136) then -- camera go to left
+        tweenCameraPos(defCamx-camStrength,defCamY,camspeed)
+    elseif (curStep == 864) or (curStep == 896) or (curStep == 928) or (curStep == 960) or (curStep == 1169) then -- camera go to center
+        tweenCameraPos(defCamx,defCamY,camspeed)
+		tweenCameraZoom(cameraZoom, camspeed)
+    end
+
+    if (curStep == 126) or (curStep == 254) or (curStep == 702) or (curStep == 1022) then -- I just decided to type the manually smh
+        playerTurn = true
+    end
+
+    if (curStep == 189) or (curStep == 318) or (curStep == 957) then
+        playerTurn = false
+    end
+
+    if (curStep == 580) or (curStep == 596) or (curStep == 612) or (curStep == 628) or (curStep == 644) or (curStep == 660) or (curStep == 676) or (curStep == 692) then 
+        speen(4) -- spins on da heys
+    end
+
+    if (curStep == 708) or (curStep == 716) or (curStep == 724) or (curStep == 732) or (curStep == 740) or (curStep == 748) or (curStep == 756) or (curStep == 764) or (curStep == 766) or (curStep == 772) or (curStep == 780) or (curStep == 788)  or (curStep == 796)  or (curStep == 798)  or (curStep == 804)  or (curStep == 812)  or (curStep == 820)  or (curStep == 828)  or (curStep == 830) then 
+        speen(0) -- spins on da heys but for retro
+    end
+end
+
+function beatHit (beat)
+    if doStepper == true then
+    stepperthing()
+    end
+    if doEIGHTStepper == true then
+        stepper2()
+    end
+end
+
+-- stupid functions
+
+function stepper2() -- basically the same stepper but works is different :>
+    curStepj = curStepj+1
+    whichJump = whichJump*-1
+    if curStepj == 2 then
+        nbump()
+    elseif curStepj == 1 then
+        njump()
+    elseif curStepj == 3 then
+        njump()
+    elseif curStepj == 4 then
+        nbump()
+        curStepj = 0
+    end
+end
+
+function stepperthing()
+    curStepj = curStepj+1
+    whichJump = whichJump*-1
+    if curStepj == 2 then
+        if ignoreturns == true then
+            cross(0)
+            cross(4)
+        elseif ignoreturns == false and playerTurn == false then
+            cross(4)
+        elseif ignoreturns == false and playerTurn == true then
+            cross(0)
+        end
+    elseif curStepj == 1 then
+        njump()
+    elseif curStepj == 3 then
+        njump()
+    elseif curStepj == 4 then
+        njump()
+        --stepperlast = true
+        curStepj = 0
+    end
+end
+
+function overlapshit(leTime,funnybeat)
+    for i=0,3 do
+        tweenPosXAngle(i,(_G['defaultStrum'..i..'X'] + 300 * math.sin(funnybeat * 0.503) + 350),getActorAngle(i),leTime)
+        tweenFadeOut(i,0.4,leTime,'finishedOverlapshit')
+    end
+    for i=4,7 do
+        tweenPosXAngle(i,(_G['defaultStrum'..i..'X'] - 300 * math.sin(funnybeat * 0.503) - 275),getActorAngle(i),leTime)
+    end
+end
+
+function finishedOverlapshit()
+    doOverlap = true
+end
+
+function speen(additive)
+	for i=0+additive,3+additive do
+		tweenPosXAngle(i, _G['defaultStrum'..i..'X'], getActorAngle(i) + 360, 0.2, 'setDefault')
+		setActorY(_G['defaultStrum'..i..'Y'] + 10, i)
+	end
+end
+
+function nbump()
+    if ignoreturns == true then
+        automatedBump(0)
+        automatedBump(4)
+    elseif ignoreturns == false and playerTurn == false then
+        automatedBump(4)
+    elseif ignoreturns == false and playerTurn == true then
+        automatedBump(0)
+    end
+end
+
+function automatedBump(additive)
+    if (curBumpArrow == 0) then
+        notebump(additive+curBumpArrow,arrowStrength*-1,true)
+    elseif (curBumpArrow == 1) then
+        notebump(additive+curBumpArrow,arrowStrength*-1,false)
+    elseif (curBumpArrow == 2) then
+        notebump(additive+curBumpArrow,arrowStrength,false)
+    elseif (curBumpArrow == 3) then
+        notebump(additive+curBumpArrow,arrowStrength,true)
+    elseif (curBumpArrow == 4) then
+        notebump(additive+0,arrowStrength*-1,true)
+        curBumpArrow = 0
+    end
+    curBumpArrow = curBumpArrow+1
+end
+
+function notebump(leid,strength,leDir)
+	for i=leid,leid do
+        if (leDir == true) then
+            tweenPos(i, _G['defaultStrum'..i..'X']+strength, _G['defaultStrum'..i..'Y'], 0.05, 'ToCenterShit')
+        elseif (leDir == false) then
+            tweenPos(i, _G['defaultStrum'..i..'X'], _G['defaultStrum'..i..'Y']+strength, 0.05, 'ToCenterShit')
+        end
+	end
+end
+
+function njump()
+    if whichJump == 1 then
+        if ignoreturns == true then
+        jump(0,true)
+        jump(4,false)
+        elseif ignoreturns == false and playerTurn == false then
+            jump(4,false)
+        elseif ignoreturns == false and playerTurn == true then
+            jump(0,true)
+        end
+    elseif whichJump == -1 then
+        if ignoreturns == true then
+        jump(0,false)
+        jump(4,true)
+        elseif ignoreturns == false and playerTurn == false then
+            jump(4,true)
+        elseif ignoreturns == false and playerTurn == true then
+            jump(0,false)
+        end
+    end
+end
+
+function jump(additive,mright)
+    if stepperlast == true then
+        tempspeed = mainspeed
+        mainspeed = mainspeed-0.1
+    end
+
+    if mright == false then
+        for i=0+additive,1+additive do
+            tweenPos(i,_G['defaultStrum'..i..'X']+75,_G['defaultStrum'..i..'Y']+75,mainspeed,'ToCenterShitAngleFix')
+            tweenAngle(i,-45,mainspeed)
+        end
+        for i=2+additive,3+additive do
+            tweenPos(i,_G['defaultStrum'..i..'X']-75,_G['defaultStrum'..i..'Y']-75,mainspeed,'ToCenterShitAngleFix')
+            tweenAngle(i,45,mainspeed)
+        end
+    elseif mright == true then
+        for i=0+additive,1+additive do
+            tweenPos(i,_G['defaultStrum'..i..'X']+75,_G['defaultStrum'..i..'Y']-75,mainspeed,'ToCenterShitAngleFix')
+            tweenAngle(i,45,mainspeed)
+        end
+        for i=2+additive,3+additive do
+            tweenPos(i,_G['defaultStrum'..i..'X']-75,_G['defaultStrum'..i..'Y']+75,mainspeed,'ToCenterShitAngleFix')
+            tweenAngle(i,-45,mainspeed)
+        end
+    end
+
+    if stepperlast == true then
+        mainspeed = tempspeed
+        stepperlast = false
+    end
+end
+
+function cross(additive)
+    for i=0+additive,1+additive do
+        tweenPos(i,_G['defaultStrum'..i..'X']+115,_G['defaultStrum'..i..'Y'],mainspeed/2)
+    end
+    for i=2+additive,3+additive do
+        tweenPos(i,_G['defaultStrum'..i..'X']-115,_G['defaultStrum'..i..'Y'],mainspeed/2)
+    end
+end
+
+function loftyShakes(additive,usex,funnybeat)
+	for i=0+additive,0+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32-playershit * math.cos((funnybeat) * math.pi), i)
+	end
+	for i=2+additive,2+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32-playershit * math.cos((funnybeat) * math.pi), i)
+	end
+
+	for i=1+additive,1+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32+playershit * math.cos((funnybeat) * math.pi), i)
+	end
+	for i=3+additive,3+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32+playershit * math.cos((funnybeat) * math.pi), i)
+	end
+end
+
+function ToCenterShitAngleFix()
+	for i=0,7 do
+	tweenPosXAngleIn(i, _G['defaultStrum'..i..'X'], 0, mainspeed)
+	tweenPosYAngleIn(i, _G['defaultStrum'..i..'Y'], 0, mainspeed)
+	end
+end
+
+function setDefault(id)
+	setActorAngle(0,id)
+	_G['defaultStrum'..id..'X'] = getActorX(id)
+end
+
+function ToCenterTime(leTime)
+	for i=0,7 do
+	tweenPosXAngleIn(i, _G['defaultStrum'..i..'X'], getActorAngle(i), leTime)
+	tweenPosYAngleIn(i, _G['defaultStrum'..i..'Y'], getActorAngle(i), leTime)
+	end
+end
+
+function ToCenterShit()
+	for i=0,7 do
+	tweenPosXAngleIn(i, _G['defaultStrum'..i..'X'], getActorAngle(i), mainspeed)
+	tweenPosYAngleIn(i, _G['defaultStrum'..i..'Y'], getActorAngle(i), mainspeed)
+	end
+end

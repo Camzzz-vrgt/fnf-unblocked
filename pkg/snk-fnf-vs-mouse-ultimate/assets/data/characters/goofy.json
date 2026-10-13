@@ -1,0 +1,44 @@
+﻿{
+  "version": "1.0.1",
+  "name": "goofy",
+  "renderType": "sparrow",
+  "assetPath": "characters/Goofy/Phase2",
+  "scale": 0.9,
+  "offsets": [-150, -500],
+  "cameraOffsets": [-600, -160],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle instance 1"
+    },
+    {
+      "name": "idle-loop",
+      "prefix": "idle instance 1",
+      "looped": true,
+      "frameIndices": [8, 9, 10, 11]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Left",
+      "offsets": [620, 430]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Down",
+      "offsets": [670, 485]
+    },
+    {
+      "name": "singUP",
+      "prefix": "Up",
+      "offsets": [500, 605]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Right",
+      "offsets": [780, 340]
+    }
+  ],
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

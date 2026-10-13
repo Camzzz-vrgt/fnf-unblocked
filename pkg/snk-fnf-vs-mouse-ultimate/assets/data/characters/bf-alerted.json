@@ -1,0 +1,66 @@
+{
+  "version": "1.0.1",
+  "name": "bf-alerted",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Bruno/bruno-alerted",
+  "scale": 1,
+  "offsets": [-20, 200],
+  "cameraOffsets": [0, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "AlertedIdle",
+      "offsets": [5, -35],
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "AlertedLeft",
+      "offsets": [77, -36]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "AlertMissLeft",
+      "offsets": [96, -76]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "AlertedDown",
+      "offsets": [18, -138]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "AlertMissDDown",
+      "offsets": [13, -162]
+    },
+    {
+      "name": "singUP",
+      "prefix": "AlertedUp",
+      "offsets": [-116, 99]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "AlertMissUp",
+      "offsets": [-101, 49]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "AlertedRight",
+      "offsets": [-50, -27]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "AlertMissRight",
+      "offsets": [-85, -27]
+    }
+  ],
+  "flipX": true,
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "bf2",
+    "color": "#4CC3FF"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": true
+}

@@ -1,0 +1,186 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Zoom Tween",
+						"0.6",
+						"0.1"
+					]
+				]
+			],
+			[
+				6857.14285714286,
+				[
+					[
+						"Zoom Tween",
+						"0.9",
+						"0.7"
+					],
+					[
+						"Screen Flash",
+						"FFFFFF",
+						"0.7"
+					],
+					[
+						"Camera Fade",
+						"0.01",
+						"1"
+					],
+					[
+						"HUD Tween",
+						"0.7",
+						"1"
+					]
+				]
+			],
+			[
+				10285.7142857143,
+				[
+					[
+						"Play Animation",
+						"lucky",
+						"dad"
+					]
+				]
+			],
+			[
+				34500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				41142.8571428572,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				61928.5714285715,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				75642.8571428572,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				95142.8571428571,
+				[
+					[
+						"Screen Flash",
+						"FFFFFF",
+						"0.5"
+					],
+					[
+						"Change Character",
+						"dad",
+						"oswaldJAKE-angry"
+					],
+					[
+						"Play Animation",
+						"sad",
+						"gf"
+					]
+				]
+			],
+			[
+				96214.2857142857,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				102857.142857143,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				109928.571428571,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				116571.428571429,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				137142.857142857,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				140571.428571428,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					],
+					[
+						"Screen Flash",
+						"000000",
+						"0.7"
+					],
+					[
+						"Camera Fade",
+						"0.01",
+						"0"
+					],
+					[
+						"HUD Tween",
+						"0.01",
+						"0"
+					]
+				]
+			]
+		]
+	}
+}

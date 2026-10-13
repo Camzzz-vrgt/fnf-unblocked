@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"indices": [],
+			"fps": 16,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "penguinBF_DEAD firstDeath"
+		},
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "penguinBF_DEAD deathLoop"
+		},
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "penguinBF_DEAD retry"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/penguinBF_DEAD",
+	"position": [
+		-150,
+		-110
+	],
+	"healthicon": "penguinBF",
+	"flip_x": true,
+	"healthbar_colors": [
+		58,
+		155,
+		203
+	],
+	"camera_position": [
+		-120,
+		180
+	],
+	"sing_duration": 4,
+	"scale": 0.6
+}

@@ -1,0 +1,82 @@
+{
+    "version":  "1.0.0",
+    "name":  "Donald",
+    "assetPath":  "dialogue/characters/donald",
+    "flipX":  false,
+    "isPixel":  false,
+    "scale":  0.55,
+    "offsets":  [
+                    -50,
+                    125
+                ],
+    "animations":  [
+                       {
+                           "name":  "anguish",
+                           "prefix":  "sprite_1",
+                           "frameRate":  24
+                       },
+                       {
+                           "name":  "mad_surprised",
+                           "prefix":  "sprite_10",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           160,
+                                           160
+                                       ]
+                       },
+                       {
+                           "name":  "happy",
+                           "prefix":  "sprite_13",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           250,
+                                           140
+                                       ]
+                       },
+                       {
+                           "name":  "default",
+                           "prefix":  "sprite_2",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           100,
+                                           100
+                                       ]
+                       },
+                       {
+                           "name":  "confident",
+                           "prefix":  "sprite_3",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           210,
+                                           110
+                                       ]
+                       },
+                       {
+                           "name":  "angry",
+                           "prefix":  "sprite_7",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           250,
+                                           10
+                                       ]
+                       },
+                       {
+                           "name":  "furious",
+                           "prefix":  "sprite_8",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           -30,
+                                           50
+                                       ]
+                       },
+                       {
+                           "name":  "voila",
+                           "prefix":  "sprite_9",
+                           "frameRate":  24,
+                           "offsets":  [
+                                           250,
+                                           40
+                                       ]
+                       }
+                   ]
+}

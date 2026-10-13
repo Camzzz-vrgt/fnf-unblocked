@@ -1,0 +1,187 @@
+{
+  "version": "1.1.0",
+  "name": "VMU",
+  "author": "VS. Mouse Ultimate",
+  "fallback": "funkin",
+  "assets": {
+    "note": {
+      "assetPath": "shared:game/notes/default",
+      "scale": 0.7,
+      "data": {
+        "left": { "prefix": "purple0" },
+        "down": { "prefix": "blue0" },
+        "up": { "prefix": "green0" },
+        "right": { "prefix": "red0" }
+      }
+    },
+    "noteStrumline": {
+      "assetPath": "shared:game/notes/default",
+      "scale": 0.7,
+      "offsets": [21, 0],
+      "data": {
+        "leftStatic": { "prefix": "arrowLEFT0" },
+        "leftPress": { "prefix": "left press0" },
+        "leftConfirm": { "prefix": "left confirm0" },
+        "leftConfirmHold": { "prefix": "left confirm0" },
+        "downStatic": { "prefix": "arrowDOWN0" },
+        "downPress": { "prefix": "down press0" },
+        "downConfirm": { "prefix": "down confirm0" },
+        "downConfirmHold": { "prefix": "down confirm0" },
+        "upStatic": { "prefix": "arrowUP0" },
+        "upPress": { "prefix": "up press0" },
+        "upConfirm": { "prefix": "up confirm0" },
+        "upConfirmHold": { "prefix": "up confirm0" },
+        "rightStatic": { "prefix": "arrowRIGHT0" },
+        "rightPress": { "prefix": "right press0" },
+        "rightConfirm": { "prefix": "right confirm0" },
+        "rightConfirmHold": { "prefix": "right confirm0" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "shared:game/notes/NOTE_hold_assets_vmu",
+      "scale": 0.7,
+      "alpha": 0.5,
+      "offsets": [0, 0],
+      "isPixel": false,
+      "data": {}
+    },
+    "holdNoteCover": {
+      "assetPath": "",
+      "offsets": [0, 0],
+      "data": {
+        "enabled": false
+      }
+    },
+    "noteSplash": {
+      "assetPath": "shared:game/splashes/default",
+      "alpha": 1,
+      "scale": 0.5,
+      "offsets": [-420, -520],
+      "data": {
+        "enabled": true,
+        "framerateDefault": 30,
+        "framerateVariance": 0,
+        "leftSplashes": [
+          { "prefix": "Left_splash_1", "offsets": [-50, -50] },
+          { "prefix": "Left_splash_2", "offsets": [50, 50] }
+        ],
+        "downSplashes": [
+          { "prefix": "Down_splash_1", "offsets": [-5, 0] },
+          { "prefix": "Down_splash_2", "offsets": [70, 50] }
+        ],
+        "upSplashes": [
+          { "prefix": "Up_splash_1", "offsets": [45, 25] },
+          { "prefix": "Up_splash_2", "offsets": [-15, -5] }
+        ],
+        "rightSplashes": [
+          { "prefix": "Right_splash_1", "offsets": [50, 50] },
+          { "prefix": "Right_splash_2", "offsets": [-60, -50] }
+        ]
+      }
+    },
+    "countdownThree": {
+      "data": {
+        "audioPath": "shared:gameplay/countdown/funkin/introTHREE"
+      },
+      "assetPath": "shared:game/three",
+      "scale": 1.0,
+      "isPixel": false
+    },
+    "countdownTwo": {
+      "data": {
+        "audioPath": "shared:gameplay/countdown/funkin/introTWO"
+      },
+      "assetPath": "shared:game/two",
+      "scale": 1.0,
+      "isPixel": false
+    },
+    "countdownOne": {
+      "data": {
+        "audioPath": "shared:gameplay/countdown/funkin/introONE"
+      },
+      "assetPath": "shared:game/one",
+      "scale": 1.0,
+      "isPixel": false
+    },
+    "countdownGo": {
+      "data": {
+        "audioPath": "shared:gameplay/countdown/funkin/introGO",
+        "prefix": "GoAni0",
+        "frameRate": 24
+      },
+      "assetPath": "shared:game/go",
+      "scale": 1.0,
+      "isPixel": false
+    },
+    "judgementSick": {
+      "assetPath": "shared:game/score/sick",
+      "scale": 0.66,
+      "isPixel": false
+    },
+    "judgementGood": {
+      "assetPath": "shared:game/score/good",
+      "scale": 0.66,
+      "isPixel": false
+    },
+    "judgementBad": {
+      "assetPath": "shared:game/score/bad",
+      "scale": 0.66,
+      "isPixel": false
+    },
+    "judgementShit": {
+      "assetPath": "shared:game/score/shit",
+      "scale": 0.66,
+      "isPixel": false
+    },
+    "comboNumber0": {
+      "assetPath": "shared:game/score/num0",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber1": {
+      "assetPath": "shared:game/score/num1",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber2": {
+      "assetPath": "shared:game/score/num2",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber3": {
+      "assetPath": "shared:game/score/num3",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber4": {
+      "assetPath": "shared:game/score/num4",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber5": {
+      "assetPath": "shared:game/score/num5",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber6": {
+      "assetPath": "shared:game/score/num6",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber7": {
+      "assetPath": "shared:game/score/num7",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber8": {
+      "assetPath": "shared:game/score/num8",
+      "scale": 0.8,
+      "isPixel": false
+    },
+    "comboNumber9": {
+      "assetPath": "shared:game/score/num9",
+      "scale": 0.8,
+      "isPixel": false
+    }
+  }
+}

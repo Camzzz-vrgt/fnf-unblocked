@@ -1,0 +1,199 @@
+﻿{
+  "version": "1.0.0",
+  "cameraZoom": 0.5,
+  "props": [
+    {
+      "zIndex": 10,
+      "danceEvery": 0,
+      "position": [-500, -850],
+      "scale": 1.5,
+      "name": "C-outside",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [0.8, 0.8],
+      "assetPath": "stages/clubhouse/CRISIS/split/outside",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "OUTSIDE.png",
+          "name": "OUTSIDE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "OUTSIDE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 20,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.5,
+      "name": "C-bg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/CRISIS/split/bg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "CLUBHOUSE.png",
+          "name": "CLUBHOUSE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "CLUBHOUSE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 30,
+      "danceEvery": 0,
+      "position": [400, -850],
+      "scale": 1.5,
+      "name": "C-window",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/CRISIS/split/window",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "WINDOW.png",
+          "name": "WINDOW",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "WINDOW",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 40,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.5,
+      "name": "C-bgStuff",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/CRISIS/split/bgStuff",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "BG STUFF.png",
+          "name": "BG STUFF",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "BG STUFF",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 50,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.5,
+      "name": "C-fg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/CRISIS/split/fg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 2.png",
+          "name": "FG 2",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FG 2",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 60,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "C-fg3",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/CRISIS/split/fg3",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 3.png",
+          "name": "FG 3",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FG 3",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 70,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "C-fg2",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1.5, 1.5],
+      "assetPath": "stages/clubhouse/CRISIS/split/fg2",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 1.png",
+          "name": "FG 1",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FG 1",
+      "updateHitbox": false
+    }
+  ],
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1000, 130],
+      "scale": 0.95,
+      "cameraOffsets": [-100, 0],
+      "positionMode": "topLeft"
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [240, 180],
+      "scale": 1,
+      "cameraOffsets": [100, -10],
+      "positionMode": "topLeft"
+    },
+    "gf": {
+      "zIndex": 100,
+      "position": [525, 70],
+      "scale": 0.65,
+      "cameraOffsets": [0, 0],
+      "positionMode": "topLeft"
+    }
+  },
+  "name": "Clubhouse (Crisis)",
+  "directory": "shared"
+}

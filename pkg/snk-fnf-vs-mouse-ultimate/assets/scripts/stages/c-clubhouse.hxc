@@ -1,0 +1,14 @@
+import funkin.play.stage.Stage;
+
+class CrisisClubhouseStage extends Stage
+{
+  function new()
+  {
+    super('c-clubhouse');
+  }
+
+  override function buildStage():Void
+  {
+    super.buildStage();
+  }
+}

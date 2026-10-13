@@ -1,0 +1,188 @@
+import flixel.tweens.FlxEase;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.event.ScriptedSongEvent;
+
+class VMUFocusCameraEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('FocusCamera', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+    if (PlayState.instance.isMinimalMode) return;
+
+    var target = data.getInt('char');
+    if (target == null && data.value != null) target = Std.int(data.value);
+    if (target == null) target = 0;
+
+    var offsetX = data.getFloat('x') ?? 0;
+    var offsetY = data.getFloat('y') ?? 0;
+    var duration = data.getFloat('duration') ?? 4;
+    var easeName = data.getString('ease') ?? 'CLASSIC';
+    var easeDir = data.getString('easeDir') ?? 'In';
+    var sourceEvent = data.getString('sourceEvent') ?? '';
+    var isCameraPosition = target == -1 || sourceEvent == 'Camera Position';
+    var positionIsOffset = isCameraPosition ? (data.getBool('isOffset') ?? true) : false;
+    var snap = data.getBool('snap') ?? false;
+
+    var point = isCameraPosition && positionIsOffset
+      ? [PlayState.instance.cameraFollowPoint.x, PlayState.instance.cameraFollowPoint.y]
+      : getTargetPoint(target);
+    if (point == null) return;
+
+    var targetX = point[0] + offsetX;
+    var targetY = point[1] + offsetY;
+
+    switch (easeName)
+    {
+      case 'CLASSIC':
+        PlayState.instance.resetCamera(false, false, false);
+        PlayState.instance.cancelCameraFollowTween();
+        PlayState.instance.cameraFollowPoint.setPosition(targetX, targetY);
+        if (snap) PlayState.instance.resetCamera(false, false, true);
+      case 'INSTANT':
+        PlayState.instance.tweenCameraToPosition(targetX, targetY, 0);
+      default:
+        if (snap)
+        {
+          PlayState.instance.tweenCameraToPosition(targetX, targetY, 0);
+          return;
+        }
+
+        var seconds = Conductor.instance.stepLengthMs * duration / 1000;
+        PlayState.instance.tweenCameraToPosition(targetX, targetY, seconds, resolveEase(easeName, easeDir));
+    }
+  }
+
+  function getTargetPoint(target)
+  {
+    var stage = PlayState.instance.currentStage;
+
+    switch (target)
+    {
+      case 0:
+        if (stage.getBoyfriend() == null) return null;
+        return characterCameraPoint(stage.getBoyfriend(), true);
+      case 1:
+        if (stage.getDad() == null) return null;
+        return characterCameraPoint(stage.getDad(), false);
+      case 2:
+        return characterPoint(['donald', 'donald-feral']) ?? propPoint('donald');
+      case 3:
+        return characterPoint(['goofy', 'goofy-feral', 'goofy-feral-calm']) ?? propPoint('goofy');
+      case 4:
+        if (stage.getGirlfriend() == null) return null;
+        return characterCameraPoint(stage.getGirlfriend(), false);
+      case -1:
+        return [0, 0];
+      default:
+        return null;
+    }
+  }
+
+  function characterPoint(ids:Array<String>)
+  {
+    var stage = PlayState.instance.currentStage;
+
+    for (id in ids)
+    {
+      var character = stage.getCharacter(id);
+      if (character == null) continue;
+      if (character.visible) return characterCameraPoint(character, false);
+    }
+
+    return null;
+  }
+
+  function characterCameraPoint(character, isPlayer:Bool)
+  {
+    var globalX = character.globalOffsets != null && character.globalOffsets.length > 0 ? character.globalOffsets[0] : 0;
+    var globalY = character.globalOffsets != null && character.globalOffsets.length > 1 ? character.globalOffsets[1] : 0;
+    var targetX = character.cameraFocusPoint.x + (isPlayer ? -100 : 150) + globalX;
+    var targetY = character.cameraFocusPoint.y - 100 + globalY;
+
+    var animName = character.animation?.curAnim?.name?.toUpperCase() ?? '';
+    if (animName.indexOf('LEFT') != -1) targetX -= 25;
+    if (animName.indexOf('DOWN') != -1) targetY += 25;
+    if (animName.indexOf('UP') != -1) targetY -= 25;
+    if (animName.indexOf('RIGHT') != -1) targetX += 25;
+
+    return [targetX, targetY];
+  }
+
+  function propPoint(name)
+  {
+    var prop = PlayState.instance.currentStage.getNamedProp(name);
+    if (prop == null) return null;
+    if (!prop.visible) return null;
+
+    return [prop.x + prop.width * 0.5, prop.y + prop.height * 0.5];
+  }
+
+  function resolveEase(name, dir)
+  {
+    switch (name)
+    {
+      case 'linear': return FlxEase.linear;
+      case 'CLASSIC': return FlxEase.linear;
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      case 'bounceIn': return FlxEase.bounceIn;
+      case 'bounceOut': return FlxEase.bounceOut;
+      case 'bounceInOut': return FlxEase.bounceInOut;
+      case 'elasticIn': return FlxEase.elasticIn;
+      case 'elasticOut': return FlxEase.elasticOut;
+      case 'elasticInOut': return FlxEase.elasticInOut;
+      default:
+    }
+
+    switch ('$name$dir')
+    {
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      default: return FlxEase.linear;
+    }
+  }
+}

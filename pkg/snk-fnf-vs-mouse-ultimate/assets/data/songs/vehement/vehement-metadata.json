@@ -1,0 +1,40 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "Vehement",
+  "artist": "Saster \u0026 MarStarBro (ft. RiverMusic)",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["normal", "legacy"],
+    "characters": {
+      "player": "bf",
+      "girlfriend": "gf",
+      "opponent": "mickey",
+      "opponentVocals": ["mickey", "donald", "goofy"],
+      "playerVocals": ["bf"]
+    },
+    "stage": "clubhouse",
+    "noteStyle": "vmu",
+    "ratings": {
+      "normal": 0
+    },
+    "album": "volume1",
+    "songVariations": ["legacy"]
+  },
+  "generatedBy": "Snokido Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 105,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 11428.5714285714,
+      "bpm": 120,
+      "c": true,
+      "cs": 64,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

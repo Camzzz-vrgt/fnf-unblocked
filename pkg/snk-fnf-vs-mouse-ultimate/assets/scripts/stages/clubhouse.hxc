@@ -1,0 +1,278 @@
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.play.stage.StageProp;
+
+class ClubhouseStage extends Stage
+{
+  var isWUAS:Bool = false;
+  var crotchBox:FlxSprite;
+  var fish:StageProp;
+  var donaldIdleSuffix:String = '';
+  var goofyIdleSuffix:String = '';
+  var lockedStageProps:Array<String> = [];
+
+  function new()
+  {
+    super('clubhouse');
+  }
+
+  override function buildStage():Void
+  {
+    super.buildStage();
+
+    filterSongProps();
+    setupStageAnimations();
+    setupFish();
+    setupCrotchBox();
+  }
+
+  override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (fish != null)
+    {
+      var time:Float = Conductor.instance.songPosition / 5000;
+      fish.x = -400 + Math.cos(time) * 10;
+      fish.y = -840 + Math.sin(time * 2) * 3;
+      fish.angle = Math.sin(time * 1.5) * 3;
+    }
+
+    // Codename used this click box to jump to Dussy. The V-Slice song reload path
+    // is different, so the box is kept inert until we wire that flow deliberately.
+  }
+
+  override function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+
+    var step:Int = event.step;
+    if (step % 8 == 7 || (step < 0 && step % 8 == -1))
+    {
+      if (songId() == 'welcome' && (step == 447 || step == 959 || step >= 1102)) return;
+
+      playStageIdle('goofy', 'idle' + (isWUAS ? '-alt' : ''), step > 0);
+      if (songId() != 'vehement') playStageIdle('donald', 'idle' + (isWUAS ? '-alt' : ''), step > 0);
+    }
+  }
+
+  override function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (event.beat % 2 == 0 && songId() == 'vehement')
+    {
+      playStageIdle('donald', 'idle-veh', event.step > 0);
+    }
+
+    if (songId() == 'welcome')
+    {
+      switch (event.beat)
+      {
+        case 112, 176:
+          applyWelcomeCharacterTint(0xFF737BB0);
+        case 144:
+          applyWelcomeCharacterTint(0xFF808080);
+        case 208:
+          clearShadow();
+        default:
+      }
+    }
+  }
+
+  override function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+
+    isWUAS = false;
+    donaldIdleSuffix = '';
+    goofyIdleSuffix = '';
+    lockedStageProps = [];
+    filterSongProps();
+    // Vehement replaces the background Donald prop with its scripted Donald
+    // character. Keep the prop hidden after the stage-level reset.
+    if (songId() == 'vehement') setPropVisible('donald', false);
+    setupStageAnimations();
+    clearShadow();
+  }
+
+  function setupStageAnimations():Void
+  {
+    lockedStageProps = [];
+    playStageIdle('donald', songId() == 'vehement' ? 'idle-veh' : 'idle', true);
+    playStageIdle('goofy', 'idle' + (isWUAS ? '-alt' : ''), true);
+  }
+
+  function filterSongProps():Void
+  {
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fish', 'fg', 'fg2'])
+      setPropVisible(name, true);
+
+    for (name in ['V-outside', 'V-window', 'V-bg', 'V-bgStuff', 'V-fg', 'V-fgA', 'V-lightBulb', 'V-fg3', 'V-fg2'])
+      setPropVisible(name, false);
+
+    var showBackgroundCharacters:Bool = songId() != 'dussy';
+    setPropVisible('donald', showBackgroundCharacters);
+    setPropVisible('goofy', showBackgroundCharacters);
+  }
+
+  public function setVehementPhase(active:Bool):Void
+  {
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fish', 'fg', 'fg2'])
+      setPropVisible(name, !active);
+
+    for (name in ['V-outside', 'V-window', 'V-bg', 'V-bgStuff', 'V-fg', 'V-fg3', 'V-fg2'])
+      setPropVisible(name, active);
+
+    setPropVisible('V-fgA', false);
+    setPropVisible('V-lightBulb', false);
+  }
+
+  public function setVehementBulb(active:Bool):Void
+  {
+    setPropVisible('V-fg', !active);
+    setPropVisible('V-fgA', active);
+    setPropVisible('V-lightBulb', active);
+
+    var bulb:StageProp = getNamedProp('V-lightBulb');
+    if (bulb != null && active)
+    {
+      bulb.origin.set(bulb.frameWidth / 2, 0);
+      bulb.offset.set(0, 0);
+    }
+  }
+
+  function setupFish():Void
+  {
+    fish = getNamedProp('fish');
+    if (fish != null && fish.frame != null)
+    {
+      fish.origin.set(fish.frameWidth / 2, fish.frameHeight / 2);
+    }
+  }
+
+  function setupCrotchBox():Void
+  {
+    if (songId() != 'welcome') return;
+
+    var donald:StageProp = getNamedProp('donald');
+    if (donald == null) return;
+
+    crotchBox = new FlxSprite().makeGraphic(50, 50, FlxColor.RED);
+    crotchBox.setPosition(donald.x + 260, donald.y + 600);
+    crotchBox.alpha = 0;
+    crotchBox.visible = false;
+    add(crotchBox);
+  }
+
+  // The original used an optional DropShadow overlay here. Applying a shader to
+  // all three Animate Atlas characters for 96 beats is prohibitively expensive
+  // on mobile/WebGL, so retain the colour cue with the native sprite tint.
+  function applyWelcomeCharacterTint(color:Int):Void
+  {
+    for (sprite in [getBoyfriend(), getGirlfriend(), getDad()])
+    {
+      if (sprite == null) continue;
+      sprite.color = FlxColor.fromInt(color);
+    }
+  }
+
+  function clearShadow():Void
+  {
+    for (sprite in [getBoyfriend(), getGirlfriend(), getDad()])
+    {
+      if (sprite != null)
+      {
+        sprite.color = FlxColor.WHITE;
+      }
+    }
+  }
+
+  function playStageIdle(name:String, anim:String, restart:Bool):Void
+  {
+    if (lockedStageProps.contains(name)) return;
+
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return;
+
+    var targetAnim:String = resolveStageIdle(name, anim);
+    if (prop.animation.exists(targetAnim))
+    {
+      prop.animation.play(targetAnim, restart, false, 0);
+    }
+  }
+
+  public function lockStagePropAnimation(name:String, anim:String):Void
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return;
+
+    if (prop.animation.exists(anim))
+    {
+      if (!lockedStageProps.contains(name)) lockedStageProps.push(name);
+      prop.animation.play(anim, true, false, 0);
+    }
+  }
+
+  public function unlockStagePropAnimation(name:String):Void
+  {
+    lockedStageProps.remove(name);
+  }
+
+  public function setDonaldIdleSuffix(suffix:String):Void
+  {
+    donaldIdleSuffix = suffix;
+    playStageIdle('donald', 'idle', true);
+  }
+
+  public function setGoofyIdleSuffix(suffix:String):Void
+  {
+    goofyIdleSuffix = suffix;
+    playStageIdle('goofy', 'idle', true);
+  }
+
+  function resolveStageIdle(name:String, anim:String):String
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return anim;
+
+    var suffix:String = '';
+    switch (name)
+    {
+      case 'donald':
+        suffix = donaldIdleSuffix;
+      case 'goofy':
+        suffix = goofyIdleSuffix;
+      default:
+        suffix = '';
+    }
+    if (suffix == null || suffix == '' || anim.indexOf('idle') != 0) return anim;
+
+    var candidate:String = anim + suffix;
+    if (prop.animation.exists(candidate)) return candidate;
+
+    candidate = 'idle' + suffix;
+    if (prop.animation.exists(candidate)) return candidate;
+
+    return anim;
+  }
+
+  function setPropVisible(name:String, visible:Bool):Void
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop != null)
+    {
+      prop.visible = visible;
+      prop.active = visible;
+    }
+  }
+
+  function songId():String
+  {
+    return PlayState.instance?.currentSong?.id?.toLowerCase() ?? '';
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "version": "1.0.1",
+  "name": "donald-feral",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Donald/donald-feral",
+  "scale": 0.65,
+  "offsets": [-590, -240],
+  "cameraOffsets": [-75, -25],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "EXPORT THESE ONES/idle_2",
+      "offsets": [-473.85, 3.08]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "EXPORT THESE ONES/Left_2",
+      "offsets": [13.84, -216.92]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "EXPORT THESE ONES/down_2",
+      "offsets": [-70, -175]
+    },
+    {
+      "name": "singUP",
+      "prefix": "EXPORT THESE ONES/up_2",
+      "offsets": [36.15, -22.69]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "EXPORT THESE ONES/right_2",
+      "offsets": [105, -360]
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "1 EXPORT THESE ONES/idle_1",
+      "offsets": [-289.23, -412.31],
+      "looped": true
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "1 EXPORT THESE ONES/left_1",
+      "offsets": [-232.31, -396.92]
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "1 EXPORT THESE ONES/down_1",
+      "offsets": [-272.31, -428.85]
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "1 EXPORT THESE ONES/up_1",
+      "offsets": [-305, -255.77]
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "1 EXPORT THESE ONES/right_1",
+      "offsets": [-289.23, -350.77]
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "donald2",
+    "color": "#4679CC"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

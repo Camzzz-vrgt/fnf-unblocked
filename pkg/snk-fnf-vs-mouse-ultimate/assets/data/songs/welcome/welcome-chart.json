@@ -1,0 +1,9246 @@
+﻿{
+  "version": "2.0.0",
+  "scrollSpeed": {
+    "normal": 2.7
+  },
+  "events": [
+    {
+      "t": 0,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In"
+      }
+    },
+    {
+      "t": 4173.91304347826,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 8347.82608695652,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 12521.7391304348,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 16695.652173913,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 20869.5652173913,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 25043.4782608696,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 29217.3913043478,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 33391.3043478261,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 41739.1304347826,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 50086.9565217391,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 50086.9565217391,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 54260.8695652174,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 57391.3043478261,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.9,
+        "duration": 1.45,
+        "ease": "quartInOut",
+        "mode": "direct",
+        "units": "seconds"
+      }
+    },
+    {
+      "t": 58434.7826086956,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [true, true, 1],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 58434.7826086956,
+      "e": "Change Char Anim Suffix",
+      "v": {
+        "params": [0, "-wuas"],
+        "sourceEvent": "Change Char Anim Suffix"
+      }
+    },
+    {
+      "t": 58434.7826086956,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In"
+      }
+    },
+    {
+      "t": 62608.6956521739,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In"
+      }
+    },
+    {
+      "t": 66782.6086956521,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 68869.5652173913,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 70956.5217391304,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 73043.4782608696,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 74086.9565217391,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.5,
+        "duration": 1.45,
+        "ease": "quartInOut",
+        "mode": "direct",
+        "units": "seconds"
+      }
+    },
+    {
+      "t": 75130.4347826087,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [false, false, 1],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 75130.4347826087,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [false, false, 0],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 75130.4347826087,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 79304.347826087,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 83478.2608695652,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 85565.2173913044,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 87652.1739130435,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 89739.1304347826,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 90782.6086956522,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 1.45,
+        "ease": "quartInOut",
+        "mode": "direct",
+        "units": "seconds"
+      }
+    },
+    {
+      "t": 91826.0869565218,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 100173.913043478,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 108521.739130435,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [true, true, 1],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 108521.739130435,
+      "e": "Change Char Anim Suffix",
+      "v": {
+        "params": [0, "-wuas"],
+        "sourceEvent": "Change Char Anim Suffix"
+      }
+    },
+    {
+      "t": 108521.739130435,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "x": 150,
+        "y": 0,
+        "duration": 4,
+        "ease": "INSTANT"
+      }
+    },
+    {
+      "t": 108521.739130435,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.5,
+        "duration": 4,
+        "ease": "INSTANT",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 123130.434782609,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "x": 0,
+        "y": 0,
+        "duration": 20,
+        "ease": "quartInOut"
+      }
+    },
+    {
+      "t": 123130.434782609,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.9,
+        "duration": 20,
+        "ease": "quartInOut",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 125217.391304348,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [false, false, 1],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 125217.391304348,
+      "e": "Alt Animation Toggle",
+      "v": {
+        "params": [false, false, 0],
+        "sourceEvent": "Alt Animation Toggle"
+      }
+    },
+    {
+      "t": 125217.391304348,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 125217.391304348,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.5,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 129391.304347826,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 133565.217391304,
+      "e": "FocusCamera",
+      "v": 1
+    },
+    {
+      "t": 133565.217391304,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 137739.130434783,
+      "e": "FocusCamera",
+      "v": 0
+    },
+    {
+      "t": 137739.130434783,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 139826.086956522,
+      "e": "FocusCamera",
+      "v": {
+        "char": 4,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In"
+      }
+    },
+    {
+      "t": 139826.086956522,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 140869.565217391,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.5,
+        "duration": 4,
+        "ease": "expoIn",
+        "mode": "direct",
+        "units": "steps"
+      }
+    },
+    {
+      "t": 143739.130434783,
+      "e": "HScript Call",
+      "v": {
+        "params": ["doMickeyAnim", ""],
+        "sourceEvent": "HScript Call"
+      }
+    },
+    {
+      "t": 145043.47826087,
+      "e": "HScript Call",
+      "v": {
+        "params": ["doBrunoAnim", ""],
+        "sourceEvent": "HScript Call"
+      }
+    }
+  ],
+  "notes": {
+    "normal": [
+      {
+        "t": 0,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 434.782608695652,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 782.608695652174,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 956.521739130435,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 1043.47826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 1304.34782608696,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 1565.21739130435,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 1826.08695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 2086.95652173913,
+        "d": 6,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 2521.73913043478,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 2869.5652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 3043.47826086957,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 3391.30434782609,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 3434.78260869565,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 3652.17391304348,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 3913.04347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 4173.91304347826,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 4173.91304347826,
+        "d": 7,
+        "l": 260.869565217391,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 4597.82608695652,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 4956.52173913043,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 5130.4347826087,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 5217.39130434783,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 5478.26086956522,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 5739.13043478261,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 6000,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 6260.86956521739,
+        "d": 2,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 6684.78260869565,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 7043.47826086957,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 7217.39130434783,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 7565.21739130435,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 7608.69565217391,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 7826.08695652174,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 8086.95652173913,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 8086.95652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 8260.86956521739,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 8347.82608695652,
+        "d": 1,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 8347.82608695652,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 8608.69565217391,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 8782.60869565217,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 8869.5652173913,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 9130.4347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 9304.34782608696,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 9565.21739130435,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 9826.08695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 9913.04347826087,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10173.9130434783,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10347.8260869565,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10434.7826086957,
+        "d": 7,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10695.652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10858.6956521739,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 10956.5217391304,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 11217.3913043478,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 11391.3043478261,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 11652.1739130435,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 11913.0434782609,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 12000,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 12260.8695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 12521.7391304348,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 12521.7391304348,
+        "d": 5,
+        "l": 391.304347826086,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 12782.6086956522,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 12956.5217391304,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 13043.4782608696,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 13304.347826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 13478.2608695652,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 13739.1304347826,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14000,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14086.9565217391,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14347.8260869565,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14521.7391304348,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14608.6956521739,
+        "d": 3,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14869.5652173913,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15032.6086956522,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15130.4347826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15391.3043478261,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15565.2173913043,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15826.0869565217,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16086.9565217391,
+        "d": 3,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16434.7826086957,
+        "d": 0,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16695.652173913,
+        "d": 1,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16956.5217391304,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 17130.4347826087,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 17217.3913043478,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 17478.2608695652,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 17652.1739130435,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 17913.0434782609,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 18173.9130434783,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 18434.7826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 18521.7391304348,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 18695.652173913,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 19043.4782608696,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 19217.3913043478,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 19304.347826087,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 19565.2173913043,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 19739.1304347826,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 20000,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 20260.8695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 20521.7391304348,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 20608.6956521739,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 21130.4347826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 21304.347826087,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 21391.3043478261,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 21652.1739130435,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 21826.0869565217,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 22086.9565217391,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 22347.8260869565,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 22608.6956521739,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 22695.652173913,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 22869.5652173913,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 23217.3913043478,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 23478.2608695652,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 23739.1304347826,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 23913.0434782609,
+        "d": 0,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24260.8695652174,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24521.7391304348,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24521.7391304348,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 24782.6086956522,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24782.6086956522,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 25043.4782608696,
+        "d": 3,
+        "l": 652.173913043476,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 25043.4782608696,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 25478.2608695652,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 25826.0869565217,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26000,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26086.9565217391,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26347.8260869565,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26391.3043478261,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26608.6956521739,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 26869.5652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 27304.347826087,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 27391.3043478261,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 27565.2173913044,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 27652.1739130435,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 27913.0434782609,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 28173.9130434783,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 28347.8260869565,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 28608.6956521739,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 28869.5652173913,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 28956.5217391304,
+        "d": 4,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 29217.3913043478,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 29217.3913043478,
+        "d": 7,
+        "l": 652.173913043476,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 29652.1739130435,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30000,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30173.9130434783,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30260.8695652174,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30521.7391304348,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30565.2173913044,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 30782.6086956522,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31043.4782608696,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31478.2608695652,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31478.2608695652,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 31565.2173913044,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31565.2173913044,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 31739.1304347826,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31739.1304347826,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 31826.0869565218,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 31826.0869565218,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 32086.9565217391,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 32086.9565217391,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 32347.8260869565,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 32347.8260869565,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 32521.7391304348,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 32521.7391304348,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 32782.6086956522,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 32782.6086956522,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 33130.4347826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 33130.4347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 33391.3043478261,
+        "d": 1,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 33391.3043478261,
+        "d": 7,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 33913.0434782609,
+        "d": 5,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 34434.7826086957,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 34608.6956521739,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 34695.6521739131,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 34956.5217391304,
+        "d": 7,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 35478.2608695652,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 35739.1304347826,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 36000,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 36260.8695652174,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 36521.7391304348,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 36695.652173913,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 36782.6086956522,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 37043.4782608696,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 37304.347826087,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 37565.2173913044,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 37739.1304347826,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 38000,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 38347.8260869565,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 38608.6956521739,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 38782.6086956522,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 39043.4782608696,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 39391.3043478261,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 39652.1739130435,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 39913.0434782609,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 40173.9130434783,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 40434.7826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 40695.652173913,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 40956.5217391304,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 41130.4347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 41217.3913043478,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 41478.2608695652,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 41739.1304347826,
+        "d": 3,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 41739.1304347826,
+        "d": 5,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 42260.8695652174,
+        "d": 0,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 42782.6086956522,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 42956.5217391304,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43043.4782608696,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43304.347826087,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43565.2173913043,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43826.0869565217,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44086.9565217391,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44347.8260869565,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44608.6956521739,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44869.5652173913,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45043.4782608696,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45130.4347826087,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45391.3043478261,
+        "d": 0,
+        "l": 260.869565217392,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45913.0434782609,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46086.9565217391,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46347.8260869565,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46695.652173913,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46956.5217391304,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47130.4347826087,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47391.3043478261,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47739.1304347826,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 48000,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 48260.8695652174,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 48434.7826086956,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 48521.7391304348,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 48782.6086956522,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49043.4782608696,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49304.347826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49304.347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 49565.2173913043,
+        "d": 3,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49565.2173913043,
+        "d": 4,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 50086.9565217391,
+        "d": 0,
+        "l": 1434.78260869565,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 50086.9565217391,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 50347.8260869565,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 50608.6956521739,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 50869.5652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 51130.4347826087,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 51304.3478260869,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 51565.2173913043,
+        "d": 5,
+        "l": 130.434782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 51913.0434782609,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 52173.9130434782,
+        "d": 2,
+        "l": 1434.78260869565,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 52173.9130434782,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 52434.7826086956,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 52695.652173913,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 52956.5217391304,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 53217.3913043478,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 53391.3043478261,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 53652.1739130435,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 53913.0434782609,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 54000,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 54173.9130434782,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 54260.8695652174,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 54260.8695652174,
+        "d": 5,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 54521.7391304348,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 54782.6086956522,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 55043.4782608696,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 55304.3478260869,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 55304.3478260869,
+        "d": 4,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 55478.2608695652,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 55739.1304347826,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 56000,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 56086.9565217391,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 56260.8695652174,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 56347.8260869565,
+        "d": 1,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 56347.8260869565,
+        "d": 6,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 57391.3043478261,
+        "d": 2,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 57391.3043478261,
+        "d": 5,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 58434.7826086956,
+        "d": 3,
+        "l": 1956.52173913044,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 58434.7826086956,
+        "d": 4,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 58956.5217391304,
+        "d": 6,
+        "l": 391.304347825804,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 59478.2608695652,
+        "d": 7,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 60000,
+        "d": 5,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 60521.7391304348,
+        "d": 7,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 61043.4782608695,
+        "d": 5,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 61565.2173913043,
+        "d": 6,
+        "l": 913.043478260872,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 62608.6956521739,
+        "d": 3,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62608.6956521739,
+        "d": 4,
+        "l": 1956.52173913044,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 63130.4347826087,
+        "d": 1,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 63652.1739130435,
+        "d": 2,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 64173.9130434782,
+        "d": 0,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 64695.652173913,
+        "d": 3,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 65217.3913043478,
+        "d": 1,
+        "l": 391.304347826088,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 65739.1304347826,
+        "d": 0,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 66000,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 66173.9130434783,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 66521.7391304348,
+        "d": 4,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 66782.6086956521,
+        "d": 3,
+        "l": 652.173913043473,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 66782.6086956521,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 67043.4782608695,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 67217.3913043478,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 67565.2173913043,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 67826.0869565217,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 68086.9565217391,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 68260.8695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 68521.7391304348,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 68608.6956521739,
+        "d": 7,
+        "l": 652.173913043473,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 68869.5652173913,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69130.4347826087,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69304.3478260869,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69652.1739130435,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69913.0434782608,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70173.9130434782,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70347.8260869565,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70608.6956521739,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70695.652173913,
+        "d": 3,
+        "l": 652.173913043473,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70956.5217391304,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 71217.3913043478,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 71478.2608695652,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 71739.1304347826,
+        "d": 4,
+        "l": 782.608695652176,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 72000,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 72260.8695652174,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 72521.7391304348,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 72782.6086956522,
+        "d": 3,
+        "l": 1173.91304347826,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74347.8260869565,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74347.8260869565,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 74608.6956521739,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74608.6956521739,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 74869.5652173913,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74869.5652173913,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 75130.4347826087,
+        "d": 2,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 75130.4347826087,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 75652.1739130435,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 76173.9130434782,
+        "d": 1,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 76173.9130434782,
+        "d": 7,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 76695.652173913,
+        "d": 5,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 77217.3913043478,
+        "d": 0,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 77217.3913043478,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 77217.3913043478,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 77478.2608695652,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 77739.1304347826,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78000,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78173.9130434782,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78260.8695652174,
+        "d": 1,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 78434.7826086956,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78521.7391304348,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78695.652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78782.6086956522,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 78956.5217391304,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79043.4782608696,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79217.3913043478,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79304.3478260869,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79304.3478260869,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79304.3478260869,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79565.2173913043,
+        "d": 4,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79565.2173913043,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79739.1304347826,
+        "d": 7,
+        "l": 1043.47826086955,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 79826.0869565217,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80347.8260869565,
+        "d": 3,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80869.5652173913,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81391.3043478261,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81391.3043478261,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 81652.1739130435,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81913.0434782609,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81913.0434782609,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 82173.9130434783,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82347.8260869565,
+        "d": 1,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82434.7826086956,
+        "d": 7,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 82608.6956521739,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82695.652173913,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82956.5217391304,
+        "d": 3,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 83478.2608695652,
+        "d": 2,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 83478.2608695652,
+        "d": 5,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 84521.7391304348,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 84695.652173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 84782.6086956522,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 84782.6086956522,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 84956.5217391304,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 85043.4782608696,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 85217.3913043478,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 85304.347826087,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 85304.347826087,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 85478.2608695652,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 85565.2173913044,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 85565.2173913044,
+        "d": 5,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 86086.9565217391,
+        "d": 1,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 86608.6956521739,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 86608.6956521739,
+        "d": 7,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 86782.6086956522,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 86869.5652173913,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 87043.4782608696,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 87304.347826087,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 87391.3043478261,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 87565.2173913044,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 87652.1739130435,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 87695.6521739131,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 87913.0434782609,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 88173.9130434783,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 88434.7826086957,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 88434.7826086957,
+        "d": 6,
+        "l": 1173.91304347884,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 88565.2173913044,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 88695.6521739131,
+        "d": 1,
+        "l": 260.869565217392,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89086.9565217391,
+        "d": 2,
+        "l": 260.869565217392,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89478.2608695652,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89739.1304347826,
+        "d": 3,
+        "l": 1173.91304347827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90260.8695652174,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 90782.6086956522,
+        "d": 5,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 91043.4782608696,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 91304.347826087,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 91304.347826087,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 91565.2173913044,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 91826.0869565218,
+        "d": 3,
+        "l": 1956.52173913043,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 91826.0869565218,
+        "d": 4,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 92086.9565217392,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 92260.8695652174,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 92521.7391304348,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 92869.5652173913,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 93130.4347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 93304.347826087,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 93565.2173913044,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 93913.0434782609,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94173.9130434783,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94434.7826086957,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94434.7826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94695.6521739131,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94695.6521739131,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 94956.5217391305,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 95217.3913043479,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 95391.3043478261,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 95652.1739130435,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 95739.1304347826,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 95913.0434782609,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96000,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96260.8695652174,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96434.7826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96695.6521739131,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96782.6086956522,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 96956.5217391305,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 97043.4782608696,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 97304.347826087,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 97478.2608695652,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 97739.1304347826,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 97826.0869565218,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 98000,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 98086.9565217392,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 98347.8260869566,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 98608.6956521739,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 98869.5652173913,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 99130.4347826087,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 99391.3043478261,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 99391.3043478261,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 99652.1739130435,
+        "d": 1,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 99652.1739130435,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 99913.0434782609,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 99913.0434782609,
+        "d": 4,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 100173.913043478,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 100173.913043478,
+        "d": 7,
+        "l": 1565.21739130435,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 100434.782608696,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 100608.695652174,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 100869.565217391,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 101217.391304348,
+        "d": 1,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 101478.260869565,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 101652.173913044,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 101913.043478261,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 102260.869565217,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 102521.739130435,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 102782.608695652,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 102782.608695652,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 103043.47826087,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 103043.47826087,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 103304.347826087,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 103565.217391304,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 103739.130434783,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104000,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104086.956521739,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104260.869565217,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104347.826086957,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104608.695652174,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104782.608695652,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105043.47826087,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105130.434782609,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105304.347826087,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105391.304347826,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105652.173913044,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105826.086956522,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106086.956521739,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106173.913043478,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106347.826086957,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106434.782608696,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106434.782608696,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 106695.652173913,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106695.652173913,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 106956.52173913,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106956.52173913,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 107217.391304348,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107217.391304348,
+        "d": 5,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 107739.130434783,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107739.130434783,
+        "d": 7,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 108000,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108000,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 108173.913043478,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108260.869565217,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108260.869565217,
+        "d": 4,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 108434.782608696,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108521.739130435,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 108782.608695652,
+        "d": 7,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 109304.347826087,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 109826.086956522,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 110347.826086957,
+        "d": 7,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 110608.695652174,
+        "d": 1,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110869.565217391,
+        "d": 3,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110869.565217391,
+        "d": 4,
+        "l": 1695.65217391304,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 111391.304347826,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 111913.043478261,
+        "d": 1,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 112434.782608696,
+        "d": 3,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 112695.652173913,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 112956.521739131,
+        "d": 0,
+        "l": 1695.65217391304,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 112956.521739131,
+        "d": 5,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 113478.260869565,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 114000,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 114521.739130435,
+        "d": 4,
+        "l": 1304.34782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 114782.608695652,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 115043.47826087,
+        "d": 1,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 115565.217391304,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 116086.956521739,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 116086.956521739,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 116608.695652174,
+        "d": 0,
+        "l": 1304.34782608696,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 116869.565217392,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 117130.434782609,
+        "d": 7,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 117652.173913044,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 118173.913043479,
+        "d": 6,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 118695.652173914,
+        "d": 7,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 118956.521739131,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119217.391304348,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119217.391304348,
+        "d": 4,
+        "l": 1695.65217391304,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 119739.130434783,
+        "d": 1,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120260.869565217,
+        "d": 2,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120782.608695652,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120782.608695652,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121043.47826087,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 121304.347826087,
+        "d": 3,
+        "l": 1173.91304347826,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121304.347826087,
+        "d": 5,
+        "l": 391.304347826066,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 121826.086956522,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 122347.826086957,
+        "d": 6,
+        "l": 260.869565217392,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 122608.695652174,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 122739.130434783,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 122739.130434783,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 122869.565217391,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 122869.565217391,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 123000,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123043.47826087,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 123130.434782609,
+        "d": 1,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123130.434782609,
+        "d": 6,
+        "l": 652.173913043473,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 123391.304347826,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123521.739130435,
+        "d": 5,
+        "l": 1565.21739130435,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 123652.173913044,
+        "d": 0,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123913.043478261,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124173.913043478,
+        "d": 2,
+        "l": 913.043478260865,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 125217.391304348,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 125652.173913044,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 126000,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 126173.913043478,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 126260.869565217,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 126521.739130435,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 126782.608695652,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 127043.47826087,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 127304.347826087,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 127739.130434783,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 128086.956521739,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 128260.869565217,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 128608.695652174,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 128652.173913043,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 128869.565217391,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 129130.434782609,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 129391.304347826,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 129391.304347826,
+        "d": 7,
+        "l": 260.869565217392,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 129826.086956522,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 130173.913043478,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 130347.826086957,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 130434.782608696,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 130695.652173913,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 130956.52173913,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 131217.391304348,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 131478.260869565,
+        "d": 1,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 131913.043478261,
+        "d": 3,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 132260.869565217,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 132434.782608696,
+        "d": 1,
+        "l": 218,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 132782.608695652,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 133043.47826087,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 133304.347826087,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 133565.217391304,
+        "d": 0,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 133565.217391304,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 133956.521739131,
+        "d": 7,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 134347.826086957,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 134608.695652174,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 134869.565217391,
+        "d": 5,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 135130.434782609,
+        "d": 4,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 135652.173913044,
+        "d": 6,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 136043.47826087,
+        "d": 7,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 136608.695652174,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 136869.565217391,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 136956.521739131,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 137130.434782609,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 137217.391304348,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 137391.304347826,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 137478.260869565,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 137739.130434783,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 137739.130434783,
+        "d": 4,
+        "l": 652.173913043487,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 138130.434782609,
+        "d": 1,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 138521.739130435,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 138782.608695652,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 139043.47826087,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 139304.347826087,
+        "d": 1,
+        "l": 391.304347826081,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 139826.086956522,
+        "d": 3,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 139826.086956522,
+        "d": 4,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 140217.391304348,
+        "d": 1,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 140217.391304348,
+        "d": 5,
+        "l": 260.869565217377,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 140608.695652174,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 140608.695652174,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 140782.608695652,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 140782.608695652,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 140869.565217391,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 140869.565217391,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 141130.434782609,
+        "d": 2,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 141130.434782609,
+        "d": 6,
+        "l": 130.434782608703,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      },
+      {
+        "t": 141391.304347826,
+        "d": 1,
+        "l": 1565.21739130435,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 141391.304347826,
+        "d": 5,
+        "l": 1565.21739130435,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mickey"
+          }
+        ]
+      }
+    ]
+  },
+  "generatedBy": "Snokido Converter"
+}

@@ -1,0 +1,72 @@
+{
+  "version": "1.0.1",
+  "name": "mickey-feral",
+  "renderType": "multisparrow",
+  "assetPath": "characters/Mickey/Phase3/1",
+  "scale": 0.9,
+  "offsets": [-590, -180],
+  "cameraOffsets": [50, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle0",
+      "frameRate": 12,
+      "looped": true,
+      "assetPath": "characters/Mickey/Phase3/1"
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "idle alt",
+      "offsets": [-150, -395],
+      "looped": true,
+      "assetPath": "characters/Mickey/Phase3/3"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-5, -20],
+      "frameRate": 12,
+      "assetPath": "characters/Mickey/Phase3/1"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-65, -30],
+      "frameRate": 12,
+      "assetPath": "characters/Mickey/Phase3/1"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [65, -25],
+      "frameRate": 12,
+      "assetPath": "characters/Mickey/Phase3/1"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-65, -25],
+      "frameRate": 12,
+      "assetPath": "characters/Mickey/Phase3/1"
+    },
+    {
+      "name": "laugh",
+      "prefix": "mickeyLaugh",
+      "offsets": [-200, -140],
+      "assetPath": "characters/Mickey/Phase3/2"
+    },
+    {
+      "name": "bois",
+      "prefix": "Mick",
+      "offsets": [-112, 298],
+      "assetPath": "characters/Mickey/Phase3/4"
+    }
+  ],
+  "healthIcon": {
+    "id": "mickey3",
+    "color": "#FF0000"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

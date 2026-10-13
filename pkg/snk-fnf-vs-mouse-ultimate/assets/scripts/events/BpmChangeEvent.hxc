@@ -1,0 +1,15 @@
+import funkin.play.event.ScriptedSongEvent;
+
+class BpmChangeEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('BPM Change', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    // BPM changes are represented in song metadata timeChanges.
+    return;
+  }
+}

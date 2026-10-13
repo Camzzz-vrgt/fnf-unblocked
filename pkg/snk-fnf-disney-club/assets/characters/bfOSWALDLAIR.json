@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mickey right"
+		},
+		{
+			"offsets": [
+				26,
+				-29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mickey down"
+		},
+		{
+			"offsets": [
+				74,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mickey up"
+		},
+		{
+			"offsets": [
+				108,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mickey left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mickey mickey"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfOSWALDLAIR",
+	"position": [
+		-500,
+		-180
+	],
+	"healthicon": "icon-bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		15,
+		195,
+		255
+	],
+	"camera_position": [
+		620,
+		270
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.5
+}

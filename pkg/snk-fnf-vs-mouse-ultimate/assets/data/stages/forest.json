@@ -1,0 +1,64 @@
+﻿{
+  "version": "1.0.0",
+  "cameraZoom": 0.7,
+  "props": [
+    {
+      "zIndex": 10,
+      "danceEvery": 0,
+      "position": [1200, 86],
+      "scale": 5.5,
+      "name": "forest",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/forest/forest",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 400,
+      "danceEvery": 0,
+      "position": [-334, 734],
+      "scale": [2, 2],
+      "name": "bush",
+      "isPixel": false,
+      "scroll": [1.3, 1.3],
+      "assetPath": "stages/forest/bush",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 30,
+      "danceEvery": 0,
+      "position": [2840, 771],
+      "scale": 2.33,
+      "name": "bush",
+      "isPixel": false,
+      "scroll": [1.3, 1.3],
+      "assetPath": "stages/forest/bush",
+      "updateHitbox": false
+    }
+  ],
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1677, 130],
+      "scale": 1,
+      "cameraOffsets": [-100, -100],
+      "positionMode": "topLeft"
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [204, 180],
+      "scale": 1,
+      "cameraOffsets": [100, -100],
+      "positionMode": "topLeft"
+    },
+    "gf": {
+      "zIndex": 100,
+      "position": [1238, 83],
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "positionMode": "topLeft"
+    }
+  },
+  "name": "forest",
+  "directory": "shared"
+}

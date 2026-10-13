@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Bruno",
+  "assetPath": "dialogue/characters/bruno",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 0.55,
+  "offsets": [280, -30],
+  "animations": [
+    {
+      "name": "smug",
+      "prefix": "sprite_1",
+      "frameRate": 24
+    },
+    {
+      "name": "wtf",
+      "prefix": "sprite_2",
+      "frameRate": 24
+    },
+    {
+      "name": "hmm",
+      "prefix": "sprite_3",
+      "frameRate": 24
+    }
+  ]
+}

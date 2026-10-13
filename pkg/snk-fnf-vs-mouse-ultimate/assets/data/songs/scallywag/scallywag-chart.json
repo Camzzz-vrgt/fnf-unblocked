@@ -1,0 +1,9442 @@
+﻿{
+  "version": "2.0.0",
+  "scrollSpeed": {
+    "normal": 1.8
+  },
+  "events": [
+    {
+      "t": 0,
+      "e": "Change Char Anim Suffix",
+      "v": {
+        "params": [2, "-mad1"],
+        "sourceEvent": "Change Char Anim Suffix"
+      }
+    },
+    {
+      "t": 0,
+      "e": "FocusCamera",
+      "v": {
+        "char": -1,
+        "x": 100,
+        "y": -900,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Position",
+        "tween": false,
+        "snap": true,
+        "isOffset": true
+      }
+    },
+    {
+      "t": 0,
+      "e": "Time Signature Change",
+      "v": {
+        "params": [1, 8, false],
+        "sourceEvent": "Time Signature Change"
+      }
+    },
+    {
+      "t": 0,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 1.15,
+        "duration": 8,
+        "ease": "cubeInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 300,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 300,
+      "e": "Time Signature Change",
+      "v": {
+        "params": [4, 4, false],
+        "sourceEvent": "Time Signature Change"
+      }
+    },
+    {
+      "t": 300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 1,
+        "duration": 32,
+        "ease": "linear",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 5100,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 32,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 5100,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 24,
+        "ease": "cubeInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 8700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 24,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 9900,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 12300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 12900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.79,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 13500,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 14100,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 20,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 14400,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 20,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 18900,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 12,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 18900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 12,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 19500,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 20700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 21900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 23100,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 12,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 23100,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 16,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 25500,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 26700,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 26700,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "pu",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 26700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.9,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 27000,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 27000,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 27300,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 27600,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 27900,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 27900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 10,
+        "ease": "cubeInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 28200,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singLEFT-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 28500,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 29100,
+      "e": "Camera Modulo Change",
+      "v": {
+        "params": [1, 2, "BEAT", 0],
+        "sourceEvent": "Camera Modulo Change"
+      }
+    },
+    {
+      "t": 29100,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 30300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 31500,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 32700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 33600,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 12,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 33900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 35100,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 36300,
+      "e": "FocusCamera",
+      "v": {
+        "char": -1,
+        "x": -200,
+        "y": -100,
+        "duration": 10,
+        "ease": "cube",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Position",
+        "tween": true,
+        "snap": false,
+        "isOffset": true
+      }
+    },
+    {
+      "t": 36300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 10,
+        "ease": "cubeInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 37800,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 37800,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singLEFT-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 37800,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.9,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 38100,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singRIGHT-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 38700,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 38700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 39900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.72,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 41100,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 41400,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 41700,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 42300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.82,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 42600,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singDOWN-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 42900,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 43200,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "donald",
+        "anim": "eyeroll1",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 43500,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 43500,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 16,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 44850,
+      "e": "Change Char Anim Suffix",
+      "v": {
+        "params": [2, "-mad3"],
+        "sourceEvent": "Change Char Anim Suffix"
+      }
+    },
+    {
+      "t": 45900,
+      "e": "Camera Modulo Change",
+      "v": {
+        "params": [4, 4, "BEAT", 0],
+        "sourceEvent": "Camera Modulo Change"
+      }
+    },
+    {
+      "t": 45900,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 45900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.73,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 47100,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 47100,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.76,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 48300,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 48300,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 48300,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.79,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 49500,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 49500,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 49500,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.82,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 50700,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 50700,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 50700,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.85,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 51900,
+      "e": "BPM Change",
+      "v": {
+        "params": [90],
+        "sourceEvent": "BPM Change"
+      }
+    },
+    {
+      "t": 51900,
+      "e": "FocusCamera",
+      "v": {
+        "char": -1,
+        "x": 300,
+        "y": -200,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Position",
+        "tween": true,
+        "snap": false,
+        "isOffset": true
+      }
+    },
+    {
+      "t": 51900,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 51900,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 8,
+        "ease": "expoIn",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 53233.3333333333,
+      "e": "BPM Change",
+      "v": {
+        "params": [100],
+        "sourceEvent": "BPM Change"
+      }
+    },
+    {
+      "t": 55033.3333333333,
+      "e": "Scroll Speed Change",
+      "v": {
+        "params": [true, 2.4, 16, "expo", "Out", false],
+        "sourceEvent": "Scroll Speed Change"
+      }
+    },
+    {
+      "t": 55633.3333333333,
+      "e": "BPM Change",
+      "v": {
+        "params": [141],
+        "sourceEvent": "BPM Change"
+      }
+    },
+    {
+      "t": 56271.6312056737,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 56271.6312056737,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.82,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 56909.9290780142,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 56909.9290780142,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 58186.524822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.67,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 58612.0567375886,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.69,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 59463.1205673759,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.71,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 59888.6524822695,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 10,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 60314.1843971631,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.73,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 61590.780141844,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 62016.3120567376,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.73,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 62867.3758865248,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 63612.0567375886,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 12,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 63718.439716312,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 63718.439716312,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 64569.5035460993,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 65207.8014184397,
+      "e": "FocusCamera",
+      "v": {
+        "char": -1,
+        "x": 300,
+        "y": 0,
+        "duration": 8,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Position",
+        "tween": true,
+        "snap": false,
+        "isOffset": true
+      }
+    },
+    {
+      "t": 65207.8014184397,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 16,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 67122.695035461,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 67122.695035461,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.55,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 67548.2269503546,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 67548.2269503546,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.57,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 67973.7588652482,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 67973.7588652482,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.59,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 68399.2907801418,
+      "e": "FocusCamera",
+      "v": {
+        "char": 2,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 2,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 68399.2907801418,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.62,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 68824.8226950354,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 68824.8226950354,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 69250.3546099291,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 69250.3546099291,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 69675.8865248227,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 69675.8865248227,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 70101.4184397163,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 70101.4184397163,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 70526.9503546099,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 70526.9503546099,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 70526.9503546099,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 71378.0141843972,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 71378.0141843972,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 72229.0780141844,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 73080.1418439716,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.69,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 73931.2056737588,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 74782.2695035461,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 74782.2695035461,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.72,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 75633.3333333333,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.69,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 76484.3971631205,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.67,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 77335.4609929078,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 77335.4609929078,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 77335.4609929078,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 77760.9929078014,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 78186.524822695,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 78186.524822695,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 78186.524822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 78612.0567375886,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 79037.5886524823,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 6,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 79037.5886524823,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 79037.5886524823,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 6,
+        "ease": "smootherStepOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 79675.8865248227,
+      "e": "FocusCamera",
+      "v": {
+        "char": -1,
+        "x": 300,
+        "y": 0,
+        "duration": 8,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Position",
+        "tween": true,
+        "snap": false,
+        "isOffset": true
+      }
+    },
+    {
+      "t": 79675.8865248227,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 10,
+        "ease": "smootherStepInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 79888.6524822695,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.25", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 80739.7163120567,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 80739.7163120567,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 81590.7801418439,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 82229.0780141844,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.55,
+        "duration": 9,
+        "ease": "cubeOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 83186.524822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 9,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 83718.439716312,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "donald",
+        "anim": "eyeroll2",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 84143.9716312057,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 8,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 84143.9716312057,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 84250.3546099291,
+      "e": "Change Char Anim Suffix",
+      "v": {
+        "params": [2, "-mad2"],
+        "sourceEvent": "Change Char Anim Suffix"
+      }
+    },
+    {
+      "t": 84569.5035460993,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 85846.0992907801,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.72,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 86590.7801418439,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.74,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 87016.3120567376,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.76,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 87548.2269503546,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 8,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 87973.7588652482,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 89250.3546099291,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.72,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 89995.0354609929,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.74,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 90420.5673758865,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.76,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 90952.4822695035,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 8,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 90952.4822695035,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 91378.0141843972,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 92654.609929078,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.72,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 93399.2907801418,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.74,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 93824.8226950354,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.76,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 94356.7375886525,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 8,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 94782.2695035461,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 95846.0992907801,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 8,
+        "ease": "CLASSIC",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 96058.8652482269,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 96803.5460992908,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.67,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 97229.0780141844,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 97760.9929078014,
+      "e": "Camera Modulo Change",
+      "v": {
+        "params": [1, 2, "BEAT", 0],
+        "sourceEvent": "Camera Modulo Change"
+      }
+    },
+    {
+      "t": 97760.9929078014,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 97760.9929078014,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 98186.524822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.62,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 98612.0567375886,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 99037.5886524823,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 99463.1205673759,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 99888.6524822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 100314.184397163,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 101165.24822695,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 101590.780141844,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 102016.312056738,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 102441.843971631,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 102867.375886525,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 103292.907801418,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 103718.439716312,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 8,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 104569.503546099,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 104569.503546099,
+      "e": "lightflash",
+      "v": {
+        "params": ["0.5", "1"],
+        "sourceEvent": "lightflash"
+      }
+    },
+    {
+      "t": 104569.503546099,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 104995.035460993,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.62,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 105420.567375887,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 105846.09929078,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 106271.631205674,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 106697.163120567,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 107122.695035461,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 107973.758865248,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 108399.290780142,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.64,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 108824.822695035,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 109250.354609929,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 109675.886524823,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.66,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 110101.418439716,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.68,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 110526.95035461,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.6,
+        "duration": 8,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 111378.014184397,
+      "e": "Camera Modulo Change",
+      "v": {
+        "params": [4, 1, "BEAT", 0],
+        "sourceEvent": "Camera Modulo Change"
+      }
+    },
+    {
+      "t": 111378.014184397,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.65,
+        "duration": 16,
+        "ease": "expoInOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 113080.141843972,
+      "e": "BPM Change",
+      "v": {
+        "params": [105],
+        "sourceEvent": "BPM Change"
+      }
+    },
+    {
+      "t": 114794.427558257,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 8,
+        "ease": "smootherStep",
+        "easeDir": "InOut",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": true,
+        "snap": false
+      }
+    },
+    {
+      "t": 115365.856129686,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 8,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 118508.713272543,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 118508.713272543,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.7,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 121937.284701114,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 121937.284701114,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 123651.5704154,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 123651.5704154,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 125365.856129686,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 125365.856129686,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 127080.141843971,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 127080.141843971,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.85,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 128222.998986829,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.8,
+        "duration": 6,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 129080.141843971,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 0,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 129080.141843971,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.85,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 129365.856129686,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 129651.5704154,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 130222.998986829,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singDOWN-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 130508.713272543,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singDOWN-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 131080.141843971,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 131365.856129686,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singUP-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 131937.284701114,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singDOWN-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 132222.998986829,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "opponent",
+        "anim": "singDOWN-alt",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 132508.713272543,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "duration": 4,
+        "ease": "CLASSIC",
+        "easeDir": "In",
+        "sourceEvent": "Camera Movement",
+        "codenameTarget": 1,
+        "tween": false,
+        "snap": true
+      }
+    },
+    {
+      "t": 132508.713272543,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "boyfriend",
+        "anim": "idle-dance",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 132508.713272543,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.85,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 133365.856129686,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "boyfriend",
+        "anim": "idle",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 134222.998986829,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "boyfriend",
+        "anim": "idle-dance",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 135080.141843971,
+      "e": "PlayAnimation",
+      "v": {
+        "target": "boyfriend",
+        "anim": "idle",
+        "force": true,
+        "sourceEvent": "Play Animation"
+      }
+    },
+    {
+      "t": 135937.284701114,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 136794.427558257,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 137651.5704154,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 138508.713272543,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 139365.856129686,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 140222.998986829,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 141080.141843971,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.75,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    },
+    {
+      "t": 141937.284701114,
+      "e": "ZoomCamera",
+      "v": {
+        "zoom": 0.77,
+        "duration": 4,
+        "ease": "expoOut",
+        "mode": "direct",
+        "units": "steps",
+        "sourceEvent": "Camera Zoom"
+      }
+    }
+  ],
+  "notes": {
+    "normal": [
+      {
+        "t": 9600,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 9750,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 9900,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 10200,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 10350,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 10500,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 10800,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 11100,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 11400,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 11700,
+        "d": 6,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 12300,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 12450,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 12600,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 12900,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 13050,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 13200,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 13350,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 13500,
+        "d": 6,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 14400,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14550,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 14700,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15000,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15150,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15300,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15600,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 15900,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16200,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 16500,
+        "d": 2,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 17100,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 17250,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 17400,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 17700,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 17850,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 18000,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 18150,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 18300,
+        "d": 2,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 19200,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 19350,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 19500,
+        "d": 4,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 20400,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 20550,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 20700,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 21000,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 21300,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 21600,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 21900,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 22050,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 22200,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 22350,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 22500,
+        "d": 5,
+        "l": 1050,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 24000,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24150,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 24300,
+        "d": 0,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 25200,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 25350,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 25500,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 25800,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 26100,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 26400,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 26700,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 27600,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 27900,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 28800,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 28950,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 29100,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 29400,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 29550,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 29700,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 30000,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 30300,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 30600,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 30900,
+        "d": 6,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 31500,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 31800,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 31950,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 32100,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 32400,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 32550,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 32700,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 32850,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 33000,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 33300,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 33750,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 33900,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 34050,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 34200,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 34500,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 34800,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 34950,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 35100,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 35400,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 35700,
+        "d": 2,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 36300,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 36300,
+        "d": 4,
+        "l": 150,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 36600,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 36600,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 36900,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 36900,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 37200,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 37200,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 37500,
+        "d": 1,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 37500,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 38400,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 38550,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 38700,
+        "d": 5,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 39300,
+        "d": 7,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 39900,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 40050,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 40200,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 40500,
+        "d": 7,
+        "l": 150,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 40800,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 41100,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 42000,
+        "d": 4,
+        "l": 150,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 42300,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 43200,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43350,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 43500,
+        "d": 1,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44100,
+        "d": 3,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 44700,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45000,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45300,
+        "d": 3,
+        "l": 150,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45600,
+        "d": 0,
+        "l": 150,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 45900,
+        "d": 2,
+        "l": 750,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46875,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 46950,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47025,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47100,
+        "d": 0,
+        "l": 1050,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 47700,
+        "d": 5,
+        "l": 450,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 48300,
+        "d": 4,
+        "l": 750,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 49200,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49200,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 49350,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49350,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 49500,
+        "d": 2,
+        "l": 750,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 49500,
+        "d": 6,
+        "l": 750,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 50400,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 50550,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 50700,
+        "d": 5,
+        "l": 1050,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 51900,
+        "d": 0,
+        "l": 1166.66666666666,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 51900,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 51900,
+        "d": 7,
+        "l": 1166.66666666666,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 56342.5531914894,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 56413.475177305,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 56484.3971631206,
+        "d": 4,
+        "l": 106.382978723406,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 56768.085106383,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 56909.9290780142,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 57335.4609929078,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 57760.9929078014,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58044.6808510638,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58186.524822695,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58328.3687943262,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58399.2907801418,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58470.2127659574,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58612.0567375887,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 58895.7446808511,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 59037.5886524823,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 59321.2765957447,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 59463.1205673759,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 59746.8085106383,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 59888.6524822695,
+        "d": 2,
+        "l": 212.765957446813,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 59888.6524822695,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 60030.4964539007,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 60172.3404255319,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 60172.3404255319,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 60314.1843971631,
+        "d": 1,
+        "l": 106.382978723406,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 60314.1843971631,
+        "d": 6,
+        "l": 744.680851063829,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 60597.8723404255,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 60739.7163120567,
+        "d": 1,
+        "l": 106.382978723406,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61023.4042553191,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61165.2482269503,
+        "d": 1,
+        "l": 106.382978723406,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61448.9361702127,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61590.780141844,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61732.6241134752,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 61874.4680851064,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62016.3120567376,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62158.1560283688,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62300,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62441.8439716312,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62583.6879432624,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62725.5319148936,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 62867.3758865248,
+        "d": 2,
+        "l": 319.148936170219,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 63292.9078014184,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 63434.7517730496,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 63576.5957446808,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 63718.439716312,
+        "d": 0,
+        "l": 744.680851063829,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 64143.9716312057,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 64214.8936170213,
+        "d": 6,
+        "l": 212.765957446805,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 64569.5035460993,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 64640.4255319149,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 64853.1914893617,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 65136.8794326241,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 65278.7234042553,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 65420.5673758865,
+        "d": 2,
+        "l": 212.765957446791,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 65420.5673758865,
+        "d": 5,
+        "l": 212.765957446791,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 65704.2553191489,
+        "d": 1,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 65704.2553191489,
+        "d": 6,
+        "l": 212.765957446798,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 65987.9432624113,
+        "d": 0,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 65987.9432624113,
+        "d": 7,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 66271.6312056737,
+        "d": 1,
+        "l": 319.148936170241,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 66271.6312056738,
+        "d": 5,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 66980.8510638298,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 66980.8510638298,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67051.7730496454,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 67051.7730496454,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67122.695035461,
+        "d": 2,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 67122.695035461,
+        "d": 6,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67406.3829787234,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67477.304964539,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67548.2269503546,
+        "d": 3,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 67548.2269503546,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67690.0709219858,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67831.914893617,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 67973.7588652482,
+        "d": 2,
+        "l": 106.382978723443,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 67973.7588652482,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 68115.6028368794,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 68257.4468085106,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 68328.3687943262,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 68399.2907801418,
+        "d": 1,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 68399.2907801418,
+        "d": 5,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 68824.8226950354,
+        "d": 2,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 68824.8226950355,
+        "d": 4,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 69250.3546099291,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69250.3546099291,
+        "d": 3,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69250.3546099291,
+        "d": 6,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 69250.3546099291,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 69675.8865248227,
+        "d": 1,
+        "l": 106.38297872337,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 69675.8865248227,
+        "d": 5,
+        "l": 106.38297872337,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 70101.4184397163,
+        "d": 2,
+        "l": 106.382978723428,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 70526.9503546099,
+        "d": 5,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 70810.6382978723,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 71094.3262411347,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 71236.1702127659,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 71378.0141843972,
+        "d": 2,
+        "l": 212.765957446769,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 71378.0141843972,
+        "d": 7,
+        "l": 212.765957446769,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 71661.7021276595,
+        "d": 1,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 71661.7021276595,
+        "d": 5,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 71945.390070922,
+        "d": 3,
+        "l": 106.38297872337,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 71945.390070922,
+        "d": 4,
+        "l": 106.38297872337,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 72229.0780141844,
+        "d": 2,
+        "l": 212.765957446856,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 72229.0780141844,
+        "d": 6,
+        "l": 957.446808510678,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 72512.7659574468,
+        "d": 0,
+        "l": 212.765957446842,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 72796.4539007092,
+        "d": 1,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 73080.1418439716,
+        "d": 3,
+        "l": 425.531914893611,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 73647.5177304964,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 73789.3617021276,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 73931.2056737588,
+        "d": 2,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74214.8936170213,
+        "d": 1,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74498.5815602837,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74640.4255319149,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74782.2695035461,
+        "d": 2,
+        "l": 212.765957446842,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 74782.2695035461,
+        "d": 5,
+        "l": 212.765957446842,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 75065.9574468085,
+        "d": 0,
+        "l": 212.765957446783,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 75065.9574468085,
+        "d": 6,
+        "l": 212.765957446783,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 75349.6453900709,
+        "d": 3,
+        "l": 106.382978723443,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 75349.6453900709,
+        "d": 7,
+        "l": 106.382978723443,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 75633.3333333333,
+        "d": 1,
+        "l": 1170.21276595746,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 75633.3333333333,
+        "d": 4,
+        "l": 212.765957446813,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 75917.0212765957,
+        "d": 6,
+        "l": 212.765957446813,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 76200.7092198581,
+        "d": 7,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 76484.3971631205,
+        "d": 5,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 76909.9290780142,
+        "d": 6,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 77335.4609929078,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 77760.9929078014,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 78186.524822695,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 78612.0567375886,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79037.5886524823,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79179.4326241135,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79321.2765957447,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79463.1205673759,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79463.1205673759,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79604.9645390071,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79604.9645390071,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79746.8085106383,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79746.8085106383,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 79888.6524822695,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 79888.6524822695,
+        "d": 5,
+        "l": 531.914893617024,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 80030.4964539007,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80172.3404255319,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80314.1843971631,
+        "d": 0,
+        "l": 319.148936170182,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80314.1843971631,
+        "d": 6,
+        "l": 319.148936170182,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 80739.7163120567,
+        "d": 2,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 80739.7163120567,
+        "d": 5,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 81165.2482269503,
+        "d": 2,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81165.2482269503,
+        "d": 5,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 81590.7801418439,
+        "d": 3,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 81590.7801418439,
+        "d": 4,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 82016.3120567376,
+        "d": 1,
+        "l": 212.765957446769,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82016.3120567376,
+        "d": 6,
+        "l": 212.765957446769,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 82300,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82300,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 82370.9219858156,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82370.9219858156,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 82441.8439716312,
+        "d": 2,
+        "l": 638.297872340452,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 82441.8439716312,
+        "d": 4,
+        "l": 638.297872340452,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 83151.0638297872,
+        "d": 3,
+        "l": 851.063829787265,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 83151.0638297872,
+        "d": 6,
+        "l": 851.063829787265,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 84569.5035460993,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 84569.5035460993,
+        "d": 5,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 84995.0354609929,
+        "d": 6,
+        "l": 212.765957446798,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 85704.2553191489,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 85775.1773049645,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 85846.0992907801,
+        "d": 7,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 86555.3191489361,
+        "d": 6,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 86980.8510638298,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 86980.8510638298,
+        "d": 5,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 87973.7588652482,
+        "d": 0,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 88399.2907801418,
+        "d": 1,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 88399.2907801418,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89108.5106382979,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89179.4326241135,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89250.3546099291,
+        "d": 3,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89534.0425531915,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89675.8865248227,
+        "d": 0,
+        "l": 212.765957446798,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 89959.5744680851,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90101.4184397163,
+        "d": 3,
+        "l": 212.765957446813,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90385.1063829787,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90526.9503546099,
+        "d": 2,
+        "l": 212.765957446856,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90810.6382978723,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 90810.6382978723,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 91378.0141843972,
+        "d": 6,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 91378.0141843972,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 91803.5460992908,
+        "d": 5,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 92512.7659574468,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 92583.6879432624,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 92654.609929078,
+        "d": 7,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 93363.829787234,
+        "d": 5,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 93789.3617021276,
+        "d": 6,
+        "l": 212.765957446783,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 93789.3617021276,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 94782.2695035461,
+        "d": 1,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 95207.8014184397,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 95207.8014184397,
+        "d": 3,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 95917.0212765957,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 95987.9432624113,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 96058.8652482269,
+        "d": 0,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 96768.085106383,
+        "d": 1,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 97193.6170212766,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 97335.4609929078,
+        "d": 4,
+        "l": 212.765957446798,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 97619.1489361702,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 97760.9929078014,
+        "d": 5,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 98044.6808510638,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 98186.524822695,
+        "d": 4,
+        "l": 106.382978723428,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 98470.2127659574,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 98612.0567375886,
+        "d": 5,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 98895.744680851,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 99037.5886524823,
+        "d": 7,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 99321.2765957447,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 99463.1205673759,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 99888.6524822695,
+        "d": 6,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 100314.184397163,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 100385.106382979,
+        "d": 4,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 100597.872340425,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 100739.716312057,
+        "d": 6,
+        "l": 212.765957446798,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 101165.24822695,
+        "d": 7,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 101590.780141844,
+        "d": 7,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 101874.468085106,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 102016.312056738,
+        "d": 6,
+        "l": 106.382978723428,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 102441.843971631,
+        "d": 6,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 102725.531914894,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 102867.375886525,
+        "d": 4,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 103292.907801418,
+        "d": 5,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 103718.439716312,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 103789.361702128,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 103860.283687943,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 104002.127659574,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 104143.971631206,
+        "d": 4,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 104569.503546099,
+        "d": 1,
+        "l": 212.765957446813,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104569.503546099,
+        "d": 5,
+        "l": 425.531914893625,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 104853.191489362,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 104995.035460993,
+        "d": 0,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105278.723404255,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105420.567375887,
+        "d": 1,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105704.255319149,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 105846.09929078,
+        "d": 3,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106129.787234043,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106271.631205674,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 106697.163120567,
+        "d": 2,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107122.695035461,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107193.617021277,
+        "d": 0,
+        "l": 106.382978723384,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107406.382978723,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107548.226950355,
+        "d": 2,
+        "l": 212.765957446827,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 107973.758865248,
+        "d": 3,
+        "l": 106.382978723428,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108399.290780142,
+        "d": 3,
+        "l": 106.382978723355,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108682.978723404,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 108824.822695035,
+        "d": 2,
+        "l": 106.382978723399,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 109250.354609929,
+        "d": 2,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 109534.042553191,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 109675.886524823,
+        "d": 0,
+        "l": 106.38297872337,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110101.418439716,
+        "d": 1,
+        "l": 106.382978723414,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110526.95035461,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110597.872340425,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110668.794326241,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110810.638297872,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 110952.482269504,
+        "d": 0,
+        "l": 319.148936170212,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 111378.014184397,
+        "d": 1,
+        "l": 319.148936170197,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 115080.141843972,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 115222.998986829,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 115365.856129686,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 115651.5704154,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 115937.284701114,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 116080.141843972,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 116222.998986829,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 116508.713272543,
+        "d": 6,
+        "l": 142.857142857101,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 116794.427558257,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 116937.284701114,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 117080.141843971,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 117365.856129686,
+        "d": 7,
+        "l": 142.85714285713,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 117651.5704154,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 117794.427558257,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 117937.284701114,
+        "d": 5,
+        "l": 714.285714285725,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 118508.713272543,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 118651.5704154,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 118794.427558257,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119080.141843971,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119365.856129686,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119508.713272543,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119651.5704154,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 119937.284701114,
+        "d": 2,
+        "l": 142.857142857145,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120222.998986829,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120365.856129686,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120508.713272543,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 120794.427558257,
+        "d": 3,
+        "l": 142.85714285713,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121080.141843971,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121222.998986829,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121365.856129686,
+        "d": 1,
+        "l": 714.28571428571,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121385.064714704,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 121937.284701114,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122080.141843971,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122222.998986829,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122508.713272543,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122794.427558257,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122794.427558257,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 122937.284701114,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 123080.141843971,
+        "d": 6,
+        "l": 428.57142857142,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 123651.5704154,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123794.427558257,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 123937.284701114,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124222.998986829,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124508.713272543,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124508.713272543,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124651.5704154,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 124794.427558257,
+        "d": 2,
+        "l": 428.57142857142,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 125365.856129686,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 125508.713272543,
+        "d": 5,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 125651.5704154,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 125937.284701114,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 126222.998986829,
+        "d": 6,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 126222.998986829,
+        "d": 7,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 126365.856129686,
+        "d": 4,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 126508.713272543,
+        "d": 5,
+        "l": 714.285714285681,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 0
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "mendax"
+          }
+        ]
+      },
+      {
+        "t": 127080.141843971,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 127222.998986829,
+        "d": 1,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 127365.856129686,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 127651.5704154,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 127937.284701114,
+        "d": 2,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 127937.284701114,
+        "d": 3,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 128080.141843971,
+        "d": 0,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 128222.998986829,
+        "d": 1,
+        "l": 142.857142857145,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      },
+      {
+        "t": 128365.856129686,
+        "d": 2,
+        "l": 571.42857142858,
+        "p": [
+          {
+            "n": "vmuStrumline",
+            "v": 1
+          },
+          {
+            "n": "vmuBaseCharacter",
+            "v": "bf"
+          }
+        ]
+      }
+    ]
+  },
+  "generatedBy": "Snokido Converter"
+}

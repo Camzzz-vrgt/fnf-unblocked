@@ -1,0 +1,22 @@
+{
+  "version": "1.0.1",
+  "name": "mickey-preferal-nerves",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Mickey/nerves",
+  "scale": 0.9,
+  "offsets": [-160, 55],
+  "cameraOffsets": [-230, -40],
+  "animations": [
+    {
+      "name": "nerves",
+      "prefix": "nerves"
+    }
+  ],
+  "healthIcon": {
+    "id": "mickey2",
+    "color": "#FF0000"
+  },
+  "startingAnimation": "nerves",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

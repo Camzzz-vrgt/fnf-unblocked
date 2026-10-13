@@ -1,0 +1,43 @@
+import funkin.play.PlayState;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.event.ScriptedSongEvent;
+
+class ChangeCharacterEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Change Character', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var targetIndex = data.getInt('char') ?? (params.length > 0 ? Std.int(params[0]) : 0);
+    var charId = data.getString('character') ?? (params.length > 1 ? Std.string(params[1]) : '');
+    if (charId == '') return;
+
+    var newChar = CharacterDataParser.fetchCharacter(charId);
+    if (newChar == null) return;
+
+    var stage = PlayState.instance.currentStage;
+    switch (targetIndex)
+    {
+      case 0:
+        stage.getDad(true);
+        stage.addCharacter(newChar, CharacterType.DAD);
+      case 1:
+        stage.getBoyfriend(true);
+        stage.addCharacter(newChar, CharacterType.BF);
+      case 2, 4:
+        stage.getGirlfriend(true);
+        stage.addCharacter(newChar, CharacterType.GF);
+      default:
+        return;
+    }
+
+    stage.refresh();
+  }
+}

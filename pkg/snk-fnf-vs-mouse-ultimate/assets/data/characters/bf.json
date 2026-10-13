@@ -1,0 +1,114 @@
+{
+  "version": "1.0.1",
+  "name": "bf",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Bruno/bruno",
+  "scale": 1,
+  "offsets": [-70, 200],
+  "cameraOffsets": [-50, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BFANIMS/BF Idle",
+      "offsets": [250, -280]
+    },
+    {
+      "name": "singUP",
+      "prefix": "BaseUp",
+      "offsets": [-71, 64],
+      "frameRate": 40
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BaseLeft",
+      "offsets": [2, 1],
+      "frameRate": 40
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BaseRight",
+      "offsets": [-83, 4],
+      "frameRate": 40
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BaseDown",
+      "offsets": [-37, -110],
+      "frameRate": 40
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "MOUSEIdle",
+      "offsets": [0, 5]
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "MOUSEUp",
+      "offsets": [-40, 39],
+      "frameRate": 40
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "MOUSELeft",
+      "offsets": [34, 16],
+      "frameRate": 40
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "MOUSERight",
+      "offsets": [-3, 12],
+      "frameRate": 40
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "MOUSEDown",
+      "offsets": [9, -7],
+      "frameRate": 40
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "MissUp",
+      "offsets": [-80, 75],
+      "frameRate": 30
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "MissLeft",
+      "offsets": [42, -26],
+      "frameRate": 30
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "MissRight",
+      "offsets": [40, 25],
+      "frameRate": 30
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "MissDown",
+      "offsets": [-25, -75],
+      "frameRate": 30
+    },
+    {
+      "name": "hey",
+      "prefix": "IdlePose",
+      "offsets": [-5, 3]
+    },
+    {
+      "name": "idle-dance",
+      "prefix": "dance",
+      "offsets": [5, 20],
+      "frameRate": 12,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "bf",
+    "color": "#4CC3FF"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": true
+}

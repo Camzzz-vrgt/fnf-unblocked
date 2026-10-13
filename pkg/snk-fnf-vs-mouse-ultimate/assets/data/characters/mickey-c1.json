@@ -1,0 +1,75 @@
+{
+  "version": "1.0.1",
+  "name": "mickey-c1",
+  "renderType": "sparrow",
+  "assetPath": "characters/Mickey/CrisisSmall/1",
+  "scale": 0.9286,
+  "offsets": [0, 0],
+  "cameraOffsets": [150, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "i",
+      "offsets": [-6.66, 18.89],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "r",
+      "offsets": [86.68, 26.89],
+      "frameRate": 12
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "missl",
+      "offsets": [90.01, 43.56],
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "d",
+      "offsets": [-28.89, -68.11],
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "missd",
+      "offsets": [-28.89, -58.11],
+      "frameRate": 12
+    },
+    {
+      "name": "singUP",
+      "prefix": "u",
+      "offsets": [-50, 166.11],
+      "frameRate": 12
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "missu",
+      "offsets": [-34.88, 169.44],
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "l",
+      "offsets": [-44.99, 71.11],
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "missr",
+      "offsets": [-90.55, 82.22],
+      "frameRate": 12
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "mickeyP",
+    "color": "#FF0000"
+  },
+  "singTime": 6,
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

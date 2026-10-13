@@ -1,0 +1,27 @@
+import funkin.play.PlayState;
+import funkin.play.event.ScriptedSongEvent;
+
+class AddCameraZoomEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Add Camera Zoom', {processOldEvents: false});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var amount = data.getFloat('amount') ?? (params.length > 0 ? Std.parseFloat(Std.string(params[0])) : 0.015);
+    var camera = data.getString('camera') ?? (params.length > 1 ? Std.string(params[1]) : 'camGame');
+
+    switch (camera)
+    {
+      case 'camHUD':
+        PlayState.instance.camHUD.zoom += amount;
+      default:
+        PlayState.instance.cameraBopMultiplier += amount;
+    }
+  }
+}

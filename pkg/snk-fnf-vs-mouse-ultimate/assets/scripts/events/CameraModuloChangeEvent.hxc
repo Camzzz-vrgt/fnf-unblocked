@@ -1,0 +1,14 @@
+import funkin.play.event.ScriptedSongEvent;
+
+class CameraModuloChangeEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Camera Modulo Change', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    return;
+  }
+}

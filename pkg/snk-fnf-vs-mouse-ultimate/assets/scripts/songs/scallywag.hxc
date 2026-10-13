@@ -1,0 +1,294 @@
+import flixel.FlxG;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+
+class ScallywagSong extends Song
+{
+  var setupDone:Bool = false;
+  var currentFocusTarget:Int = -1;
+  var cameraTweenEndTime:Float = -1;
+
+  public function new()
+  {
+    super('scallywag');
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    setupDone = false;
+    currentFocusTarget = -1;
+    cameraTweenEndTime = -1;
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    ensureSetup();
+    if (cameraTweenEndTime > 0 && Conductor.instance.songPosition >= cameraTweenEndTime) cameraTweenEndTime = -1;
+  }
+
+  public override function onSongEvent(event:SongEventScriptEvent):Void
+  {
+    super.onSongEvent(event);
+    ensureSetup();
+    if (event.eventData == null || event.eventData.eventKind != 'FocusCamera') return;
+
+    var target = event.eventData.getInt('char');
+    if (target == null && event.eventData.value != null) target = Std.int(event.eventData.value);
+    if (target == null) target = 0;
+    currentFocusTarget = target;
+
+    if (target == -1)
+    {
+      moveCameraToStatic(event.eventData);
+    }
+    else
+    {
+      moveCameraToTarget(target, event.eventData);
+    }
+
+    event.eventData.activated = true;
+    event.cancelEvent();
+  }
+
+  public override function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+    if (event.note == null || event.note.noteData == null) return;
+
+    var target:Int = event.note.noteData.getMustHitNote() ? 0 : 1;
+    if (currentFocusTarget != target) return;
+    focusCharacterWithDirection(target == 0 ? getBoyfriend() : getDad(), target == 0, event.note.noteData.getDirection());
+  }
+
+  public override function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    switch (event.beat)
+    {
+      case 1:
+        PlayState.instance.camGame.fade(FlxColor.BLACK, Conductor.instance.stepLengthMs * 4 / 1000, true);
+      case 3:
+        PlayState.instance.camGame.fade(FlxColor.BLACK, 0.001, true);
+      default:
+    }
+  }
+
+  function ensureSetup():Void
+  {
+    if (setupDone || PlayState.instance == null || PlayState.instance.currentStage == null) return;
+    setupDone = true;
+
+    var donald = getGirlfriend();
+    if (donald != null)
+    {
+      donald.setScale(donald.getBaseScale() * 0.9);
+      var boyfriend = getBoyfriend();
+      donald.x = boyfriend != null ? boyfriend.x + 300 : 1977;
+      donald.y = 150;
+      donald.originalPosition.set(donald.x, donald.y);
+      donald.resetCameraFocusPoint();
+      donald.flipX = true;
+    }
+
+    PlayState.instance.camGame.fade(FlxColor.BLACK, 0.001, false);
+    PlayState.instance.cancelCameraFollowTween();
+    PlayState.instance.cameraFollowPoint.setPosition(1000, 600);
+  }
+
+  function moveCameraToStatic(data):Void
+  {
+    var positionIsOffset:Bool = data.getBool('isOffset') ?? true;
+    var offsetX:Float = data.getFloat('x') ?? 0;
+    var offsetY:Float = data.getFloat('y') ?? 0;
+    var x:Float = positionIsOffset ? PlayState.instance.cameraFollowPoint.x + offsetX : offsetX;
+    var y:Float = positionIsOffset ? PlayState.instance.cameraFollowPoint.y + offsetY : offsetY;
+    tweenCamera(x, y, data);
+  }
+
+  function moveCameraToDonald(data):Void
+  {
+    var donald = getGirlfriend();
+    if (donald == null) return;
+
+    var point = codenameCameraPoint(donald, false);
+    tweenCamera(point[0] + (data.getFloat('x') ?? 0), point[1] + (data.getFloat('y') ?? 0), data);
+  }
+
+  function moveCameraToTarget(target:Int, data):Void
+  {
+    var character = null;
+    var isPlayer:Bool = false;
+
+    switch (target)
+    {
+      case 0:
+        character = getBoyfriend();
+        isPlayer = true;
+      case 1:
+        character = getDad();
+      case 2:
+        character = getGirlfriend();
+      default:
+        return;
+    }
+
+    if (character == null) return;
+
+    var point = codenameCameraPoint(character, isPlayer);
+    tweenCamera(point[0] + (data.getFloat('x') ?? 0), point[1] + (data.getFloat('y') ?? 0), data);
+  }
+
+  function tweenCamera(x:Float, y:Float, data):Void
+  {
+    var easeName:String = data.getString('ease') ?? 'CLASSIC';
+    var tweenMovement:Bool = data.getBool('tween') ?? true;
+    var snap:Bool = data.getBool('snap') ?? !tweenMovement;
+    cameraTweenEndTime = -1;
+
+    if (!tweenMovement || easeName == 'INSTANT')
+    {
+      PlayState.instance.cancelCameraFollowTween();
+      PlayState.instance.cameraFollowPoint.setPosition(x, y);
+      PlayState.instance.resetCamera(false, false, true);
+      return;
+    }
+
+    if (easeName == 'CLASSIC')
+    {
+      PlayState.instance.cancelCameraFollowTween();
+      PlayState.instance.cameraFollowPoint.setPosition(x, y);
+      if (snap) PlayState.instance.resetCamera(false, false, true);
+      return;
+    }
+
+    var duration:Float = data.getFloat('duration') ?? 4;
+    var easeDir:String = data.getString('easeDir') ?? 'In';
+    var ease = resolveEase(easeName, easeDir);
+    var seconds:Float = Conductor.instance.stepLengthMs * duration / 1000;
+    cameraTweenEndTime = Conductor.instance.songPosition + seconds * 1000;
+    PlayState.instance.tweenCameraToPosition(x, y, seconds, ease);
+  }
+
+  function focusCharacterWithDirection(character, isPlayer:Bool, direction:Int):Void
+  {
+    if (character == null) return;
+    var point = codenameCameraPoint(character, isPlayer);
+    switch (direction)
+    {
+      case 0: point[0] -= 25;
+      case 1: point[1] += 25;
+      case 2: point[1] -= 25;
+      case 3: point[0] += 25;
+      default:
+    }
+    PlayState.instance.cameraFollowPoint.setPosition(point[0], point[1]);
+    if (cameraTweenEndTime > 0) return;
+
+    PlayState.instance.cancelCameraFollowTween();
+  }
+
+  function codenameCameraPoint(character, isPlayer:Bool):Array<Float>
+  {
+    var globalX:Float = character.globalOffsets != null && character.globalOffsets.length > 0 ? character.globalOffsets[0] : 0;
+    var globalY:Float = character.globalOffsets != null && character.globalOffsets.length > 1 ? character.globalOffsets[1] : 0;
+    return [
+      character.cameraFocusPoint.x + (isPlayer ? -100 : 150) + globalX,
+      character.cameraFocusPoint.y + globalY
+    ];
+  }
+
+  function resolveEase(name:String, dir:String)
+  {
+    switch (name)
+    {
+      case 'linear' | 'CLASSIC': return FlxEase.linear;
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'smoothStepIn': return FlxEase.smoothStepIn;
+      case 'smoothStepOut': return FlxEase.smoothStepOut;
+      case 'smoothStepInOut': return FlxEase.smoothStepInOut;
+      case 'smootherStepIn': return FlxEase.smootherStepIn;
+      case 'smootherStepOut': return FlxEase.smootherStepOut;
+      case 'smootherStepInOut': return FlxEase.smootherStepInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      default:
+    }
+
+    switch (name + dir)
+    {
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'smoothStepIn': return FlxEase.smoothStepIn;
+      case 'smoothStepOut': return FlxEase.smoothStepOut;
+      case 'smoothStepInOut': return FlxEase.smoothStepInOut;
+      case 'smootherStepIn': return FlxEase.smootherStepIn;
+      case 'smootherStepOut': return FlxEase.smootherStepOut;
+      case 'smootherStepInOut': return FlxEase.smootherStepInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      default: return FlxEase.linear;
+    }
+  }
+
+  function getDad()
+  {
+    return PlayState.instance?.currentStage?.getDad();
+  }
+
+  function getBoyfriend()
+  {
+    return PlayState.instance?.currentStage?.getBoyfriend();
+  }
+
+  function getGirlfriend()
+  {
+    return PlayState.instance?.currentStage?.getGirlfriend();
+  }
+}

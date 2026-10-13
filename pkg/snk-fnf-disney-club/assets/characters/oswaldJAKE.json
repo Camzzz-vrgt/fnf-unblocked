@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Os_danceLeft instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Os_Left instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-71,
+				-178
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Os_Down instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				36
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Os_Up instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-100,
+				-28
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Os_Right instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				41
+			],
+			"anim": "lucky",
+			"fps": 24,
+			"name": "Os_Lucky instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/oswaldJAKE",
+	"position": [
+		-60,
+		300
+	],
+	"healthicon": "oswaldjake",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		95,
+		255
+	],
+	"camera_position": [
+		550,
+		120
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.8
+}

@@ -1,0 +1,67 @@
+import flixel.input.keyboard.FlxKey;
+import funkin.modding.events.UpdateScriptEvent;
+import funkin.play.character.AnimateAtlasCharacter;
+
+using StringTools;
+
+class BoyfriendCharacter extends AnimateAtlasCharacter
+{
+  var danceCode:String = "DANCEOFF";
+  var danceCodeIndex:Int = 0;
+  var canDanceOff:Bool = false;
+
+  function new()
+  {
+    super('bf');
+  }
+
+  override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    updateDanceCode();
+  }
+
+  function updateDanceCode():Void
+  {
+    if (canDanceOff) return;
+
+    var key:FlxKey = FlxG.keys.firstJustPressed();
+    if (key == FlxKey.NONE) return;
+
+    var keyName:Null<String> = FlxKey.toStringMap[key];
+    if (keyName == null)
+    {
+      danceCodeIndex = 0;
+      return;
+    }
+
+    keyName = keyName.toUpperCase();
+
+    if (keyName == danceCode.charAt(danceCodeIndex))
+    {
+      danceCodeIndex++;
+    }
+    else
+    {
+      danceCodeIndex = (keyName == danceCode.charAt(0)) ? 1 : 0;
+    }
+
+    if (danceCodeIndex >= danceCode.length && hasAnimation('idle-dance'))
+    {
+      canDanceOff = true;
+      idleSuffix = '-dance';
+      dance(true);
+    }
+  }
+
+  override function dance(force:Bool = false):Void
+  {
+    if (idleSuffix != '-alt' && getCurrentAnimation().startsWith('idle'))
+    {
+      playAnimation('idle$idleSuffix', true);
+      return;
+    }
+
+    super.dance(force);
+  }
+}

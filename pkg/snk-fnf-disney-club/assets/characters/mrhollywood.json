@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				5
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mr hollywood idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-15
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mr hollywood up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "mr hollywood down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				33,
+				-16
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "mr hollywood right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "mr hollywood left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mrhollywood",
+	"position": [
+		-900,
+		-820
+	],
+	"healthicon": "sora",
+	"flip_x": true,
+	"healthbar_colors": [
+		218,
+		83,
+		61
+	],
+	"camera_position": [
+		1120,
+		800
+	],
+	"sing_duration": 6.1,
+	"scale": 0.4
+}

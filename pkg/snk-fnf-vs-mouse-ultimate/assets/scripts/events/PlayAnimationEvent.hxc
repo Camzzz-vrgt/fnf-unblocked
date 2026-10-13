@@ -1,0 +1,116 @@
+import flixel.FlxSprite;
+import funkin.play.PlayState;
+import funkin.play.character.BaseCharacter;
+import funkin.play.event.ScriptedSongEvent;
+
+class PlayAnimationEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('PlayAnimation', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var targetName = normalizeTargetName(data.getString('target') ?? 'boyfriend');
+    var anim = data.getString('anim') ?? 'idle';
+    var force = data.getBool('force') ?? false;
+    var params = data.getArray('params') ?? [];
+    var mode = data.getString('mode') ?? '';
+    var locked = data.getBool('lock') ?? (mode.toUpperCase() == 'LOCK' || (params.length > 3 && Std.string(params[3]).toUpperCase() == 'LOCK'));
+
+    trace('PlayAnimation = ' + targetName + ' / ' + anim);
+
+    var character = getCharacterTarget(targetName);
+    if (character != null)
+    {
+      if (character.hasAnimation(anim)) character.playAnimation(anim, force, locked);
+      return;
+    }
+
+    var target:FlxSprite = getSpriteTarget(targetName);
+    if (target == null) return;
+
+    if (locked && lockStagePropAnimation(targetName, anim)) return;
+
+    if (target.animation != null && target.animation.exists(anim))
+    {
+      target.animation.play(anim, force);
+    }
+
+
+  }
+
+
+  function getCharacterTarget(targetName:String):BaseCharacter
+  {
+    var stage = PlayState.instance.currentStage;
+    var normalized = normalizeTargetName(targetName);
+
+    switch (normalized)
+    {
+      case 'boyfriend' | 'bf' | 'player':
+        return stage.getBoyfriend();
+      case 'dad':
+        return stage.getDad();
+      case 'girlfriend' | 'gf':
+        return stage.getGirlfriend();
+      case 'donald':
+        return visibleCharacter(['donald', 'donald-feral']);
+      case 'goofy':
+        return visibleCharacter(['goofy', 'goofy-feral', 'goofy-feral-calm']);
+      default:
+        return stage.getCharacter(targetName);
+    }
+  }
+
+  function normalizeTargetName(targetName:String):String
+  {
+    var normalized = targetName.toLowerCase();
+    return normalized == 'opponent' ? 'dad' : normalized;
+  }
+
+  function getSpriteTarget(targetName:String):FlxSprite
+  {
+    var stage = PlayState.instance.currentStage;
+    return stage.getNamedProp(targetName);
+  }
+
+  function lockStagePropAnimation(targetName:String, anim:String):Bool
+  {
+    var stage = PlayState.instance.currentStage;
+    if (stage == null || (stage.id != 'clubhouse' && stage.id != 'clubhouse-legacy')) return false;
+
+    stage.lockStagePropAnimation(targetName, anim);
+    return true;
+  }
+
+  function visibleCharacter(ids:Array<String>):BaseCharacter
+  {
+    var stage = PlayState.instance.currentStage;
+
+    for (id in ids)
+    {
+      var character = stage.getCharacter(id);
+      if (character != null && character.visible) return character;
+    }
+
+    for (id in ids)
+    {
+      var fallback = stage.getCharacter(id);
+      if (fallback != null) return fallback;
+    }
+
+    var girlfriend = stage.getGirlfriend();
+    if (girlfriend != null && ids.contains(girlfriend.characterId)) return girlfriend;
+
+    return null;
+  }
+
+  public override function getTitle():String
+  {
+    return 'Play Animation';
+  }
+}

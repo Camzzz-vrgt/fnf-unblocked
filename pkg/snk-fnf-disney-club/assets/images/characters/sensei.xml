@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="sensei.png">
+<SubTexture name="sensei idle0000" x="3327" y="5512" width="1258" height="1710" frameX="-486" frameY="-167" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei idle0001" x="0" y="5512" width="1235" height="1719" frameX="-496" frameY="-157" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei idle0002" x="7200" y="0" width="1226" height="1724" frameX="-499" frameY="-152" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei idle0003" x="5979" y="0" width="1221" height="1735" frameX="-498" frameY="-141" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei idle0004" x="2421" y="3752" width="1221" height="1746" frameX="-498" frameY="-129" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei LEFT0000" x="1148" y="3752" width="1273" height="1758" frameX="-465" frameY="-136" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei LEFT0001" x="4742" y="0" width="1237" height="1775" frameX="-482" frameY="-118" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei DOWN0000" x="7101" y="5512" width="1292" height="1692" frameX="-477" frameY="-185" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei DOWN0001" x="4585" y="5512" width="1228" height="1706" frameX="-501" frameY="-171" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei UP0000" x="3366" y="1889" width="1179" height="1794" frameX="-508" frameY="-79" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei UP0001" x="4742" y="1775" width="1216" height="1760" frameX="-495" frameY="-116" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei RIGHT0000" x="5813" y="5512" width="1288" height="1703" frameX="-467" frameY="-179" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei RIGHT0001" x="3642" y="3752" width="1251" height="1740" frameX="-484" frameY="-140" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinStance0000" x="8426" y="0" width="1267" height="1685" frameX="-474" frameY="-266" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinStance0001" x="0" y="7231" width="1322" height="1658" frameX="-428" frameY="-291" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinStart0000" x="0" y="3752" width="1148" height="1760" frameX="-551" frameY="-162" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinStart0001" x="1799" y="0" width="1070" height="1878" frameX="-571" frameY="-12" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinLoop0000" x="1164" y="1889" width="1108" height="1862" frameX="-594" frameY="0" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinLoop0001" x="2272" y="1889" width="1094" height="1854" frameX="-476" frameY="0" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinLoop0002" x="0" y="1889" width="1164" height="1863" frameX="-486" frameY="-5" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinEnd0000" x="0" y="0" width="1799" height="1889" frameX="-309" frameY="-38" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinEnd0001" x="2869" y="0" width="1873" height="1869" frameX="-198" frameY="-45" frameWidth="2200" frameHeight="1964" />
+<SubTexture name="sensei spinEnd0002" x="1235" y="5512" width="2092" height="1715" frameX="-3" frameY="-232" frameWidth="2200" frameHeight="1964" />
+</TextureAtlas>

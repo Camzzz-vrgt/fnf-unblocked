@@ -1,0 +1,11 @@
+import funkin.play.event.ScriptedSongEvent;
+
+class LyricsEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Lyrics', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void {}
+}

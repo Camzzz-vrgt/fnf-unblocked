@@ -1,0 +1,46 @@
+{
+  "version": "1.1.0",
+  "name": "VMU Box",
+  "assetPath": "dialogue/boxes/dialogueBox",
+  "isPixel": false,
+  "flipX": false,
+  "flipY": false,
+  "offsets": [0, 200],
+  "scale": 0.4,
+  "advanceSound": "next",
+
+  "text": {
+    "offsets": [80, 130],
+    "width": 950,
+    "size": 28,
+    "color": "#000000",
+    "fontFamily": "WickedMouse.ttf",
+    "shadowColor": "#00000000",
+    "shadowWidth": 0,
+    "alignment": "center",
+    "uppercase": true
+  },
+
+  "nameText": {
+    "offsets": [260, 50],
+    "width": 1280,
+    "size": 28,
+    "color": "#FFFFFF",
+    "fontFamily": "WickedMouse.ttf",
+    "shadowColor": "#000000",
+    "shadowWidth": 3
+  },
+
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "frameRate": 24
+    },
+    {
+      "name": "enter",
+      "prefix": "idle",
+      "frameRate": 24
+    }
+  ]
+}

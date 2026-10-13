@@ -1,0 +1,130 @@
+import funkin.play.PlayState;
+import funkin.play.event.ScriptedSongEvent;
+import funkin.play.stage.Bopper;
+import funkin.play.stage.StageProp;
+
+class ChangeCharAnimSuffixEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Change Char Anim Suffix', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var targetIndex = data.getInt('char') ?? (params.length > 0 ? Std.int(params[0]) : 0);
+    var suffix = data.getString('suffix') ?? (params.length > 1 ? Std.string(params[1]) : '');
+
+    var stage = PlayState.instance.currentStage;
+    var propName = getPropName(targetIndex);
+    if (propName == 'donald')
+    {
+      applyCharacterSuffix(['donald', 'donald-feral'], suffix);
+      playNamedPropIdle('donald', suffix);
+      return;
+    }
+    if (propName == 'goofy')
+    {
+      applyCharacterSuffix(['goofy', 'goofy-feral', 'goofy-feral-calm'], suffix);
+      playNamedPropIdle('goofy', suffix);
+      return;
+    }
+
+    var target = getTarget(targetIndex);
+    if (target == null) return;
+
+    if (Std.isOfType(target, Bopper))
+    {
+      target.idleSuffix = suffix;
+      target.dance(true);
+      return;
+    }
+
+    if (Std.isOfType(target, StageProp))
+    {
+      playPropIdle(target, suffix);
+    }
+  }
+
+  function getTarget(index)
+  {
+    var stage = PlayState.instance.currentStage;
+
+    switch (index)
+    {
+      case 0:
+        return stage.getDad();
+      case 1:
+        return stage.getBoyfriend();
+      case 2:
+        return stage.getNamedProp('donald') ?? stage.getGirlfriend();
+      case 3:
+        return stage.getNamedProp('goofy');
+      case 4:
+        return stage.getGirlfriend();
+      default:
+        return null;
+    }
+  }
+
+  function getPropName(index)
+  {
+    switch (index)
+    {
+      case 2:
+        return 'donald';
+      case 3:
+        return 'goofy';
+      default:
+        return null;
+    }
+  }
+
+  function applyCharacterSuffix(ids:Array<String>, suffix:String):Void
+  {
+    var stage = PlayState.instance.currentStage;
+    var applied = [];
+
+    for (id in ids)
+    {
+      var character = stage.getCharacter(id);
+      if (character == null) continue;
+
+      character.idleSuffix = suffix;
+      character.dance(true);
+      applied.push(character);
+    }
+
+    for (character in [stage.getDad(), stage.getBoyfriend(), stage.getGirlfriend()])
+    {
+      if (character == null || applied.indexOf(character) >= 0) continue;
+      if (ids.indexOf(character.characterId) < 0) continue;
+
+      character.idleSuffix = suffix;
+      character.dance(true);
+    }
+  }
+
+  function playPropIdle(prop, suffix):Void
+  {
+    if (prop.animation == null) return;
+
+    var anim = 'idle' + suffix;
+    if (!prop.animation.exists(anim)) anim = 'idle';
+    if (prop.animation.exists(anim)) prop.animation.play(anim, true, false, 0);
+  }
+
+  function playNamedPropIdle(name:String, suffix:String):Void
+  {
+    var prop = PlayState.instance.currentStage.getNamedProp(name);
+    if (prop != null) playPropIdle(prop, suffix);
+  }
+
+  public override function getTitle():String
+  {
+    return 'Change Char Anim Suffix';
+  }
+}

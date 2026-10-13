@@ -1,0 +1,96 @@
+import funkin.play.event.ScriptedSongEvent;
+import funkin.play.PlayState;
+import funkin.play.stage.Bopper;
+
+class AltAnimationToggleEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Alt Animation Toggle', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var enabled = params.length > 1 ? asBool(params[1]) : (params.length > 0 ? asBool(params[0]) : false);
+    var targetIndex = data.getInt('char') ?? (params.length > 2 ? Std.int(params[2]) : 0);
+    var suffix = enabled ? '-alt' : '';
+
+    switch (targetIndex)
+    {
+      case 2:
+        applyCharacterSuffix(['donald', 'donald-feral'], suffix);
+        playNamedPropIdle('donald', suffix);
+      case 3:
+        applyCharacterSuffix(['goofy', 'goofy-feral', 'goofy-feral-calm'], suffix);
+        playNamedPropIdle('goofy', suffix);
+      default:
+        var target = getTarget(targetIndex);
+        if (target != null) applySuffix(target, suffix);
+    }
+  }
+
+  function getTarget(index)
+  {
+    var stage = PlayState.instance.currentStage;
+
+    switch (index)
+    {
+      case 0:
+        return stage.getDad();
+      case 1:
+        return stage.getBoyfriend();
+      case 4:
+        return stage.getGirlfriend();
+      default:
+        return null;
+    }
+  }
+
+  function applyCharacterSuffix(ids:Array<String>, suffix:String):Void
+  {
+    var stage = PlayState.instance.currentStage;
+    var applied = [];
+
+    for (id in ids)
+    {
+      var character = stage.getCharacter(id);
+      if (character != null)
+      {
+        applySuffix(character, suffix);
+        applied.push(character);
+      }
+    }
+
+    for (character in [stage.getDad(), stage.getBoyfriend(), stage.getGirlfriend()])
+    {
+      if (character == null || applied.indexOf(character) >= 0) continue;
+      if (ids.indexOf(character.characterId) < 0) continue;
+      applySuffix(character, suffix);
+    }
+  }
+
+  function applySuffix(target:Bopper, suffix:String):Void
+  {
+    target.idleSuffix = suffix;
+    target.dance(true);
+  }
+
+  function playNamedPropIdle(name:String, suffix:String):Void
+  {
+    var prop = PlayState.instance.currentStage.getNamedProp(name);
+    if (prop == null || prop.animation == null) return;
+
+    var anim = 'idle' + suffix;
+    if (!prop.animation.exists(anim)) anim = 'idle';
+    if (prop.animation.exists(anim)) prop.animation.play(anim, true, false, 0);
+  }
+
+  function asBool(value):Bool
+  {
+    if (Std.isOfType(value, Bool)) return value;
+    return Std.string(value).toLowerCase() == 'true';
+  }
+}

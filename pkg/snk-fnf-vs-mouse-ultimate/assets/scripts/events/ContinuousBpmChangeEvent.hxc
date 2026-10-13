@@ -1,0 +1,11 @@
+import funkin.play.event.ScriptedSongEvent;
+
+class ContinuousBpmChangeEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Continuous BPM Change', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void {}
+}

@@ -1,0 +1,58 @@
+{
+  "version": "1.0.1",
+  "name": "mendax",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Mendax",
+  "scale": 1,
+  "offsets": [100, 100],
+  "cameraOffsets": [0, -300],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "POSES/idle"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "POSES/down"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "POSES/right",
+      "offsets": [-54, 25]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "POSES/left",
+      "offsets": [-1, 2]
+    },
+    {
+      "name": "singUP",
+      "prefix": "POSES/up",
+      "offsets": [-45, 90]
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "POSES/pd"
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "POSES/pr"
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "POSES/pl"
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "POSES/pu"
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "mendax",
+    "color": "#DA5942"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

@@ -1,0 +1,96 @@
+import flixel.FlxG;
+import funkin.Paths;
+import funkin.graphics.video.FlxVideo;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import openfl.Assets;
+
+class DussySong extends Song
+{
+  var setupDone:Bool = false;
+  // var backgroundVideo:FlxVideo;
+
+  public function new()
+  {
+    super('dussy');
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    setupDone = false;
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    ensureSetup();
+
+    var dad = getDad();
+    if (dad != null) dad.idleSuffix = '-mad1';
+  }
+
+  public override function onPause(event:PauseScriptEvent):Void
+  {
+    super.onPause(event);
+    if (backgroundVideo != null) backgroundVideo.pauseVideo();
+  }
+
+  public override function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+    if (backgroundVideo != null) backgroundVideo.resumeVideo();
+  }
+
+  public override function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+    backgroundVideo = null;
+  }
+
+  function ensureSetup():Void
+  {
+    if (setupDone || PlayState.instance == null || PlayState.instance.currentStage == null) return;
+    setupDone = true;
+
+    setStagePropVisible('donald', false);
+    setStagePropVisible('goofy', false);
+
+    var dad = getDad();
+    if (dad != null)
+    {
+      // dad.x += 500;
+      // dad.y += 100;
+      dad.setScale(0.7);
+      dad.originalPosition.set(dad.x, dad.y);
+      dad.resetCameraFocusPoint();
+      dad.idleSuffix = '-mad1';
+    }
+
+    if (Assets.exists(Paths.videos('dussy-loop')))
+    {
+      backgroundVideo = new FlxVideo(Paths.stripLibrary(Paths.videos('dussy-loop')));
+      backgroundVideo.loop = true;
+      backgroundVideo.x = 170;
+      backgroundVideo.y = 200;
+      backgroundVideo.scale.set(0.3, 0.3);
+      backgroundVideo.cameras = [PlayState.instance.camGame];
+      backgroundVideo.zIndex = 150;
+      PlayState.instance.currentStage.add(backgroundVideo);
+      PlayState.instance.currentStage.refresh();
+    }
+  }
+
+  function setStagePropVisible(name:String, visible:Bool):Void
+  {
+    var prop = PlayState.instance.currentStage.getNamedProp(name);
+    if (prop == null) return;
+    prop.visible = visible;
+    prop.active = visible;
+  }
+
+  function getDad()
+  {
+    return PlayState.instance?.currentStage?.getDad();
+  }
+}

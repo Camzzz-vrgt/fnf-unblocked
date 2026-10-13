@@ -1,0 +1,466 @@
+﻿{
+  "version": "1.0.0",
+  "cameraZoom": 0.6,
+  "props": [
+    {
+      "zIndex": 10,
+      "danceEvery": 0,
+      "position": [-500, -850],
+      "scale": 1.8,
+      "name": "outside",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [0.8, 0.8],
+      "assetPath": "stages/clubhouse/WELCOME/split/outside",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "OUTSIDE.png",
+          "name": "OUTSIDE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "OUTSIDE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 20,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "window",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/WELCOME/split/window",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "WINDOW GLASS (LUMINOSITY).png",
+          "name": "WINDOW",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "WINDOW",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 30,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "bg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/WELCOME/split/bg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "CLUBHOUSE.png",
+          "name": "CLUBHOUSE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "CLUBHOUSE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 40,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "bgStuff",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/WELCOME/split/bgStuff",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "BG STUFF.png",
+          "name": "BG STUFF",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "BG STUFF",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 45,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "fish",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/WELCOME/split/fish",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FISH.png",
+          "name": "FISH",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FISH",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 50,
+      "danceEvery": 0,
+      "position": [-500, -850],
+      "scale": 1.8,
+      "name": "V-outside",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [0.8, 0.8],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/outside",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "OUTSIDE",
+          "name": "V-OUTSIDE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-OUTSIDE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 60,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-window",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/window",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "WINDOW GLASS (LUMINOSITY)",
+          "name": "V-WINDOW",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-WINDOW",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 70,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-bg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/bg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "CLUBHOUSE",
+          "name": "V-CLUBHOUSE",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-CLUBHOUSE",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 80,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-bgStuff",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/bgStuff",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "BG STUFF",
+          "name": "V-BG STUFF",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-BG STUFF",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 90,
+      "danceEvery": 0,
+      "position": [-25, 70],
+      "scale": 0.67,
+      "name": "donald",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/legacy/donald",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "idle",
+          "name": "idle",
+          "looped": false,
+          "flipX": false,
+          "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        }
+      ],
+      "startingAnimation": "idle",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 100,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "fg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/WELCOME/split/fg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 2.png",
+          "name": "FG 2",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FG 2",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 110,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-fg",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/fg",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 2",
+          "name": "V-FG 2",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-FG 2",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 120,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-fgA",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/fgA",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 2 (ALT)",
+          "name": "V-FG 2 (ALT)",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-FG 2 (ALT)",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 130,
+      "danceEvery": 0,
+      "position": [825, -700],
+      "scale": 1.3,
+      "name": "V-lightBulb",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/lightBulb",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "LIGHTBULB",
+          "name": "V-LIGHTBULB",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-LIGHTBULB",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 140,
+      "danceEvery": 0,
+      "position": [1450, -250],
+      "scale": 0.85,
+      "name": "goofy",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/legacy/goofy",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "gIdle",
+          "name": "idle",
+          "looped": false,
+          "flipX": false,
+          "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        }
+      ],
+      "startingAnimation": "idle",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 150,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "fg2",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1.5, 1.5],
+      "assetPath": "stages/clubhouse/WELCOME/split/fg2",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 1.png",
+          "name": "FG 1",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "FG 1",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 320,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-fg3",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/fg3",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 3",
+          "name": "V-FG 3",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-FG 3",
+      "updateHitbox": false
+    },
+    {
+      "zIndex": 330,
+      "danceEvery": 0,
+      "position": [-400, -850],
+      "scale": 1.8,
+      "name": "V-fg2",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1.5, 1.5],
+      "assetPath": "stages/clubhouse/VEHEMENT/split/fg2",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "FG 1",
+          "name": "V-FG 1",
+          "looped": false,
+          "flipX": false
+        }
+      ],
+      "startingAnimation": "V-FG 1",
+      "updateHitbox": false
+    }
+  ],
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1000, 130],
+      "scale": 0.95,
+      "cameraOffsets": [-100, 0],
+      "positionMode": "topLeft"
+    },
+    "dad": {
+      "zIndex": 310,
+      "position": [240, 180],
+      "scale": 1,
+      "cameraOffsets": [100, 20],
+      "positionMode": "topLeft"
+    },
+    "gf": {
+      "zIndex": 100,
+      "position": [552, 56.5],
+      "scale": 0.9,
+      "cameraOffsets": [0, 100],
+      "scroll": [1, 1],
+      "positionMode": "topLeft"
+    }
+  },
+  "name": "Clubhouse (Legacy)",
+  "directory": "shared"
+}

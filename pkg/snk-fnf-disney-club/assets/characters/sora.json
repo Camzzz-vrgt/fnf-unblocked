@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sora left"
+		},
+		{
+			"offsets": [
+				3,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sora up"
+		},
+		{
+			"offsets": [
+				-8,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sora down"
+		},
+		{
+			"offsets": [
+				7,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sora right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "sora idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sora",
+	"position": [
+		-420,
+		-400
+	],
+	"healthicon": "sora",
+	"flip_x": false,
+	"healthbar_colors": [
+		218,
+		83,
+		61
+	],
+	"camera_position": [
+		800,
+		440
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

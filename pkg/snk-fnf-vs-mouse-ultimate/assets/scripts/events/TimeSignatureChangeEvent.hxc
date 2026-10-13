@@ -1,0 +1,15 @@
+import funkin.play.event.ScriptedSongEvent;
+
+class TimeSignatureChangeEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Time Signature Change', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    // Time signatures are represented in song metadata timeChanges.
+    return;
+  }
+}

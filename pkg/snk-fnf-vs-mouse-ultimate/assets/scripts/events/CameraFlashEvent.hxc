@@ -1,0 +1,39 @@
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.event.ScriptedSongEvent;
+
+class CameraFlashEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Camera Flash', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var enabled = params.length > 0 ? params[0] : true;
+    if (enabled == false) return;
+
+    var rawColor = params.length > 1 ? parseColor(params[1]) : 0xFFFFFFFF;
+    var durationSteps = params.length > 2 ? Std.parseFloat(Std.string(params[2])) : 4;
+    var cameraName = params.length > 3 ? Std.string(params[3]) : 'camGame';
+    var color = rawColor == -1 ? 0xFFFFFFFF : rawColor;
+    var seconds = Conductor.instance.stepLengthMs * durationSteps / 1000;
+    var camera = cameraName == 'camHUD' ? PlayState.instance.camHUD : PlayState.instance.camGame;
+
+    camera.flash(color, seconds);
+  }
+
+  function parseColor(value)
+  {
+    if (value == null) return 0xFFFFFFFF;
+
+    var parsed = Std.parseInt(Std.string(value));
+    if (parsed == null) return 0xFFFFFFFF;
+
+    return parsed;
+  }
+}

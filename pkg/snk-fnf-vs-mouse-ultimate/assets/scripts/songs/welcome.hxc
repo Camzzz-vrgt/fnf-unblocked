@@ -1,0 +1,939 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.shapes.FlxShapeCircle;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import funkin.Conductor;
+import funkin.FunkinMemory;
+import funkin.Paths;
+import funkin.data.character.CharacterDataParser;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.FunkinCamera;
+import funkin.play.Countdown;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.character.CharacterType;
+import funkin.play.song.Song;
+import openfl.Assets;
+import openfl.display.BlendMode;
+import openfl.filters.ShaderFilter;
+
+class WelcomeSong extends Song
+{
+  var hasPlayedCutscene:Bool = false;
+  var setupDone:Bool = false;
+  var defaultCpuPos:Array<Float> = [];
+  var defaultPlayerPos:Array<Float> = [];
+  var defaultCpuLineX:Float = 0;
+  var defaultPlayerLineX:Float = 0;
+  var hasDefaultCpuLineX:Bool = false;
+  var hasDefaultPlayerLineX:Bool = false;
+  var spotlights:Array<FlxSprite> = [];
+  var black:FlxSprite;
+  var circle:FlxSprite;
+  var camEffects:FunkinCamera;
+  var loop1Effect:FlxSprite;
+  var loop2Effect:FlxSprite;
+  var loop3Effect:FlxSprite;
+  var effectsReady:Bool = false;
+  var hudBF = null;
+  var mickeyText:FunkinSprite;
+  var nextBeatPlayAnim:Bool = false;
+  var rainbowShader:FlxRuntimeShader;
+  var rainbowFilter:ShaderFilter;
+  var rainbowActive:Bool = false;
+  var rainbowTimer:Float = 0;
+  var LOCK_ANIMATION_SECONDS:Float = 9999;
+
+  public function new()
+  {
+    super('welcome');
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    hasPlayedCutscene = false;
+    setupDone = false;
+    defaultCpuPos = [];
+    defaultPlayerPos = [];
+    defaultCpuLineX = 0;
+    defaultPlayerLineX = 0;
+    hasDefaultCpuLineX = false;
+    hasDefaultPlayerLineX = false;
+    spotlights = [];
+    black = null;
+    circle = null;
+    camEffects = null;
+    loop1Effect = null;
+    loop2Effect = null;
+    loop3Effect = null;
+    effectsReady = false;
+    hudBF = null;
+    mickeyText = null;
+    nextBeatPlayAnim = false;
+    rainbowShader = null;
+    rainbowFilter = null;
+    rainbowActive = false;
+    rainbowTimer = 0;
+
+    // These files do not depend on the stage. Load and upload them while the
+    // song is opening, rather than risking a hitch during the countdown.
+    if (!isLegacy()) cacheWelcomeTextures();
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    ensureSetup();
+
+    if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+    if (PlayState.instance.isChartingMode) hasPlayedCutscene = true;
+
+    if (!hasPlayedCutscene)
+    {
+      hasPlayedCutscene = true;
+      event.cancel();
+      PlayState.instance.camCutscene.visible = true;
+      PlayState.instance.startConversation('welcome');
+    }
+  }
+
+  public override function onDialogueEnd(event:DialogueScriptEvent):Void
+  {
+    super.onDialogueEnd(event);
+    Countdown.performCountdown();
+  }
+
+  public override function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+
+    // The current PlayState stays alive on retry, so restore every scripted
+    // visual/strumline mutation here and do not replay the story dialogue.
+    hasPlayedCutscene = true;
+    resetWelcomeState();
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    // The normal version has no per-frame song work. The legacy palette filter
+    // is the sole effect that must advance every frame.
+    if (rainbowActive) updateLegacyRainbow(event.elapsed);
+  }
+
+  public override function onSongEnd(event:ScriptEvent):Void
+  {
+    super.onSongEnd(event);
+
+    if (PlayState.instance != null) PlayState.instance.camHUD.alpha = 1;
+    clearLegacyRainbow();
+    if (camEffects != null && FlxG.cameras.list.indexOf(camEffects) >= 0) FlxG.cameras.remove(camEffects, true);
+  }
+
+  public override function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+
+    clearLegacyRainbow();
+  }
+
+  public override function onSongEvent(event:SongEventScriptEvent):Void
+  {
+    super.onSongEvent(event);
+
+    if (event.eventData == null || event.eventData.eventKind != 'HScript Call') return;
+
+    var callParams = event.eventData.getArray('params') ?? [];
+    if (callParams.length < 1 || callParams[0] == null) return;
+
+    switch (Std.string(callParams[0]))
+    {
+      case 'doMickeyAnim':
+        doMickeyAnim();
+      case 'doBrunoAnim':
+        doBrunoAnim();
+      default:
+    }
+  }
+
+  public override function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+
+    if (isLegacy() || hudBF == null || event.note == null || event.note.noteData == null) return;
+    if (!event.note.noteData.getMustHitNote()) return;
+
+    playHudBFSing(event.note.noteData.getDirection(), false);
+  }
+
+  public override function onNoteMiss(event:NoteScriptEvent):Void
+  {
+    super.onNoteMiss(event);
+
+    if (isLegacy() || hudBF == null || event.note == null || event.note.noteData == null) return;
+    if (!event.note.noteData.getMustHitNote()) return;
+
+    playHudBFSing(event.note.noteData.getDirection(), true);
+  }
+
+  public override function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (isLegacy())
+    {
+      legacyBeat(event.beat);
+      return;
+    }
+
+    normalBeat(event.beat);
+  }
+
+  // Countdown starts only after the stage and its characters are available.
+  // Keeping setup here avoids polling PlayState from onUpdate every frame.
+  function ensureSetup():Void
+  {
+    if (setupDone) return;
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    setupDone = true;
+    setupDefaultStrums();
+
+    if (isLegacy())
+    {
+      setupLegacyShader();
+      return;
+    }
+
+    setupNormalSprites();
+    resetWelcomeState();
+  }
+
+  // forceRender() inside FunkinMemory uploads these script-owned textures to
+  // WebGL before the countdown, so their first visible beat cannot stall.
+  function cacheWelcomeTextures():Void
+  {
+    FunkinMemory.cacheTexture(Paths.image('stages/clubhouse/spotlight'));
+    FunkinMemory.cacheTexture(Paths.image('game/mickeyText', 'shared'));
+    FunkinMemory.cacheTexture(Paths.image('stages/welcomeLoop1', 'shared'));
+    FunkinMemory.cacheTexture(Paths.image('stages/welcomeLoop2', 'shared'));
+    FunkinMemory.cacheTexture(Paths.image('stages/welcomeLoop3', 'shared'));
+  }
+
+  function setupDefaultStrums():Void
+  {
+    if (defaultCpuPos.length == 0 && PlayState.instance.opponentStrumline != null)
+    {
+      defaultCpuLineX = PlayState.instance.opponentStrumline.x;
+      hasDefaultCpuLineX = true;
+
+      for (strum in PlayState.instance.opponentStrumline.strumlineNotes.members)
+      {
+        if (strum != null) defaultCpuPos.push(strum.x);
+      }
+    }
+
+    if (defaultPlayerPos.length == 0 && PlayState.instance.playerStrumline != null)
+    {
+      defaultPlayerLineX = PlayState.instance.playerStrumline.x;
+      hasDefaultPlayerLineX = true;
+
+      for (strum in PlayState.instance.playerStrumline.strumlineNotes.members)
+      {
+        if (strum != null) defaultPlayerPos.push(strum.x);
+      }
+    }
+  }
+
+  function setupNormalSprites():Void
+  {
+    if (black == null)
+    {
+      black = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+      black.alpha = 0;
+      black.zIndex = 185;
+      PlayState.instance.currentStage.add(black);
+    }
+
+    if (spotlights.length == 0)
+    {
+      for (i in 0...2)
+      {
+        var spotlight = new FlxSprite(50, -120).loadGraphic(Paths.image('stages/clubhouse/spotlight'));
+        spotlight.scale.set(2, 2.5);
+        spotlight.alpha = 0.00001;
+        spotlight.blend = BlendMode.ADD;
+        spotlight.zIndex = 275;
+
+        if (i == 1)
+        {
+          spotlight.flipX = true;
+          spotlight.x += 800;
+        }
+
+        spotlights.push(spotlight);
+        PlayState.instance.currentStage.add(spotlight);
+      }
+    }
+
+    if (circle == null)
+    {
+      circle = new FlxShapeCircle(150, 570, 300, {thickness: 0}, FlxColor.WHITE);
+      circle.scale.y = 0.15;
+      circle.alpha = 0;
+      circle.blend = BlendMode.ADD;
+      circle.zIndex = 240;
+      PlayState.instance.currentStage.add(circle);
+    }
+
+    if (hudBF == null)
+    {
+      var bf = PlayState.instance.currentStage.getBoyfriend();
+      var bfId = bf != null ? bf.characterId : 'bf';
+      hudBF = CharacterDataParser.fetchCharacter(bfId);
+
+      if (hudBF != null)
+      {
+        hudBF.characterType = CharacterType.BF;
+        hudBF.flipX = bf != null ? bf.flipX : !hudBF.getDataFlipX();
+        hudBF.x = bf != null ? bf.x : 760;
+        hudBF.y = bf != null ? bf.y - 80 : 420;
+        hudBF.originalPosition.set(hudBF.x, hudBF.y);
+        hudBF.setScale(hudBF.getBaseScale() * 1.2);
+        hudBF.cameras = [PlayState.instance.camHUD];
+        hudBF.alpha = 0;
+        hudBF.zIndex = 500;
+        hudBF.active = true;
+        hudBF.useRenderTexture = false;
+        hudBF.dance(true);
+        PlayState.instance.add(hudBF);
+      }
+    }
+
+    if (mickeyText == null)
+    {
+      mickeyText = new FunkinSprite(110, 70);
+      mickeyText.loadTextureAtlas('game/mickeyText', 'shared', {applyStageMatrix: true, useRenderTexture: false});
+      mickeyText.cameras = [PlayState.instance.camHUD];
+      mickeyText.visible = false;
+      mickeyText.alpha = 1;
+      mickeyText.scale.set(0.7, 0.7);
+      PlayState.instance.add(mickeyText);
+    }
+
+    setupLoopEffects();
+
+    PlayState.instance.currentStage.refresh();
+  }
+
+  function resetWelcomeState():Void
+  {
+    if (PlayState.instance == null) return;
+
+    PlayState.instance.camHUD.alpha = 1;
+    clearLegacyRainbow();
+
+    if (black != null) black.alpha = 0;
+    if (circle != null) circle.alpha = 0;
+    if (mickeyText != null)
+    {
+      mickeyText.visible = false;
+      mickeyText.alpha = 1;
+    }
+    if (hudBF != null)
+    {
+      hudBF.alpha = 0;
+      hudBF.active = true;
+      hudBF.visible = true;
+      hudBF.useRenderTexture = false;
+      unlockCharacterAnim(hudBF);
+      syncHudBFIdleSuffix();
+      hudBF.dance(true);
+    }
+
+    resetLoopEffects();
+    unlockCharacterAnim(getDad());
+    unlockCharacterAnim(getBoyfriend());
+    unlockCharacterAnim(getGirlfriend());
+    setSpotlightAlpha(0);
+    setStageColor('fg2', FlxColor.WHITE);
+    setBaseStageVisible(true);
+    setCharacterVisible(true);
+    setWelcomeAlt(false);
+    resetStrumlineX();
+    resetStrumlineAlpha();
+    nextBeatPlayAnim = false;
+  }
+
+  function normalBeat(beat:Int):Void
+  {
+    if (PlayState.instance == null) return;
+
+    switch (beat)
+    {
+      case 96:
+        if (black != null) FlxTween.tween(black, {alpha: 0.75}, 0.5);
+        tweenSpotlightAlpha(1, 0.5);
+        setStageColor('fg2', 0xFF222222);
+      case 112:
+        showLoopEffects();
+        playStagePropAnim('donald', 'idle-alt', true);
+        playStagePropAnim('goofy', 'idle-alt', true);
+        setWelcomeAlt(true);
+        playGFDanceRightSoon();
+      case 144:
+        hideLoopEffect(loop1Effect, 0.5);
+      case 176:
+        showLoopEffect(loop3Effect, 0.6, 0.5);
+      case 113:
+        if (nextBeatPlayAnim) playGFAnim('danceRight', true);
+        nextBeatPlayAnim = false;
+      case 206:
+        hideLoopEffects((Conductor.instance.beatLengthMs / 1000) * 1.5);
+        tweenStrumlineX(PlayState.instance.playerStrumline, defaultPlayerPos, 70, 1.45, FlxEase.quartInOut);
+        tweenStrumlineX(PlayState.instance.opponentStrumline, defaultCpuPos, -600, 1.45, FlxEase.quartInOut);
+        PlayState.instance.camGame.fade(FlxColor.BLACK, (Conductor.instance.beatLengthMs / 1000) * 1.5, false);
+      case 208:
+        setBaseStageVisible(false);
+        setCharacterVisible(false);
+        if (spotlights.length > 1 && spotlights[1] != null) spotlights[1].alpha = 0;
+        if (spotlights.length > 0 && spotlights[0] != null) spotlights[0].alpha = 1;
+        PlayState.instance.camGame.fade(FlxColor.BLACK, 1, true);
+        if (circle != null) circle.alpha = 0.15;
+        playText();
+      case 212:
+        if (hudBF != null)
+        {
+          hudBF.useRenderTexture = false;
+          FlxTween.tween(hudBF, {alpha: 0.5}, 1);
+          FlxTween.tween(hudBF, {x: hudBF.x - 200}, (Conductor.instance.beatLengthMs / 1000) * 28);
+        }
+      case 239:
+        setGFIdleSuffix('');
+      case 240:
+        hideLoopEffect(loop2Effect, 0);
+        playStagePropAnim('donald', 'idle', true);
+        playStagePropAnim('goofy', 'idle', true);
+        setWelcomeAlt(false);
+        PlayState.instance.camGame.flash(FlxColor.WHITE, 1);
+        if (mickeyText != null) FlxTween.tween(mickeyText, {alpha: 0}, 1);
+        setBaseStageVisible(true);
+        setCharacterVisible(true);
+        setSpotlightAlpha(0);
+        if (circle != null) circle.alpha = 0;
+        setStageColor('fg2', FlxColor.WHITE);
+        if (black != null) black.alpha = 0;
+        if (hudBF != null) hudBF.alpha = 0;
+        resetStrumlineXTweened();
+      case 271:
+        tweenStrumlineAlpha(0, (Conductor.instance.beatLengthMs / 1000) * 4);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, (Conductor.instance.beatLengthMs / 1000) * 4);
+      case 274:
+        playStagePropAnim('donald', 'idle-veh', true);
+      default:
+    }
+  }
+
+  function setupLegacyShader():Void
+  {
+    if (rainbowShader != null) return;
+
+    // try
+    // {
+      rainbowShader = new FlxRuntimeShader(Assets.getText(Paths.frag('rgbpalette')));
+      rainbowShader.setFloatArray('uR', [1, 0, 0]);
+      rainbowShader.setFloatArray('uG', [0, 1, 0]);
+      rainbowShader.setFloatArray('uB', [0, 0, 1]);
+      rainbowShader.setFloat('uMult', 1);
+      rainbowFilter = new ShaderFilter(rainbowShader);
+    // }
+    // catch (error)
+    // {
+    //   rainbowShader = null;
+    //   rainbowFilter = null;
+    // }
+  }
+
+  function legacyBeat(beat:Int):Void
+  {
+    switch (beat)
+    {
+      case 32, 128:
+        toggleRainbow(true);
+      case 64, 160:
+        toggleRainbow(false);
+      default:
+    }
+  }
+
+  function toggleRainbow(on:Bool):Void
+  {
+    setupLegacyShader();
+    rainbowActive = on;
+
+    if (PlayState.instance == null || rainbowFilter == null) return;
+
+    if (on)
+    {
+      PlayState.instance.camGame.filters = [rainbowFilter];
+    }
+    else
+    {
+      PlayState.instance.camGame.filters = [];
+    }
+  }
+
+  function updateLegacyRainbow(elapsed:Float):Void
+  {
+    if (!rainbowActive || rainbowShader == null) return;
+
+    rainbowTimer += elapsed;
+    var brightness:Float = 0.7;
+    var r:Float = ((Math.sin(rainbowTimer) + 1) / 2) * brightness;
+    var g:Float = ((Math.sin(rainbowTimer + (2 * Math.PI / 3)) + 1) / 2) * brightness;
+    var b:Float = ((Math.sin(rainbowTimer + (4 * Math.PI / 3)) + 1) / 2) * brightness;
+
+    rainbowShader.setFloatArray('uR', [r, g, b]);
+    rainbowShader.setFloatArray('uG', [g, b, r]);
+    rainbowShader.setFloatArray('uB', [b, r, g]);
+  }
+
+  // Converted videos are expensive only while they are visible. Keep this
+  // layer in front of the scene, as in Codename; its blend mode is what keeps
+  // the black pixels of the converted frames from darkening the performers.
+  function setupLoopEffects():Void
+  {
+    if (effectsReady || PlayState.instance == null) return;
+    effectsReady = true;
+
+    camEffects = new FunkinCamera('welcomeEffects');
+    camEffects.bgColor = 0x00000000;
+    camEffects.visible = false;
+    camEffects.alpha = 0;
+    camEffects.crossCameraBlending = true;
+
+    var hudIndex:Int = FlxG.cameras.list.indexOf(PlayState.instance.camHUD);
+    if (hudIndex >= 0) FlxG.cameras.insert(camEffects, hudIndex, false);
+    else FlxG.cameras.add(camEffects, false);
+
+    // The source frames are almost black outside the blue light. SCREEN makes
+    // black neutral, unlike MULTIPLY which darkens Mickey, BF and GF.
+    loop1Effect = createLoopAtlas('welcomeLoop1', BlendMode.SCREEN);
+    loop2Effect = createLoopAtlas('welcomeLoop2', BlendMode.ADD);
+    loop3Effect = createLoopAtlas('welcomeLoop3', BlendMode.SCREEN);
+    resetLoopEffects();
+  }
+
+  function createLoopAtlas(id:String, blend:BlendMode):FlxSprite
+  {
+    var effect = new FlxSprite();
+    effect.frames = Paths.getSparrowAtlas('stages/' + id, 'shared');
+    effect.animation.addByPrefix('loop', id, 8, true);
+    effect.animation.play('loop');
+    effect.cameras = [camEffects];
+    effect.scrollFactor.set(0, 0);
+    effect.blend = blend;
+    effect.antialiasing = true;
+
+    var scale:Float = Math.max(FlxG.width / 320, FlxG.height / 180);
+    effect.scale.set(scale, scale);
+    effect.updateHitbox();
+    effect.screenCenter();
+    effect.active = false;
+    effect.visible = false;
+    effect.alpha = 0;
+    PlayState.instance.add(effect);
+    return effect;
+  }
+
+  function resetLoopEffects():Void
+  {
+    if (camEffects != null)
+    {
+      FlxTween.cancelTweensOf(camEffects);
+      camEffects.alpha = 0;
+      camEffects.visible = false;
+    }
+    resetLoopEffect(loop1Effect);
+    resetLoopEffect(loop2Effect);
+    resetLoopEffect(loop3Effect);
+  }
+
+  function resetLoopEffect(effect:FlxSprite):Void
+  {
+    if (effect == null) return;
+    FlxTween.cancelTweensOf(effect);
+    effect.alpha = 0;
+    effect.visible = false;
+    effect.active = false;
+  }
+
+  function showLoopEffects():Void
+  {
+    if (camEffects == null) return;
+    camEffects.visible = true;
+    FlxTween.cancelTweensOf(camEffects);
+    FlxTween.tween(camEffects, {alpha: 1}, 0.5, {ease: FlxEase.quartOut});
+    showLoopEffect(loop1Effect, 0.7, 0);
+    showLoopEffect(loop2Effect, 1, 0);
+  }
+
+  function showLoopEffect(effect:FlxSprite, alpha:Float, seconds:Float):Void
+  {
+    if (effect == null) return;
+    effect.visible = true;
+    effect.active = true;
+    FlxTween.cancelTweensOf(effect);
+    if (seconds <= 0) effect.alpha = alpha;
+    else FlxTween.tween(effect, {alpha: alpha}, seconds, {ease: FlxEase.quartOut});
+  }
+
+  function hideLoopEffect(effect:FlxSprite, seconds:Float):Void
+  {
+    if (effect == null) return;
+    FlxTween.cancelTweensOf(effect);
+    if (seconds <= 0)
+    {
+      resetLoopEffect(effect);
+      return;
+    }
+    FlxTween.tween(effect, {alpha: 0}, seconds, {
+      ease: FlxEase.quartOut,
+      onComplete: function(_) resetLoopEffect(effect)
+    });
+  }
+
+  function hideLoopEffects(seconds:Float):Void
+  {
+    if (camEffects == null) return;
+    FlxTween.cancelTweensOf(camEffects);
+    FlxTween.tween(camEffects, {alpha: 0}, seconds, {
+      onComplete: function(_)
+      {
+        resetLoopEffects();
+      }
+    });
+  }
+
+  function clearLegacyRainbow():Void
+  {
+    rainbowActive = false;
+    if (PlayState.instance != null && PlayState.instance.camGame != null) PlayState.instance.camGame.filters = [];
+  }
+
+  function playText():Void
+  {
+    if (mickeyText == null) return;
+
+    mickeyText.visible = true;
+    mickeyText.alpha = 1;
+    if (mickeyText.hasAnimation('TextPop')) mickeyText.anim.play('TextPop', true);
+    else if (mickeyText.hasAnimation('anim')) mickeyText.animation.play('anim', true);
+  }
+
+  public function doMickeyAnim():Void
+  {
+    var dad = getDad();
+    playLockedCharacterAnim(dad, 'haha', true, true);
+  }
+
+  public function doBrunoAnim():Void
+  {
+    var bf = getBoyfriend();
+    var gf = getGirlfriend();
+
+    playLockedCharacterAnim(bf, 'hey', true, true);
+    playLockedCharacterAnim(gf, 'cheer', true, true);
+
+    playStagePropAnim('donald', 'yay', true);
+    setStagePropOffset('donald', 0, -10);
+    playStagePropAnim('goofy', 'yay', true);
+    setStagePropOffset('goofy', 0, -10);
+  }
+
+  function playLockedCharacterAnim(character, anim:String, lockUntilEnd:Bool = false, locked:Bool = true):Void
+  {
+    if (character == null || !character.hasAnimation(anim)) return;
+
+    if (lockUntilEnd) character.forceAnimationForDuration(anim, LOCK_ANIMATION_SECONDS);
+    else character.playAnimation(anim, true, locked);
+  }
+
+  function unlockCharacterAnim(character):Void
+  {
+    if (character != null) character.canPlayOtherAnims = true;
+  }
+
+  function playHudBFSing(direction:Int, miss:Bool):Void
+  {
+    if (hudBF == null) return;
+
+    var dirName:String = directionName(direction);
+    var suffix:String = miss ? '' : syncHudBFIdleSuffix();
+    var anim:String = 'sing' + dirName + suffix + (miss ? 'miss' : '');
+    if (!hudBF.hasAnimation(anim)) anim = 'sing' + dirName + (miss ? 'miss' : '');
+    if (hudBF.hasAnimation(anim)) hudBF.playAnimation(anim, true, true);
+  }
+
+  function syncHudBFIdleSuffix():String
+  {
+    if (hudBF == null) return '';
+
+    var bf = getBoyfriend();
+    var suffix:String = bf != null ? bf.idleSuffix : '';
+    if (hudBF.idleSuffix != suffix) hudBF.idleSuffix = suffix;
+    return suffix;
+  }
+
+  function directionName(direction:Int):String
+  {
+    switch (direction)
+    {
+      case 0:
+        return 'LEFT';
+      case 1:
+        return 'DOWN';
+      case 2:
+        return 'UP';
+      case 3:
+        return 'RIGHT';
+      default:
+        return 'LEFT';
+    }
+  }
+
+  function playGFDanceRightSoon():Void
+  {
+    var gf = getGirlfriend();
+    if (gf == null) return;
+
+    if (gf.getCurrentAnimation() == 'danceRight')
+    {
+      playGFAnim('danceRight', true);
+    }
+    else
+    {
+      nextBeatPlayAnim = true;
+    }
+
+    new FlxTimer().start((Conductor.instance.stepLengthMs / 1000) * 3, function(timer)
+    {
+      playGFAnim('cuteanim', true);
+      setGFIdleSuffix('-alt');
+    });
+  }
+
+  function playGFAnim(anim:String, locked:Bool = false):Void
+  {
+    playLockedCharacterAnim(getGirlfriend(), anim, false, locked);
+  }
+
+  function setGFIdleSuffix(suffix:String):Void
+  {
+    var gf = getGirlfriend();
+    if (gf != null) gf.idleSuffix = suffix;
+  }
+
+  function setWelcomeAlt(active:Bool):Void
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+    var suffix = active ? '-alt' : '';
+    PlayState.instance.currentStage.setDonaldIdleSuffix(suffix);
+    PlayState.instance.currentStage.setGoofyIdleSuffix(suffix);
+  }
+
+  function setBaseStageVisible(visible:Bool):Void
+  {
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fish', 'fg', 'fg2', 'donald', 'goofy'])
+    {
+      var prop = getStageProp(name);
+      if (prop != null)
+      {
+        prop.visible = visible;
+        prop.active = visible;
+      }
+    }
+  }
+
+  function setCharacterVisible(visible:Bool):Void
+  {
+    var gf = getGirlfriend();
+    var bf = getBoyfriend();
+    if (gf != null) gf.visible = visible;
+    if (bf != null) bf.visible = visible;
+  }
+
+  function playStagePropAnim(name:String, anim:String, restart:Bool):Void
+  {
+    var prop = getStageProp(name);
+    if (prop == null || prop.animation == null) return;
+    if (prop.animation.exists(anim)) prop.animation.play(anim, restart, false, 0);
+  }
+
+  function setStagePropOffset(name:String, x:Float, y:Float):Void
+  {
+    var prop = getStageProp(name);
+    if (prop != null) prop.offset.set(x, y);
+  }
+
+  function setStageColor(name:String, color:Int):Void
+  {
+    var prop = getStageProp(name);
+    if (prop != null) prop.color = color;
+  }
+
+  function getStageProp(name:String)
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+    return PlayState.instance.currentStage.getNamedProp(name);
+  }
+
+  function getDad()
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+    return PlayState.instance.currentStage.getDad();
+  }
+
+  function getBoyfriend()
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+    return PlayState.instance.currentStage.getBoyfriend();
+  }
+
+  function getGirlfriend()
+  {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return null;
+    return PlayState.instance.currentStage.getGirlfriend();
+  }
+
+  function tweenSpotlightAlpha(alpha:Float, seconds:Float):Void
+  {
+    for (spotlight in spotlights)
+    {
+      if (spotlight != null) FlxTween.tween(spotlight, {alpha: alpha}, seconds, {ease: FlxEase.quartOut});
+    }
+  }
+
+  function setSpotlightAlpha(alpha:Float):Void
+  {
+    for (spotlight in spotlights)
+    {
+      if (spotlight != null) spotlight.alpha = alpha;
+    }
+  }
+
+  function tweenStrumlineX(strumline, defaults:Array<Float>, offset:Float, seconds:Float, ease):Void
+  {
+    if (strumline == null) return;
+
+    FlxTween.cancelTweensOf(strumline);
+
+    var baseX:Float = getStrumlineBaseX(strumline);
+    if (offset != 0)
+    {
+      setStrumlineGroupX(strumline, baseX);
+      setStrumlineX(strumline, defaults);
+      FlxTween.tween(strumline, {x: baseX + offset}, seconds, {ease: ease});
+    }
+    else
+    {
+      FlxTween.tween(strumline, {x: baseX}, seconds, {
+        ease: ease,
+        onComplete: function(_)
+        {
+          setStrumlineX(strumline, defaults);
+        }
+      });
+    }
+  }
+
+  function resetStrumlineXTweened():Void
+  {
+    tweenStrumlineX(PlayState.instance.playerStrumline, defaultPlayerPos, 0, 1.45, FlxEase.quartOut);
+    tweenStrumlineX(PlayState.instance.opponentStrumline, defaultCpuPos, 0, 1.45, FlxEase.quartOut);
+  }
+
+  function resetStrumlineX():Void
+  {
+    setStrumlineGroupX(PlayState.instance.playerStrumline, defaultPlayerLineX);
+    setStrumlineGroupX(PlayState.instance.opponentStrumline, defaultCpuLineX);
+    setStrumlineX(PlayState.instance.playerStrumline, defaultPlayerPos);
+    setStrumlineX(PlayState.instance.opponentStrumline, defaultCpuPos);
+  }
+
+  function setStrumlineGroupX(strumline, x:Float):Void
+  {
+    if (strumline == null) return;
+    FlxTween.cancelTweensOf(strumline);
+    strumline.x = x;
+  }
+
+  function getStrumlineBaseX(strumline):Float
+  {
+    if (PlayState.instance != null && strumline == PlayState.instance.playerStrumline && hasDefaultPlayerLineX) return defaultPlayerLineX;
+    if (hasDefaultCpuLineX) return defaultCpuLineX;
+    return strumline.x;
+  }
+
+  function setStrumlineX(strumline, defaults:Array<Float>):Void
+  {
+    if (strumline == null || strumline.strumlineNotes == null) return;
+
+    for (i in 0...strumline.strumlineNotes.members.length)
+    {
+      var strum = strumline.strumlineNotes.members[i];
+      if (strum != null && defaults.length > i) strum.x = defaults[i];
+    }
+  }
+
+  function tweenStrumlineAlpha(alpha:Float, seconds:Float):Void
+  {
+    tweenOneStrumlineAlpha(PlayState.instance.playerStrumline, alpha, seconds);
+    tweenOneStrumlineAlpha(PlayState.instance.opponentStrumline, alpha, seconds);
+    if (PlayState.instance.iconP1 != null) FlxTween.tween(PlayState.instance.iconP1, {alpha: alpha}, seconds);
+    if (PlayState.instance.iconP2 != null) FlxTween.tween(PlayState.instance.iconP2, {alpha: alpha}, seconds);
+    if (PlayState.instance.healthBar != null) FlxTween.tween(PlayState.instance.healthBar, {alpha: alpha}, seconds);
+    if (PlayState.instance.healthBarBG != null) FlxTween.tween(PlayState.instance.healthBarBG, {alpha: alpha}, seconds);
+  }
+
+  function tweenOneStrumlineAlpha(strumline, alpha:Float, seconds:Float):Void
+  {
+    if (strumline == null || strumline.strumlineNotes == null) return;
+
+    for (strum in strumline.strumlineNotes.members)
+    {
+      if (strum != null) FlxTween.tween(strum, {alpha: alpha}, seconds);
+    }
+  }
+
+  function resetStrumlineAlpha():Void
+  {
+    setOneStrumlineAlpha(PlayState.instance.playerStrumline, 1);
+    setOneStrumlineAlpha(PlayState.instance.opponentStrumline, 1);
+    if (PlayState.instance.iconP1 != null) PlayState.instance.iconP1.alpha = 1;
+    if (PlayState.instance.iconP2 != null) PlayState.instance.iconP2.alpha = 1;
+    if (PlayState.instance.healthBar != null) PlayState.instance.healthBar.alpha = 1;
+    if (PlayState.instance.healthBarBG != null) PlayState.instance.healthBarBG.alpha = 1;
+  }
+
+  function setOneStrumlineAlpha(strumline, alpha:Float):Void
+  {
+    if (strumline == null || strumline.strumlineNotes == null) return;
+
+    for (strum in strumline.strumlineNotes.members)
+    {
+      if (strum != null) strum.alpha = alpha;
+    }
+  }
+
+  function isLegacy():Bool
+  {
+    return PlayState.instance != null && PlayState.instance.currentVariation.toLowerCase() == 'legacy';
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "1.0.1",
+  "name": "goofy-feral-calm",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Goofy/goofy-feral-alt",
+  "scale": 0.72,
+  "offsets": [-200, -200],
+  "cameraOffsets": [-400, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle_1_alt",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left_1_alt",
+      "offsets": [-80, 15]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down_1_alt",
+      "offsets": [-1300, 295]
+    },
+    {
+      "name": "singUP",
+      "prefix": "up_1_alt",
+      "offsets": [20, 40]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right_1_alt",
+      "offsets": [60, 85]
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "goofy2",
+    "color": "#57D050"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

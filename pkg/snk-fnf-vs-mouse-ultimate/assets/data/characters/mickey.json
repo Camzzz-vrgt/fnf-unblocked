@@ -1,0 +1,98 @@
+{
+  "version": "1.0.1",
+  "name": "mickey",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Mickey/mickey true final fix",
+  "scale": 0.9,
+  "offsets": [0, 10],
+  "cameraOffsets": [-275, -25],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "animations/final_anim_idle_1"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "animations/ANIM_left",
+      "offsets": [105, 10]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "animations/ANIM_down",
+      "offsets": [252, -10]
+    },
+    {
+      "name": "singUP",
+      "prefix": "animations/ANIM_up",
+      "offsets": [175, 30]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "animations/ANIM_right",
+      "offsets": [100, -165]
+    },
+    {
+      "name": "idle-wuas",
+      "prefix": "ANIM/IDLE_ANIM",
+      "offsets": [-20, -45]
+    },
+    {
+      "name": "singLEFT-wuas",
+      "prefix": "ANIM/LEFT_ANIM",
+      "offsets": [-22, -45]
+    },
+    {
+      "name": "singDOWN-wuas",
+      "prefix": "ANIM/DOWN_ANIM",
+      "offsets": [-20, -44]
+    },
+    {
+      "name": "singUP-wuas",
+      "prefix": "ANIM/UP_ANIM",
+      "offsets": [-13, -45]
+    },
+    {
+      "name": "singRIGHT-wuas",
+      "prefix": "ANIM/RIGHT_ANIM",
+      "offsets": [-17, -45]
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "animations/final_anim_idle_2",
+      "offsets": [-11, -11]
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "animations/ANIM_down_alt",
+      "offsets": [252, -10]
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "animations/ANIM_right_alt",
+      "offsets": [100, -165]
+    },
+    {
+      "name": "singUP-awesome",
+      "prefix": "animations/ANIM_up_alt",
+      "offsets": [-162, -336]
+    },
+    {
+      "name": "surprise",
+      "prefix": "Mickey_surprise",
+      "offsets": [52, 15.5]
+    },
+    {
+      "name": "haha",
+      "prefix": "Placeholder_mickey_hey",
+      "offsets": [135, -10]
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "mickey",
+    "color": "#FF0000"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

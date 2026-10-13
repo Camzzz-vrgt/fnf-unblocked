@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				1,
+				-422
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "DeathLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				368,
+				74
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Retry",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Death0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/illusionMickey_DEAD",
+	"position": [
+		-1180,
+		0
+	],
+	"healthicon": "mickey",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		35,
+		55
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,199 @@
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.play.stage.StageProp;
+
+class ClubhouseLegacyStage extends Stage
+{
+  var girlfriendShaderApplied:Bool = false;
+  var donaldIdleSuffix:String = '';
+  var goofyIdleSuffix:String = '';
+  var lockedStageProps:Array<String> = [];
+
+  function new()
+  {
+    super('clubhouse-legacy');
+  }
+
+  override function buildStage():Void
+  {
+    super.buildStage();
+
+    filterSongProps();
+  }
+
+  override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (!girlfriendShaderApplied) applyGirlfriendColor();
+  }
+
+  override function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (event.beat % 2 == 0)
+    {
+      playStageIdle('donald', 'idle', true);
+      playStageIdle('goofy', 'idle', true);
+    }
+  }
+
+  override function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+
+    donaldIdleSuffix = '';
+    goofyIdleSuffix = '';
+    lockedStageProps = [];
+    filterSongProps();
+    // Vehement replaces the background Donald prop with its scripted Donald
+    // character. Keep the prop hidden after the stage-level reset.
+    if (songId() == 'vehement') setPropVisible('donald', false);
+  }
+
+  function filterSongProps():Void
+  {
+    var id:String = songId();
+
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fg', 'fg2'])
+      setPropVisible(name, true);
+
+    for (name in ['V-outside', 'V-window', 'V-bg', 'V-bgStuff', 'V-fg', 'V-fgA', 'V-lightBulb', 'V-fg3', 'V-fg2'])
+      setPropVisible(name, false);
+
+    var showLegacyFriends:Bool = id == 'vehement' || id == 'crisis' || (id == 'welcome' && isLegacyVariation());
+    setPropVisible('donald', showLegacyFriends);
+    setPropVisible('goofy', showLegacyFriends);
+  }
+
+  public function setVehementPhase(active:Bool):Void
+  {
+    for (name in ['outside', 'window', 'bg', 'bgStuff', 'fg', 'fg2'])
+      setPropVisible(name, !active);
+
+    for (name in ['V-outside', 'V-window', 'V-bg', 'V-bgStuff', 'V-fg', 'V-fg3', 'V-fg2'])
+      setPropVisible(name, active);
+
+    setPropVisible('V-fgA', false);
+    setPropVisible('V-lightBulb', false);
+  }
+
+  public function setVehementBulb(active:Bool):Void
+  {
+    setPropVisible('V-fg', !active);
+    setPropVisible('V-fgA', active);
+    setPropVisible('V-lightBulb', active);
+
+    var bulb:StageProp = getNamedProp('V-lightBulb');
+    if (bulb != null && active)
+    {
+      bulb.origin.set(bulb.frameWidth / 2, 0);
+      bulb.offset.set(0, 0);
+    }
+  }
+
+  function applyGirlfriendColor():Void
+  {
+    var girlfriend = getGirlfriend();
+    if (girlfriend == null) return;
+
+    var shader:AdjustColorShader = new AdjustColorShader();
+    shader.brightness = -30;
+    shader.hue = -15;
+    shader.saturation = -20;
+    girlfriend.shader = shader;
+    girlfriendShaderApplied = true;
+  }
+
+  function playStageIdle(name:String, anim:String, restart:Bool):Void
+  {
+    if (lockedStageProps.contains(name)) return;
+
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return;
+
+    var targetAnim:String = resolveStageIdle(name, anim);
+    if (prop.animation.exists(targetAnim))
+    {
+      prop.animation.play(targetAnim, restart, false, 0);
+    }
+  }
+
+  public function lockStagePropAnimation(name:String, anim:String):Void
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return;
+
+    if (prop.animation.exists(anim))
+    {
+      if (!lockedStageProps.contains(name)) lockedStageProps.push(name);
+      prop.animation.play(anim, true, false, 0);
+    }
+  }
+
+  public function unlockStagePropAnimation(name:String):Void
+  {
+    lockedStageProps.remove(name);
+  }
+
+  public function setDonaldIdleSuffix(suffix:String):Void
+  {
+    donaldIdleSuffix = suffix;
+    playStageIdle('donald', 'idle', true);
+  }
+
+  public function setGoofyIdleSuffix(suffix:String):Void
+  {
+    goofyIdleSuffix = suffix;
+    playStageIdle('goofy', 'idle', true);
+  }
+
+  function resolveStageIdle(name:String, anim:String):String
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop == null || prop.animation == null) return anim;
+
+    var suffix:String = '';
+    switch (name)
+    {
+      case 'donald':
+        suffix = donaldIdleSuffix;
+      case 'goofy':
+        suffix = goofyIdleSuffix;
+      default:
+        suffix = '';
+    }
+    if (suffix == null || suffix == '' || anim.indexOf('idle') != 0) return anim;
+
+    var candidate:String = anim + suffix;
+    if (prop.animation.exists(candidate)) return candidate;
+
+    candidate = 'idle' + suffix;
+    if (prop.animation.exists(candidate)) return candidate;
+
+    return anim;
+  }
+
+  function setPropVisible(name:String, visible:Bool):Void
+  {
+    var prop:StageProp = getNamedProp(name);
+    if (prop != null)
+    {
+      prop.visible = visible;
+      prop.active = visible;
+    }
+  }
+
+  function songId():String
+  {
+    return PlayState.instance?.currentSong?.id?.toLowerCase() ?? '';
+  }
+
+  function isLegacyVariation():Bool
+  {
+    return PlayState.instance?.currentVariation?.toLowerCase() == 'legacy';
+  }
+}

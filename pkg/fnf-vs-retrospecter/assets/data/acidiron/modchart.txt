@@ -1,0 +1,332 @@
+local defzoom = 0
+local exzoom = 0.1
+local intro = true
+local whitsle = false
+local curArr = 0
+local shakeMagnifier = 4
+local defProp = {} -- made it an array so I don't have 300 fucking variables lmao
+local arrowDefxposes = {}
+local arrowDefyposes = {}
+local arrowBeatposes = {}
+local arrowbeatTime = 0.15
+
+
+-- camera move stuff
+local followchars = false;
+local playerturn = false
+local xx = -400; -- retros
+local yy = -300;
+local xx2 = -40; -- bfs
+local yy2 = 0;
+local ofs = 2;
+local camShmooveTime = 0.1
+local defcamzoom = 0
+-- no more cam stuff
+
+
+local doLoftyShakes = false
+local playershit = 10
+local tenseSpeed = 0.5
+local mainspeed = 0.14
+
+function start(song)
+	ToCenterShit()
+    showOnlyStrums = true
+    for i=0,7 do
+        setActorAlpha(0,i)
+    end
+    defzoom = hudZoom
+    defProp[0] = getHudX()
+    defProp[1] = getHudY()
+    for i=0,7 do
+        arrowDefxposes[i] = getActorX(i)
+        arrowDefyposes[i] = getActorY(i)
+    end
+    genArrowposes(0)
+    genArrowposes(4)
+    setHudPosition(getHudX()+50,getHudY())
+    setHudZoom(defzoom+exzoom)
+    defcamzoom = cameraZoom
+end
+
+function update(elapsed)
+	local currentBeat = (songPos / 1000)*(bpm/60)
+    if intro == true then
+    setHudZoom(defzoom+exzoom)
+    end
+
+    if (curStep == 120) then -- fade in retros notes
+        for i=0,3 do
+            tweenFadeIn(i,1,0.5)
+        end
+    end
+
+    if (curStep == 245) then -- fade in bfs notes
+        for i=4,7 do
+            tweenFadeIn(i,1,0.5)
+        end
+    end
+
+    if (curStep == 375) then -- whitsle thing
+        whitsle = true
+    end
+    
+    if (curStep == 391) then
+        arrowpo(1)
+        whitsle = false
+        intro = false
+        setHudPosition(defProp[0],defProp[1])
+        showOnlyStrums = false
+    end
+
+    if (curStep == 404) or (curStep == 412) or (curStep == 420) or (curStep == 428) or (curStep == 436) or (curStep == 444) or (curStep == 452) or (curStep == 460) or (curStep == 468) or (curStep == 476) or (curStep == 484) or (curStep == 492) or (curStep == 500) or (curStep == 504) or (curStep == 508) or (curStep == 512) or (curStep == 514) or (curStep == 516) or (curStep == 517) or (curStep == 518) or (curStep == 519) or (curStep == 520) or (curStep == 524) or (curStep == 532) or (curStep == 540) or (curStep == 548) or (curStep == 556) or (curStep == 564) or (curStep == 572) or (curStep == 580) or (curStep == 588) or (curStep == 596) or (curStep == 604) or (curStep == 612) or (curStep == 620) or (curStep == 628) or (curStep == 636) or (curStep == 644) or (curStep == 652) or (curStep == 660) or (curStep == 668) or (curStep == 676) or (curStep == 684) or (curStep == 692) or (curStep == 700) or (curStep == 708) or (curStep == 716) or (curStep == 724) or (curStep == 732) or (curStep == 740) or (curStep == 748) or (curStep == 756) or (curStep == 760) or (curStep == 764) or (curStep == 768) or (curStep == 770) or (curStep == 772) or (curStep == 773) or (curStep == 774) or (curStep == 775) or (curStep == 776) then -- the note beats 
+        amogus(0)
+        amogus(4)
+        arrowbeatTime = 0.001
+    end
+
+    if whitsle == true then
+        whitslething() -- it's a mess
+    end
+
+    if (curStep == 776) then -- turn on arrow camera thingy i guess :/
+        followchars = true
+    end
+
+    if (curStep == 1031) then -- turn off arrow camera thingy i guess :/
+        followchars = false
+    end
+
+    if (curStep == 1288) or (curStep == 2056) then -- reused lofty shakes lmfao
+        doLoftyShakes = true
+    end
+    
+    if doLoftyShakes == true then -- does the shakes from vsjim lofty. Basicly was really fitting here And I will copy and paste my own code B)
+        loftyShakes(0,true,currentBeat)
+        loftyShakes(4,true,currentBeat)
+    end
+
+    if (curStep == 1544) then -- turns off lofty shakes and turns on camera arrow thingy
+        doLoftyShakes = false
+        followchars = true
+        ToCenterShit()
+    end
+
+    if (curStep == 1797) then -- SPINSS IN MIDDLE SCROLL THINGGGG
+		bruh()
+    end
+
+    if (curStep == 1925) then -- SPINSS out of the MIDDLE SCROLL THINGGGG
+		Returnbruh()
+    end
+
+    if (curStep == 1800) then -- turns off camera thingy 
+        followchars = false
+    end
+
+    if (curStep == 2312) then -- SPINSS out of the MIDDLE SCROLL THINGGGG
+        doLoftyShakes = false
+        ToCenterShit()
+    end
+end
+
+function stepHit (step)
+    if not (arrowbeatTime > 0.15) then
+        arrowbeatTime = arrowbeatTime+0.05
+    end
+end
+
+function beatHit (beat)
+end
+
+function playerOneSing(data)
+    if followchars == true then 
+        camshit(data)
+    end
+end
+
+function playerTwoSing(data)
+    if followchars == true then 
+        camshit(data)
+    end
+end
+
+function playerOneTurn()
+    playerturn = true
+end
+
+function playerTwoTurn()
+    playerturn = false
+end
+
+--stupid functions
+
+function bruh()
+    local currentBeat = (songPos / 1000)*(bpm/60)
+    for i=0,3 do
+        tweenPosXAngle(i, _G['defaultStrum'..i..'X'] - 275,getActorAngle(i) + 360, tenseSpeed, 'setDefault')
+        tweenFadeOut(i,-40,8)
+    end
+    for i=4,7 do
+        tweenPosXAngle(i, _G['defaultStrum'..i..'X'] - 275,getActorAngle(i) + 360, tenseSpeed, 'setDefault')
+    end
+end
+
+function Returnbruh()
+    local currentBeat = (songPos / 1000)*(bpm/60)
+    for i=0,3 do
+        tweenPosXAngle(i, _G['defaultStrum'..i..'X'] + 275,getActorAngle(i) - 360, tenseSpeed, 'setDefault')
+        tweenFadeIn(i,255,8)
+    end
+    for i=4,7 do
+        tweenPosXAngle(i, _G['defaultStrum'..i..'X'] + 275,getActorAngle(i) - 360, tenseSpeed, 'setDefault')
+    end
+end
+
+function loftyShakes(additive,usex,funnybeat)
+	for i=0+additive,0+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32-playershit * math.cos((funnybeat) * math.pi), i)
+	end
+	for i=2+additive,2+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32-playershit * math.cos((funnybeat) * math.pi), i)
+	end
+
+	for i=1+additive,1+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32+playershit * math.cos((funnybeat) * math.pi), i)
+	end
+	for i=3+additive,3+additive do
+        if usex == true then
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((funnybeat) * math.pi), i)
+        end
+		setActorY(_G['defaultStrum'..i..'Y'] + 32+playershit * math.cos((funnybeat) * math.pi), i)
+	end
+end
+
+function triggerEvent(event,val1,val2) -- and this is how I put psych engine shit in kade : ))))))))))))
+    if (event == 'Camera Follow Pos') then
+        local res1 = val1
+        local res2 = val2
+        if (val1 == -999) then
+            res1 = xx
+        end
+        if (val2 == -999) then
+            res2 = yy
+        end
+        tweenCameraZoomIn(defcamzoom+0.02, camShmooveTime)
+        tweenCameraPos(res1,res2,camShmooveTime)
+    end
+end
+
+function genArrowposes(additive)
+    arrowBeatposes[0+additive] = -50
+    arrowBeatposes[1+additive] = -25
+    arrowBeatposes[2+additive] = 25
+    arrowBeatposes[3+additive] = 50
+end
+
+function amogus(additive)
+    for i=0+additive,3+additive do
+        setActorX(arrowDefxposes[i] + arrowBeatposes[i], i)
+        tweenPos(i, arrowDefxposes[i], getActorY(i), arrowbeatTime)
+    end
+end
+
+function camshit(data)
+    if followchars == true then
+        if playerturn == false then
+            --setProperty('defaultCamZoom',0.8)
+            if data == 4 then
+                triggerEvent('Camera Follow Pos',xx-ofs,yy)
+            end
+            if data == 7 then
+                triggerEvent('Camera Follow Pos',xx+ofs,yy)
+            end
+            if data == 6 then
+                triggerEvent('Camera Follow Pos',xx,yy-ofs)
+            end
+            if data == 5 then
+                triggerEvent('Camera Follow Pos',xx,yy+ofs)
+            end
+        else
+            --setProperty('defaultCamZoom',0.7)
+            if data == 0 then
+                triggerEvent('Camera Follow Pos',xx2-ofs,yy2)
+            end
+            if data == 3 then
+                triggerEvent('Camera Follow Pos',xx2+ofs,yy2)
+            end
+            if data == 2 then
+                triggerEvent('Camera Follow Pos',xx2,yy2-ofs)
+            end
+            if data == 1 then
+                triggerEvent('Camera Follow Pos',xx2,yy2+ofs)
+            end
+        end
+    else
+        triggerEvent('Camera Follow Pos',-999,-999)
+    end
+end
+
+function whitslething()
+    curArr = curArr+1
+    if (curArr == 1) then
+        arrowpo(1)
+    elseif (curArr == 2) then
+        arrowpo(2)
+    elseif (curArr == 3) then
+        arrowpo(-2)
+    elseif (curArr == 4) then
+        arrowpo(1)
+    elseif (curArr == 5) then
+        arrowpo(-1)
+    elseif (curArr == 6) then
+        arrowpo(1)
+    elseif (curArr == 7) then
+        arrowpo(-2)
+    elseif (curArr == 8) then
+        arrowpo(1)
+    elseif (curArr == 9) then
+        arrowpo(2)
+    elseif (curArr == 10) then
+        arrowpo(-2)
+    elseif (curArr == 11) then
+        arrowpo(1)
+    elseif (curArr == 12) then
+        arrowpo(-1)
+    elseif (curArr == 13) then
+        arrowpo(-1)
+    elseif (curArr == 14) then
+        arrowpo(1)
+    elseif (curArr == 15) then
+        arrowpo(-2)
+        curArr = 0
+    end
+end
+
+function arrowpo(leAdd)
+    for i=0,7 do
+        setActorX(_G['defaultStrum'..i..'X'] + leAdd*shakeMagnifier, i)
+        setActorY(_G['defaultStrum'..i..'Y'] + (leAdd*-1)*shakeMagnifier, i)
+    end
+end
+
+function setDefault(id)
+	setActorAngle(0,id)
+	_G['defaultStrum'..id..'X'] = getActorX(id)
+end
+
+function ToCenterShit()
+	for i=0,7 do
+	tweenPosXAngleIn(i, _G['defaultStrum'..i..'X'], getActorAngle(i), mainspeed)
+	tweenPosYAngleIn(i, _G['defaultStrum'..i..'Y'], getActorAngle(i), mainspeed)
+	end
+end

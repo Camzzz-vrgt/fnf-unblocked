@@ -1,0 +1,57 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "Scallywag",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["normal"],
+    "characters": {
+      "player": "bf",
+      "girlfriend": "donald",
+      "opponent": "mendax",
+      "opponentVocals": ["mendax"],
+      "playerVocals": ["bf"]
+    },
+    "stage": "forest",
+    "noteStyle": "vmu",
+    "album": "volume1",
+    "ratings": {
+      "normal": 0
+    }
+  },
+  "generatedBy": "Snokido Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 100,
+      "n": 1,
+      "d": 8,
+      "bt": [4]
+    },
+    {
+      "t": 300,
+      "bpm": 100,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 51900,
+      "bpm": 90
+    },
+    {
+      "t": 53233.3333333333,
+      "bpm": 100
+    },
+    {
+      "t": 55633.3333333333,
+      "bpm": 141
+    },
+    {
+      "t": 113080.141843972,
+      "bpm": 105
+    }
+  ]
+}

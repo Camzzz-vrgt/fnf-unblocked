@@ -1,0 +1,70 @@
+import flixel.tweens.FlxEase;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.event.ScriptedSongEvent;
+
+class ScrollSpeedChangeEvent extends ScriptedSongEvent
+{
+  public function new()
+  {
+    super('Scroll Speed Change', {processOldEvents: true});
+  }
+
+  public override function handleEvent(data):Void
+  {
+    if (PlayState.instance == null) return;
+
+    var params = data.getArray('params') ?? [];
+    var absolute = params.length > 0 ? params[0] : true;
+    var scroll = params.length > 1 ? Std.parseFloat(Std.string(params[1])) : (data.getFloat('scroll') ?? 1);
+    var durationSteps = params.length > 2 ? Std.parseFloat(Std.string(params[2])) : (data.getFloat('duration') ?? 0);
+    var easeName = params.length > 3 ? Std.string(params[3]) : (data.getString('ease') ?? 'linear');
+    var easeDir = params.length > 4 ? Std.string(params[4]) : (data.getString('easeDir') ?? 'In');
+
+    if (absolute == false) scroll *= PlayState.instance.currentChart?.scrollSpeed ?? 1;
+
+    var ease = resolveEase(easeName, easeDir);
+    var seconds = Conductor.instance.stepLengthMs * durationSteps / 1000;
+    PlayState.instance.tweenScrollSpeed(scroll, seconds, ease, ['playerStrumline', 'opponentStrumline']);
+  }
+
+  function resolveEase(name, dir)
+  {
+    if (name == 'linear' || name == 'CLASSIC') return FlxEase.linear;
+
+    switch ('$name$dir')
+    {
+      case 'sineIn': return FlxEase.sineIn;
+      case 'sineOut': return FlxEase.sineOut;
+      case 'sineInOut': return FlxEase.sineInOut;
+      case 'quadIn': return FlxEase.quadIn;
+      case 'quadOut': return FlxEase.quadOut;
+      case 'quadInOut': return FlxEase.quadInOut;
+      case 'cubeIn': return FlxEase.cubeIn;
+      case 'cubeOut': return FlxEase.cubeOut;
+      case 'cubeInOut': return FlxEase.cubeInOut;
+      case 'quartIn': return FlxEase.quartIn;
+      case 'quartOut': return FlxEase.quartOut;
+      case 'quartInOut': return FlxEase.quartInOut;
+      case 'quintIn': return FlxEase.quintIn;
+      case 'quintOut': return FlxEase.quintOut;
+      case 'quintInOut': return FlxEase.quintInOut;
+      case 'expoIn': return FlxEase.expoIn;
+      case 'expoOut': return FlxEase.expoOut;
+      case 'expoInOut': return FlxEase.expoInOut;
+      case 'circIn': return FlxEase.circIn;
+      case 'circOut': return FlxEase.circOut;
+      case 'circInOut': return FlxEase.circInOut;
+      case 'backIn': return FlxEase.backIn;
+      case 'backOut': return FlxEase.backOut;
+      case 'backInOut': return FlxEase.backInOut;
+      case 'bounceIn': return FlxEase.bounceIn;
+      case 'bounceOut': return FlxEase.bounceOut;
+      case 'bounceInOut': return FlxEase.bounceInOut;
+      case 'elasticIn': return FlxEase.elasticIn;
+      case 'elasticOut': return FlxEase.elasticOut;
+      case 'elasticInOut': return FlxEase.elasticInOut;
+      default: return FlxEase.linear;
+    }
+  }
+}

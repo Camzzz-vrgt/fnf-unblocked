@@ -1,0 +1,43 @@
+{
+  "version": "1.0.1",
+  "name": "markus-legacy",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/Mickey/Legacy",
+  "scale": 0.8,
+  "offsets": [-100, -20],
+  "cameraOffsets": [-250, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-25, 10]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [40, -5]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [10, -5]
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [305, 265]
+    }
+  ],
+  "applyStageMatrix": true,
+  "healthIcon": {
+    "id": "mickey",
+    "color": "#FF0000"
+  },
+  "startingAnimation": "idle",
+  "offsetMode": "codename",
+  "playerOffsets": false
+}

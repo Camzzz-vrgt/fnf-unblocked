@@ -1,0 +1,43 @@
+import funkin.modding.events.ScriptEvent;
+import funkin.play.PlayState;
+import funkin.play.character.AnimateAtlasCharacter;
+
+using StringTools;
+
+class DonaldCharacter extends AnimateAtlasCharacter
+{
+  function new()
+  {
+    super('donald');
+  }
+
+  override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    if (isCrisisLegacy() && hasAnimation('idle-mad3'))
+    {
+      idleSuffix = '-mad3';
+      dance(true);
+    }
+  }
+
+  override function dance(force:Bool = false):Void
+  {
+    if (idleSuffix != '-alt' && getCurrentAnimation().startsWith('idle'))
+    {
+      playAnimation('idle$idleSuffix', true);
+      return;
+    }
+
+    super.dance(force);
+  }
+
+  function isCrisisLegacy():Bool
+  {
+    return PlayState.instance != null
+      && PlayState.instance.currentSong != null
+      && PlayState.instance.currentSong.id.toLowerCase() == 'crisis'
+      && PlayState.instance.currentVariation.toLowerCase() == 'legacy';
+  }
+}

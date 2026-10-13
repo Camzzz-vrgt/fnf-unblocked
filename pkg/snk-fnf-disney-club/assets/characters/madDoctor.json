@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-10
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "madDoctor LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-8
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "madDoctor DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-14
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "madDoctor UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-25
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "madDoctor RIGHT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "madDoctor idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/madDoctor",
+	"position": [
+		-760,
+		-750
+	],
+	"healthicon": "maddoctor",
+	"flip_x": false,
+	"healthbar_colors": [
+		219,
+		180,
+		125
+	],
+	"camera_position": [
+		550,
+		740
+	],
+	"sing_duration": 6.1,
+	"scale": 0.4
+}

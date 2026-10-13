@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-3,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "gary left"
+		},
+		{
+			"offsets": [
+				-2,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "gary up"
+		},
+		{
+			"offsets": [
+				-12,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "gary down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "gary right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "explosion",
+			"indices": [],
+			"name": "gary explosion"
+		},
+		{
+			"offsets": [
+				-2,
+				5
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "gary idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gary",
+	"position": [
+		-920,
+		-560
+	],
+	"healthicon": "gary",
+	"flip_x": false,
+	"healthbar_colors": [
+		64,
+		116,
+		170
+	],
+	"camera_position": [
+		1180,
+		560
+	],
+	"sing_duration": 6.1,
+	"scale": 0.35
+}
