@@ -1,0 +1,167 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				21
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				44
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				16
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				22
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF_missleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				-8
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF_missdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				46
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BF_missup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-37,
+				29
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF_Yea",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				19
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "BF_hit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				16
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF_missright",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-35,
+				24
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "BF_scared"
+		},
+		{
+			"offsets": [
+				-35,
+				24
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF_scared"
+		},
+		{
+			"offsets": [
+				-3,
+				27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "dodge",
+			"loop": false,
+			"name": "dodge"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Trep_bfBLOOD",
+	"has_win_anim": true,
+	"position": [
+		0,
+		400
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		249
+	],
+	"camera_position": [
+		-20,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
