@@ -1,0 +1,112 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MasklessInfinite_IdleDance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-65
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MasklessInfinite_SingDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				9
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MasklessInfinite_SingLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-2
+			],
+			"anim": "holdLEFTstart",
+			"fps": 24,
+			"name": "MasklessInfinite_HoldLEFTStart",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-2,
+				-2
+			],
+			"anim": "holdLEFT",
+			"fps": 24,
+			"name": "MasklessInfinite_HoldLEFT instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				9
+			],
+			"anim": "holdLEFTend",
+			"fps": 24,
+			"name": "MasklessInfinite_HoldLEFTEnd",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-81
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MasklessInfinite_SingUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				40
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MasklessInfinite_SingRIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/maskless_infinite",
+	"position": [
+		-200,
+		-50
+	],
+	"healthicon": "icon-infinite",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		80
+	],
+	"camera_position": [
+		150,
+		150
+	],
+	"sing_duration": 6.1,
+	"shadow_Offset": 60,
+	"scale": 0.65
+}

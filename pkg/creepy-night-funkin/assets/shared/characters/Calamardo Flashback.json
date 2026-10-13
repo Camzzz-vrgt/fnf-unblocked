@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-57,
+				2
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "RECUP_calamardo_tristoson-1 red mist idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				276,
+				-2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "RECUP_calamardo_tristoson-1 red mist left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-12
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "RECUP_calamardo_tristoson-1 red mist down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				212
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "RECUP_calamardo_tristoson-1 red mist up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				-15
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RECUP_calamardo_tristoson-1 red mist right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/RECUP_calamardo_tristoson-1",
+	"position": [
+		70,
+		140
+	],
+	"healthicon": "calamardo",
+	"flip_x": true,
+	"healthbar_colors": [
+		180,
+		182,
+		215
+	],
+	"camera_position": [
+		35,
+		-230
+	],
+	"sing_duration": 6.09999999999999,
+	"scale": 2,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,57 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				99,
+				164
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "bf-con-merca tetardas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				99,
+				164
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "bf-con-merca tetardas",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				99,
+				164
+			],
+			"anim": "firstDeath",
+			"fps": 1,
+			"name": "bf-con-merca tetardas",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf-con-merca",
+	"position": [
+		-60,
+		190
+	],
+	"healthicon": "bf-merca",
+	"flip_x": true,
+	"healthbar_colors": [
+		80,
+		165,
+		235
+	],
+	"camera_position": [
+		140,
+		20
+	],
+	"sing_duration": 4,
+	"scale": 0.5,
+	"_editor_isPlayer": true
+}

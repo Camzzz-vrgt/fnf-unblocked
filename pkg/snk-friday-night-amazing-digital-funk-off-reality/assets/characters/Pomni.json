@@ -1,0 +1,151 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-150,
+				-182
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Pomni_idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				29,
+				-177
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			],
+			"name": "Pomni_Left"
+		},
+		{
+			"offsets": [
+				-154,
+				-225
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			],
+			"name": "Pomni_Down"
+		},
+		{
+			"offsets": [
+				-60,
+				-97
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			],
+			"name": "Pomni_Up"
+		},
+		{
+			"offsets": [
+				-193,
+				-154
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			],
+			"name": "Pomni_Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Pomni",
+	"position": [
+		-90,
+		60
+	],
+	"healthicon": "pomni",
+	"flip_x": false,
+	"healthbar_colors": [
+		248,
+		55,
+		76
+	],
+	"camera_position": [
+		120,
+		110
+	],
+	"sing_duration": 5.5,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,61 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				449,
+				-98
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "anim2",
+			"indices": [],
+			"name": "20"
+		},
+		{
+			"offsets": [
+				891,
+				-46
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "anim3",
+			"indices": [],
+			"name": "30"
+		},
+		{
+			"offsets": [
+				470,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "anim1",
+			"indices": [
+				0,
+				0,
+				1,
+				1
+			],
+			"name": "10"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/slinky-anim",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

@@ -1,0 +1,39 @@
+{
+	"dialogue": [
+		{
+			"command": "playmusic",
+			"text": "frozen-projections",
+			"number": 0.3
+		},
+		{
+			"character": "Sonic",
+			"expression": "Snarky",
+			"text": "Why did you come back? Do you like me that much?",
+			"sound": "sonic1"
+		},
+		{
+			"character": "Infinite",
+			"expression": "Mad",
+			"text": "This is not about you!",
+			"sound": "infinite1"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Frustrated",
+			"text": "Then what IS it about, you masked clown?!",
+			"sound": "sonic2"
+		},
+		{
+			"character": "Infinite",
+			"expression": "Normal",
+			"text": "That's none of your concern, hero. I've come here to set things straight.",
+			"sound": "infinite2"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Frustrated",
+			"text": "...",
+			"sound": "sonic3"
+		}
+	]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				-80
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "documicevil idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				-72
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "documicevil right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-66
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "documicevil down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-121,
+				-74
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "documicevil left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-66,
+				-75
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "documicevil up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/documicevil",
+	"position": [
+		-430,
+		-460
+	],
+	"healthicon": "execum",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		96,
+		91
+	],
+	"camera_position": [
+		380,
+		210
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

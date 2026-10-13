@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="6.png" width="1977" height="1791">
+	<SubTexture name="Idle0000" x="1187" y="0" width="396" height="574" frameX="-1" frameY="-2" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0001" x="1583" y="0" width="394" height="574" frameX="-2" frameY="-2" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0002" x="394" y="0" width="397" height="570" frameX="-0" frameY="-2" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0003" x="791" y="0" width="396" height="570" frameX="-0" frameY="-2" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0005" x="0" y="0" width="394" height="566" frameX="-2" frameY="-2" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0024" x="0" y="566" width="389" height="576" frameX="-8" frameY="-0" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Idle0025" x="389" y="570" width="389" height="576" frameX="-8" frameY="-0" frameWidth="425" frameHeight="577"/>
+	<SubTexture name="Left0011" x="778" y="570" width="402" height="577" frameX="-173" frameY="-2" frameWidth="595" frameHeight="585"/>
+	<SubTexture name="Up0006" x="1026" y="1169" width="520" height="622" frameX="-22" frameY="-93" frameWidth="661" frameHeight="730"/>
+	<SubTexture name="Up0008" x="511" y="1147" width="515" height="617" frameX="-33" frameY="-97" frameWidth="661" frameHeight="730"/>
+	<SubTexture name="Up0009" x="0" y="1146" width="511" height="613" frameX="-57" frameY="-98" frameWidth="661" frameHeight="730"/>
+	<SubTexture name="Up0010" x="1180" y="574" width="494" height="595" frameX="-93" frameY="-129" frameWidth="661" frameHeight="730"/>
+</TextureAtlas>

@@ -1,0 +1,56 @@
+{
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"position": [
+		100,
+		275
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/gf-rook",
+	"sing_duration": 4,
+	"healthicon": "gf-rook",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "Idle_Dance_Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-2
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "Idle_dance_right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "sad",
+			"indices": [],
+			"name": "ComboBreak"
+		}
+	]
+}

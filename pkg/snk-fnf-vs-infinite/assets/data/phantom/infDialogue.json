@@ -1,0 +1,147 @@
+{
+	"dialogue": [
+		{
+			"command": "bg",
+			"text": "black"
+		},
+		{
+			"command": "playmusic",
+			"text": "cutscene"
+		},
+		{
+			"command": "center"
+		},
+		{
+			"command": "fadein"
+		},
+		{
+			"character": "Fumo",
+			"expression": "Normal",
+			"text": "Several hours before Sonic, Tails and Amy get lost on the Starfall Islands...",
+			"sound": ""
+		},
+		{
+			"command": "fadeout2"
+		},
+		{
+			"command": "hidetext"
+		},
+		{
+			"command": "bg",
+			"text": "mystic_jungle"
+		},
+		{
+			"command": "fadein"
+		},
+		{
+			"command": "timer",
+			"number": 0.5
+		},
+		{
+			"command": "normal"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Normal",
+			"text": "Tails said something about his radar locating some strange signals from Mystic Jungle. It should be right ahead...",
+			"sound": "sonic1"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Thinking",
+			"text": "Something about readings similar to the Phantom Ruby...",
+			"sound": "sonic2"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Confusion",
+			"text": "Ugh, after all this time, a Ruby sighting in Mystic Jungle?",
+			"sound": "sonic3"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Frustrated",
+			"text": "*sigh* Give me a break!",
+			"sound": "sonic4"
+		},
+		{
+			"command": "bg",
+			"text": "mystic_jungle2"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Thinking",
+			"text": "Hm... Eggman wouldn't just leave the Ruby out like that...",
+			"sound": "sonic5"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Confusion",
+			"text": "Who's doing this?",
+			"sound": "sonic6"
+		},
+		{
+			"command": "stopmusic"
+		},
+		{
+			"command": "rubystart"
+		},
+		{
+			"command": "bg",
+			"text": "sunset_heights"
+		},
+		{
+			"command": "rubyend"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Confusion",
+			"text": "The City? This must be the Ruby's doing, but why would it do this?",
+			"sound": "sonic7"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Thinking",
+			"text": "More importantly, where are my friends?",
+			"sound": "sonic8"
+		},
+		{
+			"command": "bgfadeout"
+		},
+		{
+			"command": "playmusic",
+			"text": "frozen-projections",
+			"number": 0.3
+		},
+		{
+			"character": "Infinite",
+			"expression": "Normal",
+			"text": "I can feel the fear in your heart, hero.",
+			"sound": "infinite1"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Shocked",
+			"text": "You again?! What's going on here...",
+			"sound": "sonic9"
+		},
+		{
+			"character": "Infinite",
+			"expression": "Pointing",
+			"text": "Will you back down and flee? Or will you throw your life away in battle?",
+			"sound": "infinite2"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Snarky",
+			"text": "Heh, you and I both know I'm not the type to back down from ANY fight!",
+			"sound": "sonic10"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Snarky",
+			"text": "Bring it on!",
+			"sound": "sonic11"
+		}
+	]
+}

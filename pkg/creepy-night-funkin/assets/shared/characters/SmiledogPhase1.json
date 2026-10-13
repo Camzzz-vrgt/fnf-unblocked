@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "smile_dog-5 IDLE dance :)"
+		},
+		{
+			"offsets": [
+				29,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "smile_dog-5 note Left"
+		},
+		{
+			"offsets": [
+				17,
+				-93
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "smile_dog-5 note down"
+		},
+		{
+			"offsets": [
+				-6,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "smile_dog-5 note UP"
+		},
+		{
+			"offsets": [
+				-9,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "smile_dog-5 note RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/smile_dog-5",
+	"position": [
+		240,
+		40
+	],
+	"healthicon": "sdog",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		40,
+		40
+	],
+	"camera_position": [
+		10,
+		0
+	],
+	"sing_duration": 6.09999999999999,
+	"scale": 1.6,
+	"_editor_isPlayer": false
+}

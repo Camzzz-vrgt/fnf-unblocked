@@ -1,0 +1,56 @@
+{
+    "no_antialiasing": false,
+    "image": "characters/bf-genocide",
+    "position": [
+        -100,
+        170
+    ],
+    "healthicon": "bf",
+    "flip_x": true,
+    "healthbar_colors": [
+        0,
+        0,
+        0
+    ],
+    "camera_position": [
+        300,
+        100
+    ],
+    "sing_duration": 4,
+    "scale": 1,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "firstDeath",
+            "indices": [],
+            "name": "gbfdeathstart"
+        },
+        {
+            "offsets": [
+                -250,
+                -130
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "deathLoop",
+            "indices": [],
+            "name": "gbfdeathloop"
+        },
+        {
+            "offsets": [
+                -269,
+                -159
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "deathConfirm",
+            "indices": [],
+            "name": "gbfdeathretry"
+        }
+    ]
+}

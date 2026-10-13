@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		143,
+		57,
+		28
+	],
+	"position": [
+		150,
+		300
+	],
+	"no_antialiasing": false,
+	"scale": 1.25,
+	"camera_position": [
+		-90,
+		-170
+	],
+	"image": "characters/marko",
+	"sing_duration": 7.5,
+	"healthicon": "marko-martha",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-1.25,
+				270
+			],
+			"fps": 22,
+			"anim": "idle",
+			"indices": [],
+			"name": "Marko_idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				81.25,
+				362
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Marko_up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				155,
+				99
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Marko_down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				172.5,
+				118.75
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Marko_left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-138.75,
+				231.25
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Marko_right"
+		}
+	]
+}

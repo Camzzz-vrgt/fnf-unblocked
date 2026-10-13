@@ -1,0 +1,63 @@
+{
+	"storyName": "Infinite",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		255,
+		0,
+		80
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"Phantom",
+			"maskedinfinite",
+			[
+				250,
+				119,
+				35
+			],
+			"JACKALRUIN"
+		],
+		[
+			"Masked",
+			"maskedinfinite",
+			[
+				250,
+				119,
+				35
+			],
+			"JACKALRUIN"
+		],
+		[
+			"Fragility",
+			"maskedinfinite",
+			[
+				250,
+				119,
+				35
+			],
+			"JACKALRUIN"
+		],
+		[
+			"RUBY INSANITY",
+			"infinite",
+			[
+				204,
+				0,
+				255
+			],
+			"JACKALRUIN"
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Infinite",
+	"hiddenUntilUnlocked": false,
+	"difficulties": "Hard"
+}

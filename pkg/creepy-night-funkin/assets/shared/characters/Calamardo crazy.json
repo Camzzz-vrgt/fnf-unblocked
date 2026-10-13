@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				276,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "red_mist red mist left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				231
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "red_mist red mist up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				-34
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "red_mist red mist right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				132,
+				-33
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "red_mist Red Mist down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				133,
+				-29
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "red_mist Red mist idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/red_mist",
+	"position": [
+		370,
+		260
+	],
+	"healthicon": "calamardo",
+	"flip_x": false,
+	"healthbar_colors": [
+		180,
+		182,
+		215
+	],
+	"camera_position": [
+		-190,
+		-230
+	],
+	"sing_duration": 9.59999999999998,
+	"scale": 2,
+	"_editor_isPlayer": false
+}

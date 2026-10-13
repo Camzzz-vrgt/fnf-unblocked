@@ -1,0 +1,57 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+
+class HideHUDEvent extends SongEvent
+{
+  function new()
+  {
+    super('HideHUD');
+  }
+
+  override function handleEvent(data)
+  {
+    if (PlayState.instance == null) return;
+
+    var duration:Float = data.value.duration;
+    if (duration == null) duration = 0.25;
+
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.visible = true;
+
+    if (duration <= 0)
+    {
+      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camHUD.visible = false;
+      return;
+    }
+
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, duration,
+      {
+        ease: FlxEase.quadOut,
+        onComplete: function(_)
+        {
+          if (PlayState.instance != null) PlayState.instance.camHUD.visible = false;
+        }
+      });
+  }
+
+  override function getTitle()
+  {
+    return "Hide HUD";
+  }
+
+  override function getEventSchema()
+  {
+    return [
+      {
+        name: 'duration',
+        title: 'Fade duration',
+        defaultValue: 0.25,
+        min: 0,
+        type: 'float'
+      }
+    ];
+  }
+}

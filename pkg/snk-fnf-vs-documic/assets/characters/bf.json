@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				300,
+				300
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "bfdocumic idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				299,
+				299
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "bfdocumic left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				302,
+				302
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "bfdocumic down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				299,
+				302
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "bfdocumic up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				304,
+				298
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "bfdocumic right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				304,
+				300
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 12,
+			"name": "bfdocumic MISSright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				300,
+				302
+			],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "bfdocumic MISSdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				300,
+				301
+			],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "bfdocumic MISSup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				298,
+				301
+			],
+			"anim": "singLEFTmiss",
+			"fps": 12,
+			"name": "bfdocumic MISSleft",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfdocumic",
+	"position": [
+		40,
+		270
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		86,
+		89,
+		193
+	],
+	"camera_position": [
+		280,
+		-160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

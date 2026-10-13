@@ -1,0 +1,86 @@
+{
+	"healthbar_colors": [
+		168,
+		32,
+		43
+	],
+	"position": [
+		-5,
+		110
+	],
+	"no_antialiasing": false,
+	"scale": 1.15,
+	"camera_position": [
+		0,
+		-10
+	],
+	"image": "characters/markus-mad/1, characters/markus-mad/2, characters/markus-mad/3, characters/markus-mad/4, characters/markus-mad/5, characters/markus-mad/6, characters/markus-mad/7, characters/markus-mad/8, characters/markus-mad/9, characters/markus-mad/10, characters/markus-mad/11, characters/markus-mad/12, characters/markus-mad/13",
+	"sing_duration": 6.8,
+	"healthicon": "markus-mad",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Markus_Idle_dance"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				69,
+				3.45
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [
+				3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+			],
+			"name": "Markus_Left_Note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				201.25,
+				-43.7
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+			],
+			"name": "Markus_Down_note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34.5,
+				139.15
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+			],
+			"name": "Markus_Up_Note"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				242.65,
+				60.95
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+			],
+			"name": "Markus_Right_Note"
+		}
+	]
+}

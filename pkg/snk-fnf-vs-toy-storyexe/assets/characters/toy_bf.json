@@ -1,0 +1,239 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"name": "Toy-Bf Idle0"
+		},
+		{
+			"offsets": [
+				-11,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [
+				0,
+				0,
+				1,
+				1
+			],
+			"name": "Toy-Bf LEFT"
+		},
+		{
+			"offsets": [
+				-5,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"name": "Toy-Bf Down0"
+		},
+		{
+			"offsets": [
+				-6,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"name": "Toy-Bf Up0"
+		},
+		{
+			"offsets": [
+				-3,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"name": "Toy-Bf Right0"
+		},
+		{
+			"offsets": [
+				-8,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"name": "Toy-Bf Left-Misses0"
+		},
+		{
+			"offsets": [
+				-4,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"name": "Toy-Bf Down-Misses0"
+		},
+		{
+			"offsets": [
+				-7,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"name": "Toy-Bf Up-Misses0"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"name": "Toy-Bf Right-Misses0"
+		},
+		{
+			"offsets": [
+				-19,
+				-5
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"fps": 24,
+			"anim": "dodge",
+			"loop": false,
+			"name": "Toy-Bf Dogde"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Toy-Bf",
+	"position": [
+		-230,
+		-210
+	],
+	"healthicon": "1686459443448",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-190,
+		310
+	],
+	"sing_duration": 4,
+	"scale": 0.6
+}

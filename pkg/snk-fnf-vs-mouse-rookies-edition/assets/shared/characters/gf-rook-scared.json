@@ -1,0 +1,45 @@
+{
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"position": [
+		96,
+		300
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/gf-rook-scared",
+	"sing_duration": 4,
+	"healthicon": "gf-rook-scared",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 18,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle_Scared_Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 18,
+			"anim": "sad",
+			"indices": [],
+			"name": "ComboBreak-2"
+		}
+	]
+}

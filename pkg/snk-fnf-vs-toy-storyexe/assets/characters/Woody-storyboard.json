@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-5,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-6,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-27,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-9,
+				4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-2,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "1",
+			"indices": [],
+			"name": "dialogo1"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "2",
+			"indices": [],
+			"name": "dialogo2"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "3",
+			"indices": [],
+			"name": "dialogo3"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "4",
+			"indices": [],
+			"name": "dialogo4"
+		},
+		{
+			"offsets": [
+				-31,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "5",
+			"indices": [],
+			"name": "dialogo5"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/Woodystoryboard",
+	"position": [
+		-270,
+		-440
+	],
+	"healthicon": "113_sin_titulo_20230422215327",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		190,
+		220
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

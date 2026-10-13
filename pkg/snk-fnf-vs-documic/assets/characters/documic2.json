@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				190,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "DocumicPhase2 left"
+		},
+		{
+			"offsets": [
+				0,
+				-348
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DocumicPhase2 down"
+		},
+		{
+			"offsets": [
+				-40,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "DocumicPhase2 up"
+		},
+		{
+			"offsets": [
+				-150,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "DocumicPhase2 right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "DocumicPhase2 idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/documic/DocumicPhase2",
+	"position": [
+		-460,
+		-800
+	],
+	"healthicon": "txt",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		30,
+		260
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

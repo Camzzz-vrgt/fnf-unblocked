@@ -1,0 +1,123 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bf-con-merca idle"
+		},
+		{
+			"offsets": [
+				-3,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bf-con-merca left"
+		},
+		{
+			"offsets": [
+				-10,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bf-con-merca down"
+		},
+		{
+			"offsets": [
+				-5,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bf-con-merca up"
+		},
+		{
+			"offsets": [
+				-9,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bf-con-merca right"
+		},
+		{
+			"offsets": [
+				99,
+				164
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "bf-con-merca tetardas"
+		},
+		{
+			"offsets": [
+				99,
+				164
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "bf-con-merca tetardas"
+		},
+		{
+			"offsets": [
+				99,
+				164
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "bf-con-merca tetardas"
+		},
+		{
+			"offsets": [
+				100,
+				164
+			],
+			"indices": [],
+			"fps": 1,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "bf-con-merca tetardas"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf-con-merca",
+	"position": [
+		-140,
+		160
+	],
+	"healthicon": "bf-merca",
+	"flip_x": true,
+	"healthbar_colors": [
+		80,
+		165,
+		235
+	],
+	"camera_position": [
+		140,
+		-10
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

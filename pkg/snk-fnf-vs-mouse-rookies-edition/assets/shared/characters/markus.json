@@ -1,0 +1,89 @@
+{
+	"healthbar_colors": [
+		221,
+		6,
+		45
+	],
+	"position": [
+		0,
+		150
+	],
+	"no_antialiasing": false,
+	"scale": 1.1,
+	"camera_position": [
+		0,
+		-20
+	],
+	"image": "characters/markus/1, characters/markus/2",
+	"sing_duration": 4.9,
+	"healthicon": "markus",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				222.2,
+				-16.995
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Markus_left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49.5,
+				-26.004
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Markus_down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				55,
+				56.001
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Markus_up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				113.3,
+				20.999
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Markus_Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Markus_idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				473,
+				170.5
+			],
+			"fps": 14,
+			"anim": "thatdoesitsguy",
+			"indices": [],
+			"name": "doesit0"
+		}
+	]
+}

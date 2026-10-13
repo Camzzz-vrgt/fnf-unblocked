@@ -1,0 +1,112 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Toy-Bf First-Death",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				4,
+				4,
+				5,
+				5,
+				6,
+				6,
+				7,
+				7,
+				8,
+				8,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				13,
+				13,
+				14,
+				14,
+				15,
+				15,
+				16,
+				16,
+				16,
+				16,
+				18,
+				18,
+				19,
+				19
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				37,
+				1
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Toy-Bf Death-Loop",
+			"indices": [
+				0,
+				0,
+				0,
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				2
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Toy-Bf Death-Confirm",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BOYFRIEND",
+	"position": [
+		0,
+		-450
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

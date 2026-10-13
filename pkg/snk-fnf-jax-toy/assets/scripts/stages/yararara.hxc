@@ -1,0 +1,33 @@
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.modding.module.Module;
+import funkin.util.FlxTweenUtil;
+import funkin.play.Countdown;
+
+class YARARARAStage extends Stage {
+
+    function new()
+    	{
+        	super('yararara');
+    	}
+
+        public function onCountdownStart(event:CountdownScriptEvent)
+	    {
+		    super.onCountdownStart(event);
+
+                PlayState.instance.opponentStrumline.x -= 1500;
+                Hide();
+        }
+
+    public function Hide()
+		{
+			PlayState.instance.healthBar.alpha = 0;
+			PlayState.instance.healthBarBG.alpha = 0;
+			// PlayState.instance.scoreText.alpha = 0.001;
+			PlayState.instance.opponentStrumline.alpha = 0;
+			PlayState.instance.opponentStrumline.notes.alpha = 0;
+			PlayState.instance.opponentStrumline.holdNotes.alpha = 0;
+			PlayState.instance.opponentStrumline.strumlineNotes.alpha = 0;
+		}
+
+}

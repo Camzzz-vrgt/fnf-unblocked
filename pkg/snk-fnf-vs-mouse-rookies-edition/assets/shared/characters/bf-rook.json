@@ -1,0 +1,135 @@
+{
+	"healthbar_colors": [
+		109,
+		199,
+		211
+	],
+	"position": [
+		0,
+		250
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		0,
+		-50
+	],
+	"image": "characters/bf-rook/1, characters/bf-rook/2, characters/bf-rook/3, characters/bf-rook/4",
+	"sing_duration": 4.9,
+	"healthicon": "bf-rook",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				18,
+				28
+			],
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-6
+			],
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				91
+			],
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				16
+			],
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				116,
+				16
+			],
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Hey"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				4
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Miss-Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				23
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Miss-Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-110
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Miss-Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				92
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [
+				0
+			],
+			"name": "Miss-Up"
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-228,
+				-133
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "selene_estatica selene left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-215,
+				-156
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "selene_estatica selene down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-224,
+				-145
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "selene_estatica selene up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-220,
+				-150
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "selene_estatica selene right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-223,
+				-141
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "selene_estatica selene idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/selene_estatica",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "selene",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.9,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "genoidle instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				275,
+				15
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "genoleft instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				-140
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "genodown instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				145,
+				150
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "genoup instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				-80
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "genoright instance 1",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tabi-genocide",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "tabi-genocide",
+	"flip_x": false,
+	"healthbar_colors": [
+		202,
+		131,
+		99
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

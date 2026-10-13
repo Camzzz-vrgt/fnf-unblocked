@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "tabiidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				108,
+				-40
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "tabileft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "tabiright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				-97
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "tabidown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				83,
+				68
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "tabiup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				126,
+				-13
+			],
+			"anim": "pre-snap",
+			"fps": 24,
+			"name": "tabisnapup instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				153
+			],
+			"anim": "snap",
+			"fps": 24,
+			"name": "tabisnapdown instance 10",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				181,
+				175
+			],
+			"anim": "wake-snap",
+			"fps": 24,
+			"name": "tabisnapwake",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				29
+			],
+			"anim": "glare",
+			"fps": 24,
+			"name": "tabimidsong",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tabi",
+	"position": [
+		100,
+		120
+	],
+	"healthicon": "tabi",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		196,
+		116
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.25,
+	"_editor_isPlayer": false
+}

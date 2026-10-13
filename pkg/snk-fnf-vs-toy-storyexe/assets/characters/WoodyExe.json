@@ -1,0 +1,170 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Woody.Exe Idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Woody.Exe Up"
+		},
+		{
+			"offsets": [
+				23,
+				-14
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Woody.Exe Right"
+		},
+		{
+			"offsets": [
+				-50,
+				-16
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Woody.Exe Down"
+		},
+		{
+			"offsets": [
+				30,
+				-10
+			],
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Woody.Exe Left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/woodyexe",
+	"position": [
+		-230,
+		-260
+	],
+	"healthicon": "woodyexe",
+	"flip_x": false,
+	"healthbar_colors": [
+		149,
+		83,
+		30
+	],
+	"camera_position": [
+		190,
+		220
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

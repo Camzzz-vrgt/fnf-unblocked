@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				230,
+				71
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "IDLEsoink"
+		},
+		{
+			"offsets": [
+				230,
+				71
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			],
+			"name": "IDLEsoink"
+		},
+		{
+			"offsets": [
+				198,
+				-73
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWNsoink"
+		},
+		{
+			"offsets": [
+				218,
+				77
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "UPsoink"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				223,
+				43
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "RIGHTsoink",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				144,
+				49
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "LEFTsoink",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/ourplesoink",
+	"position": [
+		490,
+		280
+	],
+	"healthicon": "soinkle",
+	"flip_x": true,
+	"healthbar_colors": [
+		2,
+		2,
+		204
+	],
+	"camera_position": [
+		-330,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

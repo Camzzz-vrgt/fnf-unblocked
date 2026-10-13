@@ -1,0 +1,156 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Woody.Exe-Reskin Idle",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				4
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Woody.Exe-Reskin Left",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-5
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Woody.Exe-Reskin Up",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Woody.Exe-Reskin Down",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				-14
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Woody.Exe-Reskin Right",
+			"indices": [
+				0,
+				0,
+				1,
+				1,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/WoodyExe-reskin",
+	"position": [
+		-310,
+		-370
+	],
+	"healthicon": "1686458614550",
+	"flip_x": false,
+	"healthbar_colors": [
+		149,
+		83,
+		30
+	],
+	"camera_position": [
+		160,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-60,
+				-170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-118,
+				-183
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-56,
+				-151
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-194,
+				-178
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-150,
+				-182
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ragatha",
+	"position": [
+		-120,
+		-70
+	],
+	"healthicon": "ragatha",
+	"flip_x": false,
+	"healthbar_colors": [
+		163,
+		29,
+		70
+	],
+	"camera_position": [
+		120,
+		50
+	],
+	"sing_duration": 5.5,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

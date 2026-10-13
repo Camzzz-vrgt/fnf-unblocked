@@ -1,0 +1,33 @@
+{
+	"dialogue": [
+		{
+			"command": "playmusic",
+			"text": "frozen-projections",
+			"number": 0.3
+		},
+		{
+			"character": "Sonic",
+			"expression": "Snarky",
+			"text": "*sigh* These illusions are really starting to become an eyesore!",
+			"sound": "sonic1"
+		},
+		{
+			"character": "Sonic",
+			"expression": "Bored",
+			"text": "You got any more tricks you can show off? I'm getting bored.",
+			"sound": "sonic2"
+		},
+		{
+			"character": "Infinite",
+			"expression": "Mad",
+			"text": "I can still fight, Sonic!",
+			"sound": "infinite1"
+		},
+		{
+			"character": "Infinite",
+			"expression": "Angry",
+			"text": "I CAN STILL FIGHT!",
+			"sound": "infinite2"
+		}
+	]
+}

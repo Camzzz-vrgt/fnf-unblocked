@@ -1,0 +1,127 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				35,
+				135
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "TMK_pov idle"
+		},
+		{
+			"offsets": [
+				182,
+				230
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "TMK_pov down0"
+		},
+		{
+			"offsets": [
+				277,
+				130
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			"fps": 14,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "TMK_pov left0"
+		},
+		{
+			"offsets": [
+				61,
+				226
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			"fps": 14,
+			"anim": "singUP",
+			"loop": false,
+			"name": "TMK_pov up0"
+		},
+		{
+			"offsets": [
+				120,
+				210
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			"fps": 14,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "TMK_pov right0"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Pov Phase final/TMK_pov",
+	"position": [
+		430,
+		-20
+	],
+	"healthicon": "tmk",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-100,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

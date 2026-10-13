@@ -1,0 +1,80 @@
+{
+	"healthbar_colors": [
+		221,
+		6,
+		41
+	],
+	"position": [
+		-125,
+		50
+	],
+	"no_antialiasing": false,
+	"scale": 1.1,
+	"camera_position": [
+		0,
+		180
+	],
+	"image": "characters/awesome-fucking-markus",
+	"sing_duration": 4.9,
+	"healthicon": "awesome-fucking-markus",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				145.2,
+				-126.995
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				33,
+				-246.004
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-14.3,
+				5.401
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56.1,
+				-16.401
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				0
+			],
+			"name": "Idle"
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-52,
+				149
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Infinite_IdleDance"
+		},
+		{
+			"offsets": [
+				0,
+				190
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Infinite_SingDOWN"
+		},
+		{
+			"offsets": [
+				0,
+				95
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Infinite_SingUP"
+		},
+		{
+			"offsets": [
+				-62,
+				233
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Infinite_SingLEFT"
+		},
+		{
+			"offsets": [
+				-110,
+				181
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Infinite_SingRIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/InfiniteAssets_Masked",
+	"position": [
+		-230,
+		-250
+	],
+	"healthicon": "maskedinfinite",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		80
+	],
+	"camera_position": [
+		250,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6,
+	"shadow_Offset": -100,
+	"charaFloat": true
+}

@@ -1,0 +1,146 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				1,
+				2
+			],
+			"name": "la-popis right"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				1,
+				2
+			],
+			"name": "la-popis up"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				1,
+				2
+			],
+			"name": "la-popis down"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 19,
+			"anim": "idle",
+			"indices": [],
+			"name": "la-popis idle"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "la-popis right-ALT"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "la-popis down-ALT"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "la-popis up-ALT"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "la-popis left-ALT"
+		},
+		{
+			"offsets": [
+				60,
+				200
+			],
+			"indices": [
+				1,
+				2
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "la-popis GUN DUMBASS"
+		},
+		{
+			"offsets": [
+				-80,
+				50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "HEY",
+			"loop": false,
+			"name": "la-popis hmmm-okis"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/la-popis",
+	"position": [
+		140,
+		370
+	],
+	"healthicon": "pomni-merca",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		95,
+		135
+	],
+	"camera_position": [
+		-60,
+		-160
+	],
+	"sing_duration": 6.2,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

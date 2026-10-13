@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "DocumicMidSong"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "mid",
+			"fps": 24,
+			"name": "DocumicMidSong",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/documiclinesus",
+	"position": [
+		20,
+		220
+	],
+	"healthicon": "susumic",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
