@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "why1",
+			"loop": false,
+			"name": "why 1"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "why2",
+			"loop": false,
+			"name": "why 2"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/larry",
+	"position": [
+		420,
+		-130
+	],
+	"healthicon": "larry",
+	"flip_x": false,
+	"healthbar_colors": [
+		238,
+		96,
+		74
+	],
+	"camera_position": [
+		0,
+		360
+	],
+	"sing_duration": 4,
+	"scale": 0.5
+}

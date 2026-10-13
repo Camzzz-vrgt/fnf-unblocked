@@ -1,0 +1,125 @@
+import flixel.FlxG;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+
+class AnimateJudgements extends Module
+{
+	var targetSongs:Array<String> = [
+		"mesmerizer",
+		"teto-the-31st",
+		"looping-the-rooms",
+		"young-girl-a",
+		"baumkuchen-end-credits",
+		"kyu-kurarin",
+		"retry-now",
+		"butcher-vanity",
+		"bake-no-hana",
+		"bad-apple",
+		"popipo",
+		"monitoring",
+		"static",
+		"spoken-for",
+		"human",
+		"ego-renegade-boy",
+		"weathergirl",
+		"tetoris",
+		"hito-mania",
+		"medicine",
+		"birdbrain",
+		"machine-love",
+		"bad-apple-sekai",
+		"bake-no-hana-sekai",
+		"kyu-kurarin-sekai",
+		"monitoring-best-friend-remix"
+	];
+
+	public function new():Void
+	{
+		super('AnimateJudgements');
+	}
+
+	function shouldApply():Bool
+	{
+		var state = PlayState.instance;
+		if (state == null || state.currentSong == null) return false;
+		return targetSongs.contains(state.currentSong.id);
+	}
+
+	override public function onUpdate(event):Void
+	{
+		super.onUpdate(event);
+		if (!shouldApply()) return;
+
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		if (state.comboPopUps != null)
+			state.comboPopUps.offsets = [-430, 80];
+	}
+
+	override public function onNoteHit(event):Void
+	{
+		super.onNoteHit(event);
+		if (!shouldApply()) return;
+
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		var ratingSprite = null;
+		if (event.judgement != null)
+			ratingSprite = event.judgement;
+		else if (state.ratingSprite != null)
+			ratingSprite = state.ratingSprite;
+
+		if (ratingSprite != null && ratingSprite.alive && !ratingSprite.isDestroyed)
+		{
+			FlxTween.cancelTweensOf(ratingSprite.scale);
+			ratingSprite.scale.set(1.35, 1.35);
+			ratingSprite.updateHitbox();
+			FlxTween.tween(ratingSprite.scale, {x: 1.0, y: 1.0}, 0.12, {ease: FlxEase.elasticOut});
+		}
+
+		var comboSprites = null;
+		if (event.comboSprites != null)
+			comboSprites = event.comboSprites;
+		else if (state.comboSprite != null)
+			comboSprites = state.comboSprite.members;
+
+		if (comboSprites != null)
+		{
+			for (digit in comboSprites)
+			{
+				if (digit == null || !digit.alive || digit.isDestroyed) continue;
+				FlxTween.cancelTweensOf(digit.scale);
+				digit.scale.set(1.4, 1.4);
+				digit.updateHitbox();
+				FlxTween.tween(digit.scale, {x: 1.0, y: 1.0}, 0.10, {ease: FlxEase.backOut});
+			}
+		}
+	}
+
+	override public function onNoteMiss(event):Void
+	{
+		super.onNoteMiss(event);
+		if (!shouldApply()) return;
+
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		var ratingSprite = null;
+		if (event.judgement != null)
+			ratingSprite = event.judgement;
+		else if (state.ratingSprite != null)
+			ratingSprite = state.ratingSprite;
+
+		if (ratingSprite != null && ratingSprite.alive && !ratingSprite.isDestroyed)
+		{
+			FlxTween.cancelTweensOf(ratingSprite.scale);
+			ratingSprite.scale.set(1.35, 1.35);
+			ratingSprite.updateHitbox();
+			FlxTween.tween(ratingSprite.scale, {x: 1.0, y: 1.0}, 0.12, {ease: FlxEase.elasticOut});
+		}
+	}
+}

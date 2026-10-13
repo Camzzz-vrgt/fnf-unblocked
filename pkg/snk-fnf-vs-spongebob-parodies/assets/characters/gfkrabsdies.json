@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				36,
+				10
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "dead",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-1304,
+				2
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "deathLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1303,
+				124
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "deathConfirm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gfdies",
+	"position": [
+		-1360,
+		160
+	],
+	"healthicon": "gfkrabs",
+	"flip_x": true,
+	"healthbar_colors": [
+		187,
+		62,
+		201
+	],
+	"camera_position": [
+		-510,
+		70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

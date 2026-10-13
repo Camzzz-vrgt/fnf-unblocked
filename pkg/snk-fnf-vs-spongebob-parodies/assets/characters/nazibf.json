@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-3,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF NOTE DOWN0"
+		},
+		{
+			"offsets": [
+				-6,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF NOTE UP0"
+		},
+		{
+			"offsets": [
+				2,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF NOTE LEFT0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "BF idle dance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Nazi Bf",
+	"position": [
+		-110,
+		200
+	],
+	"healthicon": "nazibf",
+	"flip_x": true,
+	"healthbar_colors": [
+		40,
+		70,
+		20
+	],
+	"camera_position": [
+		60,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

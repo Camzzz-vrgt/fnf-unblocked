@@ -1,0 +1,188 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-48,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "sad",
+			"indices": [],
+			"name": "sad"
+		},
+		{
+			"offsets": [
+				38,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "up2",
+			"indices": [],
+			"name": "up2"
+		},
+		{
+			"offsets": [
+				38,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "up3",
+			"indices": [],
+			"name": "up3"
+		},
+		{
+			"offsets": [
+				54,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "down1",
+			"indices": [],
+			"name": "down1"
+		},
+		{
+			"offsets": [
+				47,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "down2",
+			"indices": [],
+			"name": "down2"
+		},
+		{
+			"offsets": [
+				61,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "down3",
+			"indices": [],
+			"name": "down3"
+		},
+		{
+			"offsets": [
+				28,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "left3",
+			"indices": [],
+			"name": "left3"
+		},
+		{
+			"offsets": [
+				44,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "left2",
+			"indices": [],
+			"name": "left2"
+		},
+		{
+			"offsets": [
+				64,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "left1",
+			"indices": [],
+			"name": "left1"
+		},
+		{
+			"offsets": [
+				48,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "right1",
+			"indices": [],
+			"name": "right1"
+		},
+		{
+			"offsets": [
+				44,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "right2",
+			"indices": [],
+			"name": "right2"
+		},
+		{
+			"offsets": [
+				34,
+				1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "right3",
+			"indices": [],
+			"name": "right3"
+		},
+		{
+			"offsets": [
+				34,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "now",
+			"indices": [],
+			"name": "now"
+		},
+		{
+			"offsets": [
+				34,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "up1",
+			"indices": [],
+			"name": "up1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tv_sprites",
+	"position": [
+		0,
+		140
+	],
+	"healthicon": "bobsponge",
+	"flip_x": false,
+	"healthbar_colors": [
+		251,
+		230,
+		0
+	],
+	"camera_position": [
+		-70,
+		160
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

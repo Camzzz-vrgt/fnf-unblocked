@@ -1,0 +1,210 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import thx.Objects;
+
+class PVE_VideoModule extends Module
+{
+  var activeVideo:Bool = false;
+  var hudWasHidden:Bool = false;
+  var hudFadeActive:Bool = false;
+  var keysWereDisabled:Bool = false;
+  var fadeOutTween:FlxTween;
+  var fadeInTween:FlxTween;
+  var endListener:Void->Void;
+
+  function new()
+  {
+    super('PVE_VideoModule');
+  }
+
+  function createVideo(filePath:String, ?config:PVE_ConfigData):Void
+  {
+    if (filePath == null)
+    {
+      trace('[PVE] filePath is null');
+      return;
+    }
+    if (PlayState.instance == null) return;
+
+    config = (config == null) ? getDefaultConfig() : Objects.shallowCombine(getDefaultConfig(), config);
+
+    if (activeVideo) clearVideo();
+
+    activeVideo = true;
+
+    if (config.disableControls)
+    {
+      PlayState.instance.disableKeys = true;
+      keysWereDisabled = true;
+    }
+
+    endListener = onVideoEndedHandler;
+    VideoCutscene.onVideoEnded.add(endListener);
+
+    var hudFadeDur:Float = config.hudFadeDuration;
+    var capturedPath:String = filePath;
+
+    switch (config.videoType)
+    {
+      case 2:
+        hudFadeActive = true;
+        fadeOutTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, hudFadeDur,
+          {
+            ease: FlxEase.quadOut,
+            onComplete: function(twn:FlxTween):Void
+            {
+              fadeOutTween = null;
+              if (!activeVideo) return;
+              if (PlayState.instance != null)
+              {
+                PlayState.instance.camHUD.visible = false;
+                hudWasHidden = true;
+              }
+              VideoCutscene.play(capturedPath, CutsceneType.MIDSONG);
+            }
+          });
+      case 3:
+        PlayState.instance.camHUD.visible = false;
+        hudWasHidden = true;
+        VideoCutscene.play(capturedPath, CutsceneType.MIDSONG);
+      default:
+        VideoCutscene.play(capturedPath, CutsceneType.MIDSONG);
+    }
+  }
+
+  function onVideoEndedHandler():Void
+  {
+    if (PlayState.instance != null)
+    {
+      if (hudFadeActive)
+      {
+        PlayState.instance.camHUD.visible = true;
+        fadeInTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut});
+        hudFadeActive = false;
+      }
+      else if (hudWasHidden)
+      {
+        PlayState.instance.camHUD.visible = true;
+        PlayState.instance.camHUD.alpha = 1;
+        hudWasHidden = false;
+      }
+      if (keysWereDisabled)
+      {
+        PlayState.instance.disableKeys = false;
+        keysWereDisabled = false;
+      }
+    }
+    activeVideo = false;
+    if (endListener != null)
+    {
+      VideoCutscene.onVideoEnded.remove(endListener);
+      endListener = null;
+    }
+  }
+
+  function clearVideo():Void
+  {
+    if (fadeOutTween != null)
+    {
+      fadeOutTween.cancel();
+      fadeOutTween = null;
+    }
+    if (fadeInTween != null)
+    {
+      fadeInTween.cancel();
+      fadeInTween = null;
+    }
+    if (VideoCutscene.isPlaying()) VideoCutscene.destroyVideo();
+    if (PlayState.instance != null)
+    {
+      if (hudWasHidden || hudFadeActive)
+      {
+        PlayState.instance.camHUD.visible = true;
+        PlayState.instance.camHUD.alpha = 1;
+      }
+      if (keysWereDisabled) PlayState.instance.disableKeys = false;
+    }
+    hudWasHidden = false;
+    hudFadeActive = false;
+    keysWereDisabled = false;
+    activeVideo = false;
+    if (endListener != null)
+    {
+      VideoCutscene.onVideoEnded.remove(endListener);
+      endListener = null;
+    }
+  }
+
+  function getDefaultConfig():PVE_ConfigData
+  {
+    return {
+      videoType: 1,
+      disableControls: false,
+      hudFadeDuration: 1,
+      resync: true,
+      zIndex: 300,
+      mute: false,
+      timestamp: 0
+    };
+  }
+
+  override function onPause(event:PauseScriptEvent):Void
+  {
+    if (!activeVideo) return;
+    if (fadeOutTween != null) fadeOutTween.active = false;
+    if (fadeInTween != null) fadeInTween.active = false;
+    if (VideoCutscene.isPlaying()) VideoCutscene.pauseVideo();
+  }
+
+  override function onResume(event:ScriptEvent):Void
+  {
+    if (!activeVideo) return;
+    if (fadeOutTween != null) fadeOutTween.active = true;
+    if (fadeInTween != null) fadeInTween.active = true;
+    if (VideoCutscene.isPlaying()) VideoCutscene.resumeVideo();
+  }
+
+  override function onFocusGained(event:FocusScriptEvent):Void
+  {
+    super.onFocusGained(event);
+    if (!activeVideo) return;
+    if (PlayState.instance != null && PlayState.instance.isGamePaused && VideoCutscene.isPlaying())
+      VideoCutscene.pauseVideo();
+  }
+
+  override function onSongRetry(event:SongRetryEvent):Void
+  {
+    clearVideo();
+  }
+
+  override function onGameOver(event:ScriptEvent):Void
+  {
+    clearVideo();
+  }
+
+  override function onSongEnd(event:ScriptEvent):Void
+  {
+    clearVideo();
+  }
+
+  override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    clearVideo();
+  }
+}
+
+typedef PVE_ConfigData =
+{
+  videoType:Int,
+  disableControls:Bool,
+  hudFadeDuration:Float,
+  resync:Bool,
+  zIndex:Float,
+  mute:Bool,
+  timestamp:Float,
+}

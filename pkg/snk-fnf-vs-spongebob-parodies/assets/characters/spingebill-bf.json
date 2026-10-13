@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				7
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF NOTE LEFT MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				9
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF NOTE DOWN MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-2
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF NOTE RIGHT MISS",
+			"indices": []
+		},
+		{
+			"offsets": [
+				8,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF NOTE LEFT0"
+		},
+		{
+			"offsets": [
+				9,
+				-2
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF NOTE DOWN0"
+		},
+		{
+			"offsets": [
+				-5,
+				1
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF NOTE RIGHT0"
+		},
+		{
+			"offsets": [
+				13,
+				-3
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				0
+			],
+			"anim": "singUP",
+			"fps": 15,
+			"name": "BF NOTE UP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 15,
+			"name": "BF idle dance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/spingebill_BF",
+	"position": [
+		-60,
+		-40
+	],
+	"healthicon": "spingebill-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		132,
+		98,
+		98
+	],
+	"camera_position": [
+		100,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

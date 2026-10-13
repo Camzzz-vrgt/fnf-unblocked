@@ -1,0 +1,60 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "gbf die",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "gbf die",
+			"indices": [
+				99
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "gbf die",
+			"indices": [
+				99
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Gangsta_BF_DeathAnim",
+	"position": [
+		-50,
+		150
+	],
+	"healthicon": "gbf",
+	"flip_x": true,
+	"healthbar_colors": [
+		171,
+		22,
+		74
+	],
+	"camera_position": [
+		720,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

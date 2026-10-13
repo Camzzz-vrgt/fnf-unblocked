@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "name": "Blank",
+  "assetPath": "characters/blank",
+  "renderType": "multisparrow",
+  "flipX": true,
+  "offsets": [17, 14],
+  "cameraOffsets": [-18, 36],
+  "death": {
+    "cameraOffsets": [-73, 42]
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Dad idle dance"
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "Dad idle dance",
+      "frameIndices": [11, 12, 0, 1],
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "Dad Sing Note UP"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "Dad Sing Note UP",
+      "frameIndices": [3, 4, 5],
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Dad Sing Note DOWN"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Dad Sing Note LEFT"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "Dad Sing Note LEFT",
+      "frameIndices": [3, 4, 5],
+      "looped": true
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Dad Sing Note RIGHT"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "Dad Sing Note RIGHT",
+      "looped": true,
+      "frameIndices": [3, 4, 5]
+    },
+    {
+      "assetPath": "shared:characters/bf-death",
+      "renderType": "animateatlas",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [22, 15]
+    },
+    {
+      "assetPath": "shared:characters/bf-death",
+      "renderType": "animateatlas",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "offsets": [22, 15]
+    },
+    {
+      "assetPath": "shared:characters/bf-death",
+      "renderType": "animateatlas",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "offsets": [22, 15]
+    },
+    {
+      "assetPath": "shared:characters/bfFakeOut",
+      "renderType": "animateatlas",
+      "name": "fakeoutDeath",
+      "prefix": "fake out death BF",
+      "animType": "symbol",
+      "offsets": [-3, -65]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "WGGSB BF side idle"
+		},
+		{
+			"offsets": [
+				-2,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "WGGSB BF side up"
+		},
+		{
+			"offsets": [
+				5,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "WGGSB BF side left"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "WGGSB BF side down"
+		},
+		{
+			"offsets": [
+				-8,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "WGGSB BF side right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/WGGSB BF side",
+	"position": [
+		-430,
+		160
+	],
+	"healthicon": "bfsquid",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		177,
+		209
+	],
+	"camera_position": [
+		-100,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

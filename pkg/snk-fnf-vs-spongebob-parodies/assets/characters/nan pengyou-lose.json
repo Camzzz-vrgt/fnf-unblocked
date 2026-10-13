@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				337,
+				181
+			],
+			"loop": false,
+			"fps": 13,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				337,
+				182
+			],
+			"loop": false,
+			"fps": 13,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				337,
+				182
+			],
+			"loop": true,
+			"fps": 13,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Nan pengyou lose",
+	"position": [
+		-30,
+		302
+	],
+	"healthicon": "nan pengyou",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		50,
+		189
+	],
+	"camera_position": [
+		450,
+		-110
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

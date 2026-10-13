@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-570,
+				-270
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "pamtri idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-571,
+				-270
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "pamtri left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-570,
+				-270
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "pamtri down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-572,
+				-274
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "pamtri up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-571,
+				-270
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "pamtri right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pamtri",
+	"position": [
+		-1250,
+		-250
+	],
+	"healthicon": "pamtri2",
+	"flip_x": false,
+	"healthbar_colors": [
+		254,
+		243,
+		49
+	],
+	"camera_position": [
+		80,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.9
+}

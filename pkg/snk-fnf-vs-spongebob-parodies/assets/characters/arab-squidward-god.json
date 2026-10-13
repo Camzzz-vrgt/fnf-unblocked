@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Arab Idle"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Arab Left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Arab Down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Arab Up"
+		},
+		{
+			"offsets": [
+				-60,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Arab Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Arab Squidward Assets God",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "antumsquid-god",
+	"flip_x": false,
+	"healthbar_colors": [
+		208,
+		223,
+		226
+	],
+	"camera_position": [
+		-300,
+		-130
+	],
+	"sing_duration": 6.1,
+	"scale": 1.6
+}

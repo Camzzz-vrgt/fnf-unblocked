@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Bob idle"
+		},
+		{
+			"offsets": [
+				41,
+				-29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Bob down"
+		},
+		{
+			"offsets": [
+				69,
+				34
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Bob up"
+		},
+		{
+			"offsets": [
+				71,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Bob right"
+		},
+		{
+			"offsets": [
+				213,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Bob left"
+		},
+		{
+			"offsets": [
+				87,
+				90
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "miss Bob up"
+		},
+		{
+			"offsets": [
+				70,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "miss Bob down"
+		},
+		{
+			"offsets": [
+				161,
+				28
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "miss Bob right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				270,
+				20
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "deathStart",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				263,
+				2
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "deathLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-110
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "deathConfirm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bob Sponge",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bobsponge",
+	"flip_x": true,
+	"healthbar_colors": [
+		251,
+		230,
+		0
+	],
+	"camera_position": [
+		210,
+		-40
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}

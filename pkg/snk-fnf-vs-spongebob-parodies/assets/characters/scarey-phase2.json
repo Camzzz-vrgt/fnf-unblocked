@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "idle",
+			"loop": false,
+			"name": "SCARY Spongebob Phase 2 idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SCARY Spongebob Phase 2 left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SCARY Spongebob Phase 2 down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SCARY Spongebob Phase 2 up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SCARY Spongebob Phase 2 right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SCARY_Spongebob_Phase_2",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "scarey2",
+	"flip_x": false,
+	"healthbar_colors": [
+		252,
+		49,
+		34
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

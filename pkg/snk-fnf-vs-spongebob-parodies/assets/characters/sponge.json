@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 8,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				53,
+				39
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-42,
+				9
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				61
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-40
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/WGGSB_Spongebob",
+	"position": [
+		1000,
+		-70
+	],
+	"healthicon": "floating-sponge",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		213,
+		60
+	],
+	"camera_position": [
+		-440,
+		-120
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

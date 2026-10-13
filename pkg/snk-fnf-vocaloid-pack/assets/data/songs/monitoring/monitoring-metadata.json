@@ -1,0 +1,56 @@
+{
+ "version": "2.2.4",
+ "songName": "Monitoring",
+ "artist": "DECO*27 (feat. Hatsune Miku)",
+ "charter": "Klyro",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "blank",
+   "girlfriend": "blank",
+   "opponent": "blank",
+   "opponentVocals": [
+    "blank"
+   ],
+   "playerVocals": [
+    "blank"
+   ]
+  },
+  "stage": "vocaloid",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 5,
+   "normal": 5,
+   "hard": 5
+  },
+  "album": "monitoring",
+  "previewStart": 0.209488737223944,
+  "previewEnd": 0.385900305412527
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 132,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 1,
+   "b": 0.0022,
+   "bpm": 132,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 128.091,
+   "b": 0.2818,
+   "bpm": 132,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bonuce left"
+		},
+		{
+			"offsets": [
+				0,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bonce down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bonuce idle"
+		},
+		{
+			"offsets": [
+				0,
+				-15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bonuce up"
+		},
+		{
+			"offsets": [
+				0,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bonuce right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bonuce house spongebob",
+	"position": [
+		-100,
+		-110
+	],
+	"healthicon": "bouncyhouse",
+	"flip_x": false,
+	"healthbar_colors": [
+		174,
+		156,
+		84
+	],
+	"camera_position": [
+		-30,
+		-140
+	],
+	"sing_duration": 6.1,
+	"scale": 1.8
+}

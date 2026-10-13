@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Pico Idle Dance"
+		},
+		{
+			"offsets": [
+				240,
+				45
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Pico NOTE LEFT"
+		},
+		{
+			"offsets": [
+				70,
+				46
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Pico Down Note"
+		},
+		{
+			"offsets": [
+				-3,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Pico NOTE UP"
+		},
+		{
+			"offsets": [
+				-10,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Pico Note Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sickpico_assets",
+	"position": [
+		-400,
+		-100
+	],
+	"healthicon": "sickpico",
+	"flip_x": false,
+	"healthbar_colors": [
+		107,
+		131,
+		44
+	],
+	"camera_position": [
+		290,
+		340
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

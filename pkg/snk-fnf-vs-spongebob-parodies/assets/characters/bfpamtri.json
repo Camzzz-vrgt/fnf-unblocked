@@ -1,0 +1,192 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-45,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "dead"
+		},
+		{
+			"offsets": [
+				46,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "continue"
+		},
+		{
+			"offsets": [
+				5,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "left miss"
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "down miss"
+		},
+		{
+			"offsets": [
+				4,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "up miss"
+		},
+		{
+			"offsets": [
+				3,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "right miss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-1
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				1
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "dead",
+			"indices": [
+				2
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "hey"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bfpamtri",
+	"position": [
+		0,
+		250
+	],
+	"healthicon": "bfpamtri",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		200,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.7
+}

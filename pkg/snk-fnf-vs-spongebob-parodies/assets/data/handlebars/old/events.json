@@ -1,0 +1,49 @@
+{
+	"song": {
+		"speed": 2,
+		"stage": "hemphome",
+		"player1": "drugbf",
+		"player2": "spongebong",
+		"player3": null,
+		"events": [
+			[
+				63281.25,
+				[
+					[
+						"Set Cam Zoom",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				63750,
+				[
+					[
+						"Set Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				64083.3333333333,
+				[
+					[
+						"Change Scroll Speed",
+						"1.5",
+						"1"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "nogf",
+		"bpm": 128,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "handlebars"
+	}
+}

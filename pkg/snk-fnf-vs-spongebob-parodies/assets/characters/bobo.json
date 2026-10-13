@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 13,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bobo",
+	"position": [
+		-90,
+		60
+	],
+	"healthicon": "bobo",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		157,
+		245
+	],
+	"camera_position": [
+		-10,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

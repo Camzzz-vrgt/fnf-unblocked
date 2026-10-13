@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 17,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 17,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 17,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 17,
+			"name": "right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/spongequan",
+	"position": [
+		-100,
+		80
+	],
+	"healthicon": "spongequan",
+	"flip_x": false,
+	"healthbar_colors": [
+		186,
+		147,
+		118
+	],
+	"camera_position": [
+		90,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

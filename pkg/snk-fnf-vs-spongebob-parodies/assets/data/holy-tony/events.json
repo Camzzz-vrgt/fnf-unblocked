@@ -1,0 +1,179 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "SpongebobChaseFreestyle",
+		"player1": "Reggie COUZ",
+		"player2": "nogf",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"1"
+					]
+				]
+			],
+			[
+				1678.32167832168,
+				[
+					[
+						"Alt Idle Animation",
+						"BF",
+						"-alt"
+					]
+				]
+			],
+			[
+				14265.7342657343,
+				[
+					[
+						"Alt Idle Animation",
+						"BF",
+						""
+					]
+				]
+			],
+			[
+				21713.2867132867,
+				[
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					],
+					[
+						"Toggle Trail",
+						"",
+						"1"
+					],
+					[
+						"shakey arrows",
+						"little",
+						""
+					]
+				]
+			],
+			[
+				55594.4055944056,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.01",
+						"0.01"
+					],
+					[
+						"shakey arrows",
+						"little",
+						""
+					],
+					[
+						"Toggle Trail",
+						"",
+						"0"
+					]
+				]
+			],
+			[
+				57306.8181818182,
+				[
+					[
+						"Toggle Trail",
+						"",
+						"1"
+					],
+					[
+						"shakey arrows",
+						"medium",
+						""
+					],
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				70594.4055944056,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.01",
+						"0.01"
+					],
+					[
+						"shakey arrows",
+						"little",
+						""
+					],
+					[
+						"Toggle Trail",
+						"",
+						"0"
+					]
+				]
+			],
+			[
+				71538.4615384615,
+				[
+					[
+						"Toggle Trail",
+						"",
+						"1"
+					],
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					],
+					[
+						"shakey arrows",
+						"medium",
+						""
+					]
+				]
+			],
+			[
+				75104.8951048951,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.01",
+						"0.01"
+					],
+					[
+						"shakey arrows",
+						"little",
+						""
+					],
+					[
+						"Toggle Trail",
+						"",
+						"0"
+					]
+				]
+			],
+			[
+				83916.0839160839,
+				[
+					[
+						"Goodbye Hud",
+						"0",
+						"2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "nogf",
+		"bpm": 143,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "holy-tony"
+	}
+}

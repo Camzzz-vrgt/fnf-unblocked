@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-1,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "santiago idle"
+		},
+		{
+			"offsets": [
+				230,
+				100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "santiago left"
+		},
+		{
+			"offsets": [
+				286,
+				-67
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "santiago down"
+		},
+		{
+			"offsets": [
+				360,
+				227
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "santiago up"
+		},
+		{
+			"offsets": [
+				76,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "santiago right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/santiago",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "santiago",
+	"flip_x": false,
+	"healthbar_colors": [
+		208,
+		159,
+		139
+	],
+	"camera_position": [
+		-290,
+		-300
+	],
+	"sing_duration": 6.1,
+	"scale": 1.6
+}

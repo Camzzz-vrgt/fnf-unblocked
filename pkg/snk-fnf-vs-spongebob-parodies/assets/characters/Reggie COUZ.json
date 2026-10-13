@@ -1,0 +1,178 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "idle alt"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "down alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "left alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "right alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "up alt",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Reggie COUZ",
+	"position": [
+		-940,
+		-600
+	],
+	"healthicon": "Reggie COUZ",
+	"flip_x": true,
+	"healthbar_colors": [
+		112,
+		181,
+		255
+	],
+	"camera_position": [
+		-710,
+		400
+	],
+	"sing_duration": 6.1,
+	"scale": 0.599999999999999
+}

@@ -1,0 +1,244 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "patrickroom",
+		"player1": "panchitobf",
+		"player2": "patrickpanchitomatrix",
+		"player3": null,
+		"events": [
+			[
+				76642.3357664233,
+				[
+					[
+						"Change Character",
+						"1",
+						"patrickpanchitomatrix-gun"
+					],
+					[
+						"Play Sound",
+						"shotgun reload",
+						"1"
+					]
+				]
+			],
+			[
+				77080.2919708029,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				77956.204379562,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				78832.1167883212,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				79708.0291970803,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				80583.9416058394,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				81459.8540145985,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				82335.7664233577,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				83211.6788321168,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				84087.5912408759,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				84963.503649635,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				85839.4160583942,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				86715.3284671533,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				87591.2408759124,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				88467.1532846715,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				89343.0656934307,
+				[
+					[
+						"Middlescroll",
+						"On",
+						"0.5"
+					]
+				]
+			],
+			[
+				90218.9781021898,
+				[
+					[
+						"Middlescroll",
+						"Off",
+						"0.5"
+					]
+				]
+			],
+			[
+				103357.664233577,
+				[
+					[
+						"Change Scroll Speed",
+						"0.5",
+						"1"
+					],
+					[
+						"Set Cam Zoom",
+						"2",
+						"1.8"
+					],
+					[
+						"Middlescroll",
+						"On",
+						"1"
+					]
+				]
+			],
+			[
+				105109.489051095,
+				[
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"1"
+					],
+					[
+						"Set Cam Zoom",
+						"1",
+						"0.5"
+					],
+					[
+						"Middlescroll",
+						"Off",
+						"1"
+					],
+					[
+						"Flash",
+						"1",
+						""
+					],
+					[
+						"Health Drain",
+						"1",
+						"0.01"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "revengesplash",
+		"validScore": false,
+		"gfVersion": "nogf",
+		"bpm": 137,
+		"arrowSkin": "revengenotes",
+		"needsVoices": true,
+		"song": "shooting-star"
+	}
+}

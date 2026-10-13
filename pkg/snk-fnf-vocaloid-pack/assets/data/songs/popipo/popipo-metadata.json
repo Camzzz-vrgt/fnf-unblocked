@@ -1,0 +1,49 @@
+{
+ "version": "2.2.4",
+ "songName": "PoPiPo",
+ "artist": "Lamaze-P (Feat. Hatsune Miku)",
+ "charter": "Klyro",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-candy",
+   "girlfriend": "blank",
+   "opponent": "blank",
+   "opponentVocals": [
+    "blank"
+   ],
+   "playerVocals": [
+    "bf-candy"
+   ]
+  },
+  "stage": "vocaloid",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 3,
+   "normal": 3,
+   "hard": 3
+  },
+  "album": "popipo",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 150,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 1,
+   "b": 0.0025,
+   "bpm": 150,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

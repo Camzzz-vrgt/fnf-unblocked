@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				37,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [
+				153,
+				87
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "deathConfirm"
+		},
+		{
+			"offsets": [
+				0,
+				-140
+			],
+			"indices": [],
+			"fps": 43,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "dies"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/bfsquid_dies",
+	"position": [
+		0,
+		170
+	],
+	"healthicon": "bfsquid",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		50,
+		150
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

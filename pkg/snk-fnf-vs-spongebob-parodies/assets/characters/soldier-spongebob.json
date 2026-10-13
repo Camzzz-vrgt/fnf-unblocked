@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 15,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-51,
+				17
+			],
+			"anim": "singLEFT",
+			"fps": 15,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				20
+			],
+			"anim": "singDOWN",
+			"fps": 15,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-22,
+				12
+			],
+			"anim": "singUP",
+			"fps": 15,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-82,
+				4
+			],
+			"anim": "singRIGHT",
+			"fps": 15,
+			"name": "right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/wolfensponge",
+	"position": [
+		-120,
+		220
+	],
+	"healthicon": "soldier-spongebob",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		225,
+		145
+	],
+	"camera_position": [
+		80,
+		-110
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

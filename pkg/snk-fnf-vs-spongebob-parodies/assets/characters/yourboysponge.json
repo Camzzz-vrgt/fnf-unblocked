@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-10,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "idle",
+			"loop": true,
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/yourboysponge assets",
+	"position": [
+		-100,
+		100
+	],
+	"healthicon": "yourboysponge",
+	"flip_x": false,
+	"healthbar_colors": [
+		250,
+		235,
+		118
+	],
+	"camera_position": [
+		70,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

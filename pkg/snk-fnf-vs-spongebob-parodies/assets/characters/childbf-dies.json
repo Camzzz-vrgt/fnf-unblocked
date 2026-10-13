@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-261,
+				-41
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "deathloop"
+		},
+		{
+			"offsets": [
+				-240,
+				-41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "deathConfirm"
+		},
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "deathStart"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/childbf death",
+	"position": [
+		-640,
+		120
+	],
+	"healthicon": "birthdayboy",
+	"flip_x": true,
+	"healthbar_colors": [
+		121,
+		198,
+		216
+	],
+	"camera_position": [
+		-430,
+		200
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

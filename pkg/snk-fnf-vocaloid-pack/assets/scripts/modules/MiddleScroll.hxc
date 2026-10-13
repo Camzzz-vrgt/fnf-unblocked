@@ -1,0 +1,69 @@
+import flixel.FlxG;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+
+class MiddleScroll extends Module
+{
+	var middleScrollSongs:Array<String> = [
+		"mesmerizer",
+		"teto-the-31st",
+		"looping-the-rooms",
+		"young-girl-a",
+		"baumkuchen-end-credits",
+		"kyu-kurarin",
+		"retry-now",
+		"butcher-vanity",
+		"bake-no-hana",
+		"bad-apple",
+		"popipo",
+		"monitoring",
+		"static",
+		"spoken-for",
+		"human",
+		"ego-renegade-boy",
+		"weathergirl",
+		"tetoris",
+		"hito-mania",
+		"medicine",
+		"birdbrain",
+		"machine-love",
+		"bad-apple-sekai",
+		"bake-no-hana-sekai",
+		"kyu-kurarin-sekai",
+		"monitoring-best-friend-remix"
+	];
+
+	public function new():Void
+	{
+		super('MiddleScroll');
+	}
+
+	function shouldApply():Bool
+	{
+		var state = PlayState.instance;
+		if (state == null || state.currentSong == null) return false;
+		return middleScrollSongs.contains(state.currentSong.id);
+	}
+
+	function applyMiddleScroll():Void
+	{
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		var playerStrumline = state.playerStrumline;
+		var opponentStrumline = state.opponentStrumline;
+
+		if (playerStrumline == null || opponentStrumline == null) return;
+
+		playerStrumline.x = (FlxG.width / 2) - (playerStrumline.width / 2);
+
+		opponentStrumline.visible = false;
+		opponentStrumline.alpha = 0;
+	}
+
+	override public function onCountdownStart(event):Void
+	{
+		super.onCountdownStart(event);
+		if (shouldApply()) applyMiddleScroll();
+	}
+}

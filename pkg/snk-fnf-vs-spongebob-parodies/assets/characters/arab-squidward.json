@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Arab Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Arab Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Arab Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Arab Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Arab Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Arab Squidward Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "antumsquid",
+	"flip_x": false,
+	"healthbar_colors": [
+		208,
+		223,
+		226
+	],
+	"camera_position": [
+		-300,
+		-130
+	],
+	"sing_duration": 6.1,
+	"scale": 1.6
+}

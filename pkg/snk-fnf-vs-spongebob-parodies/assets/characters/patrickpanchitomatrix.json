@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				6
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Panchito_Pat",
+	"position": [
+		-60,
+		-70
+	],
+	"healthicon": "panchito-pat",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		171,
+		195
+	],
+	"camera_position": [
+		-60,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

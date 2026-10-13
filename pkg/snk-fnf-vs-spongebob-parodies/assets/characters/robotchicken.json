@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				556,
+				280
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				556,
+				283
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				520,
+				282
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				560,
+				286
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				558,
+				286
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/robot_chicken_assest",
+	"position": [
+		250,
+		350
+	],
+	"healthicon": "robotchicken",
+	"flip_x": false,
+	"healthbar_colors": [
+		224,
+		224,
+		224
+	],
+	"camera_position": [
+		-480,
+		-240
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

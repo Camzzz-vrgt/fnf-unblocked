@@ -1,0 +1,281 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-3,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"offsets": [
+				15,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "BF hit"
+		},
+		{
+			"offsets": [
+				-4,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "BF idle shaking"
+		},
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				37,
+				5
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				37,
+				69
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				-10,
+				-16
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "boyfriend dodge"
+		},
+		{
+			"offsets": [
+				294,
+				267
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "boyfriend attack"
+		},
+		{
+			"offsets": [
+				-40,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "bf pre attack"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "gbf idle"
+		},
+		{
+			"offsets": [
+				-7,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "gbf left miss"
+		},
+		{
+			"offsets": [
+				14,
+				-27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "gbf down miss"
+		},
+		{
+			"offsets": [
+				-29,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "gbf up miss"
+		},
+		{
+			"offsets": [
+				-48,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "gbf right miss"
+		},
+		{
+			"offsets": [
+				-7,
+				15
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "gbf left"
+		},
+		{
+			"offsets": [
+				15,
+				-27
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "gbf down"
+		},
+		{
+			"offsets": [
+				-29,
+				27
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "gbf up"
+		},
+		{
+			"offsets": [
+				-48,
+				-1
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "gbf right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Gangsta_BF",
+	"position": [
+		50,
+		160
+	],
+	"healthicon": "gbf",
+	"flip_x": true,
+	"healthbar_colors": [
+		171,
+		22,
+		74
+	],
+	"camera_position": [
+		40,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

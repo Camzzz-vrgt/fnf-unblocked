@@ -1,0 +1,48 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+
+class RemoveHealthBar extends Module
+{
+	static var TARGET_STAGE_ID:String = 'vocaloid';
+
+	public function new():Void
+	{
+		super('RemoveHealthBar');
+	}
+
+	function shouldHide():Bool
+	{
+		var state = PlayState.instance;
+		if (state == null) return false;
+		return state.currentStageId == TARGET_STAGE_ID;
+	}
+
+	function applyHide():Void
+	{
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		if (state.iconP1 != null)
+		{
+			state.iconP1.alpha = 0;
+			state.iconP1.visible = false;
+		}
+		if (state.iconP2 != null)
+		{
+			state.iconP2.alpha = 0;
+			state.iconP2.visible = false;
+		}
+	}
+
+	override public function onCreate(event):Void
+	{
+		super.onCreate(event);
+		if (shouldHide()) applyHide();
+	}
+
+	override public function onCountdownStart(event):Void
+	{
+		super.onCountdownStart(event);
+		if (shouldHide()) applyHide();
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "spongebong idle"
+		},
+		{
+			"offsets": [
+				160,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "spongebong left"
+		},
+		{
+			"offsets": [
+				-28,
+				-115
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "spongebong down"
+		},
+		{
+			"offsets": [
+				30,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "spongebong up"
+		},
+		{
+			"offsets": [
+				-50,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "spongebong right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Spongebong_Assets",
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "hemppants",
+	"flip_x": false,
+	"healthbar_colors": [
+		90,
+		220,
+		155
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

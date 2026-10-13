@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-3
+			],
+			"anim": "sad",
+			"fps": 24,
+			"name": "miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "cheer"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "GF Up Note",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "GF Right Note",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "GF Down Note",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "GF Left Note",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/gfpamtri",
+	"position": [
+		70,
+		-40
+	],
+	"healthicon": "gfpamtri",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		36,
+		37
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.5
+}

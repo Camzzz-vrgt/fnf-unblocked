@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				135,
+				-318
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "idle",
+			"indices": [
+				30,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				136,
+				-318
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "idle",
+			"indices": [
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				-123
+			],
+			"anim": "sad",
+			"fps": 24,
+			"name": "miss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/santiagogf",
+	"position": [
+		-90,
+		-180
+	],
+	"healthicon": "gfpamtri",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		36,
+		37
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

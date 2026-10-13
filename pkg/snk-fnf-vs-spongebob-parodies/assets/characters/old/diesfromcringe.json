@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				37,
+				5
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "sus"
+		},
+		{
+			"offsets": [
+				-914,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "ded"
+		},
+		{
+			"offsets": [
+				1107,
+				429
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "sus"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/spongeded",
+	"position": [
+		-1690,
+		-50
+	],
+	"healthicon": "bfsquid",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		229
+	],
+	"camera_position": [
+		1280,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

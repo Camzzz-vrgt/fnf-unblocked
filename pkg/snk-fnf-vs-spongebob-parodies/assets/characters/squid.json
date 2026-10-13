@@ -1,0 +1,113 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				200,
+				161
+			],
+			"loop": false,
+			"fps": 8,
+			"anim": "idle",
+			"indices": [],
+			"name": "Squid idle"
+		},
+		{
+			"offsets": [
+				202,
+				160
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "shoot",
+			"indices": [
+				8,
+				9,
+				10
+			],
+			"name": "Squid shoot"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				200,
+				160
+			],
+			"anim": "deez",
+			"fps": 16,
+			"name": "Squid shoot",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"offsets": [
+				190,
+				157
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Squid right"
+		},
+		{
+			"offsets": [
+				201,
+				164
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Squid left"
+		},
+		{
+			"offsets": [
+				190,
+				164
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Squid down"
+		},
+		{
+			"offsets": [
+				195,
+				158
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Squid up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Squid",
+	"position": [
+		0,
+		20
+	],
+	"healthicon": "squid",
+	"flip_x": false,
+	"healthbar_colors": [
+		138,
+		255,
+		248
+	],
+	"camera_position": [
+		-410,
+		-400
+	],
+	"sing_duration": 6.1,
+	"scale": 1.7
+}

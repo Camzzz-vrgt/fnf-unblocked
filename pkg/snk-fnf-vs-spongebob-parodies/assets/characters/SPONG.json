@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				558,
+				286
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "spong idle"
+		},
+		{
+			"offsets": [
+				596,
+				271
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "spong left"
+		},
+		{
+			"offsets": [
+				556,
+				283
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "spong up"
+		},
+		{
+			"offsets": [
+				510,
+				272
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "spong right"
+		},
+		{
+			"offsets": [
+				560,
+				286
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "spong down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/spong_ass",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "spong",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		255,
+		142
+	],
+	"camera_position": [
+		-200,
+		300
+	],
+	"sing_duration": 4,
+	"scale": 0.3
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "britishbob idle"
+		},
+		{
+			"offsets": [
+				70,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "britishbob left"
+		},
+		{
+			"offsets": [
+				-5,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "britishbob down"
+		},
+		{
+			"offsets": [
+				-5,
+				301
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "britishbob up"
+		},
+		{
+			"offsets": [
+				-40,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "britishbob right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/britishbob",
+	"position": [
+		-40,
+		230
+	],
+	"healthicon": "squarebob",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

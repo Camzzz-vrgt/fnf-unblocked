@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-3,
+				-20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sad",
+			"loop": false,
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gfsquidgame-old",
+	"position": [
+		0,
+		140
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

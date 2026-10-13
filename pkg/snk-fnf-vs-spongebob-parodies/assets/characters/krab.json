@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "krabs idle"
+		},
+		{
+			"offsets": [
+				-38,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "krabs left"
+		},
+		{
+			"offsets": [
+				-67,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "krabs down"
+		},
+		{
+			"offsets": [
+				10,
+				519
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "krabs up"
+		},
+		{
+			"offsets": [
+				32,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "krabs right"
+		},
+		{
+			"offsets": [
+				-31,
+				19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "krab slash",
+			"indices": [],
+			"name": "krab attack"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Mr. Krabs",
+	"position": [
+		-420,
+		100
+	],
+	"healthicon": "krab",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		48,
+		88
+	],
+	"camera_position": [
+		-310,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

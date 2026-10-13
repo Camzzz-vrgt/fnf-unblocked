@@ -1,0 +1,59 @@
+{
+	"song": {
+		"speed": 3.5,
+		"stage": "backyard",
+		"player1": "childbf",
+		"player2": "bonuce house spongebob",
+		"player3": null,
+		"events": [
+			[
+				63900,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				64000,
+				[
+					[
+						"Cinematics",
+						"1",
+						"0.3"
+					]
+				]
+			],
+			[
+				76700,
+				[
+					[
+						"Set Cam Zoom",
+						"0.4",
+						""
+					]
+				]
+			],
+			[
+				76800,
+				[
+					[
+						"Cinematics",
+						"2",
+						"0.3"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "childgf",
+		"bpm": 150,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "feed-him"
+	}
+}

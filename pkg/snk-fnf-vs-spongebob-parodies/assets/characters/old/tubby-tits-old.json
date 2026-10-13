@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "tits idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "tits down"
+		},
+		{
+			"offsets": [
+				0,
+				103
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "tits up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "tits left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "tits right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Butrig-old",
+	"position": [
+		-540,
+		-240
+	],
+	"healthicon": "tubby-tits",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		157,
+		158
+	],
+	"camera_position": [
+		270,
+		210
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

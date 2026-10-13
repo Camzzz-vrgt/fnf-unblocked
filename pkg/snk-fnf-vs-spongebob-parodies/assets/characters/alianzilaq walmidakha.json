@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				59,
+				-20
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "spooky kids YEAH!!",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "spooky dance idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-1,
+				-2
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singUP",
+			"loop": false,
+			"name": "spooky UP NOTE"
+		},
+		{
+			"offsets": [
+				20,
+				-2
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "note sing left"
+		},
+		{
+			"offsets": [
+				-10,
+				-4
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "spooky sing right"
+		},
+		{
+			"offsets": [
+				28,
+				1
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "spooky DOWN note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/alianzilaq walmidakha",
+	"position": [
+		50,
+		90
+	],
+	"healthicon": "mureib",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		153,
+		76
+	],
+	"camera_position": [
+		100,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

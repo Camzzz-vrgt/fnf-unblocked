@@ -1,0 +1,50 @@
+{
+	"storyName": "Bloody Waltz",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "45wb",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"bloodn_cartoon",
+			"WB-tom",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"splatter",
+			"WB45",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"chainsaw-maniac",
+			"45-tom",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Custom Week",
+	"hiddenUntilUnlocked": false
+}

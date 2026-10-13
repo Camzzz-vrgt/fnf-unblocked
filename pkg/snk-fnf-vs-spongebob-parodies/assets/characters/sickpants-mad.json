@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "sick idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-40
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "sick left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				7
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "sick down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-16
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "sick up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-95,
+				-1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "sick right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				10,
+				2
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "spatula slash",
+			"indices": [],
+			"name": "spatula slash"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "sick bob hurt",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Spongebob_Sickpants_mad",
+	"position": [
+		-260,
+		-80
+	],
+	"healthicon": "sickpants-mad",
+	"flip_x": false,
+	"healthbar_colors": [
+		206,
+		192,
+		0
+	],
+	"camera_position": [
+		140,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

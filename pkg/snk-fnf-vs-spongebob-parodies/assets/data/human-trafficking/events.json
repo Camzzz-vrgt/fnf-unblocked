@@ -1,0 +1,1954 @@
+{
+	"song": {
+		"speed": 3.4,
+		"stage": "krab",
+		"player1": "gfkrabs",
+		"player2": "krab-mask",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Image Event",
+						"bobsponge tv",
+						"5"
+					]
+				]
+			],
+			[
+				5000,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				6250,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				7500,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				8748.046875,
+				[
+					[
+						"Play Sound",
+						"moneymoney",
+						"1"
+					]
+				]
+			],
+			[
+				8750,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				9218.75,
+				[
+					[
+						"Health Drain",
+						"0.5",
+						"0.01"
+					]
+				]
+			],
+			[
+				37500,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				38125,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				38750,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				39375,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				42500,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				42812.5,
+				[
+					[
+						"Play Animation",
+						"down2",
+						"2"
+					]
+				]
+			],
+			[
+				43125,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				43437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				43750,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				44062.5,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				44375,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				44687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				47500,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				47812.5,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				48125,
+				[
+					[
+						"Play Animation",
+						"right1",
+						"2"
+					]
+				]
+			],
+			[
+				48437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				48750,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				49062.5,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				49375,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				49687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				63750,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				64062.5,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				64375,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				64687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				68750,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				69062.5,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				69375,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				69687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				80000,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				80625,
+				[
+					[
+						"Play Animation",
+						"down2",
+						"2"
+					]
+				]
+			],
+			[
+				81250,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				81875,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				85000,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				85625,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				86250,
+				[
+					[
+						"Play Animation",
+						"right1",
+						"2"
+					]
+				]
+			],
+			[
+				86875,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				90000,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				90625,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				91171.875,
+				[
+					[
+						"Health Drain",
+						"0.7",
+						"0.01"
+					]
+				]
+			],
+			[
+				91248.046875,
+				[
+					[
+						"Black Stuff",
+						"0.5",
+						"0.5"
+					]
+				]
+			],
+			[
+				91250,
+				[
+					[
+						"Screen Shake",
+						"1.4, 0.01",
+						"0.01"
+					],
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				91875,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				92500,
+				[
+					[
+						"Black Stuff",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				93748.046875,
+				[
+					[
+						"Black Stuff",
+						"0.5",
+						"0.5"
+					]
+				]
+			],
+			[
+				93750,
+				[
+					[
+						"Screen Shake",
+						"1.4, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				95000,
+				[
+					[
+						"Screen Shake",
+						"1.4, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				96250,
+				[
+					[
+						"Screen Shake",
+						"1.4, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				97500,
+				[
+					[
+						"Screen Shake",
+						"1.4, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				98750,
+				[
+					[
+						"Screen Shake",
+						"0.9, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				99375,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				99572.265625,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				99687.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				99884.765625,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				100000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				100625,
+				[
+					[
+						"Black Stuff",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				104921.875,
+				[
+					[
+						"Black Stuff",
+						"0.1",
+						"0.5"
+					]
+				]
+			],
+			[
+				105000,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				106171.875,
+				[
+					[
+						"Black Stuff",
+						"0.2",
+						"0.5"
+					]
+				]
+			],
+			[
+				106250,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				107421.875,
+				[
+					[
+						"Black Stuff",
+						"0.3",
+						"0.5"
+					]
+				]
+			],
+			[
+				107500,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				108671.875,
+				[
+					[
+						"Black Stuff",
+						"0.4",
+						"0.5"
+					]
+				]
+			],
+			[
+				108750,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				108828.125,
+				[
+					[
+						"Play Sound",
+						"moneymoney",
+						"1"
+					]
+				]
+			],
+			[
+				109687.5,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				109765.625,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				109843.75,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				109921.875,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				110000,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				110003.255208333,
+				[
+					[
+						"Black Stuff",
+						"0.7",
+						"0.5"
+					]
+				]
+			],
+			[
+				112500,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				112812.5,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				113125,
+				[
+					[
+						"Play Animation",
+						"right1",
+						"2"
+					]
+				]
+			],
+			[
+				113437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				113750,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				114062.5,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				114375,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				114687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Black Stuff",
+						"0.6",
+						"0.2"
+					]
+				]
+			],
+			[
+				120312.5,
+				[
+					[
+						"Black Stuff",
+						"0.5",
+						"0.2"
+					]
+				]
+			],
+			[
+				120625,
+				[
+					[
+						"Black Stuff",
+						"0.4",
+						"0.2"
+					]
+				]
+			],
+			[
+				120937.5,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				121015.625,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				121093.75,
+				[
+					[
+						"Play Animation",
+						"down2",
+						"2"
+					]
+				]
+			],
+			[
+				121171.875,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				121250,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				121253.255208333,
+				[
+					[
+						"Black Stuff",
+						"0.7",
+						"0.2"
+					]
+				]
+			],
+			[
+				122500,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				122812.5,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				123125,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				123437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				123750,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				124062.5,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				124375,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				124687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				129998.046875,
+				[
+					[
+						"shakey arrows",
+						"little",
+						""
+					]
+				]
+			],
+			[
+				130000,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					],
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				130625,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				131250,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				131875,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				132500,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				133125,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				133750,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				134375,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				135000,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					],
+					[
+						"Screen Shake",
+						"100, 0.02",
+						"0.02"
+					]
+				]
+			],
+			[
+				135312.5,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				135625,
+				[
+					[
+						"Play Animation",
+						"right1",
+						"2"
+					]
+				]
+			],
+			[
+				135937.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				136250,
+				[
+					[
+						"Screen Shake",
+						"100, 0.03",
+						"0.03"
+					],
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				136562.5,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				136875,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				137187.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				137500,
+				[
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					],
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				137812.5,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				138125,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				138437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				138750,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					],
+					[
+						"Screen Shake",
+						"100, 0.02",
+						"0.02"
+					]
+				]
+			],
+			[
+				139062.5,
+				[
+					[
+						"Play Animation",
+						"down2",
+						"2"
+					]
+				]
+			],
+			[
+				139375,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					]
+				]
+			],
+			[
+				139687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				140000,
+				[
+					[
+						"Screen Shake",
+						"100, 0.01",
+						"0.01"
+					]
+				]
+			],
+			[
+				145000,
+				[
+					[
+						"Screen Shake",
+						"100, 0.02",
+						"0.02"
+					],
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				146250,
+				[
+					[
+						"Screen Shake",
+						"100, 0.03",
+						"0.03"
+					],
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				147500,
+				[
+					[
+						"Play Animation",
+						"down1",
+						"2"
+					],
+					[
+						"Screen Shake",
+						"100, 0.03",
+						"0.03"
+					]
+				]
+			],
+			[
+				148746.09375,
+				[
+					[
+						"shakey arrows",
+						"normal",
+						""
+					]
+				]
+			],
+			[
+				148750,
+				[
+					[
+						"Screen Shake",
+						"0.1, 0.01",
+						"0.01"
+					],
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				150000,
+				[
+					[
+						"Red Stuff",
+						"0.5",
+						"0.3"
+					]
+				]
+			],
+			[
+				152500,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				152812.5,
+				[
+					[
+						"Play Animation",
+						"right2",
+						"2"
+					]
+				]
+			],
+			[
+				153125,
+				[
+					[
+						"Play Animation",
+						"right1",
+						"2"
+					]
+				]
+			],
+			[
+				153437.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				153750,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				154062.5,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				154375,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				154687.5,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				162500,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				163125,
+				[
+					[
+						"Play Animation",
+						"left2",
+						"2"
+					]
+				]
+			],
+			[
+				163750,
+				[
+					[
+						"Play Animation",
+						"left1",
+						"2"
+					]
+				]
+			],
+			[
+				164375,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				179998.046875,
+				[
+					[
+						"shakey arrows",
+						"medium",
+						""
+					]
+				]
+			],
+			[
+				182500,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				182812.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				183125,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				183437.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				185000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				185312.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				185625,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				185937.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				187500,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				187812.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				188125,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				188437.5,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						"0.03"
+					]
+				]
+			],
+			[
+				188750,
+				[
+					[
+						"Red Stuff",
+						"0",
+						"0.5"
+					]
+				]
+			],
+			[
+				189843.75,
+				[
+					[
+						"Black Stuff",
+						"O",
+						"0.5"
+					]
+				]
+			],
+			[
+				191250,
+				[
+					[
+						"shakey arrows",
+						"little",
+						""
+					]
+				]
+			],
+			[
+				197500,
+				[
+					[
+						"Play Animation",
+						"up3",
+						"2"
+					]
+				]
+			],
+			[
+				197812.5,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				198125,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				198437.5,
+				[
+					[
+						"Play Animation",
+						"down3",
+						"2"
+					]
+				]
+			],
+			[
+				198750,
+				[
+					[
+						"Play Animation",
+						"up2",
+						"2"
+					]
+				]
+			],
+			[
+				199062.5,
+				[
+					[
+						"Play Animation",
+						"right3",
+						"2"
+					]
+				]
+			],
+			[
+				199375,
+				[
+					[
+						"Play Animation",
+						"down2",
+						"2"
+					]
+				]
+			],
+			[
+				199687.5,
+				[
+					[
+						"Play Animation",
+						"left3",
+						"2"
+					]
+				]
+			],
+			[
+				200000,
+				[
+					[
+						"Play Animation",
+						"up1",
+						"2"
+					]
+				]
+			],
+			[
+				201250,
+				[
+					[
+						"Play Animation",
+						"now",
+						"2"
+					]
+				]
+			],
+			[
+				201328.125,
+				[
+					[
+						"Play Sound",
+						"moneymoney",
+						"1"
+					]
+				]
+			],
+			[
+				201484.375,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				201875,
+				[
+					[
+						"Set Cam Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				202187.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				202500,
+				[
+					[
+						"Set Cam Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				202812.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				203125,
+				[
+					[
+						"Set Cam Zoom",
+						"1.3",
+						""
+					]
+				]
+			],
+			[
+				203437.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				203750,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				204062.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				204375,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				204687.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				205000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				205312.5,
+				[
+					[
+						"Set Cam Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				205625,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				205859.375,
+				[
+					[
+						"Add Camera Zoom",
+						"0.090",
+						""
+					],
+					[
+						"shakey arrows",
+						"large",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "bobtv",
+		"bpm": 192,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "human-trafficking"
+	}
+}

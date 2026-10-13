@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				2
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "down"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/gfpamtri",
+	"position": [
+		70,
+		-40
+	],
+	"healthicon": "gfpamtri",
+	"flip_x": false,
+	"healthbar_colors": [
+		100,
+		36,
+		37
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.5
+}

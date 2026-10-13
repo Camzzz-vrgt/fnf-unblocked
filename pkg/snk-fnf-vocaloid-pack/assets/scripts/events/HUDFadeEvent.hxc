@@ -1,0 +1,52 @@
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+
+class HUDFadeEvent extends SongEvent
+{
+  function new()
+  {
+    super('HUDFadeEvent');
+  }
+
+  override function handleEvent(data)
+  {
+    if (PlayState.instance == null) return;
+
+    var shouldFadeIn:Bool = data.value.shouldFadeIn != null ? data.value.shouldFadeIn : true;
+
+    if (shouldFadeIn)
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut});
+      PlayState.instance.camHUD.visible = true;
+    }
+    else
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+    }
+  }
+
+  override function getTitle()
+  {
+    return "HUD Fade";
+  }
+
+  override function getEventSchema()
+  {
+    return [
+      {
+        name: "shouldFadeIn",
+        title: "Fade In? (false = fade out)",
+        defaultValue: true,
+        type: "bool"
+      },
+      {
+        name: "hud",
+        title: "HUD Layer",
+        defaultValue: 2,
+        type: "float"
+      }
+    ];
+  }
+}

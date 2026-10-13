@@ -1,0 +1,43 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+
+class HideOpponentStrumline extends Module
+{
+	static var TARGET_STAGE_ID:String = 'vocaloid';
+
+	public function new():Void
+	{
+		super('HideOpponentStrumline');
+	}
+
+	function shouldHide():Bool
+	{
+		var state = PlayState.instance;
+		if (state == null) return false;
+		return state.currentStageId == TARGET_STAGE_ID;
+	}
+
+	function applyHide():Void
+	{
+		var state = PlayState.instance;
+		if (state == null) return;
+
+		if (state.opponentStrumline != null)
+		{
+			state.opponentStrumline.alpha = 0;
+			state.opponentStrumline.visible = false;
+		}
+	}
+
+	override public function onCreate(event):Void
+	{
+		super.onCreate(event);
+		if (shouldHide()) applyHide();
+	}
+
+	override public function onCountdownStart(event):Void
+	{
+		super.onCountdownStart(event);
+		if (shouldHide()) applyHide();
+	}
+}

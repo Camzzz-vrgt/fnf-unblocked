@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Spongesicle Idle"
+		},
+		{
+			"offsets": [
+				382,
+				-28
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Spongesicle Left"
+		},
+		{
+			"offsets": [
+				-99,
+				-94
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Spongesicle Down"
+		},
+		{
+			"offsets": [
+				103,
+				173
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Spongesicle Up"
+		},
+		{
+			"offsets": [
+				-95,
+				77
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Spongesicle Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Spongesicle_Assets",
+	"position": [
+		0,
+		320
+	],
+	"healthicon": "S-popsicle",
+	"flip_x": false,
+	"healthbar_colors": [
+		240,
+		209,
+		82
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

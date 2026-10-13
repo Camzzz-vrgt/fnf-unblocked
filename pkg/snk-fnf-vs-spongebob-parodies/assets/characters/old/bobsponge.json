@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Bob idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				-18
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Bob down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				58,
+				29
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Bob up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				107,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Bob right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				118,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Bob left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bob Sponge",
+	"position": [
+		0,
+		380
+	],
+	"healthicon": "bobsponge",
+	"flip_x": false,
+	"healthbar_colors": [
+		251,
+		230,
+		0
+	],
+	"camera_position": [
+		210,
+		-40
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}

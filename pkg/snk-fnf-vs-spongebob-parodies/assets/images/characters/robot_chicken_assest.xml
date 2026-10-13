@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Robot Chicken.png">
+<SubTexture name="idle0000" x="949" y="690" width="377" height="649" frameX="-196" frameY="-44" frameWidth="720" frameHeight="720" />
+<SubTexture name="idle0001" x="1355" y="656" width="350" height="651" frameX="-208" frameY="-42" frameWidth="720" frameHeight="720" />
+<SubTexture name="idle0002" x="981" y="0" width="374" height="667" frameX="-213" frameY="-26" frameWidth="720" frameHeight="720" />
+<SubTexture name="idle0003" x="598" y="0" width="383" height="669" frameX="-215" frameY="-24" frameWidth="720" frameHeight="720" />
+<SubTexture name="down0000" x="1261" y="1353" width="368" height="606" frameX="-246" frameY="-89" frameWidth="720" frameHeight="720" />
+<SubTexture name="down0001" x="568" y="1353" width="344" height="616" frameX="-247" frameY="-80" frameWidth="720" frameHeight="720" />
+<SubTexture name="down0002" x="912" y="1353" width="349" height="614" frameX="-247" frameY="-82" frameWidth="720" frameHeight="720" />
+<SubTexture name="left0000" x="1355" y="0" width="509" height="656" frameX="-62" frameY="-51" frameWidth="720" frameHeight="720" />
+<SubTexture name="left0001" x="1864" y="0" width="561" height="648" frameX="-113" frameY="-59" frameWidth="720" frameHeight="720" />
+<SubTexture name="left0002" x="0" y="1353" width="568" height="647" frameX="-103" frameY="-60" frameWidth="720" frameHeight="720" />
+<SubTexture name="right0000" x="1864" y="648" width="335" height="642" frameX="-247" frameY="-58" frameWidth="720" frameHeight="720" />
+<SubTexture name="right0001" x="0" y="690" width="316" height="663" frameX="-250" frameY="-37" frameWidth="720" frameHeight="720" />
+<SubTexture name="right0002" x="316" y="690" width="320" height="660" frameX="-250" frameY="-40" frameWidth="720" frameHeight="720" />
+<SubTexture name="up0000" x="0" y="0" width="292" height="690" frameX="-269" frameY="-3" frameWidth="720" frameHeight="720" />
+<SubTexture name="up0001" x="636" y="690" width="313" height="660" frameX="-264" frameY="-33" frameWidth="720" frameHeight="720" />
+<SubTexture name="up0002" x="292" y="0" width="306" height="673" frameX="-271" frameY="-20" frameWidth="720" frameHeight="720" />
+</TextureAtlas>

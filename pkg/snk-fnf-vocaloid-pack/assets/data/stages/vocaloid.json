@@ -1,0 +1,92 @@
+{
+	"cameraZoom": 1.1,
+	"props": [
+		{
+			"blend": "",
+			"color": "#FFFFFF",
+			"angle": 0,
+			"startingAnimation": null,
+			"assetPath": "blank",
+			"zIndex": 40,
+			"danceEvery": 0,
+			"position": [
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1
+			],
+			"animType": "sparrow",
+			"flipX": false,
+			"name": "Black",
+			"flipY": false,
+			"isPixel": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"animations": []
+		}
+	],
+	"version": "1.0.0",
+	"directory": "",
+	"characters": {
+		"bf": {
+			"zIndex": 300,
+			"scroll": [
+				1,
+				1
+			],
+			"position": [
+				989.5,
+				885
+			],
+			"scale": 1,
+			"alpha": 1,
+			"angle": 0,
+			"cameraOffsets": [
+				-3300,
+				-100
+			]
+		},
+		"gf": {
+			"zIndex": 100,
+			"scroll": [
+				1,
+				1
+			],
+			"position": [
+				751.5,
+				787
+			],
+			"scale": 1,
+			"alpha": 1,
+			"angle": 0,
+			"cameraOffsets": [
+				3110,
+				0
+			]
+		},
+		"dad": {
+			"zIndex": 200,
+			"scroll": [
+				1,
+				1
+			],
+			"position": [
+				335,
+				885
+			],
+			"scale": 1,
+			"alpha": 1,
+			"angle": 0,
+			"cameraOffsets": [
+				3150,
+				-100
+			]
+		}
+	},
+	"name": "Vocaloid Stage"
+}

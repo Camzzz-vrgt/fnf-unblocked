@@ -1,0 +1,44 @@
+{
+	"song": {
+		"speed": 2,
+		"stage": "pamtri",
+		"player1": "bfpamtri",
+		"player2": "pamtri",
+		"player3": null,
+		"events": [
+			[
+				97846.1538461538,
+				[
+					[
+						"Black screen",
+						"",
+						""
+					],
+					[
+						"Play Sound",
+						"shot",
+						"1"
+					]
+				]
+			],
+			[
+				98307.6923076923,
+				[
+					[
+						"Play Sound",
+						"shot",
+						"1"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "pamtrisplashes",
+		"validScore": false,
+		"gfVersion": "gfpamtri",
+		"bpm": 130,
+		"arrowSkin": "pamtrinotes",
+		"needsVoices": true,
+		"song": "Sea-Bear"
+	}
+}
