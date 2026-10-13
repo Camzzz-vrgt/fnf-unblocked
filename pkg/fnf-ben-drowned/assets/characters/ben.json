@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				142,
+				-55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				347,
+				-83
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left pose"
+		},
+		{
+			"offsets": [
+				154,
+				-50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				131,
+				-181
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down pose"
+		},
+		{
+			"offsets": [
+				337,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up pose"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ben",
+	"position": [
+		90,
+		20
+	],
+	"healthicon": "deez",
+	"flip_x": false,
+	"healthbar_colors": [
+		20,
+		115,
+		20
+	],
+	"camera_position": [
+		-140,
+		60
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

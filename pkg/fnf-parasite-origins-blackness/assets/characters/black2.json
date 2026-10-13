@@ -1,0 +1,204 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				5
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF HEY",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				18
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "BF hit",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-4,
+				0
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "BF idle shaking",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-16
+			],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "boyfriend dodge",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				294,
+				267
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "boyfriend attack",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-40
+			],
+			"anim": "pre-attack",
+			"fps": 24,
+			"name": "bf pre attack",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				59
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "black2 leftmiss"
+		},
+		{
+			"offsets": [
+				65,
+				84
+			],
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "black2 left"
+		},
+		{
+			"offsets": [
+				49,
+				79
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "black2 downmiss"
+		},
+		{
+			"offsets": [
+				49,
+				79
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "black2 upmiss"
+		},
+		{
+			"offsets": [
+				50,
+				81
+			],
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "black2 down"
+		},
+		{
+			"offsets": [
+				47,
+				86
+			],
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "black2 up"
+		},
+		{
+			"offsets": [
+				43,
+				86
+			],
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "black2 right"
+		},
+		{
+			"offsets": [
+				51,
+				88
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "black2 rightmiss"
+		},
+		{
+			"offsets": [
+				45,
+				82
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "black2 idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/black2",
+	"position": [
+		680,
+		340
+	],
+	"healthicon": "black2",
+	"flip_x": true,
+	"healthbar_colors": [
+		40,
+		0,
+		55
+	],
+	"camera_position": [
+		-240,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 2
+}

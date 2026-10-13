@@ -1,0 +1,37 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		0,
+		50
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				10,
+				115
+			],
+			"idle_offsets": [
+				9,
+				114
+			],
+			"loop_name": "CircleTalkNormal",
+			"idle_name": "CircleTalkNormal"
+		},
+		{
+			"loop_offsets": [
+				-40,
+				73
+			],
+			"anim": "pissed",
+			"idle_offsets": [
+				-40,
+				73
+			],
+			"loop_name": "CircleTalkpissed",
+			"idle_name": "CircleTalkpissed"
+		}
+	],
+	"image": "guard"
+}

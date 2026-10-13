@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				7
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "toothless idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "toothless left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "toothless down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				6
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "toothless up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				5
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "toothless right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/toothless",
+	"position": [
+		0,
+		-600
+	],
+	"healthicon": "toothless",
+	"flip_x": false,
+	"healthbar_colors": [
+		69,
+		67,
+		67
+	],
+	"camera_position": [
+		400,
+		275
+	],
+	"sing_duration": 6.1,
+	"scale": 0.74
+}

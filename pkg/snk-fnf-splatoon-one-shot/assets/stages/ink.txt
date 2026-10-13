@@ -1,0 +1,18 @@
+og cam zoom is 0.35 btw
+For phantoskii
+
+also this for bars
+
+	makeLuaSprite('barbot','',0,650)
+    makeGraphic('barbot',1280,100,'000000')
+    addLuaSprite('barbot',false)
+    setScrollFactor('barbot',0,0)
+    setObjectCamera('barbot','hud')
+	
+	makeLuaSprite('bartop','',0,-30)
+    makeGraphic('bartop',1280,100,'000000')
+    addLuaSprite('bartop',false)
+    setObjectCamera('bartop','hud')
+    setScrollFactor('bartop',0,0)
+
+- Phantoskii

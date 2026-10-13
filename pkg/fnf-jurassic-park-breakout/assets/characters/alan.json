@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-54,
+				63
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "AlanDownPose",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-46,
+				88
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "AlanLeftPose"
+		},
+		{
+			"offsets": [
+				68,
+				379
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "AlanUpPose"
+		},
+		{
+			"offsets": [
+				175,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "AlanRightPose"
+		},
+		{
+			"offsets": [
+				37,
+				42
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Down Miss"
+		},
+		{
+			"offsets": [
+				-17,
+				43
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Left Miss"
+		},
+		{
+			"offsets": [
+				87,
+				430
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Up Miss"
+		},
+		{
+			"offsets": [
+				81,
+				34
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Right Miss"
+		},
+		{
+			"offsets": [
+				-40,
+				47
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "AlanIdle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/AlanGrant",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "alan",
+	"flip_x": true,
+	"healthbar_colors": [
+		35,
+		79,
+		201
+	],
+	"camera_position": [
+		510,
+		-130
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

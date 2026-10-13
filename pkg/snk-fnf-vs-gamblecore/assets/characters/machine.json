@@ -1,0 +1,197 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "fnf",
+			"fps": 24,
+			"name": "fnf",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "gambling",
+			"fps": 24,
+			"name": "gambling",
+			"image": null,
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "wrong",
+			"fps": 24,
+			"name": "wrong",
+			"image": null,
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"image": null,
+			"name": "wrong"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"image": null,
+			"name": "gambling"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"image": null,
+			"name": "fnf"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "fnf",
+			"image": null,
+			"indices": []
+		},
+		{
+			"image": null,
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "wrong"
+		}
+	],
+	"sing_anims_prefix": "sing",
+	"no_antialiasing": true,
+	"healthicon_scale": 1,
+	"healthicon_type": "duo",
+	"gameover_properties": [
+		"bf-dead",
+		"fnf_loss_sfx",
+		"gameOver",
+		"gameOverEnd"
+	],
+	"image": "characters/machine",
+	"position": [
+		0,
+		400
+	],
+	"healthicon_offsets": [
+		0,
+		0
+	],
+	"healthbar_colors2": [
+		250,
+		250,
+		250
+	],
+	"healthicon": "machine-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		250,
+		250,
+		250
+	],
+	"camera_position": [
+		-700,
+		-150
+	],
+	"sing_duration": 4,
+	"scale": 3
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "dedblack firstDeath",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "dedblack deathConfirm",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				37,
+				11
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "dedblack deathLoop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dedblack",
+	"position": [
+		220,
+		240
+	],
+	"healthicon": "black",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		640,
+		-360
+	],
+	"sing_duration": 4,
+	"scale": 2
+}

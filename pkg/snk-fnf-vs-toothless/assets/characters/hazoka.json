@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				7
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "hazoka idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "hazoka left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "hazoka down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				6
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "hazoka up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				5
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "hazoka right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/hazoka",
+	"position": [
+		-630,
+		-600
+	],
+	"healthicon": "hazoka",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		51,
+		255
+	],
+	"camera_position": [
+		410,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

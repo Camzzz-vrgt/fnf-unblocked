@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				85,
+				-72
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Alastor Dark LEFT instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-72
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Alastor Dark DOWN instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				-11
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Alastor Dark UP instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				-88
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Alastor Dark RIGHT instance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Alastor Dark idle instance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Alastor Dark",
+	"position": [
+		-140,
+		-70
+	],
+	"healthicon": "Alastor Dark icons",
+	"flip_x": false,
+	"healthbar_colors": [
+		34,
+		34,
+		34
+	],
+	"camera_position": [
+		-115,
+		260
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

@@ -1,0 +1,204 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				5
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF HEY",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				18
+			],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "BF hit",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-4,
+				0
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "BF idle shaking",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-16
+			],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "boyfriend dodge",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				294,
+				267
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "boyfriend attack",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-40
+			],
+			"anim": "pre-attack",
+			"fps": 24,
+			"name": "bf pre attack",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				45,
+				82
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "black1 idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				59
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "black1 leftmiss"
+		},
+		{
+			"offsets": [
+				51,
+				88
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "black1 rightmiss"
+		},
+		{
+			"offsets": [
+				43,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"name": "black1 right"
+		},
+		{
+			"offsets": [
+				47,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"name": "black1 up"
+		},
+		{
+			"offsets": [
+				65,
+				84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"name": "black1 left"
+		},
+		{
+			"offsets": [
+				50,
+				81
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"name": "black1 down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49,
+				79
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "black1 upmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49,
+				79
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "black1 downmiss",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/black1",
+	"position": [
+		220,
+		240
+	],
+	"healthicon": "black",
+	"flip_x": true,
+	"healthbar_colors": [
+		40,
+		0,
+		55
+	],
+	"camera_position": [
+		-240,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

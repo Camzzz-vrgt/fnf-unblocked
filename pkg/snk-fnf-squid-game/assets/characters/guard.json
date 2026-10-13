@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-81,
+				-16
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "CirlceDownSing"
+		},
+		{
+			"offsets": [
+				-9,
+				33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "CircleUpSing"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "CircleIdledance"
+		},
+		{
+			"offsets": [
+				68,
+				-14
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "CircleLeftSing"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "CircleIdledance"
+		},
+		{
+			"offsets": [
+				-79,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "CircleRightSing"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/guard",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "guard",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		40,
+		40
+	],
+	"camera_position": [
+		-50,
+		-140
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

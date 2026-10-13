@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "RexyIdle"
+		},
+		{
+			"offsets": [
+				34,
+				-102
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				35,
+				-130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				52,
+				190
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-1,
+				-36
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				83,
+				231
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "roar",
+			"loop": false,
+			"name": "Rexyroar"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Rexy1",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "rexy",
+	"flip_x": false,
+	"healthbar_colors": [
+		167,
+		22,
+		37
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

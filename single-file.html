@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FNF</title>
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/favicon.png" />
+  <style>@font-face {
+  font-family: "FNF";
+  src: url("https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/FridayNightFunkin-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --bg: #140f1e;
+  --bg2: #1e1630;
+  --panel: rgba(30, 22, 48, 0.88);
+  --ink: #f4f0ff;
+  --dim: #9a8fb8;
+  --blue: #31b0d1;
+  --red: #e10f4e;
+  --pink: #ff4da6;
+  --yellow: #ffd319;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- home ---------- */
+.home {
+  background: url("https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/themebg2.jpg") center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.brand {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+.brand img {
+  width: clamp(150px, 18vw, 240px);
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.6));
+}
+.brand a img { transition: transform 0.12s ease, filter 0.12s ease; }
+.brand a:hover img {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(3px 6px 0 rgba(0, 0, 0, 0.6))
+          drop-shadow(0 0 18px rgba(255, 77, 166, 0.55));
+}
+.brand .by {
+  font-family: "FNF", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(18px, 2.2vw, 30px);
+  color: var(--ink);
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.12s;
+  margin-bottom: 14px;
+}
+.brand .by:hover { color: var(--yellow); }
+
+.menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 7vw, 120px);
+  padding: 90px 20px 30px;
+}
+.menu-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  cursor: pointer;
+}
+.hero-logo {
+  width: clamp(280px, 38vw, 560px);
+  filter: drop-shadow(6px 8px 0 rgba(0, 0, 0, 0.35));
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.menu-col:hover .hero-logo {
+  transform: translateY(-8px) scale(1.05);
+  filter: drop-shadow(6px 12px 0 rgba(0, 0, 0, 0.35))
+          drop-shadow(0 0 26px rgba(255, 77, 166, 0.55));
+}
+.menu-col:active .hero-logo { transform: translateY(-2px) scale(1.02); }
+
+/* ---------- shared topbar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border-bottom: 2px solid #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.back {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--panel);
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+.back::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-left: 6px solid var(--ink);
+  border-bottom: 6px solid var(--ink);
+  border-bottom-left-radius: 3px;
+  transform: rotate(45deg) translate(2px, -2px);
+}
+.back:hover { background: var(--blue); }
+.back:hover::before { border-color: #06222b; }
+.topbar-logo { height: 40px; filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.5)); }
+.topbar-title {
+  font-family: "FNF", sans-serif;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0 #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 4px;
+}
+.game-count {
+  font-family: "FNF", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--blue);
+  text-shadow: 1px 1px 0 #000;
+  background: var(--panel);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 6px 12px 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.topbar-actions { margin-left: auto; display: flex; gap: 8px; }
+.topbar-actions button {
+  background: var(--panel);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  color: var(--ink);
+  font-size: 16px;
+  width: 38px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.topbar-actions button:hover { border-color: var(--blue); color: var(--blue); }
+#search {
+  margin-left: auto;
+  padding: 8px 14px;
+  min-width: 220px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 15px;
+  outline: none;
+}
+#search:focus { border-color: var(--pink); }
+
+/* ---------- mods grid ---------- */
+.mods-page {
+  min-height: 100%;
+  background: url("https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/defaultsitebg.png") center / cover no-repeat fixed;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0;
+  padding: 0;
+  min-height: calc(100vh - 57px);
+  align-content: start;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--panel);
+  border: 0;
+  outline: 2px solid #000;
+  overflow: hidden;
+  transition: transform 0.08s, filter 0.12s;
+}
+.card:hover { transform: scale(1.02); filter: brightness(1.15); z-index: 2; position: relative; }
+.card-art {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.06), transparent 60%),
+    #181026;
+  overflow: hidden;
+  position: relative;
+}
+.card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-art.no-img img { display: none; }
+.card-fallback {
+  display: none;
+  padding: 14px;
+  text-align: center;
+  font-family: "FNF", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--dim);
+}
+.card-art.no-img .card-fallback { display: block; }
+.card-name {
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border-top: 2px solid rgba(255, 255, 255, 0.07);
+}
+
+/* descriptor text — FNF font, lowercase */
+.card-name, .empty, .panel p, .panel .hint, .opt, #search, .credit-row span {
+  font-family: "FNF", sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+.card-name { font-size: 17px; font-weight: 400; }
+#search::placeholder { font-family: "FNF", sans-serif; }
+.card-base .card-name::after {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  text-transform: uppercase;
+  content: "ORIGINAL";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 900;
+  color: #0d0a14;
+  background: var(--yellow);
+  padding: 1px 6px;
+  border-radius: 4px;
+  vertical-align: 1px;
+}
+.empty { text-align: center; color: var(--ink); padding: 60px 0; text-shadow: 1px 1px 0 #000; }
+.hidden { display: none; }
+
+/* ---------- play ---------- */
+.play-page { height: 100%; background: #000; }
+#frame { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+
+.play-fab {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 20;
+}
+.play-page:hover .play-fab, .play-fab:focus-within { opacity: 1; }
+.play-fab button {
+  background: rgba(20, 15, 30, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--ink);
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.play-fab button:hover { border-color: var(--blue); color: var(--blue); }
+
+/* chunky css-drawn fab icons — match the .back chevron */
+#btn-newtab::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 5px solid currentColor;
+  border-right: 5px solid currentColor;
+  border-top-right-radius: 2px;
+  transform: translate(-2px, 2px);
+}
+#btn-full { position: relative; }
+#btn-full::before, #btn-full::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+#btn-full::before {
+  top: 7px;
+  left: 7px;
+  border-top: 5px solid currentColor;
+  border-left: 5px solid currentColor;
+  border-top-left-radius: 2px;
+}
+#btn-full::after {
+  bottom: 7px;
+  right: 7px;
+  border-bottom: 5px solid currentColor;
+  border-right: 5px solid currentColor;
+  border-bottom-right-radius: 2px;
+}
+
+/* ---------- discord ---------- */
+.discord-fab {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  overflow: hidden;
+  outline: 3px solid #000;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.discord-fab img { width: 100%; height: 100%; display: block; }
+.discord-fab:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.5), 0 0 22px rgba(88, 101, 242, 0.7);
+}
+.discord-fab:active { transform: scale(0.96); }
+
+/* ---------- settings fab ---------- */
+.settings-fab {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  z-index: 30;
+  filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.6));
+  transition: transform 0.15s ease;
+}
+.settings-fab img { width: 100%; height: 100%; }
+.settings-fab:hover { transform: rotate(40deg) scale(1.1); }
+.settings-fab:active { transform: rotate(40deg) scale(0.95); }
+
+/* ---------- sub pages (settings / credits) ---------- */
+.sub-page {
+  min-height: 100%;
+  background: url("https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/defaultsitebg.png") center / cover no-repeat fixed;
+}
+.panel-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 28px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.panel {
+  background: var(--panel);
+  border: 3px solid #000;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+.panel h2 {
+  font-family: "FNF", sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 14px;
+}
+.panel p { color: var(--ink); padding: 3px 0; }
+.panel a { color: var(--blue); }
+.panel .hint { color: var(--dim); font-size: 13px; margin: -8px 0 10px; }
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.opt span { flex: 0 0 auto; }
+.opt input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--pink); cursor: pointer; }
+.opt input[type="range"] { flex: 1; accent-color: var(--pink); cursor: pointer; }
+.opt select {
+  background: var(--bg2);
+  color: var(--ink);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* credit rows — person + role, toby web style */
+.credit-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 2px;
+  border-top: 2px solid rgba(255, 255, 255, 0.07);
+}
+.credit-row:first-of-type { border-top: 0; }
+.credit-row strong {
+  font-family: "FNF", sans-serif;
+  text-transform: lowercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.credit-row a { color: var(--blue); }
+.credit-row span { color: var(--dim); font-size: 15px; text-align: right; }
+
+@media (max-width: 760px) {
+  .menu { flex-direction: column; gap: 30px; padding-top: 120px; }
+  .hero-logo { width: min(78vw, 420px); }
+  .topbar { flex-wrap: wrap; }
+  #search { min-width: 0; flex: 1; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+
+/* ---------- click-to-play gate ---------- */
+#gate {
+  position: fixed; inset: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg); cursor: pointer;
+}
+#gate-bg {
+  position: absolute; inset: 0;
+  background: center / cover no-repeat;
+  filter: blur(24px) brightness(0.35);
+  transform: scale(1.1);
+}
+#gate-inner {
+  position: relative; display: flex; flex-direction: column;
+  align-items: center; gap: 22px; padding: 30px; text-align: center;
+}
+#gate-cover {
+  width: min(60vw, 380px); border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.7);
+}
+#gate-name {
+  font-family: "FNF", sans-serif; font-size: 34px;
+  letter-spacing: 1px; color: var(--ink);
+  text-shadow: 3px 3px 0 #000;
+}
+#gate-play {
+  font-family: "FNF", sans-serif; font-size: 30px; letter-spacing: 2px;
+  color: var(--ink); background: var(--red);
+  border: 0; border-radius: 12px; padding: 16px 44px 12px;
+  cursor: pointer; box-shadow: 0 6px 0 #7a0528;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+#gate-play:hover { background: var(--pink); transform: translateY(-2px); }
+#gate-play:active { transform: translateY(3px); box-shadow: 0 2px 0 #7a0528; }
+
+body { display: block; }
+.view { display: none; min-height: 100%; }
+.view.on { display: block; }
+#view-home.on { display: flex; flex-direction: column; min-height: 100vh; }
+#dl-fab {
+  position: fixed; bottom: 18px; right: 18px; z-index: 15;
+  width: 72px; height: 72px; border-radius: 18px;
+  font-family: "FNF", sans-serif; font-size: 30px; color: var(--ink);
+  background: var(--panel); border: 3px solid #000; cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.5);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+#dl-fab:hover { transform: translateY(-5px) scale(1.08);
+  box-shadow: 4px 8px 0 rgba(0,0,0,.5), 0 0 22px rgba(49,176,209,.7); color: var(--blue); }
+#dl-modal {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(10, 6, 18, .8);
+  display: flex; align-items: center; justify-content: center;
+}
+#dl-modal.hidden { display: none; }
+.dl-card {
+  background: var(--panel); border: 3px solid #000; border-radius: 14px;
+  padding: 22px 24px; width: min(92vw, 420px);
+  box-shadow: 6px 6px 0 rgba(0,0,0,.45);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.dl-title { font-family: "FNF", sans-serif; font-size: 30px; letter-spacing: 2px;
+  text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
+.dl-hint { color: var(--dim); font-family: "FNF", sans-serif; font-size: 14px;
+  letter-spacing: 1px; margin-bottom: 6px; }
+.dl-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  background: var(--bg2); border: 2px solid rgba(255,255,255,.14); border-radius: 10px;
+  padding: 12px 14px; cursor: pointer; color: var(--ink);
+}
+.dl-row span { font-family: "FNF", sans-serif; font-size: 18px; letter-spacing: 1px; }
+.dl-row em { color: var(--dim); font-style: normal; font-size: 13px; }
+.dl-row:hover { border-color: var(--blue); }
+.dl-row:hover span { color: var(--blue); }
+#dl-close {
+  margin-top: 4px; align-self: flex-end;
+  background: var(--panel); border: 2px solid rgba(255,255,255,.14);
+  color: var(--ink); border-radius: 8px; padding: 8px 16px;
+  font-family: "FNF", sans-serif; font-size: 16px; letter-spacing: 1px;
+  cursor: pointer;
+}
+#dl-close:hover { border-color: var(--pink); color: var(--pink); }
+</style>
+</head>
+<body>
+
+  <section id="view-home" class="view">
+    <header class="brand">
+      <a href="#/credits" data-nav><img src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/fnf-unblocked.png" alt="Friday Night Funkin'" /></a>
+      <a class="by" href="https://gtag.pro/camzzz" target="_blank" rel="noopener">BY CAMZZZ</a>
+    </header>
+    <a class="settings-fab" href="#/settings" data-nav title="Settings"><img src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/settings.png" alt="" /></a>
+    <main class="menu">
+      <a class="menu-col" href="#/play/friday-night-funkin" data-nav>
+        <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/FNF_logo.webp" alt="Friday Night Funkin'" />
+      </a>
+      <a class="menu-col" href="#/mods" data-nav>
+        <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/modstext.png" alt="Mods" />
+      </a>
+    </main>
+    <button id="dl-fab" title="Download the single-file build">DL</button>
+    <a class="discord-fab" href="https://discord.gg/kSVynDwX9f" target="_blank" rel="noopener" title="Join the Discord">
+      <img src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/discord.png" alt="Discord" />
+    </a>
+  </section>
+
+  <section id="view-mods" class="view">
+    <header class="topbar">
+      <a class="back" href="#/home" data-nav aria-label="Back"></a>
+      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/assets/modstext.png" alt="Mods" />
+      <span id="game-count" class="game-count"></span>
+      <input id="search" type="search" placeholder="search mods..." autocomplete="off" />
+    </header>
+    <main id="grid" class="grid" aria-live="polite"></main>
+    <p id="empty" class="empty hidden">no mods match that search</p>
+  </section>
+
+  <section id="view-play" class="view">
+    <div id="gate">
+      <div id="gate-bg"></div>
+      <div id="gate-inner">
+        <img id="gate-cover" alt="" />
+        <div id="gate-name">Loading…</div>
+        <button id="gate-play">CLICK TO PLAY</button>
+      </div>
+    </div>
+    <div class="play-fab"><button id="btn-back" class="back" title="Back" aria-label="Back"></button></div>
+  </section>
+
+  <section id="view-settings" class="view">
+    <header class="topbar">
+      <a class="back" href="#/home" data-nav aria-label="Back"></a>
+      <span class="topbar-title">Settings</span>
+    </header>
+    <main class="panel-wrap">
+      <section class="panel">
+        <h2>Audio</h2>
+        <label class="opt"><input type="checkbox" id="set-bgm" /> <span>background music</span></label>
+        <label class="opt"><span>music volume</span><input type="range" id="set-bgm-vol" min="0" max="100" /></label>
+        <label class="opt"><input type="checkbox" id="set-sfx" /> <span>menu sound effects</span></label>
+        <label class="opt"><span>sfx volume</span><input type="range" id="set-sfx-vol" min="0" max="100" /></label>
+      </section>
+      <section class="panel">
+        <h2>Tab Cloaking</h2>
+        <p class="hint">disguises this tab's title + icon on every page</p>
+        <label class="opt"><span>disguise tab as</span>
+          <select id="set-cloak">
+            <option value="">off</option>
+            <option value="docs">Google Docs</option>
+            <option value="classroom">Google Classroom</option>
+            <option value="gmail">Gmail</option>
+          </select>
+        </label>
+      </section>
+      <section class="panel">
+        <h2>Game Host</h2>
+        <p class="hint">games not bundled on the cdn load from here instead</p>
+        <label class="opt"><span>host url</span>
+          <input id="set-host" type="text" placeholder="http://127.0.0.1:8642" style="flex:1;background:var(--bg2);color:var(--ink);border:2px solid rgba(255,255,255,.15);border-radius:8px;padding:6px 10px;font-size:15px" />
+        </label>
+      </section>
+    </main>
+  </section>
+
+  <section id="view-credits" class="view">
+    <header class="topbar">
+      <a class="back" href="#/home" data-nav aria-label="Back"></a>
+      <span class="topbar-title">Credits</span>
+    </header>
+    <main class="panel-wrap">
+      <section class="panel">
+        <h2>Games</h2>
+        <div class="credit-row">
+          <strong><a href="https://www.snokido.com" target="_blank" rel="noopener">Snokido</a></strong>
+          <span>all games &amp; mods</span>
+        </div>
+      </section>
+    </main>
+  </section>
+
+  <div id="dl-modal" class="hidden">
+    <div class="dl-card">
+      <div class="dl-title">download the site</div>
+      <p class="dl-hint">one file — open it anywhere, everything streams from the cdn</p>
+      <button class="dl-row" data-dl="single-file.html"><span>single-file.html</span><em>web page</em></button>
+      <button class="dl-row" data-dl="single-file.svg"><span>single-file.svg</span><em>svg document</em></button>
+      <button id="dl-close">close</button>
+    </div>
+  </div>
+
+<script>
+const CDN="https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/";
+const GAME_HOST_DEFAULT="http://127.0.0.1:8642";
+// Site settings — persisted in localStorage, applied on every page.
+// Pages dispatch "fnf-set" on window after changing a value so live
+// things (bgm volume, sfx mute) react instantly.
+(() => {
+  const K = "fnf-set-";
+  const get = (k, d) => { try { const v = localStorage.getItem(K + k); return v === null ? d : v; } catch (_) { return d; } };
+  const set = (k, v) => {
+    try { localStorage.setItem(K + k, String(v)); } catch (_) {}
+    dispatchEvent(new Event("fnf-set"));
+  };
+
+  const CLOAKS = {
+    docs:      { title: "Google Docs",      icon: "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" },
+    classroom: { title: "Google Classroom", icon: "https://ssl.gstatic.com/classroom/ic_product_classroom_144.png" },
+    gmail:     { title: "Gmail",            icon: "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" },
+  };
+
+  // tab cloak: swap title + favicon so the tab looks like something else.
+  // remembers the originals so turning the cloak off restores them.
+  let origTitle = null, origIcon = undefined;
+  const applyCloak = () => {
+    if (origTitle === null) {
+      origTitle = document.title;
+      const l = document.querySelector("link[rel~='icon']");
+      origIcon = l ? l.href : undefined;
+    }
+    const c = CLOAKS[get("cloak", "")];
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) { link = document.createElement("link"); link.rel = "icon"; document.head.appendChild(link); }
+    if (c) { document.title = c.title; link.href = c.icon; }
+    else {
+      document.title = origTitle;
+      if (origIcon) link.href = origIcon; else link.remove();
+    }
+  };
+
+  window.FNFSettings = {
+    get, set, applyCloak, CLOAKS,
+    bgmOn:  () => get("bgm", "1") === "1",
+    bgmVol: () => Math.min(1, Math.max(0, parseFloat(get("bgm-vol", "55")) / 100)),
+    sfxOn:  () => get("sfx", "1") === "1",
+    sfxVol: () => Math.min(1, Math.max(0, parseFloat(get("sfx-vol", "100")) / 100)),
+  };
+  applyCloak();
+  addEventListener("fnf-set", applyCloak);
+})();
+
+// BGM: starts on first click anywhere, loops, keeps position across pages.
+// Menus only — never plays on the play page (game audio wins).
+// Volume + on/off come from settings.js (FNFSettings).
+(() => {
+  const audio = new Audio(CDN+"assets/bgm.mp3");
+  window.__bgm = audio;
+  audio.loop = true;
+
+  const inGame = () => document.body.classList.contains("play-page");
+  const cfg = () => window.FNFSettings;
+  const sync = () => {
+    audio.volume = cfg() ? cfg().bgmVol() : 0.55;
+    if (inGame() || (cfg() && !cfg().bgmOn())) audio.pause();
+  };
+  sync();
+  addEventListener("fnf-set", sync);
+
+  try {
+    const t = parseFloat(sessionStorage.getItem("fnf-bgm-t") || "0");
+    if (t > 0) audio.currentTime = t;
+    if (!inGame() && sessionStorage.getItem("fnf-bgm-on") === "1" &&
+        (!cfg() || cfg().bgmOn())) {
+      audio.play().catch(() => {});
+    }
+  } catch (_) {}
+
+  addEventListener("pointerdown", () => {
+    if (inGame() || !audio.paused || (cfg() && !cfg().bgmOn())) return;
+    audio.play().then(() => {
+      try { sessionStorage.setItem("fnf-bgm-on", "1"); } catch (_) {}
+    }).catch(() => {});
+  });
+  addEventListener("beforeunload", () => {
+    try { sessionStorage.setItem("fnf-bgm-t", String(audio.currentTime)); } catch (_) {}
+  });
+})();
+
+// Menu sound effects — hover ticks + confirm sting, FNF style.
+// Autoplay-safe: sounds triggered before the first real click get blocked by
+// the browser, which conveniently means the page stays silent until touched.
+// Enabled/volume come from settings.js (FNFSettings).
+(() => {
+  const S = (n, v) => { const a = new Audio(CDN+"assets/sfx/" + n); a._v = v; return a; };
+  const hovers = [S("hover1.ogg", 0.5), S("hover2.ogg", 0.5), S("hover3.ogg", 0.5)];
+  const confirm = S("confirmMenu.ogg", 0.9);
+  const select = S("CS_select.ogg", 0.7);
+  const typing = S("clickText.ogg", 0.6);
+  const locked = S("CS_locked.ogg", 0.8);
+  const onSfx = S("CS_confirm.ogg", 0.8);
+  window.__sfx = { hovers, confirm, select, typing, locked, onSfx };
+  let hi = 0, lastEl = null;
+
+  const play = a => {
+    const c = window.FNFSettings;
+    if (c && !c.sfxOn()) return;
+    a.volume = a._v * (c ? c.sfxVol() : 1);
+    a.currentTime = 0;
+    a.play().catch(() => {});
+  };
+
+  // tick when the cursor moves onto a card/link/button — cycles the 3 hover sfx
+  addEventListener("mouseover", e => {
+    const t = e.target.closest("a, button");
+    if (!t || t === lastEl) return;
+    lastEl = t;
+    play(hovers[hi]);
+    hi = (hi + 1) % hovers.length;
+  });
+  addEventListener("mouseout", e => {
+    if (e.target.closest("a, button") === lastEl &&
+        !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest("a, button"))) {
+      lastEl = null;
+    }
+  });
+
+  // text-input tick — clickText while typing, like FNF's name entry
+  addEventListener("keydown", e => {
+    const t = e.target;
+    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA") &&
+        t.type !== "checkbox" && t.type !== "range") {
+      play(typing);
+    }
+  });
+
+  // confirm sting on activating anything clickable; light tick for back
+  addEventListener("pointerdown", e => {
+    const t = e.target.closest("a, button");
+    if (!t) return;
+    play(t.classList.contains("back") ? select : confirm);
+  });
+
+  // settings toggles — deny buzz when turning off, confirm when turning on;
+  // light tick for select/slider changes (on release, not per-pixel)
+  addEventListener("change", e => {
+    const t = e.target;
+    if (!t || !t.matches) return;
+    if (t.type === "checkbox") play(t.checked ? onSfx : locked);
+    else if (t.matches("select, input[type=range]")) play(select);
+  });
+
+  // navigation is in-place (nav.js) — the page never unloads, so stings play
+  // out fully across transitions. No delay needed.
+})();
+
+
+"use strict";
+// CDN + GAME_HOST_DEFAULT are declared by the generator prelude.
+const gameHost = () =>
+  (window.FNFSettings && FNFSettings.get("game-host", "")) || GAME_HOST_DEFAULT;
+
+/* ---------- hash router ---------- */
+const VIEWS = { home:"view-home", mods:"view-mods", play:"view-play",
+                settings:"view-settings", credits:"view-credits" };
+const TITLES = { home:"FNF", mods:"Browse Mods — FNF", play:"Play — FNF",
+                 settings:"Settings — FNF", credits:"Credits — FNF" };
+let playSlug = null;
+
+function parseHash() {
+  const h = location.hash.replace(/^#\/?/, "");
+  const [name, arg] = h.split("/");
+  return [VIEWS[name] ? name : "home", arg ? decodeURIComponent(arg) : null];
+}
+function show(name) {
+  for (const id of Object.values(VIEWS))
+    document.getElementById(id).classList.remove("on");
+  document.getElementById(VIEWS[name]).classList.add("on");
+  document.body.className =
+    { home:"home", mods:"mods-page", play:"play-page",
+      settings:"sub-page", credits:"sub-page" }[name];
+  document.title = TITLES[name];
+  if (window.FNFSettings) FNFSettings.applyCloak();
+  if (name === "mods") ensureGrid();
+  if (name === "play" && playSlug) openGate(playSlug);
+  const bgm = window.__bgm;
+  if (bgm) {
+    if (name === "play") bgm.pause();
+    else if (window.FNFSettings && FNFSettings.bgmOn() &&
+             sessionStorage.getItem("fnf-bgm-on") === "1")
+      bgm.play().catch(() => {});
+  }
+  scrollTo(0, 0);
+}
+addEventListener("hashchange", () => {
+  const [name, arg] = parseHash();
+  if (name === "play") playSlug = arg;
+  show(name);
+});
+addEventListener("click", e => {
+  const a = e.target.closest("a[data-nav]");
+  if (!a) return;
+  e.preventDefault();
+  location.hash = a.getAttribute("href");
+  if (/^#\/play\//.test(location.hash) && window.__bgm) __bgm.pause();
+});
+
+/* ---------- mods grid ---------- */
+let games = null, repoSet = new Set();
+async function ensureGrid() {
+  if (games) return;
+  const [g, r] = await Promise.all([
+    fetch(CDN + "data/games.json").then(r => r.json()).catch(() => []),
+    fetch(CDN + "data/repo-games.json").then(r => r.json()).catch(() => []),
+  ]);
+  games = g; repoSet = new Set(r);
+  document.getElementById("game-count").textContent = games.length + " games";
+  render(games);
+}
+function render(list) {
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  grid.innerHTML = "";
+  empty.classList.toggle("hidden", list.length > 0);
+  for (const g of list) {
+    const a = document.createElement("a");
+    a.className = "card" + (g.base ? " card-base" : "");
+    a.href = "#/play/" + encodeURIComponent(g.slug);
+    a.setAttribute("data-nav", "");
+    const art = document.createElement("div");
+    art.className = "card-art";
+    if (g.cover) {
+      const img = document.createElement("img");
+      img.src = CDN + g.cover + "?v=4";
+      img.alt = ""; img.loading = "lazy";
+      img.onerror = () => art.classList.add("no-img");
+      art.appendChild(img);
+    } else art.classList.add("no-img");
+    const span = document.createElement("span");
+    span.className = "card-fallback"; span.textContent = g.name;
+    art.appendChild(span);
+    const label = document.createElement("div");
+    label.className = "card-name"; label.textContent = g.name;
+    a.append(art, label); grid.appendChild(a);
+  }
+}
+document.addEventListener("input", e => {
+  if (e.target.id !== "search" || !games) return;
+  const q = e.target.value.trim().toLowerCase();
+  render(q ? games.filter(g => g.name.toLowerCase().includes(q)) : games);
+});
+
+/* ---------- play gate + launcher ---------- */
+function openGate(slug) {
+  document.getElementById("gate-name").textContent = "Loading…";
+  const g = games && games.find(x => x.slug === slug);
+  if (g) {
+    document.title = g.name + " — FNF";
+    document.getElementById("gate-name").textContent = g.name;
+    if (g.cover) {
+      document.getElementById("gate-cover").src = CDN + g.cover + "?v=4";
+      document.getElementById("gate-bg").style.backgroundImage =
+        `url("${CDN}${g.cover}?v=4")`;
+    }
+  }
+}
+
+const SHIM = "\n(function(){\n  var CH;\n  try{var x=new XMLHttpRequest();x.open(\"GET\",\"chunks.json\",false);x.send();\n      if(x.status>=200&&x.status<300)CH=JSON.parse(x.responseText);}catch(e){}\n  if(!CH)return;\n  var PM=\"/pkg/__SLUG__/\";\n  function key(u){try{\n    var r=new URL(typeof u===\"string\"?u:(u&&u.url)||\"\",document.baseURI);\n    var i=r.pathname.indexOf(PM);\n    return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;\n  }catch(e){return null}}\n  function part(u,i){return u+\".part\"+(i<10?\"0\":\"\")+i}\n  function blob(u){var n=CH[key(u)],ps=[];\n    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){\n      if(!r.ok)throw new Error(\"part \"+r.status);return r.blob()}));\n    return Promise.all(ps).then(function(a){return new Blob(a)})}\n  var of=window.fetch&&window.fetch.bind(window);\n  if(of)window.fetch=function(u,o){\n    return key(u)&&CH[key(u)]\n      ?blob(u).then(function(b){return new Response(b)})\n      :of(u,o)};\n  var X=window.XMLHttpRequest;\n  window.XMLHttpRequest=function(){\n    var r=new X(),self=this;self._u=null;self._c=false;\n    [\"onreadystatechange\",\"onload\",\"onloadstart\",\"onloadend\",\"onprogress\",\n     \"onerror\",\"onabort\",\"ontimeout\"].forEach(function(ev){\n      Object.defineProperty(self,ev,{\n        set:function(f){self[\"_\"+ev]=f;\n          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},\n        get:function(){return self[\"_\"+ev]}})});\n    [\"status\",\"statusText\",\"readyState\",\"response\",\"responseText\",\n     \"responseXML\",\"upload\",\"timeout\",\"withCredentials\",\"responseType\",\n     \"responseURL\"].forEach(function(p){\n      Object.defineProperty(self,p,{\n        get:function(){return self._c?self[\"$\"+p]:r[p]},\n        set:function(v){self[\"$\"+p]=v;\n          try{if(p!==\"status\"&&p!==\"statusText\"&&p!==\"readyState\"&&\n               p!==\"response\"&&p!==\"responseText\"&&p!==\"responseXML\"&&\n               p!==\"responseURL\")r[p]=v}catch(e){}}})});\n    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);\n      if(!self._c)r.open.apply(r,arguments)};\n    self.setRequestHeader=function(){if(!self._c)\n      r.setRequestHeader.apply(r,arguments)};\n    self.getResponseHeader=function(){return self._c?null:\n      r.getResponseHeader.apply(r,arguments)};\n    self.getAllResponseHeaders=function(){return self._c?\"\":\n      r.getAllResponseHeaders.apply(r,arguments)};\n    self.abort=function(){if(!self._c)r.abort()};\n    self.send=function(){\n      if(!self._c)return r.send.apply(r,arguments);\n      blob(self._u).then(function(b){\n        self.$readyState=4;self.$status=200;self.$statusText=\"OK\";\n        var rt=self.$responseType||self.responseType||\"\";\n        function fin(ev){self._onreadystatechange&&self._onreadystatechange();\n          self._onload&&self._onload({type:\"load\",target:self})}\n        if(rt===\"arraybuffer\")b.arrayBuffer().then(function(a){\n          self.$response=a;self.$responseText=\"\";fin()});\n        else if(rt===\"blob\"){self.$response=b;self.$responseText=\"\";fin()}\n        else if(rt===\"json\")b.text().then(function(t){\n          try{self.$response=JSON.parse(t)}catch(e){self.$response=null}\n          self.$responseText=t;fin()});\n        else b.text().then(function(t){self.$response=t;self.$responseText=t;fin()});\n      }).catch(function(e){self.$status=0;\n        self._onerror&&self._onerror({type:\"error\",target:self})})};\n  };\n  function srcPatch(proto,prop){\n    var d=Object.getOwnPropertyDescriptor(proto,prop);\n    if(!d||!d.set)return;\n    Object.defineProperty(proto,prop,{configurable:true,enumerable:d.enumerable,\n      get:d.get?function(){return d.get.call(this)}:undefined,\n      set:function(v){var k=key(v);\n        if(k&&CH[k]){var t=this;blob(v).then(function(b){\n          d.set.call(t,URL.createObjectURL(b))});}\n        else d.set.call(this,v)}})}\n  srcPatch(HTMLMediaElement.prototype,\"src\");\n  srcPatch(HTMLImageElement.prototype,\"src\");\n})();\n";
+
+function prepGame(html, slug) {
+  const base = `<base href="${CDN}pkg/${slug}/">`;
+  if (/<base[^>]*>/i.test(html))
+    html = html.replace(/<base[^>]*>/i, base);
+  else
+    html = html.replace(/<head[^>]*>/i, m => m + base);
+  // run the chunk reassembly shim before any game script
+  html = html.replace(/<base[^>]*>/i,
+    m => m + `<script>${SHIM.replace(/__SLUG__/g, slug).replace(/__CDN__/g, CDN)}<\/script>`);
+  // back button closes the game tab (site lives in the opener tab)
+  html = html.replace(/back\.href=root\+"mods\.html";/,
+                      'back.href="javascript:window.close()";');
+  return html;
+}
+
+async function launchGame(slug) {
+  let w = null;
+  try { w = window.open("about:blank", "_blank"); } catch (e) {}
+  if (repoSet.has(slug)) {
+    try {
+      const url = CDN + "games/" + encodeURIComponent(slug) + "/index.html";
+      const html = await (await fetch(url)).text();
+      const out = prepGame(html, slug);
+      const t = w || window;
+      t.document.open(); t.document.write(out); t.document.close();
+      return;
+    } catch (e) { /* fall through to host */ }
+  }
+  const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
+  if (w) w.location.href = u; else location.href = u;
+}
+document.addEventListener("click", e => {
+  if (e.target.id === "gate-play" || e.target.id === "gate" ||
+      e.target.id === "gate-bg") {
+    if (window.__bgm) __bgm.pause();
+    launchGame(playSlug || "friday-night-funkin");
+  }
+  if (e.target.id === "btn-back") location.hash = "#/mods";
+});
+
+/* ---------- settings bindings ---------- */
+function bind(id, key, val) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.value = FNFSettings.get(key, val);
+  if (el.type === "checkbox") el.checked = el.value === "1";
+  el.addEventListener(el.type === "range" ? "input" : "change", () =>
+    FNFSettings.set(key, el.type === "checkbox" ? (el.checked ? "1" : "0")
+                                              : el.value));
+}
+
+/* ---------- download popup ---------- */
+function dl(name) {
+  fetch(CDN + name).then(r => r.blob()).then(b => {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(b);
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }).catch(() => window.open(CDN + name, "_blank"));
+}
+document.addEventListener("click", e => {
+  const dlBtn = e.target.closest("#dl-fab");
+  if (dlBtn) document.getElementById("dl-modal").classList.remove("hidden");
+  const row = e.target.closest(".dl-row");
+  if (row) dl(row.getAttribute("data-dl"));
+  if (e.target.id === "dl-close" || e.target.id === "dl-modal")
+    document.getElementById("dl-modal").classList.add("hidden");
+});
+
+/* ---------- boot ---------- */
+bind("set-bgm", "bgm", "1");
+bind("set-bgm-vol", "bgm-vol", "55");
+bind("set-sfx", "sfx", "1");
+bind("set-sfx-vol", "sfx-vol", "100");
+bind("set-cloak", "cloak", "");
+bind("set-host", "game-host", "");
+{ const [name, arg] = parseHash();
+  if (name === "play") playSlug = arg;
+  show(name); }
+
+</script>
+</body>
+</html>

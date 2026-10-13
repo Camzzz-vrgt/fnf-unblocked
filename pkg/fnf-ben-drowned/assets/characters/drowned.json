@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-9,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left pose"
+		},
+		{
+			"offsets": [
+				-26,
+				90
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up pose"
+		},
+		{
+			"offsets": [
+				20,
+				70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down pose"
+		},
+		{
+			"offsets": [
+				0,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right pose"
+		},
+		{
+			"offsets": [
+				0,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "float idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/water_ben",
+	"position": [
+		0,
+		440
+	],
+	"healthicon": "nuts",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		226
+	],
+	"camera_position": [
+		140,
+		-70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

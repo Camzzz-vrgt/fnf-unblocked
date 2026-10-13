@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-242,
+				90
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				-285,
+				45
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				-280,
+				-27
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down instance"
+		},
+		{
+			"offsets": [
+				-274,
+				149
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-272,
+				38
+			],
+			"loop": true,
+			"fps": 30,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle instance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/insanitypsychosis1",
+	"position": [
+		-300,
+		230
+	],
+	"healthicon": "suicide5",
+	"flip_x": false,
+	"healthbar_colors": [
+		108,
+		108,
+		108
+	],
+	"camera_position": [
+		390,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

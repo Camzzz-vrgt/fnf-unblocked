@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Alastor idle instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				210,
+				-23
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Alastor LEFT instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				-31
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Alastor DOWN instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				-32
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Alastor RIGHT instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				221,
+				2
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Alastor UP instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Alastor",
+	"position": [
+		0,
+		30
+	],
+	"healthicon": "Alastor icons",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		32,
+		81
+	],
+	"camera_position": [
+		-120,
+		160
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

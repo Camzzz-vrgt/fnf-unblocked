@@ -24,6 +24,17 @@
     </a>
   </main>
 
+  <button id="dl-fab" title="Download the single-file build">DL</button>
+  <div id="dl-modal" class="hidden">
+    <div class="dl-card">
+      <div class="dl-title">download the site</div>
+      <p class="dl-hint">one file — open it anywhere, everything streams from the cdn</p>
+      <button class="dl-row" data-dl="single-file.html"><span>single-file.html</span><em>web page</em></button>
+      <button class="dl-row" data-dl="single-file.svg"><span>single-file.svg</span><em>svg document</em></button>
+      <button id="dl-close">close</button>
+    </div>
+  </div>
+
   <a class="discord-fab" href="https://discord.gg/kSVynDwX9f" target="_blank" rel="noopener" title="Join the Discord">
     <img src="assets/discord.png" alt="Discord" />
   </a>
@@ -32,5 +43,27 @@
   <script src="nav.js?v=2"></script>
   <script src="bgm.js?v=2"></script>
   <script src="sfx.js?v=2"></script>
+  <script>
+    // DL fab + modal — downloads via blob so it also works cross-origin
+    // when the modal markup is reused in single-file.html
+    const dlModal = document.getElementById("dl-modal");
+    document.getElementById("dl-fab").onclick =
+      () => dlModal.classList.remove("hidden");
+    document.getElementById("dl-close").onclick =
+      () => dlModal.classList.add("hidden");
+    dlModal.onclick = e => { if (e.target === dlModal) dlModal.classList.add("hidden"); };
+    for (const row of dlModal.querySelectorAll(".dl-row")) {
+      row.onclick = () => {
+        const name = row.getAttribute("data-dl");
+        fetch(name).then(r => r.blob()).then(b => {
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(b);
+          a.download = name;
+          a.click();
+          setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+        });
+      };
+    }
+  </script>
 </body>
 </html>

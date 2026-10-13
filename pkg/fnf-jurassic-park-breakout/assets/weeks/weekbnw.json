@@ -1,0 +1,31 @@
+{
+	"storyName": "breakout",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"difficulties":"hard",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"breakout",
+			"rexy",
+			[
+				0,
+				115,
+				133
+			]
+		]
+	],
+	"weekName": "breakout"
+}

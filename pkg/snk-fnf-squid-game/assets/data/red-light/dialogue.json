@@ -1,0 +1,74 @@
+{
+	"dialogue": [
+		{
+			"expression": "pissed",
+			"text": "WHAT THE-?",
+			"boxState": "angry",
+			"portrait": "guard",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "Beep?",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05
+		},
+		{
+			"expression": "pissed",
+			"text": "The bullets, they dont work!",
+			"boxState": "angry",
+			"portrait": "guard",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "I stopped them, it kinda comes with being a demon.",
+			"boxState": "normal",
+			"portrait": "gf",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "If you want to kill him, just beat him in a rap battle.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "huh?",
+			"boxState": "normal",
+			"portrait": "guard",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "...",
+			"boxState": "normal",
+			"portrait": "guard",
+			"speed": 0.05
+		},
+		{
+			"expression": "demon",
+			"text": "I am literally a demon and can summon\\nanything at any time to kill you instantly.",
+			"boxState": "normal",
+			"portrait": "gf",
+			"speed": 0.05
+		},
+		{
+			"expression": "talk",
+			"text": "God damnit, I dont think I have a choice here.",
+			"boxState": "normal",
+			"portrait": "guard",
+			"speed": 0.05
+		},
+		{
+			"expression": "excited",
+			"text": "Beep!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

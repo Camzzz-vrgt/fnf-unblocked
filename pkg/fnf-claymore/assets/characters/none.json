@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-103,
+				-351
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "GF Dancing Beat",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-103,
+				-351
+			],
+			"anim": "sad",
+			"fps": 24,
+			"name": "gf sad",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-103,
+				-351
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "GF Dancing Beat",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/none",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

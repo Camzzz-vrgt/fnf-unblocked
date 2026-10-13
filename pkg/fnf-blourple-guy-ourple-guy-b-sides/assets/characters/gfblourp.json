@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-109,
+				-310
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "dance RIGHT"
+		},
+		{
+			"offsets": [
+				-109,
+				-310
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "dance LEFT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-109,
+				-310
+			],
+			"anim": "sad",
+			"fps": 24,
+			"name": "DUMMY",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/gf",
+	"position": [
+		0,
+		90
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-30,
+		230
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}
