@@ -1,0 +1,13 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import funkin.util.Constants;
+import flixel.FlxG;
+
+class PhillyDifficulty extends Module
+{
+  function new()
+  {
+      super('phillydiff');
+      FlxG.signals.postGameStart.addOnce(() -> if (!Constants.DEFAULT_DIFFICULTY_LIST_FULL.contains('philly')) Constants.DEFAULT_DIFFICULTY_LIST_FULL.push("philly"));
+  }    
+}

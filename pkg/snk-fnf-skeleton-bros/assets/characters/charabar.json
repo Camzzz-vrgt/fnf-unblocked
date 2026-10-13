@@ -1,0 +1,59 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				527,
+				7
+			],
+			"anim": "hit",
+			"fps": 24,
+			"name": "BAR ATTACK 2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				121,
+				60
+			],
+			"anim": "miss",
+			"fps": 24,
+			"name": "BAR ATTACK MISS",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "BAR ATTAK"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "mechanics/BAR_ATTACK",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"damage": 0.1,
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"life": 2,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"mechanic": []
+}

@@ -1,0 +1,83 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Almas IDLE"
+		},
+		{
+			"offsets": [
+				162,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Almas L"
+		},
+		{
+			"offsets": [
+				209,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Alma Down"
+		},
+		{
+			"offsets": [
+				-1,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Almas Up"
+		},
+		{
+			"offsets": [
+				-1,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Almas R"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/almitas_UWU",
+	"position": [
+		110,
+		-480
+	],
+	"healthicon": "sans-dusttale",
+	"damage": 0.2,
+	"flip_x": false,
+	"healthbar_colors": [
+		76,
+		74,
+		113
+	],
+	"life": 1,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"mechanic": [
+		"KR"
+	]
+}

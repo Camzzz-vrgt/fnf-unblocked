@@ -1,0 +1,56 @@
+import funkin.audio.FunkinSound;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.FunkinMemory;
+import funkin.play.character.DJCharacter;
+
+class DJOpponentCharacter extends DJCharacter
+{
+
+  function new()
+  {
+    super('dj-opponent');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "point":
+        holdTimer = 0;
+        playSingAnimation(event.note.noteData.getDirection(), false, 'point');
+        return;
+      case "stand":
+        holdTimer = 0;
+        playSingAnimation(event.note.noteData.getDirection(), false, 'stand');
+        return;
+    }
+
+    super.onNoteHit(event);
+  }
+
+  var isStanding:Bool = false;
+
+  public override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
+  {
+    if (isStanding)
+    {
+      super.playAnimation(name + '-scratch', restart, ignoreOther);
+    }
+    else
+    {
+      super.playAnimation(name, restart, ignoreOther, reversed);
+    }
+
+    if (name == 'standupanim') isStanding = true;
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+
+    isStanding = false;
+    dance(true);
+  }
+}

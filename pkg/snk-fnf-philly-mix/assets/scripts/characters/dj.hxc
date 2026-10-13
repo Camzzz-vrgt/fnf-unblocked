@@ -1,0 +1,215 @@
+package funkin.play.character;
+
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import funkin.vis.dsp.SpectralAnalyzer;
+import flixel.math.FlxMath;
+import animate.internal.elements.LoopType;
+import funkin.play.character.CharacterType;
+
+
+/**
+ * The various states DJ can be in, controlling HIS animations.
+ */
+enum DJState
+{
+  DEFAULT;
+
+  RAISE;
+
+  READY;
+
+  LOWER;
+}
+
+class DJCharacter extends MultiAnimateAtlasCharacter
+{
+  var currentState:DJState = DJState.DEFAULT;
+
+  final VULTURE_THRESHOLD:Float = 0.25 * 2;
+
+  final MIN_BLINK_DELAY:Int = 3;
+
+  final MAX_BLINK_DELAY:Int = 7;
+
+  var blinkCountdown:Int = MIN_BLINK_DELAY;
+
+  var analyzer = null;
+  var amountOfBars = 7;
+  var analyzerLevelsCache = [];
+  var vizOff = false;
+
+  public function new(characterId:String)
+  {
+    if (characterId == "UNKNOWN")
+      characterId = "dj";
+
+    super(characterId);
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    transitionState();
+  }
+
+  public override function dance(forceRestart:Bool):Void
+  {
+    switch (currentState)
+    {
+      case DJState.DEFAULT:
+        if(animationFinished){
+          forceRestart = true;
+          animationFinished = false;
+        }
+        super.dance(forceRestart);
+      case DJState.READY:
+        if (blinkCountdown == 0)
+        {
+          playAnimation('idleKnife', true);
+          blinkCountdown = FlxG.random.int(MIN_BLINK_DELAY, MAX_BLINK_DELAY);
+        }
+        else
+          blinkCountdown--;
+      case DJState.LOWER:
+        if (getCurrentAnimation() != 'lowerKnife')
+          playAnimation('lowerKnife');
+    }
+  }
+
+
+  var animationFinished:Bool = false;
+
+  // Re-expose playAnimation at this MIDDLE scripted level so the compiled
+  // BaseCharacter.playSingAnimation -> this.playAnimation dispatch reaches the
+  // leaf override (e.g. DJOpponentCharacter) through the double-script chain.
+  public override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+  }
+
+  // Re-expose playSingAnimation at this MIDDLE scripted level. When a leaf
+  // scripted class (e.g. DJOpponentCharacter) calls playSingAnimation(dir, ..., suffix),
+  // Polymod's super-dispatch binds `this` to the bare PolymodScriptClass interpreter
+  // (not the compiled proxy), so the compiled body's `this.playAnimation` is undefined.
+  // Routing through this middle override makes `super` resolve to the proxy, so
+  // `this.playAnimation` reaches the proxy dispatch and the leaf override.
+  public override function playSingAnimation(dir:Int, miss:Bool = false, ?suffix:String = ''):Void
+  {
+    super.playSingAnimation(dir, miss, suffix);
+  }
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+
+    switch (currentState)
+    {
+      case DJState.RAISE, DJState.LOWER:
+        animationFinished = true;
+        transitionState();
+    }
+  }
+
+  function transitionState():Void
+  {
+    if (PlayState.instance == null) return;
+
+    switch (currentState)
+    {
+      case DJState.DEFAULT:
+        if (PlayState.instance.health <= VULTURE_THRESHOLD && this.characterType == CharacterType.GF){
+          currentState = DJState.RAISE;
+          playAnimation('raiseKnife');
+          animationFinished = false;
+        }
+        else
+          currentState = DJState.DEFAULT;
+      case DJState.RAISE:
+        if (animationFinished)
+        {
+          currentState = DJState.READY;
+          animationFinished = false;
+        }
+      case DJState.READY:
+        if (PlayState.instance.health > VULTURE_THRESHOLD)
+          currentState = DJState.LOWER;
+      case DJState.LOWER:
+        if (animationFinished)
+          currentState = DJState.DEFAULT;
+      default:
+        currentState = DJState.DEFAULT;
+    }
+  }
+
+  public override function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+    if(vizOff) return;
+    analyzerLevelsCache = [];
+    analyzer = new SpectralAnalyzer(FlxG.sound.music._channel.__audioSource, amountOfBars, 0.1, 40);
+    analyzer.minDb = -65;
+    analyzer.maxDb = -25;
+    analyzer.maxFreq = 22000;
+    analyzer.minFreq = 10;
+    //if sys
+    analyzer.fftN = 256;
+  }
+
+  public override function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+    if(vizOff) return;
+    analyzer = null;
+    analyzerLevelsCache = [];
+  }
+
+  public override function onSongEnd(event:ScriptEvent):Void
+  {
+    super.onSongEnd(event);
+    if(vizOff) return;
+    analyzer = null;
+    analyzerLevelsCache = [];
+  }
+
+  override public function draw(){
+    if(!vizOff){
+      drawFFT();
+      this._renderTextureDirty = true;
+    }
+
+    super.draw();
+  }
+
+  //makes all the atlases of dj use the same screen symbol in its screen layer so it actually shows the viz
+  override function loadAtlases(){
+    super.loadAtlases();
+    var ogScreenLayerElements = this.library.timeline.getLayer('screen').getFrameAtIndex(0).elements;
+		for (collection in library.addedCollections)
+      collection.timeline.getLayer('screen').getFrameAtIndex(0).elements = ogScreenLayerElements.slice(0);
+  }
+
+  function drawFFT(){
+    if(analyzer != null)
+      analyzerLevelsCache = analyzer.getLevels(analyzerLevelsCache);
+
+    var screen = this.library.getSymbol('speaker or screen idk');
+
+    for (i in 0...amountOfBars){
+      var layername = "VIZ"+(i+1);
+      var layer = screen.timeline.getLayer(layername);
+      layer.forEachFrame((frame) ->
+      {
+        frame.forEachElement((element) ->
+        {
+          var length = element.libraryItem.timeline.frameCount;
+          var animFrame:Int = FlxMath.bound(Math.round((analyzerLevelsCache[i]?.value ?? 0) * length),0,length);
+          animFrame = Std.int(Math.abs(animFrame - 12));//fliparoo
+
+          element.firstFrame = animFrame;
+        });
+      });
+    }
+  }
+}

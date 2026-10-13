@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Playable)",
+  "assetPath": "shared:characters/darnell_playable",
+  "renderType": "multianimateatlas",
+  "offsets": [0,35],
+  "cameraOffsets": [75,30],
+  "healthIcon":{
+	  "id":"darnell"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "right_loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "down_loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "up_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "left_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left_miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down_miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up_miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right_miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "hey"
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "looped":true
+    },
+    {
+      "name": "yo",
+      "prefix": "yo"
+    },
+    {
+      "name": "yeah",
+      "prefix": "YEAH"
+    },
+    {
+      "name": "pissed",
+      "prefix": "pissed",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 39,
+       39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+        39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39]
+    },
+    {
+      "name": "kick",
+      "prefix": "kick"
+    },
+    {
+      "name": "knee",
+      "prefix": "knee"
+    },
+    {
+      "name": "light",
+      "prefix": "light"
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "flipX": true,
+      "offsets": [435, 860]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "flipX": true,
+      "offsets": [435, 860]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "flipX": true,
+      "offsets": [435, 860]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "name": "DJ (Opponent)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/DJ/sit",
+  "offsets": [0, 20],
+  "cameraOffsets": [0, -30],
+    "healthIcon":{
+    "flipX": true,
+	  "id":"dj",
+		"scale": 0.95,
+    "offsets": [0, 5]
+    },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "idle",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "idle",
+      "frameIndices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ]
+    },
+    {
+      "name": "combo50",
+      "prefix": "combo50"
+    },
+    {
+      "name": "drop70",
+      "prefix": "drop70"
+    },
+    {
+      "name": "combo200",
+      "prefix": "combo50"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singLEFT-point",
+      "prefix": "left point"
+    },
+    {
+      "name": "singRIGHT-point",
+      "prefix": "right point"
+    },
+    {
+      "name": "singUP-point",
+      "prefix": "up point"
+    },
+    {
+      "name": "singDOWN-point",
+      "prefix": "down point"
+    },
+    {
+      "name": "standupanim",
+      "prefix": "standupanim"
+    },
+    {
+      "name": "Laugh",
+      "prefix": "laugh",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 5, 5, 5, 5, 5]
+    },
+    {
+      "name": "sitscratch",
+      "prefix": "sitscratch"
+    },
+    {
+      "name": "laughstand",
+      "prefix": "laugh stand",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 5, 5, 5, 5, 5],
+      "offsets": [0, 15]
+    },
+    {
+      "name": "chuckle",
+      "prefix": "chuckle stand",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 5, 5, 5, 5, 5],
+      "offsets": [0, 15]
+    },
+    {
+      "name": "raiseGun",
+      "prefix": "gunraise"
+    },
+    {
+      "name": "idleGun",
+      "prefix": "gun aim"
+    },
+    {
+      "name": "lowergun",
+      "prefix": "gun lower"
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "danceLeft-scratch",
+      "prefix": "idle scratch",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "danceRight-scratch",
+      "prefix": "idle scratch",
+      "frameIndices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singLEFT-scratch",
+      "prefix": "left scratch",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singRIGHT-scratch",
+      "prefix": "right scratch",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singUP-scratch",
+      "prefix": "up scratch",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singDOWN-scratch",
+      "prefix": "down scratch",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singLEFT-stand",
+      "prefix": "left sing",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singRIGHT-stand",
+      "prefix": "right sing",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singUP-stand",
+      "prefix": "up sing",
+      "offsets": [0, 15]
+    },
+    {
+      "assetPath": "shared:characters/DJ/stand",
+      "name": "singDOWN-stand",
+      "prefix": "down sing",
+      "offsets": [0, 15]
+    }
+  ]
+}

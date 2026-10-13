@@ -1,0 +1,54 @@
+import funkin.play.stage.Stage;
+import funkin.graphics.shaders.RimLightShader;
+import funkin.play.character.CharacterType;
+
+// can't use a number in the class name. source: 2hot
+class NineElevenRecordsStage extends Stage 
+{
+  public function new() 
+  {
+    super('911records');
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    super.addCharacter(character, charType);
+    
+    character.color = 0xFFEEC9C9;
+
+    // dropshadowshader doesn't support custom sprite colors [.color]
+    // so we're using a more sophisticated recreation
+    var rim = new RimLightShader();
+    rim.setAdjustColor(-5,5,5,-5);
+    rim.color = 0xFFDFBB5A;
+    rim.distance = 12;
+    character.shader = rim;
+    rim.attachedSprite = character;
+
+    //stupid haxe -7oltan
+    var charokter = character;
+    character.animation.onFrameChange.add(function() {
+        if (charokter != null)
+        rim.updateFrameInfo(charokter.frame);
+    });
+
+    switch (charType)
+    {
+        case CharacterType.DAD:
+        if (character.flipX) {
+            rim.angle = 30;
+        } else {
+            rim.angle = 150;
+        }
+        rim.strength = 0.8;
+
+        default:
+        if (character.flipX) {
+            rim.angle = 45;
+        } else {
+            rim.angle = 135;
+        }
+        rim.strength *= 0.5;
+    }
+  }
+}

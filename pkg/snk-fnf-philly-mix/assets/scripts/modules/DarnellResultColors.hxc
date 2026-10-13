@@ -1,0 +1,92 @@
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.graphics.frames.FlxBitmapFont;
+import flixel.math.FlxBasePoint;
+import flixel.FlxG;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.play.ResultState;
+import flixel.util.FlxGradient;
+
+// original code from sonic jam
+
+class DarnellResultColors extends Module
+{
+    var replacedScrollText:Bool = true;
+
+    public function new()
+    {
+        super("DarnellResultColors", 1000, {
+            state: ResultState
+        });
+    }
+
+    public function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+
+        var state:FlxSubState = FlxG.state.subState;
+
+        if (replacedScrollText || state.playerCharacterId != "darnell") return;
+
+        var textsArray:Array<FlxSprite> = [];
+        for (member in state.members)
+        {
+            if (member?.camera != state.cameraScroll || !Std.isOfType(member, FlxBackdrop)) continue;
+            textsArray.push(member);
+        }
+
+        if (textsArray.length == 0) return;
+
+        replacedScrollText = true;
+
+        for (daText in textsArray)
+        {
+            var colorcorrect:FlxRuntimeShader = new FlxRuntimeShader('
+                #pragma header
+
+                uniform float customred;
+                uniform float customgreen;
+                uniform float customblue;
+
+                void main()
+                {
+                    vec4 base = flixel_texture2D(bitmap, openfl_TextureCoordv);
+                    vec3 addColor = vec3(customred, customgreen, customblue) * base.a;
+
+                    vec3 finalRgb = min(base.rgb + addColor, vec3(1.0));
+
+                    gl_FragColor = vec4(finalRgb, base.a);
+                }
+            ');
+            daText.shader = colorcorrect;
+
+            var to = 0xFF9D85;
+            var from = 0xFDD96C;
+
+            colorcorrect.setFloat('customred', (((to >> 16) & 0xff) - ((from >> 16) & 0xff)) / 255.0);
+            colorcorrect.setFloat('customgreen', (((to >> 8) & 0xff) - ((from >> 8) & 0xff)) / 255.0);
+            colorcorrect.setFloat('customblue', (((to) & 0xff) - ((from) & 0xff)) / 255.0);
+        }
+
+        state.refresh();
+    }
+
+    public function onSubStateOpenEnd(event:SubStateScriptEvent)
+    {
+        super.onSubStateOpenEnd(event);
+
+        if (!Std.isOfType(event.targetState, ResultState)) return;
+
+        var state:ResultState = event.targetState;
+
+        if (state.playerCharacterId != "darnell") return;
+
+        state.members[0].pixels = FlxGradient.createGradientFlxSprite(FlxG.width, FlxG.height, [0xfffd7474, 0xfffe7c5c], 90).pixels;
+        state.members[1].pixels = FlxGradient.createGradientFlxSprite(FlxG.width, FlxG.height, [0xffffa6a6, 0xffffbebe], 90).pixels;
+
+        replacedScrollText = false;
+        
+        state.songName.font = FlxBitmapFont.fromMonospace(Paths.image("resultScreen/tardlingSpritesheet-darnell"), "AaBbCcDdEeFfGgHhiIJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz:1234567890().-", FlxBasePoint.get(49, 61));
+    }
+}

@@ -1,0 +1,283 @@
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.Countdown;
+import funkin.Conductor;
+
+class DarnellMixSong extends Song
+{
+	var blackScreen = null;
+	var songHasFade = false;
+	var songStartFade = false;
+	var fadeTween = null;
+    public function new(id, ?params)
+    {
+        super(id, params);
+    }
+
+	override public function onCreate(ev){
+		super.onCreate(ev);
+    	#if FEATURE_DISCORD_RPC
+		PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/Strife-4-life/Philly-Mix-Promo/refs/heads/main/discord/phillymix-album-v1.png";
+		#end
+	}
+
+    public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+    {
+        if (currentVariation == 'darnell') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+        return false;
+    }
+
+	/**
+	 * if song hasnt been BEATEN yet no alt instrumentals
+	 * the list of alt instrumentals is the list of  the beaten variations of the song that have the same bpm as the darnell variation
+	 * excluding the darnell one
+	 */
+	public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+	{
+		if(isSongNew(null,variationId)) return [];
+ 		var altInsts = [];
+		for(vari in this.variations){
+			if(vari == variationId) continue;
+			if(!Save.instance.hasBeatenSong(this.id, _metadata.get(vari).playData.difficulties, vari == 'erect' || vari == 'default' ? '' : vari)) continue;
+			if((_metadata.get(vari)?.timeChanges[0]?.bpm ?? 0) == (_metadata.get(variationId)?.timeChanges[0]?.bpm ?? 0))
+				altInsts.push(vari == 'default' ? '' : vari);
+		}
+		return altInsts;
+	}
+    
+	function onSongLoaded(event:SongLoadScriptEvent):Void {
+		super.onSongLoaded(event);
+
+		for(songEvent in event.events){
+			if(songEvent.eventKind == "FadeInOut"){
+				songHasFade = true;
+				if(songEvent.time <= 0)
+					songStartFade = true;
+			}
+		}
+
+		if(songHasFade && blackScreen == null){
+			if (fadeTween != null)
+				fadeTween.cancel();
+
+			blackScreen = new FunkinSprite().makeSolidColor(FlxG.width, FlxG.height, 0xFF000000);
+			blackScreen.scrollFactor.set();
+			blackScreen.zIndex = 1100;
+			blackScreen.cameras = [PlayState.instance.camCutscene];
+			PlayState.instance.add(blackScreen);
+			blackScreen.alpha = songStartFade ? 1 : 0;
+			PlayState.instance.isInCutscene = songStartFade;
+		}
+	}
+    
+	function onSongRetry(event:ScriptEvent) {
+		super.onSongRetry(event);
+		if(!songHasFade) return;
+
+		if (fadeTween != null)
+			fadeTween.cancel();
+		if(songStartFade)
+			fadeTween = FlxTween.tween(blackScreen, {alpha: 1}, 0.3);
+		else
+			blackScreen.alpha = 0;
+		PlayState.instance.isInCutscene = songStartFade;
+	}
+
+	function onGameOver(event:ScriptEvent):Void {
+		super.onGameOver(event);
+		if(!songHasFade) return;
+		
+		if (fadeTween != null)
+			fadeTween.cancel();
+		blackScreen.alpha = songStartFade ? 1 : 0;
+		PlayState.instance.isInCutscene = songStartFade;
+	}
+
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent) {
+		super.onSongEvent(scriptEvent);
+
+		if (scriptEvent.eventData.eventKind == "FadeInOut") {
+			if(fadeTween != null)
+				fadeTween.cancel();
+			var targetAlpha = scriptEvent.eventData.value.inout == 1 ? 0 : 1; // confusing
+			var length = scriptEvent.eventData.value.seconds;
+			if(scriptEvent.eventData.value.seconds > 0){
+				fadeTween = FlxTween.tween(blackScreen, {alpha: targetAlpha}, length, {
+					onComplete: function(tween:FlxTween) {
+						if(PlayState.instance.isInCutscene && targetAlpha == 0)
+							PlayState.instance.isInCutscene = false;
+					}
+				});
+			}else
+				blackScreen.alpha = targetAlpha;
+		}
+	}
+
+	override public function onDestroy(){
+		super.onDestroy();
+		if(blackScreen != null){
+			blackScreen.kill();
+			blackScreen.destroy();
+			blackScreen = null;
+		}
+
+	}
+}
+
+class How2PhillySong extends DarnellMixSong
+{
+	public function new() 
+	{
+			super('tutorial', { variation: 'darnell' });
+	}
+
+  	public override function onCountdownStart(event:CountdownScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+        event.cancel();
+		PlayState.instance.isInCountdown = true;
+		Conductor.instance.update(0);
+	}
+
+	override public function onCreate(ev)
+	{
+		super.onCreate(ev);
+    	#if FEATURE_DISCORD_RPC
+		PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/Strife-4-life/Philly-Mix-Promo/refs/heads/main/discord/icon-dj.png";
+		#end
+	}
+
+	override public function getDifficulty(?diffId:String, ?variation:String, ?variations:Array<String>):Null<SongDifficulty>{
+		var ogDif = super.getDifficulty(diffId, variation, variations);
+		//trolling
+		if((ModuleHandler?.getModule('NameYoinker')?.scriptGet('discordUser') ?? "UNKNOWN") == 'jym_hym_')	
+			ogDif.songArtist = "STINKS";
+		return ogDif;
+	}
+	
+	public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+	{
+		return [];
+	}
+}
+
+class BopeeboDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('bopeebo', { variation: 'darnell' });
+    }
+}
+
+class FreshDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('fresh', { variation: 'darnell' });
+    }
+}
+
+class SpookeezDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('spookeez', { variation: 'darnell' });
+    }
+}
+
+class SouthDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('south', { variation: 'darnell' });
+    }
+}
+
+class PicoDarnellMixSong extends DarnellMixSong {
+
+ public function new() {
+        super('pico', { variation: 'darnell' });
+    }
+}
+
+class PhillyNiceDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('philly-nice', { variation: 'darnell' });
+    }
+}
+
+class HighDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('high', { variation: 'darnell' });
+    }
+}
+
+class UghDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('ugh', { variation: 'darnell' });
+    }
+}
+
+class DarnellDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('darnell', { variation: 'darnell' });
+    }
+}
+
+class LitUpDarnellMixSong extends DarnellMixSong {
+    public function new() {
+        super('lit-up', { variation: 'darnell' });
+    }
+
+  	public override function onCountdownStart(event:CountdownScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+        event.cancel();
+		PlayState.instance.isInCountdown = true;
+		Conductor.instance.update(0);
+	}
+
+}
+
+class DarnellPhillyMixSong extends Song {
+    public function new() {
+        super('darnell', { variation: 'philly' });
+    }
+	override public function onCreate(ev){
+		super.onCreate(ev);
+    	#if FEATURE_DISCORD_RPC
+		PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/Strife-4-life/Philly-Mix-Promo/refs/heads/main/discord/phillymix-album-v1.png";
+		#end
+	}
+
+    public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+    {
+        if (currentVariation == 'philly') return !Save.instance.hasBeatenSong(this.id, ['philly'], this.variation);
+        return false;
+    }
+}
+
+class TwoHotPhillyMixSong extends Song {
+    public function new() {
+        super('2hot', { variation: 'bf' });
+    }
+
+  	public override function onCountdownStart(event:CountdownScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+        event.cancel();
+		PlayState.instance.isInCountdown = true;
+		Conductor.instance.update(0);
+	}
+	
+	override public function onCreate(ev){
+		super.onCreate(ev);
+    	#if FEATURE_DISCORD_RPC
+		PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/Strife-4-life/Philly-Mix-Promo/refs/heads/main/discord/phillymix-album-v1.png";
+		#end
+	}
+
+    public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+    {
+        if (currentVariation == 'bf') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+        return false;
+    }
+}

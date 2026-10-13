@@ -1,0 +1,46 @@
+{
+ "version": "2.2.4",
+ "songName": "Darnell (Darnell Mix)",
+ "artist": "Turtleman42 (ft. ContentLeaf, Jxstax)",
+ "charter": "Ninjablast45",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "darnell-playable",
+   "girlfriend": "dj",
+   "opponent": "darnell",
+   "instrumental": "darnell",
+   "opponentVocals": [
+    "darnell"
+   ],
+   "playerVocals": [
+    "darnell-playable"
+   ]
+  },
+  "stage": "phillyStreetsDarnell",
+  "noteStyle": "funkin",
+  "freeplayVisibleFor": ["darnell"],
+  "ratings": {
+   "easy": 3,
+   "normal": 5,
+   "hard": 7
+  },
+  "album": "phillyvolume1",
+  "stickerPack": "bonus-weekend1-darnell",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.5",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 155,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

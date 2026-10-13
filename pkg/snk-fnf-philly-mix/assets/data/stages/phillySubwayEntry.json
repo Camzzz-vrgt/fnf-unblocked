@@ -1,0 +1,65 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-850, -823],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "phillySkyline",
+      "isPixel": false,
+      "assetPath": "stages/phillySubwayEntry/sky",
+      "scroll": [1, 1],
+      "alpha": 1,
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-1100, -969],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "phillyMain",
+      "isPixel": false,
+      "assetPath": "stages/phillySubwayEntry/main",
+      "scroll": [1, 1],
+      "alpha": 1,
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 450,
+      "position": [-360, -700],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "addlight",
+      "isPixel": false,
+      "blend": "add",
+      "assetPath": "stages/phillySubwayEntry/addlight",
+      "scroll": [1, 1],
+      "alpha": 1,
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.5,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 400,
+      "position": [2250, 1220],
+      "cameraOffsets": [-350, -80]
+    },
+    "gf": {
+      "zIndex": 300,
+      "position": [1580, 1130],
+      "cameraOffsets": [0, 0]
+    },
+    "dad": {
+      "zIndex": 350,
+      "position": [1600, 1150],
+      "cameraOffsets": [500, -25]
+    }
+  },
+  "name": "Philly (WestBound Subway) [Darnell]",
+  "directory": "shared"
+}

@@ -1,0 +1,11 @@
+import funkin.play.notes.notekind.NoteKind;
+
+class AltNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('alt', 'Darnell Keytar Alt (Fresh)');
+
+    // NOTE: Implemented in darnell-keytar.hxc
+  }
+}

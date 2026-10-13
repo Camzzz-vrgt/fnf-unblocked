@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Playable) (Dark)",
+  "assetPath": "shared:characters/darnell_dark",
+  "renderType": "multianimateatlas",
+  "offsets": [25, 30],
+  "cameraOffsets": [75,30],
+  "healthIcon":{
+	  "id":"darnell"
+  },
+  "atlasSettings": {
+    "useRenderTexture": true
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "right_loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "down_loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "up_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "left_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left_miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down_miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up_miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right_miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "hey"
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "looped":true
+    },
+    {
+      "name": "yo",
+      "prefix": "yo"
+    },
+    {
+      "name": "yeah",
+      "prefix": "YEAH"
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "flipX": true,
+      "offsets": [435, 860]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "flipX": true,
+      "offsets": [435, 860]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "flipX": true,
+      "offsets": [435, 860]
+    }
+  ]
+}

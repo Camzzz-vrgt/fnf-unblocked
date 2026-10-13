@@ -1,0 +1,32 @@
+import funkin.play.stage.Stage;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+
+class PhillySubwayEntryStage extends Stage {
+    var sfx = null;
+    public function new() {
+        super('phillySubwayEntry');
+    }
+
+    override public function onCreate(ev){
+        super.onCreate(ev);
+        if(sfx != null){
+            sfx.stop();
+            sfx.kill();
+            sfx.destroy();
+            sfx = null;
+        }
+        sfx = FunkinSound.load(Paths.sound('h2pstagesfx'),1.0,true);
+        sfx.play();
+    }
+
+    override public function onDestroy(ev){
+        super.onDestroy(ev);
+        if(sfx != null){
+            sfx.stop();
+            sfx.kill();
+            sfx.destroy();
+            sfx = null;
+        }
+    }
+}

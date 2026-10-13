@@ -1,0 +1,21 @@
+import funkin.play.notes.notekind.NoteKind;
+
+class DJPointsNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('point', 'DJ Point (How2philly)');
+
+    // NOTE: Implemented in dj.hxc
+  }
+}
+
+class DJStandNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('stand', 'DJ Stand (How2philly)');
+
+    // NOTE: Implemented in dj.hxc
+  }
+}

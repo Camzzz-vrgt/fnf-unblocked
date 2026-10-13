@@ -1,0 +1,61 @@
+{
+ "version": "2.2.4",
+ "songName": "Philly Nice (Darnell Mix)",
+ "artist": "JxStax (Ft. Jym)",
+ "charter": "Dave (feat. Ninjablast45)",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "darnell-playable",
+   "girlfriend": "dj",
+   "opponent": "pico",
+   "instrumental": "darnell",
+   "altInstrumentals": [
+    "pico",
+    ""
+   ],
+   "opponentVocals": [
+    "pico"
+   ],
+   "playerVocals": [
+    "darnell-playable"
+   ]
+  },
+  "stage": "phillyTrainErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 3,
+   "hard": 6,
+   "normal": 5
+  },
+  "album": "phillyvolume1",
+  "stickerPack": "bonus-week3-darnell",
+  "previewStart": 0,
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 175,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

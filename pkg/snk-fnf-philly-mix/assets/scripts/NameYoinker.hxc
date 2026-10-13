@@ -1,0 +1,34 @@
+import haxe.Log;
+import funkin.modding.module.Module;
+import funkin.modding.ModStore;
+import StringTools;
+
+//script that gets the discord user
+class NameYoinker extends Module {
+  public var discordUser(get, set):String;
+
+  public function set_discordUser(value:String):String {
+    return ModStore.register("DiscordUser", value);
+  }
+
+  public function get_discordUser():String {
+    return ModStore.get("DiscordUser");
+  }
+
+  public function new() {
+    super('NameYoinker');
+
+  }  
+  override public function onCreate(event) {
+    #if FEATURE_DISCORD_RPC
+    var prevTrace = Log.trace;
+    Log.trace = (v:Dynamic, ?infos) -> {
+      prevTrace(v, infos);
+
+      var str:String = Std.string(v);
+      if (str.indexOf("User: @") != -1 && discordUser == null) 
+        discordUser = StringTools.trim(str.split("User: @")[1].split("(")[0]);
+    }
+    #end
+  }
+}

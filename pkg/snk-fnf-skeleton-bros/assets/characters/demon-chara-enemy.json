@@ -1,0 +1,105 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "DEMON CHARA IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				230,
+				-1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "DEMON CHARA LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-9
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DEMON CHARA DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				1
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "DEMON CHARA UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-23,
+				-18
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "DEMON CHARA RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "chamoy",
+			"fps": 24,
+			"name": "CHARA CHAMOY",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				33,
+				-1
+			],
+			"anim": "saves",
+			"fps": 24,
+			"name": "CHARA SAVES",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/demon_chara_enemy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "Chara",
+	"damage": 0.2,
+	"flip_x": false,
+	"healthbar_colors": [
+		56,
+		25,
+		112
+	],
+	"life": 3,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 3.1,
+	"scale": 1,
+	"mechanic": [
+		"lvl20"
+	]
+}

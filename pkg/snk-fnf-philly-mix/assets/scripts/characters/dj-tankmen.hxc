@@ -1,0 +1,7 @@
+import funkin.play.character.DJCharacter;
+
+class DJTankmenCharacter extends DJCharacter {
+    function new() {
+        super('dj-tankmen');
+    }
+}

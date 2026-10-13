@@ -1,0 +1,190 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Playable) (Keytar)",
+  "assetPath": "shared:characters/darnell_playable",
+  "renderType": "multianimateatlas",
+  "offsets": [0,35],
+  "cameraOffsets": [-25,30],
+  "healthIcon":{
+	  "id":"darnell"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "right_loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "down_loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "up_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "left_loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left_miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down_miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up_miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right_miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "hey"
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "looped":true
+    },
+    {
+      "name": "yo",
+      "prefix": "yo"
+    },
+    {
+      "name": "keytaranim",
+      "prefix": "keytaranim"
+    },
+    {
+      "name": "backtoidle",
+      "prefix": "backtoidle"
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "idle-keytar",
+      "prefix": "idle key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singRIGHT-keytar",
+      "prefix": "right key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singDOWN-keytar",
+      "prefix": "down key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singUP-keytar",
+      "prefix": "up key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singLEFT-keytar",
+      "prefix": "left key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singRIGHTmiss-keytar",
+      "prefix": "right_miss key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singDOWNmiss-keytar",
+      "prefix": "down_miss key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singUPmiss-keytar",
+      "prefix": "up_miss key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singLEFTmiss-keytar",
+      "prefix": "left_miss key",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singRIGHT-alt",
+      "prefix": "right alt",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singDOWN-alt",
+      "prefix": "up alt",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singUP-alt",
+      "prefix": "up alt",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_keytar",
+      "name": "singLEFT-alt",
+      "prefix": "left alt",
+      "offsets": [-115, -5]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "flipX": true,
+      "offsets": [445, 855]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "flipX": true,
+      "offsets": [446, 855]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "flipX": true,
+      "offsets": [445, 855]
+    }
+  ]
+}

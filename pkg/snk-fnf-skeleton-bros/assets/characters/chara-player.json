@@ -1,0 +1,81 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "CHARA IDLE"
+		},
+		{
+			"offsets": [
+				-18,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "CHARA DOWN"
+		},
+		{
+			"offsets": [
+				-26,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "CHARA UP"
+		},
+		{
+			"offsets": [
+				-8,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "CHARA LEFT"
+		},
+		{
+			"offsets": [
+				32,
+				-17
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "CHARA RIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/chara_enemy",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "chara",
+	"damage": 0.1,
+	"flip_x": false,
+	"healthbar_colors": [
+		56,
+		25,
+		112
+	],
+	"life": 2,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 3.1,
+	"scale": 1,
+	"mechanic": []
+}

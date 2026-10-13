@@ -1,0 +1,8 @@
+import funkin.play.character.DJCharacter;
+
+class DJCarCharacter extends DJCharacter {
+    function new() {
+        super('dj-car');
+        this.vizOff = true;
+    }
+}

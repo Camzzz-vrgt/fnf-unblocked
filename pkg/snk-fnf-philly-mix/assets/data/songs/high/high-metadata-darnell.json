@@ -1,0 +1,58 @@
+{
+ "version": "2.2.4",
+ "songName": "High (Darnell Mix)",
+ "artist": "Swagsalt",
+ "charter": "Ninjablast45",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "darnell-car",
+   "girlfriend": "dj-car",
+   "opponent": "mom-car",
+   "instrumental": "darnell",
+   "altInstrumentals": [],
+   "opponentVocals": [
+    "mom"
+   ],
+   "playerVocals": [
+    "darnell"
+   ]
+  },
+  "album": "phillyvolume1",
+  "stickerPack": "standard-darnell",
+  "stage": "limoRideErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 3,
+   "normal": 4,
+   "hard": 5
+  },
+  "previewStart": 0,
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.1",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 125,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

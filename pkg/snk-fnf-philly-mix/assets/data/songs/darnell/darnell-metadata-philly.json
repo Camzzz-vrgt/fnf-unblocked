@@ -1,0 +1,42 @@
+{
+ "version": "2.2.4",
+ "songName": "Darnell (Philly Mix)",
+ "artist": "Turtleman42",
+ "charter": "Mykarm (Ft. Ninjablast45)",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "philly"
+  ],
+  "characters": {
+   "player": "pico-playable",
+   "girlfriend": "nene",
+   "opponent": "darnell",
+   "instrumental": "philly",
+   "opponentVocals": [
+    "darnell"
+   ],
+   "playerVocals": [
+    "pico-playable"
+   ]
+  },
+  "stage": "phillyStreetsDarnell",
+  "noteStyle": "funkin",
+  "freeplayVisibleFor": ["darnell"],
+  "freeplayIconCharacter": "pico",
+  "ratings": {
+   "philly": 8
+  },
+  "album": "phillyvolume1",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.5",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 155,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "version": "1.0.2",
+ "name": "911 Records",
+  "directory": "shared",
+   "cameraZoom": 0.7,
+ "props": [
+  {
+   "assetPath": "stages/911records/Sky",
+   "atlasSettings": null,
+   "name": "sky",
+   "position": [-1702, -888],
+   "scale": 1,
+   "startingAnimation": ""
+  },
+  {
+   "assetPath": "stages/911records/city",
+   "atlasSettings": null,
+   "name": "city",
+   "position": [-1077, -610],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 1
+  },
+  {
+   "assetPath": "stages/911records/Main",
+   "atlasSettings": null,
+   "name": "main",
+   "position": [-1726, -1033],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 2
+  },
+  {
+   "alpha": 0.65,
+   "blend": "multiply",
+   "assetPath": "stages/911records/MULTIPLY",
+   "atlasSettings": null,
+   "name": "roadDarken",
+   "position": [-2002, 424],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 3
+  },
+  {
+   "alpha": 0.9,
+   "blend": "add",
+   "assetPath": "stages/911records/addlight",
+   "atlasSettings": null,
+   "name": "skylight",
+   "position": [-1828, -1034],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 4
+  },
+  {
+   "blend": "overlay",
+   "assetPath": "stages/911records/OVERLAY",
+   "atlasSettings": null,
+   "name": "overlay",
+   "position": [-1748, -674],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 5
+  },
+  {
+   "alpha": 0.3,
+   "blend": "softlight",
+   "assetPath": "stages/911records/overlay",
+   "atlasSettings": null,
+   "name": "overlay2",
+   "position": [-1748, -674],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 6
+  }
+ ],
+ "characters": {
+  "bf": {
+   "cameraOffsets": [-200, -110],
+   "position": [1300, 735],
+   "zIndex": 300
+  },
+  "dad": {
+   "cameraOffsets": [250, -100],
+   "position": [250, 710],
+   "zIndex": 200
+  },
+  "gf": {
+   "cameraOffsets": [225, 0],
+   "position": [704.5, 562],
+   "zIndex": 100
+  }
+ }
+}

@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "up",
+			"indices": [
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "right",
+			"indices": [
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "left",
+			"indices": [
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "down",
+			"indices": [
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "anim",
+			"fps": 16,
+			"name": "anim",
+			"indices": [
+				1,1,2,3,4,6,5,5,5,5,7,8,9,10,11,12,13,12,13,12,13,13,12,14,15,17,16,16,17,17,17,17,17,17,17,17,17,17,17,17
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sonic",
+	"position": [
+		-100,
+		110
+	],
+	"healthicon": "sonic",
+	"flip_x": true,
+	"healthbar_colors": [
+		42,
+		60,
+		181
+	],
+	"camera_position": [
+		-20,
+		80
+	],
+	"sing_duration": 4.99999999999999,
+	"scale": 1.2
+}

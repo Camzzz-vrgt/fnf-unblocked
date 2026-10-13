@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "name": "DJ (Dark)",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/DJ_dark",
+  "startingAnimation": "danceRight",
+  "offsets": [5, 20],
+  "cameraOffsets": [0, -30],
+  "atlasSettings": {
+    "useRenderTexture": true
+  },
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "idle",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "offsets": [0,0]
+    },
+    {
+      "name": "danceRight",
+      "prefix": "idle",
+      "frameIndices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ],
+      "offsets": [0,0]
+    },
+    {
+      "name": "combo50",
+      "prefix": "combo50"
+    },
+    {
+      "name": "drop70",
+      "prefix": "drop70"
+    },
+    {
+      "name": "combo200",
+      "prefix": "combo50"
+    },
+    {
+      "name": "Laugh",
+      "prefix": "laugh",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 5, 5, 5, 5, 5]
+    },
+    {
+      "name": "raiseKnife",
+      "prefix": "gunraise"
+    },
+    {
+      "name": "idleKnife",
+      "prefix": "gun aim"
+    },
+    {
+      "name": "lowerKnife",
+      "prefix": "gun lower"
+    }
+  ]
+}

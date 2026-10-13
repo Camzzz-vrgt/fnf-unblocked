@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell (Car)",
+  "assetPath": "shared:characters/darnell_car",
+  "renderType": "multianimateatlas",
+  "offsets": [-5,10],
+  "cameraOffsets": [150,30],
+  "healthIcon":{
+	  "id":"darnell"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "idle-loop",
+      "looped": true
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "right-loop",
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "down-loop",
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "up-loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "left-loop",
+      "looped": true
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left-miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down-miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up-miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right-miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "hey"
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "looped":true
+    },
+    {
+      "name": "yo",
+      "prefix": "yo" 
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "flipX": true,
+      "offsets": [445, 855]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "flipX": true,
+      "offsets": [446, 855]
+    },
+    {
+      "assetPath": "shared:characters/darnell_death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "flipX": true,
+      "offsets": [445, 855]
+    }
+  ]
+}

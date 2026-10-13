@@ -1,0 +1,7 @@
+class DarnellCarCharacter extends DarnellPlayerCharacter
+{
+	function new()
+	{
+		super('darnell-car');
+	}
+}

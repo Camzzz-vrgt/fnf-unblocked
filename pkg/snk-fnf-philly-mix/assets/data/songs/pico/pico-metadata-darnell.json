@@ -1,0 +1,49 @@
+{
+ "version": "2.2.4",
+ "songName": "Pico (Darnell Mix)",
+ "artist": "Jym (ft. Lemfrl & JxStax)",
+ "charter": "Ninjablast45",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "darnell-playable",
+   "girlfriend": "dj",
+   "opponent": "pico",
+   "instrumental": "darnell",
+   "altInstrumentals": [
+    "pico",
+    ""
+   ],
+   "opponentVocals": [
+    "pico"
+   ],
+   "playerVocals": [
+    "darnell-playable"
+   ]
+  },
+  "stage": "phillyTrainErect",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 2,
+   "normal": 3,
+   "hard": 4
+  },
+  "album": "phillyvolume1",
+  "stickerPack": "bonus-week3-darnell",
+  "previewEnd": 0.173611111111111
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.5",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 150,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

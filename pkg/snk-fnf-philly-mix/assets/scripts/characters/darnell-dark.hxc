@@ -1,0 +1,84 @@
+import funkin.play.character.BaseCharacter;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.PlayState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.util.HapticUtil;
+import funkin.play.PauseSubState;
+import funkin.play.GameOverSubState;
+import funkin.graphics.shaders.TextureSwap;
+
+class DarnellDarkCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('darnell-dark');
+  }
+
+  var normalChar:BaseCharacter;
+  var canTextureSwap:TextureSwap;
+
+  override function set_alpha(val:Float):Float
+  {
+    super.set_alpha(val);
+    
+    canTextureSwap.amount = val;
+
+    if (normalChar != null)
+    {
+      if (val != 1) normalChar.alpha = 1;
+      else
+        normalChar.alpha = 0.0001;
+    }
+
+    return val;
+  }
+
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    super.playAnimation(name, restart, ignoreOther);
+    if (normalChar != null)
+    {
+      normalChar.playAnimation(name, restart, ignoreOther);
+      normalChar.setPosition(this.x-62, this.y-5);
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    GameOverSubState.musicSuffix = GameOverSubState.blueBallSuffix = PauseSubState.musicSuffix = '-darnell';
+
+
+    if (!this.debug)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('darnell-playable');
+      normalChar.zIndex = 199;
+      normalChar.alpha = 0.0001;
+      normalChar.flipX = true;
+      normalChar.hasSetupCans = true;
+      normalChar.setupCans();
+      normalChar.disableFire = true;
+      canTextureSwap = new TextureSwap();
+      canTextureSwap.loadSwapImage(Paths.image('stages/phillySubwayEntry/SpraycanPileDark'));
+      normalChar.spraycans.shader = canTextureSwap;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
+  }
+  
+	var hasSetupCans:Bool = false;
+	
+	public override function onUpdate(event:UpdateScriptEvent):Void {
+		super.onUpdate(event);
+		
+		if (!hasSetupCans) {
+      normalChar.spraycans.x = this.x - 44 - 62;
+      normalChar.spraycans.y = this.y + 432 - 5;
+      normalChar.spraycans.zIndex = 2000;
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+      hasSetupCans = true;
+		}
+	}
+}

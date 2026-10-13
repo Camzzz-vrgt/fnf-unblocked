@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "PAPYRUS PHANTOM"
+		},
+		{
+			"offsets": [
+				29,
+				29
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "aparition",
+			"loop": false,
+			"name": "PAPYRUS APARITION"
+		},
+		{
+			"offsets": [
+				620,
+				-10
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "absorvition",
+			"loop": false,
+			"name": "PAPYRUS ABSORTION"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "SnowForest/Papyrus-Dusttale",
+	"position": [
+		-100,
+		-50
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

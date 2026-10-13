@@ -1,0 +1,43 @@
+import StringTools;
+
+class DarnellKeytarCharacter extends DarnellPlayerCharacter
+{
+	function new()
+	{
+		super('darnell-keytar');
+		firePreRequisite = true;
+	}
+  
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "alt":
+        holdTimer = 0;
+        this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
+        return;
+    }
+
+    super.onNoteHit(event);
+  }
+
+  var isKeytar:Bool = false;
+
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false)
+  {
+    super.playAnimation(name + (isKeytar && (StringTools.startsWith(name,'sing') || name == 'idle') ? '-keytar'  : ''), restart, ignoreOther);
+
+    if (name == 'keytaranim') isKeytar = true;
+    if (name == 'backtoidle') isKeytar = false;
+    disableFire = isKeytar;
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+
+    isKeytar = false;
+    disableFire = isKeytar;
+  }
+}

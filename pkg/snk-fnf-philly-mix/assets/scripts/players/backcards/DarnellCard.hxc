@@ -1,0 +1,204 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.FlxG;
+import funkin.Paths;
+import funkin.graphics.FunkinSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.Conductor;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.FlxSprite;
+import funkin.util.BitmapUtil;
+import openfl.utils.Assets;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.util.FlxTimer;
+import funkin.ui.FullScreenScaleMode;
+
+class DarnellCard extends BackingCard {
+    var glow;
+    var glowDark;
+    var lines;
+    var planesNcash;
+    var musicNshit;
+    var musicNshit2;
+    var strips;
+    var twohot;
+    var weapons;
+    var confirmAtlas;
+
+    override public function new() {
+        super('darnell');
+    }
+
+    function onCreate() {
+        FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+        add(pinkBack);
+
+        glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -130, 330).loadGraphic(Paths.image('freeplay/backingCards/darnell/fireBack'));
+        glowDark.blend = 9;
+        glowDark.alpha = 0;
+        add(glowDark);
+
+        glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -130, 330).loadGraphic(Paths.image('freeplay/backingCards/darnell/fireFront'));
+        glow.blend = 0;
+        add(glow);
+        
+        FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut,type:2,loopDelay:2/24});
+        FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut,type:2});
+
+        lines = new FunkinSprite(0,306).loadTexture('freeplay/backingCards/darnell/lines');
+        lines.setGraphicSize(Std.int(pinkBack.width),lines.height);
+        lines.updateHitbox();
+        add(lines);
+
+        planesNcash = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/planesNcash'),0x01);
+        planesNcash.setPosition(0,510);
+        planesNcash.velocity.x = -100;
+        planesNcash.antialiasing = true;
+        add(planesNcash);
+
+        musicNshit = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/musicNshit'),0x01);
+        musicNshit.setPosition(0,400.45);
+        musicNshit.velocity.x = 120;
+        musicNshit.antialiasing = true;
+        add(musicNshit);
+
+        musicNshit2 = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/musicNshit'),0x01);
+        musicNshit2.setPosition(0,602.2);
+        musicNshit2.velocity.x = -120;
+        musicNshit2.antialiasing = true;
+        musicNshit2.flipX = true;
+        musicNshit2.alpha = 0.4;
+        add(musicNshit2);
+        
+        strips = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/strips'),0x01,-72.5);
+        strips.setPosition(0,304.2);
+        strips.velocity.x = -175;
+        strips.antialiasing = true;
+        add(strips);
+
+        twohot = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/TWOhot'),0x01,20);
+        twohot.setPosition(0,227);
+        twohot.velocity.x = 100;
+        twohot.antialiasing = true;
+        add(twohot);
+
+        weapons = new FlxBackdrop(Paths.image('freeplay/backingCards/darnell/weapons'),0x01,-20);
+        weapons.velocity.x = -100;
+        weapons.antialiasing = true;
+        add(weapons);
+        
+        confirmAtlas = new FlxAtlasSprite(-280, -160, Paths.animateAtlas("freeplay/backingCards/darnell/confirmAtlas"));
+        confirmAtlas.applyStageMatrix = true;
+        confirmAtlas.visible = false;
+        confirmAtlas.scale.set(0.6,0.6);
+        add(confirmAtlas);
+
+
+        glowDark.visible = glow.visible = lines.visible = planesNcash.visible = musicNshit.visible = musicNshit2.visible = strips.visible =
+        twohot.visible = weapons.visible = false;
+
+        cardGlow.blend = 0;
+        cardGlow.visible = false;
+        add(cardGlow);
+    }
+    
+    public override function introDone():Void
+    {
+        pinkBack.color = 0xFFC26257;
+        cardGlow.visible = true;
+        FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
+        FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.45, {ease: FlxEase.sineOut});
+        glowDark.visible = glow.visible = lines.visible = planesNcash.visible = musicNshit.visible = musicNshit2.visible = strips.visible = 
+        twohot.visible = weapons.visible = true;
+        FlxTween.tween(strips.velocity, {x: -125}, 1, {ease: FlxEase.expoOut});
+    }
+
+    public override function disappear(){
+        super.disappear();
+        glowDark.visible = glow.visible = lines.visible = planesNcash.visible = musicNshit.visible = musicNshit2.visible = strips.visible = 
+        twohot.visible = weapons.visible = false;
+    }
+
+    public override function confirm(){
+        pinkBack.color = 0xFFC77077;
+        FlxTween.color(pinkBack, 6/24, 0xFFC77077, 0xFF171831, {ease: FlxEase.quadOut});
+
+        lines.alpha = 0.9;
+        lines.blend = 17;
+
+        FlxTween.cancelTweensOf(glowDark);
+        FlxTween.cancelTweensOf(glow);
+        glowDark.alpha = 0;
+
+        glow.alpha = 0;
+        FlxTween.tween(glow,{alpha:0.3}, 9/24, {ease: FlxEase.quadOut});
+
+
+        planesNcash.visible = musicNshit.visible = musicNshit2.visible = strips.visible = 
+        twohot.visible = weapons.visible = false;
+
+        confirmAtlas.visible = true;
+        confirmAtlas.animation.play("");
+
+        confirmAtlas.animation.onFrameChange.add((name, frame, frameIndex) -> {
+            if(frame == 8 || frame == 12 || frame == 16 || frame == 20){
+                glow.visible = false;
+                lines.visible = false;
+                if(frame == 8)
+                    pinkBack.color = 0xFFFF0B0B;
+                if(frame == 12)
+                    pinkBack.color = 0xFFFFF458;
+                if(frame == 16)
+                    pinkBack.color = 0xFFFFFFFF;
+                if(frame == 20)
+                    pinkBack.color = 0xFFEDFF4D;
+            }
+            if(frame == 9 || frame == 13 || frame == 17 || frame == 21){
+                pinkBack.color = 0xFF171831;
+                glow.visible = true;
+                lines.visible = true;
+            }
+        });
+
+        
+        FlxTween.color(instance.backingImage, 8 / 24, 0xFFFFFFFF, 0xFF8A8A8A,{ease: FlxEase.expoOut,
+            onUpdate: function(_) instance.angleMaskShader.extraColor = instance.backingImage.color
+        });
+
+        new FlxTimer().start(8 / 24, function(_) {
+             // shoot
+            FlxTween.color(instance.backingImage, 4 / 24, 0xFF343036, 0xFF696366,{ease: FlxEase.expoOut,onUpdate: function(_)
+                instance.angleMaskShader.extraColor = instance.backingImage.color
+            });
+        });
+        new FlxTimer().start(12 / 24, function(_) {
+             // shoot
+            FlxTween.color(instance.backingImage, 4 / 24, 0xFF343036, 0xFF696366,{ease: FlxEase.expoOut,onUpdate: function(_)
+                instance.angleMaskShader.extraColor = instance.backingImage.color
+            });
+        });
+        new FlxTimer().start(16 / 24, function(_) {
+             // shoot
+            FlxTween.color(instance.backingImage, 4 / 24, 0xFF343036, 0xFF696366,{ease: FlxEase.expoOut,onUpdate: function(_)
+                instance.angleMaskShader.extraColor = instance.backingImage.color
+            });
+        });
+        new FlxTimer().start(20 / 24, function(_) {
+             // shoot
+            FlxTween.color(instance.backingImage, 4 / 24, 0xFF343036, 0xFF696366,{ease: FlxEase.expoOut,onUpdate: function(_)
+                instance.angleMaskShader.extraColor = instance.backingImage.color
+            });
+        });
+    }
+
+    var flickerTimer = 0;
+    function onUpdate(event){
+        super.onUpdate(event);
+        flickerTimer += event.elapsed;
+        if(flickerTimer >= 4/24){
+            flickerTimer = 0;
+            twohot.alpha = FlxG.random.float(0.5,1.0);
+        }
+    }
+}

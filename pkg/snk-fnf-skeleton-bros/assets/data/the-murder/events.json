@@ -1,0 +1,171 @@
+{
+	"song": {
+		"events": [
+			[
+				55846.1538461538,
+				[
+					[
+						"Play Animation",
+						"death",
+						"2"
+					]
+				]
+			],
+			[
+				57115.3846153846,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf"
+					]
+				]
+			],
+			[
+				59076.9230769231,
+				[
+					[
+						"Change Character",
+						"gf",
+						"paps-phantom"
+					],
+					[
+						"Camera Follow Pos",
+						"700",
+						"600"
+					],
+					[
+						"Play Animation",
+						"aparition",
+						"2"
+					]
+				]
+			],
+			[
+				88615.3846153846,
+				[
+					[
+						"Play Animation",
+						"absorvition",
+						"2"
+					]
+				]
+			],
+			[
+				90230.7692307692,
+				[
+					[
+						"Change Character",
+						"gf",
+						"gf"
+					],
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				118153.846153846,
+				[
+					[
+						"Hud Fade",
+						"3",
+						"0"
+					],
+					[
+						"bgChange",
+						"3",
+						""
+					],
+					[
+						"Cam Zoom Tween",
+						"2.5",
+						"2"
+					]
+				]
+			],
+			[
+				132692.307692308,
+				[
+					[
+						"Hud Fade",
+						"1",
+						"100"
+					]
+				]
+			],
+			[
+				147576.923076923,
+				[
+					[
+						"Cam Zoom Tween",
+						"0.84",
+						"2"
+					],
+					[
+						"bgChange",
+						"4",
+						""
+					],
+					[
+						"Transition",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				147692.307692308,
+				[
+					[
+						"bgChange",
+						"1",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sans-dusttale-almas"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-light"
+					]
+				]
+			],
+			[
+				177115.384615384,
+				[
+					[
+						"Transition",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				177230.769230769,
+				[
+					[
+						"bgChange",
+						"2",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sans-dusttale"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-dust"
+					]
+				]
+			]
+		]
+	}
+}

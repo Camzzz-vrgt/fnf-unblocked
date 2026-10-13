@@ -1,0 +1,239 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PauseSubState;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.RimLightShader;
+import flixel.util.FlxColor;
+import funkin.FunkinMemory;
+import funkin.play.stage.Bopper;
+import funkin.util.assets.FlxAnimationUtil;
+import StringTools;
+
+class DarnellPlayerCharacter extends MultiAnimateAtlasCharacter
+{
+	public var spraycans:FunkinSprite;
+	var sprayShader = null; // acts as an override
+	var fire:FunkinSprite;
+	var disableFire = false;
+
+	var firePreRequisite = false;
+
+	function new(characterId)
+	{
+		if (characterId == "UNKNOWN")
+			characterId = "darnell-playable";
+
+		super(characterId);
+
+		if (characterId == 'darnell-playable') {
+			firePreRequisite = true;
+		}
+
+	}
+
+	override public function resetCameraFocusPoint():Void
+	{
+		super.resetCameraFocusPoint();
+		//so the stupid train doesnt show, this code is also very ugly itll be removed in the next fnf patch
+		if (StringTools.contains((PlayState?.instance?.currentStage?.id ?? 'unknown'), 'phillyTrain'))
+			this.cameraFocusPoint.x -= 100;
+	}
+
+	public override function onCreate(event:ScriptEvent):Void
+	{
+		super.onCreate(event);
+		//move darnell back a little so he doesnt start making out with pico, hes too damn close! (this code will be removed in the next fnf patch since its ugly)
+		this.globalOffsets[0] = (StringTools.contains((PlayState?.instance?.currentStage?.id ?? 'unknown'), 'phillyTrain')) ? 100 : 0;
+
+		spraycans = new FunkinSprite(0, 0, Paths.image('stages/phillySubwayEntry/SpraycanPile'));
+
+		GameOverSubState.musicSuffix = GameOverSubState.blueBallSuffix = PauseSubState.musicSuffix = '-darnell';
+
+		if(firePreRequisite){
+			fire = new Bopper();
+			fire.ignoreExclusionPref = this.ignoreExclusionPref;
+			fire.visible = false;
+			//shes unique cuz otherwise it would load the same exact atlas twice so the changes would apply to both
+			fire.frames = Paths.getAnimateAtlas('characters/darnell_playable','shared',{uniqueInCache:true});
+			FlxAnimationUtil.addTextureAtlasAnimations(fire, _data.animations);
+			for (anim in _data.animations)
+				fire.setAnimationOffsets(anim.name, 0, 0);//have to set the default so it doesnt crash
+
+			for(symbolName in ['Darnell pose right','Darnell Pose Down','darnell pose left','Darnell pose up']){
+				//removes the fire layer from the characters pose animations
+				var symbol = this.library.getSymbol(symbolName);
+				symbol.timeline.layers.shift();
+
+				//removes everything BUT the fire layer from the fire atlas
+				var symbolFire = fire.library.getSymbol(symbolName);
+				while (symbolFire.timeline.layers.length > 1) symbolFire.timeline.layers.pop();
+			}
+		}
+
+
+      	FunkinMemory.cacheTexture(Paths.image('characters/DJ_gameover'));
+	}
+
+
+	var deathSpriteDJ:FunkinSprite;
+
+	function createDeathSprites():Void
+	{
+		var stagePos = currentStage?.getGirlfriendPosition() ?? currentStage.getDadPosition();
+
+		if (deathSpriteDJ != null && !deathSpriteDJ.alive)
+			deathSpriteDJ.revive();
+
+		deathSpriteDJ = FunkinSprite.createSparrow(0, 0, "characters/DJ_gameover");
+		deathSpriteDJ.x = stagePos.x - 35;
+		deathSpriteDJ.y = stagePos.y - 550;
+		deathSpriteDJ.zIndex = this.zIndex - 5;
+		deathSpriteDJ.animation.addByPrefix('shoot', "DJ EXPORT death", 24, false);
+		deathSpriteDJ.animation.onFinish.add(function(name:String)deathSpriteDJ.kill());
+	}
+
+	// Re-expose playSingAnimation at this MIDDLE scripted level so a leaf scripted
+	// class (e.g. DarnellKeytarCharacter) calling playSingAnimation(dir, ..., suffix)
+	// routes through `super` (the compiled proxy) instead of having Polymod bind `this`
+	// to the bare interpreter, where `this.playAnimation` would be undefined.
+	public override function playSingAnimation(dir:Int, miss:Bool = false, ?suffix:String = ''):Void
+	{
+		super.playSingAnimation(dir, miss, suffix);
+	}
+
+	public override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void{
+
+		if (name == "firstDeath"){
+			this.shader = null;
+			createDeathSprites();
+			GameOverSubState.instance.targetCameraZoom = 1;
+
+			GameOverSubState.instance.add(deathSpriteDJ);
+			GameOverSubState.instance.refresh();
+			deathSpriteDJ.animation.play("shoot");
+		}
+
+		if(fire != null && firePreRequisite && !disableFire){
+			fire.visible = StringTools.startsWith(name,'sing') && !StringTools.contains(name,'miss');
+			fire.playAnimation(name, restart, ignoreOther, reversed);
+			fire.setPosition(this.x + this.globalOffsets[0],this.y + this.globalOffsets[1]);
+		}
+    	super.playAnimation(name, restart, ignoreOther, reversed);
+	}
+
+	var hasSetupCans:Bool = false;
+	var hasSetupFire:Bool = false;
+
+	public override function onUpdate(event:UpdateScriptEvent):Void {
+		super.onUpdate(event);
+
+		if (sprayShader != null) {
+			spraycans.shader = sprayShader;
+		} else {
+			if (this.shader != null)
+				syncCanShader(this.shader);
+			else
+				spraycans.shader = null;
+		}
+
+		spraycans.filters = this.filters;
+		spraycans.color = this.color;
+
+		if (hasSetupFire && firePreRequisite) {
+			fire.filters = this.filters;
+			fire.color = FlxColor.interpolate(this.color, FlxColor.WHITE, 0.5);
+
+			if (this.shader != null)
+				syncFireShader(this.shader);
+			else
+				fire.shader = null;
+		}
+
+		if (!hasSetupCans)
+			setupCans();
+		if(!hasSetupFire && firePreRequisite)
+			setupFire();
+	}
+
+	function setupCans():Void {
+		spraycans.x = this.x + this.globalOffsets[0] - 44;
+		spraycans.y = this.y + this.globalOffsets[1] + 397;
+		spraycans.zIndex = this.zIndex;
+		spraycans.scale.set(this.scale.x, this.scale.y);
+		spraycans.scrollFactor.set(this.scrollFactor.x, this.scrollFactor.y);
+		spraycans.flipX = true;
+		if (PlayState.instance != null) {
+			currentStage.add(spraycans);
+			currentStage.refresh();
+		}
+		hasSetupCans = true;
+	}
+
+	function setupFire(){
+		fire.setPosition(this.x + this.globalOffsets[0],this.y + this.globalOffsets[1]);
+		fire.zIndex = this.zIndex+1;
+		fire.flipX = this.flipX;
+		if (PlayState.instance != null) {
+			currentStage.add(fire);
+			currentStage.refresh();
+		}
+		hasSetupFire = true;
+	}
+
+	function syncCanShader(currentShader) {
+		var processedShader = null;
+		processedShader = currentShader;
+
+		if(Std.isOfType(currentShader, DropShadowShader) || currentShader.toString() == 'bobbydx rim shader'){
+			if (Std.isOfType(currentShader, DropShadowShader)) {
+				processedShader = new DropShadowShader();
+				processedShader.color = currentShader.color;
+			} else if(currentShader.rimMatrix != null) {
+				processedShader = new RimLightShader();
+				processedShader.color = currentShader.color;
+				processedShader.rimMatrix = currentShader.rimMatrix;
+				processedShader.matrix = currentShader.matrix;
+				processedShader.curZoom = currentShader.curZoom;
+				processedShader.flipX = currentShader.flipX;
+				processedShader.flipY = currentShader.flipY;
+				processedShader.pixelPerfect = currentShader.pixelPerfect;
+				processedShader.blend = currentShader.blend;
+				processedShader.cancelRimMix = currentShader.cancelRimMix;
+			}
+			processedShader.setAdjustColor(currentShader.baseBrightness, currentShader.baseHue, currentShader.baseContrast, currentShader.baseSaturation);
+			processedShader.angle = currentShader.angle;
+			processedShader.distance = currentShader.distance * 0.5;
+			processedShader.strength = currentShader.strength;
+			processedShader.threshold = currentShader.threshold;
+			processedShader.antialiasAmt = currentShader.antialiasAmt;
+			processedShader.useAltMask = currentShader.useAltMask;
+		}
+
+		spraycans.shader = processedShader;
+	}
+
+	function syncFireShader(currentShader) {
+		var fireShader = null;
+		fireShader = currentShader;
+
+		if (Std.isOfType(currentShader, AdjustColorShader)) {
+			fireShader = new AdjustColorShader();
+			fireShader.hue = currentShader.hue;
+			fireShader.saturation = currentShader.saturation;
+			fireShader.brightness = currentShader.brightness / 2.5;
+			fireShader.contrast = currentShader.contrast / 5;
+		} else if (Std.isOfType(currentShader, DropShadowShader) || currentShader.hasBaseHSBC() == true) {
+			fireShader = new AdjustColorShader();
+			fireShader.hue = currentShader.baseHue;
+			fireShader.saturation = currentShader.baseSaturation;
+			fireShader.brightness = currentShader.baseBrightness / 2.5;
+			fireShader.contrast = currentShader.baseContrast / 5;
+		}
+
+		fire.shader = fireShader;
+	}
+}
+

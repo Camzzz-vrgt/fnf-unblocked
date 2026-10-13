@@ -1,0 +1,149 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "CHARA IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				250,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 30,
+			"name": "CHARA LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 30,
+			"name": "CHARA DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				30
+			],
+			"anim": "singUP",
+			"fps": 30,
+			"name": "CHARA UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-37
+			],
+			"anim": "singRIGHT",
+			"fps": 30,
+			"name": "CHARA RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				2
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "CHARA CHAMOY IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-21
+			],
+			"anim": "singDOWN-alt",
+			"fps": 30,
+			"name": "CHARA CHAMOY DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				9
+			],
+			"anim": "singUP-alt",
+			"fps": 30,
+			"name": "CHARA CHAMOY UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-13
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 30,
+			"name": "CHARA CHAMOY RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				4
+			],
+			"anim": "singLEFT-alt",
+			"fps": 30,
+			"name": "CHARA CHAMOY Left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				23,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "chamoy",
+			"indices": [],
+			"name": "CHAMOY CHARA"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/chara_new_enemy",
+	"position": [
+		0,
+		380
+	],
+	"healthicon": "chara",
+	"damage": 0.1,
+	"flip_x": false,
+	"healthbar_colors": [
+		56,
+		25,
+		112
+	],
+	"life": 2,
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 3.6,
+	"scale": 1,
+	"mechanic": [
+		"lvl20"
+	]
+}

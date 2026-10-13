@@ -1,0 +1,19 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.modding.module.Module;
+import funkin.ui.freeplay.FreeplayState;
+
+//AltInstsModCompatibility script is a thing for gooey and spooky mix not us!!! it is effecting our mod tho so we have to disable it if it exists
+class StopAltInstsModCompatibility extends Module{
+	public function new() {
+		super('StopAltInstsModCompatibility', 1000, {
+			state: FreeplayState
+		});
+		if(ModuleHandler.getModule('AltInstsModCompatibility') == null)
+			active = false;
+	}
+
+	override function onUpdate(event) {
+		super.onUpdate(event);
+		ModuleHandler.getModule('AltInstsModCompatibility').active = FlxG.state.subState.currentVariation != 'darnell';
+	}
+}

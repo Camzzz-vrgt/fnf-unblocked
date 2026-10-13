@@ -1,0 +1,10 @@
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.save.Save;
+
+class DarnellPlayableCharacter extends PlayableCharacter
+{
+  function new()
+  {
+    super('darnell');
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "name": "Darnell",
+  "ownedChars": [
+    "darnell",
+    "darnell-playable",
+    "darnell-car",
+    "darnell-blazin",
+    "darnell-dark",
+    "darnell-keytar"
+  ],
+  "showUnownedChars": false,
+  "unlocked": false,
+  "freeplayStyle": "darnell",
+  "stickerPack": "standard-darnell",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-darnell",
+    "text1": "DARNELL ONLY GOT 5 YEARS TO LIVE",
+    "text2": "OUR FAV PYROMANIAC",
+    "text3": "GOD PLEASE DONT BURN ME WITH UR FLAMETHROWER",
+   
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 1,
+
+      "loopStartFrame": 5,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 0,
+
+      "loopBadStartFrame": 0,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.45
+    },
+    "useAnimatePosition": true,
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "intro",
+        "animType": "framelabel"
+      },
+      {
+        "name": "idle",
+        "prefix": "idle",
+        "animType": "framelabel"
+      },
+      {
+        "name": "confirm",
+        "prefix": "accept",
+        "animType": "framelabel"
+      },
+      {
+        "name": "fistPump",
+        "prefix": "fistpump",
+        "animType": "framelabel"
+      },
+      {
+        "name": "loss",
+        "prefix": "fistpumploss",
+        "animType": "framelabel"
+      },
+      {
+        "name": "charSelect",
+        "prefix": "cs",
+        "animType": "framelabel"
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 0,
+    "gf": {
+      "assetPath": "charSelect/djChill",
+      "animInfoPath": "charSelect/djAnimInfo",
+      "visualizer": true
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT-darnell",
+      "PERFECT": "resultsPERFECT-darnell",
+      "EXCELLENT": "resultsEXCELLENT-darnell",
+      "GREAT": "resultsGREAT-darnell",
+      "GOOD": "resultsGREAT-darnell",
+      "SHIT": "resultsSHIT-darnell"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+       "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "zIndex": 500,
+       "scale": 0.80,
+          "looped": true,
+        "offsets": [410, -645],
+        "loopFrame": 45
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+       "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "zIndex": 500,
+        "scale": 0.80,
+          "looped": true,
+         "offsets": [410, -645],
+        "loopFrame": 45
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+       "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "zIndex": 500,
+         "scale": 0.80,
+          "offsets": [410, -645],
+        "looped": true,
+        "loopFrame": 45
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "zIndex": 500,
+        "scale": 0.80,
+        "offsets": [410, -645],
+        "looped": true,
+        "loopFrame": 45
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "looped": true,
+        "zIndex": 500,
+        "scale": 0.80,
+        "offsets": [410, -645],
+        "loopFrame": 45
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+         "assetPath": "shared:resultScreen/results-darnell/resultsGREAT",
+        "zIndex": 500,
+         "scale": 0.80,
+           "looped": true,
+         "offsets": [410, -645],
+        "loopFrame": 45
+      }
+    ]
+  }
+}
