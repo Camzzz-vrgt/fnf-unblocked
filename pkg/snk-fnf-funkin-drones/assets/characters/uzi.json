@@ -1,0 +1,184 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "Uzi_Idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				3
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "Uzi_Sprite_Left-0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				-10
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "Uzi_Sprite_Down-0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-14
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "Uzi_Sprite_Up-0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "Uzi_Sprite_Right-0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "pissed1",
+			"fps": 16,
+			"name": "Pissed0",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				1,
+				2,
+				3,
+				4,
+				5,
+				1,
+				2,
+				3,
+				4,
+				5,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "pissed2",
+			"fps": 16,
+			"name": "Pissed3-0",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/uzi",
+	"position": [
+		80,
+		240
+	],
+	"healthicon": "sorrow",
+	"flip_x": false,
+	"healthbar_colors": [
+		177,
+		99,
+		193
+	],
+	"camera_position": [
+		50,
+		30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

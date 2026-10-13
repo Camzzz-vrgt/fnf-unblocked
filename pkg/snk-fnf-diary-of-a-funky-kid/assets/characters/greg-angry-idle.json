@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				162,
+				195
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "greg left"
+		},
+		{
+			"offsets": [
+				12,
+				139
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "greg down"
+		},
+		{
+			"offsets": [
+				-39,
+				191
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "greg right"
+		},
+		{
+			"offsets": [
+				58,
+				229
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "greg up"
+		},
+		{
+			"offsets": [
+				-5,
+				190
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "greg idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Greg_Angry_Idle",
+	"position": [
+		60,
+		300
+	],
+	"healthicon": "greg",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

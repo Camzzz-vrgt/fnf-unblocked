@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-36, 8],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [125, 48],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-63, 13],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-59, 64],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [12, -21],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-42, 8],
+			"anim": "ew",
+			"fps": 24,
+			"name": "ew",
+			"indices": []
+		},
+		{
+			"offsets": [-44, 15],
+			"indices": [],
+			"fps": 24,
+			"anim": "pip",
+			"loop": false,
+			"name": "pip"
+		},
+		{
+			"offsets": [122, 34],
+			"indices": [],
+			"fps": 24,
+			"anim": "kick",
+			"loop": false,
+			"name": "kick"
+		},
+		{
+			"offsets": [71, 51],
+			"indices": [],
+			"fps": 24,
+			"anim": "idunno",
+			"loop": false,
+			"name": "idunno"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/dan",
+	"position": [0, 280],
+	"healthicon": "dan",
+	"flip_x": false,
+	"healthbar_colors": [255, 120, 0],
+	"camera_position": [410, 20],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

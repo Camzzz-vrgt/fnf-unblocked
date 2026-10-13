@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				-31
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "DownMiss0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-41,
+				34
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "RightMiss0"
+		},
+		{
+			"offsets": [
+				127,
+				81
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "LeftMiss0"
+		},
+		{
+			"offsets": [
+				138,
+				96
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "UpMiss0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				52
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-81,
+				-69
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				65,
+				42
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-81,
+				10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/La_Puta",
+	"position": [
+		-540,
+		320
+	],
+	"healthicon": "laputa",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		0,
+		79
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

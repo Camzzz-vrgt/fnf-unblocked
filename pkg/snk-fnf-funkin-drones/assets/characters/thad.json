@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-5
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "Thad_Sprite_Idle-",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				2
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "Thad_Left_-",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "Thad_Down_-",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-42,
+				-14
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "Thad_Up-",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "Thad_Sprite_-",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-5
+			],
+			"anim": "enter",
+			"fps": 15,
+			"name": "Thad_Entry-",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Thad",
+	"position": [
+	    -180,
+		370
+	],
+	"healthicon": "Thad",
+	"flip_x": false,
+	"healthbar_colors": [
+		127,
+		254,
+		75
+	],
+	"camera_position": [
+		50,
+		30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

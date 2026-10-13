@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				89,
+				193
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "greg left"
+		},
+		{
+			"offsets": [
+				52,
+				159
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "greg down"
+		},
+		{
+			"offsets": [
+				-42,
+				171
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "greg right"
+		},
+		{
+			"offsets": [
+				-16,
+				242
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "greg up"
+		},
+		{
+			"offsets": [
+				-5,
+				190
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "greg idle"
+		},
+		{
+			"offsets": [
+				-10,
+				232
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "mad",
+			"indices": [],
+			"name": "greg gets mad"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Greg_Backpack",
+	"position": [
+		60,
+		300
+	],
+	"healthicon": "greg",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		250,
+		-160
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

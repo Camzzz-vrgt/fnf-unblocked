@@ -1,0 +1,153 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				90,
+				-108
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Ben LEFT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				185,
+				-34
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Ben DOWN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				94,
+				-91
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Ben UP",
+			"indices": []
+		},
+		{
+			"offsets": [
+				191,
+				-43
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Ben RIGHT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				92,
+				-113
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Ben IDLE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				12
+			],
+			"name": "Ben IDLE"
+		},
+		{
+			"offsets": [
+				130,
+				-110
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "Ben LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				27
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				15,
+				16,
+				17,
+				18
+			],
+			"name": "Bem RIGHT"
+		},
+		{
+			"offsets": [
+				104,
+				-78
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				56,
+				57,
+				58,
+				59
+			],
+			"name": "Ben UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				113,
+				-110
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "Ben LAUGHING",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/drowned",
+	"position": [
+		30,
+		30
+	],
+	"healthicon": "ben",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		115,
+		0
+	],
+	"camera_position": [
+		-180,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

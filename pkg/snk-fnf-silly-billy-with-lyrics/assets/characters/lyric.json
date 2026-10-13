@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "story_of_yourtalebilly",
+			"indices": [],
+			"name": "story_of_yourtalebilly"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "lyric",
+	"position": [
+		760,
+		290
+	],
+	"healthicon": "sillybilly",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-360,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

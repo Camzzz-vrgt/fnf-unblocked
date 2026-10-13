@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-81,
+				170
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				40
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				-120
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down pose",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				30,
+				174
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up pose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MINUS_GOKU",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "goku",
+	"flip_x": false,
+	"healthbar_colors": [
+		247,
+		156,
+		1
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

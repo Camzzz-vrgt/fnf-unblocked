@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Death0",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				5,
+				0
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "DeathLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				0
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "DeathLoop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mamadas_femboy",
+	"position": [
+		50,
+		60
+	],
+	"healthicon": "mamadas_femboy",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		150,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}
