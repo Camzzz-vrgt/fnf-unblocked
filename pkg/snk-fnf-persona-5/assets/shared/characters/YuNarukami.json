@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Yu Idle0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-89,
+				39
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Yu Left0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				42,
+				-4
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Yu Right0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-104,
+				34
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "YUp0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				32,
+				-39
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Yu Down0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/The_Sister_Complex_Kingpin_of_Steel",
+	"position": [
+		-300,
+		145
+	],
+	"healthicon": "yu",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		255,
+		109
+	],
+	"camera_position": [
+		150,
+		-90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-24,
+				-12
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "RETRY CONFIRM"
+		},
+		{
+			"offsets": [
+				-24,
+				-12
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "Retry Loop"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "firstDeath",
+			"fps": 12,
+			"name": "FNR7 BF2 Dies",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/FNR7bfRIP2",
+	"position": [
+		-100,
+		300
+	],
+	"healthicon": "icon-fnr7-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		98,
+		110,
+		247
+	],
+	"camera_position": [
+		-30,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 6.00000000000001
+}

@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				17,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "giffany_broken2 UP"
+		},
+		{
+			"offsets": [
+				17,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "giffany_broken2 DOWN"
+		},
+		{
+			"offsets": [
+				23,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "giffany_broken2 RIGHT"
+		},
+		{
+			"offsets": [
+				5,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "giffany_broken2 LEFT"
+		},
+		{
+			"offsets": [
+				17,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "giffany_broken2 IDLE"
+		},
+		{
+			"offsets": [
+				17,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "giffany_broken2 GLITCH"
+		},
+		{
+			"offsets": [
+				18,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "idle-klitch",
+			"indices": [],
+			"name": "giffany_broken2 KLITCH"
+		},
+		{
+			"offsets": [
+				17,
+				0
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "Wireframe",
+			"indices": [],
+			"name": "giffany_broken2 WIREFRAME"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				5,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 12,
+			"name": "giffany_broken2 LGLITCH",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				23,
+				0
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 12,
+			"name": "giffany_broken2 RGLITCH",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				17,
+				0
+			],
+			"anim": "singDOWN-alt",
+			"fps": 12,
+			"name": "giffany_broken2 DGLITCH",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				17,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 12,
+			"name": "giffany_broken2 UGLITCH",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "scream",
+			"loop": true,
+			"name": "giffany_broken2 SCREAM"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/giffany_broken2",
+	"position": [
+		310,
+		205
+	],
+	"healthicon": "icon-gif-broken",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		80,
+		155
+	],
+	"camera_position": [
+		-930,
+		-210
+	],
+	"sing_duration": 4,
+	"scale": 6
+}

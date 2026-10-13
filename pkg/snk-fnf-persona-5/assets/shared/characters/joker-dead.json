@@ -1,0 +1,68 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				1
+			],
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "JokeDies instance"
+		},
+		{
+			"offsets": [
+				0,
+				-139
+			],
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "retry please work instance"
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"offsets": [
+				0,
+				-87
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "JokeDeadConfirm instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/joker_gameover_repack",
+	"position": [
+		10,
+		110
+	],
+	"healthicon": "joka",
+	"flip_x": true,
+	"healthbar_colors": [
+		215,
+		0,
+		80
+	],
+	"camera_position": [
+		0,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

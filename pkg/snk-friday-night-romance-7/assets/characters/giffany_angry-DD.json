@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				8,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "giffany Left"
+		},
+		{
+			"offsets": [
+				9,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "giffany Down"
+		},
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "idle",
+			"indices": [],
+			"name": "giffany Idle"
+		},
+		{
+			"offsets": [
+				9,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "giffany Up"
+		},
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "giffany Right"
+		},
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"loop": false,
+			"fps": 13,
+			"anim": "laugh",
+			"indices": [],
+			"name": "giffany Laugh"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/giffany_angry-DD",
+	"position": [
+		150,
+		360
+	],
+	"healthicon": "icon-gif-pissed",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		40,
+		115
+	],
+	"camera_position": [
+		-360,
+		-430
+	],
+	"sing_duration": 4,
+	"scale": 6
+}

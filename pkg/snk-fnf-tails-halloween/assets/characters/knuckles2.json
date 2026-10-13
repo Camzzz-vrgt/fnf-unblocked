@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "gf sad"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GF_assets",
+	"position": [
+		57,
+		-250
+	],
+	"healthicon": "sonicdead",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		160,
+		215
+	],
+	"camera_position": [
+		70,
+		350
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

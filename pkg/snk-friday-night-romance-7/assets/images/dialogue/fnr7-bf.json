@@ -1,0 +1,90 @@
+{
+	"position": [
+		510,
+		250
+	],
+	"dialogue_pos": "center",
+	"no_antialiasing": true,
+	"scale": 8.2,
+	"image": "fnr7bfportrait",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "BF NORMAL0",
+			"loop_name": "BF NORMAL LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "challenging",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BF CHALLENGING0",
+			"loop_name": "BF CHALLENGING LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "scared",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BF SCARED0",
+			"loop_name": "BF SCARED LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "peace",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BF PEACE0",
+			"loop_name": "BF PEACE LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "nervous",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BF NERVOUS0",
+			"loop_name": "BF NERVOUS LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "leaving",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BF LEAVING0",
+			"loop_name": "BF LEAVING LOOP"
+		}
+	]
+}

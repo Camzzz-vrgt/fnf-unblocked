@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				80,
+				-370
+			],
+			"loop": true,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "rings idle"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/rings",
+	"position": [
+		557,
+		-220
+	],
+	"healthicon": "tails",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		195,
+		0
+	],
+	"camera_position": [
+		70,
+		360
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

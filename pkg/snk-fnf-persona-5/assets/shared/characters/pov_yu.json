@@ -1,0 +1,105 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Yu POV Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				-30,
+				0
+			],
+			"offsets": [
+				11,
+				-31
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Yu POV Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				30,
+				0
+			],
+			"offsets": [
+				277,
+				28
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Yu POV Right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				192,
+				-79
+			],
+			"cameraOffset": [
+				0,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "Yu POV Down"
+		},
+		{
+			"offsets": [
+				-7,
+				50
+			],
+			"cameraOffset": [
+				0,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Yu POV Up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/POV Yu",
+	"position": [
+		-300,
+		65
+	],
+	"healthicon": "yu",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		255,
+		109
+	],
+	"camera_position": [
+		0,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

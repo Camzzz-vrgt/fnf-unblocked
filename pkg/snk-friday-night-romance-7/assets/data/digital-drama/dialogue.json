@@ -1,0 +1,76 @@
+{
+	"dialogue": [
+		{
+			"expression": "aware",
+			"text": "\\n########",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "talk",
+			"text": "\\nThat was fun!\\nReady for anoth-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "peace",
+			"text": "\\n( he is satisfied )",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "fnr7-bf"
+		},
+		{
+			"expression": "leaving",
+			"text": "\\n( he is leaving lol )",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "fnr7-bf"
+		},
+		{
+			"expression": "scarystop",
+			"text": "\\n...",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "scary",
+			"text": "\\nAre you...",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "mad",
+			"text": "\\nLeaving?!",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "scared",
+			"text": "\\nB-b-be-beep?!",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "mad point",
+			"text": "\\nDon't think you are leaving me so easily!",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		}
+	]
+}

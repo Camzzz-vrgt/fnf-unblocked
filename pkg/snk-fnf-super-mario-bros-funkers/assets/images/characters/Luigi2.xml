@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Luigi2.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="1" y="1" width="73" height="54"/>
+	<SubTexture name="idle0001" x="77" y="1" width="73" height="54"/>
+	<SubTexture name="idle0002" x="153" y="1" width="73" height="54"/>
+	<SubTexture name="idle0003" x="229" y="1" width="73" height="54"/>
+
+	<SubTexture name="jump0000" x="1" y="58" width="73" height="54"/>
+	<SubTexture name="jump0001" x="77" y="58" width="73" height="54"/>
+	<SubTexture name="jump0002" x="153" y="58" width="73" height="54"/>
+	<SubTexture name="jump0003" x="229" y="58" width="73" height="54"/>
+	<SubTexture name="jump0004" x="1" y="115" width="73" height="54"/>
+	<SubTexture name="jump0005" x="77" y="115" width="73" height="54"/>
+	<SubTexture name="jump0006" x="153" y="115" width="73" height="54"/>
+	<SubTexture name="jump0007" x="229" y="115" width="73" height="54"/>
+
+	<SubTexture name="scared0000" x="1" y="172" width="73" height="54"/>
+	<SubTexture name="scared0001" x="77" y="172" width="73" height="54"/>
+
+</TextureAtlas>

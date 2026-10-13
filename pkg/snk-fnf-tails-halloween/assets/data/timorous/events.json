@@ -1,0 +1,119 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "halloweenbg",
+		"player1": "tailspikachu",
+		"player2": "sonicexe",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Add Camera Zoom",
+						"0.4",
+						"1"
+					]
+				]
+			],
+			[
+				28114.2857142857,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				30857.1428571429,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				148114.285714286,
+				[
+					[
+						"Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				150514.285714286,
+				[
+					[
+						"Play Animation",
+						"funni",
+						"sonicexe"
+					]
+				]
+			],
+			[
+				151714.285714286,
+				[
+					[
+						"Zoom",
+						"1.8",
+						""
+					]
+				]
+			],
+			[
+				153771.428571428,
+				[
+					[
+						"Alt Idle Animation",
+						"1",
+						"-alt"
+					]
+				]
+			],
+			[
+				154028.571428571,
+				[
+					[
+						"Alt Idle Animation",
+						"sonicexe",
+						"-alt"
+					]
+				]
+			],
+			[
+				154542.857142857,
+				[
+					[
+						"Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				154971.428571428,
+				[
+					[
+						"Zoom",
+						"0.7",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 175,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "timorous"
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "firstDeath",
+			"fps": 12,
+			"name": "FNR7 BF Dies",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "deathConfirm",
+			"fps": 12,
+			"name": "RETRY CONFIRM",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "deathLoop",
+			"fps": 12,
+			"name": "Retry Loop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/FNR7bf-RIP",
+	"position": [
+		20,
+		350
+	],
+	"healthicon": "icon-fnr7-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		98,
+		110,
+		247
+	],
+	"camera_position": [
+		-30,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 5.10000000000001
+}

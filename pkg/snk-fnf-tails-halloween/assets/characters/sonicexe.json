@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				108
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "sonicexe idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				287,
+				108
+			],
+			"anim": "singDOWN",
+			"fps": 17,
+			"name": "sonicexe down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				331,
+				115
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "sonicexe up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				326,
+				110
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "sonicexe left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				326,
+				106
+			],
+			"anim": "singRIGHT",
+			"fps": 17,
+			"name": "sonicexe right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				109
+			],
+			"anim": "ending",
+			"fps": 14,
+			"name": "sonicexe ded",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				341,
+				107
+			],
+			"anim": "funni",
+			"fps": 13,
+			"name": "sonicexe funni",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				341,
+				109
+			],
+			"anim": "singUP-alt",
+			"fps": 14,
+			"name": "sonicexe laugh",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sonicexe",
+	"position": [
+		337,
+		-20
+	],
+	"healthicon": "sonic",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		160,
+		215
+	],
+	"camera_position": [
+		-420,
+		10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

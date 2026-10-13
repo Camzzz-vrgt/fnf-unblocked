@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"expression": "scarystop",
+			"text": "\\n...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.5,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "confused",
+			"text": "\\nNot bad...",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "peace",
+			"text": "\\nyeah!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "fnr7-bf"
+		},
+		{
+			"expression": "happy",
+			"text": "\\nbut there is a lot left for you to learn!",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "scared",
+			"text": "\\nbeep \t:(",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.16,
+			"sound": ""
+		},
+		{
+			"expression": "happy",
+			"text": "\\nReady for Round 2?",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "challenging",
+			"text": "\\nYeah!",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "\\nLet's see if you can keep up!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.07,
+			"portrait": "gif-normal"
+		}
+	]
+}

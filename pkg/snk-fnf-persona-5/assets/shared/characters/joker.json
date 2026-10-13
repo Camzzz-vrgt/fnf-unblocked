@@ -1,0 +1,170 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "JokeIDLE0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				26
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "JokeLEFT0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-79,
+				-42
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "JokeDOWN0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-51,
+				31
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "JokeUP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-184,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "JokeRIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				39
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "JokeLEFT Miss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-98,
+				21
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "JokeDOWN Miss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-43,
+				32
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "JokeUP Miss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-177,
+				-9
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "JokeRIGHT Miss0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-69,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "THE GLOVE"
+		},
+		{
+			"offsets": [
+				849,
+				763
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Intro",
+			"indices": [],
+			"name": "Jokerflips0"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"loop": true,
+			"name": "JokeIDLE0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Joker_P5F",
+	"position": [
+		0,
+		240
+	],
+	"healthicon": "joka",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		0,
+		80
+	],
+	"camera_position": [
+		100,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

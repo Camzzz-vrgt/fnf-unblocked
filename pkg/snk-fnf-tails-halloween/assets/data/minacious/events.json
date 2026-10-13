@@ -1,0 +1,179 @@
+{
+	"song": {
+		"speed": 2.9,
+		"stage": "knucklesstage",
+		"player1": "knuckles",
+		"player2": "2sonicexe",
+		"player3": null,
+		"events": [
+			[
+				101152.173913044,
+				[
+					[
+						"Zoom",
+						"1.1",
+						""
+					]
+				]
+			],
+			[
+				101217.391304348,
+				[
+					[
+						"Play Animation",
+						"rings",
+						"1"
+					]
+				]
+			],
+			[
+				101673.913043478,
+				[
+					[
+						"playSound",
+						"Sfx1",
+						"1"
+					]
+				]
+			],
+			[
+				101739.130434783,
+				[
+					[
+						"Image Appearance",
+						"white",
+						"0.02"
+					]
+				]
+			],
+			[
+				101934.782608696,
+				[
+					[
+						"Alt Idle Animation",
+						"1",
+						"-alt"
+					]
+				]
+			],
+			[
+				102065.217391304,
+				[
+					[
+						"Zoom",
+						"0.7",
+						""
+					]
+				]
+			],
+			[
+				139826.086956522,
+				[
+					[
+						"Play Animation",
+						"punch",
+						"1"
+					],
+					[
+						"Zoom",
+						"1.2",
+						""
+					]
+				]
+			],
+			[
+				140869.565217392,
+				[
+					[
+						"Play Animation",
+						"ending",
+						"0"
+					]
+				]
+			],
+			[
+				141847.826086957,
+				[
+					[
+						"playSound",
+						"sfx2",
+						"1"
+					]
+				]
+			],
+			[
+				141913.043478261,
+				[
+					[
+						"Replace stage layer",
+						"broken",
+						"master"
+					],
+					[
+						"Image Appearance",
+						"white",
+						"0.03"
+					],
+					[
+						"Change Character",
+						"0",
+						"shhhhh"
+					],
+					[
+						"Change Character",
+						"1",
+						"knuckles2"
+					],
+					[
+						"Change Character",
+						"2",
+						"rings"
+					]
+				]
+			],
+			[
+				141978.260869565,
+				[
+					[
+						"Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				142043.47826087,
+				[
+					[
+						"Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				150260.869565218,
+				[
+					[
+						"Camera Follow Pos",
+						"1250",
+						"1080"
+					],
+					[
+						"Zoom",
+						"1.6",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 230,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "minacious"
+	}
+}

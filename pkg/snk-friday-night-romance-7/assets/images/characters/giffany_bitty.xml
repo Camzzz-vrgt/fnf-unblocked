@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="giffany_bitty.png">
+
+<SubTexture name="giffany_bitty static0000" x="0" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty static0001" x="40" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty idle0000" x="40" y="76" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty idle0001" x="80" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty lookright0000" x="80" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty lookright0001" x="120" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty lookleft0000" x="80" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty lookleft0001" x="160" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty lookleft0002" x="80" y="0" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty spin0000" x="0" y="38" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty spin0001" x="40" y="38" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty spin0002" x="80" y="38" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty spin0003" x="120" y="38" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty spin0004" x="160" y="38" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty spin0005" x="0" y="75" width="40" height="37" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty merry0000" x="80" y="75" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty merry0001" x="120" y="75" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty merry0002" x="160" y="75" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty merry0003" x="0" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+
+
+<SubTexture name="giffany_bitty sit0000" x="40" y="114" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty sit0001" x="40" y="76" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty greetright0000" x="780" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetright0001" x="120" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetright0002" x="80" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetright0003" x="120" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetright0004" x="80" y="113" width="40" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty greetleft0000" x="160" y="113" width="39" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetleft0001" x="0" y="151" width="39" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetleft0002" x="160" y="113" width="39" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetleft0003" x="0" y="151" width="39" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty greetleft0004" x="160" y="113" width="39" height="38" frameX="0" frameY="1" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty bowleft0000" x="39" y="152" width="40" height="38" frameX="1" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty bowleft0001" x="79" y="152" width="40" height="38" frameX="1" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty bowleft0002" x="119" y="152" width="40" height="38" frameX="1" frameY="0" frameWidth="36" frameHeight="34" />
+
+<SubTexture name="giffany_bitty bowright0000" x="160" y="152" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty bowright0001" x="0" y="190" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+<SubTexture name="giffany_bitty bowright0002" x="40" y="190" width="40" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="34" />
+
+</TextureAtlas>

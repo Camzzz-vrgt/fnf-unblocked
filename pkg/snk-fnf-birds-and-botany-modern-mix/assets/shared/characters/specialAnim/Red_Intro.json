@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				224,
+				976
+			],
+			"anim": "intro",
+			"fps": 24,
+			"name": "Intro",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Red_Intro",
+	"position": [
+	    -10,
+		40
+	],
+	"healthicon": "red",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		5,
+		5
+	],
+	"camera_position": [
+		-100,
+		0
+	],
+	"sing_duration": 5.1,
+	"scale": 1
+}

@@ -1,0 +1,116 @@
+{
+	"dialogue": [
+		{
+			"expression": "stopeyesclosed",
+			"text": "\\n...",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.16,
+			"sound": ""
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gif-normal",
+			"boxState": "normal",
+			"expression": "stopeyesclosed",
+			"text": "\\n..."
+		},
+		{
+			"expression": "happy",
+			"text": "\\nboyfriend!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "scared",
+			"text": "\\nbeep?!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.16,
+			"portrait": "fnr7-bf"
+		},
+		{
+			"expression": "talk",
+			"text": "\\nI've been waiting for this moment.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.08,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "eyesclosed",
+			"text": "\\nNow it will be just you and me.\\nforever!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.08,
+			"portrait": "gif-normal"
+		},
+		{
+			"expression": "nervous",
+			"text": "\\nBeep...",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "\\nDon't worry... I will take good care of you.  ",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "\\nBap boop",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "eyesclosed",
+			"text": "\\nWell then...\\nwhat do you want to do first? ",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "challenging",
+			"text": "\\nBeep!",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.06,
+			"sound": ""
+		},
+		{
+			"expression": "confused",
+			"text": "\\nA rhythm battle?",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.07,
+			"sound": ""
+		},
+		{
+			"expression": "peace",
+			"text": "\\nyeah!",
+			"boxState": "normal",
+			"portrait": "fnr7-bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "happy",
+			"text": "\\nWell then, let’s do this! ",
+			"boxState": "normal",
+			"portrait": "gif-normal",
+			"speed": 0.08,
+			"sound": ""
+		}
+	]
+}

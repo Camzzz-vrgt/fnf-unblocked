@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-42,
+				30
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "off",
+			"indices": [],
+			"name": "giffany_sadge off"
+		},
+		{
+			"offsets": [
+				-43,
+				30
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": true,
+			"name": "giffany_sadge idle"
+		},
+		{
+			"offsets": [
+				-42,
+				30
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUP",
+			"loop": true,
+			"name": "giffany_sadge up"
+		},
+		{
+			"offsets": [
+				-42,
+				30
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "giffany_sadge right"
+		},
+		{
+			"offsets": [
+				-43,
+				30
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "giffany_sadge left"
+		},
+		{
+			"offsets": [
+				-42,
+				30
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "giffany_sadge down"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/giffany_sadge",
+	"position": [
+		510,
+		608
+	],
+	"healthicon": "gif-console",
+	"flip_x": false,
+	"healthbar_colors": [
+		240,
+		140,
+		215
+	],
+	"camera_position": [
+		-170,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 6.5
+}

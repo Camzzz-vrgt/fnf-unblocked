@@ -1,0 +1,155 @@
+{
+	"dialogue_pos": "center",
+	"position": [
+		510,
+		250
+	],
+	"no_antialiasing": true,
+	"scale": 8.2,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF LOOP",
+			"idle_name": "GIF0"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "happy",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF HAPPY0",
+			"loop_name": "GIF HAPPY LOOP"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "eyesclosed",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF EYES CLOSED LOOP",
+			"idle_name": "GIF EYES CLOSED0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "confused",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF CONFUSED LOOP",
+			"idle_name": "GIF CONFUSED0"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "stopeyesclosed",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF EYES CLOSED0",
+			"loop_name": "GIF EYES CLOSED0"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "scary",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF SCARY0",
+			"loop_name": "GIF SCARY LOOP"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "scarystop",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF SCARY0",
+			"loop_name": "GIF SCARY0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "aware",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF AWARE LOOP",
+			"idle_name": "GIF AWARE0"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "glitchy",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF SCARY0",
+			"loop_name": "GIF GLITCHY LOOP"
+		},
+		{
+			"loop_offsets": [
+				0,
+				17
+			],
+			"anim": "mad",
+			"idle_offsets": [
+				0,
+				17
+			],
+			"loop_name": "GIF MAD LOOP",
+			"idle_name": "GIF MAD0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "mad point",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF MAD POINT LOOP",
+			"idle_name": "GIF MAD POINT0"
+		}
+	],
+	"image": "gifPortrait"
+}

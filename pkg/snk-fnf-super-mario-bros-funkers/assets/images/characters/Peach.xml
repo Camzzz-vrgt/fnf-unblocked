@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Peach.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="1" y="1" width="118" height="128"/>
+	<SubTexture name="idle0001" x="122" y="1" width="118" height="128"/>
+	<SubTexture name="idle0002" x="243" y="1" width="118" height="128"/>
+	<SubTexture name="idle0003" x="364" y="1" width="118" height="128"/>
+	<SubTexture name="idle0004" x="485" y="1" width="118" height="128"/>
+	<SubTexture name="idle0005" x="606" y="1" width="118" height="128"/>
+
+	<SubTexture name="left0000" x="1" y="132" width="118" height="128"/>
+	<SubTexture name="left0001" x="122" y="132" width="118" height="128"/>
+
+	<SubTexture name="up0000" x="243" y="132" width="118" height="128"/>
+	<SubTexture name="up0001" x="364" y="132" width="118" height="128"/>
+
+	<SubTexture name="down0000" x="485" y="132" width="118" height="128"/>
+	<SubTexture name="down0001" x="606" y="132" width="118" height="128"/>
+
+	<SubTexture name="right0000" x="727" y="132" width="118" height="128"/>
+	<SubTexture name="right0001" x="848" y="132" width="118" height="128"/>
+
+	<SubTexture name="laughter0000" x="727" y="1" width="118" height="128"/>
+	<SubTexture name="laughter0001" x="848" y="1" width="118" height="128"/>
+
+	<SubTexture name="talk0000" x="969" y="1" width="118" height="128"/>
+	<SubTexture name="talk0001" x="1090" y="1" width="118" height="128"/>
+
+	<SubTexture name="powerup0000" x="969" y="132" width="118" height="128"/>
+	<SubTexture name="powerup0001" x="1090" y="132" width="118" height="128"/>
+
+</TextureAtlas>

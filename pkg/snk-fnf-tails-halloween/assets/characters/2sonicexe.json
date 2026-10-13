@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				108
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "knucklesonicexe idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				287,
+				108
+			],
+			"anim": "singDOWN",
+			"fps": 17,
+			"name": "knucklesonicexe down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				331,
+				115
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "knucklesonicexe up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				326,
+				110
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "knucklesonicexe left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				326,
+				106
+			],
+			"anim": "singRIGHT",
+			"fps": 17,
+			"name": "knucklesonicexe right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				109
+			],
+			"anim": "ending",
+			"fps": 1,
+			"name": "knucklesonicexe shit",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/knucklesonicexe",
+	"position": [
+		277,
+		-10
+	],
+	"healthicon": "sonicdead",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		160,
+		215
+	],
+	"camera_position": [
+		-240,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

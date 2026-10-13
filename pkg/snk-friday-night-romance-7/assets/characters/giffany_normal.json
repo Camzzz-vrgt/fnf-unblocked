@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				7,
+				6
+			],
+			"anim": "idle",
+			"fps": 8,
+			"name": "giffany Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "giggle",
+			"indices": [],
+			"name": "giffany Laugh"
+		},
+		{
+			"offsets": [
+				3,
+				6
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "giffany Up"
+		},
+		{
+			"offsets": [
+				-4,
+				6
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "giffany Down"
+		},
+		{
+			"offsets": [
+				-7,
+				5
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "giffany Right"
+		},
+		{
+			"offsets": [
+				59,
+				5
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "giffany Left"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/giffany",
+	"position": [
+		150,
+		260
+	],
+	"healthicon": "icon-gif-normal",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		80,
+		155
+	],
+	"camera_position": [
+		-390,
+		-450
+	],
+	"sing_duration": 4,
+	"scale": 6
+}

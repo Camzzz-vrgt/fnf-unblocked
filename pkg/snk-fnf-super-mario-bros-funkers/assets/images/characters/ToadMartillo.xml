@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ToadMartillo.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="1" y="1" width="93" height="56"/>
+	<SubTexture name="idle0001" x="97" y="1" width="93" height="56"/>
+	<SubTexture name="idle0002" x="193" y="1" width="93" height="56"/>
+	<SubTexture name="idle0003" x="289" y="1" width="93" height="56"/>
+
+	<SubTexture name="left0000" x="1" y="60" width="93" height="56"/>
+	<SubTexture name="left0001" x="97" y="60" width="93" height="56"/>
+
+	<SubTexture name="down0000" x="193" y="60" width="93" height="56"/>
+	<SubTexture name="down0001" x="289" y="60" width="93" height="56"/>
+
+	<SubTexture name="right0000" x="1" y="119" width="93" height="56"/>
+	<SubTexture name="right0001" x="97" y="119" width="93" height="56"/>
+
+	<SubTexture name="up0000" x="193" y="119" width="93" height="56"/>
+	<SubTexture name="up0001" x="289" y="119" width="93" height="56"/>
+
+	<SubTexture name="hammer0000" x="1" y="178" width="93" height="56"/>
+	<SubTexture name="hammer0001" x="97" y="178" width="93" height="56"/>
+	<SubTexture name="hammer0002" x="193" y="178" width="93" height="56"/>
+	<SubTexture name="hammer0003" x="289" y="178" width="93" height="56"/>
+
+</TextureAtlas>

@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-300
+			],
+			"anim": "danceLeft",
+			"fps": 6,
+			"name": "GIFfany_Radio idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-300
+			],
+			"anim": "danceRight",
+			"fps": 6,
+			"name": "GIFfany_Radio idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/GIFfany_Radio",
+	"position": [
+		0,
+		-1
+	],
+	"healthicon": "",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-20,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 6
+}

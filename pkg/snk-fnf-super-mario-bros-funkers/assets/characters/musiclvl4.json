@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "idleL"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "idleR"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/musiclvl4",
+	"position": [
+		310,
+		540
+	],
+	"healthicon": "",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-10,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 9
+}

@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				21,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "robotnik up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-51,
+				-9
+			],
+			"anim": "singDOWNmiss",
+			"fps": 13,
+			"name": "robotnik 2miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				7
+			],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "robotnik 3miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "robotnik down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				1
+			],
+			"anim": "idle",
+			"fps": 17,
+			"name": "robotnik idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				5,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "robotnik left"
+		},
+		{
+			"offsets": [
+				12,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "robotnik right"
+		},
+		{
+			"offsets": [
+				7,
+				-11
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "robotnik 1miss"
+		},
+		{
+			"offsets": [
+				20,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "robotnik 4miss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/robotnik",
+	"position": [
+		-320,
+		-330
+	],
+	"healthicon": "egg",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		260,
+		-190
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

@@ -1,0 +1,188 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-42,
+				30
+			],
+			"anim": "singUP",
+			"fps": 5,
+			"name": "giffany bitty Up ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-102,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 5,
+			"name": "giffany bitty Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 5,
+			"name": "giffany bitty Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 5,
+			"name": "giffany bitty Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 5,
+			"anim": "idle",
+			"indices": [],
+			"name": "giffany_bitty idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "lookright",
+			"indices": [],
+			"name": "giffany_bitty lookright"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "lookleft",
+			"indices": [],
+			"name": "giffany_bitty lookleft"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "static",
+			"indices": [],
+			"name": "giffany_bitty static"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "spin",
+			"indices": [],
+			"name": "giffany_bitty spin"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "merry",
+			"indices": [],
+			"name": "giffany_bitty merry"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "sit",
+			"indices": [],
+			"name": "giffany_bitty sit"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "greetright",
+			"indices": [],
+			"name": "giffany_bitty greetright"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "greetleft",
+			"indices": [],
+			"name": "giffany_bitty greetleft"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "bowleft",
+			"indices": [],
+			"name": "giffany_bitty bowleft"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 5,
+			"anim": "bowright",
+			"indices": [],
+			"name": "giffany_bitty bowright"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/giffany_bitty",
+	"position": [
+		510,
+		608
+	],
+	"healthicon": "gif-bitty",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		80,
+		155
+	],
+	"camera_position": [
+		-170,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 5
+}

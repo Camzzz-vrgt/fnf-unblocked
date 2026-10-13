@@ -1,0 +1,166 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-152
+			],
+			"anim": "idle",
+			"fps": 15,
+			"name": "tailspikachu idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				-152
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "tailspikachu left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				29,
+				-152
+			],
+			"anim": "singRIGHT",
+			"fps": 17,
+			"name": "tailspikachu right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				-152
+			],
+			"anim": "singDOWN",
+			"fps": 17,
+			"name": "tailspikachu down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				-152
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "tailspikachu up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				33,
+				-154
+			],
+			"anim": "singLEFTmiss",
+			"fps": 14,
+			"name": "tailspikachu 1miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-150
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 17,
+			"name": "tailspikachu 4miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				31,
+				-151
+			],
+			"anim": "singDOWNmiss",
+			"fps": 17,
+			"name": "tailspikachu 2miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-150
+			],
+			"anim": "singUPmiss",
+			"fps": 16,
+			"name": "tailspikachu 3miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				29,
+				-153
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "tailspikachu alt"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-260
+			],
+			"anim": "firstDeath",
+			"fps": 15,
+			"name": "tailspikachu death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-260
+			],
+			"anim": "deathLoop",
+			"fps": 15,
+			"name": "tailspikachu gameover",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-260
+			],
+			"anim": "deathConfirm",
+			"fps": 15,
+			"name": "tailspikachu retry",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tailspikachu",
+	"position": [
+		47,
+		-250
+	],
+	"healthicon": "tails",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		135,
+		0
+	],
+	"camera_position": [
+		40,
+		250
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

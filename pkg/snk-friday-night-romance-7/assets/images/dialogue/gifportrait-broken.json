@@ -1,0 +1,90 @@
+{
+	"dialogue_pos": "center",
+	"position": [
+		510,
+		250
+	],
+	"no_antialiasing": true,
+	"scale": 8.2,
+	"animations": [
+		{
+			"anim": "silent",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "GIF SILENT",
+			"idle_name": "GIF BROKENH0"
+		},
+		{
+			"loop_name": "GIF BROKENH LOOP",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF BROKENH0",
+			"anim": "brokenh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "GIF TILT LOOP",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF TILT0",
+			"anim": "tilt",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "GIF MURDER LOOP",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF MURDER0",
+			"anim": "murder",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "GIF GLITCHY LOOP",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF MURDER0",
+			"anim": "glitchy",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "GIF CRYSWHY LOOP",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "GIF CRYSWHY0",
+			"anim": "cryswhy",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "gifPortrait-broken"
+}

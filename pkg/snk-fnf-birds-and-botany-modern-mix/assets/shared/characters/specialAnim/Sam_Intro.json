@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				6,
+				422
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "intro",
+			"indices": [],
+			"name": "Intro"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sam_intro",
+	"position": [
+		-470,
+		420
+	],
+	"healthicon": "sam",
+	"flip_x": false,
+	"healthbar_colors": [
+		156,
+		224,
+		48
+	],
+	"camera_position": [
+		-200,
+		-200
+	],
+	"sing_duration": 5.1,
+	"scale": 1
+}

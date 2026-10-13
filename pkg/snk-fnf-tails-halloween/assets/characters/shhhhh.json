@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				108
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "shhhhh idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "",
+			"fps": 24,
+			"name": "",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/shhhhh",
+	"position": [
+		477,
+		630
+	],
+	"healthicon": "sonicexe",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		0,
+		255
+	],
+	"camera_position": [
+		-240,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				80,
+				181
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "eggmobile up"
+		},
+		{
+			"offsets": [
+				80,
+				180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "eggmobile down"
+		},
+		{
+			"offsets": [
+				80,
+				180
+			],
+			"loop": false,
+			"fps": 16,
+			"anim": "idle",
+			"indices": [],
+			"name": "eggmobile idle"
+		},
+		{
+			"offsets": [
+				81,
+				180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "eggmobile left"
+		},
+		{
+			"offsets": [
+				80,
+				180
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "eggmobile right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/eggmobile",
+	"position": [
+		-80,
+		-60
+	],
+	"healthicon": "sonicdead",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		160,
+		215
+	],
+	"camera_position": [
+		300,
+		180
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5
+}

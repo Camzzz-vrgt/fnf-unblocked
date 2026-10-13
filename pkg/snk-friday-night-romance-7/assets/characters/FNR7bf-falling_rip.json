@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "deathConfirm",
+			"fps": 12,
+			"name": "bfFalling-pixel retry",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "deathLoop",
+			"fps": 12,
+			"name": "bfFalling-pixel go loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				-12
+			],
+			"anim": "firstDeath",
+			"fps": 16,
+			"name": "bfFalling-pixel gameover",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/FNR7bf-falling",
+	"position": [
+		480,
+		890
+	],
+	"healthicon": "icon-fnr7-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		98,
+		110,
+		247
+	],
+	"camera_position": [
+		50,
+		-40
+	],
+	"sing_duration": 4,
+	"scale": 6.00000000000001
+}

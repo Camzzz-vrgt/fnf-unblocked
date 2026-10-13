@@ -1,0 +1,78 @@
+{
+	"song": {
+		"song": "Scary Night",
+		"notes": [],
+		"events": [
+			[
+				124800,
+				[
+					[
+						"background",
+						"dream",
+						""
+					]
+				]
+			],
+			[
+				124800,
+				[
+					[
+						"Change Character",
+						"dad",
+						"dream_intruder"
+					]
+				]
+			],
+			[
+				124800,
+				[
+					[
+						"Change Character",
+						"bf",
+						"dream_mark"
+					]
+				]
+			],
+			[
+				182400,
+				[
+					[
+						"background",
+						"",
+						""
+					]
+				]
+			],
+			[
+				182400,
+				[
+					[
+						"Change Character",
+						"dad",
+						"intruder"
+					]
+				]
+			],
+			[
+				182400,
+				[
+					[
+						"Change Character",
+						"bf",
+						"lilmark"
+					]
+				]
+			]
+		],
+		"bpm": 200,
+		"needsVoices": true,
+		"speed": 2.8,
+		"arrowSkin": "markNote_Assets",
+		"player1": "lilmark",
+		"player2": "intruder",
+		"player3": null,
+		"gfVersion": "gf",
+		"stage": "stairs",
+		"validScore": false
+	}
+}

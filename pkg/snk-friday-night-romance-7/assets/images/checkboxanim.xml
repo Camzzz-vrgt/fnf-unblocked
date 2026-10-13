@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="checkboxanim.png">
+
+<SubTexture name="checkbox0000" x="0" y="0" width="180" height="180" frameX="0" frameY="0" frameWidth="180" frameHeight="180" />
+<SubTexture name="checkbox anim reverse0000" x="0" y="0" width="180" height="180" frameX="0" frameY="0" frameWidth="180" frameHeight="180" />
+
+<SubTexture name="checkbox anim0000" x="0" y="180" width="180" height="180" frameX="0" frameY="0" frameWidth="180" frameHeight="180" />
+<SubTexture name="checkbox finish0000" x="0" y="180" width="180" height="180" frameX="0" frameY="0" frameWidth="180" frameHeight="180" />
+
+</TextureAtlas>

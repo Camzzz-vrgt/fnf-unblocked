@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				-5
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				-31
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-26,
+				87
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-28,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-2,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "miss",
+			"indices": [],
+			"name": "MISS"
+		},
+		{
+			"offsets": [
+				-2,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [
+				19,
+				19
+			],
+			"name": "MISS"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ShadowBF",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "icon-shdwbf-jkr",
+	"flip_x": false,
+	"healthbar_colors": [
+		220,
+		0,
+		120
+	],
+	"camera_position": [
+		-280,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
