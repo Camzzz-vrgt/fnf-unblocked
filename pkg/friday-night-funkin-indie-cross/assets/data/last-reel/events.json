@@ -1,0 +1,137 @@
+{
+	"song": {
+		"song": "Last-Reel",
+		"notes": [],
+		"events": [
+			[
+				8550,
+				[
+					[
+						"Screen Shake",
+						"1",
+						"0.1"
+					]
+				]
+			],
+			[
+				8540,
+				[
+					[
+						"Play Animation",
+						"scream",
+						"dad"
+					]
+				]
+			],
+			[
+				10000,
+				[
+					[
+						"grunt",
+						"right",
+						""
+					]
+				]
+			],
+			[
+				15000,
+				[
+					[
+						"grunt",
+						"left",
+						""
+					]
+				]
+			],
+			[
+				76307,
+				[
+					[
+						"cutouts",
+						"stickman",
+						""
+					]
+				]
+			],
+			[
+				78769,
+				[
+					[
+						"cutouts",
+						"piper",
+						""
+					]
+				]
+			],
+			[
+				115692,
+				[
+					[
+						"cutouts",
+						"bendy2",
+						""
+					]
+				]
+			],
+			[
+				128000,
+				[
+					[
+						"Screen Shake",
+						"0.8",
+						"0.1"
+					]
+				]
+			],
+			[
+				128000,
+				[
+					[
+						"cutouts",
+						"darkrain",
+						""
+					]
+				]
+			],
+			[
+				137850,
+				[
+					[
+						"cutouts",
+						"endrain",
+						""
+					]
+				]
+			],
+			[
+				136615,
+				[
+					[
+						"cutouts",
+						"bendy",
+						""
+					]
+				]
+			],
+			[
+				152769,
+				[
+					[
+						"cutouts",
+						"justwalk",
+						""
+					]
+				]
+			]
+		],
+		"bpm": 195,
+		"needsVoices": true,
+		"speed": 2.6,
+		"player1": "bendybf-sweat",
+		"player2": "bendy",
+		"player3": null,
+		"gfVersion": "sammy",
+		"stage": "factory",
+		"validScore": false
+	}
+}

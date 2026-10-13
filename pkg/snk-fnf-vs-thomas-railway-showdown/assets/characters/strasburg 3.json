@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/thomas/strasburg 3",
+	"position": [
+		-345,
+		-105
+	],
+	"healthicon": "burg 3",
+	"flip_x": false,
+	"healthbar_colors": [
+		28,
+		138,
+		197
+	],
+	"camera_position": [
+		300,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

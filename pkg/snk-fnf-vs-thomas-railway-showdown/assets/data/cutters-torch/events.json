@@ -1,0 +1,66 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"goodbye hud",
+						"0",
+						"0.01"
+					],
+					[
+						"cinematics",
+						"1",
+						"80"
+					]
+				]
+			],
+			[
+				7384.61538461538,
+				[
+					[
+						"goodbye hud",
+						"1",
+						"4"
+					],
+					[
+						"Alter Visibility",
+						"camGame",
+						"true"
+					],
+					[
+						"Black flash",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				171692.307692308,
+				[
+					[
+						"cinematics",
+						"1",
+						"80"
+					],
+					[
+						"Black flash",
+						"2",
+						""
+					],
+					[
+						"Alt Idle Animation",
+						"dad",
+						"-alt"
+					],
+					[
+						"Play Animation",
+						"idle-alt",
+						"dad"
+					]
+				]
+			]
+		]
+	}
+}

@@ -1,0 +1,77 @@
+{
+	"song": {
+		"song": "Whoopee",
+		"notes": [],
+		"events": [
+			[
+				1411.764705882353,
+				[
+					[
+						"Set Cam Zoom",
+						"1.3",
+						"5"
+					]
+				]
+			],
+			[
+				1411.764705882353,
+				[
+					[
+						"shaderOn",
+						"-30",
+						""
+					]
+				]
+			],
+			[
+				2823.764705882353,
+				[
+					[
+						"caged",
+						"",
+						""
+					]
+				]
+			],
+			[
+				14300.764705882353,
+				[
+					[
+						"Play Animation",
+						"switch",
+						"dad"
+					]
+				]
+			],
+			[
+				15059.764705882353,
+				[
+					[
+						"Set Cam Zoom",
+						"0.8",
+						""
+					]
+				]
+			],
+			[
+				15059.764705882353,
+				[
+					[
+						"shaderOff",
+						"0",
+						""
+					]
+				]
+			]
+		],
+		"bpm": 170,
+		"needsVoices": true,
+		"speed": 2.5,
+		"player1": "bfsans",
+		"player2": "sans",
+		"player3": null,
+		"gfVersion": "gf",
+		"stage": "hall",
+		"validScore": false
+	}
+}

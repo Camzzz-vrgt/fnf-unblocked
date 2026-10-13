@@ -1,0 +1,68 @@
+{
+	"storyName": "bonus",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "trsweek2",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"asboi",
+			"chav",
+			[
+				0,
+				65,
+				146
+			]
+		],
+		[
+			"boiler test",
+			"burg 1",
+			[
+				28,
+				138,
+				197
+			]
+		],
+		[
+			"situation",
+			"pepsi",
+			[
+				78,
+				120,
+				46
+			]
+		],
+		[
+			"really-useful",
+			"tonic",
+			[
+				80,
+				130,
+				215
+			]
+		],
+		[
+			"cutters-torch",
+			"scrap",
+			[
+				40,
+				35,
+				32
+			]
+		]
+	],
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}

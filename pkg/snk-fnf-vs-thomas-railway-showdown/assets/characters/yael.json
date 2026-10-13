@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-90,
+				-260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
+		},
+		{
+			"offsets": [
+				82,
+				-320
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "RIGHT"
+		},
+		{
+			"offsets": [
+				-470,
+				-458
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LEFT"
+		},
+		{
+			"offsets": [
+				-171,
+				-362
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
+		},
+		{
+			"offsets": [
+				-356,
+				-52
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/deviant/yael",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon_yael",
+	"flip_x": false,
+	"healthbar_colors": [
+		238,
+		40,
+		0
+	],
+	"camera_position": [
+		90,
+		340
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

@@ -1,0 +1,41 @@
+{
+	"song": {
+		"events": [
+			[
+				36000,
+				[
+					[
+						"Black flash",
+						"3",
+						""
+					],
+					[
+						"goodbye hud",
+						"0",
+						"0.1"
+					],
+					[
+						"Alter Visibility",
+						"Hud",
+						"false"
+					],
+					[
+						"Alter Visibility",
+						"synt",
+						"true"
+					]
+				]
+			],
+			[
+				45000,
+				[
+					[
+						"Alter Visibility",
+						"camGame",
+						"false"
+					]
+				]
+			]
+		]
+	}
+}

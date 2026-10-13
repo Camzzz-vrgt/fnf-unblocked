@@ -1,0 +1,47 @@
+{
+	"song": {
+		"song": "Satanic-Funkin",
+		"notes": [],
+		"events": [
+			[
+				-900,
+				[
+					[
+						"Play Animation",
+						"start",
+						"dad"
+					]
+				]
+			],
+			[
+				2000,
+				[
+					[
+						"Change Character",
+						"dad",
+						"devil"
+					]
+				]
+			],
+						[
+				8000,
+				[
+					[
+						"grunt",
+						"fisher",
+						"false"
+					]
+				]
+			]
+		],
+		"bpm": 180,
+		"needsVoices": true,
+		"speed": 2.7,
+		"player1": "bf-devil",
+		"player2": "devil",
+		"player3": null,
+		"gfVersion": "gf",
+		"stage": "satanic",
+		"validScore": false
+	}
+}

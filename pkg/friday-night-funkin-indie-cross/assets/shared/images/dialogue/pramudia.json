@@ -1,0 +1,63 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		2,
+		130
+	],
+	"scale": 1.8,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Idle",
+			"idle_name": "Idle"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "excited",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Idle",
+			"idle_name": "Idle"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "pissed",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Idle",
+			"idle_name": "Idle"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "shocked",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Idle",
+			"idle_name": "Idle"
+		}
+	],
+	"image": "P_Dialogue"
+}

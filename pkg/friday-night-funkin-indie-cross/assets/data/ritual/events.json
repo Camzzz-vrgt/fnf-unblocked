@@ -1,0 +1,67 @@
+{
+	"song": {
+		"song": "Ritual",
+		"notes": [],
+		"events": [
+			[
+				0,
+				[
+					[
+						"Play Animation",
+						"start",
+						"dad"
+					]
+				]
+			],
+			[
+				4800,
+				[
+					[
+						"blackbendy",
+						"",
+						""
+					]
+				]
+			],
+			[
+				63000,
+				[
+					[
+						"cutouts",
+						"bendy",
+						""
+					]
+				]
+			],
+			[
+				95250,
+				[
+					[
+						"cutouts",
+						"bendy2",
+						""
+					]
+				]
+			],
+			[
+				118500,
+				[
+					[
+						"haxe",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"bpm": 160,
+		"needsVoices": true,
+		"speed": 2.7,
+		"player1": "bf-sammy",
+		"player2": "bendy-sammy",
+		"player3": null,
+		"gfVersion": "gf",
+		"stage": "samStage",
+		"validScore": false
+	}
+}

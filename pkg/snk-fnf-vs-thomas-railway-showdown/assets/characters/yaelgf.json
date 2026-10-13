@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/deviant/yael gf",
+	"position": [
+		90,
+		260
+	],
+	"healthicon": "yael",
+	"flip_x": false,
+	"healthbar_colors": [
+		238,
+		40,
+		0
+	],
+	"camera_position": [
+		-120,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}
