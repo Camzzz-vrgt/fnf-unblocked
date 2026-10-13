@@ -1,0 +1,40 @@
+{
+	"storyName": "Midnight Dweller",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "dave",
+	"weekBefore": "rival3",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Heist",
+			"dave",
+			[
+				71,
+				71,
+				91
+			]
+		],
+		[
+			"Negligence",
+			"dave",
+			[
+				71,
+				71,
+				91
+			]
+		]
+	],
+	"weekCharacters": [
+		"daveMENU",
+		"bf_hen",
+		"gf_hen"
+	],
+	"weekName": "Dave Week"
+}

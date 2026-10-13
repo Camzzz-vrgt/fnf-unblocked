@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "henry idle"
+		},
+		{
+			"offsets": [
+				70,
+				31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "henry left"
+		},
+		{
+			"offsets": [
+				-160,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "henry right"
+		},
+		{
+			"offsets": [
+				91,
+				-114
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "henry down"
+		},
+		{
+			"offsets": [
+				64,
+				156
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "henry up"
+		},
+		{
+			"offsets": [
+				222,
+				42
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "henry miss left"
+		},
+		{
+			"offsets": [
+				-63,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "henry miss right"
+		},
+		{
+			"offsets": [
+				90,
+				144
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "henry miss up"
+		},
+		{
+			"offsets": [
+				127,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "henry miss down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/henryCyborg",
+	"position": [
+		-20,
+		30
+	],
+	"healthicon": "henryCyborg",
+	"flip_x": false,
+	"healthbar_colors": [
+		246,
+		246,
+		246
+	],
+	"camera_position": [
+		-200,
+		50
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}

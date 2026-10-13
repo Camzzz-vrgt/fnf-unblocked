@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				28
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "charles alt 2 idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				117,
+				51
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "charles alt 2 left"
+		},
+		{
+			"offsets": [
+				28,
+				101
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "charles alt 2 right"
+		},
+		{
+			"offsets": [
+				18,
+				102
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "charles alt 2 up"
+		},
+		{
+			"offsets": [
+				44,
+				114
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "charles alt 2 down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/charlesHelicopterALT",
+	"position": [
+		0,
+		250
+	],
+	"healthicon": "charles",
+	"flip_x": false,
+	"healthbar_colors": [
+		230,
+		64,
+		67
+	],
+	"camera_position": [
+		-50,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

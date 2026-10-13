@@ -1,0 +1,102 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		20,
+		-50
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "a",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF A0000",
+			"loop_name": "week2BF A"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "b",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF B0000",
+			"loop_name": "week2BF B"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "c",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF C0000",
+			"loop_name": "week2BF C"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "d",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF D0000",
+			"loop_name": "week2BF D"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "e",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF E0000",
+			"loop_name": "week2BF E"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "f",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF F0000",
+			"loop_name": "week2BF F"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "g",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week2BF G0000",
+			"loop_name": "week2BF G"
+		}
+	],
+	"image": "week2BF"
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "hey"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "burst",
+			"indices": [],
+			"name": "burst"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/week3Nene",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "nene",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		83,
+		161
+	],
+	"camera_position": [
+		-90,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

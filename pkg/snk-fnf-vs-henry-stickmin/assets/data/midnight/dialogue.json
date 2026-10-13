@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"expression": "annoyed",
+			"text": "...ugh.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.04,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "beep booo bra skdoo papa",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "mad",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "Come on, just one more! It's only been 15 songs so far!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "a",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "confused",
+			"text": "...just one more. Then we'll leave you alone, right, Boyfriend?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "beeeeeeeeeeeep-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "demon",
+			"text": "...right, Boyfriend?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.07,
+			"portrait": "gf"
+		},
+		{
+			"expression": "shocked",
+			"text": "beep beep beep beep BEEP-",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.025,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Good! Start the next song!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "annoyed",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "mic mad",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.07,
+			"portrait": "henry"
+		}
+	]
+}

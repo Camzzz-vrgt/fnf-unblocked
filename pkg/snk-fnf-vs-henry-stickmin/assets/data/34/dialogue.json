@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"expression": "happy",
+			"text": "Not bad, not bad! You certainly did better than what I was expecting.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie"
+		},
+		{
+			"expression": "excited",
+			"text": "skredp bop beep!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "...that was the weirdest beat of the century.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry",
+			"boxState": "normal",
+			"expression": "a",
+			"text": "..."
+		},
+		{
+			"expression": "talk",
+			"text": "What do you say about another round?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie"
+		},
+		{
+			"expression": "shrug",
+			"text": "After all, this Charles guy is sure taking his time to get here...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie",
+			"boxState": "normal",
+			"expression": "look back",
+			"text": "You sure he's even coming, Henry?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry",
+			"boxState": "normal",
+			"expression": "annoyed",
+			"text": "..."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Well, whatever. Wanna go again?"
+		},
+		{
+			"expression": "pissed",
+			"text": "bap!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "neutral",
+			"text": "Guess we'll do another, then.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie"
+		},
+		{
+			"expression": "smug",
+			"text": "And I know a good one.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "ellie"
+		}
+	]
+}

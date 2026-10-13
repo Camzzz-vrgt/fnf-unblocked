@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "charles idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				104,
+				43
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "charles left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-176,
+				-28
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "charles right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				172
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "charles up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				59
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "charles down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				51
+			],
+			"anim": "cutscene",
+			"fps": 24,
+			"name": "charles cutscene",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				241
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "charles ready up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/charlesB",
+	"position": [
+		-50,
+		0
+	],
+	"healthicon": "charlesBsides",
+	"flip_x": false,
+	"healthbar_colors": [
+		116,
+		201,
+		93
+	],
+	"camera_position": [
+		-150,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

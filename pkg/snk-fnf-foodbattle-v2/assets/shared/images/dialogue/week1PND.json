@@ -1,0 +1,37 @@
+{
+	"position": [
+		85,
+		-10
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "week1PND",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "b",
+			"idle_name": "b0000",
+			"loop_name": "b"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "a",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "a",
+			"idle_name": "a0000"
+		}
+	]
+}

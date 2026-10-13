@@ -1,0 +1,76 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		100,
+		-10
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"loop_name": "dave talk0",
+			"idle_offsets": [
+				-14,
+				-17
+			],
+			"idle_name": "dave talk copy",
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "dave confused0",
+			"idle_offsets": [
+				-14,
+				-15
+			],
+			"idle_name": "dave confused copy",
+			"anim": "confused",
+			"loop_offsets": [
+				-14,
+				-11
+			]
+		},
+		{
+			"loop_name": "dave annoyed",
+			"idle_offsets": [
+				8,
+				-7
+			],
+			"idle_name": "dave annoyed",
+			"anim": "annoyed",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "dave scared0",
+			"idle_offsets": [
+				68,
+				0
+			],
+			"idle_name": "dave scared copy",
+			"anim": "scared",
+			"loop_offsets": [
+				102,
+				0
+			]
+		},
+		{
+			"loop_name": "dave sigh0",
+			"idle_offsets": [
+				-31,
+				1
+			],
+			"idle_name": "dave sigh copy",
+			"anim": "sigh",
+			"loop_offsets": [
+				-31,
+				3
+			]
+		}
+	],
+	"image": "dave"
+}

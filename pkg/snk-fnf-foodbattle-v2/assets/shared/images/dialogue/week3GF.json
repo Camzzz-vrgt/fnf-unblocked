@@ -1,0 +1,50 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		140,
+		-20
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "a",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week3GF A0000",
+			"loop_name": "week3GF A"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "b",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week3GF B0000",
+			"loop_name": "week3GF B"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "c",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "week3GF C0000",
+			"loop_name": "week3GF C"
+		}
+	],
+	"image": "week3GF"
+}

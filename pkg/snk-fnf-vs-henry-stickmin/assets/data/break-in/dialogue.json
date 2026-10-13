@@ -1,0 +1,148 @@
+{
+	"dialogue": [
+		{
+			"expression": "thinking",
+			"text": "...",
+			"boxState": "normal",
+			"portrait": "henry",
+			"speed": 0.08,
+			"sound": ""
+		},
+		{
+			"expression": "talk",
+			"text": "beep!",
+			"boxState": "normal",
+			"portrait": "bf",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "shocked",
+			"text": "!!!",
+			"boxState": "angry",
+			"portrait": "henry",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "peep right",
+			"text": "",
+			"boxState": "normal",
+			"portrait": "henry",
+			"speed": 0.05,
+			"sound": ""
+		},
+		{
+			"expression": "relieved",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "Hello!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "confused",
+			"text": "..?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "We're Boyfriend and Girlfriend!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "talk",
+			"text": "beep boop bap skrdop",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "beg 1",
+			"text": "a-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "BEEP!",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "annoyed",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "He says he challenges you to a rap battle.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "nervous",
+			"text": "?!",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "If you win, we'll leave you alone.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "pissed",
+			"text": "bah bpt b",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "idle",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "smug",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		}
+	]
+}

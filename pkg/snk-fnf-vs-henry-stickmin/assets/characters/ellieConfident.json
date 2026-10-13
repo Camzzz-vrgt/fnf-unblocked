@@ -1,0 +1,94 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				62,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ellie left"
+		},
+		{
+			"offsets": [
+				-117,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "ellie right"
+		},
+		{
+			"offsets": [
+				-60,
+				128
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "ellie up"
+		},
+		{
+			"offsets": [
+				149,
+				-121
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ellie down"
+		},
+		{
+			"offsets": [
+				73,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ellie alt idle"
+		},
+		{
+			"offsets": [
+				73,
+				12
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "ellie alt idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ellie",
+	"position": [
+		-150,
+		-20
+	],
+	"healthicon": "ellie",
+	"flip_x": false,
+	"healthbar_colors": [
+		228,
+		13,
+		56
+	],
+	"camera_position": [
+		-50,
+		10
+	],
+	"sing_duration": 7,
+	"scale": 1
+}

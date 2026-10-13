@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "gf idle right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				52,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "gf idle left"
+		},
+		{
+			"offsets": [
+				81,
+				-11
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sad",
+			"loop": false,
+			"name": "gf grunt"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gfOld",
+	"position": [
+		100,
+		100
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-100,
+		100
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 1
+}

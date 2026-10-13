@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "old henry idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				6
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "old henry right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				131,
+				57
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "old henry left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-56,
+				-41
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "old henry down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				55,
+				137
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "old henry up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/oldhenry",
+	"position": [
+		130,
+		150
+	],
+	"healthicon": "oldhenry",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 0.95
+}

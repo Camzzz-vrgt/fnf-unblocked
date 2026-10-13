@@ -1,0 +1,37 @@
+{
+	"position": [
+		85,
+		-10
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "pnd",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "pnd",
+			"idle_name": "pnd",
+			"loop_name": "pnd0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "nd",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "nd0000",
+			"idle_name": "nd"
+		}
+	]
+}

@@ -1,0 +1,154 @@
+local allowCountdown = false
+function onStartCountdown()
+	-- Block the first countdown and start a timer of 0.8 seconds to play the dialogue
+	if not allowCountdown and isStoryMode and not seenCutscene then
+		setProperty('inCutscene', true);
+		runTimer('startDialogue', 0.8);
+		allowCountdown = true;
+		return Function_Stop;
+	end
+	return Function_Continue;
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+	if tag == 'startDialogue' then -- Timer completed, play dialogue
+		startDialogue('dialogue', 'henryDialogue');
+	end
+end
+
+-- Dialogue (When a dialogue is finished, it calls startCountdown again)
+function onNextDialogue(count)
+	-- triggered when the next dialogue line starts, 'line' starts with 1
+end
+
+function onSkipDialogue(count)
+	-- triggered when you press Enter and skip a dialogue line that was still being typed, dialogue line starts with 1
+end
+
+function onCreatePost()
+
+doTweenZoom('zoomin', 'camGame', 1, 1, 'cubeInOut')
+setProperty('cameraSpeed', 2)
+end
+
+function onCreate()
+	setPropertyFromClass('GameOverSubstate', 'characterName', 'bf-dead'); 
+	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'fnf_loss_sfx'); 
+	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'henry_game_over_theme');
+	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'HenryWeekRetry');
+    setPropertyFromClass("openfl.Lib", "application.window.title", "Friday Night Funkin' Vs Henry Stickmin - [Vault Smash]")
+
+    makeLuaSprite('overlayshit', 'overlayshit', -830, -900);
+    setProperty('overlayshit.alpha', 0.5);
+    setObjectCamera('overlayshit', 'game')
+    addLuaSprite('overlayshit', true);
+
+    makeLuaSprite('white', '', -200, -170);
+	makeGraphic('white', 2340, 1890, 'FFFFFF')
+	setProperty('white.alpha', 0);
+	addLuaSprite('white', true);
+
+
+end
+
+local FG_ColorOne = 'EDEDED' 
+local FG_ColorTwo = '3CC4DB'
+
+local xx = 0;
+local yy = 0;
+
+local ofs = 28;
+
+function string.starts(String, Start)
+    return string.sub(String, 1, string.len(Start)) == Start
+end
+
+function getCharacterCamPos(char)
+    local x = getMidpointX(char)
+    local y = getMidpointY(char)
+
+    if char == 'dad' then
+        x = 650
+        y = 390
+    elseif char == 'boyfriend' then
+        x = 890
+        y = 510
+    end
+
+    -- idk, this is just magic!!!!
+    local gayX = getProperty('camFollow.x')
+    local gayY = getProperty('camFollow.y')
+    if not gayX == x then x = x + gayX - x end
+    if not gayY == x then y = y + gayY - y end
+
+    return x, y
+end
+
+function onUpdate()
+    if not inGameOver then
+        if mustHitSection then
+            if gfSection then
+                check('gf')
+            else
+                check('boyfriend')
+            end
+        else
+            check('dad')
+        end
+    end
+end
+
+function check(char)
+    if not getProperty(char .. '.stunned') then
+        local name = getProperty(char .. '.animation.curAnim.name');
+        xx, yy = getCharacterCamPos(char)
+
+        if string.starts(name, 'singLEFT') then
+            triggerEvent('Camera Follow Pos', xx - ofs, yy)
+        elseif string.starts(name, 'singRIGHT') then
+            triggerEvent('Camera Follow Pos', xx + ofs, yy)
+        elseif string.starts(name, 'singUP') then
+            triggerEvent('Camera Follow Pos', xx, yy - ofs)
+        elseif string.starts(name, 'singDOWN') then
+            triggerEvent('Camera Follow Pos', xx, yy + ofs)
+        elseif string.starts(name, 'idle') then
+            triggerEvent('Camera Follow Pos', xx, yy)
+        end
+    end
+end
+
+local BarColorState = 1
+function onBeatHit()
+	ColorArray={FG_ColorTwo, FG_ColorTwo, FG_ColorOne, FG_ColorOne}
+	BarColorState = BarColorState+1
+	
+	if BarColorState > 4 then
+		BarColorState=1
+	end
+	
+	setProperty('timeBar.color', getColorFromHex(ColorArray[BarColorState]))
+	
+
+if getProperty('curBeat') == 36 then
+setProperty('defaultCamZoom', 0.8)
+end
+
+if getProperty('curBeat') == 100 then
+setProperty('defaultCamZoom', 0.7)
+end
+
+if getProperty('curBeat') == 136 then
+setProperty('defaultCamZoom', 0.9)
+setProperty('cameraSpeed', 3)
+end
+
+if getProperty('curBeat') == 146 then
+setProperty('defaultCamZoom', 0.8)
+setProperty('cameraSpeed', 2)
+end
+
+if getProperty('curBeat') == 164 then
+setProperty('defaultCamZoom', 0.7)
+setProperty('cameraSpeed', 2)
+end
+end

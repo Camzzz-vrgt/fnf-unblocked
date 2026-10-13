@@ -1,0 +1,63 @@
+{
+	"position": [
+		130,
+		-20
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "week1Nene",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "c",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "c",
+			"idle_name": "c0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "b",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "b",
+			"idle_name": "b0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "a",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "a",
+			"idle_name": "a0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "d",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "d",
+			"idle_name": "d0000"
+		}
+	]
+}

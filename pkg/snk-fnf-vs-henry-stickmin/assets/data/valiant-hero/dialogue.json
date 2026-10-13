@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+        {
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "charles",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "...hey dude, what do you think you're doing?"
+		},
+		{
+			"expression": "talk",
+			"text": "xd",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "...you wanna sing on the helicopter door?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "charles"
+		},
+		{
+			"expression": "pissed",
+			"text": "bee shooboo bop",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "oh ok",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "charles"
+		},
+		{
+			"expression": "talking",
+			"text": "Well, looks like you've got yourselves a front row seat for my greatest plan yet!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "charles"
+		},
+		{
+			"expression": "confident",
+			"text": "Let's do this! Final round!",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "charles"
+		},
+		{
+			"expression": "pissed",
+			"text": "BOP BAP!",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

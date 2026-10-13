@@ -1,0 +1,115 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		60,
+		-40
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"loop_name": "happy0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "happy copy",
+			"anim": "happy",
+			"loop_offsets": [
+				11,
+				3
+			]
+		},
+		{
+			"loop_name": "huh0",
+			"idle_offsets": [
+				-17,
+				-8
+			],
+			"idle_name": "huh copy",
+			"anim": "huh",
+			"loop_offsets": [
+				-9,
+				-8
+			]
+		},
+		{
+			"loop_name": "look back0",
+			"idle_offsets": [
+				-64,
+				4
+			],
+			"idle_name": "look back copy",
+			"anim": "look back",
+			"loop_offsets": [
+				-60,
+				7
+			]
+		},
+		{
+			"loop_name": "neutral",
+			"idle_offsets": [
+				-66,
+				-3
+			],
+			"idle_name": "neutral",
+			"anim": "neutral",
+			"loop_offsets": [
+				-66,
+				-3
+			]
+		},
+		{
+			"loop_name": "point0",
+			"idle_offsets": [
+				32,
+				9
+			],
+			"idle_name": "point copy",
+			"anim": "point",
+			"loop_offsets": [
+				32,
+				12
+			]
+		},
+		{
+			"loop_name": "shrug0",
+			"idle_offsets": [
+				32,
+				2
+			],
+			"idle_name": "shrug copy",
+			"anim": "shrug",
+			"loop_offsets": [
+				35,
+				2
+			]
+		},
+		{
+			"loop_name": "smug0",
+			"idle_offsets": [
+				-4,
+				-23
+			],
+			"idle_name": "smug copy",
+			"anim": "smug",
+			"loop_offsets": [
+				1,
+				-14
+			]
+		},
+		{
+			"loop_name": "talk0",
+			"idle_offsets": [
+				-74,
+				1
+			],
+			"idle_name": "talk copy",
+			"anim": "talk",
+			"loop_offsets": [
+				-59,
+				1
+			]
+		}
+	],
+	"image": "ellie"
+}

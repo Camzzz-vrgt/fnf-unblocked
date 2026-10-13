@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"expression": "mad",
+			"text": "*mic drop*",
+			"boxState": "angry",
+			"sound": "",
+			"speed": 0.025,
+			"portrait": "henry"
+		},
+		{
+			"expression": "confused",
+			"text": "beeeeeeeeeep...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "...he wants more.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "beg 1",
+			"text": "wha-",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "Don't worry, we've got a policy against singing against someone's will.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "a",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "beg 1",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "beg 2",
+			"text": "",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"expression": "talk",
+			"text": "We swear on my father's life it's the last one.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "pissed",
+			"text": "beep bap!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "confused",
+			"text": "...",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "henry",
+			"boxState": "angry",
+			"expression": "confident",
+			"text": "!!!"
+		}
+	]
+}

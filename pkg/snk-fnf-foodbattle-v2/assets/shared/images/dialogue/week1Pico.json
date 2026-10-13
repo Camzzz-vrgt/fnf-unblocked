@@ -1,0 +1,63 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		0,
+		-10
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "c",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "c0000",
+			"loop_name": "c"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "b",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "b0000",
+			"loop_name": "b"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "a",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "a0000",
+			"loop_name": "a"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "d",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "d0000",
+			"loop_name": "d"
+		}
+	],
+	"image": "week1Pico"
+}

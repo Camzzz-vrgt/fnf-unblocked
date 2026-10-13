@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "charles idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				280,
+				34
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "charles left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				49,
+				-8
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "charles right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				157
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "charles up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				104,
+				-116
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "charles down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				120,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "charles yeah"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/charles",
+	"position": [
+		50,
+		-50
+	],
+	"healthicon": "charles",
+	"flip_x": false,
+	"healthbar_colors": [
+		230,
+		64,
+		67
+	],
+	"camera_position": [
+		-150,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

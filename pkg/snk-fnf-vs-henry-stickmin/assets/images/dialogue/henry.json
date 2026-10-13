@@ -1,0 +1,220 @@
+{
+	"position": [
+		150,
+		0
+	],
+	"dialogue_pos": "left",
+	"no_antialiasing": false,
+	"scale": 1.25,
+	"image": "henry",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "henry idle",
+			"idle_name": "henry idle"
+		},
+		{
+			"idle_offsets": [
+				-20,
+				0
+			],
+			"anim": "mad",
+			"loop_offsets": [
+				-10,
+				0
+			],
+			"idle_name": "henry MAD loop",
+			"loop_name": "henry MAD0"
+		},
+		{
+			"loop_offsets": [
+				1,
+				-15
+			],
+			"anim": "a",
+			"idle_offsets": [
+				1,
+				-15
+			],
+			"loop_name": "henry a0",
+			"idle_name": "henry a loop"
+		},
+		{
+			"loop_offsets": [
+				-18,
+				0
+			],
+			"anim": "annoyed",
+			"idle_offsets": [
+				-22,
+				0
+			],
+			"loop_name": "henry annoyed0",
+			"idle_name": "henry annoyed loop"
+		},
+		{
+			"loop_offsets": [
+				70,
+				12
+			],
+			"anim": "beg 1",
+			"idle_offsets": [
+				68,
+				11
+			],
+			"loop_name": "henry beg 10",
+			"idle_name": "henry beg 1 loop"
+		},
+		{
+			"loop_offsets": [
+				63,
+				5
+			],
+			"anim": "beg 2",
+			"idle_offsets": [
+				63,
+				5
+			],
+			"loop_name": "henry beg 20",
+			"idle_name": "henry beg 2 loop"
+		},
+		{
+			"loop_offsets": [
+				51,
+				10
+			],
+			"anim": "nervous",
+			"idle_offsets": [
+				43,
+				6
+			],
+			"loop_name": "henry nervous0",
+			"idle_name": "henry nervous loop"
+		},
+		{
+			"loop_offsets": [
+				40,
+				9
+			],
+			"anim": "confused",
+			"idle_offsets": [
+				34,
+				2
+			],
+			"loop_name": "henry confused0",
+			"idle_name": "henry confused loop"
+		},
+		{
+			"loop_offsets": [
+				-20,
+				0
+			],
+			"anim": "mic mad",
+			"idle_offsets": [
+				-20,
+				0
+			],
+			"loop_name": "henry mic mad",
+			"idle_name": "henry mic mad"
+		},
+		{
+			"loop_offsets": [
+				-8,
+				5
+			],
+			"anim": "peep right",
+			"idle_offsets": [
+				-8,
+				1
+			],
+			"loop_name": "henry peep right0",
+			"idle_name": "henry peep right loop"
+		},
+		{
+			"loop_offsets": [
+				-18,
+				-12
+			],
+			"anim": "relieved",
+			"idle_offsets": [
+				-18,
+				-12
+			],
+			"loop_name": "henry relieved0",
+			"idle_name": "henry relieved loop"
+		},
+		{
+			"loop_offsets": [
+				-1,
+				-3
+			],
+			"anim": "shocked",
+			"idle_offsets": [
+				-15,
+				-3
+			],
+			"loop_name": "henry shocked0",
+			"idle_name": "henry shocked loop"
+		},
+		{
+			"loop_offsets": [
+				8,
+				21
+			],
+			"anim": "smile",
+			"idle_offsets": [
+				5,
+				16
+			],
+			"loop_name": "henry smile0",
+			"idle_name": "henry smile loop"
+		},
+		{
+			"loop_offsets": [
+				-40,
+				-7
+			],
+			"anim": "thinking",
+			"idle_offsets": [
+				-40,
+				-7
+			],
+			"loop_name": "henry thinking",
+			"idle_name": "henry thinking"
+		},
+		{
+			"loop_offsets": [
+				9,
+				2
+			],
+			"anim": "smug",
+			"idle_offsets": [
+				-3,
+				-4
+			],
+			"loop_name": "henry smug0",
+			"idle_name": "henry smug loop"
+		},
+		{
+			"idle_offsets": [
+				14,
+				-1
+			],
+			"anim": "confident",
+			"loop_offsets": [
+				14,
+				0
+			],
+			"idle_name": "henry confident loop",
+			"loop_name": "henry confident0"
+		}
+	]
+}

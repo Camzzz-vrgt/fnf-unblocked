@@ -1,0 +1,37 @@
+{
+	"position": [
+		60,
+		-10
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "darnell",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "talk",
+			"loop_name": "talk0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "anger",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "anger0000",
+			"idle_name": "anger"
+		}
+	]
+}
