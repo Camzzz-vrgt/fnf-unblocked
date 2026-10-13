@@ -1,0 +1,71 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				10,
+				320
+			],
+			"cameraOffset": [
+				30,
+				0
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "revive"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59
+			],
+			"fps": 18,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "death"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "death"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/default-death",
+	"position": [
+		-1110,
+		80
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		75,
+		127,
+		198
+	],
+	"camera_position": [
+		-160,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 0.799999999999999
+}

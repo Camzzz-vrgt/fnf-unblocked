@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tankmen.png" width="8192" height="4096">
+  <SubTexture name="men0001" x="2" y="2" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0002" x="2" y="1194" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0007" x="2" y="2386" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0008" x="922" y="2" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0009" x="922" y="1194" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0010" x="922" y="2386" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0011" x="1842" y="2" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0012" x="1842" y="1194" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0013" x="1842" y="2386" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0014" x="2762" y="2" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0015" x="2762" y="1194" width="916" height="1188" rotated="true"  frameX="-732" frameY="-164" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0005" x="2762" y="2386" width="915" height="1188" rotated="true"  frameX="-732" frameY="-165" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0006" x="3681" y="2386" width="915" height="1188" rotated="true"  frameX="-732" frameY="-165" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0003" x="3682" y="2" width="914" height="1188" rotated="true"  frameX="-732" frameY="-166" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="men0004" x="3682" y="1194" width="914" height="1188" rotated="true"  frameX="-732" frameY="-166" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>

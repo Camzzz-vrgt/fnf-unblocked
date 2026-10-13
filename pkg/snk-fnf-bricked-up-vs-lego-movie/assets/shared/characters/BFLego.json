@@ -1,0 +1,129 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-20,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "LegoBFIdle"
+		},
+		{
+			"offsets": [
+				38,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "LegoBFDown"
+		},
+		{
+			"offsets": [
+				-13,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LegoBFLeft"
+		},
+		{
+			"offsets": [
+				-38,
+				17
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LegoBFRight"
+		},
+		{
+			"offsets": [
+				-38,
+				32
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "LegoBFUp"
+		},
+		{
+			"offsets": [
+				-39,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "LegoUpMiss"
+		},
+		{
+			"offsets": [
+				-13,
+				32
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "LegoLeftMiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				37,
+				18
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "LegoDownMiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-39,
+				19
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "LegoMissRight",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BFLego",
+	"position": [
+		70,
+		60
+	],
+	"dance_every": 2,
+	"gameover_intial_sound": null,
+	"scalableOffsets": false,
+	"gameover_confirm_sound": null,
+	"healthicon": "bf",
+	"gameover_character": null,
+	"flip_x": true,
+	"healthbar_colors": [
+		41,
+		150,
+		192
+	],
+	"camera_position": [
+		0,
+		30
+	],
+	"gameover_loop_sound": null,
+	"sing_duration": 6.1,
+	"scale": 0.7,
+	"_editor_isPlayer": true
+}

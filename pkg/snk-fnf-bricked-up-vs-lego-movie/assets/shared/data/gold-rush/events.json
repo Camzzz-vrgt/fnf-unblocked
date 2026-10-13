@@ -1,0 +1,36 @@
+{
+	"song": {
+		"events": [
+			[
+				480,
+				[
+					[
+						"Camera Flash",
+						"ffffff",
+						".5"
+					]
+				]
+			],
+			[
+				47520,
+				[
+					[
+						"Change Character",
+						"bf",
+						"legoEvan"
+					],
+					[
+						"Play Animation",
+						"what",
+						"bf"
+					],
+					[
+						"Camera Flash",
+						"ffffff",
+						".5"
+					]
+				]
+			]
+		]
+	}
+}

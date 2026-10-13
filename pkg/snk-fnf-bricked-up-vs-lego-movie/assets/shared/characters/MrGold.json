@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MrGold Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-117
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MrGold Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				-73
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MrGold Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				109,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MrGold Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				-30
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MrGold Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MrGold",
+	"position": [
+		-200,
+		-270
+	],
+	"healthicon": "gold",
+	"flip_x": false,
+	"healthbar_colors": [
+		241,
+		174,
+		88
+	],
+	"camera_position": [
+		-100,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

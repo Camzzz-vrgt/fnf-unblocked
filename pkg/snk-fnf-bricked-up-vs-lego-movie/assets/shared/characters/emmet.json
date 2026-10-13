@@ -1,0 +1,129 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				258,
+				165
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "EmmetRight"
+		},
+		{
+			"offsets": [
+				190,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "EmmetLeft"
+		},
+		{
+			"offsets": [
+				148,
+				168
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "EmmetDown"
+		},
+		{
+			"offsets": [
+				238,
+				172
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "EmmetUp"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				160
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "EmmetRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				190,
+				170
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "EmmetLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				149,
+				170
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "EmmetDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				240,
+				171
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "EmmetUp",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				218,
+				168
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "EmmetIdle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/EmmetOP",
+	"position": [
+		-100,
+		50
+	],
+	"dance_every": 2,
+	"gameover_intial_sound": null,
+	"scalableOffsets": false,
+	"gameover_confirm_sound": null,
+	"healthicon": "emmet",
+	"gameover_character": null,
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		80,
+		1
+	],
+	"camera_position": [
+		40,
+		-30
+	],
+	"gameover_loop_sound": null,
+	"sing_duration": 6.1,
+	"scale": 0.7,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<title>FNF : Doors</title>
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<script type="text/javascript" src="./FNFDoors.js?03"></script>
+	<link rel="canonical" href="https://www.snokido.com/game/fnf-doors-floor-1" />
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+		function preventScroll(e){
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+		}
+		window.addEventListener("keydown", function(e) {if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {e.preventDefault(); }}, false);
+		window.addEventListener('wheel', preventScroll, {passive: false});
+	</script>
+	
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: 'Bad Script Regular';
+			src: url('assets/fonts/BobsBackup.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/BobsBackup.woff') format('woff'),
+			url('assets/fonts/BobsBackup.ttf') format('truetype'),
+			url('assets/fonts/BobsBackup.svg#Bad%20Script%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Comforter Brush Regular';
+			src: url('assets/fonts/BobsBook.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/BobsBook.woff') format('woff'),
+			url('assets/fonts/BobsBook.ttf') format('truetype'),
+			url('assets/fonts/BobsBook.svg#Comforter%20Brush%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Do0rness Regular';
+			src: url('assets/fonts/Doors.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Doors.woff') format('woff'),
+			url('assets/fonts/Doors.otf') format('truetype'),
+			url('assets/fonts/Doors.svg#Do0rness%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Do0rness Regular';
+			src: url('assets/fonts/Doors.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Doors.woff') format('woff'),
+			url('assets/fonts/Doors.ttf') format('truetype'),
+			url('assets/fonts/Doors.svg#Do0rness%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pah';
+			src: url('assets/fonts/Muff.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Muff.woff') format('woff'),
+			url('assets/fonts/Muff.otf') format('truetype'),
+			url('assets/fonts/Muff.svg#Pah') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pah';
+			src: url('assets/fonts/Muff.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Muff.woff') format('woff'),
+			url('assets/fonts/Muff.ttf') format('truetype'),
+			url('assets/fonts/Muff.svg#Pah') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Sans TC Medium';
+			src: url('assets/fonts/noto-chinese-medium.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/noto-chinese-medium.woff') format('woff'),
+			url('assets/fonts/noto-chinese-medium.ttf') format('truetype'),
+			url('assets/fonts/noto-chinese-medium.svg#Noto%20Sans%20TC%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Sans SC Regular';
+			src: url('assets/fonts/noto-chinese.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/noto-chinese.woff') format('woff'),
+			url('assets/fonts/noto-chinese.ttf') format('truetype'),
+			url('assets/fonts/noto-chinese.svg#Noto%20Sans%20SC%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Sans Georgian SemiBold';
+			src: url('assets/fonts/noto.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/noto.woff') format('woff'),
+			url('assets/fonts/noto.ttf') format('truetype'),
+			url('assets/fonts/noto.svg#Noto%20Sans%20Georgian%20SemiBold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Sans KR Medium';
+			src: url('assets/fonts/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/NotoSansKR-Medium.woff') format('woff'),
+			url('assets/fonts/NotoSansKR-Medium.ttf') format('truetype'),
+			url('assets/fonts/NotoSansKR-Medium.svg#Noto%20Sans%20KR%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Noto Sans KR Regular';
+			src: url('assets/fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/NotoSansKR-Regular.woff') format('woff'),
+			url('assets/fonts/NotoSansKR-Regular.ttf') format('truetype'),
+			url('assets/fonts/NotoSansKR-Regular.svg#Noto%20Sans%20KR%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Oswald Medium';
+			src: url('assets/fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Oswald-Medium.woff') format('woff'),
+			url('assets/fonts/Oswald-Medium.otf') format('truetype'),
+			url('assets/fonts/Oswald-Medium.svg#Oswald%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Oswald Medium';
+			src: url('assets/fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Oswald-Medium.woff') format('woff'),
+			url('assets/fonts/Oswald-Medium.ttf') format('truetype'),
+			url('assets/fonts/Oswald-Medium.svg#Oswald%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Oswald Regular';
+			src: url('assets/fonts/Oswald.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Oswald.woff') format('woff'),
+			url('assets/fonts/Oswald.otf') format('truetype'),
+			url('assets/fonts/Oswald.svg#Oswald%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Oswald Regular';
+			src: url('assets/fonts/Oswald.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Oswald.woff') format('woff'),
+			url('assets/fonts/Oswald.ttf') format('truetype'),
+			url('assets/fonts/Oswald.svg#Oswald%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pixel Arial 11 Bold';
+			src: url('assets/fonts/pixel.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/pixel.woff') format('woff'),
+			url('assets/fonts/pixel.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono';
+			src: url('assets/fonts/vcr.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr.woff') format('woff'),
+			url('assets/fonts/vcr.ttf') format('truetype'),
+			url('assets/fonts/vcr.svg#VCR%20OSD%20Mono') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('flixel/fonts/nokiafc22.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/nokiafc22.woff') format('woff'),
+			url('flixel/fonts/nokiafc22.ttf') format('truetype'),
+			url('flixel/fonts/nokiafc22.svg#Nokia%20Cellphone%20FC%20Small') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('flixel/fonts/monsterrat.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/monsterrat.woff') format('woff'),
+			url('flixel/fonts/monsterrat.ttf') format('truetype'),
+			url('flixel/fonts/monsterrat.svg#Monsterrat') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+	</style>
+	
+</head>
+<body>
+	
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
+	<div id="openfl-content"></div>
+	
+	<script type="text/javascript">
+		lime.embed ("FNF Doors", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+	
+
+</body>
+</html>

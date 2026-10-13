@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "anim1",
+			"fps": 24,
+			"name": "Ladder1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"cameraOffset": [
+				0,
+				0
+			],
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "anim2",
+			"fps": 24,
+			"name": "ladder2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Ladder1",
+			"indices": [
+				0,
+				0
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pico_Ladder",
+	"position": [
+		-270,
+		50
+	],
+	"healthicon": "pico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		65
+	],
+	"camera_position": [
+		-640,
+		340
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

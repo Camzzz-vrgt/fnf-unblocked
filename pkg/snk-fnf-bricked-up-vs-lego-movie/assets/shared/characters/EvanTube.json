@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "EVANTUBE_PNG Idle"
+		},
+		{
+			"offsets": [
+				-36,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "EVANTUBE_PNG Left"
+		},
+		{
+			"offsets": [
+				77,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "EVANTUBE_PNG Up"
+		},
+		{
+			"offsets": [
+				70,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "EVANTUBE_PNG Down"
+		},
+		{
+			"offsets": [
+				91,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "EVANTUBE_PNG Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/EVANTUBE_PNG",
+	"position": [
+		-720,
+		50
+	],
+	"healthicon": "evan",
+	"flip_x": true,
+	"healthbar_colors": [
+		180,
+		101,
+		255
+	],
+	"camera_position": [
+		-150,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

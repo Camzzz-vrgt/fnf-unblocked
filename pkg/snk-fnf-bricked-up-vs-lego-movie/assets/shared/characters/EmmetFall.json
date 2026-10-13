@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				218,
+				168
+			],
+			"anim": "Fall",
+			"fps": 24,
+			"name": "Fall",
+			"indices": []
+		},
+		{
+			"offsets": [
+				218,
+				168
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Fall"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/EmmetFall",
+	"position": [
+		-520,
+		50
+	],
+	"healthicon": "emmet",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		102,
+		206
+	],
+	"camera_position": [
+		-80,
+		70
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}
