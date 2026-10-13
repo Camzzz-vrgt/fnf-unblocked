@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				136,
+				197
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "DADDY dance",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Daddylake",
+	"position": [
+		340,
+		450
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-340,
+		-180
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

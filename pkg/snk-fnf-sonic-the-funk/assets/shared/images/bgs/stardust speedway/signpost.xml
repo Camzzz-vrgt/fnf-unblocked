@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="signpost.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="signpost future0000" x="2" y="2" width="273" height="499"/>
+	<SubTexture name="signpost past0000" x="277" y="2" width="273" height="499"/>
+	<SubTexture name="signpost spinning0000" x="552" y="2" width="177" height="506" frameX="-51" frameY="0" frameWidth="273" frameHeight="506"/>
+	<SubTexture name="signpost spinning0001" x="731" y="2" width="177" height="505" frameX="-51" frameY="-1" frameWidth="273" frameHeight="506"/>
+	<SubTexture name="signpost spinning0002" x="2" y="510" width="273" height="499" frameX="0" frameY="-7" frameWidth="273" frameHeight="506"/>
+	<SubTexture name="signpost spinning0003" x="277" y="510" width="177" height="505" frameX="-51" frameY="-1" frameWidth="273" frameHeight="506"/>
+</TextureAtlas>

@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mark idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				17,
+				61
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "mark down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				192
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mark up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				287
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "shitup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				85,
+				61
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "shitDown"
+		},
+		{
+			"offsets": [
+				-14,
+				123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "mark back"
+		},
+		{
+			"offsets": [
+				48,
+				123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "mark forward"
+		},
+		{
+			"offsets": [
+				243,
+				152
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "shitback"
+		},
+		{
+			"offsets": [
+				384,
+				168
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "shitforward"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/mark",
+	"position": [
+		0,
+		300
+	],
+	"healthicon": "mark",
+	"flip_x": true,
+	"healthbar_colors": [
+		151,
+		255,
+		7
+	],
+	"camera_position": [
+		-90,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

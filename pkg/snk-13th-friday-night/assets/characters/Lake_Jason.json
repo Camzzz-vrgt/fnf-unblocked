@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				-255
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				-143
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				-205
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "leftalt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-243
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rightalt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				7,
+				-167
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "idlealt",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Lake Jason",
+	"position": [
+		-350,
+		60
+	],
+	"healthicon": "lakej",
+	"flip_x": false,
+	"healthbar_colors": [
+		65,
+		83,
+		71
+	],
+	"camera_position": [
+		-10,
+		200
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

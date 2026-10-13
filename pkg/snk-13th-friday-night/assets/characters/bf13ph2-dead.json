@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				196,
+				730
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Death instance ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-121,
+				460
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "deathconfirm instance ",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-161,
+				98
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "deathloop instance ",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Silenced_and_Crushed",
+	"position": [
+		-690,
+		495
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		189
+	],
+	"camera_position": [
+		230,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 2,
+	"_editor_isPlayer": true
+}

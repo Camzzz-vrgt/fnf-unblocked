@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="bg.png" width="6346" height="6073">
+	<SubTexture name="signpost future0000.png" x="5977.299999999999" y="2347.7999999999997" width="349.29999999999995" height="191.1" rotated="true" frameX="-0" frameY="-0" frameWidth="191.1" frameHeight="349.29999999999995"/>
+	<SubTexture name="signpost past0000.png" x="5977.299999999999" y="2541" width="349.29999999999995" height="191.1" rotated="true" frameX="-0" frameY="-0" frameWidth="191.1" frameHeight="349.29999999999995"/>
+	<SubTexture name="signpost spinning0000.png" x="4391.799999999999" y="576.0999999999999" width="123.19999999999999" height="354.2" frameX="-35.699999999999996" frameY="-0" frameWidth="191.1" frameHeight="354.2"/>
+	<SubTexture name="signpost spinning0001.png" x="3399.2" y="5941.599999999999" width="353.5" height="123.19999999999999" rotated="true" frameX="-35.699999999999996" frameY="-0.7" frameWidth="191.1" frameHeight="354.2"/>
+	<SubTexture name="signpost spinning0002.png" x="5977.299999999999" y="2734.2" width="349.29999999999995" height="191.1" rotated="true" frameX="-0" frameY="-4.8999999999999995" frameWidth="191.1" frameHeight="354.2"/>
+	<SubTexture name="signpost spinning0003.png" x="4379.9" y="932.4" width="123.19999999999999" height="353.5" frameX="-35.699999999999996" frameY="-0.7" frameWidth="191.1" frameHeight="354.2"/>
+	<SubTexture name="amy happy0000.png" x="5977.299999999999" y="397.59999999999997" width="352.79999999999995" height="314.29999999999995" rotated="true" frameX="-10.5" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0001.png" x="5977.299999999999" y="714" width="352.79999999999995" height="317.79999999999995" rotated="true" frameX="-8.399999999999999" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0002.png" x="5977.299999999999" y="1033.8999999999999" width="352.79999999999995" height="328.29999999999995" rotated="true" frameX="-2.0999999999999996" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0003.png" x="5977.299999999999" y="2927.3999999999996" width="344.4" height="331.09999999999997" rotated="true" frameX="-0" frameY="-8.399999999999999" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0004.png" x="5958.4" y="3678.4999999999995" width="344.4" height="328.29999999999995" rotated="true" frameX="-2.0999999999999996" frameY="-8.399999999999999" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0005.png" x="5958.4" y="4008.8999999999996" width="344.4" height="317.79999999999995" rotated="true" frameX="-8.399999999999999" frameY="-8.399999999999999" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0006.png" x="5952.099999999999" y="4659.2" width="343.7" height="314.29999999999995" rotated="true" frameX="-10.5" frameY="-9.1" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0007.png" x="5866" y="4975.599999999999" width="343.7" height="317.79999999999995" rotated="true" frameX="-8.399999999999999" frameY="-9.1" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0008.png" x="5958.4" y="4328.799999999999" width="344.4" height="328.29999999999995" rotated="true" frameX="-2.0999999999999996" frameY="-8.399999999999999" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0009.png" x="5977.299999999999" y="1364.3" width="352.79999999999995" height="331.09999999999997" rotated="true" frameX="-0" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0010.png" x="5977.299999999999" y="1697.5" width="352.79999999999995" height="328.29999999999995" rotated="true" frameX="-2.0999999999999996" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy happy0011.png" x="5977.299999999999" y="2027.8999999999999" width="352.79999999999995" height="317.79999999999995" rotated="true" frameX="-8.399999999999999" frameY="-0" frameWidth="331.09999999999997" frameHeight="353.5"/>
+	<SubTexture name="amy hostage0000.png" x="5761.7" y="3397.7999999999997" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0001.png" x="5761.7" y="3397.7999999999997" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0002.png" x="5761.7" y="3397.7999999999997" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0003.png" x="3636.4999999999995" y="3854.2" width="170.1" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0004.png" x="3636.4999999999995" y="3854.2" width="170.1" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0005.png" x="3636.4999999999995" y="3854.2" width="170.1" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0006.png" x="3627.3999999999996" y="4449.9" width="170.79999999999998" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0007.png" x="3627.3999999999996" y="4449.9" width="170.79999999999998" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0008.png" x="3627.3999999999996" y="4449.9" width="170.79999999999998" height="593.5999999999999" frameX="-0" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0009.png" x="3414.6" y="4881.099999999999" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0010.png" x="3414.6" y="4881.099999999999" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="amy hostage0011.png" x="3414.6" y="4881.099999999999" width="170.79999999999998" height="593.5999999999999" frameX="-2.0999999999999996" frameY="-0" frameWidth="172.89999999999998" frameHeight="594.3"/>
+	<SubTexture name="badfuturebglayer20000.png" x="0.7" y="3854.2" width="3633.7" height="513.8" frameX="-0" frameY="-0" frameWidth="3633.7" frameHeight="513.8"/>
+	<SubTexture name="badfuturebglayer30000.png" x="3922.7999999999997" y="2748.2" width="302.4" height="3234" rotated="true" frameX="-0" frameY="-0" frameWidth="3234" frameHeight="302.4"/>
+	<SubTexture name="badfuturebglayer40000.png" x="0.7" y="3357.2" width="3917.2" height="265.3" frameX="-1.4" frameY="-334.59999999999997" frameWidth="3928.3999999999996" frameHeight="606.9"/>
+	<SubTexture name="badfuturebglayer50000.png" x="0.7" y="2748.2" width="3919.9999999999995" height="606.9" frameX="-2.8" frameY="-0" frameWidth="3928.3999999999996" frameHeight="606.9"/>
+	<SubTexture name="badfuturefloorback0000.png" x="0.7" y="1693.3" width="4292.4" height="254.1" frameX="-0" frameY="-0" frameWidth="4292.4" frameHeight="254.1"/>
+	<SubTexture name="badfuturefloorfront0000.png" x="0.7" y="1248.1" width="4340.7" height="443.09999999999997" frameX="-0" frameY="-0" frameWidth="4340.7" frameHeight="443.09999999999997"/>
+	<SubTexture name="badfuturewall10000.png" x="5958.4" y="3397.7999999999997" width="376.59999999999997" height="278.59999999999997" rotated="true" frameX="-0" frameY="-0" frameWidth="278.59999999999997" frameHeight="376.59999999999997"/>
+	<SubTexture name="badfuturewall20000.png" x="4227.3" y="5492.2" width="265.3" height="530.6" frameX="-0" frameY="-0" frameWidth="265.3" frameHeight="530.6"/>
+	<SubTexture name="goodfuturebglayer20000.png" x="0.7" y="4370.099999999999" width="3624.6" height="508.9" frameX="-0" frameY="-0" frameWidth="3624.6" frameHeight="508.9"/>
+	<SubTexture name="goodfuturebglayer60000.png" x="4518.5" y="0.7" width="1241.1" height="3455.8999999999996" rotated="true" frameX="-7" frameY="-1.4" frameWidth="3467.1" frameHeight="1242.5"/>
+	<SubTexture name="goodfuturefloorback0000.png" x="0.7" y="0.7" width="4515.7" height="573.3" frameX="-0" frameY="-0" frameWidth="4515.7" frameHeight="573.3"/>
+	<SubTexture name="metal finger wag0000.png" x="5430.599999999999" y="5492.2" width="429.09999999999997" height="365.4" frameX="-0" frameY="-73.5" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0001.png" x="5430.599999999999" y="5492.2" width="429.09999999999997" height="365.4" frameX="-0" frameY="-73.5" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0002.png" x="5430.599999999999" y="5492.2" width="429.09999999999997" height="365.4" frameX="-0" frameY="-73.5" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0003.png" x="5233.9" y="3825.4999999999995" width="417.9" height="367.5" frameX="-4.8999999999999995" frameY="-71.39999999999999" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0004.png" x="5233.9" y="3825.4999999999995" width="417.9" height="367.5" frameX="-4.8999999999999995" frameY="-71.39999999999999" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0005.png" x="5233.9" y="3825.4999999999995" width="417.9" height="367.5" frameX="-4.8999999999999995" frameY="-71.39999999999999" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0006.png" x="3414.6" y="5476.799999999999" width="438.9" height="228.89999999999998" rotated="true" frameX="-93.1" frameY="-0" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0007.png" x="3414.6" y="5476.799999999999" width="438.9" height="228.89999999999998" rotated="true" frameX="-93.1" frameY="-0" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0008.png" x="3414.6" y="5476.799999999999" width="438.9" height="228.89999999999998" rotated="true" frameX="-93.1" frameY="-0" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0009.png" x="3399.2" y="5707.799999999999" width="436.09999999999997" height="231.7" rotated="true" frameX="-89.6" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0010.png" x="3399.2" y="5707.799999999999" width="436.09999999999997" height="231.7" rotated="true" frameX="-89.6" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0011.png" x="4494.7" y="5492.2" width="235.89999999999998" height="436.09999999999997" frameX="-85.39999999999999" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0012.png" x="4494.7" y="5492.2" width="235.89999999999998" height="436.09999999999997" frameX="-85.39999999999999" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0013.png" x="4732.7" y="5492.2" width="237.29999999999998" height="436.09999999999997" frameX="-84" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0014.png" x="4732.7" y="5492.2" width="237.29999999999998" height="436.09999999999997" frameX="-84" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0015.png" x="4494.7" y="5492.2" width="235.89999999999998" height="436.09999999999997" frameX="-85.39999999999999" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0016.png" x="4494.7" y="5492.2" width="235.89999999999998" height="436.09999999999997" frameX="-85.39999999999999" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0017.png" x="4972.099999999999" y="5492.2" width="227.49999999999997" height="436.09999999999997" frameX="-93.8" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0018.png" x="4972.099999999999" y="5492.2" width="227.49999999999997" height="436.09999999999997" frameX="-93.8" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0019.png" x="5201.7" y="5492.2" width="226.79999999999998" height="436.09999999999997" frameX="-94.5" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0020.png" x="5201.7" y="5492.2" width="226.79999999999998" height="436.09999999999997" frameX="-94.5" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0021.png" x="4972.099999999999" y="5492.2" width="227.49999999999997" height="436.09999999999997" frameX="-93.8" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="metal finger wag0022.png" x="4972.099999999999" y="5492.2" width="227.49999999999997" height="436.09999999999997" frameX="-93.8" frameY="-2.8" frameWidth="429.09999999999997" frameHeight="438.9"/>
+	<SubTexture name="pastbglayer20000.png" x="4227.3" y="5096" width="1636.6" height="394.09999999999997" frameX="-0" frameY="-0" frameWidth="1636.6" frameHeight="394.09999999999997"/>
+	<SubTexture name="pastbglayer30000.png" x="4295.2" y="1693.3" width="212.1" height="3400.6" rotated="true" frameX="-0" frameY="-0" frameWidth="3400.6" frameHeight="212.1"/>
+	<SubTexture name="pastbglayer40000.png" x="0.7" y="4881.099999999999" width="3411.7999999999997" height="596.4" frameX="-1.4" frameY="-2.0999999999999996" frameWidth="3413.2" frameHeight="598.5"/>
+	<SubTexture name="pastfirefly0000.png" x="3855.6" y="5457.2" width="65.1" height="63.699999999999996" frameX="-0.7" frameY="-1.4" frameWidth="70" frameHeight="68.6"/>
+	<SubTexture name="pastfloorback0000.png" x="0.7" y="3624.6" width="3891.9999999999995" height="227.49999999999997" frameX="-0" frameY="-0" frameWidth="3891.9999999999995" frameHeight="227.49999999999997"/>
+	<SubTexture name="pastfloorfront0000.png" x="0.7" y="576.0999999999999" width="4389" height="289.79999999999995" frameX="-0" frameY="-0" frameWidth="4389" frameHeight="289.79999999999995"/>
+	<SubTexture name="presentbglayer30000.png" x="0.7" y="2205.7" width="4137.7" height="540.4" frameX="-0" frameY="-0" frameWidth="4137.7" frameHeight="540.4"/>
+	<SubTexture name="presentbglayer40000.png" x="5761.7" y="0.7" width="213.5" height="3395" rotated="true" frameX="-0" frameY="-0" frameWidth="3395" frameHeight="213.5"/>
+	<SubTexture name="presentbglayer50000.png" x="0.7" y="5479.599999999999" width="3396.3999999999996" height="592.1999999999999" frameX="-1.4" frameY="-0" frameWidth="3397.7999999999997" frameHeight="592.1999999999999"/>
+	<SubTexture name="presentfloorback0000.png" x="0.7" y="1949.4999999999998" width="4292.4" height="254.1" frameX="-0" frameY="-0" frameWidth="4292.4" frameHeight="254.1"/>
+	<SubTexture name="presentfloorfront0000.png" x="0.7" y="868" width="4377.099999999999" height="378" frameX="-0" frameY="-0" frameWidth="4377.099999999999" frameHeight="378"/>
+	<SubTexture name="sonic brake0000.png" x="4873.4" y="4418.4" width="378" height="410.9" rotated="true" frameX="-16.799999999999997" frameY="-34.3" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0001.png" x="5253.5" y="4195.099999999999" width="410.9" height="382.9" frameX="-16.799999999999997" frameY="-29.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0002.png" x="4872.7" y="3993.4999999999995" width="359.09999999999997" height="422.79999999999995" rotated="true" frameX="-4.199999999999999" frameY="-52.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0003.png" x="5233.9" y="3458.7" width="422.79999999999995" height="364.7" frameX="-4.199999999999999" frameY="-46.9" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0004.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0005.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0006.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0007.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0008.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0009.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0010.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0011.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0012.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0013.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0014.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0015.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0016.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0017.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0018.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0019.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0020.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0021.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0022.png" x="4509.4" y="3458.7" width="366.09999999999997" height="427" rotated="true" frameX="-0" frameY="-45.5" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0023.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0024.png" x="4509.4" y="3993.4999999999995" width="361.2" height="427" rotated="true" frameX="-0" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0025.png" x="4509.4" y="4422.599999999999" width="361.9" height="423.5" rotated="true" frameX="-3.5" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0026.png" x="4509.4" y="4422.599999999999" width="361.9" height="423.5" rotated="true" frameX="-3.5" frameY="-50.4" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0027.png" x="5977.299999999999" y="0.7" width="368.2" height="394.79999999999995" rotated="true" frameX="-17.5" frameY="-44.099999999999994" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0028.png" x="5977.299999999999" y="0.7" width="368.2" height="394.79999999999995" rotated="true" frameX="-17.5" frameY="-44.099999999999994" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0029.png" x="5666.5" y="3993.4999999999995" width="289.79999999999995" height="409.5" frameX="-89.6" frameY="-0" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0030.png" x="5666.5" y="3993.4999999999995" width="289.79999999999995" height="409.5" frameX="-89.6" frameY="-0" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0031.png" x="3587.4999999999995" y="5045.599999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0032.png" x="3587.4999999999995" y="5045.599999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0033.png" x="5666.5" y="4405.099999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0034.png" x="5666.5" y="4405.099999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0035.png" x="5253.5" y="4580.099999999999" width="409.5" height="283.5" rotated="true" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0036.png" x="5253.5" y="4580.099999999999" width="409.5" height="283.5" rotated="true" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0037.png" x="4877.599999999999" y="3458.7" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0038.png" x="4877.599999999999" y="3458.7" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0039.png" x="5253.5" y="4580.099999999999" width="409.5" height="283.5" rotated="true" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0040.png" x="5253.5" y="4580.099999999999" width="409.5" height="283.5" rotated="true" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0041.png" x="5666.5" y="4405.099999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sonic brake0042.png" x="5666.5" y="4405.099999999999" width="283.5" height="409.5" frameX="-91.69999999999999" frameY="-0.7" frameWidth="427.7" frameHeight="412.29999999999995"/>
+	<SubTexture name="sparkle0000.png" x="5658.799999999999" y="3458.7" width="100.8" height="101.5" rotated="true" frameX="-1.4" frameY="-3.5" frameWidth="105.69999999999999" frameHeight="105"/>
+	<SubTexture name="sparkle0001.png" x="3837.3999999999996" y="5707.799999999999" width="71.39999999999999" height="71.39999999999999" frameX="-16.099999999999998" frameY="-18.2" frameWidth="105.69999999999999" frameHeight="105"/>
+	<SubTexture name="sparkle0002.png" x="5653.9" y="3825.4999999999995" width="105.69999999999999" height="102.89999999999999" frameX="-0" frameY="-0" frameWidth="105.69999999999999" frameHeight="105"/>
+	<SubTexture name="sparkle0003.png" x="3837.3999999999996" y="5781.299999999999" width="69.3" height="69.3" frameX="-18.9" frameY="-16.799999999999997" frameWidth="105.69999999999999" frameHeight="105"/>
+	<SubTexture name="sparkle0004.png" x="3754.7999999999997" y="6024.9" width="46.199999999999996" height="46.199999999999996" frameX="-30.799999999999997" frameY="-27.299999999999997" frameWidth="105.69999999999999" frameHeight="105"/>
+</TextureAtlas>

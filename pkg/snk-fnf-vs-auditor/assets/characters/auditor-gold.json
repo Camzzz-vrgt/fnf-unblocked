@@ -1,0 +1,153 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				150,
+				60
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				420,
+				45
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				150,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				250,
+				45
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				470,
+				45
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				150,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "fadeIn",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "appear"
+		},
+		{
+			"offsets": [
+				150,
+				60
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "invis",
+			"indices": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"name": "appear"
+		},
+		{
+			"offsets": [
+				150,
+				60
+			],
+			"indices": [
+				12,
+				11,
+				10,
+				9,
+				8,
+				7,
+				6,
+				5,
+				4,
+				3,
+				2,
+				1,
+				0
+			],
+			"fps": 24,
+			"anim": "fadeOut",
+			"loop": false,
+			"name": "appear"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/auditor/monochrome auditor",
+	"position": [
+		-10,
+		0
+	],
+	"healthicon": "auditor",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-415,
+		170
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

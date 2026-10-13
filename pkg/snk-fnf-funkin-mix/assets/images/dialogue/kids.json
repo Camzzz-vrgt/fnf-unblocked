@@ -1,0 +1,52 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-170,
+		-50
+	],
+	"no_antialiasing": false,
+	"scale": 0.9,
+	"flipX": false,
+	"animations": [
+		{
+			"loop_name": "nervous",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "nervous",
+			"anim": "nervous",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "afraid",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "afraid",
+			"anim": "afraid",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "hi",
+			"idle_offsets": [
+				0,
+				1
+			],
+			"idle_name": "hi",
+			"anim": "hi",
+			"loop_offsets": [
+				0,
+				1
+			]
+		}
+	],
+	"image": "Kids-dialogue"
+}

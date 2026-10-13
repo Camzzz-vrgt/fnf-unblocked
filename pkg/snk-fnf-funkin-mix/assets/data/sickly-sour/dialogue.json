@@ -1,0 +1,454 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": "lelaom",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid3",
+		"text": "Singing doesn't work!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "Nothing's happening!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "hi",
+		"text": "We got an idea!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "Let's call our good ol' pal!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "His name is Moloch!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused2",
+		"text": "Uh- who???",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Watch!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(The kids pull out a Ouija board, seemingly making out words with it)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward&bgm",
+		"text": "Are you... summoning a demon?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Yeah! How'd you know?",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "Is the demon good?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Moloch is our good friend! Of course, they're good!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "We should be done!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(The Ouija board starts to react, and a large red demon emerged from the object)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid3",
+		"text": "Wh-what's going on?!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "hi",
+		"text": "Moloch!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry",
+		"text": "Not you kids again!",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised",
+		"text": "What the- what is that?",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "thinking",
+		"text": "Yeah, we uh... got a problem...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised2",
+		"text": "There's two of them...?",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised3",
+		"text": "Did it consume someone?",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "Can you communicate with it? Talk it out or... something!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Moloch attempts to talk to the being, but no reply was given)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "excited",
+		"text": "We didn't know you can speak other languages, Moloch!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "excited",
+		"text": "Yeah, can you teach us?",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "speechless",
+		"text": "Don't even think about it.",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised4",
+		"text": "Well, it doesn't seem to respond.",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised3",
+		"text": "What, do you want me to kill it?",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "I mean- it's able to sing with us?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "speechless2",
+		"text": "I don't even know what it is.",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "oh",
+		"text": "That... thing isn't even doing anything. It's beyond my comprehension.",
+		"boxState": "normal",
+		"portrait": "moloch",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "Hold on a second... something's happening to it!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "It's- wait... is that...?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid3",
+		"text": "...It became the lady.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused2",
+		"text": "But something feels wrong... she feels... different.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "M-mom...?",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "It's Ms. Lila!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "It really is her!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "But I thought she's at home...?",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sweat&bgmFade",
+		"text": "Kids... let's go home...",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sad",
+		"text": "But you said I can go out to play with Pump...",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "enraged",
+		"text": "G̸̖͒̏̏ͅo̷̩̾ȍ̵̜͓̊ḍ̴͚̲̇͛̾ ̵̻̜̑͌c̸̖̹͊̿h̵̟̘̑͂̚ȋ̶̤̤̍ĺ̴̛̗̬̟̒d̷̥͈̀r̸̜͚̉̽e̴̙̽̕n̴͉͠ ̸͎͔́̍̉m̸̰̖̆̋u̶͇͇͌̂̂ͅs̵̗̄̀͗t̸̞̹̦̾ ̷̨̹̉͛o̸̬͍̽̽͛b̷̘̳̋e̶̜̿ÿ̵̛͚̫̼́̌ ̸̝̆̄ͅt̶̢̿̆h̴̫͔̾̕ͅe̴̡̮̳͠͝i̷̛̮̺r̶͍͗͒ ̸̥̲̍m̴̞̿ọ̸͙͌̐ț̸͇͚̆h̴̡͓̭͝e̵̩̜͌̓r̸̘͎̾̍ͅ!̵͎̝̈̇",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(The creature as it takes part of Lila's form bared it's fangs, and her eyes and gums were suddenly bloodied, turning into a similar look to the monster before.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "No! Th-that's not my mom!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "My mom isn't scary!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Skid and Pump had been taken hostage by the being)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "Help us!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "BF, sing!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "Those kids are going to be in danger!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}

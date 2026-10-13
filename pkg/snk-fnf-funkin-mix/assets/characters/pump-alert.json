@@ -1,0 +1,98 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Pump Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				90
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Pump Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Pump Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-120
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Pump Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 12,
+			"name": "pump idle",
+			"indices": [
+				8,
+				10,
+				12,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceLeft",
+			"fps": 12,
+			"name": "pump idle",
+			"indices": [
+				0,
+				2,
+				6
+			]
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Mix_pump_alert",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "spooky",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		134,
+		32
+	],
+	"camera_position": [
+		-320,
+		140
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

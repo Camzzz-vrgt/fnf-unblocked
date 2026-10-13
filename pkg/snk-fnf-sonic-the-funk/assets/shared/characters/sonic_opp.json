@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [79, -226],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "sonic idle"
+		},
+		{
+			"offsets": [190, -237],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sonic left"
+		},
+		{
+			"offsets": [11, -248],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sonic right"
+		},
+		{
+			"offsets": [44, -315],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sonic down"
+		},
+		{
+			"offsets": [98, -197],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sonic up"
+		},
+		{
+			"loop": false,
+			"offsets": [81, -224],
+			"anim": "awyeah",
+			"fps": 24,
+			"name": "sonic awyeah",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [40, -230],
+			"anim": "die",
+			"fps": 24,
+			"name": "sonic dead",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [210, -250],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "sonic hit",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/sonic_opp",
+	"position": [0, 0],
+	"healthicon": "sonic",
+	"flip_x": false,
+	"healthbar_colors": [30, 111, 235],
+	"camera_position": [-60, 250],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

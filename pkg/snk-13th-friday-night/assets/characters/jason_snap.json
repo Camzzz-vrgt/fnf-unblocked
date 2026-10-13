@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-123,
+				749
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "transition",
+			"indices": [],
+			"name": "relentless transition"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/RelentlessTransition",
+	"position": [
+		-600,
+		10
+	],
+	"healthicon": "jason",
+	"flip_x": false,
+	"healthbar_colors": [
+		65,
+		83,
+		71
+	],
+	"camera_position": [
+		90,
+		-690
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

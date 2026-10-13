@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-218,
+				-65
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-185,
+				255
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				20,
+				224
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				-363,
+				186
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-280,
+				199
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/crappy Jason",
+	"position": [
+		-340,
+		10
+	],
+	"healthicon": "nudekiller",
+	"flip_x": false,
+	"healthbar_colors": [
+		35,
+		0,
+		215
+	],
+	"camera_position": [
+		50,
+		-250
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,155 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-140,
+		-135
+	],
+	"no_antialiasing": false,
+	"scale": 0.95,
+	"animations": [
+		{
+			"loop_name": "surprised0",
+			"idle_offsets": [
+				19,
+				0
+			],
+			"idle_name": "surprised0",
+			"anim": "surprised",
+			"loop_offsets": [
+				19,
+				0
+			]
+		},
+		{
+			"loop_name": "surprised2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "surprised2",
+			"anim": "surprised2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "surprised3",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "surprised3",
+			"anim": "surprised3",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "surprised4",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "surprised4",
+			"anim": "surprised4",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "oh",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "oh",
+			"anim": "oh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "angry0",
+			"idle_offsets": [
+				26,
+				0
+			],
+			"idle_name": "angry0",
+			"anim": "angry",
+			"loop_offsets": [
+				26,
+				0
+			]
+		},
+		{
+			"loop_name": "angry2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry2",
+			"anim": "angry2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "thinking",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "thinking",
+			"anim": "thinking",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "speechless0",
+			"idle_offsets": [
+				19,
+				0
+			],
+			"idle_name": "speechless0",
+			"anim": "speechless",
+			"loop_offsets": [
+				19,
+				0
+			]
+		},
+		{
+			"loop_name": "speechless2",
+			"idle_offsets": [
+				19,
+				0
+			],
+			"idle_name": "speechless2",
+			"anim": "speechless2",
+			"loop_offsets": [
+				19,
+				0
+			]
+		},
+		{
+			"loop_name": "speechless3",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "speechless3",
+			"anim": "speechless3",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "Moloch-dialogue"
+}

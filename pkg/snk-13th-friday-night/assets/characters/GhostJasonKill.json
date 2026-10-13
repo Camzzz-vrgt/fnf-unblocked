@@ -1,0 +1,47 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				68
+			],
+			"anim": "endkill",
+			"fps": 33,
+			"name": "final kill slash",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-212,
+				-27
+			],
+			"anim": "afterkill",
+			"fps": 24,
+			"name": "afterkill",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/NHAJason_BlizzardKILL",
+	"position": [
+		-340,
+		-55
+	],
+	"healthicon": "ghostjason",
+	"flip_x": false,
+	"healthbar_colors": [
+		195,
+		215,
+		215
+	],
+	"camera_position": [
+		40,
+		-190
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

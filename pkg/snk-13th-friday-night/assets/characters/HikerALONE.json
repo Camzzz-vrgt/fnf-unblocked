@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-52,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "hikerdown"
+		},
+		{
+			"offsets": [
+				-49,
+				-6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "hikerleft"
+		},
+		{
+			"offsets": [
+				-53,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "hikerup"
+		},
+		{
+			"offsets": [
+				-54,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "hikerright"
+		},
+		{
+			"offsets": [
+				-52,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "hikerfront"
+		},
+		{
+			"offsets": [
+				-51,
+				-5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "missright"
+		},
+		{
+			"offsets": [
+				-54,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "missdown"
+		},
+		{
+			"offsets": [
+				-53,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "missleft"
+		},
+		{
+			"offsets": [
+				-53,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "missup"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/hiker",
+	"position": [
+		-600,
+		400
+	],
+	"healthicon": "hiker",
+	"flip_x": true,
+	"healthbar_colors": [
+		144,
+		101,
+		105
+	],
+	"camera_position": [
+		-10,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

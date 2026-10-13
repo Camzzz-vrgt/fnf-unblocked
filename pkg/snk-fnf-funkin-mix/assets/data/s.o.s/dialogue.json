@@ -1,0 +1,328 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": "happy",
+		"text": "Your style is just like Girlfriend's!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "playful",
+		"text": "Your singing is not bad, and the way you speak reminds me of a pretty popular artist.",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Of course! He's my student after all.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "Since when were we in a student teacher relationshi-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried",
+		"text": "Kids! There you are!",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried2",
+		"text": "Where were you going?",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Skid and Pump hides behind BF)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "It's HER!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "She said she was my mom, but my mom's different from her!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry",
+		"text": "For some reason she seems familiar too...",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "But I still don't trust her! She could be a SCARY kid-eating monster!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "This lady... did she do anything to you?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried3",
+		"text": "Kids... what's going on?",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried2",
+		"text": "I've been looking for you for the last few days, but you've just been running from me.",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "But they don't know you.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried",
+		"text": "Kids, how about we go home? Okay?",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Lila reaches out to grab the kids but was stopped by BF)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry",
+		"text": "Hey! You've probably got the wrong kids. They DON'T know you.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "Skid, Pump, stay close to me.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry",
+		"text": "What are you doing? They DO know me!",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2&bgmFade",
+		"text": "Kids, stop playing around!",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "W-wait, ma'am... there's something behind you!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "Huh? What's-",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "AAAAAAAH!!!",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Lila was suddenly caught by an odd creature and the others back away from the scene)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "What the- did she get eaten by whatever that thing is?!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "N-no, it seems more like they...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "fused...?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(After a few minutes of the scene)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "lelaom",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "M-ma'am...? Are you alright??",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "lelaom",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "lila",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "BF, try singing!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "What? How would it help?!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry3",
+		"text": "Trust me on this!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "nervous",
+		"text": "Then we'll help too!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}

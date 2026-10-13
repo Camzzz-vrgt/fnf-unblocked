@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				622,
+				985
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				622,
+				985
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				622,
+				985
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				622,
+				985
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				622,
+				985
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/auditor-big/Down",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "auditor",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-1205,
+		-695
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

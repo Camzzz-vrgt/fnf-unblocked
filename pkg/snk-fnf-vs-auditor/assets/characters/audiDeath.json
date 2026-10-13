@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-90,
+				-449
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "death loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-89,
+				-89
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "death confirm",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1134,
+				770
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "death anim"
+		},
+		{
+			"offsets": [
+				1134,
+				770
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "death anim"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/auditor/audiDeath",
+	"position": [
+		-120,
+		280
+	],
+	"healthicon": "auditor",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		1870,
+		-895
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

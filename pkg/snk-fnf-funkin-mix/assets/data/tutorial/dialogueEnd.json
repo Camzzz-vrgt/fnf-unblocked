@@ -1,0 +1,103 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": "normal",
+		"text": "Wow! You're actually pretty good!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy2",
+		"text": "Y-yeah? I think I got really rusty.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Girlfriend smiles genuinely towards Boyfriend.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "You did great.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Boyfriend blushes from her smile and compliment.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "Oh my, where are my manners?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "My name is Girlfriend. I hope we get along.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "And… thanks for keeping me company as well as helping me out.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy",
+		"text": "It- it's no biggie.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy",
+		"text": "My name is Boyfriend. Let's get along.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}

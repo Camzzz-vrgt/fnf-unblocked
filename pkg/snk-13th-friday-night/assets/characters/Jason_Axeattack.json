@@ -1,0 +1,47 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				625
+			],
+			"anim": "prepare",
+			"fps": 24,
+			"name": "prepare",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-148,
+				363
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "attack",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jason axe attack",
+	"position": [
+		-600,
+		10
+	],
+	"healthicon": "jason",
+	"flip_x": false,
+	"healthbar_colors": [
+		65,
+		83,
+		71
+	],
+	"camera_position": [
+		-270,
+		-500
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

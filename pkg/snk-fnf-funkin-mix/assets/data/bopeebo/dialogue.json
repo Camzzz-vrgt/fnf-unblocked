@@ -1,0 +1,580 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": " ",
+		"text": "(A week later…)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(In Daddy's office,)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Alright, seems like all the required tasks I gave you are done for the week. Good work.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "Let's start the debriefing-",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "concerned",
+		"text": "A-actually sir, something urgent came up again. Would you mind if I deal with this?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "I'll come back for the debriefing after!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious2",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "Alright, fine. Be quick.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Thank you, sir!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "I'll get going then. I'll try to be as quick as possible, sir!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(BF leaves Daddy's office in a hurry with Daddy eyeing him as he makes his way out.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious3",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(BF arrives to his destination, the abandoned stage, where he had his first encounter with GF.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Girlfriend! Hey!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Boyfriend! You made it!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Yeah, think your dad is in a good mood lately.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "thinking",
+		"text": "Considering he didn't question why I needed to go this time. (I wonder why...)",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy2",
+		"text": "I gotta go back afterwards though, so I hope you don't mind us doing this a bit shorter.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "That's totally fine!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Well, are you ready?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Totally, babe.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Hehe, alright! Let's start the music-",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(Daddy looms behind BF.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "What did you just call my daughter?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "Boss?!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid",
+		"text": "Daddy?!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "So, this was that 'urgent' thing, boy?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sullen",
+		"text": "You both got some explaining to do.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "Now.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "W-well... um-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "well2",
+		"text": "He didn't do anything to you, did he, sweetie?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "I'm ready to fire him right now if he did.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid3",
+		"text": "What- hey!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "No, he didn't do anything to me!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sweat",
+		"text": "We've just been...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward3",
+		"text": "meeting up... with each other.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "And for what reason are you two doing so?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sweat",
+		"text": "W-well...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward3",
+		"text": "B-because...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward4",
+		"text": "Because we're...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "shy3",
+		"text": "I'm dating your daughter... and another reason... sir.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sullen2",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid4",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "laugh",
+		"text": "HAHAHAHAHA!",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "Good one, boy!",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "laugh",
+		"text": "HAHAHAHAHAHAHA!",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid4",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "Wait. You're serious?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "unhurried",
+		"text": "So, this is where you've been running to this entire time?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "angry2",
+		"text": "Seeing my daughter behind my back, boy?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "W-we've just been singing sir!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sigh",
+		"text": "Hah! You think you can just sing with my daughter like that?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "threatening",
+		"text": "If you want to date her...",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(BF shuts his eyes, anticipating what his boss will do to him now.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "eye-closed",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "You're going to have to go through ME first!",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused",
+		"text": "Wha-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "A microphone? I thought you were going to-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "displeased",
+		"text": "Well, I still haven't heard your 'other reason' for meeting up with my daughter.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "concerned",
+		"text": "...So, you sing?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confident",
+		"text": "It runs in the family.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "threatening",
+		"text": "Guess I'll show you what happens when you underestimate me, boy.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}

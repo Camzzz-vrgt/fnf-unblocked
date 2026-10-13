@@ -1,0 +1,299 @@
+{
+	"position": [
+		100,
+		20
+	],
+	"dialogue_pos": "left",
+	"no_antialiasing": false,
+	"scale": 1.2,
+	"image": "GF-dialogue",
+	"flipX": false,
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "normal",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "normal",
+			"loop_name": "normal"
+		},
+		{
+			"loop_offsets": [
+				0,
+				8.4
+			],
+			"anim": "happy",
+			"idle_offsets": [
+				0,
+				8.4
+			],
+			"loop_name": "happy0",
+			"idle_name": "happy0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				8.4
+			],
+			"anim": "happy2",
+			"idle_offsets": [
+				0,
+				8.4
+			],
+			"loop_name": "happy2",
+			"idle_name": "happy2"
+		},
+		{
+			"loop_offsets": [
+				0,
+				-6
+			],
+			"anim": "afraid",
+			"idle_offsets": [
+				0,
+				-6
+			],
+			"loop_name": "afraid0",
+			"idle_name": "afraid0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				-6
+			],
+			"anim": "afraid2",
+			"idle_offsets": [
+				0,
+				-6
+			],
+			"loop_name": "afraid2",
+			"idle_name": "afraid2"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "serious2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "serious2",
+			"idle_name": "serious2"
+		},
+		{
+			"loop_name": "cry0",
+			"idle_offsets": [
+				0,
+				-12
+			],
+			"idle_name": "cry0",
+			"anim": "cry",
+			"loop_offsets": [
+				0,
+				-12
+			]
+		},
+		{
+			"loop_name": "cry2",
+			"idle_offsets": [
+				0,
+				-12
+			],
+			"idle_name": "cry2",
+			"anim": "cry2",
+			"loop_offsets": [
+				0,
+				-12
+			]
+		},
+		{
+			"loop_name": "serious0",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "serious0",
+			"anim": "serious",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "demon0",
+			"idle_offsets": [
+				-13.2,
+				24
+			],
+			"idle_name": "demon0",
+			"anim": "demon",
+			"loop_offsets": [
+				-13.2,
+				24
+			]
+		},
+		{
+			"loop_name": "demon2",
+			"idle_offsets": [
+				-13.2,
+				22.8
+			],
+			"idle_name": "demon2",
+			"anim": "demon2",
+			"loop_offsets": [
+				-13.2,
+				22.8
+			]
+		},
+		{
+			"loop_name": "awkward0",
+			"idle_offsets": [
+				0,
+				8.4
+			],
+			"idle_name": "awkward0",
+			"anim": "awkward",
+			"loop_offsets": [
+				0,
+				8.4
+			]
+		},
+		{
+			"loop_name": "awkward2",
+			"idle_offsets": [
+				0,
+				8.4
+			],
+			"idle_name": "awkward2",
+			"anim": "awkward2",
+			"loop_offsets": [
+				0,
+				8.4
+			]
+		},
+		{
+			"loop_name": "cry3",
+			"idle_offsets": [
+				0,
+				6
+			],
+			"idle_name": "cry3",
+			"anim": "cry3",
+			"loop_offsets": [
+				0,
+				6
+			]
+		},
+		{
+			"loop_name": "cry4",
+			"idle_offsets": [
+				0,
+				-1.2
+			],
+			"idle_name": "cry4",
+			"anim": "cry4",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "sweat",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "sweat",
+			"anim": "sweat",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "awkward3",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "awkward3",
+			"anim": "awkward3",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "awkward4",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "awkward4",
+			"anim": "awkward4",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "angry0",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "angry0",
+			"anim": "angry",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "angry2",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "angry2",
+			"anim": "angry2",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "angry3",
+			"idle_offsets": [
+				8.4,
+				-13.2
+			],
+			"idle_name": "angry3",
+			"anim": "angry3",
+			"loop_offsets": [
+				8.4,
+				-13.2
+			]
+		},
+		{
+			"loop_name": "excited",
+			"idle_offsets": [
+				8.4,
+				-10.8
+			],
+			"idle_name": "excited",
+			"anim": "excited",
+			"loop_offsets": [
+				8.4,
+				-10.8
+			]
+		}
+	]
+}

@@ -1,0 +1,142 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-820,
+		-165
+	],
+	"no_antialiasing": false,
+	"scale": 0.9,
+	"animations": [
+		{
+			"loop_name": "angry0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry0",
+			"anim": "angry",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "angry2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry2",
+			"anim": "angry2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "worried0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "worried0",
+			"anim": "worried",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "worried2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "worried2",
+			"anim": "worried2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "worried3",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "worried3",
+			"anim": "worried3",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "afraid",
+			"idle_offsets": [
+				0,
+				-8
+			],
+			"idle_name": "afraid",
+			"anim": "afraid",
+			"loop_offsets": [
+				0,
+				-8
+			]
+		},
+		{
+			"loop_name": "confused",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "confused",
+			"anim": "confused",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "enraged",
+			"idle_offsets": [
+				40,
+				32
+			],
+			"idle_name": "enraged",
+			"anim": "enraged",
+			"loop_offsets": [
+				40,
+				32
+			]
+		},
+		{
+			"loop_name": "lelaom",
+			"idle_offsets": [
+				-18,
+				-10
+			],
+			"idle_name": "lelaom",
+			"anim": "lelaom",
+			"loop_offsets": [
+				-18,
+				-10
+			]
+		},
+		{
+			"loop_name": "sweat",
+			"idle_offsets": [
+				20,
+				-24
+			],
+			"idle_name": "sweat",
+			"anim": "sweat",
+			"loop_offsets": [
+				20,
+				-24
+			]
+		}
+	],
+	"image": "Lila_OG-dialogue"
+}

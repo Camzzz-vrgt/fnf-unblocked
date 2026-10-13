@@ -1,0 +1,299 @@
+{
+	"position": [
+		-80,
+		-20
+	],
+	"dialogue_pos": "right",
+	"no_antialiasing": false,
+	"scale": 1,
+	"image": "DD-dialogue",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "normal",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "normal",
+			"loop_name": "normal"
+		},
+		{
+			"loop_name": "angry0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry0",
+			"anim": "angry",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "angry2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry2",
+			"anim": "angry2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "sullen0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "sullen0",
+			"anim": "sullen",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "sullen2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "sullen2",
+			"anim": "sullen2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "laugh",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "laugh",
+			"anim": "laugh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "relieved",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "relieved",
+			"anim": "relieved",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "confident",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "confident",
+			"anim": "confident",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "sigh0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "sigh0",
+			"anim": "sigh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "sigh2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "sigh2",
+			"anim": "sigh2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "unhurried",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "unhurried",
+			"anim": "unhurried",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "threatening",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "threatening",
+			"anim": "threatening",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "tired",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "tired",
+			"anim": "tired",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "awkward",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "awkward",
+			"anim": "awkward",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "well0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "well0",
+			"anim": "well",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "well2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "well2",
+			"anim": "well2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "happy",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "happy",
+			"anim": "happy",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "serious0",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "serious0",
+			"anim": "serious",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "serious2",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "serious2",
+			"anim": "serious2",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "serious3",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "serious3",
+			"anim": "serious3",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "serious4",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "serious4",
+			"anim": "serious4",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "displeased",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "displeased",
+			"anim": "displeased",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"flipX": false
+}

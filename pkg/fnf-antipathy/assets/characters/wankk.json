@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "wank idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-22,
+				-8
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "LEFT POSE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				36
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-167,
+				-14
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				44,
+				421
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/wankk",
+	"position": [
+		-190,
+		20
+	],
+	"healthicon": "wank",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

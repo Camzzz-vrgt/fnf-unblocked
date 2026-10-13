@@ -1,0 +1,337 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": " ",
+		"text": "(A week has passed by...)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "thinking",
+		"text": "Hey...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "It feels like we've been walking for a while, where are we going?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "This place seems weird.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "I could've sworn there were two kids singing here usually... seems like they're not here today.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "zone out",
+		"text": "Kids...?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "You want me to go against children?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious",
+		"text": "Don't underestimate them! They're actually really good even though they're so young. Although I wouldn't exactly say that they could beat me.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "So, I'm gonna have you go against them!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Y'know, for more practice.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "relieved",
+		"text": "I've already gone against your pops, there's no need to.",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "He was also skilled, wasn't he?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious2",
+		"text": "Don't let it get to your head, my dad isn't as good at it anyways.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "So, you're going to practice more by going against those kids.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "After all, I'm responsible for teaching you, and it's also my responsibility to help you sing better!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "thinking",
+		"text": "Alright, alright... thanks...",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Oh, look, there they are!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(GF waves at the kids' arrival.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "hi",
+		"text": "Hi Girlfriend!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "Skid! Pump! Good to see you two.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "surprised",
+		"text": "Oh he's... ",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "playful",
+		"text": "Are you both seeing eachother?",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "U-um...",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward2",
+		"text": "A-anyways! I have a favor to ask of you both.",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "blep",
+		"text": "What is it?",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "Well, would you kids like to play with him?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused2",
+		"text": "Is this a playdate now? -",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(BF gets cut off by the kids)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "hi",
+		"text": "Can we?!",
+		"boxState": "normal",
+		"portrait": "kids",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried",
+		"text": "But I'm kind of worried...",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused2",
+		"text": "Is it about the woman?",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "worried2",
+		"text": "Mm-hmm.",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "Aw, does that mean you both can't?",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Well... maybe it'll be okay if we do it secretly!",
+		"boxState": "normal",
+		"portrait": "pump",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy",
+		"text": "Yeah! Let’s just not get found out by her.",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "confused2",
+		"text": "Hey... who's this woman you guys are talking about?",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "normal",
+		"text": "Oh, d-don't worry about it!",
+		"boxState": "normal",
+		"portrait": "skid",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}

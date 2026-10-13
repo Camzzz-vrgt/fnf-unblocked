@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-318,
+				-295
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				125,
+				-269
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				69,
+				-149
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				75,
+				-132
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				113,
+				-186
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Horror Sans Stand",
+	"position": [
+		50,
+		-410
+	],
+	"healthicon": "horror",
+	"flip_x": false,
+	"healthbar_colors": [
+		144,
+		84,
+		84
+	],
+	"camera_position": [
+		-510,
+		0
+	],
+	"sing_duration": 5.99999999999999,
+	"scale": 1.8,
+	"_editor_isPlayer": false
+}

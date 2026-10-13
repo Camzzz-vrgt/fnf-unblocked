@@ -1,0 +1,49 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "supremacy",
+		"player1": "bf",
+		"player2": "auditor",
+		"player3": null,
+		"events": [
+			[
+				20416.6666666667,
+				[
+					[
+						"Play Animation",
+						"singCOOL",
+						"Dad"
+					]
+				]
+			],
+			[
+				86666.6666666666,
+				[
+					[
+						"Play Animation",
+						"singRAGE",
+						"Dad"
+					]
+				]
+			],
+			[
+				87166.6666666666,
+				[
+					[
+						"Hey!",
+						"GF",
+						" 0.8"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 180,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "supremacy"
+	}
+}

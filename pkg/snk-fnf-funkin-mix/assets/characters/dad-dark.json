@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Dad idle dance"
+		},
+		{
+			"offsets": [
+				-18,
+				51
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Dad Sing note UP"
+		},
+		{
+			"offsets": [
+				-52,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Dad Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				32,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Dad Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				39,
+				21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "dad sing note right"
+		},
+		{
+			"offsets": [
+				-10,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "clip",
+			"indices": [],
+			"name": "Dad clip"
+		},
+		{
+			"offsets": [
+				333,
+				70
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "shoot",
+			"indices": [],
+			"name": "Dad Shooting"
+		},
+		{
+			"offsets": [
+				354,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "Dad Struck"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MIX_Dad_Dark",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dad",
+	"flip_x": false,
+	"healthbar_colors": [
+		175,
+		102,
+		206
+	],
+	"camera_position": [
+		-400,
+		-70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

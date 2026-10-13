@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "lemon-idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				63,
+				131
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "lemon-up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				-6
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "lemon-down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				58,
+				26
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "lemon-left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				79,
+				31
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "lemon-right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-45,
+				-47
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "pant",
+			"loop": true,
+			"name": "lemon-pant"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/lelaom",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "lelaom",
+	"flip_x": true,
+	"healthbar_colors": [
+		69,
+		53,
+		83
+	],
+	"camera_position": [
+		-400,
+		-90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

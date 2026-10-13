@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				61,
+				41
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				117,
+				-119
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				69,
+				10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				61,
+				31
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "miss up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				1
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "miss left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				393,
+				91
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "miss down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				213,
+				144
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "miss right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Toriel",
+	"position": [
+		0,
+		80
+	],
+	"healthicon": "toriel",
+	"flip_x": true,
+	"healthbar_colors": [
+		224,
+		197,
+		236
+	],
+	"camera_position": [
+		150,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

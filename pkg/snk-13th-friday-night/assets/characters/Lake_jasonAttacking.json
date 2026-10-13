@@ -1,0 +1,47 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				57,
+				-152
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "swung",
+			"indices": [],
+			"name": "swung"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				267,
+				-92
+			],
+			"anim": "swing",
+			"fps": 24,
+			"name": "swing ",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Jason Attacking",
+	"position": [
+		-380,
+		75
+	],
+	"healthicon": "lakej",
+	"flip_x": false,
+	"healthbar_colors": [
+		65,
+		83,
+		71
+	],
+	"camera_position": [
+		-140,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

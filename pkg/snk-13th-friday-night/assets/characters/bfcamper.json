@@ -1,0 +1,146 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-31,
+				179
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle bf"
+		},
+		{
+			"offsets": [
+				-3,
+				108
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "dodge"
+		},
+		{
+			"offsets": [
+				-23,
+				172
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Vpose"
+		},
+		{
+			"offsets": [
+				3,
+				99
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down bf pose"
+		},
+		{
+			"offsets": [
+				39,
+				351
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up bf pose"
+		},
+		{
+			"offsets": [
+				1,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "downmiss"
+		},
+		{
+			"offsets": [
+				-19,
+				353
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "upmiss"
+		},
+		{
+			"offsets": [
+				127,
+				146
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "right bf pose"
+		},
+		{
+			"offsets": [
+				-52,
+				142
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "left bf pose"
+		},
+		{
+			"offsets": [
+				108,
+				143
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "rightmiss"
+		},
+		{
+			"offsets": [
+				-51,
+				142
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "leftmiss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/BFCamper",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		68,
+		131,
+		199
+	],
+	"camera_position": [
+		-40,
+		-200
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

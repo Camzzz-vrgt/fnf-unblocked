@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "m_idle"
+		},
+		{
+			"offsets": [
+				-16,
+				45
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "m_up"
+		},
+		{
+			"offsets": [
+				-84,
+				27
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "m_left"
+		},
+		{
+			"offsets": [
+				-24,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "m_down"
+		},
+		{
+			"offsets": [
+				-73,
+				17
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "m_right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bmoloch_bam",
+	"position": [
+		520,
+		-130
+	],
+	"healthicon": "moloch",
+	"flip_x": false,
+	"healthbar_colors": [
+		157,
+		45,
+		65
+	],
+	"camera_position": [
+		-540,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

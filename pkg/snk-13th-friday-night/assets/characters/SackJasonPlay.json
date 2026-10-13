@@ -1,0 +1,91 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				661,
+				63
+			],
+			"anim": "fade-in",
+			"fps": 24,
+			"name": "appear",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				595,
+				60
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1154,
+				475
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				618,
+				-38
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				626,
+				99
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				793,
+				220
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/mothers killer",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "sack",
+	"flip_x": true,
+	"healthbar_colors": [
+		154,
+		132,
+		112
+	],
+	"camera_position": [
+		550,
+		-70
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

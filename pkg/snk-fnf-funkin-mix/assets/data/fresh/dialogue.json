@@ -1,0 +1,85 @@
+{
+	"dialogue":
+	[
+		{
+		"expression": "normal",
+		"text": "Not too shabby, boy.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sigh",
+		"text": "I see that my dear daughter had some influence on you.",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "happy2",
+		"text": "You too, old man!",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "sullen2",
+		"text": "...",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "afraid2",
+		"text": "I-I mean- boss! Sir. Uh-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "serious4",
+		"text": "Now, what was that other reason, hm?",
+		"boxState": "normal",
+		"portrait": "dad",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "concerned",
+		"text": "Well-",
+		"boxState": "normal",
+		"portrait": "bf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": " ",
+		"text": "(GF cuts BF off before he explains to her father, hoping to avoid the mentioning of the things they have been doing.)",
+		"boxState": "normal",
+		"portrait": "aside",
+		"speed": 0.05,
+		"sound": "dialogue"
+		},
+
+		{
+		"expression": "awkward",
+		"text": "Um- H-how about we get straight into the next song? Okay? Let's go!",
+		"boxState": "normal",
+		"portrait": "gf",
+		"speed": 0.05,
+		"sound": "dialogue"
+		}
+	]
+}
