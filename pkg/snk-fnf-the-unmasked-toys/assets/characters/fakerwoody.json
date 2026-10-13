@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-91,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "FALSE WOODY IDLE"
+		},
+		{
+			"offsets": [
+				-14,
+				-41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "FALSE WOODY LEFT"
+		},
+		{
+			"offsets": [
+				-100,
+				-41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "FALSE WOODY RIGHT"
+		},
+		{
+			"offsets": [
+				-92,
+				-34
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "FALSE WOODY DOWN"
+		},
+		{
+			"offsets": [
+				-57,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "FALSE WOODY UP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Fakerwoody",
+	"position": [
+		0,
+		40
+	],
+	"healthicon": "exe",
+	"flip_x": false,
+	"healthbar_colors": [
+		66,
+		0,
+		0
+	],
+	"camera_position": [
+		-50,
+		40
+	],
+	"sing_duration": 4,
+	"scale": 1.35
+}

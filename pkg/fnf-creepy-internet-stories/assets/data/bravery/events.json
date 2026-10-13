@@ -1,0 +1,271 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Camera Bop Speed",
+						"384",
+						""
+					],
+					[
+						"Camera Zoom Tween",
+						"0.52, 15",
+						""
+					],
+					[
+						"the anything event",
+						"cameraFade(\"camGame\", \"000000\", 20, true) ",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.52"
+					]
+				]
+			],
+			[
+				12467.5324675325,
+				[
+					[
+						"the anything event",
+						"doTweenAlpha(\"hud\", \"camHUD\", 1, 0.5, \"quadOut\")",
+						""
+					]
+				]
+			],
+			[
+				35844.1558441559,
+				[
+					[
+						"Camera Zoom Tween",
+						"0.7, 1.55",
+						""
+					]
+				]
+			],
+			[
+				37402.5974025974,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"the anything event",
+						"cameraFlash(\"camHUD\", \"ffffff\", 0.6)",
+						""
+					]
+				]
+			],
+			[
+				40324.6753246753,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				46558.4415584416,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				49870.1298701299,
+				[
+					[
+						"Camera Bop Speed",
+						"8",
+						""
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.66"
+					]
+				]
+			],
+			[
+				62337.6623376624,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				74805.1948051949,
+				[
+					[
+						"Camera Bop Speed",
+						"8",
+						""
+					]
+				]
+			],
+			[
+				87175.3246753247,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					]
+				]
+			],
+			[
+				112207.792207792,
+				[
+					[
+						"Camera Zoom Tween",
+						"1.1, 1.17",
+						""
+					],
+					[
+						"Play Animation",
+						"snap",
+						"dad"
+					],
+					[
+						"Play Animation",
+						"snap",
+						"gf"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					]
+				]
+			],
+			[
+				113376.623376623,
+				[
+					[
+						"Alt Idle Animation",
+						"gf",
+						"-alt"
+					]
+				]
+			],
+			[
+				126233.766233766,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				137142.857142857,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				137532.467532467,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.9"
+					]
+				]
+			],
+			[
+				137922.077922078,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.1"
+					]
+				]
+			],
+			[
+				138311.688311688,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.7"
+					]
+				]
+			],
+			[
+				138701.298701299,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.52"
+					],
+					[
+						"Camera Zoom Tween",
+						"0.52, 24.94",
+						""
+					]
+				]
+			],
+			[
+				163636.363636363,
+				[
+					[
+						"Camera Bop Speed",
+						"8",
+						""
+					]
+				]
+			],
+			[
+				182337.662337662,
+				[
+					[
+						"Camera Zoom Tween",
+						"0.4, 6.23",
+						""
+					]
+				]
+			],
+			[
+				188571.428571428,
+				[
+					[
+						"the anything event",
+						"cameraFade(\"camGame\", \"000000\", 6.24)",
+						""
+					]
+				]
+			]
+		]
+	}
+}

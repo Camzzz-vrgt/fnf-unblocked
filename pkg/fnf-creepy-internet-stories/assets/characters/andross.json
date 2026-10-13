@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "andross idle"
+		},
+		{
+			"offsets": [
+				0,
+				-25
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "andross down"
+		},
+		{
+			"offsets": [
+				-30,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "andross right"
+		},
+		{
+			"offsets": [
+				20,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUP",
+			"indices": [],
+			"name": "andross up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 8,
+			"name": "andross left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/andros",
+	"position": [
+		-110,
+		-20
+	],
+	"healthicon": "andross",
+	"flip_x": false,
+	"healthbar_colors": [
+		199,
+		203,
+		152
+	],
+	"camera_position": [
+		-156,
+		110
+	],
+	"sing_duration": 4.8,
+	"scale": 1
+}

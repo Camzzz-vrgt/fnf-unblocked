@@ -1,0 +1,54 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				1000,
+				1000
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "BF Dead Loop",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1000,
+				1000
+			],
+			"loop": true,
+			"anim": "firstDeath",
+			"name": "BF Dead Loop",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1000,
+				1000
+			],
+			"loop": true,
+			"anim": "deathLoop",
+			"name": "BF Dead Loop",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF Dead",
+	"position": [
+		-320,
+		500
+	],
+	"healthicon": "BoyfriendBFR",
+	"flip_x": true,
+	"healthbar_colors": [
+		235,
+		235,
+		235
+	],
+	"camera_position": [
+		-180,
+		60
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

@@ -1,0 +1,109 @@
+{
+  "animations": [
+    {
+      "offsets": [-5, 30],
+      "loop": false,
+      "fps": 24,
+      "anim": "idle",
+      "indices": [],
+      "name": "BFBlitzIdle"
+    },
+    {
+      "offsets": [128, 54],
+      "loop": false,
+      "fps": 24,
+      "anim": "singLEFT",
+      "indices": [],
+      "name": "BFBlitzLeft"
+    },
+    {
+      "offsets": [32, 40],
+      "loop": false,
+      "fps": 24,
+      "anim": "singDOWN",
+      "indices": [],
+      "name": "BFBlitzDown"
+    },
+    {
+      "offsets": [-24, 85],
+      "loop": false,
+      "fps": 24,
+      "anim": "singUP",
+      "indices": [],
+      "name": "BFBlitzUp"
+    },
+    {
+      "offsets": [0, 46],
+      "loop": false,
+      "fps": 24,
+      "anim": "singRIGHT",
+      "indices": [],
+      "name": "BFBlitzRight"
+    },
+    {
+      "loop": false,
+      "offsets": [173, 36],
+      "anim": "singLEFTmiss",
+      "fps": 24,
+      "name": "LeftMiss",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [43, 0],
+      "anim": "singDOWNmiss",
+      "fps": 24,
+      "name": "DownMiss",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [-29, 99],
+      "anim": "singUPmiss",
+      "fps": 24,
+      "name": "UpMiss",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [-32, 23],
+      "anim": "singRIGHTmiss",
+      "fps": 24,
+      "name": "RightMiss",
+      "indices": []
+    },
+    {
+      "offsets": [-56, 19],
+      "loop": true,
+      "fps": 24,
+      "anim": "deathLoop",
+      "indices": [],
+      "name": "BFBlitzMuerto"
+    },
+    {
+      "offsets": [-56, 19],
+      "loop": false,
+      "fps": 24,
+      "anim": "deathConfirm",
+      "indices": [],
+      "name": "BFBlitzRevive"
+    },
+    {
+      "loop": false,
+      "offsets": [-13, 33],
+      "anim": "firstDeath",
+      "fps": 24,
+      "name": "BFBlitzMuere",
+      "indices": []
+    }
+  ],
+  "no_antialiasing": false,
+  "image": "characters/whittyWeek/bf-bomblitz",
+  "position": [0, 350],
+  "healthicon": "bf",
+  "flip_x": true,
+  "healthbar_colors": [171, 22, 74],
+  "camera_position": [220, -180],
+  "sing_duration": 4,
+  "scale": 1
+}

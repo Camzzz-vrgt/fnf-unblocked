@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-105,
+				-100
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF BFR IDLE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-115,
+				-117
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "BF BFR LEFT"
+		},
+		{
+			"offsets": [
+				-120,
+				-126
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "BF BFR DOWN"
+		},
+		{
+			"offsets": [
+				-137,
+				-58
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "BF BFR UP"
+		},
+		{
+			"offsets": [
+				-117,
+				-67
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "BF BFR RIGHT"
+		},
+		{
+			"offsets": [
+				-105,
+				-120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": true,
+			"name": "MISS BF BFR L"
+		},
+		{
+			"offsets": [
+				-105,
+				-119
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": true,
+			"name": "MISS BF BFR D"
+		},
+		{
+			"offsets": [
+				-193,
+				-131
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": true,
+			"name": "MISS BF BFR R"
+		},
+		{
+			"offsets": [
+				-157,
+				-33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": true,
+			"name": "MISS BF BFR U"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Blackfridaybf",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "BoyfriendBFR",
+	"flip_x": true,
+	"healthbar_colors": [
+		235,
+		235,
+		235
+	],
+	"camera_position": [
+		-160,
+		150
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

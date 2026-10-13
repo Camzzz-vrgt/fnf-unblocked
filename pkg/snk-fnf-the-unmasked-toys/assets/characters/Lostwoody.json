@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				29,
+				129
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "LOST WOODY IDLE"
+		},
+		{
+			"offsets": [
+				16,
+				100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "LOST WOODY RIGHT"
+		},
+		{
+			"offsets": [
+				95,
+				174
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LOST WOODY LEFT"
+		},
+		{
+			"offsets": [
+				77,
+				238
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "LOST WOODY UP"
+		},
+		{
+			"offsets": [
+				39,
+				118
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "LOST WOODY DOWN"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Lostwoody",
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "Lostpart",
+	"flip_x": false,
+	"healthbar_colors": [
+		74,
+		23,
+		0
+	],
+	"camera_position": [
+		-250,
+		-120
+	],
+	"sing_duration": 7.49999999999998,
+	"scale": 1
+}

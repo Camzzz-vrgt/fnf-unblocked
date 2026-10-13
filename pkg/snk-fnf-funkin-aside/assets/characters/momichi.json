@@ -1,0 +1,93 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				11,
+				-78
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Momichi_Idle"
+		},
+		{
+			"offsets": [
+				33,
+				-72
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Momichi_Up"
+		},
+		{
+			"offsets": [
+				73,
+				-82
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Momichi_Left"
+		},
+		{
+			"offsets": [
+				28,
+				-96
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Momichi_Right"
+		},
+		{
+			"offsets": [
+				8,
+				-121
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Momichi_Down"
+		},
+		{
+			"offsets": [
+				-9,
+				-106
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "event",
+			"loop": false,
+			"name": "MomichiEvent"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/momichiWeek/Momichi_Assets",
+	"charSplitFrames": [
+		"characters/momichiWeek/Momichi_Assets",
+		"characters/momichiWeek/Momichi_Event"
+ 	],
+	"position": [
+		0,
+		200
+	],
+	"healthicon": "momichi",
+	"flip_x": false,
+	"healthbar_colors": [
+		250,
+		34,
+		73
+	],
+	"camera_position": [
+		-40,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

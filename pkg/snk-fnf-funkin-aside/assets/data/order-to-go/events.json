@@ -1,0 +1,44 @@
+{
+	"song": {
+		"speed": 2.7,
+		"stage": "mcDonalds",
+		"player1": "bf-garcello",
+		"player2": "garcello",
+		"player3": null,
+		"events": [
+			[
+				66500,
+				[
+					[
+						"Change Character",
+						"dad",
+						"garcello-bars"
+					],
+					[
+						"Play Animation",
+						"event",
+						"dad"
+					]
+				]
+			],
+			[
+				68125,
+				[
+					[
+						"Change Character",
+						"dad",
+						"garcello"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf-garcello",
+		"bpm": 120,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Order To Go"
+	}
+}

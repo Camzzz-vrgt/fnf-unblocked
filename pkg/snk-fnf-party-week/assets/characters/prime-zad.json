@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "PrimeSadIdle"
+		},
+		{
+			"offsets": [
+				40,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "PrimeSadLeft"
+		},
+		{
+			"offsets": [
+				13,
+				-33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "PrimeSadDown"
+		},
+		{
+			"offsets": [
+				-86,
+				39
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "PrimeSadUp"
+		},
+		{
+			"offsets": [
+				36,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "PrimeSadRight"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PRIME-Sad",
+	"position": [
+		-60,
+		140
+	],
+	"healthicon": "isaac",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		40,
+		96
+	],
+	"camera_position": [
+		190,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

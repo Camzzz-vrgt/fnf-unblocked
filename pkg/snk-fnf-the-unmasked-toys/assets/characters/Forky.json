@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "FORKY IDLE"
+		},
+		{
+			"offsets": [
+				119,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "FORKY LEFT"
+		},
+		{
+			"offsets": [
+				20,
+				6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "FORKY DOWN"
+		},
+		{
+			"offsets": [
+				-14,
+				34
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "FORKY UP"
+		},
+		{
+			"offsets": [
+				-18,
+				22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "FORKY RIGHT"
+		},
+		{
+			"offsets": [
+				89,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "MISS L FORKY"
+		},
+		{
+			"offsets": [
+				33,
+				16
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "MISS D FORKY"
+		},
+		{
+			"offsets": [
+				21,
+				44
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "MISS U FORKY"
+		},
+		{
+			"offsets": [
+				-34,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "MISS R FORKY"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Forky",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "Forky",
+	"flip_x": true,
+	"healthbar_colors": [
+		235,
+		235,
+		235
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

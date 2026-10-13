@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				95,
+				340
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				269,
+				338
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				190,
+				289
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				194,
+				327
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				8,
+				369
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Cursedwoody",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "icon-cursedw",
+	"flip_x": false,
+	"healthbar_colors": [
+		126,
+		31,
+		1
+	],
+	"camera_position": [
+		-330,
+		-240
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

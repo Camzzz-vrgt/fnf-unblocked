@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="healthbar.png">
+<SubTexture name="health00000" x="0" y="0" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+<SubTexture name="health10000" x="0" y="0" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+<SubTexture name="health20000" x="590" y="0" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+<SubTexture name="health30000" x="0" y="212" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+<SubTexture name="health40000" x="590" y="212" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+<SubTexture name="health50000" x="0" y="424" width="590" height="212" frameX="0" frameY="0" frameWidth="590" frameHeight="212" />
+</TextureAtlas>

@@ -1,0 +1,151 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [
+				15,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"name": "connie idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"name": "connie idle"
+		},
+		{
+			"offsets": [
+				128,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "connie left"
+		},
+		{
+			"offsets": [
+				56,
+				-139
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "connie down"
+		},
+		{
+			"offsets": [
+				4,
+				33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "connie up"
+		},
+		{
+			"offsets": [
+				128,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "connie miss left"
+		},
+		{
+			"offsets": [
+				56,
+				-139
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "connie miss down"
+		},
+		{
+			"offsets": [
+				-21,
+				-33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "connie miss right"
+		},
+		{
+			"offsets": [
+				-21,
+				-33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "connie right"
+		},
+		{
+			"offsets": [
+				10,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "connie miss up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/connie",
+	"position": [
+		100,
+		180
+	],
+	"healthicon": "connie",
+	"flip_x": true,
+	"healthbar_colors": [
+		76,
+		234,
+		142
+	],
+	"camera_position": [
+		140,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

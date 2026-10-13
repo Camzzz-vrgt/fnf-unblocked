@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				3,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "PICO IDLE"
+		},
+		{
+			"offsets": [
+				-136,
+				57
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "PICO UP"
+		},
+		{
+			"offsets": [
+				50,
+				-35
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "PICO DOWN"
+		},
+		{
+			"offsets": [
+				-52,
+				-29
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "PICO LEFT"
+		},
+		{
+			"offsets": [
+				-29,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "PICO RIGHT"
+		},
+		{
+			"offsets": [
+				-152,
+				89
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "MISS PICO UP"
+		},
+		{
+			"offsets": [
+				-44,
+				12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "MISS PICO RIGHT"
+		},
+		{
+			"offsets": [
+				-42,
+				-29
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "MISS PICO LEFT"
+		},
+		{
+			"offsets": [
+				60,
+				-88
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "MISS PICO DOWN"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/misfitpico",
+	"position": [
+		0,
+		240
+	],
+	"healthicon": "MisfitPico",
+	"flip_x": true,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		220,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -1,0 +1,211 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		-140
+	],
+	"scale": 1,
+	"no_antialiasing": false,
+	"image": "characters/redux/sky_manifest",
+	"camera_position": [
+		0,
+		130
+	],
+	"sing_duration": 6.1,
+	"healthicon": "manifest-sky",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				-280
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				90,
+				-238
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				82,
+				-492
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				20,
+				-146
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-39,
+				-237
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				199,
+				-266
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Alt Left"
+		},
+		{
+			"offsets": [
+				75,
+				-385
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Alt Down"
+		},
+		{
+			"offsets": [
+				8,
+				37
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Alt Up"
+		},
+		{
+			"offsets": [
+				-40,
+				-270
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Alt Right"
+		},
+		{
+			"offsets": [
+				71,
+				-188
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "scream",
+			"loop": false,
+			"name": "Scream"
+		},
+		{
+			"offsets": [
+				155,
+				-205
+			],
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"fps": 18,
+			"anim": "trans1",
+			"loop": false,
+			"name": "Transform"
+		},
+		{
+			"offsets": [
+				145,
+				-215
+			],
+			"indices": [
+				3,
+				4,
+				5
+			],
+			"fps": 18,
+			"anim": "trans2",
+			"loop": false,
+			"name": "Transform"
+		},
+		{
+			"offsets": [
+				145,
+				-205
+			],
+			"indices": [
+				6,
+				7,
+				8,
+				9
+			],
+			"fps": 18,
+			"anim": "trans3",
+			"loop": false,
+			"name": "Transform"
+		},
+		{
+			"offsets": [
+				140,
+				-205
+			],
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"fps": 18,
+			"anim": "trans4",
+			"loop": false,
+			"name": "Transform"
+		}
+	]
+}

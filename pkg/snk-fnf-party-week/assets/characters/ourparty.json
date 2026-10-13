@@ -1,0 +1,105 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "ourpleidle",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "ourpleidle",
+			"indices": [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-30
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "downo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				55
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "upo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				-19
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "righto",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ourparty",
+	"position": [
+		-290,
+		-230
+	],
+	"healthicon": "ourple",
+	"flip_x": false,
+	"healthbar_colors": [
+		217,
+		61,
+		255
+	],
+	"camera_position": [
+		170,
+		150
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

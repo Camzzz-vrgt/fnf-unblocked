@@ -1,0 +1,906 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Set Property",
+						"songLength",
+						"161550"
+					]
+				]
+			],
+			[
+				9600,
+				[
+					[
+						"Camera Bop Speed",
+						"8",
+						"4"
+					]
+				]
+			],
+			[
+				47925,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"-1"
+					]
+				]
+			],
+			[
+				67200,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"2"
+					],
+					[
+						"Camera Bop Speed",
+						"8",
+						""
+					]
+				]
+			],
+			[
+				86400,
+				[
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1"
+					],
+					[
+						"Camera Bop Speed",
+						"8",
+						"4"
+					]
+				]
+			],
+			[
+				105600,
+				[
+					[
+						"Camera Zoom Tween",
+						"1, 1.2",
+						"camHUD"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						"0.1"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.5"
+					]
+				]
+			],
+			[
+				106800,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				107400,
+				[
+					[
+						"Camera Bop Speed",
+						"1448",
+						""
+					]
+				]
+			],
+			[
+				108600,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				109200,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1464",
+						""
+					]
+				]
+			],
+			[
+				109800,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				110400,
+				[
+					[
+						"Camera Bop Speed",
+						"1480",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				111000,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				111600,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				111900,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				112200,
+				[
+					[
+						"Camera Zoom Tween",
+						"1.1, 0.6",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				113400,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				114000,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				114300,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1532",
+						""
+					]
+				]
+			],
+			[
+				114900,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				115200,
+				[
+					[
+						"Camera Zoom Tween",
+						"1, 1.2",
+						"camHUD"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						"0.1"
+					],
+					[
+						"Set Property",
+						"camZoomingMult",
+						"1.5"
+					]
+				]
+			],
+			[
+				116400,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				117000,
+				[
+					[
+						"Camera Bop Speed",
+						"1576",
+						""
+					]
+				]
+			],
+			[
+				118200,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				118800,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1464",
+						""
+					]
+				]
+			],
+			[
+				119400,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Camera Bop Speed",
+						"1480",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				120600,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				121200,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				121500,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				121800,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					],
+					[
+						"Camera Zoom Tween",
+						"1.1, 0.6",
+						""
+					]
+				]
+			],
+			[
+				123000,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				123600,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				123900,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1532",
+						""
+					]
+				]
+			],
+			[
+				124500,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				124800,
+				[
+					[
+						"Camera Zoom Tween",
+						"1, 1.2",
+						"camHUD"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						"0.1"
+					]
+				]
+			],
+			[
+				126000,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				126600,
+				[
+					[
+						"Camera Bop Speed",
+						"1704",
+						""
+					]
+				]
+			],
+			[
+				127800,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				128400,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1464",
+						""
+					]
+				]
+			],
+			[
+				129000,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				129600,
+				[
+					[
+						"Camera Bop Speed",
+						"1480",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				130200,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				130800,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				131100,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				131400,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					],
+					[
+						"Camera Zoom Tween",
+						"1.1, 0.6",
+						""
+					]
+				]
+			],
+			[
+				132600,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				133200,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				133500,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1532",
+						""
+					]
+				]
+			],
+			[
+				134100,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				134400,
+				[
+					[
+						"Camera Zoom Tween",
+						"1, 1.2",
+						"camHUD"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						"0.1"
+					]
+				]
+			],
+			[
+				135600,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				136200,
+				[
+					[
+						"Camera Bop Speed",
+						"1832",
+						""
+					]
+				]
+			],
+			[
+				137400,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				138000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1464",
+						""
+					]
+				]
+			],
+			[
+				138600,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				139200,
+				[
+					[
+						"Camera Bop Speed",
+						"1480",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				139800,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					]
+				]
+			],
+			[
+				140400,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				140700,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				141000,
+				[
+					[
+						"Camera Bop Speed",
+						"1",
+						""
+					],
+					[
+						"Camera Zoom Tween",
+						"1.1, 0.6",
+						""
+					]
+				]
+			],
+			[
+				142200,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				142800,
+				[
+					[
+						"Camera Bop Speed",
+						"4",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				143100,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"1532",
+						""
+					]
+				]
+			],
+			[
+				143700,
+				[
+					[
+						"Camera Bop Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				144000,
+				[
+					[
+						"Camera Bop Speed",
+						"32",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				153600,
+				[
+					[
+						"the anything event",
+						"setProperty(\"camGame.visible\", false)",
+						""
+					],
+					[
+						"Camera Zoom Tween",
+						"1.3, 12.58",
+						""
+					],
+					[
+						"Camera Bop Speed",
+						"",
+						""
+					]
+				]
+			],
+			[
+				161506.395348837,
+				[
+					[
+						"the anything event",
+						"runHaxeCode([[game.modchartTweens.set('fart', FlxTween.tween(game, {songLength: ]] .. songLength .. [[}, 4.11));]])",
+						""
+					]
+				]
+			],
+			[
+				175111.046511628,
+				[
+					[
+						"Camera Bop Speed",
+						"",
+						"8"
+					]
+				]
+			],
+			[
+				184041.279069768,
+				[
+					[
+						"Camera Bop Speed",
+						"",
+						""
+					]
+				]
+			],
+			[
+				192971.511627907,
+				[
+					[
+						"Camera Bop Speed",
+						"",
+						"8"
+					]
+				]
+			],
+			[
+				228692.441860466,
+				[
+					[
+						"the anything event",
+						"setProperty(\"camGame.visible\", false)",
+						""
+					]
+				]
+			]
+		]
+	}
+}

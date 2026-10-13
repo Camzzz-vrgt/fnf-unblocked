@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="buzz.png">
+<SubTexture name="buzz idle0000" x="0" y="0" width="596" height="782" frameX="-85" frameY="-240" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz idle0001" x="596" y="0" width="596" height="790" frameX="-85" frameY="-232" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz idle0002" x="1192" y="0" width="596" height="794" frameX="-85" frameY="-228" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz idle0003" x="1788" y="0" width="596" height="798" frameX="-85" frameY="-224" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz down0000" x="2384" y="0" width="596" height="759" frameX="-85" frameY="-263" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz down0001" x="0" y="798" width="596" height="764" frameX="-85" frameY="-258" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz down0002" x="596" y="798" width="596" height="773" frameX="-85" frameY="-249" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz down0003" x="1192" y="798" width="596" height="786" frameX="-85" frameY="-236" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz up0000" x="1788" y="798" width="819" height="864" frameX="-14" frameY="-158" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz up0001" x="2607" y="798" width="819" height="842" frameX="-13" frameY="-180" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz up0002" x="0" y="1662" width="820" height="830" frameX="-13" frameY="-192" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz up0003" x="820" y="1662" width="822" height="820" frameX="-12" frameY="-202" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz left0000" x="1642" y="1662" width="591" height="812" frameX="-75" frameY="-213" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz left0001" x="2233" y="1662" width="592" height="813" frameX="-80" frameY="-211" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz left0002" x="2825" y="1662" width="593" height="812" frameX="-86" frameY="-213" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz left0003" x="0" y="2492" width="594" height="811" frameX="-83" frameY="-216" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz right0000" x="594" y="2492" width="634" height="921" frameX="-111" frameY="-100" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz right0001" x="1228" y="2492" width="630" height="921" frameX="-107" frameY="-102" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz right0002" x="1858" y="2492" width="625" height="923" frameX="-99" frameY="-103" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz right0003" x="2483" y="2492" width="622" height="922" frameX="-95" frameY="-109" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Dmiss0000" x="0" y="3415" width="596" height="764" frameX="-85" frameY="-258" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Dmiss0001" x="596" y="3415" width="596" height="773" frameX="-85" frameY="-249" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Umiss0000" x="1192" y="3415" width="819" height="842" frameX="-13" frameY="-180" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Umiss0001" x="2011" y="3415" width="820" height="830" frameX="-13" frameY="-192" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Lmiss0000" x="2831" y="3415" width="618" height="813" frameX="-80" frameY="-211" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Lmiss0001" x="0" y="4257" width="624" height="812" frameX="-86" frameY="-213" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Rmiss0000" x="624" y="4257" width="666" height="921" frameX="-107" frameY="-102" frameWidth="800" frameHeight="1050" />
+<SubTexture name="buzz Rmiss0001" x="1290" y="4257" width="661" height="923" frameX="-99" frameY="-103" frameWidth="800" frameHeight="1050" />
+</TextureAtlas>

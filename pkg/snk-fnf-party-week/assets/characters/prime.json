@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "PrimeIdle"
+		},
+		{
+			"offsets": [
+				30,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "PrimeLeft"
+		},
+		{
+			"offsets": [
+				10,
+				-62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "PrimeDown"
+		},
+		{
+			"offsets": [
+				-15,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "PrimeUp"
+		},
+		{
+			"offsets": [
+				-139,
+				-21
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "PrimeRight"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PRIME",
+	"position": [
+		-70,
+		-50
+	],
+	"healthicon": "isaac",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		40,
+		96
+	],
+	"camera_position": [
+		190,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

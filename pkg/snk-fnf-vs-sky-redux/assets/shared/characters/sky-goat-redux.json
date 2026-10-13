@@ -1,0 +1,88 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		-40,
+		-190
+	],
+	"scale": 1,
+	"no_antialiasing": false,
+	"image": "characters/redux/Demon_Sky",
+	"camera_position": [
+		0,
+		170
+	],
+	"sing_duration": 6.1,
+	"healthicon": "goat-sky",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				-290
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				156,
+				-240
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				92,
+				-459
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				60,
+				-111
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-54,
+				-277
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		}
+	]
+}

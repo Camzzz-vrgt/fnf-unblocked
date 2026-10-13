@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				50
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "WHITTY Idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-19,
+				60
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "WHITTY NOTE DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				137
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "WHITTY NOTE UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				39,
+				93
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "WHITTY NOTE LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				52,
+				84
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "WHITTY NOTE RIGHT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/whittyWeek/Whitty_Aside",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "whitty",
+	"flip_x": true,
+	"healthbar_colors": [
+		46,
+		38,
+		38
+	],
+	"camera_position": [
+		-100,
+		-70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,333 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		-150,
+		-560
+	],
+	"scale": 1,
+	"no_antialiasing": false,
+	"image": "characters/redux/sky_annoyed, characters/redux/sky_sad, characters/redux/sky_angry",
+	"camera_position": [
+		0,
+		200
+	],
+	"sing_duration": 6.1,
+	"healthicon": "sky",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				-10,
+				-136
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				0,
+				-134
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-sad",
+			"loop": false,
+			"name": "sad left"
+		},
+		{
+			"offsets": [
+				-60,
+				-180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				-65,
+				-180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-sad",
+			"loop": false,
+			"name": "sad down"
+		},
+		{
+			"offsets": [
+				-45,
+				-105
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-45,
+				-102
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-sad",
+			"loop": false,
+			"name": "sad up"
+		},
+		{
+			"offsets": [
+				-50,
+				-126
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-55,
+				-125
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-sad",
+			"loop": false,
+			"name": "sad right"
+		},
+		{
+			"offsets": [
+				-2,
+				-132
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "alt left"
+		},
+		{
+			"offsets": [
+				-65,
+				-178
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "alt down"
+		},
+		{
+			"offsets": [
+				-38,
+				-88
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "alt up"
+		},
+		{
+			"offsets": [
+				-55,
+				-125
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "alt right"
+		},
+		{
+			"offsets": [
+				-50,
+				-130
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-50,
+				-130
+			],
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-46,
+				-123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "huh",
+			"loop": false,
+			"name": "huh"
+		},
+		{
+			"offsets": [
+				-37,
+				-141
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "grr",
+			"loop": false,
+			"name": "grr"
+		},
+		{
+			"offsets": [
+				-41,
+				-115
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "gasp",
+			"loop": false,
+			"name": "gasp"
+		},
+		{
+			"offsets": [
+				-54,
+				-123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sigh",
+			"loop": false,
+			"name": "sigh"
+		},
+		{
+			"offsets": [
+				-42,
+				-130
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "danceLeft-sad",
+			"loop": false,
+			"name": "sad idle"
+		},
+		{
+			"offsets": [
+				-40,
+				-130
+			],
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			],
+			"fps": 24,
+			"anim": "danceRight-sad",
+			"loop": false,
+			"name": "sad idle"
+		},
+		{
+			"offsets": [
+				-45,
+				-88
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "ugh",
+			"loop": false,
+			"name": "ugh"
+		},
+		{
+			"offsets": [
+				-42,
+				-130
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"fps": 24,
+			"anim": "danceLeft-alt",
+			"loop": false,
+			"name": "alt idle"
+		},
+		{
+			"offsets": [
+				-40,
+				-130
+			],
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17
+			],
+			"fps": 24,
+			"anim": "danceRight-alt",
+			"loop": false,
+			"name": "alt idle"
+		}
+	]
+}

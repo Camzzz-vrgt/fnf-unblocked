@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				55,
+				350
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				55,
+				350
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "right"
+		}	
+	],
+	"no_antialiasing": false,
+	"image": "characters/tutgf",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

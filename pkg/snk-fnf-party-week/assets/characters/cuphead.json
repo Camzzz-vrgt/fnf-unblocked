@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				63,
+				-40
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-47
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				29
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				30
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right instance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/PartyCuphead",
+	"position": [
+		30,
+		310
+	],
+	"healthicon": "cuphead",
+	"flip_x": false,
+	"healthbar_colors": [
+		171,
+		22,
+		94
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

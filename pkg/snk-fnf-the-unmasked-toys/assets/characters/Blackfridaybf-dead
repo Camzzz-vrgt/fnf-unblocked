@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-105,
+				-100
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF BFR IDLE"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-115,
+				-117
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF BFR LEFT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-120,
+				-126
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF BFR DOWN",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-137,
+				-58
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF BFR UP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-117,
+				-67
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF BFR RIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-157,
+				-33
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MISS BF BFR U",
+			"indices": []
+		},
+		{
+			"offsets": [
+				387,
+				249
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": true,
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				270,
+				250
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "BF Dead Loop",
+			"loop": true,
+			"name": "BF Dead Loop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF Dead",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "BoyfriendBFR",
+	"flip_x": true,
+	"healthbar_colors": [
+		235,
+		235,
+		235
+	],
+	"camera_position": [
+		-300,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

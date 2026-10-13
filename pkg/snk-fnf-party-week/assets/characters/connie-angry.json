@@ -1,0 +1,151 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "connie idle",
+			"indices": [
+				15,
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "connie idle",
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				128,
+				-54
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "connie left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				-139
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "connie down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				33
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "connie up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				128,
+				-54
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "connie miss left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				-139
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "connie miss down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-33
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "connie miss right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-33
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "connie right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				38
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "connie miss up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/conniemad",
+	"position": [
+		100,
+		180
+	],
+	"healthicon": "connie",
+	"flip_x": true,
+	"healthbar_colors": [
+		76,
+		234,
+		142
+	],
+	"camera_position": [
+		140,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.9
+}

@@ -1,0 +1,53 @@
+{
+  "animations": [
+    {
+      "offsets": [40, 54],
+      "loop": false,
+      "fps": 24,
+      "anim": "idle",
+      "indices": [],
+      "name": "WhittBlitzIdle"
+    },
+    {
+      "offsets": [-103, 23],
+      "loop": false,
+      "fps": 24,
+      "anim": "singDOWN",
+      "indices": [],
+      "name": "WhittBlitzDown"
+    },
+    {
+      "offsets": [147, 59],
+      "loop": false,
+      "fps": 24,
+      "anim": "singUP",
+      "indices": [],
+      "name": "WhittBlitzUp"
+    },
+    {
+      "offsets": [-6, 148],
+      "loop": false,
+      "fps": 24,
+      "anim": "singRIGHT",
+      "indices": [],
+      "name": "WhittBlitzRight"
+    },
+    {
+      "offsets": [242, 164],
+      "loop": false,
+      "fps": 24,
+      "anim": "singLEFT",
+      "indices": [],
+      "name": "WhittBlitzLeft"
+    }
+  ],
+  "no_antialiasing": false,
+  "image": "characters/whittyWeek/WhittBlitzzFull",
+  "position": [0, 0],
+  "healthicon": "whitty",
+  "flip_x": false,
+  "healthbar_colors": [46, 38, 38],
+  "camera_position": [30, -70],
+  "sing_duration": 6.1,
+  "scale": 1
+}

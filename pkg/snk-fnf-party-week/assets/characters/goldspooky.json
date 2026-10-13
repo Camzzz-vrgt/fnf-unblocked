@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				242,
+				122
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "transform",
+			"loop": false,
+			"name": "GoldNormal_Transform instance"
+		},
+		{
+			"offsets": [
+				306,
+				163
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Gold_Left instance"
+		},
+		{
+			"offsets": [
+				200,
+				-110
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Gold_Down instance"
+		},
+		{
+			"offsets": [
+				100,
+				290
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Gold_Up instance"
+		},
+		{
+			"offsets": [
+				-20,
+				80
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Gold_Right instance"
+		},
+		{
+			"offsets": [
+				82,
+				130
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle_alt",
+			"loop": false,
+			"name": "Gold_Idle instance"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "GoldNormal instance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Dead_Mf",
+	"position": [
+		0,
+		70
+	],
+	"healthicon": "gold",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

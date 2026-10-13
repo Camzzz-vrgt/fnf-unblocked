@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="note_bullets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down bullet confirm0000" x="3" y="3" width="181" height="229"/>
+	<SubTexture name="down bullet confirm0001" x="187" y="3" width="181" height="229"/>
+	<SubTexture name="down bullet confirm0002" x="371" y="3" width="165" height="212" frameX="-4" frameY="-11" frameWidth="181" frameHeight="229"/>
+	<SubTexture name="down bullet confirm0003" x="371" y="3" width="165" height="212" frameX="-4" frameY="-11" frameWidth="181" frameHeight="229"/>
+	<SubTexture name="left bullet confirm0000" x="3" y="235" width="222" height="172"/>
+	<SubTexture name="left bullet confirm0001" x="228" y="235" width="212" height="172" frameX="-5" frameY="0" frameWidth="222" frameHeight="172"/>
+	<SubTexture name="left bullet confirm0002" x="443" y="235" width="219" height="166" frameX="-2" frameY="-2" frameWidth="222" frameHeight="172"/>
+	<SubTexture name="left bullet confirm0003" x="443" y="235" width="219" height="166" frameX="-2" frameY="-2" frameWidth="222" frameHeight="172"/>
+	<SubTexture name="right bullet confirm0000" x="3" y="410" width="218" height="177" frameX="-2" frameY="0" frameWidth="223" frameHeight="177"/>
+	<SubTexture name="right bullet confirm0001" x="224" y="410" width="218" height="177" frameX="-2" frameY="0" frameWidth="223" frameHeight="177"/>
+	<SubTexture name="right bullet confirm0002" x="445" y="410" width="223" height="168" frameX="0" frameY="-5" frameWidth="223" frameHeight="177"/>
+	<SubTexture name="right bullet confirm0003" x="445" y="410" width="223" height="168" frameX="0" frameY="-5" frameWidth="223" frameHeight="177"/>
+	<SubTexture name="up bullet confirm0000" x="3" y="590" width="175" height="227"/>
+	<SubTexture name="up bullet confirm0001" x="181" y="590" width="175" height="227"/>
+	<SubTexture name="up bullet confirm0002" x="359" y="590" width="163" height="205" frameX="-6" frameY="-11" frameWidth="175" frameHeight="227"/>
+	<SubTexture name="up bullet confirm0003" x="359" y="590" width="163" height="205" frameX="-6" frameY="-11" frameWidth="175" frameHeight="227"/>
+</TextureAtlas>
