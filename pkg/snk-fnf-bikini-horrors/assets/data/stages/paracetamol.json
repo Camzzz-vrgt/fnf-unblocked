@@ -1,0 +1,364 @@
+{
+    "version":  "1.0.2",
+    "name":  "paracetamol",
+    "cameraZoom":  0.4,
+    "directory":  "wcetamol",
+    "props":  [
+                  {
+                      "name":  "paracetamol",
+                      "assetPath":  "stages/paracetamol/paracetamol",
+                      "position":  [
+                                       -2000,
+                                       -1850
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "laptop",
+                      "assetPath":  "stages/paracetamol/laptop_default",
+                      "position":  [
+                                       100,
+                                       -200
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.9,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "apendicitis",
+                      "assetPath":  "stages/paracetamol/apendicitis",
+                      "position":  [
+                                       -1020,
+                                       -800
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "mascara",
+                      "assetPath":  "stages/paracetamol/luzroja",
+                      "position":  [
+                                       -2000,
+                                       -1850
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "pmove",
+                      "assetPath":  "stages/paracetamol/pilars_move",
+                      "position":  [
+                                       -350,
+                                       -500
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "luzroja",
+                      "assetPath":  "stages/paracetamol/luzroja",
+                      "position":  [
+                                       -2000,
+                                       -1850
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "p4",
+                      "assetPath":  "stages/paracetamol/pilares_4",
+                      "position":  [
+                                       690,
+                                       2000
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.65,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "p3",
+                      "assetPath":  "stages/paracetamol/pilares_3",
+                      "position":  [
+                                       295,
+                                       2000
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "p2",
+                      "assetPath":  "stages/paracetamol/pilares_2",
+                      "position":  [
+                                       -50,
+                                       2000
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "p1",
+                      "assetPath":  "stages/paracetamol/pilares_1",
+                      "position":  [
+                                       -330,
+                                       2000
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/paracetamol/suelo",
+                      "position":  [
+                                       -2500,
+                                       -1750
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bar",
+                      "assetPath":  "stages/paracetamol/default_bar",
+                      "position":  [
+                                       -325,
+                                       -185
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.67,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "perla",
+                      "assetPath":  "stages/paracetamol/perlita",
+                      "position":  [
+                                       700,
+                                       -900
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.75,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackblack",
+                      "assetPath":  "stages/paracetamol/blackblack",
+                      "position":  [
+                                       -300,
+                                       -300
+                                   ],
+                      "zIndex":  160,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  [
+                                    2,
+                                    2
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   1600,
+                                                   580
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  150,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -500,
+                                                        -300
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    100,
+                                                    0
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  170,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -50,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   390,
+                                                   300
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  140,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        550,
+                                                        200
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  0.0001,
+                                  "angle":  0
+                              }
+                   }
+}

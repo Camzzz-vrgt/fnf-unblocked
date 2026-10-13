@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "satanpants",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/satanpants",
+  "offsets": [500, 150],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-520, -140],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [5, 3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-14, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-12, 6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-5, -1],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-satanpants",
+    "isPixel": false
+  }
+}

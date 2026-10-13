@@ -1,0 +1,50 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "rent-due",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "hutheman",
+      "girlfriend": "pacma_tv",
+      "opponent": "usa_faker",
+      "opponentVocals": ["usa_faker", "pacma_faker"],
+      "playerVocals": ["hutheman"]
+    },
+    "stage": "rent_due",
+    "noteStyle": "bikini",
+    "album": "rent-due",
+    "ratings": { "hard": 7 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 159,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 15094.3396226415,
+      "bpm": 165,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 26730.7032590051,
+      "bpm": 173,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 48927.2350509127,
+      "bpm": 177,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 59774.6926780313,
+      "bpm": 180,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+﻿{
+  "version": "1.0.1",
+  "name": "pospos_look",
+  "renderType": "sparrow",
+  "assetPath": "characters/pojapija/pospos_2",
+  "offsets": [100, 530],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-100, -190],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-5, 4],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [7, 0],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-7, 0],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [1, -2],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up",
+      "offsets": [-5, 4],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left",
+      "offsets": [7, 0],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right",
+      "offsets": [-7, 0],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down",
+      "offsets": [1, -2],
+      "frameRate": 18,
+      "looped": false
+    }
+  ],
+  "scale": 1.4,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pospos",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,81 @@
+﻿{
+  "version": "1.0.1",
+  "name": "subaru_3",
+  "renderType": "sparrow",
+  "assetPath": "characters/subaru",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up0",
+      "offsets": [0, 81],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left0",
+      "offsets": [75, 51],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right0",
+      "offsets": [-58, 4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down0",
+      "offsets": [21, -77],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up miss",
+      "offsets": [-5, 77],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "left miss",
+      "offsets": [67, 53],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "right miss",
+      "offsets": [-62, 6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down miss",
+      "offsets": [10, -77],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "subaro",
+    "isPixel": false
+  }
+}

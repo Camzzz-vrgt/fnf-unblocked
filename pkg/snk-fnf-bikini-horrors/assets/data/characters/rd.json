@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "rd",
+  "renderType": "sparrow",
+  "assetPath": "characters/rd",
+  "offsets": [-400, 750],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-150, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-4, 87],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [123, -44],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [0, 16],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [4, -84],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "rd",
+    "isPixel": false
+  }
+}

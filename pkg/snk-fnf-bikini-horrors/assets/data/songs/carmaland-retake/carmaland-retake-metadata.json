@@ -1,0 +1,65 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "Carmaland",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "carmen_retake",
+      "girlfriend": "",
+      "opponent": "bystacs",
+      "opponentVocals": ["Stacks"],
+      "playerVocals": ["Carmen"]
+    },
+    "stage": "moco",
+    "noteStyle": "carma",
+    "album": "volume1",
+    "ratings": { "hard": 8 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 117,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 49230.7692307692,
+      "bpm": 120,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 57230.7692307692,
+      "bpm": 122,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 65099.6216897856,
+      "bpm": 128,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 72599.6216897856,
+      "bpm": 132,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 94417.8035079674,
+      "bpm": 137,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 101425.10277804,
+      "bpm": 142,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 107763.130947054,
+      "bpm": 157,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

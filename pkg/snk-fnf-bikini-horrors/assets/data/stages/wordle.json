@@ -1,0 +1,425 @@
+{
+    "version":  "1.0.2",
+    "name":  "wordle",
+    "cameraZoom":  1,
+    "directory":  "wwordle",
+    "props":  [
+                  {
+                      "name":  "mar",
+                      "assetPath":  "stages/wordle/mar",
+                      "position":  [
+                                       -1295,
+                                       -750
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "meow",
+                      "assetPath":  "stages/wordle/meow",
+                      "position":  [
+                                       -1115,
+                                       -554
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.4,
+                                     0.4
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "montana",
+                      "assetPath":  "stages/wordle/montana",
+                      "position":  [
+                                       -1150,
+                                       -601
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.5,
+                                     0.5
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo_3",
+                      "assetPath":  "stages/wordle/suelo_3",
+                      "position":  [
+                                       -1145,
+                                       -598
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.6,
+                                     0.6
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo_2",
+                      "assetPath":  "stages/wordle/suelo_2",
+                      "position":  [
+                                       -1145,
+                                       -598
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/wordle/suelo",
+                      "position":  [
+                                       -1145,
+                                       -598
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "amanda",
+                      "assetPath":  "stages/wordle/amanda",
+                      "position":  [
+                                       2439,
+                                       719
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "a_moving",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "quetzal",
+                      "assetPath":  "stages/wordle/quetzal",
+                      "position":  [
+                                       2424,
+                                       744
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "q_moving",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "ulises",
+                      "assetPath":  "stages/wordle/ulises",
+                      "position":  [
+                                       -1331,
+                                       724
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "u_moving",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "iniesta",
+                      "assetPath":  "stages/wordle/iniesta",
+                      "position":  [
+                                       -1337,
+                                       745
+                                   ],
+                      "zIndex":  140,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "i_moving",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "romeo",
+                      "assetPath":  "stages/wordle/romeo",
+                      "position":  [
+                                       2434,
+                                       755
+                                   ],
+                      "zIndex":  150,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "r_moving",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "foreground",
+                      "assetPath":  "stages/wordle/foreground",
+                      "position":  [
+                                       -1045,
+                                       -624
+                                   ],
+                      "zIndex":  160,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.2,
+                                     1.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "fiff",
+                      "assetPath":  "stages/wordle/fiff",
+                      "position":  [
+                                       -350,
+                                       -180
+                                   ],
+                      "zIndex":  170,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.7,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   1100,
+                                                   404
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  90,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -378,
+                                                    76
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  80,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   353,
+                                                   172
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  70,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cris_pov",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/crisbob3POV",
+  "offsets": [100, 305],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [60, 70],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "IDLE",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-11, 185],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [59, 34],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-299, -56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [21, -137],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "crisbobicon2",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cathy",
+  "renderType": "sparrow",
+  "assetPath": "characters/cathy",
+  "offsets": [-180, -500],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [20, 5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [-285, -70],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [205, -5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-16.85, 36],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "cathy",
+    "isPixel": false
+  }
+}

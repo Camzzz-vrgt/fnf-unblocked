@@ -1,0 +1,109 @@
+{
+    "version":  "1.0.2",
+    "name":  "fataldomains",
+    "cameraZoom":  0.65,
+    "directory":  "wfert",
+    "props":  [
+                  {
+                      "name":  "fondomuybueno",
+                      "assetPath":  "stages/fatal/fondomuybueno",
+                      "position":  [
+                                       393,
+                                       106
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  2,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "indexano",
+                      "assetPath":  "stages/fatal/indexano",
+                      "position":  [
+                                       1300,
+                                       500
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  4,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   1487,
+                                                   480
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  50,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        50
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    1000,
+                                                    400
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  40,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -150,
+                                                         80
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -632,
+                                                   108
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  30,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

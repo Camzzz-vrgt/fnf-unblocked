@@ -1,0 +1,61 @@
+﻿{
+  "version": "1.0.1",
+  "name": "soretro_m",
+  "renderType": "sparrow",
+  "assetPath": "characters/soretro_mario",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-140, 60],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "wtf",
+      "prefix": "offended",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 5,
+  "flipX": true,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "retrom",
+    "isPixel": false
+  }
+}

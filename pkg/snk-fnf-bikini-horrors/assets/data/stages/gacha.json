@@ -1,0 +1,88 @@
+{
+    "version":  "1.0.2",
+    "name":  "gacha",
+    "cameraZoom":  3,
+    "directory":  "wbarna",
+    "props":  [
+                  {
+                      "name":  "a",
+                      "assetPath":  "stages/gacha/a",
+                      "position":  [
+                                       -250,
+                                       -380
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   600,
+                                                   -190
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  40,
+                                  "scale":  1.5,
+                                  "cameraOffsets":  [
+                                                        -180,
+                                                        100
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -650,
+                                                    60
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  20,
+                                   "scale":  1.5,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         -400
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -650,
+                                                   60
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  30,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -200,
+                                                        -400
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

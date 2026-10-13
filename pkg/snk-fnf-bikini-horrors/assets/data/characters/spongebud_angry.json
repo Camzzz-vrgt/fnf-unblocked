@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongebud_angry",
+  "renderType": "sparrow",
+  "assetPath": "characters/newspongebud",
+  "offsets": [0, -90],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-200, -250],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "imad",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "umad",
+      "offsets": [9, 71],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "lmad",
+      "offsets": [110, -61],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "rmad",
+      "offsets": [-68.2, -59.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "dmad",
+      "offsets": [12.15, -51],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "buddy",
+    "isPixel": false
+  }
+}

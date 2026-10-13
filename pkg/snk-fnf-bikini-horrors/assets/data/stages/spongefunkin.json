@@ -1,0 +1,88 @@
+{
+    "version":  "1.0.2",
+    "name":  "spongefunkin",
+    "cameraZoom":  0.7,
+    "directory":  "wsponge",
+    "props":  [
+                  {
+                      "name":  "fondo",
+                      "assetPath":  "stages/spongefunkin/fondo",
+                      "position":  [
+                                       -651,
+                                       -356
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   261,
+                                                   100
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  50,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -992,
+                                                    47
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  30,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -80,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   3400,
+                                                   0
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  20,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

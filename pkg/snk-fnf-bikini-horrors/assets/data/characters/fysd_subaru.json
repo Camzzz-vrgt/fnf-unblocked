@@ -1,0 +1,38 @@
+﻿{
+  "version": "1.0.1",
+  "name": "fysd_subaru",
+  "renderType": "sparrow",
+  "assetPath": "characters/fysd/fysd_subaru",
+  "offsets": [4550, -380],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, -1],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "free",
+      "prefix": "wings",
+      "offsets": [20.3, -1.5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "para_cojones",
+      "prefix": "caca",
+      "offsets": [20.3, -1.5],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "fysd",
+    "isPixel": false
+  }
+}

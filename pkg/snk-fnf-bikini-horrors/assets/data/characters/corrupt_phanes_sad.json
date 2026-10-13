@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "corrupt_phanes_sad",
+  "renderType": "sparrow",
+  "assetPath": "characters/corrupt_phanes_sad",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "sadphanes_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "sadphanes_up",
+      "offsets": [-15, 56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "sadphanes_left",
+      "offsets": [117, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "sadphanes_right",
+      "offsets": [-96.2, 41.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "sadphanes_down",
+      "offsets": [51.15, -26],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongephanes-evil",
+    "isPixel": false
+  }
+}

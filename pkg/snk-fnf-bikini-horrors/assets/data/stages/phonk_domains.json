@@ -1,0 +1,286 @@
+{
+    "version":  "1.0.2",
+    "name":  "phonk_domains",
+    "cameraZoom":  0.32,
+    "directory":  "wfevil",
+    "props":  [
+                  {
+                      "name":  "mar_red",
+                      "assetPath":  "stages/cacatua/mar_red",
+                      "position":  [
+                                       -1177,
+                                       -827
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "fondo",
+                      "assetPath":  "stages/cacatua/fondo",
+                      "position":  [
+                                       -1230,
+                                       -687
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "espectantes",
+                      "assetPath":  "stages/cacatua/espectantes",
+                      "position":  [
+                                       -1213,
+                                       -687
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/cacatua/suelo",
+                      "position":  [
+                                       -1213,
+                                       -695
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "calamardo",
+                      "assetPath":  "stages/cacatua/calamardo",
+                      "position":  [
+                                       -1240,
+                                       -687
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "calamardo head_turn0001",
+                                             "offsets":  [0, 0],
+                                             "looped":  true,
+                                             "frameRate":  12,
+                                             "frameIndices":  []
+                                         },
+                                         {
+                                             "name":  "turn",
+                                             "prefix":  "calamardo head_turn",
+                                             "offsets":  [0, 0],
+                                             "looped":  false,
+                                             "frameRate":  12,
+                                             "frameIndices":  []
+                                         }
+                                     ]
+                  },
+                  {
+                      "name":  "aura",
+                      "assetPath":  "stages/cacatua/aura",
+                      "position":  [
+                                       -1240,
+                                       -687
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "aura aura",
+                                             "offsets":  [0, 0],
+                                             "looped":  true,
+                                             "frameRate":  12,
+                                             "frameIndices":  []
+                                         }
+                                     ]
+                  },
+                  {
+                      "name":  "luz",
+                      "assetPath":  "stages/cacatua/luz",
+                      "position":  [
+                                       -1240,
+                                       -657
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cortinas",
+                      "assetPath":  "stages/cacatua/cortinas",
+                      "position":  [
+                                       -1350,
+                                       -760
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "mist",
+                      "assetPath":  "stages/cacatua/mist",
+                      "position":  [
+                                       -1350,
+                                       -760
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.5,
+                                     0.5
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   530,
+                                                   400
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  90,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -550,
+                                                        -100
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -700,
+                                                    420
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  80,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         200,
+                                                         -200
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   400,
+                                                   130
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  0,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 0.95,
+                                                 0.95
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

@@ -1,0 +1,38 @@
+﻿{
+  "version": "1.0.1",
+  "name": "kevinklast",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/kevinklast",
+  "offsets": [100, 250],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-60, -24],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "kargando",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "kargando",
+      "prefix": "kargando",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "klast",
+      "prefix": "kevinklast",
+      "offsets": [1208, 492],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "abobti",
+    "isPixel": false
+  }
+}

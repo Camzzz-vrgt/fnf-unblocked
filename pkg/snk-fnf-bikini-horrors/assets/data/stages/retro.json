@@ -1,0 +1,151 @@
+{
+    "version":  "1.0.2",
+    "name":  "retro",
+    "cameraZoom":  1,
+    "directory":  "wretro",
+    "props":  [
+                  {
+                      "name":  "hi",
+                      "assetPath":  "stages/retro/hi",
+                      "position":  [
+                                       785,
+                                       567
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "freinds",
+                      "assetPath":  "stages/retro/freinds",
+                      "position":  [
+                                       785,
+                                       567
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "no",
+                      "assetPath":  "stages/retro/no",
+                      "position":  [
+                                       785,
+                                       567
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "die",
+                      "assetPath":  "stages/retro/die",
+                      "position":  [
+                                       785,
+                                       567
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   615,
+                                                   692
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  40,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    884,
+                                                    690
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  30,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -345,
+                                                   420
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  20,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  0.0001,
+                                  "angle":  0
+                              }
+                   }
+}

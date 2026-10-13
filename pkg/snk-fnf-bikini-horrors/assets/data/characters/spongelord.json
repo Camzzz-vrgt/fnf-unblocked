@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongelord",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongelord",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "spongelord idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "spongelord up",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "spongelord left",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "spongelord right",
+      "offsets": [1.8, 1.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "spongelord down",
+      "offsets": [12.15, -5],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongelord",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sw_phase3",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/pp_phase3_bf",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-180, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [94, 32],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [171, 7],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-9, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [25, -36],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-sw",
+    "isPixel": false
+  }
+}

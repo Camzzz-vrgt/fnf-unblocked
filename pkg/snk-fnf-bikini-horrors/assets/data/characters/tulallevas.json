@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.1",
+  "name": "tulallevas",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/tu_la_llevas1",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, 100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "tulallevas",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "tulallevas1",
+      "prefix": "tulallevas",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-jj",
+    "isPixel": false
+  }
+}

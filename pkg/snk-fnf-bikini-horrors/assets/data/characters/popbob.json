@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "popbob",
+  "renderType": "sparrow",
+  "assetPath": "characters/popbob",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [5, 55],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [110, 65],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [6.8, 57.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [23.15, 96],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "popbob",
+    "isPixel": false
+  }
+}

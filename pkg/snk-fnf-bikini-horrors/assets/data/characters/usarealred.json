@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "usarealred",
+  "renderType": "sparrow",
+  "assetPath": "characters/usa/usareal_red",
+  "offsets": [-580, -540],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [195, 409],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [677, 269],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-175.2, -12.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [270.15, 193],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "usared",
+    "isPixel": false
+  }
+}

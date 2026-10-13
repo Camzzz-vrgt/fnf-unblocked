@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.1",
+  "name": "try_lava",
+  "renderType": "sparrow",
+  "assetPath": "characters/trytrong/michael-tryson_lava",
+  "offsets": [-50, -350],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-150, 100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "try_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "try_up",
+      "offsets": [-23, 402],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "try_left",
+      "offsets": [526, 58],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "try_right",
+      "offsets": [-21.2, 14.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "try_down",
+      "offsets": [163.15, -304],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "moonwalk",
+      "prefix": "try_moonwalk",
+      "offsets": [-20, 65],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "try_dance",
+      "prefix": "try_dance",
+      "offsets": [-50, -15],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "nothing",
+    "isPixel": false
+  }
+}

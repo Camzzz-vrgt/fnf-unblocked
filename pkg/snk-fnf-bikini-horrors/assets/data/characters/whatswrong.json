@@ -1,0 +1,32 @@
+﻿{
+  "version": "1.0.1",
+  "name": "whatswrong",
+  "renderType": "sparrow",
+  "assetPath": "characters/whatswrong",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "ketchup_phrase",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "phrase",
+      "prefix": "ketchup_phrase",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.5,
+  "singTime": 9.5,
+  "healthIcon": {
+    "id": "ketchup",
+    "isPixel": false
+  }
+}

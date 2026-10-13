@@ -1,0 +1,47 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongewarrior_death",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongewarrior_death",
+  "offsets": [1600, 500],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "death",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "death",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "deathloop",
+      "offsets": [-44, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "retry",
+      "offsets": [6, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "nothing",
+    "isPixel": false
+  }
+}

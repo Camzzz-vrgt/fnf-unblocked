@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.1",
+  "name": "girlfriday",
+  "renderType": "sparrow",
+  "assetPath": "characters/girlfriday",
+  "offsets": [20, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "left",
+      "offsets": [124, 130],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "right",
+      "offsets": [124, 130],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "gf",
+    "isPixel": false
+  }
+}

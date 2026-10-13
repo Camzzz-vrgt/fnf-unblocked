@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "warra_aura",
+  "renderType": "sparrow",
+  "assetPath": "characters/eat/warra_aura",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [26, 99],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [286, -21],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-91, -58],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [14, -206],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "scale": 1.33,
+  "flipX": true,
+  "healthIcon": {
+    "id": "warra",
+    "isPixel": false
+  }
+}

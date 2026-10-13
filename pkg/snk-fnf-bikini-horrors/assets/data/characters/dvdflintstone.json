@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.1",
+  "name": "dvdflintstone",
+  "renderType": "sparrow",
+  "assetPath": "characters/flintstone/dvdflint",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [88, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [2, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [3, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "intro",
+      "prefix": "intro",
+      "offsets": [16, 10],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "carmaland1",
+    "isPixel": false
+  }
+}

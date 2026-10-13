@@ -1,0 +1,38 @@
+﻿{
+  "version": "1.0.1",
+  "name": "diga",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/ehm_diga",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, 100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "diga1",
+      "offsets": [1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "diga",
+      "prefix": "diga1",
+      "offsets": [1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "diga2",
+      "prefix": "diga2",
+      "offsets": [1, -12],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-jj",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,80 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bystacs",
+  "renderType": "sparrow",
+  "assetPath": "characters/carmaland_retake/bystacs",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-104, 87],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "aidle",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-20, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [9, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-3, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "transform down",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "transform right",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "transform left",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "bystacs",
+    "isPixel": false
+  }
+}

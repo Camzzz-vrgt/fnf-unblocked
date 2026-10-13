@@ -1,0 +1,62 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sakuraismas",
+  "renderType": "sparrow",
+  "assetPath": "characters/sakuraismas",
+  "offsets": [0, -100],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-100, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-47, 144],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [170, -114],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [72, -155],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [106, -313],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "charge",
+      "prefix": "charge",
+      "offsets": [144, -98],
+      "frameRate": 10,
+      "looped": true
+    }
+  ],
+  "scale": 0.7,
+  "flipX": true,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "sakurai",
+    "isPixel": false
+  }
+}

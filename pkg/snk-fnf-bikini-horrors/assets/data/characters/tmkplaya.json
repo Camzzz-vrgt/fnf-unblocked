@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "tmkplaya",
+  "renderType": "sparrow",
+  "assetPath": "characters/playa/tmkplaya",
+  "offsets": [-250, -350],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "tmk_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "tmk_up",
+      "offsets": [25, 280],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "tmk_left",
+      "offsets": [95, 6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "tmk_right",
+      "offsets": [-31.2, -60.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "tmk_down",
+      "offsets": [29.15, -46],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "voice",
+      "prefix": "tmk_voice",
+      "offsets": [35, 35],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "tmk",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "lovermad",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/underguaterlover",
+  "offsets": [137, 274],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [130, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "angryidle",
+      "offsets": [0, 0],
+      "frameRate": 27,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "angryup",
+      "offsets": [25, 125],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "angryleft",
+      "offsets": [95, 30],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "angryright",
+      "offsets": [69, 9],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "angrydown",
+      "offsets": [15, -42],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "uwlangry",
+    "isPixel": false
+  }
+}

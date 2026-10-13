@@ -1,0 +1,193 @@
+{
+    "version":  "1.0.2",
+    "name":  "dsides",
+    "cameraZoom":  1,
+    "directory":  "wdadda",
+    "props":  [
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/dsides/suelo",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "fondoCortinas",
+                      "assetPath":  "stages/dsides/cortinas_detras",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "frenteCortinas",
+                      "assetPath":  "stages/dsides/cortinas_frente",
+                      "position":  [
+                                       50,
+                                       0
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foco",
+                      "assetPath":  "stages/dsides/foco",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "personajes",
+                      "assetPath":  "stages/dsides/personajes",
+                      "position":  [
+                                       0,
+                                       1214
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "luz",
+                      "assetPath":  "stages/dsides/luz",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.5,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   1264,
+                                                   761
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  110,
+                                  "scale":  0.75,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    571,
+                                                    780
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  100,
+                                   "scale":  0.75,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   913,
+                                                   907
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  70,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  0.0001,
+                                  "angle":  0
+                              }
+                   }
+}

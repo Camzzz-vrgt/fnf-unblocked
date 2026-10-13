@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "castle",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/castleknight",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-647, -171],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "knightidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "knightup",
+      "offsets": [-1, 3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "knightright",
+      "offsets": [-6, 3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "knightleft",
+      "offsets": [-6, 2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "knightdown",
+      "offsets": [-6, 1],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "isaacicon1",
+    "isPixel": false
+  }
+}

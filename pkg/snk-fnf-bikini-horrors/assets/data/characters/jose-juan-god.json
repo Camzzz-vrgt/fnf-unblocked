@@ -1,0 +1,81 @@
+﻿{
+  "version": "1.0.1",
+  "name": "jose-juan-god",
+  "renderType": "sparrow",
+  "assetPath": "characters/jose_juan_3d",
+  "offsets": [-400, -330],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [50, 100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [10, -20],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-31, 14],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [13, 17],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-50, 20],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-40, 37],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "spin",
+      "prefix": "down",
+      "offsets": [-40, 37],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "twerk",
+      "prefix": "twerk",
+      "offsets": [-60, -5],
+      "frameRate": 48,
+      "looped": true
+    },
+    {
+      "name": "seizure",
+      "prefix": "convulsion",
+      "offsets": [-5, 10],
+      "frameRate": 48,
+      "looped": true
+    },
+    {
+      "name": "dead",
+      "prefix": "dead",
+      "offsets": [-20, -15],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 1.25,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "josejuan",
+    "isPixel": false
+  }
+}

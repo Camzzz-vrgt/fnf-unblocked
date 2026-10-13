@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "kenny",
+  "renderType": "sparrow",
+  "assetPath": "characters/kenny",
+  "offsets": [0, -30],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [70, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [65, 196],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [143, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-95.2, 132.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-16.85, -184],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "kenny",
+    "isPixel": false
+  }
+}

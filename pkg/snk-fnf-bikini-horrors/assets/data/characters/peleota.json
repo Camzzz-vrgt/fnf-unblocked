@@ -1,0 +1,144 @@
+﻿{
+  "version": "1.0.1",
+  "name": "peleota",
+  "renderType": "sparrow",
+  "assetPath": "characters/peleota",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, -300],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "rest",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bubblehit1",
+      "offsets": [23, -9],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "bubblehit2",
+      "offsets": [16, -8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bubbleblock2",
+      "offsets": [-228, -47],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "bubbleblock1",
+      "offsets": [-329.2, -44.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "bobhit2",
+      "offsets": [-253, -35],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss-alt",
+      "prefix": "bobhit1",
+      "offsets": [-356, -40],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "bobblock2",
+      "offsets": [162, -47],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss-alt",
+      "prefix": "bobblock1",
+      "offsets": [167, -47],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "bubbleuppercut",
+      "offsets": [142, 437],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "bobuppercut",
+      "offsets": [-290, 275],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "bubbleDODGE",
+      "prefix": "bubbledodge",
+      "offsets": [40, -149],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "bubbleHOOK",
+      "prefix": "bubbleuppercut",
+      "offsets": [142, 437],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "bobDODGE",
+      "prefix": "bobdodge",
+      "offsets": [-125, -55],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "bobHOOK",
+      "prefix": "bobuppercut",
+      "offsets": [-290, 275],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bubbledodge",
+      "offsets": [40, -149],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "bobdodge",
+      "offsets": [-125, -55],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "bobdodge",
+      "offsets": [-125, -55],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bubbleman",
+    "isPixel": false
+  }
+}

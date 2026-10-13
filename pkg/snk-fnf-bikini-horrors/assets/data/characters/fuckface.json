@@ -1,0 +1,100 @@
+﻿{
+  "version": "1.0.1",
+  "name": "fuckface",
+  "renderType": "sparrow",
+  "assetPath": "characters/buv/fuckface",
+  "offsets": [210, 300],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-320, -140],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [2, 29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [30, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [-25, -3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [30, -67],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "u alt",
+      "offsets": [10, 165],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "r alt",
+      "offsets": [295, 80],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "l alt",
+      "offsets": [-105, 10],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "d alt",
+      "offsets": [140, -70],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "transform",
+      "offsets": [93, 76],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "shout",
+      "prefix": "shout",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "wave",
+      "prefix": "wave",
+      "offsets": [69, 10],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "healthIcon": {
+    "id": "fuckface",
+    "isPixel": false
+  }
+}

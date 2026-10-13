@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.1",
+  "name": "shimmy",
+  "renderType": "sparrow",
+  "assetPath": "characters/shimyshimy",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bubbledance",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 1.5,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bubbleman",
+    "isPixel": false
+  }
+}

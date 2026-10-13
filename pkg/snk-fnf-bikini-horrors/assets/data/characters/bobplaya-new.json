@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bobplaya-new",
+  "renderType": "sparrow",
+  "assetPath": "characters/playa/bobplaya2",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-37, 136],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [239, -95],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-73.2, -34.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [48.15, -176],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "parece",
+      "prefix": "transformation",
+      "offsets": [78, 81],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "playa",
+    "isPixel": false
+  }
+}

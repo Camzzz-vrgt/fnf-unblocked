@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "krabitipatiti_phase4",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/pp_phase4_krabitipatiti",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-41, 117],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [-35, 15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [-179, 5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-85, -71],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bfinfinete",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "kenny_es",
+  "renderType": "sparrow",
+  "assetPath": "characters/kennyespmix",
+  "offsets": [0, -30],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [70, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [-3, 7],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-75, 267],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-7, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-120.2, 9.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-98.85, -96],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "kenny",
+    "isPixel": false
+  }
+}

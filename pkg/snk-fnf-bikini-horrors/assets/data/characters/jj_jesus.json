@@ -1,0 +1,38 @@
+﻿{
+  "version": "1.0.1",
+  "name": "jj_jesus",
+  "renderType": "sparrow",
+  "assetPath": "characters/jj_jesus",
+  "offsets": [-50, -20],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-130, 70],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [-9, -3],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "anim",
+      "prefix": "animation",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "aura",
+      "prefix": "negro",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "josejuan",
+    "isPixel": false
+  }
+}

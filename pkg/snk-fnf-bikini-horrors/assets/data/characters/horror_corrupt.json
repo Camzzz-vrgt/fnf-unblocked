@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "horror_corrupt",
+  "renderType": "sparrow",
+  "assetPath": "characters/horror_corrupt",
+  "offsets": [120, 80],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-250, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "horror_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "horror_up",
+      "offsets": [-34, 214],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "horror_right",
+      "offsets": [39, 2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "horror_left",
+      "offsets": [34, 46],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "horror_down",
+      "offsets": [142, -28],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "horror-evil",
+    "isPixel": false
+  }
+}

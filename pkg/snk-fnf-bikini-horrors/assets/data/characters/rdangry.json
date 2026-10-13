@@ -1,0 +1,80 @@
+﻿{
+  "version": "1.0.1",
+  "name": "rdangry",
+  "renderType": "sparrow",
+  "assetPath": "characters/rdangry",
+  "offsets": [-850, 850],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-150, -150],
+  "animations": [
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-256, -69],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-25, 40],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "missdown",
+      "offsets": [-255, -110],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "missleft",
+      "offsets": [-10, 20],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "missup",
+      "offsets": [-375, 191],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "missright",
+      "offsets": [-415, 15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-415, 15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-375, 144],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "rd",
+    "isPixel": false
+  }
+}

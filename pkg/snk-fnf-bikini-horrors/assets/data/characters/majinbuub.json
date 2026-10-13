@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "majinbuub",
+  "renderType": "sparrow",
+  "assetPath": "characters/majinbuub",
+  "offsets": [-100, -33],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-2, 49],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [186, 78],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-154.2, 31.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [48.15, -39],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "majinbuub",
+    "isPixel": false
+  }
+}

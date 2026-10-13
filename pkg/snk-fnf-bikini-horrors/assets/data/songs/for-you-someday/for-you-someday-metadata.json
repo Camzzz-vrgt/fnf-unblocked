@@ -1,0 +1,30 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "for-you-someday",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "fysd_phase_1",
+      "girlfriend": "fysd_phase_2",
+      "opponent": "fysd_phase_4_lord",
+      "opponentVocals": ["fysd_phase_4_lord"],
+      "playerVocals": ["fysd_phase_1"]
+    },
+    "stage": "fysd",
+    "noteStyle": "bikini",
+    "album": "for-you-someday",
+    "ratings": { "hard": 3 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 195,
+      "bt": [4, 4, 4]
+    }
+  ]
+}

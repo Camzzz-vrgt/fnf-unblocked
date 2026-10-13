@@ -1,0 +1,344 @@
+{
+    "version":  "1.0.2",
+    "name":  "moco",
+    "cameraZoom":  3,
+    "directory":  "wcarma",
+    "props":  [
+                  {
+                      "name":  "doc_tops",
+                      "assetPath":  "stages/planeta_vegetta/doc_tops",
+                      "position":  [
+                                       0,
+                                       -27
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ramirez",
+                      "assetPath":  "stages/planeta_vegetta/ramirez",
+                      "position":  [
+                                       -26,
+                                       -71
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ramirez2",
+                      "assetPath":  "stages/planeta_vegetta/ramirez2",
+                      "position":  [
+                                       -26,
+                                       -71
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "marruecos",
+                      "assetPath":  "stages/planeta_vegetta/marruecos",
+                      "position":  [
+                                       -148,
+                                       -127
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "marruecos_",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "platform",
+                      "assetPath":  "stages/planeta_vegetta/platform",
+                      "position":  [
+                                       -151,
+                                       0
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "platform_",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "frank",
+                      "assetPath":  "stages/planeta_vegetta/frank_gf",
+                      "position":  [
+                                       -51,
+                                       23
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "pajaro_en_rama",
+                      "assetPath":  "stages/planeta_vegetta/pajaro_en_rama",
+                      "position":  [
+                                       -269,
+                                       -68
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "pajaro en la rama_",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "yo_cuando_esqueleto",
+                      "assetPath":  "stages/planeta_vegetta/yo_cuando_esqueleto",
+                      "position":  [
+                                       -178,
+                                       -198
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "yo cuando esqueleto_",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "fondo",
+                      "assetPath":  "stages/planeta_vegetta/fondo",
+                      "position":  [
+                                       -1309,
+                                       -588
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.33,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackCover",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       -1428,
+                                       -806
+                                   ],
+                      "zIndex":  140,
+                      "scale":  [
+                                    3000,
+                                    3000
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   23,
+                                                   -9
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  130,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -108,
+                                                    -25
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  120,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -94,
+                                                   -27
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  10,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

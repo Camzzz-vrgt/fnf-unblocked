@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "corrupt_phanes_end",
+  "renderType": "sparrow",
+  "assetPath": "characters/corrupt_phanes_end",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "endphanes_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "endphanes_up",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "endphanes_left",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "endphanes_right",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "endphanes_down",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongephanes-evil",
+    "isPixel": false
+  }
+}

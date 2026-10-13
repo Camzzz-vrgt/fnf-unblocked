@@ -1,0 +1,806 @@
+{
+    "version":  "1.0.2",
+    "name":  "bob_cave",
+    "cameraZoom":  0.6,
+    "directory":  "wpower",
+    "props":  [
+                  {
+                      "name":  "cave",
+                      "assetPath":  "stages/bob_cave/cave",
+                      "position":  [
+                                       -2824,
+                                       -3320
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "emerald",
+                      "assetPath":  "stages/bob_cave/emerald",
+                      "position":  [
+                                       -2733,
+                                       -3343
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.05,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "floor",
+                      "assetPath":  "stages/bob_cave/no_se_xd",
+                      "position":  [
+                                       -2826,
+                                       -3321
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "patrisio",
+                      "assetPath":  "stages/bob_cave/patrisio",
+                      "position":  [
+                                       1114,
+                                       -36
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "spaceBg1",
+                      "assetPath":  "stages/bob_cave/space/0",
+                      "position":  [
+                                       0,
+                                       -3300
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  3,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  1
+                  },
+                  {
+                      "name":  "spaceBg2",
+                      "assetPath":  "stages/bob_cave/space/0",
+                      "position":  [
+                                       0,
+                                       -3300
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  3,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  1
+                  },
+                  {
+                      "name":  "stars1",
+                      "assetPath":  "stages/bob_cave/space/1",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars2",
+                      "assetPath":  "stages/bob_cave/space/2",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars3",
+                      "assetPath":  "stages/bob_cave/space/3",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars7",
+                      "assetPath":  "stages/bob_cave/space/1",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars8",
+                      "assetPath":  "stages/bob_cave/space/2",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars9",
+                      "assetPath":  "stages/bob_cave/space/3",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "galaxy1",
+                      "assetPath":  "stages/bob_cave/space/4",
+                      "position":  [
+                                       -300,
+                                       -5320
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "galaxy2",
+                      "assetPath":  "stages/bob_cave/space/5",
+                      "position":  [
+                                       -300,
+                                       -5320
+                                   ],
+                      "zIndex":  140,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars4",
+                      "assetPath":  "stages/bob_cave/space/1",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  150,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars5",
+                      "assetPath":  "stages/bob_cave/space/2",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  160,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars6",
+                      "assetPath":  "stages/bob_cave/space/3",
+                      "position":  [
+                                       -1000,
+                                       -5320
+                                   ],
+                      "zIndex":  170,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars10",
+                      "assetPath":  "stages/bob_cave/space/1",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  180,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars11",
+                      "assetPath":  "stages/bob_cave/space/2",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  190,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars12",
+                      "assetPath":  "stages/bob_cave/space/3",
+                      "position":  [
+                                       600,
+                                       -5320
+                                   ],
+                      "zIndex":  200,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "galaxy3",
+                      "assetPath":  "stages/bob_cave/space/4",
+                      "position":  [
+                                       -300,
+                                       -5320
+                                   ],
+                      "zIndex":  210,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "galaxy4",
+                      "assetPath":  "stages/bob_cave/space/5",
+                      "position":  [
+                                       -300,
+                                       -5320
+                                   ],
+                      "zIndex":  220,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "luno",
+                      "assetPath":  "stages/bob_cave/space/7",
+                      "position":  [
+                                       0,
+                                       -5320
+                                   ],
+                      "zIndex":  230,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.25,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foreground",
+                      "assetPath":  "stages/bob_cave/foreground",
+                      "position":  [
+                                       -3004,
+                                       -3388
+                                   ],
+                      "zIndex":  280,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.4,
+                                     1.4
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0.9
+                  },
+                  {
+                      "name":  "white",
+                      "assetPath":  "#FFFFFF",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  290,
+                      "scale":  [
+                                    1280,
+                                    720
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "zoomFactor":  0
+                  },
+                  {
+                      "name":  "introPanel",
+                      "assetPath":  "stages/bob_cave/renders/intro",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  300,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "keepupPanel",
+                      "assetPath":  "stages/bob_cave/renders/keep-up",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  310,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "laughPanel",
+                      "assetPath":  "stages/bob_cave/renders/laugh",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  320,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bobTransform",
+                      "assetPath":  "stages/bob_cave/renders/bob-transform",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  330,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bfTransform",
+                      "assetPath":  "stages/bob_cave/renders/bf-transform",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  340,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "tartarSauce",
+                      "assetPath":  "stages/bob_cave/renders/tartar-sauce",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  350,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "shine1",
+                      "assetPath":  "stages/bob_cave/space/6",
+                      "position":  [
+                                       0,
+                                       -3320
+                                   ],
+                      "zIndex":  360,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "shine2",
+                      "assetPath":  "stages/bob_cave/space/6",
+                      "position":  [
+                                       0,
+                                       -3320
+                                   ],
+                      "zIndex":  370,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "darkLights",
+                      "assetPath":  "#A1A300",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  380,
+                      "scale":  [
+                                    1280,
+                                    720
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "zoomFactor":  0
+                  },
+                  {
+                      "name":  "transition",
+                      "assetPath":  "stages/bob_cave/trans",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  390,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   988,
+                                                   315
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  260,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -50,
+                                                    -188
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  250,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -477,
+                                                   -48
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  240,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  0.0001,
+                                  "angle":  0
+                              }
+                   }
+}

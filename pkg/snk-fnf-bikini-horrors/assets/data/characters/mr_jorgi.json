@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.1",
+  "name": "mr_jorgi",
+  "renderType": "sparrow",
+  "assetPath": "characters/abuela_jorgi",
+  "offsets": [100, 100],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "jorgi_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "jorgi_up",
+      "offsets": [-28, 111],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "jorgi_left",
+      "offsets": [216, -56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "jorgi_right",
+      "offsets": [90, 51],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "jorgi_down",
+      "offsets": [24, -57],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "sienten",
+      "prefix": "se_sienten",
+      "offsets": [33, 287],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.4,
+  "singTime": 9.5,
+  "healthIcon": {
+    "id": "ketchup",
+    "isPixel": false
+  }
+}

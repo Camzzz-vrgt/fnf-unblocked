@@ -1,0 +1,88 @@
+{
+    "version":  "1.0.2",
+    "name":  "epstein",
+    "cameraZoom":  0.65,
+    "directory":  "wwordle",
+    "props":  [
+                  {
+                      "name":  "epstein",
+                      "assetPath":  "stages/wordle/epstein",
+                      "position":  [
+                                       200,
+                                       200
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  2.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   -1800,
+                                                   -700
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  20,
+                                  "scale":  5,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -266,
+                                                    50
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  10,
+                                   "scale":  1.25,
+                                   "cameraOffsets":  [
+                                                         -125,
+                                                         125
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   0,
+                                                   0
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  30,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

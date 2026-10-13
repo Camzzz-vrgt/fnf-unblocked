@@ -1,0 +1,58 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cristobal1",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/bob1full",
+  "offsets": [100, 275],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [60, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-21, 40],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [28, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-10, -8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [16, -92],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "transformation",
+      "offsets": [155, 40],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "crisbobicon1",
+    "isPixel": false
+  }
+}

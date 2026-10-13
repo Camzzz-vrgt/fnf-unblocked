@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.1",
+  "name": "perlitadisfraz",
+  "renderType": "sparrow",
+  "assetPath": "characters/perlitadisfraz",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Perlita_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "Perlita_phrase",
+      "offsets": [520, 53],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "perlita",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+    "version":  "1.0.2",
+    "name":  "jellyfish_fields_1",
+    "cameraZoom":  0.7,
+    "directory":  "wtwister",
+    "props":  [
+                  {
+                      "name":  "floor",
+                      "assetPath":  "stages/bubbletwister/jellyfish_fields",
+                      "position":  [
+                                       -1200,
+                                       -800
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   400,
+                                                   80
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  30,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -350,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -700,
+                                                    200
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  20,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         150,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   130,
+                                                   -350
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  40,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -250,
+                                                        200
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

@@ -1,0 +1,55 @@
+﻿{
+  "version": "1.0.1",
+  "name": "SAKURAI",
+  "renderType": "sparrow",
+  "assetPath": "characters/SAKURAI",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-100, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-63, 110],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [66, 14],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-55, -77],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [22, -219],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.7,
+  "flipX": true,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "sakurai",
+    "isPixel": false
+  }
+}

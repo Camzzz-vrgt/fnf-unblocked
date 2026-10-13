@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "old_spongewarrior",
+  "renderType": "sparrow",
+  "assetPath": "characters/old_spongewarrior",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bf_idle0",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "bf_up",
+      "offsets": [213, 720],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bf_right",
+      "offsets": [310, 655],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bf_left",
+      "offsets": [525, 605],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bf_down",
+      "offsets": [159, 583],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "old-warrior",
+    "isPixel": false
+  }
+}

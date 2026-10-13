@@ -1,0 +1,256 @@
+{
+  "version": "1.0.2",
+  "name": "poja",
+  "cameraZoom": 1,
+  "directory": "wkaka",
+  "props": [
+    {
+      "name": "fondo",
+      "assetPath": "stages/poja/fondo",
+      "position": [-1638, -858],
+      "zIndex": 10,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [0.5, 0.5],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fondo",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle",
+      "zoomFactor": 1.05
+    },
+    {
+      "name": "fondaco",
+      "assetPath": "stages/poja/fondaco",
+      "position": [-1289, -906],
+      "zIndex": 20,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [0.5, 0.5],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "idle",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "bg",
+      "assetPath": "stages/poja/background",
+      "position": [-1201, -214],
+      "zIndex": 30,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1.03,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [0.8, 0.8],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "suelo",
+      "assetPath": "stages/poja/suelo",
+      "position": [-1404, -234],
+      "zIndex": 40,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "plataforma_shitno",
+      "assetPath": "stages/poja/plataforma_shitno",
+      "position": [1256, 682],
+      "zIndex": 50,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 3,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "rock",
+      "assetPath": "stages/poja/rock",
+      "position": [-3324, -2507],
+      "zIndex": 60,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 0.5,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "foreground",
+      "assetPath": "stages/poja/foreground",
+      "position": [-1778, -896],
+      "zIndex": 80,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1.3, 1.3],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "zoomFactor": 0.9
+    },
+    {
+      "name": "mintos",
+      "assetPath": "stages/poja/mintos",
+      "position": [-470, -320],
+      "zIndex": 120,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 0.67,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [0, 0],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "mintos",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle",
+      "zoomFactor": 0
+    },
+    {
+      "name": "gris",
+      "assetPath": "stages/poja/gris",
+      "position": [-124, 307],
+      "zIndex": 140,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1.5,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [0, 0],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "gris_",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle",
+      "zoomFactor": 0
+    },
+    {
+      "name": "poja",
+      "assetPath": "stages/poja/poja",
+      "position": [-200, 367],
+      "zIndex": 150,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1.5,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [0, 0],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "poja_",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle",
+      "zoomFactor": 0
+    }
+  ],
+  "characters": {
+    "bf": {
+      "position": [1166, -454],
+      "positionMode": "topLeft",
+      "zIndex": 90,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "dad": {
+      "position": [510, 385],
+      "positionMode": "topLeft",
+      "zIndex": 70,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "gf": {
+      "position": [820, 250],
+      "positionMode": "topLeft",
+      "zIndex": 100,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [0, 0],
+      "alpha": 1,
+      "angle": 0,
+      "zoomFactor": 0
+    }
+  }
+}

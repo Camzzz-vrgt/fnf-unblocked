@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.1",
+  "name": "trong",
+  "renderType": "sparrow",
+  "assetPath": "characters/trytrong/trong",
+  "offsets": [-300, -650],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-100, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [86, 564],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [151, -144],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-51.2, -45.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [70.15, 25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "que",
+      "prefix": "que",
+      "offsets": [55, -160],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "golpe",
+      "prefix": "golpe",
+      "offsets": [399, 782],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "brothers",
+    "isPixel": false
+  }
+}

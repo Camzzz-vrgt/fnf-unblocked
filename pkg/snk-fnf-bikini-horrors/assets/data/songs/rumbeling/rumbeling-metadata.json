@@ -1,0 +1,45 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "rumbeling",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "r_pacma",
+      "girlfriend": "gf-car",
+      "opponent": "r_tricky",
+      "opponentVocals": ["Tricky"],
+      "playerVocals": ["Pakma"]
+    },
+    "stage": "girona",
+    "noteStyle": "rumbeling",
+    "album": "rumbeling",
+    "ratings": { "hard": 8 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 204,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 123529.411764706,
+      "bpm": 158,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 207073.715562174,
+      "bpm": 100,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 225973.715562174,
+      "bpm": 140,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

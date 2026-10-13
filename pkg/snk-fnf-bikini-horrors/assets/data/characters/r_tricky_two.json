@@ -1,0 +1,80 @@
+﻿{
+  "version": "1.0.1",
+  "name": "r_tricky_two",
+  "renderType": "sparrow",
+  "assetPath": "characters/rumbeling/fase1/trikinuelas",
+  "offsets": [-420, -400],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-340, 310],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [2, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-15, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-0.2, -0.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1.85, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "scream",
+      "prefix": "scream1",
+      "offsets": [2, 2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "clown",
+      "prefix": "scream2",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "doh",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "tricky",
+    "isPixel": false
+  }
+}

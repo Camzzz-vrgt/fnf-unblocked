@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "calcuta",
+  "renderType": "sparrow",
+  "assetPath": "characters/sponjevobact2",
+  "offsets": [520, 780],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-460, -670],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [390, 710],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [160, 1220],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [590, 620],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [205, 610],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [395, 375],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.2,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "temubob2",
+    "isPixel": false
+  }
+}

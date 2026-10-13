@@ -1,0 +1,171 @@
+{
+    "version":  "1.0.2",
+    "name":  "gacha",
+    "cameraZoom":  1,
+    "directory":  "wbarna",
+    "props":  [
+                  {
+                      "name":  "gacha",
+                      "assetPath":  "stages/gacha/gacha",
+                      "position":  [
+                                       -250,
+                                       -380
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bg_barnacles1",
+                      "assetPath":  "stages/gacha/bg_barnacles1",
+                      "position":  [
+                                       -3750,
+                                       -1250
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bg_barnacles2",
+                      "assetPath":  "stages/gacha/bg_barnacles2",
+                      "position":  [
+                                       -3750,
+                                       -1250
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "fg_barnacles",
+                      "assetPath":  "stages/gacha/fg_barnacles",
+                      "position":  [
+                                       -3750,
+                                       -1250
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "rflames",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       -3500,
+                                       300
+                                   ],
+                      "zIndex":  80,
+                      "scale":  [
+                                    5520,
+                                    1700
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   300,
+                                                   10
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  50,
+                                  "scale":  1.5,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        80
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -450,
+                                                    20
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  40,
+                                   "scale":  1.5,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         20
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -75,
+                                                   -150
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  30,
+                                  "scale":  1.25,
+                                  "cameraOffsets":  [
+                                                        -150,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

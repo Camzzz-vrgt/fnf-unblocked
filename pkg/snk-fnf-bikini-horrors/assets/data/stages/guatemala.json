@@ -1,0 +1,88 @@
+﻿{
+    "version":  "1.0.2",
+    "name":  "guatemala",
+    "cameraZoom":  0.4,
+    "directory":  "shared",
+    "props":  [
+                  {
+                      "name":  "guatemala",
+                      "assetPath":  "stages/made-in-china-simulacion/guatemala",
+                      "position":  [
+                                       -1200,
+                                       -800
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     0.95
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   850,
+                                                   380
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  40,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -250,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    24,
+                                                    420
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  30,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         100,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   390,
+                                                   240
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  20,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -600,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

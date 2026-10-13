@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sans_gacha",
+  "renderType": "sparrow",
+  "assetPath": "characters/sans_gacha",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "sans",
+    "isPixel": false
+  }
+}

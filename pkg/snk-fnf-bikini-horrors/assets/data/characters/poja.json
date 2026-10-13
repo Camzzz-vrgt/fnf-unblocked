@@ -1,0 +1,117 @@
+﻿{
+  "version": "1.0.1",
+  "name": "poja",
+  "renderType": "sparrow",
+  "assetPath": "characters/pojapija/poja",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-177, 54],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-55, 113],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [85, 28],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-160, -30],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [50, 12],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "funnydown",
+      "offsets": [42, 80],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "funnyup",
+      "offsets": [74, 185],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "funnyright",
+      "offsets": [110, 95],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "funnyleft",
+      "offsets": [180, 49],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "funnyidle",
+      "offsets": [117, 134],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "offsets": [68, 85],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "gulp",
+      "prefix": "gulp",
+      "offsets": [0, 130],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "snake",
+      "prefix": "snake",
+      "offsets": [-10, 5],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "cat",
+      "prefix": "cat",
+      "offsets": [40, -35],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 1.2,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "poja",
+    "isPixel": false
+  }
+}

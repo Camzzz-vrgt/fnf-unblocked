@@ -1,0 +1,56 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cris_grande",
+  "renderType": "multisparrow",
+  "assetPath": "characters/sirope/cris_grande/1",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, 70],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true,
+      "assetPath": "characters/sirope/cris_grande/1"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [88, 303],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/sirope/cris_grande/5"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [558, -106],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/sirope/cris_grande/3"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [36, -7],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/sirope/cris_grande/4"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [311, -351],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/sirope/cris_grande/2"
+    }
+  ],
+  "healthIcon": {
+    "id": "crisbobicon2",
+    "isPixel": false
+  }
+}

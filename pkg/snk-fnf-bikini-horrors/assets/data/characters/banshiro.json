@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.1",
+  "name": "banshiro",
+  "renderType": "sparrow",
+  "assetPath": "characters/buv/banshiro",
+  "offsets": [100, 300],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-280, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "banshiro",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.5,
+  "healthIcon": {
+    "id": "fuckface",
+    "isPixel": false
+  }
+}

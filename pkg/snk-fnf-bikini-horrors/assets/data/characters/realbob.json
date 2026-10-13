@@ -1,0 +1,67 @@
+﻿{
+  "version": "1.0.1",
+  "name": "realbob",
+  "renderType": "sparrow",
+  "assetPath": "characters/realbob",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-100, -90],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [107, 1175],
+      "frameRate": 40,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [116, 16],
+      "frameRate": 40,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [11.8, 5.8],
+      "frameRate": 44,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1.85, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "im",
+      "prefix": "im spongebob",
+      "offsets": [20, 35],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "erupto",
+      "prefix": "erupto",
+      "offsets": [-1, 26],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 0.45,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "realbob",
+    "isPixel": false
+  }
+}

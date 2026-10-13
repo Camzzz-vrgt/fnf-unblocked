@@ -1,0 +1,40 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "barnacles",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "rd_gacha",
+      "girlfriend": "sans_gacha",
+      "opponent": "barnacles_gacha",
+      "opponentVocals": ["barnacles_gacha", "sans_gacha"],
+      "playerVocals": ["rd_gacha"]
+    },
+    "stage": "a",
+    "noteStyle": "bikini",
+    "album": "barnacles",
+    "ratings": { "hard": 8 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 197,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 9137.05583756345,
+      "bpm": 127,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 47522.882609217,
+      "bpm": 197,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

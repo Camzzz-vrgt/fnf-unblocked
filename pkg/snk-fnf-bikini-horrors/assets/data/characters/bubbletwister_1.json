@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bubbletwister_1",
+  "renderType": "sparrow",
+  "assetPath": "characters/bubbletwisterPhase1",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bob_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "bob_up",
+      "offsets": [-40, 105],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bob_left",
+      "offsets": [48, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bob_right",
+      "offsets": [-28.2, 11.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bob_down",
+      "offsets": [76.15, -66],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "sad",
+      "prefix": "bob_sad",
+      "offsets": [52, 40],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bubbletwister",
+    "isPixel": false
+  }
+}

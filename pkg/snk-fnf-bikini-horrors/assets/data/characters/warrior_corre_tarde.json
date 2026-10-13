@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "warrior_corre_tarde",
+  "renderType": "sparrow",
+  "assetPath": "characters/corre/warrior_atardecer",
+  "offsets": [230, 460],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-200, -280],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-14, 9],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [43, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-29, -17],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-6, -34],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "cc-warrior-atardecer",
+    "isPixel": false
+  }
+}

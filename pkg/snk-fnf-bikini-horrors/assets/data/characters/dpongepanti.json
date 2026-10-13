@@ -1,0 +1,67 @@
+﻿{
+  "version": "1.0.1",
+  "name": "dpongepanti",
+  "renderType": "sparrow",
+  "assetPath": "characters/dpongepanti",
+  "offsets": [140, 320],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 18,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-27, 63],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [167, 25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-67, -10],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-7, -168],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "Talk",
+      "prefix": "talk",
+      "offsets": [7, -17],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "Hey",
+      "prefix": "hey",
+      "offsets": [109, 36],
+      "frameRate": 16,
+      "looped": false
+    }
+  ],
+  "scale": 1.35,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "dpongepanti",
+    "isPixel": false
+  }
+}

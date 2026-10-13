@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bystacs_fase3",
+  "renderType": "sparrow",
+  "assetPath": "characters/carmaland_retake/bystacksfase3",
+  "offsets": [-2, -21],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-103, 99],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-5, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-12, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [1, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [5, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "bystacs2",
+    "isPixel": false
+  }
+}

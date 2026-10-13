@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "dpongi",
+  "renderType": "sparrow",
+  "assetPath": "characters/trytrong/dpongi",
+  "offsets": [-250, -350],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "dpongi_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "dpongi_up",
+      "offsets": [274, 29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "dpongi_left",
+      "offsets": [91, 21],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "dpongi_right",
+      "offsets": [-36.2, -25.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "dpongi_down",
+      "offsets": [119.15, -21],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "dpongi_transform",
+      "offsets": [1139, 1020],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "panti",
+    "isPixel": false
+  }
+}

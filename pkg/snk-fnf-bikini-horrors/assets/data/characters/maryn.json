@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "maryn",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongefunkin/maryn",
+  "offsets": [1490, 670],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-40, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Maryn",
+      "offsets": [-5, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "ARRIBA",
+      "offsets": [-39, 82],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "IZQ",
+      "offsets": [-6, 8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "DERECHA",
+      "offsets": [-19, 3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "ABAJO",
+      "offsets": [-5, 1],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "maryn",
+    "isPixel": false
+  }
+}

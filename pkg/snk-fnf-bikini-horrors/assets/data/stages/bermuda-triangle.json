@@ -1,0 +1,214 @@
+{
+    "version":  "1.0.2",
+    "name":  "bermuda-triangle",
+    "cameraZoom":  0.4,
+    "directory":  "wguater",
+    "props":  [
+                  {
+                      "name":  "cielo",
+                      "assetPath":  "stages/bermuda-triangle/cielo",
+                      "position":  [
+                                       -1597,
+                                       -794
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.4,
+                                     0.4
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "nubes",
+                      "assetPath":  "stages/bermuda-triangle/nubes",
+                      "position":  [
+                                       -1581,
+                                       -800
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.5,
+                                     0.5
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "montanas",
+                      "assetPath":  "stages/bermuda-triangle/montanas",
+                      "position":  [
+                                       -1416,
+                                       -900
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "colinas",
+                      "assetPath":  "stages/bermuda-triangle/colinas",
+                      "position":  [
+                                       -1248,
+                                       -825
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "edificios",
+                      "assetPath":  "stages/bermuda-triangle/edificios",
+                      "position":  [
+                                       -1452,
+                                       -802
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/bermuda-triangle/suelo",
+                      "position":  [
+                                       -1200,
+                                       -800
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foreground",
+                      "assetPath":  "stages/bermuda-triangle/foreground",
+                      "position":  [
+                                       -1216,
+                                       -900
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.2,
+                                     1.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   95,
+                                                   30
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  80,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -200,
+                                                        -100
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    40,
+                                                    245
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  70,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         140,
+                                                         120
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   130,
+                                                   -350
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  90,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -100,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

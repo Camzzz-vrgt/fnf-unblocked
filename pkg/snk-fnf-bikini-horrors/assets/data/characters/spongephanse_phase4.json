@@ -1,0 +1,80 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongephanse_phase4",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/spongephanes_end",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 200],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "sp_idle instancia",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "sp_up instancia",
+      "offsets": [25, 165],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "sp_left instancia",
+      "offsets": [305, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "sp_right instancia",
+      "offsets": [-70, -25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "sp_down instancia",
+      "offsets": [60, -265],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "sp_up_alt instancia",
+      "offsets": [30, 235],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "sp_down_alt instancia",
+      "offsets": [70, -265],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "sp_left_alt instancia",
+      "offsets": [360, 20],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "sp_right_alt instancia",
+      "offsets": [-30, -15],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-sp4",
+    "isPixel": false
+  }
+}

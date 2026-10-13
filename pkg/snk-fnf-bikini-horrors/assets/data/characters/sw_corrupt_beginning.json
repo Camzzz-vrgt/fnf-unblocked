@@ -1,0 +1,82 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sw_corrupt_beginning",
+  "renderType": "sparrow",
+  "assetPath": "characters/sw_corrupted",
+  "offsets": [-100, 180],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-100, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [23, 81],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [81, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-131, -17],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [0, -234],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "miss up",
+      "offsets": [42, 85],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "miss left",
+      "offsets": [128, 26],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "miss right",
+      "offsets": [-110, 11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "miss down",
+      "offsets": [49, -229],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.45,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongewarrior-evil",
+    "isPixel": false
+  }
+}

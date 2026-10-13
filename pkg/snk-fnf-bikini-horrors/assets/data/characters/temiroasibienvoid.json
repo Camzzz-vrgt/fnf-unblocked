@@ -1,0 +1,34 @@
+﻿{
+  "version": "1.0.1",
+  "name": "temiroasibienvoid",
+  "renderType": "sparrow",
+  "assetPath": "characters/temiroasibienvoid",
+  "offsets": [-1550, 550],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [250, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "look loop",
+      "offsets": [3, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "look",
+      "prefix": "look",
+      "offsets": [37, 20],
+      "frameRate": 10,
+      "looped": false,
+      "frameIndices": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+      ]
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bnwdbts",
+    "isPixel": false
+  }
+}

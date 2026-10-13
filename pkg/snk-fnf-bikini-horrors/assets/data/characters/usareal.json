@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "usareal",
+  "renderType": "sparrow",
+  "assetPath": "characters/usa/usareal",
+  "offsets": [-240, -300],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [150, 304],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [512, 184],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-160.2, -17.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [180.15, 128],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "usa",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,466 @@
+{
+    "version":  "1.0.2",
+    "name":  "circus",
+    "cameraZoom":  0.5,
+    "directory":  "wpop",
+    "props":  [
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/circus/suelo",
+                      "position":  [
+                                       -1126,
+                                       -644
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "escenario",
+                      "assetPath":  "stages/circus/escenario",
+                      "position":  [
+                                       -1129,
+                                       -629
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cortina_detras",
+                      "assetPath":  "stages/circus/cortina_detras",
+                      "position":  [
+                                       -1127,
+                                       -713
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cortina_delante",
+                      "assetPath":  "stages/circus/cortine_delante",
+                      "position":  [
+                                       -1131,
+                                       -684
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "flores",
+                      "assetPath":  "stages/circus/flores",
+                      "position":  [
+                                       -1103,
+                                       -644
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "burbujas",
+                      "assetPath":  "stages/circus/burbujas",
+                      "position":  [
+                                       -1135,
+                                       -690
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "coso",
+                      "assetPath":  "stages/circus/coso",
+                      "position":  [
+                                       -1126,
+                                       -643
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "fondo_l",
+                      "assetPath":  "stages/circus/luther/fondo",
+                      "position":  [
+                                       -1374,
+                                       -423
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.6,
+                                     0.6
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "plataforma4_l",
+                      "assetPath":  "stages/circus/luther/plataforma4",
+                      "position":  [
+                                       -953,
+                                       -472
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.65,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "montanas_l",
+                      "assetPath":  "stages/circus/luther/montanas",
+                      "position":  [
+                                       -1451,
+                                       -533
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.65,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "plataforma3_l",
+                      "assetPath":  "stages/circus/luther/plataforma3",
+                      "position":  [
+                                       -1459,
+                                       -551
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.7,
+                                     0.85
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "plataforma2_l",
+                      "assetPath":  "stages/circus/luther/plataforma2",
+                      "position":  [
+                                       -1298,
+                                       -741
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.8,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "plataforma1_l",
+                      "assetPath":  "stages/circus/luther/plataforma1",
+                      "position":  [
+                                       -1309,
+                                       -536
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ojos_l",
+                      "assetPath":  "stages/circus/luther/ojos",
+                      "position":  [
+                                       -1230,
+                                       -567
+                                   ],
+                      "zIndex":  140,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.75,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "kevin",
+                      "assetPath":  "stages/circus/kevin",
+                      "position":  [
+                                       100,
+                                       -73
+                                   ],
+                      "zIndex":  150,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "temubob",
+                      "assetPath":  "stages/circus/temubob",
+                      "position":  [
+                                       -850,
+                                       150
+                                   ],
+                      "zIndex":  160,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bobdoll",
+                      "assetPath":  "stages/circus/bob_doll",
+                      "position":  [
+                                       1000,
+                                       0
+                                   ],
+                      "zIndex":  170,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bashiro",
+                      "assetPath":  "stages/circus/banshi",
+                      "position":  [
+                                       1000,
+                                       160
+                                   ],
+                      "zIndex":  180,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bloques",
+                      "assetPath":  "stages/circus/bloques",
+                      "position":  [
+                                       -1097,
+                                       -616
+                                   ],
+                      "zIndex":  230,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   472,
+                                                   115
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  210,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -100,
+                                                        -80
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -263,
+                                                    522
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  200,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         100,
+                                                         -100
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   88,
+                                                   -73
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  190,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -250,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

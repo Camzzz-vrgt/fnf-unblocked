@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "warra_scared",
+  "renderType": "sparrow",
+  "assetPath": "characters/eat/warra_scared",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-44, 79],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [236, -6],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-131, 7],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [44, -126],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "warra",
+    "isPixel": false
+  }
+}

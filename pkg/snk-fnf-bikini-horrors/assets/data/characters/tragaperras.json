@@ -1,0 +1,39 @@
+﻿{
+  "version": "1.0.1",
+  "name": "tragaperras",
+  "renderType": "sparrow",
+  "assetPath": "characters/tragaperras",
+  "offsets": [-120, -50],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-140, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "tragaperras idle",
+      "offsets": [0, 0],
+      "frameRate": 3,
+      "looped": true
+    },
+    {
+      "name": "pull",
+      "prefix": "tragaperras pull",
+      "offsets": [0, 0],
+      "frameRate": 14,
+      "looped": false
+    },
+    {
+      "name": "loop",
+      "prefix": "tragaperras loop",
+      "offsets": [0, 0],
+      "frameRate": 14,
+      "looped": true
+    }
+  ],
+  "scale": 0.5,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "tragaperras",
+    "isPixel": false
+  }
+}

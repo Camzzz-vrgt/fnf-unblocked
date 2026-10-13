@@ -1,0 +1,27 @@
+﻿{
+  "version": "1.0.1",
+  "name": "franco",
+  "renderType": "sparrow",
+  "assetPath": "characters/franco",
+  "offsets": [5000, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 5,
+  "flipX": false,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "spongewarrior",
+    "isPixel": false
+  }
+}

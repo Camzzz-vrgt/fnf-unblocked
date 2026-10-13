@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.1",
+  "name": "kevin_aloha",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/KEVINKOWNLOADAPP",
+  "offsets": [100, 250],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-60, -24],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "kidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "abobti",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "r_tricky",
+  "renderType": "sparrow",
+  "assetPath": "characters/rumbeling/fase1/tikrisprai",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-430, 90],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [6, 25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [13, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-51.2, 0.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1.85, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "circus",
+      "prefix": "tatatarara",
+      "offsets": [381, 176],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "tricky",
+    "isPixel": false
+  }
+}

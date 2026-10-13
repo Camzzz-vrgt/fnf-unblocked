@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.1",
+  "name": "burbuja",
+  "renderType": "sparrow",
+  "assetPath": "characters/flintstone/burbuja",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [88, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [2, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [2, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-2, -3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "intro",
+      "prefix": "intro",
+      "offsets": [4, 4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "spit",
+      "prefix": "spit",
+      "offsets": [-1, 2],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "carmaland1",
+    "isPixel": false
+  }
+}

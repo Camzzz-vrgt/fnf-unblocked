@@ -1,0 +1,266 @@
+{
+    "version":  "1.0.2",
+    "name":  "lost-remains",
+    "cameraZoom":  2,
+    "directory":  "wback",
+    "props":  [
+                  {
+                      "name":  "animao",
+                      "assetPath":  "stages/lost-remains/animao",
+                      "position":  [
+                                       -1500,
+                                       -760
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.1,
+                                     0.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0.3
+                  },
+                  {
+                      "name":  "pilares",
+                      "assetPath":  "stages/lost-remains/pilares",
+                      "position":  [
+                                       -1996.07204241821,
+                                       -1439.91624013662
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.6,
+                                     0.6
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bosque",
+                      "assetPath":  "stages/lost-remains/bosque",
+                      "position":  [
+                                       -1805,
+                                       -286
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/lost-remains/suelo",
+                      "position":  [
+                                       -1978.92017691556,
+                                       -481.880805637072
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "too_slow",
+                      "assetPath":  "stages/lost-remains/too_slow",
+                      "position":  [
+                                       350,
+                                       -700
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cucaracha_bob",
+                      "assetPath":  "stages/lost-remains/cucaracha_bob",
+                      "position":  [
+                                       -1130,
+                                       0
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.15,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "walk",
+                                             "prefix":  "walk",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         },
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "idle",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "roca",
+                      "assetPath":  "stages/lost-remains/roca",
+                      "position":  [
+                                       -2700,
+                                       0
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.5,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "hello",
+                      "assetPath":  "stages/lost-remains/hello",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   46.5060487135804,
+                                                   -536.957388739826
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  90,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -998.46226157987,
+                                                    -549.361850549156
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  80,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -257,
+                                                   -1730
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  70,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

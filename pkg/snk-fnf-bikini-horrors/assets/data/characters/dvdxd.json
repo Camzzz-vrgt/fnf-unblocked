@@ -1,0 +1,67 @@
+﻿{
+  "version": "1.0.1",
+  "name": "dvdxd",
+  "renderType": "sparrow",
+  "assetPath": "characters/dvd",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [105, 289],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [91, 19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [144.8, 244.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [124.15, -137],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "vash",
+      "prefix": "vash",
+      "offsets": [159, 138],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "caga",
+      "prefix": "caga",
+      "offsets": [67, 23],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 0.65,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "dvd",
+    "isPixel": false
+  }
+}

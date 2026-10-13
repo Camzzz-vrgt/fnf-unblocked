@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "banshi",
+  "renderType": "sparrow",
+  "assetPath": "characters/banshi",
+  "offsets": [0, -15],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [25, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [65, 50],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-2.2, 31.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [7.15, -8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "dialogue",
+      "prefix": "dialogue",
+      "offsets": [33, 148],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "banshi",
+    "isPixel": false
+  }
+}

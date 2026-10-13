@@ -1,0 +1,328 @@
+{
+    "version":  "1.0.2",
+    "name":  "infinete",
+    "cameraZoom":  0.7,
+    "directory":  "winfinete",
+    "props":  [
+                  {
+                      "name":  "bg",
+                      "assetPath":  "stages/infinete/bg",
+                      "position":  [
+                                       -1151,
+                                       -662
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.45,
+                      "updateHitbox":  true,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "kennysback",
+                      "assetPath":  "stages/infinete/kennysback",
+                      "position":  [
+                                       -460,
+                                       50
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.7,
+                      "updateHitbox":  true,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.93,
+                                     0.93
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "familyrushmore",
+                      "assetPath":  "stages/infinete/familyrushmore",
+                      "position":  [
+                                       764,
+                                       -249
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.45,
+                      "updateHitbox":  true,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     0.97
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "tree",
+                      "assetPath":  "stages/infinete/tree",
+                      "position":  [
+                                       -1006,
+                                       -740
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.45,
+                      "updateHitbox":  true,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.97,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ground",
+                      "assetPath":  "stages/infinete/ground",
+                      "position":  [
+                                       -3507,
+                                       -277
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "boke",
+                      "assetPath":  "stages/infinete/boke",
+                      "position":  [
+                                       78,
+                                       0
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "rajoy",
+                      "assetPath":  "stages/infinete/M_Rajoy",
+                      "position":  [
+                                       159,
+                                       103
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "rajoy",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "EXPLOSION",
+                      "assetPath":  "stages/infinete/EXPLOSION",
+                      "position":  [
+                                       285,
+                                       340
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "EXPLOSION",
+                                             "prefix":  "EXPLOSION",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  false,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "EXPLOSION"
+                  },
+                  {
+                      "name":  "kennysfront",
+                      "assetPath":  "stages/infinete/kennysfront",
+                      "position":  [
+                                       -1736,
+                                       755
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "loop",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "frontstones",
+                      "assetPath":  "stages/infinete/frontstones",
+                      "position":  [
+                                       -1396,
+                                       524
+                                   ],
+                      "zIndex":  140,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.45,
+                      "updateHitbox":  true,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   589,
+                                                   199
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  100,
+                                  "scale":  0.9,
+                                  "cameraOffsets":  [
+                                                        -200,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -199,
+                                                    205
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  90,
+                                   "scale":  0.9,
+                                   "cameraOffsets":  [
+                                                         120,
+                                                         -20
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   130,
+                                                   -350
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  70,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -100,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

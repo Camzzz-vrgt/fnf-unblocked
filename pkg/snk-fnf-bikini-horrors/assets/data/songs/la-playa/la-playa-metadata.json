@@ -1,0 +1,35 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "La Playa",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "bfplaya",
+      "girlfriend": "sans-antivirus",
+      "opponent": "bobplaya",
+      "opponentVocals": ["bobplaya"],
+      "playerVocals": ["bfplaya"]
+    },
+    "stage": "playa",
+    "noteStyle": "bikini",
+    "album": "volume1",
+    "ratings": { "hard": 8 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 175,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 241714.285714286,
+      "bpm": 135,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

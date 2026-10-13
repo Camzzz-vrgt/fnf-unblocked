@@ -1,0 +1,163 @@
+{
+    "version":  "1.0.0",
+    "backdrop":  {
+                     "type":  "solid",
+                     "fadeTime":  0.5,
+                     "color":  "#00000080"
+                 },
+    "music":  {
+                  "asset":  "gallery",
+                  "fadeTime":  0,
+                  "looped":  true
+              },
+    "outro":  {
+                  "type":  "fade",
+                  "fadeTime":  0.5
+              },
+    "dialogue":  [
+                     {
+                         "speaker":  "bruno",
+                         "speakerAnimation":  "smug",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Ay, the pizza\u0027s here!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "wtf",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "HUH????"
+                                  ]
+                     },
+                     {
+                         "speaker":  "bruno",
+                         "speakerAnimation":  "wtf",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "..."
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "sweat",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Uh, w-welcome fellas! We didn\u0027t ask for any \"pizza\", but... please, come in anyways!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "goofy",
+                         "speakerAnimation":  "happy",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Gawrsh, we hardly get any visitors here! Y\u0027think they\u0027re tourists?"
+                                  ]
+                     },
+                     {
+                         "speaker":  "donald",
+                         "speakerAnimation":  "confident",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Ugh, lets hope not..."
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "oof",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Come on guys, lets not turn away our guests!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "sweat",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "S-sorry about that, we\u0027re not so used to new friends... l-lets start over, why don\u0027t we?"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "default",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "I\u0027m Mickey Mouse, and welcome to my clubhouse!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "bruno",
+                         "speakerAnimation":  "smug",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Nice to meetcha Mickey! I\u0027m Bruno Fernández, but you can call me BF."
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "happy",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Always a treat to meet a new pal!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "smug",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Say, you seem like you know how to work with a microphone... interested in a musical number?"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "default",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "It\u0027s helped me get acquainted in the past, ha-ha!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "bruno",
+                         "speakerAnimation":  "hmm",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Hmm... well..."
+                                  ]
+                     },
+                     {
+                         "speaker":  "bruno",
+                         "speakerAnimation":  "smug",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "...sure thing, Mickey! Don\u0027t expect me to go easy on you though!"
+                                  ]
+                     },
+                     {
+                         "speaker":  "mickey",
+                         "speakerAnimation":  "happy",
+                         "box":  "default",
+                         "boxAnimation":  "idle",
+                         "text":  [
+                                      "Well, alright! Lets get this show on the road!"
+                                  ]
+                     }
+                 ]
+}

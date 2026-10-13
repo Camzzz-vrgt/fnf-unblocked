@@ -1,0 +1,476 @@
+{
+    "version":  "1.0.2",
+    "name":  "volcano",
+    "cameraZoom":  0.75,
+    "directory":  "wtry",
+    "props":  [
+                  {
+                      "name":  "cielo",
+                      "assetPath":  "stages/volcano/cielo",
+                      "position":  [
+                                       -1051,
+                                       -643
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cielo_lava",
+                      "assetPath":  "stages/volcano/lava/cielo",
+                      "position":  [
+                                       -1051,
+                                       -643
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "nubes",
+                      "assetPath":  "stages/volcano/nubes",
+                      "position":  [
+                                       -1084,
+                                       -708
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "volcan",
+                      "assetPath":  "stages/volcano/volcan",
+                      "position":  [
+                                       -1123,
+                                       -209
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.75,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "monte3",
+                      "assetPath":  "stages/volcano/monte3",
+                      "position":  [
+                                       -1047,
+                                       229
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.85,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "monte2",
+                      "assetPath":  "stages/volcano/monte2",
+                      "position":  [
+                                       -1059,
+                                       28
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.95
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "monte",
+                      "assetPath":  "stages/volcano/monte",
+                      "position":  [
+                                       -1115,
+                                       10
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/volcano/suelo",
+                      "position":  [
+                                       -1063,
+                                       398
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "volcan_lava",
+                      "assetPath":  "stages/volcano/lava/volcan",
+                      "position":  [
+                                       -1123,
+                                       -209
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.75,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "volcan",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "monte3_lava",
+                      "assetPath":  "stages/volcano/lava/monte3",
+                      "position":  [
+                                       -1047,
+                                       229
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.85,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "monte2_lava",
+                      "assetPath":  "stages/volcano/lava/monte2",
+                      "position":  [
+                                       -1059,
+                                       28
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.95
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "monte",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "monte_lava",
+                      "assetPath":  "stages/volcano/lava/monte",
+                      "position":  [
+                                       -1115,
+                                       10
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo_lava",
+                      "assetPath":  "stages/volcano/lava/suelo",
+                      "position":  [
+                                       -1063,
+                                       398
+                                   ],
+                      "zIndex":  140,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "suelo",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "gasta",
+                      "assetPath":  "stages/volcano/gasta",
+                      "position":  [
+                                       305,
+                                       335
+                                   ],
+                      "zIndex":  150,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "gasta_idle",
+                                             "prefix":  "gasta_idle",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         },
+                                         {
+                                             "name":  "gasta_que",
+                                             "prefix":  "gasta_que",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         },
+                                         {
+                                             "name":  "gasta_die",
+                                             "prefix":  "gasta_die",
+                                             "offsets":  [
+                                                             -300,
+                                                             -200
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "gasta_idle"
+                  },
+                  {
+                      "name":  "trything",
+                      "assetPath":  "stages/volcano/try",
+                      "position":  [
+                                       0,
+                                       0
+                                   ],
+                      "zIndex":  200,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   -142,
+                                                   303
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  180,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        300,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    1202,
+                                                    679
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  170,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -300,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   367,
+                                                   195
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  10,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  0.0001,
+                                  "angle":  0
+                              }
+                   }
+}

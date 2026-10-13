@@ -1,0 +1,130 @@
+{
+  "version": "1.0.2",
+  "name": "buv",
+  "cameraZoom": 1,
+  "directory": "wpneumo",
+  "props": [
+    {
+      "name": "pared",
+      "assetPath": "stages/buv/wall",
+      "position": [-325, -338],
+      "zIndex": 10,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "suelo",
+      "assetPath": "stages/buv/suelo",
+      "position": [-337, -326],
+      "zIndex": 20,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "pared2",
+      "assetPath": "stages/buv/wall2",
+      "position": [-325, -338],
+      "zIndex": 30,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "suelo2",
+      "assetPath": "stages/buv/suelo2",
+      "position": [-337, -326],
+      "zIndex": 40,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "pilar",
+      "assetPath": "stages/buv/pilar",
+      "position": [-341, -305],
+      "zIndex": 90,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "pilar2",
+      "assetPath": "stages/buv/pilar2",
+      "position": [-341, -305],
+      "zIndex": 100,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    }
+  ],
+  "characters": {
+    "bf": {
+      "position": [1100, 90],
+      "positionMode": "topLeft",
+      "zIndex": 70,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "dad": {
+      "position": [29, -232],
+      "positionMode": "topLeft",
+      "zIndex": 60,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "gf": {
+      "position": [615, -128],
+      "positionMode": "topLeft",
+      "zIndex": 50,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    }
+  }
+}

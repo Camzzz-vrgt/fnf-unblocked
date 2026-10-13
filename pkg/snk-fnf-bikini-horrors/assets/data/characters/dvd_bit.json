@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.1",
+  "name": "dvd_bit",
+  "renderType": "sparrow",
+  "assetPath": "characters/dvd_bitcrush",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [105, 399],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [254, 19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [148.8, 244.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [199.15, -137],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "caga",
+      "prefix": "caga",
+      "offsets": [69, 21],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 0.65,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "dvd",
+    "isPixel": false
+  }
+}

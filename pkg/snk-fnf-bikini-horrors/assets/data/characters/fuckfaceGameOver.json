@@ -1,0 +1,23 @@
+﻿{
+  "version": "1.0.1",
+  "name": "fuckfaceGameOver",
+  "renderType": "sparrow",
+  "assetPath": "characters/buv/fuckkkkk",
+  "offsets": [210, 300],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-320, -140],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "healthIcon": {
+    "id": "fuckface",
+    "isPixel": false
+  }
+}

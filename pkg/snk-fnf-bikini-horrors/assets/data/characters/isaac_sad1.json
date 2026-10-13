@@ -1,0 +1,88 @@
+﻿{
+  "version": "1.0.1",
+  "name": "isaac_sad1",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/voidisaac1",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-647, -171],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [3, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [9, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-4, 4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [6, 2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "ANGRYright",
+      "offsets": [5, 4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "ANGRYleft",
+      "offsets": [10, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "ANGRYdown",
+      "offsets": [5, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "ANGRYup",
+      "offsets": [4, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "scared",
+      "prefix": "isaacsusto",
+      "offsets": [166, -6],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "isaacicon1",
+    "isPixel": false
+  }
+}

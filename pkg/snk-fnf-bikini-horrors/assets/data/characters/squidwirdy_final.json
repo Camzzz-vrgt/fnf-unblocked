@@ -1,0 +1,82 @@
+﻿{
+  "version": "1.0.1",
+  "name": "squidwirdy_final",
+  "renderType": "sparrow",
+  "assetPath": "characters/squidwirdyfinal",
+  "offsets": [100, -20],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [600, -35],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-159, 89],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [3, -19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-61, -56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-27, -117],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "umiss",
+      "offsets": [12, -11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "fiff_bf lmiss",
+      "offsets": [3, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "fiff_bf rmiss",
+      "offsets": [0, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "fiff_bf dmiss",
+      "offsets": [-14, -13],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 2,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "squid3",
+    "isPixel": false
+  }
+}

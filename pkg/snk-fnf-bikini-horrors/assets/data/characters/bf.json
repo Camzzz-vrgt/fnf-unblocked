@@ -1,0 +1,122 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bf",
+  "renderType": "sparrow",
+  "assetPath": "characters/unheared/bf",
+  "offsets": [1490, 670],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-40, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BF idle dance",
+      "offsets": [-5, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "BF NOTE UP0",
+      "offsets": [-39, 27],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BF NOTE LEFT0",
+      "offsets": [6, -7],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BF NOTE RIGHT0",
+      "offsets": [-48, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BF NOTE DOWN0",
+      "offsets": [-17, -50],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS",
+      "offsets": [-35, 27],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS",
+      "offsets": [6, 19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS",
+      "offsets": [-44, 22],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS",
+      "offsets": [-16, -19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY",
+      "offsets": [-3, 6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "scared",
+      "prefix": "BF idle shaking",
+      "offsets": [-6, 1],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "hit",
+      "prefix": "BF hit",
+      "offsets": [13, 19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "pre-attack",
+      "prefix": "bf pre attack",
+      "offsets": [-47, -36],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "attack",
+      "prefix": "boyfriend attack",
+      "offsets": [289, 270],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "dodge",
+      "prefix": "boyfriend dodge",
+      "offsets": [-8, -13],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "bf",
+    "isPixel": false
+  }
+}

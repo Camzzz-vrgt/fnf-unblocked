@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "galaga",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/galaga",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-647, -171],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "galagaidle",
+      "offsets": [0, -30],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "galaga up",
+      "offsets": [0, 130],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "galagaleft",
+      "offsets": [105, -29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "galagaright",
+      "offsets": [-47, -32],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "galagadown",
+      "offsets": [2, -95],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "isaacicon1",
+    "isPixel": false
+  }
+}

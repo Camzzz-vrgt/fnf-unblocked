@@ -1,0 +1,214 @@
+{
+    "version":  "1.0.2",
+    "name":  "vash",
+    "cameraZoom":  0.5,
+    "directory":  "wvash",
+    "props":  [
+                  {
+                      "name":  "bossrush",
+                      "assetPath":  "stages/remote/bossrush",
+                      "position":  [
+                                       -800,
+                                       -450
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "bossrush_2",
+                      "assetPath":  "stages/remote/bossrush_2",
+                      "position":  [
+                                       -800,
+                                       -450
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.2,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "CACACA",
+                      "assetPath":  "stages/remote/CACACA",
+                      "position":  [
+                                       -770,
+                                       -350
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "staticsprite",
+                      "assetPath":  "stages/remote/static",
+                      "position":  [
+                                       50,
+                                       -230
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "yosoyaika",
+                      "assetPath":  "stages/remote/yosoyaika",
+                      "position":  [
+                                       -780,
+                                       -380
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "yosoyaika_2",
+                      "assetPath":  "stages/remote/yosoyaika_2",
+                      "position":  [
+                                       -780,
+                                       -380
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.4,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "caca",
+                      "assetPath":  "stages/remote/caca",
+                      "position":  [
+                                       -100,
+                                       -380
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  2.3,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   300,
+                                                   -80
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  80,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        -100
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    140,
+                                                    -165
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  40,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -100,
+                                                         100
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   0,
+                                                   0
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  0,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

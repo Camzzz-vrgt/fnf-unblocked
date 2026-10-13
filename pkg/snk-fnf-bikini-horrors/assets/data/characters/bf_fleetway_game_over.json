@@ -1,0 +1,39 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bf_fleetway_game_over",
+  "renderType": "sparrow",
+  "assetPath": "characters/bubblemandeathanim",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "death",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "death",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "daccept",
+      "offsets": [-495, 366],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bubbleman",
+    "isPixel": false
+  }
+}

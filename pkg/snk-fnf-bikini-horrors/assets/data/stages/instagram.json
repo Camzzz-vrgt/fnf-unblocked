@@ -1,0 +1,322 @@
+﻿{
+    "version":  "1.0.2",
+    "name":  "instagram",
+    "cameraZoom":  1.05,
+    "directory":  "shared",
+    "props":  [
+                  {
+                      "name":  "fondo",
+                      "assetPath":  "stages/instagram/fondo",
+                      "position":  [
+                                       -1095,
+                                       -955
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "pilar4",
+                      "assetPath":  "stages/instagram/pilar4",
+                      "position":  [
+                                       -1000,
+                                       -700
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.85,
+                                     0.85
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0.95
+                  },
+                  {
+                      "name":  "pilar3",
+                      "assetPath":  "stages/instagram/pilar3",
+                      "position":  [
+                                       -929,
+                                       -942
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.88,
+                                     0.88
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0.95
+                  },
+                  {
+                      "name":  "pilar2",
+                      "assetPath":  "stages/instagram/pilar2",
+                      "position":  [
+                                       -991,
+                                       -945
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0.95
+                  },
+                  {
+                      "name":  "pilar1",
+                      "assetPath":  "stages/instagram/pilar1",
+                      "position":  [
+                                       -1074,
+                                       -997
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     0.95
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "comments1",
+                      "assetPath":  "stages/instagram/comments1",
+                      "position":  [
+                                       -969,
+                                       -1099
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "comments4",
+                      "assetPath":  "stages/instagram/comments4",
+                      "position":  [
+                                       543,
+                                       -1827
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.35,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "comments2",
+                      "assetPath":  "stages/instagram/comments2",
+                      "position":  [
+                                       -667,
+                                       -776
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "comments3",
+                      "assetPath":  "stages/instagram/comments3",
+                      "position":  [
+                                       200,
+                                       -831
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "pilarR",
+                      "assetPath":  "stages/instagram/pilarR",
+                      "position":  [
+                                       67,
+                                       76
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "pilarL",
+                      "assetPath":  "stages/instagram/pilarL",
+                      "position":  [
+                                       -354,
+                                       76
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackOverlay",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       -3267,
+                                       -1400
+                                   ],
+                      "zIndex":  160,
+                      "scale":  [
+                                    6000,
+                                    6000
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "zoomFactor":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   119,
+                                                   -76
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  150,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -290,
+                                                    -78
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  140,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -155,
+                                                   -527
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  110,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

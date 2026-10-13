@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.1",
+  "name": "poop_warrior",
+  "renderType": "sparrow",
+  "assetPath": "characters/poop_warrior",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-161, -120],
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "poop_left",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "poop_right",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "gf",
+    "isPixel": false
+  }
+}

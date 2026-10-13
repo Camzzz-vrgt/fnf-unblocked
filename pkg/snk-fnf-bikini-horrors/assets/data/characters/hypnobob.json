@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "hypnobob",
+  "renderType": "sparrow",
+  "assetPath": "characters/hypnobob",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "hypnobob_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "hypnobob_up",
+      "offsets": [50, 103],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "hypnobob_left",
+      "offsets": [97, 35],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "hypnobob_right",
+      "offsets": [-47.2, 34.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "hypnobob_down",
+      "offsets": [2.15, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "what",
+      "prefix": "hypnobob_wait",
+      "offsets": [1278, 118],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "hypnobob",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,130 @@
+﻿{
+  "version": "1.0.1",
+  "name": "hutheman_red",
+  "renderType": "sparrow",
+  "assetPath": "characters/usa/hutheman_red",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-220, 90],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [15, 44],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [229, -30],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-46.2, -63.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [105.15, -112],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "umiss",
+      "offsets": [19, 98],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "ialt",
+      "offsets": [-5, -15],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "ualt",
+      "offsets": [-5, -15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "lalt",
+      "offsets": [-5, -15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "ralt",
+      "offsets": [-5, -15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "dalt",
+      "offsets": [-5, -15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "umiss",
+      "offsets": [19, 98],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "dmiss",
+      "offsets": [112, -105],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "lmiss",
+      "offsets": [194, -34],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "rmiss",
+      "offsets": [-41, -56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "woah",
+      "prefix": "woah",
+      "offsets": [25, -5],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "hured",
+    "isPixel": false
+  }
+}

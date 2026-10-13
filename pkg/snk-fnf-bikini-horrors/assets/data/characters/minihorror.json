@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "minihorror",
+  "renderType": "sparrow",
+  "assetPath": "characters/mini_horror",
+  "offsets": [-250, -350],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "horror_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "horror_up",
+      "offsets": [-36, 136],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "horror_left",
+      "offsets": [-73, 69],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "horror_right",
+      "offsets": [-78.2, -26.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "horror_down",
+      "offsets": [-77.85, -127],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "minihorror",
+    "isPixel": false
+  }
+}

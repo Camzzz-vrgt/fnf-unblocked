@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sw_phase2",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/spongewarrior_phase2",
+  "offsets": [-850, 10],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [90, -230],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bf_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "bf_up",
+      "offsets": [0, 110],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bf_left",
+      "offsets": [36, 21],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bf_right",
+      "offsets": [-98, 26],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bf_down",
+      "offsets": [20, -36],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-sw",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,55 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sakuraisad",
+  "renderType": "sparrow",
+  "assetPath": "characters/sakuraisad",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [115, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-21, 55],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [81, -11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-21, -22],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-18, -164],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.5,
+  "flipX": true,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "sakurai",
+    "isPixel": false
+  }
+}

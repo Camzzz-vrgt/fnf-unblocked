@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.1",
+  "name": "chicoqueseparece",
+  "renderType": "sparrow",
+  "assetPath": "characters/cqspmap",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "danceLeft",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "danceRight",
+      "offsets": [6, -9],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "gf",
+    "isPixel": false
+  }
+}

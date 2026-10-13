@@ -1,0 +1,30 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "Flintstone",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "patchyflintstone",
+      "girlfriend": "gargar",
+      "opponent": "sandedbob",
+      "opponentVocals": ["sandedbob", "gargar", "holandes"],
+      "playerVocals": ["patchyflintstone", "antena3"]
+    },
+    "stage": "semen",
+    "noteStyle": "flintstone",
+    "album": "flintstone",
+    "ratings": { "hard": 6 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 200,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

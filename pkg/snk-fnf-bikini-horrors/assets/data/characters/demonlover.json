@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "demonlover",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/demonguater",
+  "offsets": [50, 220],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [130, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 27,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-90, 350],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [140, -35],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-135, -74],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-86, -51],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "demonwater",
+    "isPixel": false
+  }
+}

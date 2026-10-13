@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bobeltriste",
+  "renderType": "sparrow",
+  "assetPath": "characters/bobeltriste",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bob_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "bob_up",
+      "offsets": [10, 29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bob_left",
+      "offsets": [147, -5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bob_right",
+      "offsets": [10.8, 6.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bob_down",
+      "offsets": [63.15, -37],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bobeltriste",
+    "isPixel": false
+  }
+}

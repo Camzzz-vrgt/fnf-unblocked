@@ -1,0 +1,94 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cainephanes",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongephanes_caine",
+  "offsets": [0, -400],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle0",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "frown",
+      "prefix": "frown",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "fi",
+      "prefix": "fi",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "confused",
+      "prefix": "confused",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "ci",
+      "prefix": "ci",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "irritated",
+      "prefix": "irritated",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "ii",
+      "prefix": "ii",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "angry",
+      "prefix": "angry",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "ai",
+      "prefix": "ai",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "hola",
+      "prefix": "hola",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "looking",
+      "prefix": "looking",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "popbob",
+    "isPixel": false
+  }
+}

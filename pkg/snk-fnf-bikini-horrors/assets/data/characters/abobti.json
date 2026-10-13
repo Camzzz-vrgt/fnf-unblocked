@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "abobti",
+  "renderType": "sparrow",
+  "assetPath": "characters/buv/abobti",
+  "offsets": [100, 275],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [60, 70],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "abobtiidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "abobtiup",
+      "offsets": [-13, 164],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "abobtileft",
+      "offsets": [530, -133],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "abobtiright",
+      "offsets": [-115, -58],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "abobtidown",
+      "offsets": [-110, -347],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.51,
+  "healthIcon": {
+    "id": "abobti",
+    "isPixel": false
+  }
+}

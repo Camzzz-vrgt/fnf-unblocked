@@ -1,0 +1,298 @@
+{
+    "version":  "1.0.2",
+    "name":  "no-phone",
+    "cameraZoom":  0.7,
+    "directory":  "wphone",
+    "props":  [
+                  {
+                      "name":  "fondo_luna",
+                      "assetPath":  "stages/no-phone/fondo_luna",
+                      "position":  [
+                                       -651,
+                                       -156
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.5,
+                                     0.5
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sergio_suelo",
+                      "assetPath":  "stages/no-phone/fondo_sergio_suelo",
+                      "position":  [
+                                       -573,
+                                       267
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.55,
+                                     0.55
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "zipi",
+                      "assetPath":  "stages/no-phone/try_bober",
+                      "position":  [
+                                       160,
+                                       145
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.55,
+                                     0.55
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sergio",
+                      "assetPath":  "stages/no-phone/sergio_sprite",
+                      "position":  [
+                                       280,
+                                       120
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.55,
+                                     0.55
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "arbol_3",
+                      "assetPath":  "stages/no-phone/fondo_arbol_3",
+                      "position":  [
+                                       -588,
+                                       -156
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.6,
+                                     0.6
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "arbol_2",
+                      "assetPath":  "stages/no-phone/fondo_arbol_2",
+                      "position":  [
+                                       -471,
+                                       -129
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.65,
+                                     0.65
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "arbol_1",
+                      "assetPath":  "stages/no-phone/fondo_arbol_1",
+                      "position":  [
+                                       610,
+                                       -203
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "valla",
+                      "assetPath":  "stages/no-phone/fondo_valla",
+                      "position":  [
+                                       -607,
+                                       474
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "suelo",
+                      "assetPath":  "stages/no-phone/fondo_suelo",
+                      "position":  [
+                                       -692,
+                                       610
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "aika",
+                      "assetPath":  "stages/no-phone/aika_hypno",
+                      "position":  [
+                                       1039,
+                                       500
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "tent",
+                      "assetPath":  "stages/no-phone/chezzar_tent",
+                      "position":  [
+                                       -500,
+                                       480
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   739,
+                                                   416
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  100,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -270,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    0,
+                                                    295
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  140,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         -80,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   3400,
+                                                   0
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  130,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

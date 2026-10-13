@@ -1,0 +1,35 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "made in china",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "mic_bf",
+      "girlfriend": "mic_gf_r_start",
+      "opponent": "mic_sponge",
+      "opponentVocals": ["temu"],
+      "playerVocals": ["express"]
+    },
+    "stage": "honk_kong",
+    "noteStyle": "bikini",
+    "album": "made-in-china",
+    "ratings": { "hard": 7 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 106,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 178867.924528302,
+      "bpm": 147,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

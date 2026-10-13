@@ -1,0 +1,74 @@
+﻿{
+  "version": "1.0.1",
+  "name": "luis",
+  "renderType": "sparrow",
+  "assetPath": "characters/iab/luis",
+  "offsets": [250, 180],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "really",
+      "offsets": [140.15, -19],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "bro",
+      "prefix": "idle",
+      "offsets": [135, -24],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [101, 239],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [407, 54],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-48.2, -47.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [185.15, -84],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "laugh",
+      "prefix": "laugh",
+      "offsets": [111.15, 50],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "scream",
+      "prefix": "scream",
+      "offsets": [218.15, 76],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.15,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "luis-icon",
+    "isPixel": false
+  }
+}

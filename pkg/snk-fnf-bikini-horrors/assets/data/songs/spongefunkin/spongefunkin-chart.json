@@ -1,0 +1,8120 @@
+﻿{
+  "version": "2.0.0",
+  "scrollSpeed": {
+    "hard": 2.5
+  },
+  "events": [
+    {
+      "t": 0,
+      "e": "Stop Play Tweens",
+      "v": {
+        "params": [true],
+        "sourceEvent": "Stop Play Tweens"
+      }
+    },
+    {
+      "t": 609.756097560976,
+      "e": "Camera Modulo Change",
+      "v": {
+        "params": [4, 1],
+        "sourceEvent": "Camera Modulo Change"
+      }
+    },
+    {
+      "t": 8414.63414634146,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 8902.43902439024,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 9390.24390243902,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 9878.0487804878,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 10853.6585365854,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 11341.4634146341,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 11829.2682926829,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 12317.0731707317,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 13048.7804878049,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 14268.2926829268,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 14878.0487804878,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 16219.512195122,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 24024.3902439024,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 32317.0731707317,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 36219.512195122,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 40121.9512195122,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 44024.3902439024,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 47439.0243902439,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 63048.7804878049,
+      "e": "FocusCamera",
+      "v": {
+        "char": 0,
+        "params": [1],
+        "sourceEvent": "Camera Movement"
+      }
+    },
+    {
+      "t": 78658.5365853659,
+      "e": "FocusCamera",
+      "v": {
+        "char": 1,
+        "params": [0],
+        "sourceEvent": "Camera Movement"
+      }
+    }
+  ],
+  "notes": {
+    "hard": [
+      {
+        "t": 365.853658536585,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 609.756097560976,
+        "d": 5,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 1097.56097560976,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 1341.46341463415,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 1463.41463414634,
+        "d": 7,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 1829.26829268293,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 2073.17073170732,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 2317.07317073171,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 2560.9756097561,
+        "d": 5,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 3048.78048780488,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 3292.68292682927,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 3414.63414634146,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 3780.48780487805,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 4024.39024390244,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 4512.19512195122,
+        "d": 7,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 5243.90243902439,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 5609.75609756098,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 5731.70731707317,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 5975.60975609756,
+        "d": 5,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 6463.41463414634,
+        "d": 6,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 6951.21951219512,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7073.17073170732,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7195.12195121951,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7317.07317073171,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7382.29666500747,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7439.0243902439,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7560.9756097561,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7804.87804878049,
+        "d": 4,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 7926.82926829268,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 8170.73170731707,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 8173.78048780488,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 8417.68292682927,
+        "d": 1,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 8658.53658536585,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 8902.43902439024,
+        "d": 4,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 9149.39024390244,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 9390.24390243902,
+        "d": 3,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 9637.19512195122,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 9878.0487804878,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 9939.01758752281,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 10000,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 10121.9512195122,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 10365.8536585366,
+        "d": 4,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 10609.756097561,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 10856.7073170732,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 11097.5609756098,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 11341.4634146341,
+        "d": 7,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 11585.3658536585,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 11832.3170731707,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 11951.2195121951,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 12005.9620043139,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 12073.1707317073,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 12317.0731707317,
+        "d": 4,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 13051.8292682927,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 13414.6341463415,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 13658.5365853659,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 13728.1060782036,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 13783.5365853659,
+        "d": 1,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 14024.3902439024,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 14268.2926829268,
+        "d": 6,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 14878.0487804878,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15362.8048780488,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15487.8048780488,
+        "d": 5,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 15606.7073170732,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15676.276809911,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15731.7073170732,
+        "d": 1,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15731.7073170732,
+        "d": 6,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 15972.5609756098,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 15975.6097560976,
+        "d": 7,
+        "l": 121.951219512195,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 16219.512195122,
+        "d": 6,
+        "l": 365.853658536585,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 16707.3170731707,
+        "d": 4,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 16951.2195121951,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 17073.1707317073,
+        "d": 7,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 17439.0243902439,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 17682.9268292683,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 17926.8292682927,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 17926.8292682927,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 18170.7317073171,
+        "d": 1,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 18170.7317073171,
+        "d": 4,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 18658.5365853659,
+        "d": 6,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 18902.4390243902,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 19024.3902439024,
+        "d": 4,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 19390.243902439,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 19634.1463414634,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 19878.0487804878,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 19878.0487804878,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 20121.9512195122,
+        "d": 3,
+        "l": 365.853658536584,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 20121.9512195122,
+        "d": 4,
+        "l": 365.853658536584,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 20609.756097561,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 20853.6585365854,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 20975.6097560976,
+        "d": 5,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 21341.4634146341,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 21585.3658536585,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 21829.2682926829,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 21829.2682926829,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 22073.1707317073,
+        "d": 2,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 22073.1707317073,
+        "d": 5,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 22560.9756097561,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 22804.8780487805,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 22926.8292682927,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23048.7804878049,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23227.0663680106,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23414.6341463415,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23536.5853658537,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23658.5365853659,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 23780.487804878,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 24024.3902439024,
+        "d": 2,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 24024.3902439024,
+        "d": 7,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 24268.2926829268,
+        "d": 6,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 24512.1951219512,
+        "d": 0,
+        "l": 121.951219512197,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 24756.0975609756,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 24878.0487804878,
+        "d": 3,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 25243.9024390244,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 25487.8048780488,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 25731.7073170732,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 25731.7073170732,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 25975.6097560976,
+        "d": 0,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 25975.6097560976,
+        "d": 5,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 26463.4146341463,
+        "d": 2,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 26707.3170731707,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 26829.2682926829,
+        "d": 0,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 27195.1219512195,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 27439.0243902439,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 27682.9268292683,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 27682.9268292683,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 27926.8292682927,
+        "d": 0,
+        "l": 365.853658536584,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 27926.8292682927,
+        "d": 7,
+        "l": 365.853658536584,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 28414.6341463415,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 28658.5365853659,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 28780.487804878,
+        "d": 1,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 29146.3414634146,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 29390.243902439,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 29634.1463414634,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 29634.1463414634,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 29878.0487804878,
+        "d": 1,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 29878.0487804878,
+        "d": 6,
+        "l": 243.90243902439,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 30365.8536585366,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 30609.756097561,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 30731.7073170732,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 30853.6585365854,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 31031.9444167911,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 31219.512195122,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 31341.4634146341,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 31585.3658536585,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 31829.2682926829,
+        "d": 0,
+        "l": 365.853658536584,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 32073.1707317073,
+        "d": 1,
+        "l": 487.804878048781,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 32317.0731707317,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 32560.9756097561,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 32804.8780487805,
+        "d": 7,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 33170.7317073171,
+        "d": 5,
+        "l": 121.951219512201,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 33536.5853658537,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 33780.4878048781,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 34024.3902439024,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 34268.2926829268,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 34512.1951219512,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 34756.0975609756,
+        "d": 4,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 35121.9512195122,
+        "d": 7,
+        "l": 121.951219512201,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 35487.8048780488,
+        "d": 5,
+        "l": 487.804878048781,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 36219.512195122,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 36463.4146341463,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 36707.3170731707,
+        "d": 1,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 37073.1707317073,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 37439.0243902439,
+        "d": 2,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 37682.9268292683,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 37926.8292682927,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 38170.7317073171,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 38414.6341463415,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 38658.5365853659,
+        "d": 1,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 39024.3902439024,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 39390.243902439,
+        "d": 3,
+        "l": 609.756097560974,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 40121.9512195122,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 40365.8536585366,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 40609.756097561,
+        "d": 7,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 40975.6097560976,
+        "d": 5,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 41341.4634146341,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 41463.4146341463,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 41585.3658536585,
+        "d": 6,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 41829.2682926829,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 42073.1707317073,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 42317.0731707317,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 42560.9756097561,
+        "d": 5,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 42926.8292682927,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 43292.6829268293,
+        "d": 7,
+        "l": 609.756097560974,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 44024.3902439024,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 44268.2926829268,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 44512.1951219512,
+        "d": 0,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 44878.0487804878,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 45243.9024390244,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 45365.8536585366,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 45487.8048780488,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 45731.7073170732,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 45975.6097560976,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 46219.512195122,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 46463.4146341463,
+        "d": 1,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 47073.1707317073,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47127.1616614086,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47195.1219512195,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47239.9665394613,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47317.0731707317,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47361.9177589735,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47439.0243902439,
+        "d": 6,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 47926.8292682927,
+        "d": 7,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 48170.7317073171,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 48292.6829268293,
+        "d": 4,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 48658.5365853659,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 48902.4390243902,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 49146.3414634146,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 49390.243902439,
+        "d": 4,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 49878.0487804878,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 50121.9512195122,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 50243.9024390244,
+        "d": 7,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 50609.756097561,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 50853.6585365854,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 51097.5609756098,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 51341.4634146341,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 51341.4634146341,
+        "d": 7,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 51829.2682926829,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 52073.1707317073,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 52560.9756097561,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 52804.8780487805,
+        "d": 4,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 53048.7804878049,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 53292.6829268293,
+        "d": 1,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 53292.6829268293,
+        "d": 7,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 53536.5853658537,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 53780.4878048781,
+        "d": 0,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 53780.4878048781,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 53902.4390243902,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 54024.3902439024,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 54024.3902439024,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 54146.3414634146,
+        "d": 6,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 54268.2926829268,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 54319.591615508,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 54512.1951219512,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 54512.1951219512,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 54634.1463414634,
+        "d": 5,
+        "l": 243.902439024394,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 54756.0975609756,
+        "d": 1,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 55000,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 55000,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 55243.9024390244,
+        "d": 0,
+        "l": 1341.46341463414,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 55243.9024390244,
+        "d": 6,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 55731.7073170732,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 55975.6097560976,
+        "d": 4,
+        "l": 609.756097560974,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 56707.3170731707,
+        "d": 7,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 57195.1219512195,
+        "d": 6,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 57682.9268292683,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 57926.8292682927,
+        "d": 7,
+        "l": 609.756097560974,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 58658.5365853659,
+        "d": 3,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 58658.5365853659,
+        "d": 4,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 59146.3414634146,
+        "d": 1,
+        "l": 1341.46341463415,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 59146.3414634146,
+        "d": 6,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 59634.1463414634,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 59878.0487804878,
+        "d": 7,
+        "l": 609.756097560974,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 60609.756097561,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 60853.6585365854,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 61036.3522482164,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 61097.5609756098,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 61097.5609756098,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 61341.4634146341,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 61585.3658536585,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 61585.3658536585,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 61829.2682926829,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62009.1463414634,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62073.1707317073,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62073.1707317073,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62317.0731707317,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62317.0731707317,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62439.0243902439,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62439.0243902439,
+        "d": 6,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62560.9756097561,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62801.8292682927,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62804.8780487805,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 62846.6738565344,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62923.7804878049,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 62968.6250760466,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 63045.731707317,
+        "d": 2,
+        "l": 243.902439024438,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 63048.7804878049,
+        "d": 5,
+        "l": 1341.46341463419,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 63533.5365853658,
+        "d": 3,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 63777.4390243902,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 63899.3902439024,
+        "d": 0,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 64265.243902439,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 64509.1463414634,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 64512.1951219512,
+        "d": 7,
+        "l": 365.853658536587,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 64753.0487804878,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 64996.9512195122,
+        "d": 0,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 65000,
+        "d": 4,
+        "l": 1341.46341463414,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 65484.756097561,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 65728.6585365853,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 65850.6097560975,
+        "d": 3,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66216.4634146341,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66460.3658536585,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66463.4146341463,
+        "d": 6,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 66704.2682926829,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66948.1707317073,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66948.1707317073,
+        "d": 3,
+        "l": 365.853658536595,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 66951.2195121951,
+        "d": 5,
+        "l": 1585.36585365854,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 67435.9756097561,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 67679.8780487805,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 68167.6829268292,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 68411.5853658536,
+        "d": 0,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 68658.5365853659,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 68899.3902439024,
+        "d": 3,
+        "l": 365.853658536595,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 68902.4390243902,
+        "d": 7,
+        "l": 121.951219512193,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 69146.3414634146,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 69387.1951219512,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 69390.243902439,
+        "d": 7,
+        "l": 121.951219512208,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 69509.1463414634,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 69631.0975609756,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 69634.1463414634,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 69753.0487804878,
+        "d": 2,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 69878.0487804878,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 69933.0419777667,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 70118.9024390244,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 70121.9512195122,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 70240.8536585366,
+        "d": 1,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 70365.8536585366,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 70606.7073170731,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 70609.756097561,
+        "d": 7,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 70850.6097560975,
+        "d": 2,
+        "l": 243.902439024401,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 70853.6585365854,
+        "d": 6,
+        "l": 1341.46341463414,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 71338.4146341463,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 71582.3170731707,
+        "d": 0,
+        "l": 609.756097560981,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 72314.0243902439,
+        "d": 3,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 72317.0731707317,
+        "d": 4,
+        "l": 365.853658536595,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 72801.8292682927,
+        "d": 2,
+        "l": 243.902439024401,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 72804.8780487805,
+        "d": 5,
+        "l": 853.658536585368,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 73289.6341463414,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 73533.5365853658,
+        "d": 3,
+        "l": 609.756097560981,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 73780.4878048781,
+        "d": 6,
+        "l": 853.658536585368,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 74265.243902439,
+        "d": 0,
+        "l": 365.85365853658,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 74753.0487804878,
+        "d": 2,
+        "l": 365.853658536595,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 74756.0975609756,
+        "d": 7,
+        "l": 1585.36585365853,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 75240.8536585366,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 75484.756097561,
+        "d": 3,
+        "l": 609.756097560981,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 76216.4634146341,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 76460.3658536585,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 76463.4146341463,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 76643.0595652895,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 76652.9818594104,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 76704.2682926829,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 76707.3170731707,
+        "d": 6,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 76948.1707317073,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77073.1707317073,
+        "d": 4,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 77192.0731707317,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77435.9756097561,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77439.0243902439,
+        "d": 7,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 77615.8536585366,
+        "d": 2,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77679.8780487805,
+        "d": 0,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77923.7804878048,
+        "d": 1,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 77926.8292682927,
+        "d": 5,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 78045.7317073171,
+        "d": 2,
+        "l": 243.902439024387,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 78170.7317073171,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 78411.5853658536,
+        "d": 3,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 1
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 1
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "maryn"
+          }
+        ]
+      },
+      {
+        "t": 78414.6341463415,
+        "d": 4,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 78902.4390243902,
+        "d": 6,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      },
+      {
+        "t": 79146.3414634146,
+        "d": 5,
+        "l": 365.853658536595,
+        "p": [
+          {
+            "n": "codenameDifficulty",
+            "v": "hard"
+          },
+          {
+            "n": "codenameStrumline",
+            "v": 0
+          },
+          {
+            "n": "codenameStrumlineType",
+            "v": 0
+          },
+          {
+            "n": "codenameBaseCharacter",
+            "v": "madness_poja"
+          }
+        ]
+      }
+    ]
+  },
+  "generatedBy": "Snokido Codename Converter"
+}

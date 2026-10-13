@@ -1,0 +1,81 @@
+﻿{
+  "version": "1.0.1",
+  "name": "clonefriend",
+  "renderType": "sparrow",
+  "assetPath": "characters/clonefriend",
+  "offsets": [400, 340],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-250, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bf_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "bf_up",
+      "offsets": [-22, 17],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bf_left",
+      "offsets": [-13, -8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bf_right",
+      "offsets": [38, 30],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bf_down",
+      "offsets": [-14, -17],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "miss up",
+      "offsets": [42, 85],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "miss left",
+      "offsets": [128, 26],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "miss right",
+      "offsets": [-110, 11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "miss down",
+      "offsets": [49, -229],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "clonefriend",
+    "isPixel": false
+  }
+}

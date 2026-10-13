@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sans-antivirus",
+  "renderType": "sparrow",
+  "assetPath": "characters/playa/sans_antivirus",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-250, 0],
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "danceRight",
+      "offsets": [0, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "danceLeft",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [6, 109],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [135, -9],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [-138, -44],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-26, -141],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "encontrado",
+      "prefix": "transformation",
+      "offsets": [159, 200],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "antivirus",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongephanes_angry",
+  "renderType": "sparrow",
+  "assetPath": "characters/phanes_angry",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "sponge_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "sponge_up",
+      "offsets": [18, 202],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "sponge_left",
+      "offsets": [247, 27],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "sponge_right",
+      "offsets": [-118.2, 30.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "sponge_down",
+      "offsets": [90.15, -31],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongephanes-evil",
+    "isPixel": false
+  }
+}

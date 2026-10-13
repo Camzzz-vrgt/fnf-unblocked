@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.1",
+  "name": "loverdemontransform",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/guaterdemontransform",
+  "offsets": [100, 260],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [130, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "transform",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "transform",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "uwlhappy",
+    "isPixel": false
+  }
+}

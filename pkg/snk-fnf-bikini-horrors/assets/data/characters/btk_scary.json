@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "btk_scary",
+  "renderType": "sparrow",
+  "assetPath": "characters/eat/btk_scary",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-44, 67],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [191, -112],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-49, -25],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [44, -180],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "scale": 1.33,
+  "healthIcon": {
+    "id": "btk",
+    "isPixel": false
+  }
+}

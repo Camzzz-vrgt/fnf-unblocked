@@ -1,0 +1,49 @@
+{
+  "version": "1.1.0",
+  "name": "Rumbeling Combat",
+  "author": "Bikini Horror / Codename Engine",
+  "fallback": "bikini",
+  "assets": {
+    "note": {
+      "assetPath": "notes/combat",
+      "scale": 0.7,
+      "isPixel": true,
+      "data": {
+        "left": { "prefix": "purple0" },
+        "down": { "prefix": "blue0" },
+        "up": { "prefix": "green0" },
+        "right": { "prefix": "red0" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "notes/combat",
+      "scale": 0.7,
+      "offsets": [4, 0],
+      "data": {}
+    },
+    "noteStrumline": {
+      "assetPath": "notes/combat",
+      "scale": 0.7,
+      "isPixel": true,
+      "offsets": [5, 0],
+      "data": {
+        "leftStatic": { "prefix": "arrowLEFT" },
+        "leftPress": { "prefix": "left press" },
+        "leftConfirm": { "prefix": "left confirm" },
+        "leftConfirmHold": { "prefix": "left confirm" },
+        "downStatic": { "prefix": "arrowDOWN" },
+        "downPress": { "prefix": "down press" },
+        "downConfirm": { "prefix": "down confirm" },
+        "downConfirmHold": { "prefix": "down confirm" },
+        "upStatic": { "prefix": "arrowUP" },
+        "upPress": { "prefix": "up press" },
+        "upConfirm": { "prefix": "up confirm" },
+        "upConfirmHold": { "prefix": "up confirm" },
+        "rightStatic": { "prefix": "arrowRIGHT" },
+        "rightPress": { "prefix": "right press" },
+        "rightConfirm": { "prefix": "right confirm" },
+        "rightConfirmHold": { "prefix": "right confirm" }
+      }
+    }
+  }
+}

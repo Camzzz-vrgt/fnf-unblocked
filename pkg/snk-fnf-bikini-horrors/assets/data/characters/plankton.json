@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "plankton",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/plankton",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "plankton_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "plankton_up",
+      "offsets": [94, 277],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "plankton_left",
+      "offsets": [1346, 2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "plankton_right",
+      "offsets": [-44, -20],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "plankton_down",
+      "offsets": [105, -151],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bfinfinete",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,55 @@
+﻿{
+  "version": "1.0.1",
+  "name": "fatalbob",
+  "renderType": "sparrow",
+  "assetPath": "characters/fatalbob",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [1, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [56, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [0.8, -0.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-24.85, -19],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 2,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthBarColor": "#FF0800",
+  "healthIcon": {
+    "id": "fatalbob",
+    "isPixel": false
+  }
+}

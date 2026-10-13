@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "meatboy",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/meatboy",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-647, -171],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "meatidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "meatup",
+      "offsets": [-8, 5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "meatleft",
+      "offsets": [-6, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "meatright",
+      "offsets": [-6, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "meatdown",
+      "offsets": [-6, -1],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "isaacicon1",
+    "isPixel": false
+  }
+}

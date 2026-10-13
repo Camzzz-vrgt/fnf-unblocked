@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongebud_void",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongebudfinal",
+  "offsets": [0, -670],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-700, 600],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-61, 81],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [200, -146],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [300.8, -234.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [97.15, -296],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.6,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "real",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,87 @@
+﻿{
+  "version": "1.0.1",
+  "name": "holandes",
+  "renderType": "sparrow",
+  "assetPath": "characters/flintstone/holandesflier",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [88, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "pottyidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "pottydown",
+      "offsets": [-1, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "pottyright",
+      "offsets": [2, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "pottyleft",
+      "offsets": [2, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "pottyup",
+      "offsets": [-2, -3],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "cabin_intro",
+      "prefix": "cabinintro",
+      "offsets": [32, 8],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "cabin_idle",
+      "prefix": "cabinidle",
+      "offsets": [31, 7],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "cabin_exit",
+      "prefix": "cabinexit",
+      "offsets": [41, 21],
+      "frameRate": 18,
+      "looped": false
+    },
+    {
+      "name": "holan_idle",
+      "prefix": "holanidle",
+      "offsets": [-18, -15],
+      "frameRate": 22,
+      "looped": true
+    },
+    {
+      "name": "holan_transform",
+      "prefix": "holantransform",
+      "offsets": [-18, -15],
+      "frameRate": 13,
+      "looped": false
+    }
+  ],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "carmaland1",
+    "isPixel": false
+  }
+}

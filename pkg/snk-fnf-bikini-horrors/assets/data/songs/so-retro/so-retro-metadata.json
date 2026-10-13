@@ -1,0 +1,30 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "so-retro",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "soretro_m",
+      "girlfriend": "mic_gf_r",
+      "opponent": "soretro_b",
+      "opponentVocals": ["soretro_b"],
+      "playerVocals": ["soretro_m"]
+    },
+    "stage": "retro",
+    "noteStyle": "bikini",
+    "album": "so-retro",
+    "ratings": { "hard": 5 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 152,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

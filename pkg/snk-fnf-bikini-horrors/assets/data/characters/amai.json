@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.1",
+  "name": "amai",
+  "renderType": "sparrow",
+  "assetPath": "characters/amai",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-460, -470],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "amai idle",
+      "offsets": [480, 800],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "amai",
+      "prefix": "amai idle",
+      "offsets": [480, 800],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "micsponge",
+    "isPixel": false
+  }
+}

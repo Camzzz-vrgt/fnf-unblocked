@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "jellyfield",
+  "renderType": "sparrow",
+  "assetPath": "characters/pool_parti/jelyfield",
+  "offsets": [690, 840],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [350, -166],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [100, 118],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [121, -84],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-27, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [25, -11],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pp-jellyfish",
+    "isPixel": false
+  }
+}

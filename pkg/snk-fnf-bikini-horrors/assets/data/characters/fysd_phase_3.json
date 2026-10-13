@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.1",
+  "name": "fysd_phase_3",
+  "renderType": "sparrow",
+  "assetPath": "characters/fysd/fysd_phase_3",
+  "offsets": [-50, -1070],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-450, -230],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "fysd",
+    "isPixel": false
+  }
+}

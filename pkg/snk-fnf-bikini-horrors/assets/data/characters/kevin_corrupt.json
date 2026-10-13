@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "kevin_corrupt",
+  "renderType": "sparrow",
+  "assetPath": "characters/corrupt_kevin",
+  "offsets": [350, 220],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-250, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "kevin_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "kevin_up",
+      "offsets": [-34, 14],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "kevin_right",
+      "offsets": [-20, -29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "kevin_left",
+      "offsets": [159, -24],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "kevin_down",
+      "offsets": [27, -158],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "kevin",
+    "isPixel": false
+  }
+}

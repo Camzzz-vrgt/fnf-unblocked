@@ -1,0 +1,47 @@
+{
+  "version": "1.1.0",
+  "name": "Kahoot",
+  "author": "Bikini Horror / Codename Engine",
+  "fallback": "bikini",
+  "assets": {
+    "note": {
+      "assetPath": "notes/kahoot_noteSkin",
+      "scale": 0.7,
+      "data": {
+        "left": { "prefix": "purple_note" },
+        "down": { "prefix": "blue_note" },
+        "up": { "prefix": "green_note" },
+        "right": { "prefix": "red_note" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "notes/kahoot_noteSkin",
+      "scale": 0.7,
+      "offsets": [0, 0],
+      "data": {}
+    },
+    "noteStrumline": {
+      "assetPath": "notes/kahoot_noteSkin",
+      "scale": 0.7,
+      "offsets": [0, 0],
+      "data": {
+        "leftStatic": { "prefix": "purple_idle" },
+        "leftPress": { "prefix": "purple_push" },
+        "leftConfirm": { "prefix": "purple_confirm" },
+        "leftConfirmHold": { "prefix": "purple_confirm" },
+        "downStatic": { "prefix": "blue_idle" },
+        "downPress": { "prefix": "blue_push" },
+        "downConfirm": { "prefix": "blue_confirm" },
+        "downConfirmHold": { "prefix": "blue_confirm" },
+        "upStatic": { "prefix": "green_idle" },
+        "upPress": { "prefix": "green_push" },
+        "upConfirm": { "prefix": "green_confirm" },
+        "upConfirmHold": { "prefix": "green_confirm" },
+        "rightStatic": { "prefix": "red_idle" },
+        "rightPress": { "prefix": "red_push" },
+        "rightConfirm": { "prefix": "red_confirm" },
+        "rightConfirmHold": { "prefix": "red_confirm" }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.1",
+  "name": "jj_corre",
+  "renderType": "sparrow",
+  "assetPath": "characters/jj_corre",
+  "offsets": [-70, -110],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "ialt",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "josejuan",
+    "isPixel": false
+  }
+}

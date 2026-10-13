@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "r_hellclown",
+  "renderType": "sparrow",
+  "assetPath": "characters/rumbeling/fase4/hellclown",
+  "offsets": [-770, -640],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-100, 340],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [11, -220],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [228, -44],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-76.2, -4.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-36.85, 46],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "hellclown",
+    "isPixel": false
+  }
+}

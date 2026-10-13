@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.1",
+  "name": "r_daimago",
+  "renderType": "sparrow",
+  "assetPath": "characters/rumbeling/fase4/daimago",
+  "offsets": [-2760, -1860],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [540, 740],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-29, 45],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-12, -39],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-91.2, 0.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [3.15, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "lanzar",
+      "prefix": "lanzar",
+      "offsets": [-2205, -2335],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "daimago",
+    "isPixel": false
+  }
+}

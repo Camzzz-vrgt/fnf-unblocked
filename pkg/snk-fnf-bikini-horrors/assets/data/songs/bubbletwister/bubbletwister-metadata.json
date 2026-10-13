@@ -1,0 +1,50 @@
+﻿{
+  "version": "2.2.4",
+  "songName": "BubbleTwister",
+  "artist": "Unknown",
+  "charter": "Unknown",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["hard"],
+    "characters": {
+      "player": "subaru_1",
+      "girlfriend": "head_center",
+      "opponent": "bubbletwister_1",
+      "opponentVocals": ["bubbletwister_1"],
+      "playerVocals": ["subaru_1"]
+    },
+    "stage": "jellyfish_fields_1",
+    "noteStyle": "bikini",
+    "album": "volume1",
+    "ratings": { "hard": 8 }
+  },
+  "generatedBy": "Snokido Codename Converter",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 174,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 168448.275862069,
+      "bpm": 104,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 172198.275862069,
+      "bpm": 140,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 172626.84729064,
+      "bpm": 140,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 173912.428112369,
+      "bpm": 174,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

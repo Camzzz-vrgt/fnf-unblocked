@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "jj_corrupted",
+  "renderType": "sparrow",
+  "assetPath": "characters/jj_corrupted",
+  "offsets": [400, 240],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-250, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "jj_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "jj_up",
+      "offsets": [-44, 119],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "jj_right",
+      "offsets": [54, 12],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "jj_left",
+      "offsets": [4, 11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "jj_down",
+      "offsets": [-38, -78],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "josejuan-evil",
+    "isPixel": false
+  }
+}

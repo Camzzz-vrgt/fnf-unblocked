@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bueno",
+  "renderType": "sparrow",
+  "assetPath": "characters/bueno",
+  "offsets": [220, -30],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "majinbuub",
+    "isPixel": false
+  }
+}

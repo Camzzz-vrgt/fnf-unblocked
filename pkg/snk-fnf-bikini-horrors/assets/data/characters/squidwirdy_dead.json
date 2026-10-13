@@ -1,0 +1,45 @@
+﻿{
+  "version": "1.0.1",
+  "name": "squidwirdy_dead",
+  "renderType": "sparrow",
+  "assetPath": "characters/squidwirdy_dead",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "ded0",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "ded0",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "dedloop",
+      "offsets": [-672, -647],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "squidward_retry",
+      "offsets": [327, 239],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "nothing",
+    "isPixel": false
+  }
+}

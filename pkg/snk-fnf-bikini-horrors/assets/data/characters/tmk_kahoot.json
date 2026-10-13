@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "tmk_kahoot",
+  "renderType": "sparrow",
+  "assetPath": "characters/playa/tmk_kahoot",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-180, 130],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "tmk_kahoot idle",
+      "offsets": [0, 0],
+      "frameRate": 12,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "tmk_kahoot up",
+      "offsets": [-2, 2],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "tmk_kahoot left",
+      "offsets": [52, 11],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "tmk_kahoot right",
+      "offsets": [-125, -5],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "tmk_kahoot down",
+      "offsets": [-63, 2],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "scale": 0.55,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "tmk",
+    "isPixel": false
+  }
+}

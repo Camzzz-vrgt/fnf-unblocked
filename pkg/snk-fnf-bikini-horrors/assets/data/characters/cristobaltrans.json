@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.1",
+  "name": "cristobaltrans",
+  "renderType": "sparrow",
+  "assetPath": "characters/sirope/crisbob2-3trans",
+  "offsets": [-200, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [60, 70],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "transformacion",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "transformacion",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1,
+  "healthIcon": {
+    "id": "crisbobicon2",
+    "isPixel": false
+  }
+}

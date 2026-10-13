@@ -1,0 +1,54 @@
+﻿{
+  "version": "1.0.1",
+  "name": "carmen_retake2",
+  "renderType": "sparrow",
+  "assetPath": "characters/carmaland_retake/retake_carmen",
+  "offsets": [-108, -72],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [0, 77],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [105, -114],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [84, 37],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-56, -29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [38, 134],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.33,
+  "flipX": true,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "carmenretake",
+    "isPixel": false
+  }
+}

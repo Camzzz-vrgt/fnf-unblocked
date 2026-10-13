@@ -1,0 +1,50 @@
+{
+  "version": "1.1.0",
+  "name": "Flintstone",
+  "author": "Bikini Horror / Codename Engine",
+  "fallback": "bikini",
+  "assets": {
+    "note": {
+      "assetPath": "notes/notes_flintstone",
+      "scale": 2,
+      "isPixel": true,
+      "data": {
+        "left": { "prefix": "purple" },
+        "down": { "prefix": "blue" },
+        "up": { "prefix": "green" },
+        "right": { "prefix": "red" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "notes/notes_flintstone",
+      "scale": 2,
+      "isPixel": true,
+      "offsets": [2, 0],
+      "data": {}
+    },
+    "noteStrumline": {
+      "assetPath": "notes/notes_flintstone",
+      "scale": 2,
+      "isPixel": true,
+      "offsets": [20, 15],
+      "data": {
+        "leftStatic": { "prefix": "arrowLEFT" },
+        "leftPress": { "prefix": "left press" },
+        "leftConfirm": { "prefix": "left confirm" },
+        "leftConfirmHold": { "prefix": "left confirm" },
+        "downStatic": { "prefix": "arrowDOWN" },
+        "downPress": { "prefix": "down press" },
+        "downConfirm": { "prefix": "down confirm" },
+        "downConfirmHold": { "prefix": "down confirm" },
+        "upStatic": { "prefix": "arrowUP" },
+        "upPress": { "prefix": "up press" },
+        "upConfirm": { "prefix": "up confirm" },
+        "upConfirmHold": { "prefix": "up confirm" },
+        "rightStatic": { "prefix": "arrowRIGHT" },
+        "rightPress": { "prefix": "right press" },
+        "rightConfirm": { "prefix": "right confirm" },
+        "rightConfirmHold": { "prefix": "right confirm" }
+      }
+    }
+  }
+}

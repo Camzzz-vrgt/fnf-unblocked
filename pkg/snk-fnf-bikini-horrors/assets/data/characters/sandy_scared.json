@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "sandy_scared",
+  "renderType": "sparrow",
+  "assetPath": "characters/trytrong/sandy_scared",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-40, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "sandy_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "sandy_up",
+      "offsets": [3, 46],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "sandy_left",
+      "offsets": [231, -77],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "sandi_right",
+      "offsets": [-63, 16],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "sandy_down",
+      "offsets": [-6, -90],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "healthIcon": {
+    "id": "sandy",
+    "isPixel": false
+  }
+}

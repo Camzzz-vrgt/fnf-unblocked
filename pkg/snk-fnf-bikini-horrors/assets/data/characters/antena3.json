@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "antena3",
+  "renderType": "sparrow",
+  "assetPath": "characters/flintstone/antena3",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [88, 50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [16, 21],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "drop",
+      "prefix": "drop",
+      "offsets": [36, 14],
+      "frameRate": 12,
+      "looped": false
+    },
+    {
+      "name": "hypno",
+      "prefix": "hypno",
+      "offsets": [36, -3],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "static",
+      "prefix": "static",
+      "offsets": [36, -3],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "blow",
+      "prefix": "blow",
+      "offsets": [40, 5],
+      "frameRate": 12,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "carmaland1",
+    "isPixel": false
+  }
+}

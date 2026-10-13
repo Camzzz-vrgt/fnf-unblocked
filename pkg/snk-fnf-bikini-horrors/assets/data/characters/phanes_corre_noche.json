@@ -1,0 +1,67 @@
+﻿{
+  "version": "1.0.1",
+  "name": "phanes_corre_noche",
+  "renderType": "sparrow",
+  "assetPath": "characters/corre/phanes_noche",
+  "offsets": [800, 100],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, -200],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-1, 42],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-1, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-1.2, 10.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "caer",
+      "prefix": "caer",
+      "offsets": [524, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "pum",
+      "prefix": "pum",
+      "offsets": [-140, -1275],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 1.4,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "cc-phanes-noche",
+    "isPixel": false
+  }
+}

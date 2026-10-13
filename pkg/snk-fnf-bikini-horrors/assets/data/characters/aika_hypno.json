@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.1",
+  "name": "aika_hypno",
+  "renderType": "sparrow",
+  "assetPath": "characters/aika_hypno",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "aika_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "aika_up",
+      "offsets": [61, 33],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "aika_left",
+      "offsets": [61, 33],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "aika_right",
+      "offsets": [61, 33],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "aika_down",
+      "offsets": [61, 33],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "what",
+      "prefix": "aika_what",
+      "offsets": [61, 33],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bobeltriste",
+    "isPixel": false
+  }
+}

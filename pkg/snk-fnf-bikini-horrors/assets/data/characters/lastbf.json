@@ -1,0 +1,55 @@
+﻿{
+  "version": "1.0.1",
+  "name": "lastbf",
+  "renderType": "sparrow",
+  "assetPath": "characters/pojapija/cuerda",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-977, -52],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "scale": 1.2,
+  "flipX": true,
+  "singTime": 6.1,
+  "isPixel": true,
+  "healthIcon": {
+    "id": "lastbf",
+    "isPixel": false
+  }
+}

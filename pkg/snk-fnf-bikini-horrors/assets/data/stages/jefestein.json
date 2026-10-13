@@ -1,0 +1,194 @@
+{
+    "version":  "1.0.2",
+    "name":  "jeff_bg",
+    "cameraZoom":  0.5,
+    "directory":  "weat",
+    "props":  [
+                  {
+                      "name":  "forest",
+                      "assetPath":  "stages/jefestein/forest",
+                      "position":  [
+                                       -2137,
+                                       -1248
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ground",
+                      "assetPath":  "stages/jefestein/ground",
+                      "position":  [
+                                       -2436,
+                                       -16
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foreground1",
+                      "assetPath":  "stages/jefestein/foreground1",
+                      "position":  [
+                                       -2068,
+                                       414
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.1,
+                                     1.1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foreground2",
+                      "assetPath":  "stages/jefestein/foreground2",
+                      "position":  [
+                                       -3156,
+                                       -1324
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.15,
+                                     1.15
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackOverlay",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       -3267,
+                                       -1400
+                                   ],
+                      "zIndex":  90,
+                      "scale":  [
+                                    6000,
+                                    6000
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "zoomFactor":  0
+                  },
+                  {
+                      "name":  "epicas",
+                      "assetPath":  "stages/jefestein/EBdRdF",
+                      "position":  [
+                                       82,
+                                       94
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "zoomFactor":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   198,
+                                                   -242
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  60,
+                                  "scale":  0.8,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    -792,
+                                                    -144
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  50,
+                                   "scale":  0.8,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   -1113,
+                                                   -443
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  10,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

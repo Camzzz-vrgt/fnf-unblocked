@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "mr_ketchup",
+  "renderType": "sparrow",
+  "assetPath": "characters/mr.ketchup",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "ketchup_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "ketchup_up",
+      "offsets": [171, 162],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "ketchup_left",
+      "offsets": [261, -61],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "ketchup_right",
+      "offsets": [-200, 1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "ketchup_down",
+      "offsets": [181, -195],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 1.5,
+  "singTime": 9.5,
+  "healthIcon": {
+    "id": "ketchup",
+    "isPixel": false
+  }
+}

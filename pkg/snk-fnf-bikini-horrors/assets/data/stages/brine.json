@@ -1,0 +1,481 @@
+{
+    "version":  "1.0.2",
+    "name":  "brine",
+    "cameraZoom":  0.6,
+    "directory":  "wspot",
+    "props":  [
+                  {
+                      "name":  "sky",
+                      "assetPath":  "stages/brine/bgsky",
+                      "position":  [
+                                       -94,
+                                       40
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.75,
+                                     0.75
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "stars",
+                      "assetPath":  "stages/brine/stars",
+                      "position":  [
+                                       229,
+                                       144
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.87,
+                                     0.87
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF",
+                      "animType":  "sparrow",
+                      "animations":  [
+                                         {
+                                             "name":  "idle",
+                                             "prefix":  "bgstars",
+                                             "offsets":  [
+                                                             0,
+                                                             0
+                                                         ],
+                                             "looped":  true,
+                                             "frameRate":  24,
+                                             "frameIndices":  [
+
+                                                              ]
+                                         }
+                                     ],
+                      "startingAnimation":  "idle"
+                  },
+                  {
+                      "name":  "moon",
+                      "assetPath":  "stages/brine/bgmoon",
+                      "position":  [
+                                       324,
+                                       110
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "mountains",
+                      "assetPath":  "stages/brine/bgmountains",
+                      "position":  [
+                                       160,
+                                       226
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.95,
+                                     0.95
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ground",
+                      "assetPath":  "stages/brine/bgground",
+                      "position":  [
+                                       53,
+                                       430
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "tree",
+                      "assetPath":  "stages/brine/bgtree",
+                      "position":  [
+                                       165,
+                                       189
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "leaves",
+                      "assetPath":  "stages/brine/bgleaves",
+                      "position":  [
+                                       107,
+                                       54
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.8,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sign1",
+                      "assetPath":  "stages/brine/sign1",
+                      "position":  [
+                                       768,
+                                       326
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sign2",
+                      "assetPath":  "stages/brine/sign2",
+                      "position":  [
+                                       454,
+                                       470
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackBgOverlay",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       182,
+                                       -900
+                                   ],
+                      "zIndex":  110,
+                      "scale":  [
+                                    1000,
+                                    2000
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0
+                  },
+                  {
+                      "name":  "totem",
+                      "assetPath":  "stages/brine/totem",
+                      "position":  [
+                                       370,
+                                       178
+                                   ],
+                      "zIndex":  120,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.5,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "lunabg",
+                      "assetPath":  "stages/brine/lunabg",
+                      "position":  [
+                                       -240,
+                                       -20
+                                   ],
+                      "zIndex":  130,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  0.88,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "shadowleaves",
+                      "assetPath":  "stages/brine/bgshadowleaves",
+                      "position":  [
+                                       578,
+                                       -237
+                                   ],
+                      "zIndex":  170,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.03,
+                                     1.03
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "foreground",
+                      "assetPath":  "stages/brine/bgfrontground",
+                      "position":  [
+                                       291,
+                                       853
+                                   ],
+                      "zIndex":  180,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.05,
+                                     1.05
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sign3",
+                      "assetPath":  "stages/brine/sign3",
+                      "position":  [
+                                       407,
+                                       908
+                                   ],
+                      "zIndex":  190,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.06,
+                                     1.06
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "cobalea",
+                      "assetPath":  "stages/brine/cobalea",
+                      "position":  [
+                                       12,
+                                       268
+                                   ],
+                      "zIndex":  200,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1.5,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "square",
+                      "assetPath":  "stages/brine/bgsquare",
+                      "position":  [
+                                       -369,
+                                       -29
+                                   ],
+                      "zIndex":  210,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "ojitos",
+                      "assetPath":  "stages/brine/ojitosspoting",
+                      "position":  [
+                                       -4,
+                                       82
+                                   ],
+                      "zIndex":  220,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "blackOverlay",
+                      "assetPath":  "#000000",
+                      "position":  [
+                                       182,
+                                       -900
+                                   ],
+                      "zIndex":  230,
+                      "scale":  [
+                                    1000,
+                                    2000
+                                ],
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   794,
+                                                   506
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  160,
+                                  "scale":  1.33,
+                                  "cameraOffsets":  [
+                                                        0,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    339,
+                                                    480
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  150,
+                                   "scale":  1.33,
+                                   "cameraOffsets":  [
+                                                         0,
+                                                         0
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   607,
+                                                   623
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  140,
+                                  "scale":  1.25,
+                                  "cameraOffsets":  [
+                                                        -100,
+                                                        -100
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

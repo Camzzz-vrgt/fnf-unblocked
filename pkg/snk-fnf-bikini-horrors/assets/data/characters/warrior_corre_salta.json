@@ -1,0 +1,46 @@
+﻿{
+  "version": "1.0.1",
+  "name": "warrior_corre_salta",
+  "renderType": "sparrow",
+  "assetPath": "characters/corre/warrior_minigame",
+  "offsets": [230, 460],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-200, -280],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "confused",
+      "prefix": "confused",
+      "offsets": [12, 25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "jump",
+      "prefix": "jump",
+      "offsets": [1, 41],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "look",
+      "prefix": "look",
+      "offsets": [12, 24],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "cc-warrior-tarde",
+    "isPixel": false
+  }
+}

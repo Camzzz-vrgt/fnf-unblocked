@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "r_hank_shadow",
+  "renderType": "sparrow",
+  "assetPath": "characters/rumbeling/fase2/michaeltejado",
+  "offsets": [-30, 380],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-340, 310],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-6, 14],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [16, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-5.2, 4.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-11.85, -4],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "shoot",
+      "prefix": "shoot",
+      "offsets": [13, -4],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "hank",
+    "isPixel": false
+  }
+}

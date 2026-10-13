@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongebud",
+  "renderType": "sparrow",
+  "assetPath": "characters/newspongebud",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-140, -280],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-1, 95],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [100, -22],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-84.2, 2.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [8.15, 18],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "corre",
+      "prefix": "correcorrequetepillo",
+      "offsets": [-30, -5],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "buddy",
+    "isPixel": false
+  }
+}

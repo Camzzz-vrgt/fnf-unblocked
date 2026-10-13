@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "squiwirdy",
+  "renderType": "sparrow",
+  "assetPath": "characters/newsquidwirdy",
+  "offsets": [-70, -140],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-230, 230],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, -20],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-26, -6],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [73, -65],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [41, -58],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-20, -137],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "squid2",
+    "isPixel": false
+  }
+}

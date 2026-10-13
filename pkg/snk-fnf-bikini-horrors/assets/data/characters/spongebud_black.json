@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongebud_black",
+  "renderType": "sparrow",
+  "assetPath": "characters/darkspongeguy",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-50, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-5, 8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right",
+      "offsets": [15, -10],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left",
+      "offsets": [13.8, -2.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [7.15, -27],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.9,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "shadow",
+    "isPixel": false
+  }
+}

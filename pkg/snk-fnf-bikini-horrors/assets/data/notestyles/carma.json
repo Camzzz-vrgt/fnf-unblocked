@@ -1,0 +1,50 @@
+{
+  "version": "1.1.0",
+  "name": "Carmaland Retake",
+  "author": "Bikini Horror / Codename Engine",
+  "fallback": "bikini",
+  "assets": {
+    "note": {
+      "assetPath": "notes/carma_noteskin",
+      "scale": 4.8,
+      "isPixel": true,
+      "data": {
+        "left": { "prefix": "purpleScroll" },
+        "down": { "prefix": "blueScroll" },
+        "up": { "prefix": "greenScroll" },
+        "right": { "prefix": "redScroll" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "notes/carma_noteskin_END",
+      "scale": 4.8,
+      "isPixel": true,
+      "offsets": [0, 0],
+      "data": {}
+    },
+    "noteStrumline": {
+      "assetPath": "notes/carma_noteskin",
+      "scale": 4.8,
+      "isPixel": true,
+      "offsets": [0, 0],
+      "data": {
+        "leftStatic": { "prefix": "static" },
+        "leftPress": { "prefix": "press" },
+        "leftConfirm": { "prefix": "confirm" },
+        "leftConfirmHold": { "prefix": "confirm-hold" },
+        "downStatic": { "prefix": "static" },
+        "downPress": { "prefix": "press" },
+        "downConfirm": { "prefix": "confirm" },
+        "downConfirmHold": { "prefix": "confirm-hold" },
+        "upStatic": { "prefix": "static" },
+        "upPress": { "prefix": "press" },
+        "upConfirm": { "prefix": "confirm" },
+        "upConfirmHold": { "prefix": "confirm-hold" },
+        "rightStatic": { "prefix": "static" },
+        "rightPress": { "prefix": "press" },
+        "rightConfirm": { "prefix": "confirm" },
+        "rightConfirmHold": { "prefix": "confirm-hold" }
+      }
+    }
+  }
+}

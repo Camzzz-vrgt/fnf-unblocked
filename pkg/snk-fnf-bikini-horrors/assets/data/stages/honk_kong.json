@@ -1,0 +1,340 @@
+{
+    "version":  "1.0.2",
+    "name":  "honk_kong",
+    "cameraZoom":  0.4,
+    "directory":  "wchina",
+    "props":  [
+                  {
+                      "name":  "sky",
+                      "assetPath":  "stages/made-in-china/sky",
+                      "position":  [
+                                       -2339,
+                                       -1408
+                                   ],
+                      "zIndex":  10,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.2,
+                                     0.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sky_nosun",
+                      "assetPath":  "stages/made-in-china/sky_nosun",
+                      "position":  [
+                                       -2339,
+                                       -1408
+                                   ],
+                      "zIndex":  20,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.2,
+                                     0.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "mountain_2",
+                      "assetPath":  "stages/made-in-china/mountain_2",
+                      "position":  [
+                                       -2152,
+                                       -1443
+                                   ],
+                      "zIndex":  30,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.6,
+                                     0.6
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "mountain_1",
+                      "assetPath":  "stages/made-in-china/mountain_1",
+                      "position":  [
+                                       -2087,
+                                       -1379
+                                   ],
+                      "zIndex":  40,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.7,
+                                     0.7
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "acantilado",
+                      "assetPath":  "stages/made-in-china/acantilado",
+                      "position":  [
+                                       -1957,
+                                       -1329
+                                   ],
+                      "zIndex":  50,
+                      "isPixel":  true,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.8,
+                                     0.8
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "back_left",
+                      "assetPath":  "stages/made-in-china/back_platform_left",
+                      "position":  [
+                                       -1905,
+                                       -1291
+                                   ],
+                      "zIndex":  60,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "back_right",
+                      "assetPath":  "stages/made-in-china/back_platform_right",
+                      "position":  [
+                                       -1985,
+                                       -1333
+                                   ],
+                      "zIndex":  70,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     0.9,
+                                     0.9
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "middle",
+                      "assetPath":  "stages/made-in-china/middle_platform",
+                      "position":  [
+                                       -2089,
+                                       -1235
+                                   ],
+                      "zIndex":  80,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sim_sky",
+                      "assetPath":  "stages/made-in-china/sim_sky",
+                      "position":  [
+                                       -2786,
+                                       -2618
+                                   ],
+                      "zIndex":  90,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.1,
+                                     0
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sim_sun",
+                      "assetPath":  "stages/made-in-china/sim_sun",
+                      "position":  [
+                                       -2767,
+                                       -2340
+                                   ],
+                      "zIndex":  100,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     0.2,
+                                     0.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "sim_middle",
+                      "assetPath":  "stages/made-in-china/sim_middle_platform",
+                      "position":  [
+                                       -2530,
+                                       -2284
+                                   ],
+                      "zIndex":  110,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  0.0001,
+                      "scroll":  [
+                                     1,
+                                     1
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "front_left",
+                      "assetPath":  "stages/made-in-china/front_platform_left",
+                      "position":  [
+                                       -1859,
+                                       -1391
+                                   ],
+                      "zIndex":  160,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.2,
+                                     1.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  },
+                  {
+                      "name":  "front_right",
+                      "assetPath":  "stages/made-in-china/front_platform_right",
+                      "position":  [
+                                       -2196,
+                                       -1219
+                                   ],
+                      "zIndex":  170,
+                      "isPixel":  false,
+                      "flipX":  false,
+                      "flipY":  false,
+                      "scale":  1,
+                      "updateHitbox":  false,
+                      "alpha":  1,
+                      "scroll":  [
+                                     1.2,
+                                     1.2
+                                 ],
+                      "angle":  0,
+                      "color":  "#FFFFFF"
+                  }
+              ],
+    "characters":  {
+                       "bf":  {
+                                  "position":  [
+                                                   850,
+                                                   380
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  140,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -250,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              },
+                       "dad":  {
+                                   "position":  [
+                                                    24,
+                                                    420
+                                                ],
+                                   "positionMode":  "topLeft",
+                                   "zIndex":  130,
+                                   "scale":  1,
+                                   "cameraOffsets":  [
+                                                         100,
+                                                         -50
+                                                     ],
+                                   "scroll":  [
+                                                  1,
+                                                  1
+                                              ],
+                                   "alpha":  1,
+                                   "angle":  0
+                               },
+                       "gf":  {
+                                  "position":  [
+                                                   390,
+                                                   240
+                                               ],
+                                  "positionMode":  "topLeft",
+                                  "zIndex":  120,
+                                  "scale":  1,
+                                  "cameraOffsets":  [
+                                                        -600,
+                                                        0
+                                                    ],
+                                  "scroll":  [
+                                                 1,
+                                                 1
+                                             ],
+                                  "alpha":  1,
+                                  "angle":  0
+                              }
+                   }
+}

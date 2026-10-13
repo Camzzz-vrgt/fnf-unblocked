@@ -1,0 +1,80 @@
+﻿{
+  "version": "1.0.1",
+  "name": "corrupt_phanes_upset",
+  "renderType": "sparrow",
+  "assetPath": "characters/corrupt_phanes_upset",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [100, -100],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "upsetphanes_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "upsetphanes_up",
+      "offsets": [10, 50],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "upsetphanes_left",
+      "offsets": [167, -123],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "upsetphanes_right",
+      "offsets": [-151.2, -42.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "upsetphanes_down",
+      "offsets": [41.15, -143],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "ALTupsetphanes_up",
+      "offsets": [-15, 56],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "ALTupsetphanes_left",
+      "offsets": [117, -1],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "ALTupsetphanes_right",
+      "offsets": [-96.2, 41.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "ALTupsetphanes_down",
+      "offsets": [51.15, -26],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongephanes-evil",
+    "isPixel": false
+  }
+}

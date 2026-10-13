@@ -1,0 +1,199 @@
+{
+  "version": "1.0.2",
+  "name": "playa",
+  "cameraZoom": 0.68,
+  "directory": "wplaya",
+  "props": [
+    {
+      "name": "bgplaya",
+      "assetPath": "stages/playa/bgplaya",
+      "position": [-1600, -1400],
+      "zIndex": 10,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 1,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "cielo",
+      "assetPath": "stages/playa/cielo",
+      "position": [-1900, -1000],
+      "zIndex": 20,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "suelo",
+      "assetPath": "stages/playa/suelo",
+      "position": [-2250, -90],
+      "zIndex": 30,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "kahoot_bg",
+      "assetPath": "stages/playa/kahoot_bg",
+      "position": [-3100, -2100],
+      "zIndex": 40,
+      "isPixel": false,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "kahoot_bg idle",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "kahoot_game",
+      "assetPath": "stages/playa/kahoot_game",
+      "position": [-1600, -800],
+      "zIndex": 50,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1.5,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "pov",
+      "assetPath": "stages/playa/fondo_pov",
+      "position": [-1600, -800],
+      "zIndex": 60,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 0.95,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "linux",
+      "assetPath": "stages/playa/linux",
+      "position": [-1600, -800],
+      "zIndex": 70,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1.5,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "sans",
+      "assetPath": "stages/playa/sans",
+      "position": [-700, -900],
+      "zIndex": 80,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 1,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF"
+    },
+    {
+      "name": "staticsprite",
+      "assetPath": "stages/playa/static",
+      "position": [-900, -500],
+      "zIndex": 120,
+      "isPixel": true,
+      "flipX": false,
+      "flipY": false,
+      "scale": 5.5,
+      "updateHitbox": false,
+      "alpha": 0.0001,
+      "scroll": [1, 1],
+      "angle": 0,
+      "color": "#FFFFFF",
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "static",
+          "offsets": [0, 0],
+          "looped": true,
+          "frameRate": 24,
+          "frameIndices": []
+        }
+      ],
+      "startingAnimation": "idle"
+    }
+  ],
+  "characters": {
+    "bf": {
+      "position": [-100, -250],
+      "positionMode": "topLeft",
+      "zIndex": 110,
+      "scale": 1,
+      "cameraOffsets": [-220, 20],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "dad": {
+      "position": [-850, -330],
+      "positionMode": "topLeft",
+      "zIndex": 90,
+      "scale": 1,
+      "cameraOffsets": [0, 50],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    },
+    "gf": {
+      "position": [-350, -400],
+      "positionMode": "topLeft",
+      "zIndex": 100,
+      "scale": 1,
+      "cameraOffsets": [0, 0],
+      "scroll": [1, 1],
+      "alpha": 1,
+      "angle": 0
+    }
+  }
+}

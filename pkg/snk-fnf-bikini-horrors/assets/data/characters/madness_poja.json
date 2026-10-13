@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.1",
+  "name": "madness_poja",
+  "renderType": "sparrow",
+  "assetPath": "characters/spongefunkin/madness_poja",
+  "offsets": [1490, 670],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-40, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "poja",
+      "offsets": [-5, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "arriba",
+      "offsets": [-4, 142],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "izq",
+      "offsets": [111, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "dercha",
+      "offsets": [7, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "abajo",
+      "offsets": [-5, 32],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "madnes_poja",
+    "isPixel": false
+  }
+}

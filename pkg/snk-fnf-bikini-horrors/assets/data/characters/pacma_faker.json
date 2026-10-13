@@ -1,0 +1,94 @@
+﻿{
+  "version": "1.0.1",
+  "name": "pacma_faker",
+  "renderType": "sparrow",
+  "assetPath": "characters/usa/pacma",
+  "offsets": [80, 320],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [0, -240],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-15, 23],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-39, 18],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-53.2, 7.8],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1.85, -15],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transform",
+      "prefix": "transform",
+      "offsets": [-1, 553],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "ualt",
+      "offsets": [30, 560],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "ialt",
+      "offsets": [-41, 558],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "dalt",
+      "offsets": [0, 265],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "ralt",
+      "offsets": [-80, 530],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "lalt",
+      "offsets": [476, 341],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "pacmafaker",
+    "isPixel": false
+  }
+}

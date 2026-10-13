@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.1",
+  "name": "spongebrine",
+  "renderType": "sparrow",
+  "assetPath": "characters/brine/spongebrine",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-140, -280],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [15, 72],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [205, 18],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [12.8, -0.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [10.15, -35],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "gnam",
+      "prefix": "gangnamstyle",
+      "offsets": [99, 30],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "aparition",
+      "prefix": "aparition",
+      "offsets": [61, 142],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "nothing",
+    "isPixel": false
+  }
+}

@@ -1,0 +1,82 @@
+﻿{
+  "version": "1.0.1",
+  "name": "bubblemangrandoote",
+  "renderType": "sparrow",
+  "assetPath": "characters/bubblemangrandoote",
+  "offsets": [0, -350],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-200, 25],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, -2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [35, -11],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [292, -271],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-174, -80],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-71, -200],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "miss up",
+      "offsets": [-87, 44],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "miss left",
+      "offsets": [603, -609],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "miss right",
+      "offsets": [-205, -144],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "miss down",
+      "offsets": [99, -668],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.9,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "bubbleman",
+    "isPixel": false
+  }
+}

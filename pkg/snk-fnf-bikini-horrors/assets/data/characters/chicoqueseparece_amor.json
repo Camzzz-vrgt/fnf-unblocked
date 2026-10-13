@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.1",
+  "name": "chicoqueseparece_amor",
+  "renderType": "sparrow",
+  "assetPath": "characters/cqspmap_scared",
+  "offsets": [-840, 100],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [500, 0],
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "danceLeft",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "danceRight",
+      "offsets": [-1, 1],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "healthIcon": {
+    "id": "gf",
+    "isPixel": false
+  }
+}

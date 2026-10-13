@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "alohaphanes",
+  "renderType": "sparrow",
+  "assetPath": "characters/aloha/miniphanes",
+  "offsets": [100, 250],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-60, -24],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [-75, 140],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [21, 19],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [-96, 5],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-100, 15],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "flipX": true,
+  "healthIcon": {
+    "id": "miniphanes",
+    "isPixel": false
+  }
+}

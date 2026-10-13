@@ -1,0 +1,54 @@
+﻿{
+  "version": "1.0.1",
+  "name": "mihijo",
+  "renderType": "sparrow",
+  "assetPath": "characters/mihijo",
+  "offsets": [1600, 500],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-100, -30],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [-1, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "up",
+      "offsets": [1, 28],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left",
+      "offsets": [-1, 20],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right",
+      "offsets": [8, 30],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down",
+      "offsets": [-1, 33],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.45,
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "mihijo",
+    "isPixel": false
+  }
+}

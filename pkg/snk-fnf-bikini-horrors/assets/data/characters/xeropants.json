@@ -1,0 +1,65 @@
+﻿{
+  "version": "1.0.1",
+  "name": "xeropants",
+  "renderType": "multisparrow",
+  "assetPath": "characters/xeropants/1",
+  "offsets": [0, 0],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-100, -50],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "xero_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/1"
+    },
+    {
+      "name": "singUP",
+      "prefix": "xero_up",
+      "offsets": [106, 119],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/1"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "xeno_left",
+      "offsets": [232, 23],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/1"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "xero_right",
+      "offsets": [46.8, 25.8],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/1"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "xero_down",
+      "offsets": [140.15, -19],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/1"
+    },
+    {
+      "name": "transform",
+      "prefix": "idle",
+      "offsets": [658, 100],
+      "frameRate": 24,
+      "looped": false,
+      "assetPath": "characters/xeropants/2"
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "xero",
+    "isPixel": false
+  }
+}

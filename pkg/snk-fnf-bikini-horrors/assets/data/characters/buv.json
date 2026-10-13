@@ -1,0 +1,73 @@
+﻿{
+  "version": "1.0.1",
+  "name": "buv",
+  "renderType": "sparrow",
+  "assetPath": "characters/buv/buv",
+  "offsets": [100, 300],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [90, 0],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "buvidle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "buvup",
+      "offsets": [52, 94],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "buvleft",
+      "offsets": [160, 32],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "buvright",
+      "offsets": [15, -28],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "buvdown",
+      "offsets": [5, -117],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "alone",
+      "prefix": "buvalone",
+      "offsets": [95, -275],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "cry",
+      "prefix": "buvcry",
+      "offsets": [-80, -115],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "transition",
+      "prefix": "buvtransition",
+      "offsets": [140, -10],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "scale": 0.6,
+  "healthIcon": {
+    "id": "buv",
+    "isPixel": false
+  }
+}

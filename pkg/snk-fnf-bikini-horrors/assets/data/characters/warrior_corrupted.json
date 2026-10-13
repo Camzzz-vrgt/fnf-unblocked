@@ -1,0 +1,53 @@
+﻿{
+  "version": "1.0.1",
+  "name": "warrior_corrupted",
+  "renderType": "sparrow",
+  "assetPath": "characters/warrior_corrupted",
+  "offsets": [400, 340],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-250, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "bf_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "bf_up",
+      "offsets": [-32, 23],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "bf_left",
+      "offsets": [-68, 27],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "bf_right",
+      "offsets": [38, 25],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "bf_down",
+      "offsets": [-4, -63],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "spongewarrior-evil",
+    "isPixel": false
+  }
+}

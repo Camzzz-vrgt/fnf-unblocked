@@ -1,0 +1,88 @@
+﻿{
+  "version": "1.0.1",
+  "name": "rdsad",
+  "renderType": "sparrow",
+  "assetPath": "characters/rd",
+  "offsets": [-400, 750],
+  "offsetMode": "codename",
+  "playerOffsets": true,
+  "cameraOffsets": [-150, -150],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "sad_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "sad_up",
+      "offsets": [-4, 77],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "sad_left",
+      "offsets": [154, -41],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "sad_right",
+      "offsets": [-5, -24],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "sad_down",
+      "offsets": [4, -99],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singUP-alt",
+      "prefix": "angry_up",
+      "offsets": [-3, 50],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT-alt",
+      "prefix": "angry_left",
+      "offsets": [141, -46],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT-alt",
+      "prefix": "angry_right",
+      "offsets": [-1, -7],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN-alt",
+      "prefix": "angry_down",
+      "offsets": [10, -79],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "idle-alt",
+      "prefix": "angry_idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    }
+  ],
+  "flipX": true,
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "rd",
+    "isPixel": false
+  }
+}

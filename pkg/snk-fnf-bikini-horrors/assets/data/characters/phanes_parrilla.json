@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.1",
+  "name": "phanes_parrilla",
+  "renderType": "sparrow",
+  "assetPath": "characters/corre/parrilla_phanes",
+  "offsets": [2900, 350],
+  "offsetMode": "codename",
+  "playerOffsets": false,
+  "cameraOffsets": [-700, 200],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "parrilla_phanes idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": true
+    },
+    {
+      "name": "singUP",
+      "prefix": "parrilla_phanes up",
+      "offsets": [-46, -29],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "parrilla_phanes left",
+      "offsets": [-126, -121],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "parrilla_phanes right",
+      "offsets": [-321.2, -9.2],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "parrilla_phanes down",
+      "offsets": [319, -7],
+      "frameRate": 24,
+      "looped": false
+    }
+  ],
+  "singTime": 6.1,
+  "healthIcon": {
+    "id": "cc-phanes-tarde",
+    "isPixel": false
+  }
+}
