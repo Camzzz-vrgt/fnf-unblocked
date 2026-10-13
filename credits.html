@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credits — FNF</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="sub-page">
+  <header class="topbar">
+    <a class="back" href="index.html" aria-label="Back"></a>
+    <span class="topbar-title">Credits</span>
+  </header>
+
+  <main class="panel-wrap">
+    <section class="panel">
+      <h2>FNF</h2>
+      <div class="credit-row">
+        <strong><a href="https://gtag.pro/camzzz" target="_blank" rel="noopener">camzzz</a></strong>
+        <span>site, art &amp; sfx</span>
+      </div>
+      <div class="credit-row">
+        <strong>gn-math</strong>
+        <span>game archive</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Friday Night Funkin'</h2>
+      <div class="credit-row"><strong>ninjamuffin99</strong><span>programming</span></div>
+      <div class="credit-row"><strong>PhantomArcade</strong><span>animation</span></div>
+      <div class="credit-row"><strong>evilsk8r</strong><span>art</span></div>
+      <div class="credit-row"><strong>Kawai Sprite</strong><span>music</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Mods</h2>
+      <div id="mod-credits" class="credit-list"></div>
+    </section>
+  </main>
+
+  <script src="settings.js?v=2"></script>
+  <script src="nav.js?v=2"></script>
+  <script src="bgm.js?v=2"></script>
+  <script src="sfx.js?v=2"></script>
+  <script>
+    fetch("data/games.json").then(r => r.json()).then(games => {
+      const list = document.getElementById("mod-credits");
+      for (const g of games.filter(g => !g.base)) {
+        const row = document.createElement("div");
+        row.className = "credit-row";
+        const name = document.createElement("strong");
+        if (g.sourceUrl) {
+          const a = document.createElement("a");
+          a.href = g.sourceUrl;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = g.name;
+          name.appendChild(a);
+        } else {
+          name.textContent = g.name;
+        }
+        const role = document.createElement("span");
+        role.textContent = g.author || "";
+        row.append(name, role);
+        list.appendChild(row);
+      }
+    });
+  </script>
+</body>
+</html>

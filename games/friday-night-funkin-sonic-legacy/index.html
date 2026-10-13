@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<base href="./pkg/">	
+
+	<title>Sonic Legacy</title>
+	
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+	
+	
+	<script type="text/javascript" src="./legacy.js"></script>
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+		window.addEventListener("keydown", function(e) {if(["Tab","Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {e.preventDefault(); }}, false);
+	</script>
+	
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: 'Pixel Arial 11 Bold';
+			src: url('assets/fonts/pixel.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/pixel.woff') format('woff'),
+			url('assets/fonts/pixel.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono';
+			src: url('assets/fonts/vcr.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr.woff') format('woff'),
+			url('assets/fonts/vcr.ttf') format('truetype'),
+			url('assets/fonts/vcr.svg#VCR%20OSD%20Mono') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('flixel/fonts/nokiafc22.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/nokiafc22.woff') format('woff'),
+			url('flixel/fonts/nokiafc22.ttf') format('truetype'),
+			url('flixel/fonts/nokiafc22.svg#Nokia%20Cellphone%20FC%20Small') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('flixel/fonts/monsterrat.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/monsterrat.woff') format('woff'),
+			url('flixel/fonts/monsterrat.ttf') format('truetype'),
+			url('flixel/fonts/monsterrat.svg#Monsterrat') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+	
+</style>
+	
+</head>
+<body>
+	
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
+	<div id="openfl-content"></div>
+	
+	<script type="text/javascript">
+		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+	
+	<!-- You can find the sources of the game on the website gamebanana.com -->
+	
+
+<style id="offline-ad-cleanup">
+#ad, #ads, #advert, #advertisement, #ad-container, #adPlaysaurus, [id^="ad-" i], [id^="MobileAd" i], [id$="-ad" i], [id^="ads-" i], [class^="ad-" i], [class$="-ad" i], [class^="ads-" i], [class*="ad-container" i], [class*="ad-slot" i], [class*="banner-ad" i],  .ad, .adBanner, .adsbox, .adsbygoogle, .my_ad, ins.adsbygoogle { display:none !important; visibility:hidden !important; }
+</style>
+<script>
+window.offlineAdCleanup = true;
+function removeOfflineAds() {
+  document.querySelectorAll('iframe, ins, [id], [class]').forEach(function(el) {
+    var v = ((el.id || '') + ' ' + (el.className || '') + ' ' + (el.getAttribute('src') || '')).toLowerCase();
+    var adName = /(sidebarad|mobilead|adcontainer|adslot|adsbygoogle|adbanner|adsbox|my_ad|gamemonetize|adinplay|doubleclick|googlesyndication|imasdk|(^|[\\s_-])(ad|ads|advert|advertisement|banner)([\\s_-]|$))/i.test(v);
+    var remoteFrame = el.tagName === 'IFRAME' && /^(https?:|\/\/)/i.test(el.getAttribute('src') || '');
+    if (adName || remoteFrame) el.remove();
+  });
+}
+removeOfflineAds();
+new MutationObserver(removeOfflineAds).observe(document.documentElement, {childList:true, subtree:true});
+window.showAd = window.showAds = window.showAdOnClick = function() { return false; };
+window.showBannerAd = window.showRewardedAd = window.showInterstitialAd = function() { return Promise.resolve(false); };
+</script><style>
+#fnf-nav{position:fixed;top:10px;right:12px;z-index:2147483647;display:flex;gap:8px;font-family:Arial,sans-serif;opacity:.55;transition:opacity .15s}
+#fnf-nav:hover,#fnf-nav:focus-within{opacity:1}
+#fnf-nav a,#fnf-nav button{width:40px;height:40px;background:rgba(20,15,30,.85);border:2px solid rgba(255,255,255,.15);border-radius:10px;color:#fff;font-size:17px;font-weight:bold;line-height:36px;text-align:center;text-decoration:none;cursor:pointer;display:block;box-sizing:border-box}
+#fnf-nav a:hover,#fnf-nav button:hover{border-color:#3fc1ff;color:#3fc1ff}
+</style>
+<script>
+(function(){
+  function nav(){
+    if(document.getElementById("fnf-nav"))return;
+    var wrap=document.createElement("div");wrap.id="fnf-nav";
+    var p=location.pathname,i=p.indexOf("/games/");
+    var root=i>=0?p.slice(0,i+1):p.replace(/[^/]*$/,"");
+    var back=document.createElement("a");back.textContent="\u2190";back.title="Back to games";
+    back.href=root+"mods.html";
+    var nt=document.createElement("a");nt.textContent="\u2197";nt.title="Open in new tab";
+    nt.href=location.href;nt.target="_blank";nt.rel="noopener";
+    var fs=document.createElement("button");fs.textContent="\u26f6";fs.title="Fullscreen";
+    fs.onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else(document.documentElement.requestFullscreen||function(){}).call(document.documentElement);};
+    wrap.appendChild(back);wrap.appendChild(nt);wrap.appendChild(fs);
+    (document.body||document.documentElement).appendChild(wrap);
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",nav);
+  else nav();
+})();
+</script>
+</body>
+</html>

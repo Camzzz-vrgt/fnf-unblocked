@@ -1,0 +1,13 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({ headless:true, args:["--autoplay-policy=no-user-gesture-required"] });
+const p = await (await b.newContext()).newPage();
+let f400=[]; p.on("response",r=>{if(r.status()>=400)f400.push(r.status()+" "+r.url().slice(-60))});
+const pe=[]; p.on("pageerror",e=>pe.push(String(e).slice(0,80)));
+await p.goto("http://127.0.0.1:8642/play.html?g=snk-fnf-2hot-bf-mix",{waitUntil:"domcontentloaded"});
+await p.waitForTimeout(1200);
+await p.click("#gate-play");
+await p.waitForTimeout(45000);
+const s=await p.evaluate(()=>{const d=document.querySelector("iframe").contentDocument;return{canvas:d.querySelectorAll("canvas").length}});
+console.log(JSON.stringify(s),"4xx:",f400.slice(0,6),"errs:",pe.slice(0,6));
+await p.screenshot({path:"tools/tmp/2hot-done.png"});
+await b.close();

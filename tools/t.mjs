@@ -1,0 +1,11 @@
+import { chromium } from "playwright-core";
+const t=async(u,ms)=>{const b=await chromium.launch({args:["--autoplay-policy=no-user-gesture-required"]});
+ const p=await (await b.newContext()).newPage();const errs=[];
+ p.on("pageerror",e=>errs.push(String(e).slice(0,120)));
+ await p.goto(u,{waitUntil:"domcontentloaded",timeout:30000}).catch(e=>errs.push("nav:"+e));
+ await p.waitForTimeout(ms);
+ const st=await p.evaluate(()=>({url:location.href,canvas:document.querySelectorAll("canvas").length,links:[...document.querySelectorAll("a")].map(a=>a.getAttribute("href")).filter(Boolean).slice(0,6)}));
+ console.log(u.split("8642")[1],"->",JSON.stringify(st),"errs:",errs.slice(0,3));await b.close();};
+await t("http://127.0.0.1:8642/games/snk-vs-sonicexe/pkg/index.html",5000);
+await t("http://127.0.0.1:8642/games/snk-vs-sonicexe/pkg/sonicexe26/index4.html",12000);
+await t("http://127.0.0.1:8642/games/snk-vs-sonicexe/pkg/sonicexe39/index2.html",12000);

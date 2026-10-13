@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — FNF</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="sub-page">
+  <header class="topbar">
+    <a class="back" href="index.html" aria-label="Back"></a>
+    <span class="topbar-title">Settings</span>
+  </header>
+
+  <main class="panel-wrap">
+    <section class="panel">
+      <h2>Audio</h2>
+      <label class="opt"><input type="checkbox" id="set-bgm" /> <span>background music</span></label>
+      <label class="opt"><span>music volume</span>
+        <input type="range" id="set-bgm-vol" min="0" max="100" />
+      </label>
+      <label class="opt"><input type="checkbox" id="set-sfx" /> <span>menu sound effects</span></label>
+      <label class="opt"><span>sfx volume</span>
+        <input type="range" id="set-sfx-vol" min="0" max="100" />
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>Tab Cloaking</h2>
+      <p class="hint">disguises this tab's title + icon on every page</p>
+      <label class="opt"><span>disguise tab as</span>
+        <select id="set-cloak">
+          <option value="">off</option>
+          <option value="docs">Google Docs</option>
+          <option value="classroom">Google Classroom</option>
+          <option value="gmail">Gmail</option>
+        </select>
+      </label>
+    </section>
+  </main>
+
+  <script src="settings.js?v=2"></script>
+  <script src="nav.js?v=2"></script>
+  <script>
+    const bind = (id, key, val) => {
+      const el = document.getElementById(id);
+      el.value = FNFSettings.get(key, val);
+      if (el.type === "checkbox") el.checked = el.value === "1";
+      el.addEventListener(el.type === "range" ? "input" : "change", () =>
+        FNFSettings.set(key, el.type === "checkbox" ? (el.checked ? "1" : "0") : el.value));
+    };
+    bind("set-bgm", "bgm", "1");
+    bind("set-bgm-vol", "bgm-vol", "55");
+    bind("set-sfx", "sfx", "1");
+    bind("set-sfx-vol", "sfx-vol", "100");
+    bind("set-cloak", "cloak", "");
+  </script>
+  <script src="bgm.js?v=2"></script>
+  <script src="sfx.js?v=2"></script>
+</body>
+</html>

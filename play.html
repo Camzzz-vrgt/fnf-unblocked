@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play — FNF</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="play-page">
+  <div id="gate">
+    <div id="gate-bg"></div>
+    <div id="gate-inner">
+      <img id="gate-cover" alt="" />
+      <div id="gate-name">Loading…</div>
+      <button id="gate-play">CLICK TO PLAY</button>
+    </div>
+  </div>
+
+  <div class="play-fab">
+    <button id="btn-back" class="back" title="Back" aria-label="Back"></button>
+  </div>
+
+  <script src="settings.js?v=2"></script>
+  <script src="nav.js?v=2"></script>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const slug = params.get("g") || "friday-night-funkin";
+    const gameUrl = "games/" + encodeURIComponent(slug) + "/";
+
+    // click-to-play gate: the click is the user gesture browsers require
+    // before a page can unlock its AudioContext — without it the game's
+    // sound decoding stalls and the loading bar crawls for a minute.
+    const gate = document.getElementById("gate");
+    const gameInfo = fetch("data/games.json").then(r => r.json())
+      .then(games => games.find(x => x.slug === slug) || null)
+      .catch(() => null);
+
+    const start = () => {
+      if (window.__bgm) __bgm.pause();
+      location.href = gameUrl;  // direct navigation — no iframe
+    };
+    if (window.__bgm) __bgm.pause();
+    document.getElementById("gate-play").onclick = start;
+    gate.onclick = e => { if (e.target.id === "gate" || e.target.id === "gate-bg") start(); };
+
+    gameInfo.then(g => {
+      if (g) {
+        document.title = g.name + " — FNF";
+        document.getElementById("gate-name").textContent = g.name;
+        if (g.cover) {
+          document.getElementById("gate-cover").src = g.cover + "?v=4";
+          document.getElementById("gate-bg").style.backgroundImage = `url("${g.cover}?v=4")`;
+        }
+      }
+      if (window.FNFSettings) FNFSettings.applyCloak(); // cloak beats game title
+    });
+
+    document.getElementById("btn-back").onclick = () => { location.href = "mods.html"; };
+  </script>
+</body>
+</html>

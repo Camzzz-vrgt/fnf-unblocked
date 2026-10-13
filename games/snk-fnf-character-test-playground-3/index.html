@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="./pkg/">
+    <meta charset="UTF-8"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="canonical" href="https://www.snokido.com/game/fnf-character-test-playground-3" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+	<script>
+window.addEventListener('load', function () {
+    window.focus();
+    document.body.addEventListener('click',function(e) {
+        window.focus();
+    },false);
+});
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+</script>
+    <!-- Libs and GDJS core files : -->
+		<script src="libs/jshashtable.js" crossorigin="anonymous"></script>
+	<script src="gd.js" crossorigin="anonymous"></script>
+	<script src="libs/rbush.js" crossorigin="anonymous"></script>
+	<script src="inputmanager.js" crossorigin="anonymous"></script>
+	<script src="jsonmanager.js" crossorigin="anonymous"></script>
+	<script src="timemanager.js" crossorigin="anonymous"></script>
+	<script src="runtimeobject.js" crossorigin="anonymous"></script>
+	<script src="profiler.js" crossorigin="anonymous"></script>
+	<script src="runtimescene.js" crossorigin="anonymous"></script>
+	<script src="scenestack.js" crossorigin="anonymous"></script>
+	<script src="polygon.js" crossorigin="anonymous"></script>
+	<script src="force.js" crossorigin="anonymous"></script>
+	<script src="layer.js" crossorigin="anonymous"></script>
+	<script src="timer.js" crossorigin="anonymous"></script>
+	<script src="runtimegame.js" crossorigin="anonymous"></script>
+	<script src="variable.js" crossorigin="anonymous"></script>
+	<script src="variablescontainer.js" crossorigin="anonymous"></script>
+	<script src="oncetriggers.js" crossorigin="anonymous"></script>
+	<script src="runtimebehavior.js" crossorigin="anonymous"></script>
+	<script src="spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="events-tools/commontools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/inputtools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/objecttools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/cameratools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/soundtools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/storagetools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/stringtools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/windowtools.js" crossorigin="anonymous"></script>
+	<script src="events-tools/networktools.js" crossorigin="anonymous"></script>
+	<script src="splash/gd-logo-light.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/pixi.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/pixi-bitmapfont-manager.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
+	<script src="howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
+	<script src="fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
+	<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TweenBehavior/shifty.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TweenBehavior/tweenruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TiledSpriteObject/tiledspriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TextObject/textruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="Extensions/TextObject/textruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PrimitiveDrawing/shapepainterruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PrimitiveDrawing/pixi-graphics-extras/graphics-extras.min.js" crossorigin="anonymous"></script>
+	<script src="Extensions/PrimitiveDrawing/shapepainterruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="gdjs-evtsext__toggleswitch__toggleswitch.js" crossorigin="anonymous"></script>
+	<script src="gdjs-evtsext__draggableslidercontrol__draggableslidercontrol.js" crossorigin="anonymous"></script>
+	<script src="code0.js" crossorigin="anonymous"></script>
+	<script src="code1.js" crossorigin="anonymous"></script>
+	<script src="code2.js" crossorigin="anonymous"></script>
+	<script src="code3.js" crossorigin="anonymous"></script>
+	<script src="code4.js" crossorigin="anonymous"></script>
+	<script src="code5.js" crossorigin="anonymous"></script>
+	<script src="code6.js" crossorigin="anonymous"></script>
+	<script src="data.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+
+	</script>
+
+<style>
+#fnf-nav{position:fixed;top:10px;right:12px;z-index:2147483647;display:flex;gap:8px;font-family:Arial,sans-serif;opacity:.55;transition:opacity .15s}
+#fnf-nav:hover,#fnf-nav:focus-within{opacity:1}
+#fnf-nav a,#fnf-nav button{width:40px;height:40px;background:rgba(20,15,30,.85);border:2px solid rgba(255,255,255,.15);border-radius:10px;color:#fff;font-size:17px;font-weight:bold;line-height:36px;text-align:center;text-decoration:none;cursor:pointer;display:block;box-sizing:border-box}
+#fnf-nav a:hover,#fnf-nav button:hover{border-color:#3fc1ff;color:#3fc1ff}
+</style>
+<script>
+(function(){
+  function nav(){
+    if(document.getElementById("fnf-nav"))return;
+    var wrap=document.createElement("div");wrap.id="fnf-nav";
+    var p=location.pathname,i=p.indexOf("/games/");
+    var root=i>=0?p.slice(0,i+1):p.replace(/[^/]*$/,"");
+    var back=document.createElement("a");back.textContent="\u2190";back.title="Back to games";
+    back.href=root+"mods.html";
+    var nt=document.createElement("a");nt.textContent="\u2197";nt.title="Open in new tab";
+    nt.href=location.href;nt.target="_blank";nt.rel="noopener";
+    var fs=document.createElement("button");fs.textContent="\u26f6";fs.title="Fullscreen";
+    fs.onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else(document.documentElement.requestFullscreen||function(){}).call(document.documentElement);};
+    wrap.appendChild(back);wrap.appendChild(nt);wrap.appendChild(fs);
+    (document.body||document.documentElement).appendChild(wrap);
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",nav);
+  else nav();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({headless:true,args:["--autoplay-policy=no-user-gesture-required"]});
+const p=await (await b.newContext()).newPage();
+const errs=[];const f4=[];
+p.on("pageerror",e=>errs.push(String(e).slice(0,90)));
+p.on("response",r=>{if(r.status()>=400)f4.push(r.status()+" "+r.url().slice(-60))});
+await p.goto(`http://127.0.0.1:8642/games/snk-fnf-another-friday-night/`,{waitUntil:"domcontentloaded",timeout:20000}).catch(()=>errs.push("nav"));
+await p.waitForTimeout(25000);
+const st=await p.evaluate(()=>({canvas:document.querySelectorAll("canvas").length,lime:typeof window.lime}));
+console.log("another-friday-night",JSON.stringify(st),"errs:",errs.slice(0,3),"404:",f4.slice(0,4));
+await p.screenshot({path:"tools/tmp/afn.png"});
+await b.close();
