@@ -1,0 +1,85 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.character.CharacterType;
+
+class churchDeathStage extends Stage
+{
+
+	function new()
+		{
+			super('churchDeath');
+		}
+
+    function buildStage()
+	{
+        super.buildStage();
+		getNamedProp('theGradient').blend = 0;
+		getNamedProp('flamingLeft').blend = 0;
+		getNamedProp('flamingRight').blend = 0;
+	}
+
+	public function onGameOver(event:ScriptEvent) {
+		getBoyfriend().shader = null;
+	}
+
+    override function addCharacter(character:BaseCharacter, charType:CharacterType) :Void
+    {
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+
+        var rim = new DropShadowShader();
+						// Hue, Sat, Cont, Bright
+        rim.setAdjustColor(-45, 0, 0, 15);
+        rim.color = 0xFFff4040;
+		character.shader = rim;
+		rim.attachedSprite = character;
+
+        switch(charType){
+			case CharacterType.BF:
+
+				rim.angle = 45;
+
+				character.animation.callback = function() {
+					if (getBoyfriend() != null)
+					{
+      			        rim.updateFrameInfo(getBoyfriend().frame);
+					}
+    		};
+			case CharacterType.GF:
+
+				rim.angle = 45;
+
+				character.animation.callback = function() {
+      		rim.updateFrameInfo(getGirlfriend().frame);
+    		};
+
+			case CharacterType.DAD:
+
+				rim.angle = 135;
+				rim.threshold = 0.3;
+
+				character.animation.callback = function() {
+      		rim.updateFrameInfo(getDad().frame);
+    		};
+			default: 
+
+		}
+
+
+    }
+
+
+}

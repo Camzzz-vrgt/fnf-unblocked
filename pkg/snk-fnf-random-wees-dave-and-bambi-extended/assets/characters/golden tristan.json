@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				182,
+				84
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "d down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				260
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				184,
+				320
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "d up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				111,
+				262
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "d right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				272,
+				262
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "d left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/titi",
+	"position": [
+		-100,
+		350
+	],
+	"healthicon": "goldentristan",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		216,
+		0
+	],
+	"camera_position": [
+		-260,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

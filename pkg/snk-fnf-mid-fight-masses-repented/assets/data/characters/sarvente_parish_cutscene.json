@@ -1,0 +1,148 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sarvente Parish Cutscene",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "static",
+	"isPixel": false,
+	"assetPath": "characters/cutscenes/parish/sarventeParish",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "sarvente"
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "sarvente static idle",
+			"flipX": false,
+			"name": "static",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				260,
+				2
+			],
+			"frameRate": 24,
+			"prefix": "sarvente bending",
+			"flipX": false,
+			"looped": false,
+			"name": "bending"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				317,
+				3
+			],
+			"frameRate": 16,
+			"prefix": "sarvente acquiring bible",
+			"flipX": false,
+			"looped": false,
+			"name": "reading"
+		},
+		{
+			"offsets": [
+				104,
+				34
+			],
+			"prefix": "sarvente vaporized bible",
+			"frameIndices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6,
+				5,
+				6
+			],
+			"flipX": false,
+			"looped": false,
+			"name": "vaporized",
+			"flipY": false,
+			"frameRate": 24
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-42,
+				-60
+			],
+			"frameRate": 24,
+			"prefix": "sarvente wave",
+			"flipX": false,
+			"name": "wave",
+			"looped": true
+		}
+	]
+}

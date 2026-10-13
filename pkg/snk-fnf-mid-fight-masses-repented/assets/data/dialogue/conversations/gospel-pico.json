@@ -1,0 +1,135 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFd1e0e3"
+  },
+
+  "music": {
+    "asset": "slowedGospelinvalid",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["Sorry Sarv."]
+    },
+    {
+      "speaker": "sarventeCondescending",
+      "speakerAnimation": "cappin",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["It's fine. It really is!"]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "sarventeCondescending",
+      "speakerAnimation": "cappin",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["I'm quite tired of this cat and mouse chase, y'know?"]
+    },
+    {
+      "speaker": "sarventeCondescending",
+      "speakerAnimation": "cappin",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["So I want to let out a little secret of mine. Let's kee-"]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["can u stop yappin'"]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["she talkin the talk fr fr"]
+    },
+    {
+      "speaker": "sarventeCondescending",
+      "speakerAnimation": "cappin",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["..."]
+    },
+    {
+      "speaker": "sarventeCondescending",
+      "speakerAnimation": "cappin",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["May god forgive you..."]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["um..."]
+    },
+    {
+      "speaker": "sarventeGospel",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["Because I won't."]
+    }
+  ]
+}

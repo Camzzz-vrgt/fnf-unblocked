@@ -1,0 +1,92 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Ruv (Indoors)",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/ruv_indoors",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "ruv",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "ruv idle0",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				3,
+				-71
+			],
+			"frameRate": 24,
+			"prefix": "ruv down",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				164,
+				9
+			],
+			"frameRate": 24,
+			"prefix": "ruv left",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-63,
+				-21
+			],
+			"frameRate": 24,
+			"prefix": "ruv right",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				11,
+				44
+			],
+			"frameRate": 24,
+			"prefix": "ruv up",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		}
+	]
+}

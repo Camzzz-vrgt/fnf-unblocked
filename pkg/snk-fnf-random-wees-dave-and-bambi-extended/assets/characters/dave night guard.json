@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				259
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				259
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "d left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				259
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "d right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "d up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				260
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "d down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dave nai",
+	"position": [
+		270,
+		380
+	],
+	"healthicon": "daveg",
+	"flip_x": true,
+	"healthbar_colors": [
+		125,
+		149,
+		209
+	],
+	"camera_position": [
+		0,
+		-390
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

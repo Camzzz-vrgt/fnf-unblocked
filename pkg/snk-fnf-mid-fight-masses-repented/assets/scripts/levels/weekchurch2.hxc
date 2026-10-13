@@ -1,0 +1,19 @@
+import funkin.ui.story.Level;
+import funkin.save.Save;
+
+class WeekChurch2Level extends Level
+{
+	function new()
+	{
+		super('weekchurch2');
+	}
+
+  override function isUnlocked():Bool {
+    return true;
+  }
+
+  override function isVisible():Bool{
+    return false;
+  }
+
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				176,
+				260
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "d left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				186,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "d right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				184,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "d up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				182,
+				260
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "d down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "d idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/minus dave",
+	"position": [
+		60,
+		330
+	],
+	"healthicon": "dave",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		255
+	],
+	"camera_position": [
+		-290,
+		-400
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

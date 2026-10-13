@@ -1,0 +1,63 @@
+{
+  "version": "2.2.4",
+  "songName": "Parish",
+  "artist": "Coru",
+  "charter": "st4rcannon",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "stickerPack": "mid-fight-masses",
+    "songVariations": ["pico"],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "bfmasses",
+      "girlfriend": "gf",
+      "opponent": "sarvente",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": [
+        "sarvente"
+      ],
+      "playerVocals": [
+        "bf"
+      ]
+    },
+    "stage": "church",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 1,
+      "normal": 3,
+      "hard": 5
+    },
+    "album": "mfm",
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 110,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

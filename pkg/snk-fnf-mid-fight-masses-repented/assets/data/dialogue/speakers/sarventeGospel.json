@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "name": "Sarvente",
+  "assetPath": "dialogue/portraits/SarventeDialogueGospel",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [100, -50],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Gospel Sarvente Dialogue Default",
+      "looped": true,
+      "frameRate": 12
+    }
+  ]
+}

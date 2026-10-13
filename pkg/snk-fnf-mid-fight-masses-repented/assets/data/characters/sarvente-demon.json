@@ -1,0 +1,82 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		-50
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sarvente (Demon)",	
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 8,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/demonsarvente",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-50
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sarvente idle",
+			"looped": true,
+			"name": "idle",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				110,
+				-63
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sarvente left",
+			"looped": false,
+			"name": "singLEFT",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				23,
+				-100
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sarvente down",
+			"looped": false,
+			"name": "singDOWN",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				128,
+				139
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sarvente up",
+			"looped": false,
+			"name": "singUP",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-7,
+				-43
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "sarvente right",
+			"looped": false,
+			"name": "singRIGHT",
+			"flipX": false
+		}
+	]
+}

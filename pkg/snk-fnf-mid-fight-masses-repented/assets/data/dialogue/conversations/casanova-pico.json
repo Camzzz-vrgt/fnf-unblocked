@@ -1,0 +1,280 @@
+{
+  "version": "1.0.0",
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFd1e0e3"
+  },
+  "music": {
+    "asset": "casanovaSlowed",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+  "dialogue": [
+    {
+      "speaker": "seleverLoud",
+      "speakerAnimation": "humored",
+      "box": "defaultbox",
+      "boxAnimation": "loud",
+      "text": [
+        "HAPPY APRIL FOOLS BI-"
+      ]
+    },
+    {
+      "speaker": "seleverDejected",
+      "speakerAnimation": "dejected",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "Wait, it's not even April..."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "Whatever."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "It feels like I should say something before ya start whining over the smallest BEEP..."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "staring",
+      "box": "defaultbox",
+      "boxAnimation": "loud",
+      "text": [
+        "LMAOOO Yes. I see YOU"
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "But yeah, I like talking a lot and I don't care if it annoys you."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "So, Lets have some fun!"
+      ]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "..."
+      ]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "..."
+      ]
+    },
+    {
+      "speaker": "picoBefuddled",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "what the BEEP?"
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "dejected",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "Huh.."
+      ]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "?"
+      ]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "?"
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "How long has it been... like 4 years?"
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "humored",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "...and I'm STILL tampering with my own parallel world..."
+      ]
+    },
+    {
+      "speaker": "seleverLoud",
+      "speakerAnimation": "humored",
+      "box": "defaultbox",
+      "boxAnimation": "loud",
+      "text": [
+        "LMAOOO! Look dude, I don't know how the BEEP you got here..."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "But the Demon and the Criminal you're searching for are probably-"
+      ]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "um... i don't care."
+      ]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "real."
+      ]
+    },
+    {
+      "speaker": "seleverDejected",
+      "speakerAnimation": "dejected",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "... wow."
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "Anyways, I'm kind of pissed you entered my parallel world I made temporarily so my sist-"
+      ]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "erm..."
+      ]
+    },
+    {
+      "speaker": "picoOkay",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "okay, okay"
+      ]
+    },
+    {
+      "speaker": "selever",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+      "text": [
+        "...My power can't keep this place together...."
+      ]
+    },
+    {
+      "speaker": "seleverLoud",
+      "speakerAnimation": "humored",
+      "box": "defaultbox",
+      "boxAnimation": "loud",
+      "text": [
+        "I'll end you along with this place!!"
+      ]
+    },
+    {
+      "speaker": "picoPissed",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "shut the BEEP up bro"
+      ]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "im sayin' like"
+      ]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+      "text": [
+        "chattin"
+      ]
+    },
+    {
+      "speaker": "neneFreaky",
+      "speakerAnimation": "freaky",
+      "box": "defaultbox",
+      "boxAnimation": "hellYea",
+      "text": [
+        "Put a BULLET in him."
+      ]
+    }
+  ]
+}

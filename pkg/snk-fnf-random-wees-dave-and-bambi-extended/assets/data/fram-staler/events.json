@@ -1,0 +1,69 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "bambi farm",
+		"player1": "bff",
+		"player2": "bambi",
+		"player3": null,
+		"events": [
+			[
+				10105.2631578947,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Set Cam Zoom",
+						"1.50",
+						"10"
+					],
+					[
+						"Add Camera Zoom",
+						"",
+						"1"
+					]
+				]
+			],
+			[
+				20210.5263157895,
+				[
+					[
+						"Set Cam Zoom",
+						"0.90",
+						"1"
+					]
+				]
+			],
+			[
+				110526.315789474,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					],
+					[
+						"Change Character",
+						"BF",
+						"jose n gf p"
+					],
+					[
+						"Change Character",
+						"2",
+						"bff gf"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "jose n gf",
+		"bpm": 190,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "fram-staler"
+	}
+}

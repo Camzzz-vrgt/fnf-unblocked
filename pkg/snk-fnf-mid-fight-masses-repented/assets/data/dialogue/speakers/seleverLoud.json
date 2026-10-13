@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "name": "Selever",
+  "assetPath": "dialogue/portraits/SeleverDialogue",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [100, 100],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Selever Dialogue Default",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "dejected",
+      "prefix": "Selever Dialogue Dejected",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "humored",
+      "prefix": "Selever Dialogue Humored",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "eyp",
+      "prefix": "Selever Dialogue EYP",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "staring",
+      "prefix": "Selever Dialogue Staring",
+      "looped": true,
+      "frameRate": 12,
+      "offsets": [0, 0]
+    }
+  ]
+}

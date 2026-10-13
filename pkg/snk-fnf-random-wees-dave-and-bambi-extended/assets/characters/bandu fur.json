@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				169,
+				162
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "d right"
+		},
+		{
+			"offsets": [
+				169,
+				161
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "d left"
+		},
+		{
+			"offsets": [
+				168,
+				164
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "d up"
+		},
+		{
+			"offsets": [
+				168,
+				165
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "d down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				161,
+				160
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "d miss d",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				160,
+				160
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "d miss u",
+			"indices": []
+		},
+		{
+			"offsets": [
+				172,
+				160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "d idle r"
+		},
+		{
+			"offsets": [
+				172,
+				160
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "d idle l"
+		},
+		{
+			"offsets": [
+				170,
+				165
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "d miss l"
+		},
+		{
+			"offsets": [
+				167,
+				169
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "d miss r"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bandu furry",
+	"position": [
+		-400,
+		240
+	],
+	"healthicon": "bandu",
+	"flip_x": true,
+	"healthbar_colors": [
+		28,
+		214,
+		0
+	],
+	"camera_position": [
+		-10,
+		-140
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

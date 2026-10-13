@@ -1,0 +1,359 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.data.song.SongRegistry;
+import funkin.play.song.Song;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.save.Save;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.StageProp;
+import funkin.ui.options.PreferencesMenu;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.character.BaseCharacter;
+
+class ParishSong extends Song
+{
+  // cutscene variables
+  var hasPlayedCutscene:Bool;
+  var hasPlayedEndingCutscene:Bool;
+  var hasPlayedInGameCutscene:Bool;
+  var cutsceneConductor:Conductor;
+  var darken:FunkinSprite;
+  var cutsceneSarvente:BaseCharacter;
+
+  // chatterbox
+
+  public function new()
+  {
+    super('parish');
+    hasPlayedInGameCutscene = false;
+    hasPlayedEndingCutscene = false;
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'pico') return !Save.instance.hasBeatenSong(this.id, null, 'pico');
+    return false;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    if (!PlayStatePlaylist.isStoryMode)
+    {
+      trace('Started countdown for Parish...');
+
+      // Skip the cutscene on the normal variation if we are in Freeplay.
+      if (PlayState.instance.currentVariation == 'default' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+
+      if (!hasPlayedCutscene)
+      {
+        trace('Pausing countdown to play cutscene.');
+
+        hasPlayedCutscene = true;
+
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        // Play a SFX
+        // FunkinSound.playOnce(Paths.sound('ANGRY_TEXT_BOX'), 1.0);
+
+        // ERIC: There's a known bug where, on the School stage, pausing the stage animations then trying
+        // to restart them causes the animations to freeze.
+        // TODO: Commenting out this line causes the animations to work but they play even during the dialogue, which is supposed to pause everything.
+        // PlayState.instance.currentStage.pause();
+
+        startDialogue();
+      }
+    }
+
+    if (PlayStatePlaylist.isStoryMode && !hasPlayedInGameCutscene)
+    {
+      trace('Pausing countdown to play in game cutscene');
+
+      hasPlayedInGameCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+      PlayState.instance.isInCutscene = true;
+      PlayState.instance.camHUD.visible = false;
+      introCutscene();
+    }
+  }
+
+  // in-game cutscene stuffs
+  function introCutscene()
+  {
+    initCutsceneSarvente('sarvente_parish_cutscene');
+
+    var bfPos:Array<Float> = [
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    ];
+    var gfPos:Array<Float> = [
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+    ];
+    var sarventePos:Array<Float> = [
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+    var cutsceneDelay:Float = 2;
+
+    var cutsceneSfx:FunkinSound;
+    cutsceneSfx = FunkinSound.load(Paths.sound("parishCutsceneMusic"), true);
+    cutsceneSfx.volume = 1;
+
+    var bfwaveSfx:FunkinSound;
+    bfwaveSfx = FunkinSound.load(Paths.sound("bfWave"), true);
+    bfwaveSfx.volume = 0.5;
+
+    cutsceneConductor = new Conductor();
+
+    cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
+
+    if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('static', true);
+    new FlxTimer().start(0.1, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(bfPos[0], bfPos[1], 0);
+      cutsceneSfx.play(false);
+      PlayState.instance.tweenCameraZoom(1.1, 0, true, FlxEase.quadInOut);
+    });
+
+    // pan camera over to sarvente so we can see her idle
+
+    new FlxTimer().start(0.1, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(sarventePos[0], sarventePos[1] + 85, 3, FlxEase.quadInOut);
+
+      PlayState.instance.tweenCameraZoom(0.9, 3, true, FlxEase.quadInOut);
+    });
+
+    // sarvente bending down to bf
+    new FlxTimer().start(3, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(sarventePos[0] + 40, sarventePos[1] + 100, 2, FlxEase.quadInOut);
+      if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('bending', true);
+    });
+
+    new FlxTimer().start(4, function(tmr) {
+      if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('wave', true);
+    });
+    // zoom in on bf  while he waves like asilly lil guy
+    new FlxTimer().start(5.5, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(bfPos[0] + 125, bfPos[1] + 50, 0, FlxEase.quadInOut);
+      PlayState.instance.tweenCameraZoom(1.1, 0, true, FlxEase.quadInOut);
+      PlayState.instance.currentStage.getBoyfriend().playAnimation('wave', true);
+      bfwaveSfx.play(false);
+    });
+    // she pulls out book n starts reading n boyfriend starts idling again
+
+    //   new FlxTimer().start(7, function(tmr)
+    //       {
+
+    //         PlayState.instance.tweenCameraToPosition(sarventePos[0], sarventePos[1] , 2, FlxEase.quadOut);
+    //         PlayState.instance.tweenCameraZoom(0.8, 2, true, FlxEase.quadInOut);
+    //         PlayState.instance.currentStage.getDad().playAnimation('reading', true);
+    //         PlayState.instance.currentStage.getBoyfriend().playAnimation('idle-static', true);
+    //   });
+
+    //   //zoom in on gf and prepare for hype moments and aura (the darken thing just makes the bg darken so it looks cooler)
+    // new FlxTimer().start(10, function(tmr)
+    //     {
+
+    //       PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1] - 50, 2.5, FlxEase.quadOut);
+    //       PlayState.instance.tweenCameraZoom(1.5, 2.5, true, FlxEase.quadInOut);
+    //       PlayState.instance.currentStage.getGirlfriend().playAnimation('aura', true);
+    //       darkenStageProps();
+    // });
+
+    // //she shoots n no more dark (sarvente also gets scared here)
+    // new FlxTimer().start(12.5, function(tmr)
+    //   {
+
+    //     //PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1] - 50, 2.5, FlxEase.quadOut);
+    //     PlayState.instance.tweenCameraZoom(0.75, 0.2, true, FlxEase.quadInOut);
+    //     PlayState.instance.currentStage.getGirlfriend().playAnimation('hype', true);
+    //     PlayState.instance.currentStage.getDad().playAnimation('vaporized', true);
+
+    // var bible:FunkinSprite = FunkinSprite.createSparrow(sarventePos[0] - 500, sarventePos[1], 'stages/church/vaporizedBible');
+    // bible.animation.addByPrefix('idle', 'bible exploding', 16, false);
+    // bible.animation.play('idle', false);
+    // bible.zIndex = 500;
+    // PlayState.instance.currentStage.add(bible);
+    // PlayState.instance.currentStage.refresh();
+    // });
+
+    // bring it back n start the song
+    new FlxTimer().start(7, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(sarventePos[0], sarventePos[1], 2, FlxEase.quadInOut);
+      PlayState.instance.tweenCameraZoom(0.8, 2, true, FlxEase.quadOut);
+      destroyCutsceneSarvente();
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.startCountdown();
+    });
+  }
+
+  function initCutsceneSarvente(characterId:String):Void
+  {
+    if (!PlayStatePlaylist.isStoryMode || cutsceneSarvente != null) return;
+
+    var dad = PlayState.instance.currentStage.getDad();
+    if (dad == null) return;
+
+    cutsceneSarvente = CharacterDataParser.fetchCharacter(characterId);
+    if (cutsceneSarvente == null) return;
+
+    cutsceneSarvente.visible = false;
+    PlayState.instance.currentStage.add(cutsceneSarvente);
+
+    cutsceneSarvente.flipX = dad.flipX;
+    cutsceneSarvente.zIndex = dad.zIndex;
+    cutsceneSarvente.scrollFactor.set(dad.scrollFactor.x, dad.scrollFactor.y);
+    cutsceneSarvente.alpha = dad.alpha;
+    cutsceneSarvente.angle = dad.angle;
+    cutsceneSarvente.setScale(dad.scale.x);
+    cutsceneSarvente.x = dad.x;
+    cutsceneSarvente.y = dad.y;
+    cutsceneSarvente.originalPosition.set(dad.originalPosition.x, dad.originalPosition.y);
+    // cutsceneSarvente.resetCameraFocusPoint();
+
+    dad.visible = false;
+    cutsceneSarvente.visible = true;
+    PlayState.instance.currentStage.refresh();
+  }
+
+  function destroyCutsceneSarvente():Void
+  {
+    var dad = PlayState.instance.currentStage?.getDad();
+    if (dad != null)
+    {
+      dad.visible = true;
+      dad.alpha = 1;
+      // dad.x = dad.originalPosition.x;
+      // dad.y = dad.originalPosition.y;
+      // dad.resetCharacter(true);
+      dad.playAnimation('idle', true);
+      // PlayState.instance.cameraFollowPoint.setPosition(dad.cameraFocusPoint.x, dad.cameraFocusPoint.y);
+    }
+
+    if (cutsceneSarvente != null)
+    {
+      PlayState.instance.currentStage.remove(cutsceneSarvente, true);
+      cutsceneSarvente.destroy();
+      cutsceneSarvente = null;
+      PlayState.instance.currentStage.refresh();
+    }
+  }
+
+  // ending cutscene, hype moments and aura
+
+  public override function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    super.onSongEnd(event);
+    {}
+  }
+
+  function onCutsceneBeatHit()
+  {
+    // Play idle if they ain busy.
+    if (PlayState.instance.currentStage.getGirlfriend().isAnimationFinished())
+    {
+      PlayState.instance.currentStage.getGirlfriend().dance(true);
+    }
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
+    destroyCutsceneSarvente();
+  }
+
+  // didnt wanna do this but wtv
+
+  function darkenStageProps()
+  {
+    // Darken the background, then fade it back.
+    for (stageProp in PlayState.instance.currentStage.members)
+    {
+      // Determine if the stage prop is something that should be excluded from darkening.
+      if (Std.isOfType(stageProp, StageProp))
+      {
+        if (stageProp.name == "bf" || stageProp.name == "dad" || stageProp.name == "gf") // This refers to the player.
+        {
+          // Exclude.
+          continue;
+        }
+      }
+
+      // Hacky way of selecting PicoPlayable.picoFade.
+      if (stageProp.zIndex == (PlayState.instance.currentStage.getBoyfriend().zIndex - 3))
+      {
+        // Exclude.
+        continue;
+      }
+
+      if (stageProp.zIndex > 99)
+      {
+        continue;
+      }
+
+      // If not excluded, darken.
+
+      new FlxTimer().start(1 / 24, (tmr) -> {
+        stageProp.color = 0xFFFFFFFF;
+        FlxTween.color(stageProp, 1.8, 0xFFFFFFFF, 0xFF222222);
+      });
+      new FlxTimer().start(1.8, (tmr) -> {
+        stageProp.color = 0xFFFFFFFF;
+        FlxTween.color(stageProp, 0, 0xFF222222, 0xFFFFFFFF);
+      });
+    }
+  }
+
+  function startDialogue()
+  {
+    var targetDialogue = 'parish';
+
+    if (PlayState.instance.currentVariation == 'pico') targetDialogue += "-pico";
+    if (!Preferences.naughtyness) targetDialogue += "-censored";
+
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
+    destroyCutsceneSarvente();
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent) {}
+
+  public override function onDialogueEnd()
+  {
+    // We may need to wait for the outro to play.
+    Countdown.performCountdown();
+  }
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				180,
+				260
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "idle",
+			"indices": [],
+			"name": "b idle"
+		},
+		{
+			"offsets": [
+				181,
+				260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "b up"
+		},
+		{
+			"offsets": [
+				181,
+				260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "b down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				260
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "b left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "b right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/boi robo",
+	"position": [
+		-100,
+		540
+	],
+	"healthicon": "bf bot",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		177,
+		209
+	],
+	"camera_position": [
+		-650,
+		-380
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

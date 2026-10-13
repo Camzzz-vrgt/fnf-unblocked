@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "idle",
+			"indices": [],
+			"name": "d idle"
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "d left"
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "d right"
+		},
+		{
+			"offsets": [
+				179,
+				260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "d up"
+		},
+		{
+			"offsets": [
+				179,
+				260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "d down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/robo gf",
+	"position": [
+		270,
+		380
+	],
+	"healthicon": "gf bot",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		-570,
+		-390
+	],
+	"sing_duration": 4,
+	"scale": 1.6
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				265,
+				240
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "c left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				163,
+				273
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "c right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				211,
+				297
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "c up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				250
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "c down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				180,
+				260
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "idle",
+			"loop": false,
+			"name": "c idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/vicente",
+	"position": [
+		110,
+		250
+	],
+	"healthicon": "vicente",
+	"flip_x": false,
+	"healthbar_colors": [
+		15,
+		115,
+		255
+	],
+	"camera_position": [
+		-450,
+		-400
+	],
+	"sing_duration": 4,
+	"scale": 1.8
+}

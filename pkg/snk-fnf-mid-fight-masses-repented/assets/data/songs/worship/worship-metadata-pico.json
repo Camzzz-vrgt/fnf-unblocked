@@ -1,0 +1,60 @@
+{
+  "version": "2.2.4",
+  "songName": "Worship (Pico Mix)",
+  "artist": "st4rcannon (feat. GENZU)",
+  "charter": "GENZU",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "stickerPack": "mid-fight-masses",
+    "songVariations": [],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene",
+      "opponent": "sarventeangryindoors",
+      "instrumental": "pico",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "sarvente"
+      ]
+    },
+    "stage": "churchRainyErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 5,
+      "normal": 7,
+      "hard": 9
+    },
+    "album": "mfm",
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 120,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

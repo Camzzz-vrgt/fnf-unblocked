@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				180,
+				260
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "idle",
+			"indices": [],
+			"name": "t idle"
+		},
+		{
+			"offsets": [
+				182,
+				264
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "t down"
+		},
+		{
+			"offsets": [
+				184,
+				260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "t up"
+		},
+		{
+			"offsets": [
+				182,
+				262
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "t right"
+		},
+		{
+			"offsets": [
+				181,
+				262
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "t left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tristan",
+	"position": [
+		-190,
+		350
+	],
+	"healthicon": "tristan",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		35,
+		35
+	],
+	"camera_position": [
+		-50,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

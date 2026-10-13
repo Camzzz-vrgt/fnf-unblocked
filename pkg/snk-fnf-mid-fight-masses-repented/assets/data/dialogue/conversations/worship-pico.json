@@ -1,0 +1,63 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFd1e0e3"
+  },
+
+  "music": {
+    "asset": "worshipSlowed",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "sarventeAngry",
+      "speakerAnimation": "condescending",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["I see... I see how it is..."]
+    },
+    {
+      "speaker": "sarvente",
+      "speakerAnimation": "angry",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["It's always kids like you who assume you can enter a sacred place freely. Just to make fun of it."]
+    },
+    {
+      "speaker": "sarvente",
+      "speakerAnimation": "proud",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["This time, I'll give you an-"]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["Wat r u even talkin about"]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["okay, okay"]
+    }
+  ]
+}

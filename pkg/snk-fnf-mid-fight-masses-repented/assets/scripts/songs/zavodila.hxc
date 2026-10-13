@@ -1,0 +1,349 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.data.song.SongRegistry;
+import funkin.play.song.Song;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.play.stage.Stage;
+import funkin.save.Save;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.StageProp;
+import funkin.ui.options.PreferencesMenu;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.math.FlxMath;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.graphics.shaders.OverlayBlend;
+import funkin.graphics.shaders.RuntimeRainShader;
+import openfl.filters.ShaderFilter;
+import openfl.filters.BlurFilter;
+import flixel.addons.display.FlxTiledSprite;
+import flixel.util.FlxSave;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+
+class ZavodilaSong extends Song {
+
+  //cutscene variables
+
+  var hasPlayedCutscene:Bool;
+	var cutsceneConductor:Conductor;
+  var darken:FunkinSprite;
+  var hasPlayedInGameCutscene:Bool;
+  var hasPlayedEndingCutscene:Bool;
+  var rainShader:RuntimeRainShader = new RuntimeRainShader();
+	var rainShaderFilter:ShaderFilter;
+  var rainShaderStartIntensity:Float;
+	var rainShaderEndIntensity:Float;
+    //chatterbox
+
+	public function new() {
+		super('zavodila');
+    hasPlayedInGameCutscene = false;
+    hasPlayedCutscene = false;
+    hasPlayedEndingCutscene = false;
+	}
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'pico')
+      return !Save.instance.hasBeatenSong(this.id, null, 'pico');
+
+    return false;
+	}
+
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+
+
+    if(!PlayStatePlaylist.isStoryMode)
+    {
+      trace('Started countdown for Zavodila...');
+
+      // Skip the cutscene on the normal variation if we are in Freeplay.
+      if (PlayState.instance.currentVariation == 'default' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+
+      if (!hasPlayedCutscene) {
+        trace('Pausing countdown to play cutscene.');
+
+        hasPlayedCutscene = true;
+
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        startDialogue();
+      }
+    }
+
+    if(PlayStatePlaylist.isStoryMode && !hasPlayedInGameCutscene){ //PlayStatePlaylist.isStoryMode && /
+      trace('Pausing countdown to play in game cutscene');
+
+      hasPlayedInGameCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      PlayState.instance.camHUD.visible = false;
+      introCutscene();
+    }
+  
+  }
+  function startDialogue() {
+    var targetDialogue = 'zavodila';
+
+    if (PlayState.instance.currentVariation == 'pico') targetDialogue += "-pico";
+    if (!Preferences.naughtyness) targetDialogue += "-censored";
+
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
+
+    
+  }
+
+  public override function onDialogueEnd() {
+    
+    Countdown.performCountdown();
+  }
+
+  function onSongRetry(event:ScriptEvent)
+    {
+      super.onSongRetry(event);
+  
+      hasPlayedCutscene = true;
+    }
+  
+    /**
+     * Replay the cutscene after leaving the song.
+     */
+    function onCreate(event:ScriptEvent):Void
+    {
+      super.onCreate(event);
+  
+      hasPlayedInGameCutscene = false;
+    }
+
+
+
+    //cutscene shenaniggans
+
+    function introCutscene()
+    {
+
+    //ok here's an in DEPTH explanation on how cutscenes work in this mod
+
+    //these variables basically represent the positions of the characters on the stage, simple enough
+    var bfPos:Array<Float> = [PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y];
+		var gfPos:Array<Float> = [PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y];
+		var ruvPos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
+
+    var menacing:FunkinSprite = FunkinSprite.createSparrow(ruvPos[0] - 400, ruvPos[1] - 400, 'cutscenes/menacingParticles');
+    menacing.animation.addByPrefix('idle', 'menacing sprit', 24, true);
+    menacing.animation.play('idle', true);
+    menacing.zIndex = 500;
+
+    var cutsceneSfx:FunkinSound;
+    cutsceneSfx = FunkinSound.load(Paths.sound("zavodillaCutsceneAudio"), true);
+		cutsceneSfx.volume = 1;
+		
+
+    //everytime u see a timer, the number on it represents when the actions will take place. This for example, takes place right when the cutscene begins
+    new FlxTimer().start(0.01, function(tmr)
+      {
+        cutsceneSfx.play();
+
+        PlayState.instance.currentStage.getDad().y = -4000;
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().x, y: -590}, 0.5, {ease: FlxEase.quadIn});
+        PlayState.instance.tweenCameraToPosition(ruvPos[0], ruvPos[1] - 1000, 0);
+        PlayState.instance.tweenCameraZoom(1, 0, true, FlxEase.quadInOut);
+        PlayState.instance.currentStage.getDad().playAnimation('falling', true);
+      });
+      new FlxTimer().start(0.02, function(tmr)
+        {
+          PlayState.instance.tweenCameraToPosition(ruvPos[0], ruvPos[1], 1, FlxEase.quadOut);
+          PlayState.instance.tweenCameraZoom(0.4, 1, true, FlxEase.quartOut);
+        });
+    new FlxTimer().start(0.5, function(tmr)
+      {
+        
+        PlayState.instance.currentStage.getDad().playAnimation('landing', true);
+        FlxG.camera.shake(0.01, 0.5);
+      });
+    new FlxTimer().start(1, function(tmr)
+      {
+
+        PlayState.instance.currentStage.getDad().playAnimation('pose', true);
+        PlayState.instance.tweenCameraZoom(0.8, 0.7, true, FlxEase.quintInOut);
+      });
+      new FlxTimer().start(1.3, function(tmr)
+        {
+          PlayState.instance.currentStage.add(menacing);
+          
+        });
+    new FlxTimer().start(2, function(tmr)
+      {
+
+        PlayState.instance.currentStage.getDad().playAnimation('pose-hold', true);
+        FlxTween.tween(menacing, {alpha: 0}, 5, {ease: FlxEase.quadOut});
+      });
+      new FlxTimer().start(3, function(tmr)
+        {
+          
+          PlayState.instance.startCountdown();
+          
+        });
+    }
+    
+    public override function onSongEnd(event:CountdownScriptEvent):Void {
+      super.onSongEnd(event);
+      if (!hasPlayedEndingCutscene && PlayStatePlaylist.isStoryMode) { // && PlayStatePlaylist.isStoryMode
+        hasPlayedEndingCutscene = true;
+
+        event.cancel();
+
+        // start the video cutscene and hide it so the other stuff can happen after
+        startEndingCutscene();
+      } else {
+        // Make sure the cutscene can play again next time!
+        hasPlayedEndingCutscene = false;
+        // DO NOT CANCEL THE EVENT!
+      }
+    }
+
+    function startEndingCutscene()
+    {
+      //Hello, my name is genzu and I recoded the entire end song cutscene from scratch...
+
+      //Getting Positions of Characters
+      var bfPos:Array<Float> = [PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y];
+      var gfPos:Array<Float> = [PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y];
+      var ruvPos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
+
+      //Disable Player input durring the cutscene
+      PlayState.instance.isInCutscene = true;
+      PlayState.instance.camHUD.visible = false;
+
+      //Setting up the sounds...
+      var windSfx:FunkinSound;
+      windSfx = FunkinSound.load(Paths.sound("howlingWind"), true, true);
+      windSfx.volume = 0.5;  
+
+      var feedSfx:FunkinSound;
+      feedSfx = FunkinSound.load(Paths.sound("feedback"), true);
+      feedSfx.volume = 0.5;  
+
+      var micSfx:FunkinSound;
+      micSfx = FunkinSound.load(Paths.sound("micDrop"), true);
+      micSfx.volume = 1;
+
+      var cutsceneMusic:FunkinSound;
+      cutsceneMusic = FunkinSound.load(Paths.sound("royaltyFreeDemonMusic"), true);
+      cutsceneMusic.volume = 1;
+
+      //Sarvente and the heart fx
+      var sarventeGospel:FunkinSprite = FunkinSprite.createSparrow(bfPos[0] -800, bfPos[1] - 2400, 'characters/cutscenes/zavodilla/gospelSarvente');
+
+      var heart:FunkinSprite = FunkinSprite.createSparrow(bfPos[0], bfPos[1] - 2400, 'cutscenes/heartMonitorFx');
+      heart.animation.addByPrefix('idle', 'death', 24, true);
+      heart.zIndex = 111;
+
+      //Starting Cutscene Stuff
+      new FlxTimer().start(0.1, function(tmr){
+        PlayState.instance.tweenCameraToPosition(ruvPos[0], ruvPos[1], 1, FlxEase.quadInOut);
+        PlayState.instance.tweenCameraZoom(0.6, 1, true, FlxEase.quadInOut);
+        windSfx.play();
+
+        PlayState.instance.currentStage.getDad().playAnimation('mic up', false, false);
+      });
+      
+      new FlxTimer().start(1.5, function(tmr){
+        PlayState.instance.currentStage.getDad().playAnimation('mic drop', false, false);
+
+        var mic:FunkinSprite;
+        mic = new FunkinSprite(0, 0).loadGraphic(Paths.image('cutscenes/microphoneAsset'));
+        mic.updateHitbox();
+        mic.x = ruvPos[0] - 62;
+        mic.y = ruvPos[1]; 
+        mic.angle = -40;
+        mic.zIndex = 104;
+        PlayState.instance.currentStage.add(mic);
+        PlayState.instance.currentStage.refresh();
+        FlxTween.tween(mic, {y:mic.y  + 300}, 0.4, {ease: FlxEase.bounceOut});
+
+      });
+
+      new FlxTimer().start(1.6, function(tmr){
+        PlayState.instance.currentStage.getDad().playAnimation('mic drop-hold', false, false);
+      });
+
+      new FlxTimer().start(1.75, function(tmr){
+        micSfx.play();
+        feedSfx.play();
+        PlayState.instance.currentStage.getDad().playAnimation('mic drop-hold', false, false);
+      });
+
+      // new FlxTimer().start(5, function(tmr){
+      //   windSfx.stop();
+      //   cutsceneMusic.play();
+
+      //   PlayState.instance.tweenCameraToPosition(bfPos[0], bfPos[1], 1, FlxEase.quadInOut);
+      //   PlayState.instance.currentStage.getBoyfriend().playAnimation('confused', false, false);
+      // });
+
+      // new FlxTimer().start(7, function(tmr){
+      //   PlayState.instance.tweenCameraToPosition(ruvPos[0], ruvPos[1], 1, FlxEase.quadInOut);
+      //   PlayState.instance.currentStage.getDad().playAnimation('confusion', false, false);
+      // });
+
+      // new FlxTimer().start(7.5, function(tmr){
+      //   PlayState.instance.currentStage.getDad().playAnimation('ruvconfused-hold', false, false);
+      // });
+
+      // new FlxTimer().start(9, function(tmr){
+      //   PlayState.instance.currentStage.getGirlfriend().playAnimation('gfconfused', false, false);
+      //   PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1], 1, FlxEase.quadInOut);
+      //   PlayState.instance.tweenCameraZoom(0.4, 1, true, FlxEase.quadInOut);
+      // });
+
+      // new FlxTimer().start(9.5, function(tmr){
+      //   PlayState.instance.currentStage.getGirlfriend().playAnimation('gfconfused-hold', false, false);
+      // });
+
+      // new FlxTimer().start(11, function(tmr){
+      //   PlayState.instance.tweenCameraToPosition(bfPos[0], bfPos[1], 1.5, FlxEase.quadInOut);
+      //   PlayState.instance.tweenCameraZoom(0.6, 1.5, true, FlxEase.quadInOut);
+      //   //BF's Animation here is Odd... idk
+      //   PlayState.instance.currentStage.getBoyfriend().playAnimation('idle-confused', false, false);
+      // });
+
+      // new FlxTimer().start(13, function(tmr){
+      //   PlayState.instance.currentStage.add(sarventeGospel);
+      // });
+
+      new FlxTimer().start(3.5, function(tmr){
+        PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1] + 50, 1, FlxEase.quadOut);
+        windSfx.stop();
+        PlayState.instance.endSong(true);
+      });
+    }
+}

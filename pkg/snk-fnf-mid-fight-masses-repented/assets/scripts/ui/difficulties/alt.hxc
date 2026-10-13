@@ -1,0 +1,23 @@
+import flixel.FlxG;
+import funkin.util.Constants;
+import funkin.util.ReflectUtil;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+
+class AltDifficulty extends Module
+{
+
+  public function new()
+  {
+    super('AltDifficulty');
+  }
+
+  override function onSubStateOpenBegin(event:SubStateScriptEvent)
+  {
+    super.onSubStateOpenBegin(event);
+    Constants.DEFAULT_DIFFICULTY_LIST_FULL.push("alt");
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFd1e0e3"
+  },
+
+  "music": {
+    "asset": "parishSlowed",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "sarvente",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["Greetings! Sorry for the inconvenience, are you-"]
+    },
+    {
+      "speaker": "sarvente",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["Wait..."]
+    },
+    {
+      "speaker": "sarvente",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["Is that a"]
+    },
+    {
+      "speaker": "sarventeshock",
+      "speakerAnimation": "concerned",
+      "box": "defaultbox",
+      "boxAnimation": "loud",
+
+      "text": ["GUN?"]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["yeah"]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["yeah"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+import funkin.ui.story.Level;
+import funkin.save.Save;
+
+class WeekChurchLevel extends Level
+{
+	function new()
+	{
+		super('weekchurch');
+	}
+
+  override function isUnlocked():Bool {
+    return true;
+  }
+
+  override function getSongDisplayNames(difficultyId:String):Array<String> {
+    if (Save.instance.hasBeatenLevel('weekchurch')) {
+      // Blazin' is a secret song ;)
+      return ["Parish", "Worship", "Zavodila", "Gospel"];
+    } else {
+      return ["Parish", "Worship", "Zavodila"];
+    }
+  }
+}

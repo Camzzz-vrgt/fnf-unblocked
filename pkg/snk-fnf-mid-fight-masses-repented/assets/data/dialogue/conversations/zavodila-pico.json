@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BFd1e0e3"
+  },
+
+  "music": {
+    "asset": "zavodillaSlowed",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["You've pushed quite a lot of buttons while I was away, huh?"]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["Yup."]
+    },
+    {
+      "speaker": "picoYeah",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["yeah"]
+    },
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["Well you really should have just ran away or joined the church while you could."]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["nah."]
+    },
+    {
+      "speaker": "nene",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["Nah."]
+    },
+    {
+      "speaker": "ruv",
+      "speakerAnimation": "default",
+      "box": "defaultbox",
+      "boxAnimation": "idle-flip",
+
+      "text": ["But you decided to pull a stru-"]
+    },
+    {
+      "speaker": "picoBurp",
+      "speakerAnimation": "burp",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["*burps*"]
+    },
+    {
+      "speaker": "neneFreaky",
+      "speakerAnimation": "freaky",
+      "box": "defaultbox",
+      "boxAnimation": "idle",
+
+      "text": ["Lets waste em'"]
+    }
+  ]
+}

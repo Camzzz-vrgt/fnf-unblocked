@@ -1,0 +1,104 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		0,
+		-50
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Selever",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 8,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/selever",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "selever",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-50
+			],
+			"frameRate": 24,
+			"prefix": "selever idle",
+			"flipX": false,
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				140,
+				-38
+			],
+			"frameRate": 24,
+			"prefix": "selever left",
+			"flipX": false,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-57,
+				-110
+			],
+			"frameRate": 24,
+			"prefix": "selever down",
+			"flipX": false,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				128,
+				19
+			],
+			"frameRate": 24,
+			"prefix": "selever up",
+			"flipX": false,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-112,
+				-68
+			],
+			"frameRate": 24,
+			"prefix": "selever right",
+			"flipX": false,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				39,
+				-15
+			],
+			"frameRate": 24,
+			"prefix": "selever lemme eyp",
+			"flipX": false,
+			"name": "EYP",
+			"looped": true
+		}
+	]
+}

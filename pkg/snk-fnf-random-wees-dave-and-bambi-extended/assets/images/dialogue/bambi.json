@@ -1,0 +1,38 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		0,
+		50
+	],
+	"no_antialiasing": false,
+	"scale": 1.05,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				50,
+				85
+			],
+			"idle_offsets": [
+				50,
+				85
+			],
+			"loop_name": "d no",
+			"idle_name": "d on"
+		},
+		{
+			"loop_offsets": [
+				50,
+				85
+			],
+			"anim": "pissed",
+			"idle_offsets": [
+				50,
+				85
+			],
+			"loop_name": "d eno",
+			"idle_name": "d eon"
+		}
+	],
+	"image": "baba"
+}

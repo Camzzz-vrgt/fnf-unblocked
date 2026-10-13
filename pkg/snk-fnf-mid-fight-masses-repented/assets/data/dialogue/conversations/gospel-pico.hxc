@@ -1,0 +1,65 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.dialogue.Conversation;
+import funkin.play.PlayState;
+
+class GospelConversation extends Conversation {
+	function new() {
+		super('gospel-pico');
+	}
+  override function onCreate():Void 
+  {
+      super.onCreate();
+      bgSprite = new FunkinSprite(-2000, -2000);
+      bgSprite.makeSolidColor(4000, 2500, 0xFF000000);
+      bgSprite.zIndex = 10000;
+      bgSprite.alpha = 1;
+      PlayState.instance.add(bgSprite);
+      PlayState.instance.refresh();
+  }
+
+  override function onDialogueEnd() {
+    super.onDialogueEnd();
+    if (bgSprite.alpha = 1)
+    {
+      FlxTween.tween(bgSprite, {alpha: 0}, 2, {ease: FlxEase.linear});
+    }
+  }
+  override function showCurrentSpeaker():Void {
+    super.showCurrentSpeaker();
+
+    var picoYeah = FunkinSound.load(Paths.sound("pico/yeah"), true);
+    picoYeah.volume = 1;
+    var picoBurp = FunkinSound.load(Paths.sound("pico/picoBurp"), true);
+    picoBurp.volume = 1;
+    var hellYea = FunkinSound.load(Paths.sound("general/hellYea"), true);
+    hellYea.volume = 1;
+    var evilAssSfx = FunkinSound.load(Paths.sound("general/revengeanceModeSfx"), true);
+    evilAssSfx.volume = 1;
+    
+    if (currentSpeaker.id == 'picoYeah') 
+    {
+      
+      picoYeah.play(false);
+    }
+    if (currentSpeaker.id == 'picoBurp') 
+      {
+        
+        picoBurp.play(false);
+    }
+    if (currentSpeaker.id == 'neneFreaky') 
+      {
+        
+        hellYea.play(false);
+    }
+    if (currentSpeaker.id == 'sarventeGospel') 
+    {
+     
+      //bgSprite.alpha = 0;
+      FlxTween.tween(bgSprite, {alpha: 0}, 2, {ease: FlxEase.linear});
+      evilAssSfx.play(false);
+    }
+  }
+}

@@ -1,0 +1,190 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.data.song.SongRegistry;
+import funkin.play.song.Song;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.play.stage.Stage;
+import funkin.save.Save;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.StageProp;
+import funkin.ui.options.PreferencesMenu;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.math.FlxMath;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.graphics.shaders.OverlayBlend;
+import funkin.graphics.shaders.RuntimeRainShader;
+import openfl.filters.ShaderFilter;
+import openfl.filters.BlurFilter;
+import flixel.addons.display.FlxTiledSprite;
+import flixel.util.FlxSave;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+
+class GospelSong extends Song
+{
+    var hasPlayedCredits:Bool = false;
+    var hasPlayedInGameCutscene:Bool;
+    var hasPlayedCutscene:Bool;
+    public function new()
+    {
+        // Epid Module Id
+        super('gospel');
+        hasPlayedInGameCutscene = false;
+        hasPlayedCutscene = false;
+        this.hasPlayedCredits = false;
+    }
+
+    function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+		this.hasPlayedCredits = false;
+	}
+
+    public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+    {
+        if (currentVariation == 'pico')
+            return !Save.instance.hasBeatenSong(this.id, null, 'pico');
+        return false;
+    }
+
+    function onSongRetry(event:ScriptEvent)
+        {
+          super.onSongRetry(event);
+
+          hasPlayedCutscene = true;
+    }
+
+    public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String> {
+		if (showLocked || Save.instance.hasBeatenLevel('weekchurch')) {
+			return super.listDifficulties(variationId, variationIds);
+		}
+        // Hide all difficulties if the player has not beaten the week.
+		return [];
+	}
+
+    public override function onCountdownStart(event:CountdownScriptEvent):Void {
+        if(PlayStatePlaylist.isStoryMode && !hasPlayedInGameCutscene){
+            trace('Pausing countdown to play in game cutscene');
+
+            hasPlayedInGameCutscene = true;
+
+            event.cancel(); // CANCEL THE COUNTDOWN!
+
+            PlayState.instance.camHUD.visible = false;
+            introCutscene();
+        }
+
+        if(!PlayStatePlaylist.isStoryMode)
+            {
+              trace('Started countdown for Gospel...');
+
+              // Skip the cutscene on the normal variation if we are in Freeplay.
+              if (PlayState.instance.currentVariation == 'default' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+
+              if (!hasPlayedCutscene) {
+                trace('Pausing countdown to play cutscene.');
+
+                hasPlayedCutscene = true;
+
+                event.cancel(); // CANCEL THE COUNTDOWN!
+
+                startDialogue();
+              }
+        }
+    }
+
+    function startDialogue() {
+        var targetDialogue = 'gospel';
+
+        if (PlayState.instance.currentVariation == 'pico') targetDialogue += "-pico";
+        if (!Preferences.naughtyness) targetDialogue += "-censored";
+
+        trace('Playing dialogue...');
+        PlayState.instance.startConversation(targetDialogue);
+
+
+    }
+
+    function introCutscene()
+    {
+    var cutsceneSfx:FunkinSound;
+    cutsceneSfx = FunkinSound.load(Paths.sound("evilAssLights"), true);
+	cutsceneSfx.volume = 1;
+    var sarventePos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
+
+    PlayState.instance.tweenCameraToPosition(sarventePos[0], sarventePos[1], 0);
+    PlayState.instance.tweenCameraZoom(1.2, 0, true, FlxEase.quadInOut);
+    new FlxTimer().start(0.1, function(tmr)
+        {
+
+          cutsceneSfx.play(false);
+          PlayState.instance.tweenCameraZoom(0.4, 2, true, FlxEase.quintOut);
+          PlayState.instance.tweenCameraToPosition(sarventePos[0], sarventePos[1], 2, FlxEase.quintOut);
+        });
+
+        new FlxTimer().start(1, function(tmr)
+        {
+            PlayState.instance.isInCutscene = false;
+			PlayState.instance.startCountdown();
+        });
+    }
+
+    public override function onSongEnd(event:CountdownScriptEvent):Void {
+		super.onSongEnd(event);
+
+		// Keep the cutscene from playing outside of story mode.
+    if (!PlayStatePlaylist.isStoryMode) //remeber to exclaim this
+        hasPlayedCredits = true;
+
+    if (!hasPlayedCredits) {
+      trace('Pausing ending to play a video cutscene (`blazin`)');
+
+      hasPlayedCredits = true;
+
+			// Add a black background behind the cutscene to fix a transition bug!
+			trace('Adding black background behind cutscene over UI');
+			var bgSprite = new FunkinSprite(-100, -100);
+			bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+			bgSprite.cameras = [PlayState.instance.camHUD]; // Show over the HUD.
+			bgSprite.zIndex = 1000000;
+			PlayState.instance.add(bgSprite);
+			PlayState.instance.refresh();
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      startVideo();
+    } else {
+			// Make sure the cutscene can play again next time!
+			hasPlayedCredits = false;
+			// DO NOT CANCEL THE EVENT!
+		}
+	}
+
+  function startVideo() {
+		VideoCutscene.play(Paths.videos('repentedCredits'), CutsceneType.ENDING);
+		// This will call onSongEnd() again so make sure the flag is set!
+		hasPlayedCredits = true;
+  }
+}

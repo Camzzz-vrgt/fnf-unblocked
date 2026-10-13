@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "name": "Girlfriend MFM",
+  "assetPath": "characters/masses/GF_assets",
+  "renderType": "multisparrow",
+  "startingAnimation": "danceRight",
+  "singTime": 8.0,
+  "scale": 2,
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "GF Dancing Beat",
+      "frameIndices": [
+        30,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "offsets": [
+        0,
+        -5
+      ],
+      "scale": 2
+    },
+    {
+      "name": "danceRight",
+      "prefix": "GF Dancing Beat",
+      "frameIndices": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "offsets": [
+        0,
+        -5
+      ],
+      "scale": 2
+    },
+    {
+      "name": "sad",
+      "prefix": "gf sad",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "offsets": [
+        1,
+        -11
+      ],
+      "scale": 2
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GF left note",
+      "offsets": [
+        0,
+        -10
+      ],
+      "scale": 2
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GF Down Note",
+      "offsets": [
+        0,
+        -10
+      ],
+      "scale": 2
+    },
+    {
+      "name": "singUP",
+      "prefix": "GF Up Note",
+      "offsets": [
+        0,
+        2
+      ],
+      "scale": 2
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GF Right Note",
+      "offsets": [
+        0,
+        -10
+      ],
+      "scale": 2
+    },
+    {
+      "name": "cheer",
+      "prefix": "GF Cheer",
+      "offsets": [
+        0,
+        0
+      ],
+      "scale": 2
+    },
+    {
+      "name": "combo50",
+      "prefix": "GF Cheer",
+      "offsets": [
+        0,
+        0
+      ],
+      "scale": 2
+    },
+    {
+      "name": "drop70",
+      "prefix": "gf sad",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "offsets": [
+        1,
+        -11
+      ],
+      "scale": 2
+    },
+    {
+      "name": "hairBlow",
+      "prefix": "GF Dancing Beat Hair blowing",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "offsets": [
+        22,
+        -4
+      ],
+      "scale": 2
+    },
+    {
+      "name": "hairFall",
+      "prefix": "GF Dancing Beat Hair Landing",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "offsets": [
+        0,
+        -5
+      ],
+      "scale": 2
+    },
+    {
+      "name": "scared",
+      "prefix": "GF FEAR",
+      "offsets": [
+        -1,
+        -9
+      ],
+      "scale": 2
+    },
+    {
+      "name": "aura",
+      "prefix": "gf cock",
+      "offsets": [
+        -2,
+        -17
+      ],
+      "assetPath": "characters/cutscenes/parish/gfParish",
+      "frameRate": 16,
+      "scale": 1
+    },
+    {
+      "name": "hype",
+      "prefix": "gf shoot",
+      "offsets": [
+        -2,
+        -17
+      ],
+      "assetPath": "characters/cutscenes/parish/gfParish",
+      "frameRate": 24,
+      "scale": 1
+    }
+  ]
+}

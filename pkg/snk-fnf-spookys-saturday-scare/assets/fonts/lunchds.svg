@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg"
+><metadata
+></metadata
+><defs
+><font horiz-adv-x="1152"
+><font-face font-family="Lunchtime Doubly So" units-per-em="2048" ascent="1664" descent="-384"
+></font-face
+><missing-glyph horiz-adv-x="1152" d="M256 0V1280H1280V0H256ZM288 32h960V1248H288V32Z"
+></missing-glyph
+><glyph unicode="&#xd;" d=""
+></glyph
+><glyph unicode=" " d=""
+></glyph
+><glyph unicode="!" d="M256 128H512V-128H256V128ZM384 1152H640V512H512V256H384v896Z"
+></glyph
+><glyph unicode="&quot;" d="M128 1408H384V1024H256V896H128v128H256v128H128v256ZM512 1408H768V1024H640V896H512v128H640v128H512v256Z"
+></glyph
+><glyph unicode="#" d="M384 1024V384H512v640H384ZM0 384H128v640H0v128H128v256H384V1152H512v256H768V1152H896V1024H768V384H896V256H768V0H512V256H384V0H128V256H0V384Z"
+></glyph
+><glyph unicode="$" d="M128 384H384V256H640V640H256V768H128v384H256v128H384v256H640V1280H768V1152H896V1024H640v128H384V768H768V640H896V256H768V128H640V-128H384V128H256V256H128V384Z"
+></glyph
+><glyph unicode="%" d="M0 1024H256V768H0v256ZM640 384H896V128H640V384ZM0 256H128V384H256V512H384V640H512V768H640V896H768v128H896V896H768V768H640V640H512V512H384V384H256V256H128V128H0V256Z"
+></glyph
+><glyph unicode="&amp;" d="M384 1280V768H640v512H384ZM256 384V0H640V128H768V256H640V384H512V512H384V384H256ZM0 256H128V384H256V512H384V640L256 653V768L128 781v499H256v128H640V1280H768V768H640V640H512V512H640V384H768V256H896V512h141V384L1024 256H896V128h128l13 -256L1024 0H896V128H768L755 0H640L627 -128H128V0H0V256Z"
+></glyph
+><glyph unicode="&#39;" d="M256 1280H512V896H384V768H256V896H384v128H256v256Z"
+></glyph
+><glyph unicode="(" d="M896 1408h128V1280H896V1152H768V896H640V384H768V128H896V0h128V-128H896V0H768V128H640V384H512V896H640v256H768v128H896v128Z"
+></glyph
+><glyph unicode=")" d="M0 0H128V128H256V384H384V896H256v256H128v128H0v128H128V1280H256V1152H384V896H512V384H384V128H256V0H128V-128H0V0Z"
+></glyph
+><glyph unicode="*" d="M0 256H128V384H256V512H384V640H256V768H128V896H0v256H128V1024H256V896H384v384H640V896H768v128H896v128h128V896H896V768H768V640H640V512H768V384H896V256h128V0H896V128H768V256H640V-128H384V256H256V128H128V0H0V256Z"
+></glyph
+><glyph unicode="+" d="M0 640H512v512H640V640h512V512H640V0H512V512H0V640Z"
+></glyph
+><glyph unicode="," d="M256 384H512V0H384V-128H256V0H384V128H256V384Z"
+></glyph
+><glyph unicode="-" d="M0 640H1024V512H0V640Z"
+></glyph
+><glyph unicode="." d="M0 256H256V0H0V256Z"
+></glyph
+><glyph unicode="/" d="M0 256H128V384H256V512H384V640H512V768H640V896H768v128H896v128h128v128h128V1152H1024V1024H896V896H768V768H640V640H512V512H384V384H256V256H128V128H0V256Z"
+></glyph
+><glyph unicode="0" d="M384 768V128H640V896H512V768H384ZM384 1536V896H512v128H640v512H384ZM768 1664V1536H896V128H768V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="1" d="M640 1664V128H768V0H256V128H384V1408H256v128H384v128H640Z"
+></glyph
+><glyph unicode="2" d="M128 1152v384H256v128H768V1536H896V768H768V640H512V512H384V128H640V256H896V0H128V384H256V512H384V640H512V768H640v768H384V1152H128Z"
+></glyph
+><glyph unicode="3" d="M128 512H384V128H640V768H384V896H640v640H384V1152H128v384H256v128H768V1536H896V1024H768V768H896V128H768V0H256V128H128V512Z"
+></glyph
+><glyph unicode="4" d="M0 640H128V896H256v256H384v256H512v256H768V384H896V256H768V0H512V1152H384V896H256V384H384V256H0V640Z"
+></glyph
+><glyph unicode="5" d="M128 384H384V128H640V896H384V768H128v896H896V1536H256V1408H384V1024H768V896H896V128H768V0H256V128H128V384Z"
+></glyph
+><glyph unicode="6" d="M768 1664V1536H896V1280H640v256H384V128H640V896H512v128H768V896H896V128H768V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="7" d="M896 1664V1280H768V896H640V0H384V768H512v384H640v384H384V1280H128v384H896Z"
+></glyph
+><glyph unicode="8" d="M384 1536V128H640V768H512V896H640v640H384ZM768 1664V1536l128 -13V1024H768V768H896V128H768V0H256V128H128V768H256v256H128v512H256v128H768Z"
+></glyph
+><glyph unicode="9" d="M128 384H384V128H640V1536H384V768H512V640H256V768H128v768H256v128H768V1536H896V128H768V0H256V128H128V384Z"
+></glyph
+><glyph unicode=":" d="M384 384H640V128H384V384ZM384 1152H640V896H384v256Z"
+></glyph
+><glyph unicode=";" d="M384 384H640V0H512V-128H384V0H512V128H384V384ZM384 1152H640V896H384v256Z"
+></glyph
+><glyph unicode="&lt;" d="M0 640H128l13 128H256V896H384v128H512V768h512V384H512V128H384V256H256V384H128V512H0V640Z"
+></glyph
+><glyph unicode="=" d="M0 512H1024V384H0V512ZM0 896H1024V768H0V896Z"
+></glyph
+><glyph unicode="&gt;" d="M0 768H512v256H640V896H768V768H896V640h128V512H896V384H768V256H640V128H512V384H0V768Z"
+></glyph
+><glyph unicode="?" d="M256 128H512V-128H256V128ZM0 1024H128l13 128H768V1024H896V640H768V512H512V256H256V512H384V640H640v384H256V768H0v256Z"
+></glyph
+><glyph unicode="@" d="M256 1152V1024H768V896L896 883V256h128v768H896v128H256ZM0 1024H128v128H256l13 128H896V1152h128V1024h128V256H1024V128H768V256H640V128H384V256H256V640H384V768H512V256H640V896H256v128H128V128H256V0H896V-128H256V0H128V128H0v896Z"
+></glyph
+><glyph unicode="A" d="M0 384H128V640H256V896H384v256H512v256H640v256H896V0H640V256H384V384H640v768H512V896H384V640H256V384H128V0H0V384Z"
+></glyph
+><glyph unicode="B" d="M256 1536V1408H384V128H640V768H512V896H640v640H256ZM768 1664V1536H896V896H768V768H896V128H768V0H128V1664H768Z"
+></glyph
+><glyph unicode="C" d="M768 1664V1536H896V1152H640v384H384V128H640V640H896V128H768V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="D" d="M256 1536V1408H384V128H640V1536H256ZM0 128H128V1536H0v128H768V1536H896V128H768V0H0V128Z"
+></glyph
+><glyph unicode="E" d="M512 896H768V768H512V896ZM896 1664V1536H256V1408H384V128H896V0H128V1664H896Z"
+></glyph
+><glyph unicode="F" d="M512 896H768V768H512V896ZM896 1664V1536H256V1408H384V0H128V1664H896Z"
+></glyph
+><glyph unicode="G" d="M768 1664V1536H896V1152H640v384H384V128H640V768H512V896H896V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="H" d="M384 1664V768H640v896H896V0H640V640H256V512L384 499V0H128V1664H384Z"
+></glyph
+><glyph unicode="I" d="M768 1664V1536H640V128H768V0H256V128H384V1536H256v128H768Z"
+></glyph
+><glyph unicode="J" d="M128 384H384V128H640V1664H896V128H768V0H256V128H128V384Z"
+></glyph
+><glyph unicode="K" d="M384 1664V896H512v256H640v256H768v256H896V1408H768V1152H640V896H512V768H640V512H768V256H896V0H640V256H512V512H384V0H128V1664H384Z"
+></glyph
+><glyph unicode="L" d="M384 1664V128H896V0H128V1664H384Z"
+></glyph
+><glyph unicode="M" d="M0 1664H128V1408H256V1152H384V896H512v256H640v256H768v256h256V0H768V896H640V640H512V384H384V640H256V896H128V0H0V1664Z"
+></glyph
+><glyph unicode="N" d="M256 1664V1408H384V1152H512V896H640v768H896V0H640V512H512V768H384v256H256V0H128V1664H256Z"
+></glyph
+><glyph unicode="O" d="M384 1536V128H640V1536H384ZM768 1664V1536H896V128H768V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="P" d="M768 1664V1536H896V640H768V512H512V640H640v896H256V1408H384V0H128V1664H768Z"
+></glyph
+><glyph unicode="Q" d="M384 1536V128H640V1536H384ZM768 1664V1536H896V128H768V-128H896V-384H768v128H640v128H512V0H256V128H128V1536H256v128H768Z"
+></glyph
+><glyph unicode="R" d="M768 1664V1536H896V640H768V512H896V-256h128V-384H896v128H768v128H640V512H512V640H640v896H256V1408H384V0H128V1664H768Z"
+></glyph
+><glyph unicode="S" d="M128 384H384V128H640V640H512V768H256V896H128v640H256v128H768V1536H896V1280H640v256H384V1024H512V896H768V768H896V128H768V0H256V128H128V384Z"
+></glyph
+><glyph unicode="T" d="M0 1664H1024V1536H512V1408H640V0H384V1536H0v128Z"
+></glyph
+><glyph unicode="U" d="M384 1664V128H640V1664H896V128H768V0H256V128H128V1664H384Z"
+></glyph
+><glyph unicode="V" d="M0 1664H256V512H384V768H512v256H640v256H768v384H896V1280H768V1024H640V768H512V512H384V256H256V0H0V1664Z"
+></glyph
+><glyph unicode="W" d="M0 1664H256V640H384V1664H512V640H640V1664H896V768H768V128H640V0H512V384H384V128H256V0H128V768H0v896Z"
+></glyph
+><glyph unicode="X" d="M384 1664V1408H512V1152H640v256H768v256H896V1408H768V1152H640V640H768V256H896V0H640V256H512V512H384V256H256V0H128V256H256V512H384v512H256v384H128v256H384Z"
+></glyph
+><glyph unicode="Y" d="M384 1664V1280H512V896H640v384H768v384H896V1152H768V768H640V0H384V768H256v384H128v512H384Z"
+></glyph
+><glyph unicode="Z" d="M896 1664V1408H768V1024H640V640H512V256H384V128H896V0H128V256H256V640H384v384H512v384H640v128H128v128H896Z"
+></glyph
+><glyph unicode="[" d="M768 1664V1536H512V128H768V0H256V1664H768Z"
+></glyph
+><glyph unicode="\" d="M0 1280H128V1152H256V1024H384V896H512V768H640V640H768V512H896V384h128V256h128V128H1024V256H896V384H768V512H640V640H512V768H384V896H256v128H128v128H0v128Z"
+></glyph
+><glyph unicode="]" d="M768 1664V0H256V128H512V1536H256v128H768Z"
+></glyph
+><glyph unicode="^" d="M0 640H128V768H256V896H384v128H512V896H640V768H768V640H896V512H640V0H256V512H0V640Z"
+></glyph
+><glyph unicode="_" d="M0 128H1152V0H0V128Z"
+></glyph
+><glyph unicode="`" d="M0 512H256v512H640V512H896V384H768V256H640V128H512V0H384V128H256V256H128V384H0V512Z"
+></glyph
+><glyph unicode="a" d="M256 640H512V512H384V128H640V896H256v128H768V896H896V128h128V0H768V128H640V0H256V128H128V512H256V640Z"
+></glyph
+><glyph unicode="b" d="M384 1664V128H640V896H512v128H768V896H896V128H768V0H384V128H256V0H128V1536H256v128H384Z"
+></glyph
+><glyph unicode="c" d="M256 1024H768V896H896V768H640V896H384V128H640V384H896V128H768V0H256V128H128V896H256v128Z"
+></glyph
+><glyph unicode="d" d="M256 1024H512V896H384V128H640V1536H768v128H896V128h128V0H768V128H640V0H256V128H128V896H256v128Z"
+></glyph
+><glyph unicode="e" d="M384 896V640H640V896H384ZM256 1024H768V896H896V512H384V128H640V256H896V128H768V0H256V128H128V896H256v128Z"
+></glyph
+><glyph unicode="f" d="M1024 1664V1408H768v128H640V1024H896V896H512V768H640V0H384V896H128v128H384v512H512v128h512Z"
+></glyph
+><glyph unicode="g" d="M128 0H384V-128H640V896H384V256H512V128H256V256H128V896H256v128H640V896H768v128H896V-128H768V-256H256v128H128V0Z"
+></glyph
+><glyph unicode="h" d="M384 1664V0H128V1536H256v128H384ZM512 1024H768V896H896V0H640V896H512v128Z"
+></glyph
+><glyph unicode="i" d="M512 1024H640V0H384V896H512v128ZM384 1408H640V1152H384v256Z"
+></glyph
+><glyph unicode="j" d="M512 1024H640V-128H512V-256H128v128H384V896H512v128ZM384 1408H640V1152H384v256Z"
+></glyph
+><glyph unicode="k" d="M384 1664V640H512V768H640V896H768v128H896V896H768V768H640V384H768V128H896V0H640V128H512V384H384V0H128V1536H256v128H384Z"
+></glyph
+><glyph unicode="l" d="M640 1664V0H384V1536H512v128H640Z"
+></glyph
+><glyph unicode="m" d="M0 1024H896V896h128V0H768V896H640V0H384V896H256V0H0V1024Z"
+></glyph
+><glyph unicode="n" d="M128 1024H768V896H896V0H640V896H384V0H128V1024Z"
+></glyph
+><glyph unicode="o" d="M384 896V128H640V896H384ZM256 1024H768V896H896V128H768V0H256V128H128V896H256v128Z"
+></glyph
+><glyph unicode="p" d="M128 1024H768V896H896V256H768V128H512V256H640V896H384V-256H128V1024Z"
+></glyph
+><glyph unicode="q" d="M256 1024H896V-256H640V896H384V256H512V128H256V256H128V896H256v128Z"
+></glyph
+><glyph unicode="r" d="M128 1024H384V896H512v128H768V896H896V640H640V896H512V768H384V0H128V1024Z"
+></glyph
+><glyph unicode="s" d="M128 256H384V128H640V512H256V640H128V896H256v128H768V896H896V768H640V896H384V640H768V512H896V128H768V0H256V128H128V256Z"
+></glyph
+><glyph unicode="t" d="M384 1408H640V1024H896V896H512V768H640V0H384V896H128v128H384v384Z"
+></glyph
+><glyph unicode="u" d="M128 1024H384V128H640v896H896V128h128V0H768V128H640V0H256V128H128v896Z"
+></glyph
+><glyph unicode="v" d="M128 1024H384V256H512V512H640V768H768v256H896V768H768V512H640V256H512V0H128V1024Z"
+></glyph
+><glyph unicode="w" d="M0 1024H256V384H384v640H640V384H768v640h256V768H896V384H768V0H512V256H384V0H128V384H0v640Z"
+></glyph
+><glyph unicode="x" d="M128 1024H384V768H640v256H896V768H768V640H640V384H768V256H896V0H640V256H384V0H128V256H256V384H384V640H256V768H128v256Z"
+></glyph
+><glyph unicode="y" d="M128 1024H384V512H512V768H640v256H896V896H768V640H640V384H512V128H384V-128H256V-256H128V0H256V256H128v768Z"
+></glyph
+><glyph unicode="z" d="M128 1024H896V896H768V640H640V384H512V128H896V0H128V128H256V384H384V640H512V896H128v128Z"
+></glyph
+><glyph unicode="{" d="M768 1664V1536H512V896H384V768H512V128H768V0H384V128H256V768H128V896H256v640H384v128H768Z"
+></glyph
+><glyph unicode="|" d="M384 768H640V0H384V768ZM640 1664V896H384v768H640Z"
+></glyph
+><glyph unicode="}" d="M640 1664V1536H768V896H896V768H768V128H640V0H256V128H512V768H640V896H512v640H256v128H640Z"
+></glyph
+><glyph unicode="~" d=""
+></glyph
+><glyph unicode="&#xa0;" d=""
+></glyph
+><glyph unicode="&#xa1;" d=""
+></glyph
+><glyph unicode="&#xa2;" d=""
+></glyph
+><glyph unicode="&#xa3;" d=""
+></glyph
+><glyph unicode="&#xa4;" d=""
+></glyph
+><glyph unicode="&#xa5;" d=""
+></glyph
+><glyph unicode="&#xa6;" d=""
+></glyph
+><glyph unicode="&#xa7;" d=""
+></glyph
+><glyph unicode="&#xa8;" d=""
+></glyph
+><glyph unicode="&#xa9;" d=""
+></glyph
+><glyph unicode="&#xaa;" d=""
+></glyph
+><glyph unicode="&#xab;" d=""
+></glyph
+><glyph unicode="&#xac;" d=""
+></glyph
+><glyph unicode="&#xad;" d=""
+></glyph
+><glyph unicode="&#xae;" d=""
+></glyph
+><glyph unicode="&#xaf;" d=""
+></glyph
+><glyph unicode="&#xb0;" d=""
+></glyph
+><glyph unicode="&#xb1;" d=""
+></glyph
+><glyph unicode="&#xb2;" d=""
+></glyph
+><glyph unicode="&#xb3;" d=""
+></glyph
+><glyph unicode="&#xb4;" d=""
+></glyph
+><glyph unicode="&#xb5;" d=""
+></glyph
+><glyph unicode="&#xb6;" d=""
+></glyph
+><glyph unicode="&#xb7;" d=""
+></glyph
+><glyph unicode="&#xb8;" d=""
+></glyph
+><glyph unicode="&#xb9;" d=""
+></glyph
+><glyph unicode="&#xba;" d=""
+></glyph
+><glyph unicode="&#xbb;" d=""
+></glyph
+><glyph unicode="&#xbc;" d=""
+></glyph
+><glyph unicode="&#xbd;" d=""
+></glyph
+><glyph unicode="&#xbe;" d=""
+></glyph
+><glyph unicode="&#xbf;" d=""
+></glyph
+><glyph unicode="&#xc0;" d=""
+></glyph
+><glyph unicode="&#xc1;" d=""
+></glyph
+><glyph unicode="&#xc2;" d=""
+></glyph
+><glyph unicode="&#xc3;" d=""
+></glyph
+><glyph unicode="&#xc4;" d=""
+></glyph
+><glyph unicode="&#xc5;" d=""
+></glyph
+><glyph unicode="&#xc6;" d=""
+></glyph
+><glyph unicode="&#xc7;" d=""
+></glyph
+><glyph unicode="&#xc8;" d=""
+></glyph
+><glyph unicode="&#xc9;" d=""
+></glyph
+><glyph unicode="&#xca;" d=""
+></glyph
+><glyph unicode="&#xcb;" d=""
+></glyph
+><glyph unicode="&#xcc;" d=""
+></glyph
+><glyph unicode="&#xcd;" d=""
+></glyph
+><glyph unicode="&#xce;" d=""
+></glyph
+><glyph unicode="&#xcf;" d=""
+></glyph
+><glyph unicode="&#xd0;" d=""
+></glyph
+><glyph unicode="&#xd1;" d=""
+></glyph
+><glyph unicode="&#xd2;" d=""
+></glyph
+><glyph unicode="&#xd3;" d=""
+></glyph
+><glyph unicode="&#xd4;" d=""
+></glyph
+><glyph unicode="&#xd5;" d=""
+></glyph
+><glyph unicode="&#xd6;" d=""
+></glyph
+><glyph unicode="&#xd7;" d=""
+></glyph
+><glyph unicode="&#xd8;" d=""
+></glyph
+><glyph unicode="&#xd9;" d=""
+></glyph
+><glyph unicode="&#xda;" d=""
+></glyph
+><glyph unicode="&#xdb;" d=""
+></glyph
+><glyph unicode="&#xdc;" d=""
+></glyph
+><glyph unicode="&#xdd;" d=""
+></glyph
+><glyph unicode="&#xde;" d=""
+></glyph
+><glyph unicode="&#xdf;" d=""
+></glyph
+><glyph unicode="&#xe0;" d=""
+></glyph
+><glyph unicode="&#xe1;" d=""
+></glyph
+><glyph unicode="&#xe2;" d=""
+></glyph
+><glyph unicode="&#xe3;" d=""
+></glyph
+><glyph unicode="&#xe4;" d=""
+></glyph
+><glyph unicode="&#xe5;" d=""
+></glyph
+><glyph unicode="&#xe6;" d=""
+></glyph
+><glyph unicode="&#xe7;" d=""
+></glyph
+><glyph unicode="&#xe8;" d=""
+></glyph
+><glyph unicode="&#xe9;" d=""
+></glyph
+><glyph unicode="&#xea;" d=""
+></glyph
+><glyph unicode="&#xeb;" d=""
+></glyph
+><glyph unicode="&#xec;" d=""
+></glyph
+><glyph unicode="&#xed;" d=""
+></glyph
+><glyph unicode="&#xee;" d=""
+></glyph
+><glyph unicode="&#xef;" d=""
+></glyph
+><glyph unicode="&#xf0;" d=""
+></glyph
+><glyph unicode="&#xf1;" d=""
+></glyph
+><glyph unicode="&#xf2;" d=""
+></glyph
+><glyph unicode="&#xf3;" d=""
+></glyph
+><glyph unicode="&#xf4;" d=""
+></glyph
+><glyph unicode="&#xf5;" d=""
+></glyph
+><glyph unicode="&#xf6;" d=""
+></glyph
+><glyph unicode="&#xf7;" d=""
+></glyph
+><glyph unicode="&#xf8;" d=""
+></glyph
+><glyph unicode="&#xf9;" d=""
+></glyph
+><glyph unicode="&#xfa;" d=""
+></glyph
+><glyph unicode="&#xfb;" d=""
+></glyph
+><glyph unicode="&#xfc;" d=""
+></glyph
+><glyph unicode="&#xfd;" d=""
+></glyph
+><glyph unicode="&#xfe;" d=""
+></glyph
+><glyph unicode="&#xff;" d=""
+></glyph
+><glyph unicode="&#x131;" d=""
+></glyph
+><glyph unicode="&#x141;" d=""
+></glyph
+><glyph unicode="&#x142;" d=""
+></glyph
+><glyph unicode="&#x152;" d=""
+></glyph
+><glyph unicode="&#x153;" d=""
+></glyph
+><glyph unicode="&#x160;" d=""
+></glyph
+><glyph unicode="&#x161;" d=""
+></glyph
+><glyph unicode="&#x178;" d=""
+></glyph
+><glyph unicode="&#x17d;" d=""
+></glyph
+><glyph unicode="&#x17e;" d=""
+></glyph
+><glyph unicode="&#x192;" d=""
+></glyph
+><glyph unicode="&#x2c6;" d=""
+></glyph
+><glyph unicode="&#x2c7;" d=""
+></glyph
+><glyph unicode="&#x2c9;" d=""
+></glyph
+><glyph unicode="&#x2d8;" d=""
+></glyph
+><glyph unicode="&#x2d9;" d=""
+></glyph
+><glyph unicode="&#x2da;" d=""
+></glyph
+><glyph unicode="&#x2db;" d=""
+></glyph
+><glyph unicode="&#x2dc;" d=""
+></glyph
+><glyph unicode="&#x2dd;" d=""
+></glyph
+><glyph unicode="&#x394;" d=""
+></glyph
+><glyph unicode="&#x3a9;" d=""
+></glyph
+><glyph unicode="&#x3bc;" d=""
+></glyph
+><glyph unicode="&#x3c0;" d=""
+></glyph
+><glyph unicode="&#x2010;" d="M0 640H1024V512H0V640Z"
+></glyph
+><glyph unicode="&#x2013;" d=""
+></glyph
+><glyph unicode="&#x2014;" d=""
+></glyph
+><glyph unicode="&#x2018;" d="M640 1280H768V1152H640V1024H768V768H512v384H640v128Z"
+></glyph
+><glyph unicode="&#x2019;" d="M256 1280H512V896H384V768H256V896H384v128H256v256Z"
+></glyph
+><glyph unicode="&#x201a;" d=""
+></glyph
+><glyph unicode="&#x201c;" d="M256 1408H384V1280H256V1152H384V896H128v384H256v128ZM640 1408H768V1280H640V1152H768V896H512v384H640v128Z"
+></glyph
+><glyph unicode="&#x201d;" d="M128 1408H384V1024H256V896H128v128H256v128H128v256ZM512 1408H768V1024H640V896H512v128H640v128H512v256Z"
+></glyph
+><glyph unicode="&#x201e;" d=""
+></glyph
+><glyph unicode="&#x2020;" d=""
+></glyph
+><glyph unicode="&#x2021;" d=""
+></glyph
+><glyph unicode="&#x2022;" d=""
+></glyph
+><glyph unicode="&#x2026;" d=""
+></glyph
+><glyph unicode="&#x2030;" d=""
+></glyph
+><glyph unicode="&#x2039;" d=""
+></glyph
+><glyph unicode="&#x203a;" d=""
+></glyph
+><glyph unicode="&#x2044;" d=""
+></glyph
+><glyph unicode="&#x2122;" d=""
+></glyph
+><glyph unicode="&#x2126;" d=""
+></glyph
+><glyph unicode="&#x2202;" d=""
+></glyph
+><glyph unicode="&#x2206;" d=""
+></glyph
+><glyph unicode="&#x220f;" d=""
+></glyph
+><glyph unicode="&#x2211;" d=""
+></glyph
+><glyph unicode="&#x2212;" d=""
+></glyph
+><glyph unicode="&#x2219;" d=""
+></glyph
+><glyph unicode="&#x221a;" d=""
+></glyph
+><glyph unicode="&#x221e;" d=""
+></glyph
+><glyph unicode="&#x222b;" d=""
+></glyph
+><glyph unicode="&#x2248;" d=""
+></glyph
+><glyph unicode="&#x2260;" d=""
+></glyph
+><glyph unicode="&#x2264;" d=""
+></glyph
+><glyph unicode="&#x2265;" d=""
+></glyph
+><glyph unicode="&#x22f2;" d=""
+></glyph
+><glyph unicode="&#x25ca;" d=""
+></glyph
+><glyph unicode="&#xf000;" d=""
+></glyph
+><glyph unicode="&#xf001;" d=""
+></glyph
+><glyph unicode="&#xf002;" d=""
+></glyph
+></font
+></defs
+><g style="font-family: &quot;Lunchtime Doubly So&quot;; font-size:50;fill:black"
+><text x="20" y="50"
+>!&quot;#$%&amp;&#39;()*+,-./0123456789:;&#229;&lt;&gt;?</text
+><text x="20" y="100"
+>@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_</text
+><text x="20" y="150"
+>` abcdefghijklmnopqrstuvwxyz|{}~</text
+></g
+></svg
+>

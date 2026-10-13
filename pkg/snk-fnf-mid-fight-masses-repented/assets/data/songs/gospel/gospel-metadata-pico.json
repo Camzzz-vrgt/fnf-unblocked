@@ -1,0 +1,61 @@
+{
+  "version": "2.2.4",
+  "songName": "Gospel (Pico Mix)",
+  "artist": "st4rcannon",
+  "charter": "st4rcannon & GENZU",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "stickerPack": "mid-fight-masses-gospel",
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene",
+      "opponent": "sarvente-demon",
+      "instrumental": "pico",
+      "opponentVocals": [
+        "sarvente"
+      ],
+      "playerVocals": [
+        "pico"
+      ]
+    },
+    "stage": "churchDeathErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 9,
+      "normal": 11,
+      "hard": 12
+    },
+    "album": "mfm",
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 173,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

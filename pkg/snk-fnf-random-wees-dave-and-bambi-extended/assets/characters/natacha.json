@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "d il"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "d ir"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "d lefy"
+		},
+		{
+			"offsets": [
+				0,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "d down"
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "d up"
+		},
+		{
+			"offsets": [
+				-2,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "d right"
+		},
+		{
+			"offsets": [
+				1,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "d risa"
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "anin",
+			"indices": [],
+			"name": "d ap"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "ani",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/natacha",
+	"position": [
+		-210,
+		-200
+	],
+	"healthicon": "nata",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		255,
+		80
+	],
+	"camera_position": [
+		-270,
+		-50
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

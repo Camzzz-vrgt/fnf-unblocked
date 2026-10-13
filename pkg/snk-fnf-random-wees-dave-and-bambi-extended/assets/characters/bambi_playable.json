@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				-17
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bamber sings left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				73,
+				-61
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bamber sings down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				19
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bamber sings up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bamber sings right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-12
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "bamber left missed",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				-60
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "bamber down missed",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				31
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "bamber up missed",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				23,
+				1
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "bamber right missed",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-88,
+				-39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "bambi Dead confirm"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				37
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "bambi dead",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-71,
+				-15
+			],
+			"loop": false,
+			"fps": 40,
+			"anim": "idle",
+			"indices": [],
+			"name": "bamber idle"
+		},
+		{
+			"offsets": [
+				-90,
+				-98
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "bambe dead loop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bambi_play",
+	"position": [
+		0,
+		460
+	],
+	"healthicon": "bambi",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		153,
+		1
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

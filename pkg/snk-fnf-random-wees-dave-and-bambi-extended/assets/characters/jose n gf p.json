@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				3,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "j dance l"
+		},
+		{
+			"offsets": [
+				3,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "j dance r"
+		},
+		{
+			"offsets": [
+				3,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "j up"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "j left"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "j right"
+		},
+		{
+			"offsets": [
+				0,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "j down"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jose with gf on top",
+	"position": [
+		-140,
+		-10
+	],
+	"healthicon": "jose",
+	"flip_x": true,
+	"healthbar_colors": [
+		45,
+		60,
+		136
+	],
+	"camera_position": [
+		400,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1.7
+}

@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "j dance l"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"indices": [],
+			"fps": 18,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "j dance r"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jose n gf 3d",
+	"position": [
+		0,
+		-90
+	],
+	"healthicon": "jose",
+	"flip_x": false,
+	"healthbar_colors": [
+		45,
+		60,
+		155
+	],
+	"camera_position": [
+		-320,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1.5
+}

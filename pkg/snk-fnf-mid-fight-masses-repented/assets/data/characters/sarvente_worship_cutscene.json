@@ -1,0 +1,114 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Sarvente Worship Cutscene",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/sarvente_angry",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "sarventeangry"
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "sarvente idle angry0",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-82,
+				-63
+			],
+			"frameRate": 24,
+			"prefix": "sarvente tired",
+			"flipX": false,
+			"name": "tired",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-93,
+				-83
+			],
+			"frameRate": 16,
+			"assetPath": "characters/cutscenes/worship/sarventeWorship",
+			"prefix": "sarvente falling",
+			"flipX": false,
+			"looped": false,
+			"name": "falling"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-98,
+				-338
+			],
+			"frameRate": 16,
+			"assetPath": "characters/cutscenes/worship/sarventeWorship",
+			"prefix": "sarvente calling",
+			"flipX": false,
+			"looped": false,
+			"name": "calling"
+		},
+		{
+			"offsets": [
+				-97,
+				-335
+			],
+			"frameIndices": [
+				11,
+				12,
+				13,
+				14
+			],
+			"prefix": "sarvente calling",
+			"flipX": false,
+			"looped": true,
+			"name": "calling-hold",
+			"flipY": false,
+			"assetPath": "characters/cutscenes/worship/sarventeWorship",
+			"frameRate": 16
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-90,
+				-345
+			],
+			"frameRate": 16,
+			"assetPath": "characters/cutscenes/worship/sarventeWorship",
+			"prefix": "sarvente smug",
+			"flipX": false,
+			"looped": false,
+			"name": "smug"
+		}
+	]
+}

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				368,
+				213
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bmab down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				220
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "ibmab idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				241,
+				190
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ibmab left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-79,
+				80
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ibmab right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				203,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ibmab up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ibmab",
+	"position": [
+		-10,
+		310
+	],
+	"healthicon": "ibmab",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		150,
+		77
+	],
+	"camera_position": [
+		-315,
+		-260
+	],
+	"sing_duration": 4,
+	"scale": 1.5
+}

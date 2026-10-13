@@ -1,0 +1,278 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.data.song.SongRegistry;
+import funkin.play.song.Song;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.save.Save;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.StageProp;
+import funkin.ui.options.PreferencesMenu;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.character.BaseCharacter;
+
+class WorshipSong extends Song {
+
+  //cutscene variables
+
+  var hasPlayedCutscene:Bool;
+	var cutsceneConductor:Conductor;
+  var darken:FunkinSprite;
+  var bgSprite:FunkinSprite;
+  var hasPlayedEndingCutscene:Bool;
+  var cutsceneSarvente:BaseCharacter;
+
+
+    //chatterbox
+
+	public function new() {
+		super('worship');
+    hasPlayedEndingCutscene = false;
+	}
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'pico')
+      return !Save.instance.hasBeatenSong(this.id, null, 'pico');
+
+    return false;
+	}
+
+
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+
+
+
+    if(!PlayStatePlaylist.isStoryMode)
+    {
+      trace('Started countdown for Worship...');
+
+      // Skip the cutscene on the normal variation if we are in Freeplay.
+      if (PlayState.instance.currentVariation == 'default' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+
+      if (!hasPlayedCutscene) {
+        trace('Pausing countdown to play cutscene.');
+
+        hasPlayedCutscene = true;
+
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        startDialogue();
+      }
+    }
+  }
+  function startDialogue() {
+    var targetDialogue = 'worship';
+
+    if (PlayState.instance.currentVariation == 'pico') targetDialogue += "-pico";
+    if (!Preferences.naughtyness) targetDialogue += "-censored";
+
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
+
+
+  }
+
+  public override function onDialogueEnd() {
+
+    Countdown.performCountdown();
+  }
+
+  function onSongRetry(event:ScriptEvent)
+    {
+      super.onSongRetry(event);
+
+      hasPlayedCutscene = true;
+      // destroyCutsceneSarvente();
+    }
+
+    /**
+     * Replay the cutscene after leaving the song.
+     */
+    function onCreate(event:ScriptEvent):Void
+    {
+      super.onCreate(event);
+
+      hasPlayedCutscene = false;
+      // destroyCutsceneSarvente();
+    }
+
+    //starting the ending cutscene
+
+    public override function onSongEnd(event:CountdownScriptEvent):Void {
+      super.onSongEnd(event);
+
+      if (!hasPlayedEndingCutscene && PlayStatePlaylist.isStoryMode)
+        {
+        hasPlayedEndingCutscene = true;
+
+        event.cancel();
+
+        // start the video cutscene and hide it so the other stuff can happen after
+        startEndingCutscene();
+      } else {
+        // Make sure the cutscene can play again next time!
+        hasPlayedEndingCutscene = false;
+        // DO NOT CANCEL THE EVENT!
+      }
+    }
+
+    function startEndingCutscene()
+    {
+    initCutsceneSarvente('sarvente_worship_cutscene');
+
+    var bfPos:Array<Float> = [PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y];
+		var gfPos:Array<Float> = [PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y];
+		var sarventePos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
+    var cutsceneDelay:Float = 0;
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true);
+    PlayState.instance.currentStage.getGirlfriend().playAnimation('idle', true);
+    //initializing sounds before the cutscene plays so it doesnt lag
+    var heartbeatSfx:FunkinSound;
+      heartbeatSfx = FunkinSound.load(Paths.sound("heartbeat"), true, true);
+		  heartbeatSfx.volume = 1;
+
+      var cutsceneSfx:FunkinSound;
+      cutsceneSfx = FunkinSound.load(Paths.sound("worshipCutsceneStart"), true);
+		  cutsceneSfx.volume = 1;
+
+      var phoneRinging:FunkinSound;
+      phoneRinging = FunkinSound.load(Paths.sound("phoneRinging"), true, true);
+		  phoneRinging.volume = 1;
+
+      var phoneDialin:FunkinSound;
+      phoneDialin = FunkinSound.load(Paths.sound("dialing"), true);
+		  phoneDialin.volume = 1;
+
+      var bulletSfx:FunkinSound;
+      bulletSfx = FunkinSound.load(Paths.sound("bullet"), true);
+		  bulletSfx.volume = 1;
+    new FlxTimer().start(0.01, function(tmr)
+      {
+
+
+
+
+        PlayState.instance.tweenCameraToPosition(sarventePos[0] + 75, sarventePos[1] + 75 , 0.5, FlxEase.quartOut);
+        PlayState.instance.tweenCameraZoom(0.6, 0.5, true, FlxEase.quartOut);
+        if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('idle', true);
+        bgSprite = new FunkinSprite(-2500, -1500);
+        bgSprite.makeSolidColor(4000, 4000, 0xFF000000);
+        bgSprite.zIndex = 10000;
+        bgSprite.alpha = 0;
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+        cutsceneSfx.play(false);
+      });
+
+    new FlxTimer().start(1.5, function(tmr)
+      {
+
+        PlayState.instance.tweenCameraZoom(0.75, 0.5, true, FlxEase.quartOut);
+        if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('tired', false);
+        heartbeatSfx.play(true);
+      });
+
+    new FlxTimer().start(3.4, function(tmr)
+      {
+
+        PlayState.instance.tweenCameraZoom(1, 0.5, true, FlxEase.quartOut);
+        if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('falling', false);
+        PlayState.instance.tweenCameraToPosition(sarventePos[0] + 75, sarventePos[1] + 150 , 3, FlxEase.quartOut);
+      });
+
+      new FlxTimer().start(3.8, function(tmr)
+        {
+
+          bulletSfx.play(false);
+          FlxG.camera.shake(0.01, 1);
+          heartbeatSfx.stop();
+        });
+
+    new FlxTimer().start(5, function(tmr)
+      {
+
+        PlayState.instance.tweenCameraZoom(0.8, 3, true, FlxEase.quadInOut);
+        if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('calling', false);
+        phoneDialin.play(true);
+      });
+
+    new FlxTimer().start(8, function(tmr)
+      {
+        PlayState.instance.tweenCameraToPosition(sarventePos[0] + 75, sarventePos[1] - 575 , 3, FlxEase.quadOut);
+        if (cutsceneSarvente != null) cutsceneSarvente.playAnimation('calling-hold', true);
+        phoneRinging.play(true);
+        FlxTween.tween(bgSprite, {alpha: 1}, 2, {ease: FlxEase.linear});
+      });
+      new FlxTimer().start(11.9, function(tmr)
+        {
+          phoneRinging.stop();
+
+        });
+      new FlxTimer().start(13.5, function(tmr)
+        {
+
+          // destroyCutsceneSarvente();
+
+          PlayState.instance.endSong(true);
+
+        });
+
+    }
+
+    function initCutsceneSarvente(characterId:String):Void
+    {
+      if (!PlayStatePlaylist.isStoryMode || cutsceneSarvente != null) return;
+
+      var dad = PlayState.instance.currentStage.getDad();
+      if (dad == null) return;
+
+      cutsceneSarvente = CharacterDataParser.fetchCharacter(characterId);
+      if (cutsceneSarvente == null) return;
+
+      cutsceneSarvente.visible = false;
+      PlayState.instance.currentStage.add(cutsceneSarvente);
+
+      cutsceneSarvente.flipX = dad.flipX;
+      cutsceneSarvente.zIndex = dad.zIndex;
+      cutsceneSarvente.scrollFactor = dad.scrollFactor;
+      cutsceneSarvente.alpha = dad.alpha;
+      cutsceneSarvente.angle = dad.angle;
+      cutsceneSarvente.setScale(dad.scale.x);
+      cutsceneSarvente.x = dad.feetPosition.x - cutsceneSarvente.characterOrigin.x;
+      cutsceneSarvente.y = dad.feetPosition.y - cutsceneSarvente.characterOrigin.y;
+      cutsceneSarvente.originalPosition.set(cutsceneSarvente.x, cutsceneSarvente.y);
+      cutsceneSarvente.resetCameraFocusPoint();
+
+      dad.visible = false;
+      cutsceneSarvente.visible = true;
+      PlayState.instance.currentStage.refresh();
+    }
+
+    // function destroyCutsceneSarvente():Void
+    // {
+    //   var dad = PlayState.instance.currentStage?.getDad();
+    //   if (dad != null) dad.visible = true;
+
+    //   if (cutsceneSarvente != null)
+    //   {
+    //     PlayState.instance.currentStage.remove(cutsceneSarvente, true);
+    //     cutsceneSarvente.destroy();
+    //     cutsceneSarvente = null;
+    //     PlayState.instance.currentStage.refresh();
+    //   }
+    // }
+
+}

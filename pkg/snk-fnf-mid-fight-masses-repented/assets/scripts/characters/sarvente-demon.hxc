@@ -1,0 +1,32 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import funkin.effects.FunkTrail;
+
+class SarventeDemonCharacter extends SparrowCharacter {
+    // Thank you TheConcealedCow for some help!!    
+
+    function new() {
+		super('sarvente-demon');
+	}
+	
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD && PlayState.instance.health > 0.1) {
+			PlayState.instance.health = PlayState.instance.health - 0.018;
+		}
+
+		super.onNoteHit(event);
+	}
+
+    function onUpdate(elapsed)
+	{
+		super.onUpdate(elapsed);
+		this.y = -1000 + Math.sin((Conductor.instance.songPosition / 1000) * 1) * 100 ;
+	}
+
+
+}

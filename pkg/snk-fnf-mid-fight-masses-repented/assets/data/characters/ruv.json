@@ -1,0 +1,310 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Ruv",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/ruv",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "ruv"
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "ruv idle0",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				3,
+				-71
+			],
+			"frameRate": 24,
+			"prefix": "ruv down",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				162,
+				9
+			],
+			"frameRate": 24,
+			"prefix": "ruv left",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-58,
+				-16
+			],
+			"frameRate": 24,
+			"prefix": "ruv right",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				11,
+				44
+			],
+			"frameRate": 24,
+			"prefix": "ruv up",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "ruv idle0",
+			"frameIndices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"flipX": false,
+			"name": "idle-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				3,
+				-71
+			],
+			"frameRate": 24,
+			"prefix": "ruv down",
+			"frameIndices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"flipX": false,
+			"name": "singDOWN-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				164,
+				9
+			],
+			"frameRate": 24,
+			"prefix": "ruv left",
+			"frameIndices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"flipX": false,
+			"name": "singLEFT-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-63,
+				-21
+			],
+			"frameRate": 24,
+			"prefix": "ruv right",
+			"frameIndices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"flipX": false,
+			"name": "singRIGHT-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				11,
+				44
+			],
+			"frameRate": 24,
+			"prefix": "ruv up",
+			"frameIndices": [
+				3,
+				4,
+				5,
+				6
+			],
+			"flipX": false,
+			"name": "singUP-hold",
+			"looped": true
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-115,
+				256
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodilla",
+			"prefix": "ruv falling",
+			"flipX": false,
+			"looped": true,
+			"name": "falling"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-20,
+				-60
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodilla",
+			"prefix": "ruv landing",
+			"flipX": false,
+			"looped": false,
+			"name": "landing"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				146,
+				16
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodilla",
+			"prefix": "ruv pose",
+			"flipX": false,
+			"looped": false,
+			"name": "pose"
+		},
+		{
+			"offsets": [
+				146,
+				16
+			],
+			"prefix": "ruv pose",
+			"frameIndices": [
+				9,
+				10,
+				11,
+				12
+			],
+			"flipX": false,
+			"looped": true,
+			"name": "pose-hold",
+			"flipY": false,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodilla",
+			"frameRate": 24
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				15,
+				18
+			],
+			"frameRate": 16,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodillaEnd",
+			"prefix": "ruv holding out arm",
+			"flipX": false,
+			"looped": false,
+			"name": "mic up"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				15,
+				18
+
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodillaEnd",
+			"prefix": "ruv mic drop",
+			"flipX": false,
+			"looped": false,
+			"name": "mic drop"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				15,
+				18
+
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodillaEnd",
+			"prefix": "ruv mic drop hold",
+			"flipX": false,
+			"looped": true,
+			"name": "mic drop-hold"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodillaEnd2",
+			"prefix": "ruv confused",
+			"flipX": false,
+			"looped": false,
+			"name": "confusion"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+
+			],
+			"frameRate": 24,
+			"assetPath": "characters/cutscenes/zavodilla/ruvZavodillaEnd2",
+			"prefix": "ruv confused",
+			"flipX": false,
+			"frameIndices": [9,10,11,12],
+			"looped": true,
+			"name": "ruvconfused-hold"
+		}
+	]
+}

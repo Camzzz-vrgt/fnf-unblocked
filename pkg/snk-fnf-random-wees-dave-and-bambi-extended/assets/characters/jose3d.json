@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				183,
+				260
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				164,
+				401
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "d up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				142,
+				258
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "d down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				206,
+				250
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "d left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				246,
+				250
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "d right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/jose en tresde solo",
+	"position": [
+		90,
+		360
+	],
+	"healthicon": "jose",
+	"flip_x": true,
+	"healthbar_colors": [
+		45,
+		60,
+		156
+	],
+	"camera_position": [
+		670,
+		-550
+	],
+	"sing_duration": 4,
+	"scale": 1.7
+}

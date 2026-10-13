@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "ani",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "d idle"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "d idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-19
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-20
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				4
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-20
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				0
+			],
+			"anim": "cheer",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				-11
+			],
+			"anim": "anin",
+			"fps": 24,
+			"name": "d idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/natacha",
+	"position": [
+		450,
+		-370
+	],
+	"healthicon": "dave",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		255
+	],
+	"camera_position": [
+		-230,
+		30
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

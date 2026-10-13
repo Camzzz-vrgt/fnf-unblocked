@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "name": "Pico",
+  "assetPath": "dialogue/portraits/PicoDialogue",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [700, 150],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Pico Dialogue Default",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "burp",
+      "prefix": "Pico Dialogue Burp",
+      "looped": true,
+      "frameRate": 12
+    }
+  ]
+}

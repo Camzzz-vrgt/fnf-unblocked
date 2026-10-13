@@ -1,0 +1,30 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.dialogue.Conversation;
+
+class ParishPicoConversation extends Conversation {
+	function new() {
+		super('parish-pico');
+	}
+
+
+  override function showCurrentSpeaker():Void {
+    super.showCurrentSpeaker();
+
+   
+    var picoYeah = FunkinSound.load(Paths.sound("pico/yeah"), true);
+    picoYeah.volume = 1;
+
+    var disdainSfx = FunkinSound.load(Paths.sound("general/disdain"), true);
+    disdainSfx.volume = 0.2;
+    if (currentSpeaker.id == 'pico') 
+    {
+        picoYeah.play(false);
+    }
+    if (currentSpeaker.id == 'sarventeshock') 
+        {
+            disdainSfx.play(false);
+        }
+  }
+}

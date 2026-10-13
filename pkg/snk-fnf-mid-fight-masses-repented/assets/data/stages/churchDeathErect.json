@@ -1,0 +1,336 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 60,
+      "position": [
+        -2300,
+        -600
+      ],
+      "scale": [
+        0.8,
+        0.8
+      ],
+      "animType": "sparrow",
+      "name": "darkMountain",
+      "isPixel": false,
+      "assetPath": "stages/church/death/darkMountain",
+      "scroll": [
+        0.7,
+        0.7
+      ],
+      "alpha": 0.5
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 95,
+      "position": [
+        -250,
+        -900
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "superCoolPentagram",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/superCoolPentagram",
+      "scroll": [
+        0.9,
+        0.9
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "demon pentagram instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 100,
+      "position": [
+        -2300,
+        -1550
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "crateredWall",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/crateredWall",
+      "scroll": [
+        0.98,
+        0.98
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 102,
+      "position": [
+        -990,
+        -720
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "eyeBlinking",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/eyeBlinking",
+      "scroll": [
+        0.98,
+        0.98
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "eyeBall instance 1",
+          "frameRate": 12,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 110,
+      "position": [
+        50,
+        200
+      ],
+      "scale": [
+        0.8,
+        0.8
+      ],
+      "animType": "sparrow",
+      "name": "backCandles",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/backCandles",
+      "scroll": [
+        0.97,
+        0.97
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 112,
+      "position": [
+        -150,
+        -1100
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "gospelFire",
+      "isPixel": false,
+      "alpha": 1,
+      "assetPath": "stages/church/death/erect/gospelFire",
+      "scroll": [
+        0.99,
+        0.99
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "pinkfire instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 115,
+      "position": [
+        0,
+        200
+      ],
+      "scale": [
+        0.8,
+        0.8
+      ],
+      "animType": "sparrow",
+      "name": "frontCandles",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/frontCandles",
+      "scroll": [
+        1,
+        1
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 105,
+      "position": [
+        -2300,
+        170
+      ],
+      "scale": [
+        2,
+        2
+      ],
+      "animType": "sparrow",
+      "name": "demonGrounds",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/demonGrounds",
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "ground cuved instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 205,
+      "position": [
+        1000,
+        -400
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "rightPillar",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/rightPillar",
+      "scroll": [
+        1,
+        1
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 205,
+      "position": [
+        -1600,
+        300
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "leftPillar",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/leftPillar",
+      "scroll": [
+        1,
+        1
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 215,
+      "position": [
+        -2100,
+        -2000
+      ],
+      "scale": [
+        1.1,
+        1.1
+      ],
+      "animType": "sparrow",
+      "name": "chiseledThingie",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/chiseledThingie",
+      "scroll": [
+        1.1,
+        1.1
+      ],
+      "alpha": 1
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 500,
+      "position": [
+        -3000,
+        -2000
+      ],
+      "scale": [
+        1.5,
+        1.5
+      ],
+      "animType": "sparrow",
+      "name": "theGradient",
+      "isPixel": false,
+      "assetPath": "stages/church/death/erect/evilAssPurpleGradient",
+      "scroll": [
+        1.2,
+        1.2
+      ],
+      "alpha": 1
+    }
+  ],
+  "cameraZoom": 0.42,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 200,
+      "position": [
+        600,
+        500
+      ],
+      "cameraOffsets": [
+        -100,
+        -100
+      ]
+    },
+    "dad": {
+      "zIndex": 201,
+      "position": [
+        -500,
+        -140
+      ],
+      "cameraOffsets": [
+        150,
+        100
+      ]
+    },
+    "gf": {
+      "zIndex": 199,
+      "cameraOffsets": [
+        150,
+        0
+      ],
+      "position": [
+        800,
+        420
+      ]
+    }
+  },
+  "name": "Church (Death) (Erect)",
+  "directory": "repented"
+}

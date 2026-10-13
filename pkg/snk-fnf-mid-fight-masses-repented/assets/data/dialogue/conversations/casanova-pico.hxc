@@ -1,0 +1,97 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.dialogue.Conversation;
+import funkin.play.PlayState;
+
+class CasanovaPicoConversation extends Conversation {
+	function new() {
+		super('casanova-pico');
+	}
+
+  
+  var musicStopped = false;
+  var bgSprite:FunkinSprite;
+
+  override function onCreate():Void 
+  {
+    super.onCreate();
+    bgSprite = new FunkinSprite(-2000, -2000);
+    bgSprite.makeSolidColor(4000, 2500, 0xFF000000);
+    bgSprite.zIndex = 10000;
+    bgSprite.alpha = 1;
+    PlayState.instance.add(bgSprite);
+    PlayState.instance.refresh();
+
+    
+  }
+
+  override function onDialogueEnd() {
+    super.onDialogueEnd();
+    if (bgSprite.alpha = 1)
+    {
+      FlxTween.tween(bgSprite, {alpha: 0}, 2, {ease: FlxEase.linear});
+    }
+  }
+  
+  override function showCurrentSpeaker():Void {
+
+    var picoOk = FunkinSound.load(Paths.sound("pico/okayOkay"), true);
+    picoOk.volume = 1;
+
+    var exclaim = FunkinSound.load(Paths.sound("general/exclaim"), true);
+    exclaim.volume = 0.5;
+
+    var loser = FunkinSound.load(Paths.sound("general/loser"), true);
+    loser.volume = 1;
+
+    var disdain = FunkinSound.load(Paths.sound("general/disdain"), true);
+    disdain.volume = 0.8;
+
+    var hellYea = FunkinSound.load(Paths.sound("general/hellYea"), true);
+    hellYea.volume = 0.8;
+
+    super.showCurrentSpeaker();
+
+    if (currentSpeaker.id == 'picoBefuddled') 
+    {
+     
+      //bgSprite.alpha = 0;
+      FlxTween.tween(bgSprite, {alpha: 0}, 2, {ease: FlxEase.linear});
+    }
+    if (currentSpeaker.id == 'picoOkay') 
+    {
+      picoOk.play(false);
+    }
+    if (currentSpeaker.id == 'seleverLoud') 
+    {
+       
+        exclaim.play(false);
+    }
+    if (currentSpeaker.id == 'neneFreaky') 
+      {
+         
+        hellYea.play(false);
+      }
+    if (currentSpeaker.id == 'seleverDejected') 
+    {
+      
+          loser.play(false);
+    }
+    if (currentSpeaker.id == 'picoPissed') 
+    {
+        musicStopped = true;
+        disdain.play(false);
+      this.music.pause();
+    } 
+    else if (musicStopped && currentSpeaker.id == 'nene') {
+      musicStopped = false;
+      this.music.resume();
+      this.music.volume = 0.0;
+      var fadeTime = _data.music.fadeTime != null ? _data.music.fadeTime : 2.0;
+      FlxTween.tween(music, {volume: 1.0}, fadeTime, {ease: FlxEase.linear});
+    }
+    
+  }
+}

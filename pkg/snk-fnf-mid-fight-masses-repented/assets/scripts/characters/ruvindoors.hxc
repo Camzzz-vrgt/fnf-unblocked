@@ -1,0 +1,21 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class RuvIndoorsCharacter extends SparrowCharacter {
+    // Thank you TheConcealedCow for some help!!    
+
+    function new() {
+		super('ruvindoors');
+	}
+
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD) {
+            FlxG.camera.shake(0.015, 0.15);
+		}
+
+		super.onNoteHit(event);
+	}
+}

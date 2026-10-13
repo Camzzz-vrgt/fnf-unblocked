@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				180,
+				260
+			],
+			"anim": "idle",
+			"fps": 18,
+			"name": "b idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				194,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "b up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				212,
+				230
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "b down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				217,
+				270
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "b left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				188,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "b right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf7",
+	"position": [
+		170,
+		480
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		170,
+		255
+	],
+	"camera_position": [
+		290,
+		-280
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

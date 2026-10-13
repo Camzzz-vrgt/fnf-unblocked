@@ -1,0 +1,45 @@
+import funkin.play.character.SparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.addons.effects.FlxTrail;
+import funkin.effects.FunkTrail;
+
+class SeleverCharacter extends SparrowCharacter {
+
+    function new() {
+		super('selever');
+	}
+
+    function onBeatHit(event:SongTimeScriptEvent)
+    {
+        super.onBeatHit(event);
+        if (!isSinging())
+        {
+            this.playAnimation('idle', true);
+        }
+    }
+
+    //Might not be used
+
+    function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		// Weird workaround because `this` is a PolymodScriptClass and not a ScriptedPackerCharacter.
+
+		//trail = ?, how long the trail is onscreen, alpha, delay
+		var evilTrail = new FunkTrail(this.superClass, null, 12, 24, 0.2, 0.029);
+		evilTrail.color = '0xFFffffff';
+		// Go behind Spirit.
+		evilTrail.zIndex = 99;
+		addToStage(evilTrail);
+	}
+
+    function addToStage(sprite:FlxSprite) {
+		if (this.debug) {
+			// We are in the chart editor or something.
+			FlxG.stage.add(sprite);
+		} else {
+			PlayState.instance.currentStage.add(sprite);
+		}
+	}
+}

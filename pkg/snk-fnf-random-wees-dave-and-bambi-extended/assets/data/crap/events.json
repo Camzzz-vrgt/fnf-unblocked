@@ -1,0 +1,39 @@
+{
+	"song": {
+		"speed": 2,
+		"stage": "bambi farm",
+		"player1": "bff",
+		"player2": "bambi",
+		"player3": null,
+		"events": [
+			[
+				106650,
+				[
+					[
+						"Change Character",
+						"1",
+						"bambi banjo"
+					]
+				]
+			],
+			[
+				127050,
+				[
+					[
+						"Change Character",
+						"1",
+						"bambi"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "jose n gf",
+		"bpm": 200,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "crap"
+	}
+}

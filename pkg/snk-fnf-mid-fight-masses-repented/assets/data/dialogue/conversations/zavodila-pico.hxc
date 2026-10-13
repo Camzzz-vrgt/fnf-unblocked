@@ -1,0 +1,38 @@
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.dialogue.Conversation;
+
+class ZavodilaConversation extends Conversation {
+	function new() {
+		super('zavodila-pico');
+	}
+  
+
+  override function showCurrentSpeaker():Void {
+    super.showCurrentSpeaker();
+
+    var picoYeah = FunkinSound.load(Paths.sound("pico/yeah"), true);
+    picoYeah.volume = 1;
+    var picoBurp = FunkinSound.load(Paths.sound("pico/picoBurp"), true);
+    picoBurp.volume = 1;
+    var hellYea = FunkinSound.load(Paths.sound("general/hellYea"), true);
+    hellYea.volume = 1;
+    
+    if (currentSpeaker.id == 'picoYeah') 
+    {
+      
+      picoYeah.play(false);
+    }
+    if (currentSpeaker.id == 'picoBurp') 
+      {
+        
+        picoBurp.play(false);
+    }
+    if (currentSpeaker.id == 'neneFreaky') 
+      {
+        
+        hellYea.play(false);
+    }
+  }
+}

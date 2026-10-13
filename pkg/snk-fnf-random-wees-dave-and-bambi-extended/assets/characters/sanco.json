@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				181,
+				260
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "s left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				182,
+				260
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "s right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				185,
+				260
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "s up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				182,
+				260
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "s down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "s idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sanco new sprite",
+	"position": [
+		60,
+		410
+	],
+	"healthicon": "sanco",
+	"flip_x": false,
+	"healthbar_colors": [
+		220,
+		184,
+		39
+	],
+	"camera_position": [
+		-270,
+		-310
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

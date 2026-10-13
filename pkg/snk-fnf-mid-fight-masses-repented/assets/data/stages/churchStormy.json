@@ -1,0 +1,289 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-2700, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "rainySky",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/stormySky",
+      "scroll": [0.4, 0.4],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-105, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "moon",
+      "isPixel": false,
+      "alpha": 0.5,
+      "assetPath": "stages/church/stormy/zavodillaMoon",
+      "scroll": [0.5, 0.5],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-105, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "moonglow",
+      "isPixel": false,
+      "alpha": 0.5,
+      "assetPath": "stages/church/stormy/zavodillaMoonGlow",
+      "scroll": [0.5, 0.5],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-2700, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "clouds1",
+      "isPixel": false,
+      "alpha": 0.5,
+      "assetPath": "stages/church/rainy/clouds1",
+      "scroll": [0.4, 0.4],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-2700, -1800],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "clouds2",
+      "isPixel": false,
+      "alpha": 0.5,
+      "assetPath": "stages/church/rainy/clouds2",
+      "scroll": [0.4, 0.4],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 40,
+      "position": [-1450, -300],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "backgroundFoliage1",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/backgroundFoliage",
+      "scroll": [0.82, 0.82],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 50,
+      "position": [500, -300],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "backgroundFoliage2",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/backgroundFoliage",
+      "scroll": [0.82, 0.82],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 82,
+      "position": [-1700, -380],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "foliageLeft",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/foliageLeft",
+      "scroll": [0.94, 0.94],
+      "startingAnimation": "idle",
+      "animations": [
+      {
+        "name": "idle",
+        "prefix": "mini bush stormy instance 1",
+        "frameRate": 48,
+        "flipX": false,
+        "flipY": false,
+        "looped": true
+      }
+    ]
+    },
+    {
+      "zIndex": 81,
+      "position": [250, -380],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "foliageLeftALT",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/foliageLeft",
+      "scroll": [0.94, 0.94],
+      "danceEvery": 0,
+      "startingAnimation": "idle",
+      "animations": [
+      {
+        "name": "idle",
+        "prefix": "mini bush stormy instance 1",
+        "frameRate": 48,
+        "flipX": false,
+        "flipY": false,
+        "looped": true
+      }
+    ]
+    },
+    {
+      "danceEvery": 0,
+      "position": [-2800, -1700],
+      "zIndex": 69,
+      "scale": [2.2, 2.2],
+      "animType": "sparrow",
+      "name": "stormyGradient",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/stormyGradient",
+      "scroll": [1, 1],
+      "animations": [],
+      "flipX": true,
+      "alpha": 1
+    },
+    {
+      
+      "danceEvery": 0,
+      "zIndex": 70,
+      "position": [-510, -340],
+      "scale": [0.9, 0.9],
+      "animType": "sparrow",
+      "name": "cathedralInterior",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/cathedralInterior",
+      "scroll": [0.84, 0.84],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 80,
+      "position": [-600, -1825],
+      "scale": [0.9, 0.9],
+      "animType": "sparrow",
+      "name": "churchCathedral",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/churchCathedral",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 90,
+      "position": [-2740, -180],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "pathofPearl",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/pathofPearl",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "zIndex": 201,
+      "position": [510, -553],
+      "scale": [0.88, 0.88],
+      "name": "rightFoliage",
+      "assetPath": "stages/church/stormy/rightFoliage",
+      "scroll": [1.02, 1.02],
+      "danceEvery": 0,
+      "startingAnimation": "idle",
+      "animations": [
+      {
+        "name": "idle",
+        "prefix": "large foliage stormy instance 1",
+        "frameRate": 24,
+        "flipX": false,
+        "flipY": false,
+        "looped": true
+      }
+    ]
+    },
+    {
+      "zIndex": 200,
+      "position": [-2000, -1550],
+      "scale": [0.88, 0.88],
+      "name": "sakuraTree",
+      "assetPath": "stages/church/stormy/sakuraTree",
+      "scroll": [1.1, 1.1],
+      "danceEvery": 0,
+      "startingAnimation": "idle",
+      "animations": [
+      {
+        "name": "idle",
+        "prefix": "sakuraTree stormty instance 1",
+        "frameRate": 48,
+        "flipX": false,
+        "flipY": false,
+        "looped": true
+      }
+    ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 500,
+      "position": [700, -650],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "holyCross1",
+    
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/holyCross",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "position": [-1200, -650],
+      "zIndex": 500,
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "holyCross2",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/holyCross",
+      "scroll": [1, 1],
+      "animations": [],
+      "flipX": true
+    },
+
+    {
+      "danceEvery": 0,
+      "position": [-2800, -3200],
+      "zIndex": 1200,
+      "scale": [1.2, 2.2],
+      "animType": "sparrow",
+      "name": "zavodillaGradient",
+      "isPixel": false,
+      "assetPath": "stages/church/stormy/zavodillaGradient",
+      "scroll": [1, 1],
+      "animations": [],
+      "flipX": true,
+      "alpha": 0.5
+    }
+  ],
+  "cameraZoom": 0.7,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 101,
+      "position": [300, 100],
+      "cameraOffsets": [-100, -100]
+    },
+    "dad": {
+      "zIndex": 102,
+      "position": [-500, 140],
+      "cameraOffsets": [150, -50]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 75],
+      "position": [25, 0]
+    }
+  },
+  "name": "Church (Stormy)",
+  "directory": "repented"
+}

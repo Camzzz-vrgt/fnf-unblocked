@@ -1,0 +1,25 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		0,
+		50
+	],
+	"no_antialiasing": false,
+	"scale": 1.05,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				110,
+				30
+			],
+			"idle_offsets": [
+				109,
+				29
+			],
+			"loop_name": "d i",
+			"idle_name": "d o"
+		}
+	],
+	"image": "tri"
+}

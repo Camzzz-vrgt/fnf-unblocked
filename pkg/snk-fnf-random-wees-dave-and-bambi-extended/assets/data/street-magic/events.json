@@ -1,0 +1,56 @@
+{
+	"song": {
+		"events": [
+			[
+				38400,
+				[
+					[
+						"Set GF Speed",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				84825,
+				[
+					[
+						"Play Animation",
+						"pi",
+						"Dad"
+					]
+				]
+			],
+			[
+				86400,
+				[
+					[
+						"Play Animation",
+						"anin",
+						"2"
+					]
+				]
+			],
+			[
+				86850,
+				[
+					[
+						"Change Character",
+						"2",
+						"natacha"
+					]
+				]
+			],
+			[
+				96600,
+				[
+					[
+						"Play Animation",
+						"cheer",
+						"2"
+					]
+				]
+			]
+		]
+	}
+}

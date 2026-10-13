@@ -1,0 +1,323 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [
+        -2700,
+        -1800
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "sky",
+      "isPixel": false,
+      "assetPath": "stages/church/death/sky_black",
+      "scroll": [
+        0.4,
+        0.4
+      ],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [
+        -200,
+        -800
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "deathMoon",
+      "isPixel": false,
+      "assetPath": "stages/church/death/deathMoon",
+      "scroll": [
+        0.45,
+        0.45
+      ],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 60,
+      "position": [
+        -3450,
+        -960
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "darkMountain",
+      "isPixel": false,
+      "assetPath": "stages/church/death/darkMountain",
+      "scroll": [
+        0.6,
+        0.6
+      ],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 70,
+      "position": [
+        -800,
+        -1450
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "churchEvil",
+      "isPixel": false,
+      "assetPath": "stages/church/death/churchEvil",
+      "scroll": [
+        0.8,
+        0.8
+      ],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 90,
+      "position": [
+        -450,
+        -200
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "rightPath",
+      "isPixel": false,
+      "assetPath": "stages/church/death/rightPath",
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "pathway cracked right instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 80,
+      "position": [
+        -2900,
+        -100
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "leftPath",
+      "isPixel": false,
+      "assetPath": "stages/church/death/leftPath",
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "path left instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 91,
+      "position": [
+        -2350,
+        -1600
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "burntTree",
+      "isPixel": false,
+      "assetPath": "stages/church/death/burntTree",
+      "scroll": [
+        1.05,
+        1.05
+      ],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 105,
+      "position": [
+        -2500,
+        -2100
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "flamingLeft",
+      "isPixel": false,
+      "assetPath": "stages/church/death/flamingLeft",
+      "scroll": [
+        1.05,
+        1.05
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fire animation wit fade instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 105,
+      "position": [
+        670,
+        -670
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "evilBush",
+      "isPixel": false,
+      "assetPath": "stages/church/death/evilBush",
+      "scroll": [
+        1.05,
+        1.05
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "bush red",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 105,
+      "position": [
+        850,
+        -1800
+      ],
+      "scale": [
+        2,
+        2
+      ],
+      "animType": "sparrow",
+      "name": "flamingRight",
+      "isPixel": false,
+      "assetPath": "stages/church/death/flamingRight",
+      "scroll": [
+        1.05,
+        1.05
+      ],
+      "startingAnimation": "idle",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "foliage fire instance 1",
+          "frameRate": 24,
+          "flipX": false,
+          "flipY": false,
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 105,
+      "position": [
+        -3000,
+        -2450
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "animType": "sparrow",
+      "name": "theGradient",
+      "isPixel": false,
+      "assetPath": "stages/church/death/theGradient",
+      "scroll": [
+        1,
+        1
+      ]
+    }
+  ],
+  "cameraZoom": 0.32,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 101,
+      "position": [
+        300,
+        100
+      ],
+      "cameraOffsets": [
+        -100,
+        -100
+      ]
+    },
+    "dad": {
+      "zIndex": 102,
+      "position": [
+        -500,
+        140
+      ],
+      "cameraOffsets": [
+        150,
+        -50
+      ]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [
+        0,
+        75
+      ],
+      "position": [
+        500,
+        -20
+      ]
+    }
+  },
+  "name": "Church (Death)",
+  "directory": "repented"
+}

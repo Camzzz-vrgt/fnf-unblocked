@@ -1,0 +1,68 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.modding.events.ScriptEvent;
+import flixel.group.FlxTypedSpriteGroup;
+
+class NothingStage extends Stage
+{
+
+    function new()
+    {
+        super('theNothingWorld');
+    }
+    
+    function buildStage()
+    {
+        super.buildStage();
+
+        var voidSprite:FunkinSprite;
+
+        voidSprite = new FunkinSprite(-2000, -2000);
+        voidSprite.makeSolidColor(4000, 4000, 0xFFffffff);
+        voidSprite.zIndex = 0;
+        voidSprite.alpha = 1;
+        PlayState.instance.add(voidSprite);
+        PlayState.instance.refresh();
+        trace('created void sprite');
+
+        var pentagram = getNamedProp('seleverPentagram');
+        pentagram.alpha = 0;
+
+    }
+
+    function onSongRetry(event:ScriptEvent)
+	{
+		super.onSongRetry(event);
+    }
+
+	function onBeatHit(event:SongTimeScriptEvent)
+	{
+        super.onBeatHit(event);
+        var pentagram = getNamedProp('seleverPentagram');
+        if(PlayState.instance.currentSong.id.toLowerCase() == 'casanova'){
+            switch(event.beat){
+                case -1:
+                    FlxTween.angle(pentagram, 0, 360, 2);
+                    pentagram.alpha = 1;
+                case 0:
+                    FlxTween.tween(pentagram, {alpha: 0}, 0.2);
+            }
+        }
+	}
+}

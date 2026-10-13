@@ -1,0 +1,101 @@
+{
+    "version": "1.0.0",
+    "name": "Sarvente (Angry) (Indoors)",
+    "assetPath": "characters/sarvente_angry_indoors",
+    "startingAnimation": "idle",
+    "flipX": false,
+    "singTime": 4,
+    "healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "sarventeangry",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "sarvente idle angry0",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "tired",
+            "prefix": "sarvente tired",
+            "looped": true,
+            "offsets": [
+                -109,
+                -64
+            ]
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "sarvente down angry0",
+            "offsets": [
+                -25,
+                -35
+            ]
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "sarvente left angry0",
+            "offsets": [
+                90,
+                43
+            ]
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "sarvente right angry0",
+            "offsets": [
+                -160,
+                24
+            ]
+        },
+        {
+            "name": "singUP",
+            "prefix": "sarvente up angry0",
+            "offsets": [
+                38,
+                84
+            ]
+        },
+        {
+            "name": "singDOWN-alt",
+            "prefix": "sarvente down angry alt0",
+            "offsets": [
+                -50,
+                -55
+            ]
+        },
+        {
+            "name": "singLEFT-alt",
+            "prefix": "sarvente left angry alt0",
+            "offsets": [
+                -5,
+                17
+            ]
+        },
+        {
+            "name": "singRIGHT-alt",
+            "prefix": "sarvente right angry alt0",
+            "offsets": [
+                -159,
+                0
+            ]
+        },
+        {
+            "name": "singUP-alt",
+            "prefix": "sarvente up angry alt0",
+            "offsets": [
+                38,
+                84
+            ]
+        }
+    ]
+}

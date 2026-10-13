@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				259
+			],
+			"anim": "idle",
+			"fps": 17,
+			"name": "d idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "d left"
+		},
+		{
+			"offsets": [
+				179,
+				259
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "d right"
+		},
+		{
+			"offsets": [
+				179,
+				260
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singUP",
+			"loop": false,
+			"name": "d up"
+		},
+		{
+			"offsets": [
+				179,
+				260
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "d down"
+		},
+		{
+			"offsets": [
+				180,
+				260
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "scream",
+			"loop": true,
+			"name": "d scream"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf robomolesto",
+	"position": [
+		270,
+		380
+	],
+	"healthicon": "bf bot",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		177,
+		209
+	],
+	"camera_position": [
+		-570,
+		-390
+	],
+	"sing_duration": 4,
+	"scale": 1.6
+}

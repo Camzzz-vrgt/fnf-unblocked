@@ -1,0 +1,69 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.modding.events.ScriptEvent;
+import flixel.group.FlxTypedSpriteGroup;
+
+class churchErectStage extends Stage
+{
+    function new()
+    {
+        super('churchErect');
+		
+    }
+	var colorShader:AdjustColorShader;
+
+
+    function buildStage()
+    {
+        super.buildStage();
+
+		//makes the gradient pretty (add filter)
+		getNamedProp('gradient').blend = 0;
+
+		//makes the lights blend
+
+		getNamedProp('lampLight2C').blend = 0;
+		getNamedProp('lampLight2B').blend = 0;
+		getNamedProp('lampLight2A').blend = 0;
+		getNamedProp('lampLightC').blend = 0;
+		getNamedProp('lampLightB').blend = 0;
+		getNamedProp('lampLightA').blend = 0;
+    }
+
+	function onBeatHit(event:SongTimeScriptEvent)
+	{
+
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		//this applies a color changing shader to ALL the characters at once
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+
+		shader = new AdjustColorShader();
+
+    	shader.hue = 10;
+		shader.saturation = 5;
+		shader.contrast = 0;
+		shader.brightness = 0;
+
+		character.shader = shader;
+
+	}
+}

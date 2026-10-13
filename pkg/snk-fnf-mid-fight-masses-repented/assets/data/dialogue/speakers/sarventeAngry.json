@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "name": "Sarvente",
+  "assetPath": "dialogue/portraits/SarventeDialogue",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [100, 100],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Sarvente Dialogue Default",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "concerned",
+      "prefix": "Sarvente Dialogue Concerned",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "angry",
+      "prefix": "Sarvente Dialogue Angry",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "condescending",
+      "prefix": "Sarvente Dialogue Fake",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "proud",
+      "prefix": "Sarvente Dialogue Proud",
+      "looped": true,
+      "frameRate": 12
+    }
+  ]
+}

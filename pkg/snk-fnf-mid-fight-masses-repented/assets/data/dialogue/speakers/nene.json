@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "name": "Nene",
+  "assetPath": "dialogue/portraits/NeneDialogue",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [700, 150],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Nene Dialogue Default",
+      "looped": true,
+      "frameRate": 12
+    },
+    {
+      "name": "freaky",
+      "prefix": "Nene Dialogue Freaky",
+      "looped": true,
+      "frameRate": 12,
+      "offsets": [100, -40]
+    }
+  ]
+}

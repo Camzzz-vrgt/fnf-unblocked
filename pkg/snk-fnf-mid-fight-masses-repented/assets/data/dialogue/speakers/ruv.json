@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "name": "Ruv",
+  "assetPath": "dialogue/portraits/RuvDialogue",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [100, 100],
+  "animations": [
+    {
+      "name": "default",
+      "prefix": "Ruv Dialogue Default",
+      "looped": true,
+      "frameIndices": [1],
+      "frameRate": 12
+    }
+  ]
+}
