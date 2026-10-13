@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				13,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF NOTE LEFT MISS"
+		},
+		{
+			"offsets": [
+				-15,
+				-19
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				-15,
+				69
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				-49,
+				22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				8
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "A-IdleSad instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-14,
+				69
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "B-UpSad instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-13,
+				-37
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "C-DownSad instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				14
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "D-LeftSad instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				19
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "E-RightSad instance 1",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BF_emotions/BoyFriend_BLACKSPACE_SAD_Assets",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

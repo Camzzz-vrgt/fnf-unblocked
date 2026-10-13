@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "A",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "E"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "B"
+		},
+		{
+			"offsets": [
+				2,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "C"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/erect/ERECT_Omori_Assets",
+	"position": [
+		-210,
+		-170
+	],
+	"healthicon": "omori-erect",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		92,
+		126
+	],
+	"camera_position": [
+		90,
+		200
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.7
+}

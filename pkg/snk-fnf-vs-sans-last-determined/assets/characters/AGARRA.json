@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				127,
+				-335
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
+		},
+		{
+			"offsets": [
+				64,
+				-492
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWN"
+		},
+		{
+			"offsets": [
+				117,
+				-333
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "UP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				112,
+				-522
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RIGHT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				86,
+				-462
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/AGARRA",
+	"position": [
+		0,
+		48
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		126,
+		152,
+		124
+	],
+	"camera_position": [
+		-350,
+		250
+	],
+	"sing_duration": 4,
+	"scale": 1.7
+}

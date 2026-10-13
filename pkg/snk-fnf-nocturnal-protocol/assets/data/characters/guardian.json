@@ -1,0 +1,117 @@
+{
+	"version": "1.0.1",
+	"name": "Your Name Here",
+	"startingAnimation": "idle",
+	"renderType": "sparrow",
+	"assetPath": "characters/guardian",
+	"scale": 1.35,
+	"healthIcon": {
+		"id": "guardian",
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"isPixel": false
+	},
+	"offsets": [
+		-60,
+		20
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 1,
+	"singTime": 4,
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "idle",
+			"assetPath": null,
+			"offsets": [
+				-5,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "down",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "right",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "left",
+			"assetPath": null,
+			"offsets": [
+				49,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "up",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		},
+		{
+			"name": "run",
+			"prefix": "run",
+			"assetPath": null,
+			"offsets": [
+				2,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 28,
+			"frameIndices": []
+		}
+	],
+	"flipX": true,
+	"flipY": false
+}

@@ -1,0 +1,84 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+
+import funkin.modding.module.Module;
+
+import flixel.FlxG;
+
+import funkin.Assets;
+import funkin.Paths;
+
+class Papilla extends NoteKind
+{
+
+
+    public function new()
+    {
+        super('papilla');
+
+        this.noteKind = 'papilla';
+        this.description = 'papilla';
+    }
+
+    function onCreate(e:Dynamic)
+    {
+        super.onCreate(e);
+
+        if (PlayState.instance == null) return;
+    }
+
+    function onDestroy(e:Dynamic)
+    {
+        super.onDestroy(e);
+    }
+
+      function onNoteIncoming(e:Dynamic)
+    {
+        super.onNoteIncoming(e);
+
+        if ( e.note.noteData.kind == "papilla" )
+		{
+			e.note.frames = Paths.getSparrowAtlas('notes/papilla');
+			e.note.animation.addByPrefix('purpleScroll', 'purple0000' );
+			e.note.animation.addByPrefix('blueScroll', 'blue0000' );
+			e.note.animation.addByPrefix('greenScroll', 'green0000' );
+			e.note.animation.addByPrefix('redScroll', 'red0000' );
+			
+			e.note.scale.set( 0.75, 0.75 );
+			var papillaNote:String;
+		
+				switch ( e.note.noteData.data % 4 )
+				{
+					case 0:
+						bullNote = "purpleScroll";
+						e.note.offset.set( 25, 10 );
+					case 1:
+						bullNote = "blueScroll";
+						e.note.offset.set( 25, 15 );
+					case 2:
+						bullNote = "greenScroll";
+						e.note.offset.set( 25, 5 );
+					case 3:
+						bullNote = "redScroll";
+						e.note.offset.set( 25, 10 );
+				}
+			
+		
+			e.note.animation.play(papillaNote);
+		}
+
+    }
+
+    function onUpdate(e:Dynamic)
+    {
+        super.onUpdate(e);
+    }
+
+    function onNoteHit(event:NoteScriptEvent)
+    {
+		super.onNoteHit( event );
+
+		
+    }
+
+}

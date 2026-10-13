@@ -1,0 +1,103 @@
+{
+	"version": "1.0.1",
+	"name": "Your Name Here",
+	"startingAnimation": "idle",
+	"renderType": "sparrow",
+	"assetPath": "characters/tinkyrun",
+	"scale": 1.2,
+	"healthIcon": {
+		"id": "tinky",
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"isPixel": false
+	},
+	"offsets": [
+		50,
+		-90
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 1,
+	"singTime": 4,
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "idle",
+			"assetPath": null,
+			"offsets": [
+				-5,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 38,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "left",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "up",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "down",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "right",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		}
+	],
+	"flipX": false,
+	"flipY": false
+}

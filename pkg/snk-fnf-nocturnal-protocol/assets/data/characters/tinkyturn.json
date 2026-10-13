@@ -1,0 +1,61 @@
+{
+	"version": "1.0.1",
+	"name": "Your Name Here",
+	"startingAnimation": "idle",
+	"renderType": "sparrow",
+	"assetPath": "characters/tinkyturn",
+	"scale": 1,
+	"healthIcon": {
+		"id": "guardian",
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"isPixel": false
+	},
+	"offsets": [
+		50,
+		100
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 1,
+	"singTime": 4,
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "idle",
+			"assetPath": null,
+			"offsets": [
+				-5,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 23,
+			"frameIndices": []
+		},
+		{
+			"name": "turn",
+			"prefix": "turn",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 20,
+			"frameIndices": []
+		}
+	],
+	"flipX": true,
+	"flipY": false
+}

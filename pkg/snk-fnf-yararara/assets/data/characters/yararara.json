@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "name": "YARARARA",
+  "renderType": "multisparrow",
+  "assetPath": "characters/no",
+  "healthIcon": {
+    "id": "face",
+    "flipX": false
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "GF Dancing Beat0",
+      "offsets": [0, 0],
+      "frameRate": 15
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "GF Dancing Beat0",
+      "offsets": [-4, 3],
+      "frameRate": 12
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "GF Dancing Beat0",
+      "offsets": [2, -4],
+      "frameRate": 12
+    },
+    {
+      "name": "singUP",
+      "prefix": "GF Dancing Beat0",
+      "offsets": [-1, 1],
+      "frameRate": 12
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "GF Dancing Beat0",
+      "offsets": [4, -1],
+      "frameRate": 12
+    }
+  ]
+}

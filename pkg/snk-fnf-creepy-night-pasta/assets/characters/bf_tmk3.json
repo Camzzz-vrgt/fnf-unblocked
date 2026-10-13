@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				7,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "CShadowBfTmK BfIdle"
+		},
+		{
+			"offsets": [
+				4,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "CShadowBfTmK BfLeft"
+		},
+		{
+			"offsets": [
+				8,
+				-5
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "CShadowBfTmK BfDown"
+		},
+		{
+			"offsets": [
+				0,
+				-3
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "CShadowBfTmK BfRight"
+		},
+		{
+			"offsets": [
+				8,
+				-2
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "CShadowBfTmK BfUp"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Black and Whate/CShadowBfTmK",
+	"position": [
+		-685,
+		-220
+	],
+	"healthicon": "bf-tmk",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-610,
+		510
+	],
+	"sing_duration": 4,
+	"scale": 0.4,
+	"_editor_isPlayer": true
+}

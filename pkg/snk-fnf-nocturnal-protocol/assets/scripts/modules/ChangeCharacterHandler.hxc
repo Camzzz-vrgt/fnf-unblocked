@@ -1,0 +1,138 @@
+// Coded by NebulaStellaNova
+
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.modding.module.Module;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import Reflect;
+
+class ChangeCharacterModule extends Module {
+
+	var characterCaches = [
+		"bf" => [ "init" => true ],
+		"gf" => [ "init" => true ],
+		"dad" => [ "init" => true ]
+	];
+
+	var types = [
+		"bf" => CharacterType.BF,
+		"gf" => CharacterType.GF,
+		"dad" => CharacterType.DAD
+	];
+
+	function new() {
+		super("ChangeCharacterModule");
+	}
+
+	override function onSongEvent(event) {
+		super.onSongEvent(event);
+		var theEvent = event.eventData;
+		if (theEvent.eventKind == "ChangeCharacter") {
+			var newcharId:String = theEvent.value.newchar.toLowerCase();
+			if (characterCaches.get(theEvent.value.character).exists(newcharId)) {
+				var theCharacter = characterCaches.get(theEvent.value.character).get(newcharId);
+				if (theCharacter == null) {
+				}
+				if (theCharacter != null) {
+					var currentChars = [
+						"bf" => PlayState.instance.currentStage.getBoyfriend(),
+						"gf" => PlayState.instance.currentStage.getGirlfriend(),
+						"dad" => PlayState.instance.currentStage.getDad()
+					];
+					var currentChar = currentChars.get(theEvent.value.character);
+
+					if (currentChar == null) {
+						return;
+					}
+
+					theCharacter.x = currentChar.x;
+					theCharacter.y = currentChar.y;
+					theCharacter.zIndex = currentChar.zIndex;
+
+					PlayState.instance.currentStage.remove(currentChar);
+					currentChar.kill();
+					theCharacter.revive();
+
+					PlayState.instance.currentStage.addCharacter(theCharacter, types.get(theEvent.value.character));
+					theCharacter.initHealthIcon(theEvent.value.character == "dad");
+					PlayState.instance.currentStage.refresh();
+				}
+			} else {
+				trace("[ChangeCharacterModule] Unknown character \"" + theEvent.value.newchar + "\"");
+			}
+		}
+	}
+
+	override function onCountdownStart(event) {
+		super.onCountdownStart(event);
+		var totalEvents = (PlayState.instance.songEvents == null) ? -1 : PlayState.instance.songEvents.length;
+		var unknownCharacters = [];
+		var stageChars = [
+			"bf" => PlayState.instance.currentStage.getBoyfriend(),
+			"gf" => PlayState.instance.currentStage.getGirlfriend(),
+			"dad" => PlayState.instance.currentStage.getDad()
+		];
+		for (i in PlayState.instance.songEvents) {
+			if (i.eventKind == "ChangeCharacter") {
+				var charId:String = i.value.newchar.toLowerCase();
+				var ref = stageChars.get(i.value.character);
+				var exCharacter = CharacterDataParser.fetchCharacter(charId);
+				if (exCharacter != null) {
+					exCharacter.x = ref.x;
+					exCharacter.y = ref.y;
+					exCharacter.zIndex = ref.zIndex;
+					characterCaches.get(i.value.character).set(charId, exCharacter);
+				} else {
+					unknownCharacters.push(i.value.newchar);
+				}
+			}
+		}
+		for (i in unknownCharacters)
+			trace("WARN [ChangeCharacterModule] fetchCharacter returned null for: \"" + i + "\"");
+		var bfCount:Int = 0; for (k in characterCaches.get("bf").keys()) bfCount++;
+		var gfCount:Int = 0; for (k in characterCaches.get("gf").keys()) gfCount++;
+		var dadCount:Int = 0; for (k in characterCaches.get("dad").keys()) dadCount++;
+		PlayState.instance.currentStage.refresh();
+	}
+
+	override function onSongRetry(event) {
+		super.onSongRetry(event);
+		for (a in ["bf", "gf", "dad"]) {
+			for (i in characterCaches.get(a)) {
+				if (i != true) {
+					i.destroy();
+				}
+			}
+		}
+
+		characterCaches = [
+			"bf" => [ "init" => true ],
+			"gf" => [ "init" => true ],
+			"dad" => [ "init" => true ]
+		];
+
+		var difficulty = PlayState.instance.currentSong.difficulties.get(PlayState.instance.currentVariation).get(PlayState.instance.currentDifficulty);
+		if (PlayState.instance.currentStage.getBoyfriend() != null) {
+			var exCharacter = CharacterDataParser.fetchCharacter(difficulty.characters.player);
+			PlayState.instance.currentStage.getBoyfriend().destroy();
+			PlayState.instance.currentStage.addCharacter(exCharacter, types.get("bf"));
+			exCharacter.initHealthIcon(false);
+		}
+
+		if (PlayState.instance.currentStage.getGirlfriend() != null) {
+			var exCharacter = CharacterDataParser.fetchCharacter(difficulty.characters.girlfriend);
+			PlayState.instance.currentStage.getGirlfriend().destroy();
+			PlayState.instance.currentStage.addCharacter(exCharacter, types.get("gf"));
+		}
+
+		if (PlayState.instance.currentStage.getDad() != null) {
+			var exCharacter = CharacterDataParser.fetchCharacter(difficulty.characters.opponent);
+			PlayState.instance.currentStage.getDad().destroy();
+			PlayState.instance.currentStage.addCharacter(exCharacter, types.get("dad"));
+			exCharacter.initHealthIcon(false);
+		}
+
+		PlayState.instance.currentStage.refresh();
+	}
+}

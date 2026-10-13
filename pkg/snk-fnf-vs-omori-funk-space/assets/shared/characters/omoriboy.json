@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "A-Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "F-AltIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				125,
+				-4
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "B-Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				34,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "C-Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				-148
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "D-Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				57,
+				27
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "E-Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "smirk",
+			"loop": false,
+			"name": "G-AterAbbi"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/omoriboy/New_Omori_Boy_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "omoriboy",
+	"flip_x": false,
+	"healthbar_colors": [
+		210,
+		221,
+		221
+	],
+	"camera_position": [
+		10,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 0.77
+}

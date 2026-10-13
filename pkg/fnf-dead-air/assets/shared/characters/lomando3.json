@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 20,
+			"name": "brap",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-4,
+				-1
+			],
+			"anim": "lock",
+			"fps": 20,
+			"name": "lock",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-3,
+				0
+			],
+			"anim": "green",
+			"fps": 20,
+			"name": "green",
+			"indices": []
+		},
+		{
+			"offsets": [
+				26,
+				-1
+			],
+			"indices": [],
+			"fps": 17,
+			"anim": "worm",
+			"loop": true,
+			"name": "wormee"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/lomando3",
+	"position": [
+		-120,
+		0
+	],
+	"healthicon": "lomando",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		255,
+		0
+	],
+	"camera_position": [
+		-100,
+		100
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

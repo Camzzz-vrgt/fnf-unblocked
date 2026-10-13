@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-177,
+				-192
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "idledanceleft"
+		},
+		{
+			"offsets": [
+				-178,
+				-193
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "idledanceright"
+		},
+		{
+			"offsets": [
+				-203,
+				-222
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "sansleft"
+		},
+		{
+			"offsets": [
+				-190,
+				-174
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "sansup"
+		},
+		{
+			"offsets": [
+				-212,
+				-193
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "sansright"
+		},
+		{
+			"offsets": [
+				-182,
+				-231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "sansdown"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SOATSANS",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "sans",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		310,
+		220
+	],
+	"sing_duration": 6,
+	"scale": 1
+}

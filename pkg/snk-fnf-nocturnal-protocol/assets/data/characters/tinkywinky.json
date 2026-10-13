@@ -1,0 +1,116 @@
+{
+	"renderType": "sparrow",
+	"offsets": [
+		155,
+		-250
+	],
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"assetPath": "characters/tinkywinky",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "tinky",
+		"flipX": false
+	},
+	"version": "1.0.1",
+	"danceEvery": 1,
+	"scale": 0.65,
+	"name": "Your Name Here",
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"flipX": false,
+	"isPixel": false,
+	"singTime": 4,
+	"flipY": false,
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false,
+		"swfMode": true
+	},
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "idle",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "idle",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 28
+		},
+		{
+			"offsets": [
+				152,
+				-17
+			],
+			"frameIndices": [],
+			"prefix": "up",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				141,
+				-37
+			],
+			"frameIndices": [],
+			"prefix": "down",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				167,
+				-34
+			],
+			"frameIndices": [],
+			"prefix": "left",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				148,
+				-35
+			],
+			"frameIndices": [],
+			"prefix": "right",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		}
+	]
+}

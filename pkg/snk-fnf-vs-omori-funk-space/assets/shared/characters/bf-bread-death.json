@@ -1,0 +1,112 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				36,
+				4
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "B-BoyfriendLoop instance 1"
+		},
+		{
+			"offsets": [
+				78,
+				64
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
+			],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "C-BoyfriendRetry instance 1"
+		},
+		{
+			"offsets": [
+				70,
+				16
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28
+			],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "A-BoyfriendToast instance 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Boyfriend_Toast_Assets",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

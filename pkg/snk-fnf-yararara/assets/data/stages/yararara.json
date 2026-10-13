@@ -1,0 +1,35 @@
+{
+  "version": "1.0.2",
+  "name": "yararara",
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10000,
+      "position": [ -500, -400 ],
+      "scale": [ 50000, 50000 ],
+      "animType": "sparrow",
+      "name": "blacksquare",
+      "isPixel": false,
+      "assetPath": "#000000",
+      "scroll": [ 0, 0 ],
+      "animations": []
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [ -100, -100 ],
+      "position": [ 989.5, 885 ],
+      "zIndex": 300
+    },
+    "dad": {
+      "cameraOffsets": [ 150, -100 ],
+      "position": [ 335, 885 ],
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [ 0, 0 ],
+      "position": [ 751.5, 787 ],
+      "zIndex": 100
+    }
+  }
+}

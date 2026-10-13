@@ -1,0 +1,66 @@
+{
+	"song": {
+		"events": [
+			[
+				123789.47368421,
+				[
+					[
+						"Change Character",
+						"Dad",
+						"SANSPX"
+					],
+					[
+						"Change Character",
+						"BF",
+						"LastBFPX"
+					],
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.03"
+					],
+					[
+						"Toggle FlxTrail",
+						"dad",
+						"on"
+					],
+					[
+						"Change FlxTrail Color",
+						"dad",
+						"0000FF"
+					]
+				]
+			],
+			[
+				163894.736842105,
+				[
+					[
+						"Toggle FlxTrail",
+						"dad",
+						"off"
+					]
+				]
+			],
+			[
+				164210.526315789,
+				[
+					[
+						"Add Camera Zoom",
+						"1",
+						"0.04"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"LastSANS"
+					],
+					[
+						"Change Character",
+						"BF",
+						"LastBF"
+					]
+				]
+			]
+		]
+	}
+}

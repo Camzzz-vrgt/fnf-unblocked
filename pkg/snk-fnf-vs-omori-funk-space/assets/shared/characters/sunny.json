@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "A"
+		},
+		{
+			"offsets": [
+				-17,
+				37
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "D"
+		},
+		{
+			"offsets": [
+				8,
+				-54
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "E"
+		},
+		{
+			"offsets": [
+				-12,
+				0
+			],
+			"loop": true,
+			"fps": 1,
+			"anim": "afraid",
+			"indices": [],
+			"name": "F"
+		},
+		{
+			"offsets": [
+				-23,
+				38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "I"
+		},
+		{
+			"offsets": [
+				29,
+				-41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "J"
+		},
+		{
+			"offsets": [
+				99,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "B"
+		},
+		{
+			"offsets": [
+				68,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "C"
+		},
+		{
+			"offsets": [
+				91,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "G"
+		},
+		{
+			"offsets": [
+				12,
+				6
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "H"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sunny_Assets_FNF",
+	"position": [
+		-50,
+		-130
+	],
+	"healthicon": "sunny",
+	"flip_x": true,
+	"healthbar_colors": [
+		84,
+		87,
+		114
+	],
+	"camera_position": [
+		-160,
+		70
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.76
+}

@@ -1,0 +1,94 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+import funkin.Conductor;
+
+class PlayVideoEvent extends SongEvent
+{
+  function new()
+  {
+    super('PlayVideo');
+  }
+
+  override function handleEvent(data)
+  {
+    if (PlayState.instance == null) return;
+
+    // If the event fires late (e.g. on retry), seek the video forward
+    // by however many ms have already passed since the event time.
+    var timestamp:Float = Conductor.instance.songPosition - data.time;
+    if (timestamp < 0) timestamp = 0;
+
+    ModuleHandler.getModule("PVE_VideoModule").scriptCall("createVideo", [
+      Paths.videos(data.value.path),
+      {
+        videoType: data.value.isCutscene,
+        disableControls: data.value.disableControl,
+        hudFadeDuration: data.value.duration,
+        resync: data.value.resync,
+        zIndex: data.value.zIndex,
+        mute: data.value.mute,
+        timestamp: timestamp
+      }
+    ]);
+  }
+
+  override function getTitle()
+  {
+    return "Play Video";
+  }
+
+  override function getEventSchema()
+  {
+    return [
+      {
+        name: "path",
+        title: "Video file name",
+        defaultValue: "File name (no .mp4)",
+        type: "string"
+      },
+      {
+        name: "isCutscene",
+        title: "Hide HUD?",
+        defaultValue: "No",
+        type: "enum",
+        keys: [
+          'No' => 1,
+          'Yes (Fade the hud)' => 2,
+          'Yes (No Fade)' => 3
+        ]
+      },
+      {
+        name: 'duration',
+        title: 'HUD fade duration',
+        defaultValue: 1,
+        min: 0,
+        type: "float"
+      },
+      {
+        name: "mute",
+        title: "Mute?",
+        defaultValue: false,
+        type: "bool"
+      },
+      {
+        name: "disableControl",
+        title: "Disable controls?",
+        defaultValue: false,
+        type: "bool"
+      },
+      {
+        name: "resync",
+        title: "Resync automatically?",
+        defaultValue: true,
+        type: "bool"
+      },
+      {
+        name: "zIndex",
+        title: "zIndex",
+        defaultValue: 300,
+        type: "float"
+      }
+    ];
+  }
+}

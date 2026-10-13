@@ -1,0 +1,61 @@
+{
+	"version": "1.0.1",
+	"name": "Your Name Here",
+	"startingAnimation": "idle",
+	"renderType": "sparrow",
+	"assetPath": "characters/tinkydance",
+	"scale": 0.8,
+	"healthIcon": {
+		"id": "tinky",
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"isPixel": false
+	},
+	"offsets": [
+		120,
+		-85
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 1,
+	"singTime": 4,
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "idle",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "dance",
+			"prefix": "dance",
+			"assetPath": null,
+			"offsets": [
+				0,
+				0
+			],
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"frameIndices": []
+		}
+	],
+	"flipX": false,
+	"flipY": false
+}

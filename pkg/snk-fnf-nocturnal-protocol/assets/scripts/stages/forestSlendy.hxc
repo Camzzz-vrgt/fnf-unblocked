@@ -1,0 +1,637 @@
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.play.song.Song;
+import flixel.FlxCamera;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.Conductor;
+import flixel.math.FlxPoint;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.util.MathUtil;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.event.SongEvent;
+import funkin.play.components.HealthIcon;
+import funkin.Paths;
+import flixel.util.FlxColor;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import funkin.graphics.shaders.WiggleEffectRuntime;
+import funkin.graphics.shaders.WiggleEffectType;
+import funkin.util.TouchUtil;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+
+import funkin.ui.FullScreenScaleMode;
+
+class forestSlendy extends Stage
+{
+
+    function new()
+    {
+        super('forestslendy');
+    }
+
+    var screamerFrames:Array<FunkinSprite> = [];
+    var lastImage:Int = 0;
+    var swingTime = 1;
+    var swingAmount = 1;
+    var swingSpeed = 0.8;
+    var camAngle:Bool = false;
+
+
+    var swingEnabled:Bool = false;
+    var progress:Float = 1;
+    var duration:Float = 0;
+    var startAngle:Float = 5;
+    var targetAngle:Float = -5;
+    var popupImage:FunkinSprite = null;
+    var blackScreen:FunkinSprite;
+    var popupTween:FlxTween = null;
+    var cutoutX = FullScreenScaleMode.gameCutoutSize.x / 2.0;
+    var cutoutY = FullScreenScaleMode.gameCutoutSize.y / 2.0;
+    var papillaCounter = 0;
+
+    override function buildStage():Void
+	{
+		super.buildStage();
+
+        game = PlayState.instance;
+		dad = game.currentStage.getDad();
+		bf = game.currentStage.getBoyfriend();
+		gf = game.currentStage.getGirlfriend();
+	    game.comboPopUps.offsets = [550, 350];
+
+		game.healthBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+
+        forest = new FunkinSprite(0, 0);
+		forest.loadTexture('stages/dayforest/forest');
+        //forest.scale.set(1.85,1.85);
+        forest.antialiasing = true;
+		add(forest);
+
+        forest2 = new FunkinSprite(0, 0);
+		forest2.loadTexture('stages/dayforest/forest2');
+        //forest.scale.set(1.85,1.85);
+        forest2.visible = false;
+		add(forest2);
+
+        forest3 = new FunkinSprite(0, 0);
+		forest3.loadTexture('stages/dayforest/forest3');
+        //forest.scale.set(1.85,1.85);
+        forest3.alpha = 0.4;
+        forest3.visible = false;
+		add(forest3);
+
+        forest4 = new FunkinSprite(0, 0);
+		forest4.loadTexture('stages/dayforest/forest4');
+        //forest.scale.set(1.85,1.85);
+        forest4.alpha = 0.4;
+        forest4.visible = false;
+		add(forest4);
+
+        forest5 = new FunkinSprite(0, 0);
+		forest5.loadTexture('stages/dayforest/forest4');
+        //forest.scale.set(1.85,1.85);
+        forest5.alpha = 0.3;
+        forest5.visible = false;
+		add(forest5);
+
+        goodending = new FunkinSprite(0, 0);
+		goodending.loadTexture('stages/dayforest/goodending');
+        //goodending.scale.set(1.85,1.85);
+        goodending.antialiasing = true;
+        goodending.visible = false;
+		add(goodending);
+
+        badending = new FunkinSprite(0, 0);
+		badending.loadTexture('stages/dayforest/badending');
+        //goodending.scale.set(1.85,1.85);
+        badending.antialiasing = true;
+        badending.visible = false;
+		add(badending);
+
+        papilla = new FunkinSprite(260, 250);
+		papilla.loadTexture('stages/dayforest/custard');
+        //forest.scale.set(1.85,1.85);
+        papilla.alpha = 1;
+        papilla.visible = false;
+		add(papilla);
+
+        guardianCrack = new FunkinSprite(140, 100);
+		guardianCrack.loadSparrow('stages/dayforest/guardianfinal');
+		guardianCrack.animation.addByPrefix('idle', "idle0", 24, false);
+		guardianCrack.animation.addByPrefix('walk', "walk0", 24, false);
+        guardianCrack.animation.play('idle');
+        guardianCrack.scale.set(1.4,1.4);
+        guardianCrack.antialiasing = true;
+        guardianCrack.visible = false;
+		add(guardianCrack);
+
+
+        for (i in 1...6)
+        {
+            var s = new FunkinSprite(0, 0);
+            s.loadTexture('stages/dayforest/image' + i);
+            s.cameras = [game.camHUD];
+            s.scale.set(2.5, 2.5);
+            s.alpha = 0.3;
+            s.updateHitbox();
+            s.x = (FlxG.width / 2) - (s.width / 2) + cutoutX;
+            s.y = (FlxG.height / 2) - (s.height / 2) + cutoutY;
+            s.zIndex = 10001;
+            s.visible = false;
+            s.antialiasing = true;
+            PlayState.instance.add(s);
+            screamerFrames.push(s);
+        }
+
+        effectHUD = new FunkinSprite(0, 0);
+        effectHUD.loadTexture('stages/dayforest/screeneffect');
+        effectHUD.cameras = [game.camHUD];
+        effectHUD.scale.set(0.7, 0.5);
+        effectHUD.updateHitbox();
+        effectHUD.x = (FlxG.width / 2) - (effectHUD.width / 2) + cutoutX;
+        effectHUD.y = (FlxG.height / 2) - (effectHUD.height / 2) + cutoutY;
+        effectHUD.zIndex = 100000;
+        effectHUD.visible = false;
+        effectHUD.antialiasing = true;
+        PlayState.instance.add(effectHUD);
+
+        seunio = new FunkinSprite(200, 0);
+        seunio.loadTexture('stages/dayforest/text');
+        seunio.cameras = [game.camHUD];
+        seunio.scale.set(0.7, 0.7);
+        seunio.zIndex = 100;
+        seunio.visible = true;
+        seunio.antialiasing = true;
+        PlayState.instance.add(seunio);
+
+        custardText = new FlxText(0, 0, 0, 'a player has collected 0/10 custards');
+        custardText.setFormat(null, 28, FlxColor.WHITE, FlxTextBorderStyle.CENTER);
+        custardText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
+        custardText.cameras = [game.camHUD];
+        custardText.antialiasing = false;
+        custardText.updateHitbox();
+        custardText.alpha = 0;
+        custardText.x = (FlxG.width / 2) - (custardText.width / 2) + cutoutX;
+        custardText.y = (FlxG.height / 2) - (custardText.height / 2) + cutoutY;
+        custardText.y += 150;
+        PlayState.instance.add(custardText);
+
+        tinkyscreamer = new FunkinSprite(0, 0);
+        tinkyscreamer.loadTexture('stages/dayforest/image3');
+        tinkyscreamer.cameras = [game.camCutscene];
+        tinkyscreamer.scale.set(2.7, 2.7);
+        tinkyscreamer.updateHitbox();
+        tinkyscreamer.x = (FlxG.width / 2) - (tinkyscreamer.width / 2) + cutoutX;
+        tinkyscreamer.y = (FlxG.height / 2) - (tinkyscreamer.height / 2) + cutoutY;
+        tinkyscreamer.zIndex = 100000;
+        tinkyscreamer.alpha = 0;
+        tinkyscreamer.visible = true;
+        tinkyscreamer.antialiasing = true;
+        PlayState.instance.add(tinkyscreamer);
+
+        tinkyscreamer2 = new FunkinSprite(0, 0);
+        tinkyscreamer2.loadTexture('stages/dayforest/tinky2');
+        tinkyscreamer2.cameras = [game.camCutscene];
+        tinkyscreamer2.scale.set(0.6, 0.6);
+        tinkyscreamer2.updateHitbox();
+        tinkyscreamer2.x = (FlxG.width / 2) - (tinkyscreamer2.width / 2) + cutoutX;
+        tinkyscreamer2.y = (FlxG.height / 2) - (tinkyscreamer2.height / 2) + cutoutY;
+        tinkyscreamer2.zIndex = 100000;
+        tinkyscreamer2.alpha = 1;
+        tinkyscreamer2.visible = false;
+        tinkyscreamer2.antialiasing = true;
+        PlayState.instance.add(tinkyscreamer2);
+
+        sebas = new FunkinSprite(2500, 450);
+        sebas.loadSparrow('stages/mall/npcs/Sebas-random-walk');
+        sebas.scale.set(0.8, 0.8);
+        sebas.animation.addByPrefix('idle', 'idle', 12, true);
+        sebas.animation.play('idle');
+        add(sebas);
+
+        blackScreen = new FunkinSprite(0, 10).makeSolidColor(FlxG.width * 1.2, FlxG.height * 1.2, 0xFF000000);
+        blackScreen.cameras = [game.camCutscene];
+        // blackScreen.screenCenter();
+        add(blackScreen);
+
+    }
+
+    function onCreate(event:ScriptEvent)
+    {
+        super.onCreate(event);
+        game = PlayState.instance;
+    }
+
+    public function onSongStart(event:ScriptEvent)
+    {
+        super.onSongStart(event);
+        FlxTween.tween(blackScreen, {alpha: 0}, 5);
+    }
+
+
+
+
+    function onSongLoaded(e:Dynamic)
+    {
+        super.onSongLoaded(e);
+
+        var bfFocus = PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint;
+        game.cancelCameraFollowTween();
+        game.cameraFollowPoint.setPosition(bfFocus.x, bfFocus.y);
+        game.resetCamera(true, false, false);
+
+        game.iconP2.alpha = 0;
+        PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+        PlayState.instance.currentStage.getDad().alpha = 0;
+        PlayState.instance.currentStage.getBoyfriend().scale.set(0.4,0.4);
+        game.opponentStrumline.x -= 100000;
+
+
+    }
+
+
+    function onUpdate(event:Dynamic)
+    {
+        super.onUpdate(event);
+
+        // if (swingEnabled)
+        // {
+        // progress = Math.min(progress + event.elapsed / duration, 1);
+        // var eased = Math.pow(progress, 4);
+        // var angle = startAngle + (targetAngle - startAngle) * eased;
+        // game.currentStage.getBoyfriend().angle = angle;
+        // game.currentStage.getDad().angle = angle;
+        // forest4.angle = angle;
+        // }
+
+        // if(camAngle)
+        // {
+        //  swingTime = swingTime + event.elapsed * swingSpeed;
+        //  angleCam = Math.sin(swingTime) * swingAmount;
+        //  game.camGame.angle = angleCam;
+        // }
+
+
+    }
+
+    function onSongRetry(){
+      super.onSongRetry();
+
+        papillaCounter = 0;
+
+        forest.visible = true;
+        forest.alpha = 1;
+        blackScreen.alpha = 1;
+        forest2.visible = false;
+        forest3.visible = false;
+        forest4.visible = false;
+        forest5.visible = false;
+        goodending.visible = false;
+        badending.visible = false;
+        papilla.visible = false;
+        guardianCrack.visible = false;
+        effectHUD.visible = false;
+        seunio.visible = true;
+        tinkyscreamer2.visible = false;
+
+        tinkyscreamer.alpha = 0;
+        custardText.alpha = 0;
+
+        for (s in screamerFrames) s.visible = false;
+        lastImage = 0;
+
+        PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+        PlayState.instance.currentStage.getBoyfriend().scale.set(0.4, 0.4);
+        PlayState.instance.currentStage.getDad().alpha = 0;
+
+        camAngle = false;
+        swingEnabled = false;
+        game.camGame.angle = 0;
+        game.opponentStrumline.x -= 100000;
+        game.iconP2.alpha = 0;
+}
+
+    public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+	{
+		super.onSongEvent(scriptEvent);
+		if (scriptEvent.eventData.eventKind == "TinkyScreamer")
+		{
+			tinkyscreamer.alpha = 1;
+            new FlxTimer().start(0.05, function(tmr:FlxTimer) {
+                tinkyscreamer.alpha = 0.0001;
+                });
+		}
+       if (scriptEvent.eventData.eventKind == "Add Camera Zoom")
+        {
+        game.cameraBopMultiplier = game.cameraBopIntensity;
+        game.camHUD.zoom += game.hudCameraZoomIntensity * game.defaultHUDCameraZoom;
+        }
+
+         if (scriptEvent.eventData.eventKind == "CharSwing")
+    {
+        if (scriptEvent.eventData.getString('value1') == 'on')
+        {
+            swingEnabled = true;
+            duration = Conductor.instance.beatLengthMs / 1000;
+        }
+        else
+        {
+            swingEnabled = false;
+            game.currentStage.getBoyfriend().angle = 0;
+            game.currentStage.getDad().angle = 0;
+            forest4.angle = 0;
+        }
+    }
+    if (scriptEvent.eventData.eventKind == "PopUp")
+    {
+        var imageName:String = scriptEvent.eventData.getString('value1');
+
+         if (popupTween != null) popupTween.cancel();
+
+        if (popupImage != null)
+        {
+            PlayState.instance.remove(popupImage);
+            popupImage = null;
+        }
+
+        popupImage = new FunkinSprite();
+        popupImage.loadTexture('stages/dayforest/' + imageName);
+        popupImage.cameras = [game.camHUD];
+        popupImage.scale.set(2.7, 2.7);
+        popupImage.updateHitbox();
+        popupImage.x = (FlxG.width / 2) - (popupImage.width / 2) + cutoutX;
+        popupImage.y = (FlxG.height / 2) - (popupImage.height / 2) + cutoutY;
+        popupImage.alpha = 1;
+        PlayState.instance.add(popupImage);
+
+        FlxTween.tween(popupImage.scale, {x: 3.9, y: 3.9}, 1, {ease: FlxEase.quadOut});
+        popupTween = FlxTween.tween(popupImage, {alpha: 0}, 1, {
+            ease: FlxEase.linear,
+            onComplete: function(_) {
+                PlayState.instance.remove(popupImage);
+                popupImage = null;
+            }
+        });
+    }
+
+	}
+
+    public override function onNoteHit(event) {
+		super.onNoteHit(event);
+
+        if (!event.note.noteData.getMustHitNote() ) {
+
+          if(game.health > 0.1)  game.health -= 0.02;
+
+
+
+          }
+            if (event.note.noteData.getMustHitNote() ) {
+           switch (event.note.noteData.kind)
+          {
+            case "papilla":
+                papillaCounter++;
+                custardText.alpha = 1;
+                custardText.text = 'a player has collected ' + papillaCounter + '/10 custards';
+                new FlxTimer().start(1.5, function(tmr:FlxTimer) {
+                    FlxTween.tween(custardText, {alpha: 0}, 1);
+                });
+          }
+        }
+
+    }
+
+
+    function onStepHit(event:SongTimeScriptEvent):Void {
+    super.onStepHit(event);
+    curStep = event.step;
+
+
+    switch (curStep) {
+
+
+        case 32:
+            seunio.visible = false;
+
+		case 64:
+            FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 1}, (Conductor.instance.stepLengthMs / 1000) * (88 - 64));
+            FlxTween.tween(PlayState.instance.currentStage.getBoyfriend().scale, {x: 1.8, y: 1.8}, (Conductor.instance.stepLengthMs / 1000) * (312 - 64));
+            camAngle = true;
+        case 308:
+            PlayState.instance.camHUD.fade(0xFF000000, 1);
+
+        case 313:
+			game.tweenScrollSpeed(2, 0, null, ['playerStrumline', 'opponentStrumline']);
+
+        case 320:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.001, true);
+            forest.alpha = 0;
+            camAngle = false;
+        case 322:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.4);
+
+        case 328:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+
+        case 336:
+            PlayState.instance.camHUD.fade(0xFF000000, 1, true);
+            forest2.visible = true;
+		    game.healthBar.createFilledBar(0xFF6003B9, 0xFFFFFFFF);
+            PlayState.instance.iconP2.alpha = 1;
+            PlayState.instance.currentStage.getDad().alpha = 1;
+
+
+        case 464:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5);
+
+        case 474:
+			game.tweenScrollSpeed(2.3, 0, null, ['playerStrumline', 'opponentStrumline']);
+
+        case 479:
+            PlayState.instance.camHUD.fade(0xFF000000, 1, true);
+
+
+
+        case 606:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.2);
+			game.tweenScrollSpeed(2.55, 0, null, ['playerStrumline', 'opponentStrumline']);
+
+        case 608:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.2, true);
+            forest2.visible = false;
+            effectHUD.visible = true;
+            for (s in screamerFrames) s.visible = true;
+
+        case 609:
+            FlxTween.tween(PlayState.instance.currentStage.getDad().scale, {x: 0.6, y: 0.6}, (Conductor.instance.stepLengthMs / 1000) * (610 - 609));
+            PlayState.instance.currentStage.getDad().x += 100;
+        case 612:
+            FlxTween.tween(PlayState.instance.currentStage.getDad().scale, {x: 1.2, y: 1.2}, (Conductor.instance.stepLengthMs / 1000) * (672 - 612));
+            FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().x - 100}, (Conductor.instance.stepLengthMs / 1000) * (672 - 612));
+
+        case 734:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.01);
+
+        case 736:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            forest3.visible = true;
+            effectHUD.visible = false;
+            for (s in screamerFrames) s.visible = false;
+			game.tweenScrollSpeed(1.9, 0, null, ['playerStrumline', 'opponentStrumline']);
+
+
+        case 862:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.2);
+            forest3.visible = false;
+
+        case 865:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+
+        case 894:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.1);
+
+        case 896:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.currentStage.getBoyfriend().alpha = 1;
+
+        case 926:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.1);
+
+        case 928:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            PlayState.instance.currentStage.getDad().alpha = 1;
+            PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+
+        case 958:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.1);
+
+        case 960:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.currentStage.getBoyfriend().alpha = 1;
+
+        case 990:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.1);
+
+        case 992:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            forest5.visible = true;
+            papilla.visible = true;
+            papilla.scale.set(0.2,0.2);
+            FlxTween.tween(papilla.scale, {x: 1, y: 1}, (Conductor.instance.stepLengthMs / 1000) * (1100 - 992));
+			game.tweenScrollSpeed(1.8, 3, null, ['playerStrumline', 'opponentStrumline']);
+
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+
+        case 1103:
+            FlxTween.tween(papilla, {y: papilla.y + 400}, (Conductor.instance.stepLengthMs / 1000) * (1108 - 1103));
+
+        case 1118:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.01);
+            tinkyscreamer2.visible = true;
+            FlxTween.tween(tinkyscreamer2.scale, {x: 6, y: 6}, 0.5, {ease: FlxEase.quintIn});
+
+        case 1120:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            for (s in screamerFrames) s.visible = true;
+            forest5.visible = false;
+			game.tweenScrollSpeed(2.6, 0, null, ['playerStrumline', 'opponentStrumline']);
+            effectHUD.visible = true;
+            PlayState.instance.currentStage.getDad().x -= 100;
+
+        case 1121:
+            tinkyscreamer2.visible = false;
+
+
+        case 1122:
+            FlxTween.tween(PlayState.instance.currentStage.getDad().scale, {x: 0.05, y: 0.05}, (Conductor.instance.stepLengthMs / 1000) * (12));
+
+        case 1126:
+            FlxTween.tween(PlayState.instance.currentStage.getDad().scale, {x: 1.2, y: 1.2}, (Conductor.instance.stepLengthMs / 1000) * (1184 - 1124));
+
+
+        case 1247:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.01);
+
+        case 1248:
+            PlayState.instance.camHUD.fade(0xFF000000, 0.5, true);
+            effectHUD.visible = false;
+            for (s in screamerFrames) s.visible = false;
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+            if(papillaCounter == 10)
+            {
+                guardianCrack.visible = true;
+                new FlxTimer().start(3, function(tmr:FlxTimer) {
+                guardianCrack.animation.play('walk');
+                PlayState.instance.camHUD.fade(0xFF000000, 0.5);
+
+                });
+                goodending.visible = true;
+
+            }
+            else
+            {
+                badending.visible = true;
+            }
+     }
+    }
+
+    function onBeatHit(event) {
+		super.onBeatHit(event);
+		curBeat = event.beat;
+
+        if (swingEnabled)
+        {
+        startAngle = targetAngle;
+        targetAngle = -targetAngle;
+        progress = 0;
+        }
+
+		if (screamerFrames.length > 0 && screamerFrames[lastImage].visible)
+        {
+            for (s in screamerFrames) s.visible = false;
+
+            var nextImage = FlxG.random.int(0, 4);
+            while (nextImage == lastImage) nextImage = FlxG.random.int(0, 4);
+            lastImage = nextImage;
+
+            screamerFrames[nextImage].visible = true;
+        }
+
+
+
+        switch(curBeat)
+        {
+
+         case 224:
+
+        }
+
+
+	}
+
+    function onPause(e:Dynamic)
+    {
+        super.onPause(e);
+
+
+    }
+
+
+    function onResume(e:Dynamic)
+    {
+        super.onResume(e);
+
+    }
+}

@@ -1,0 +1,501 @@
+{
+	"song": {
+		"events": [
+			[
+				24000,
+				[
+					[
+						"Note Combo Check",
+						"",
+						""
+					]
+				]
+			],
+			[
+				35812.5,
+				[
+					[
+						"Play Video",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				36093.75,
+				[
+					[
+						"Note Combo Check",
+						"",
+						""
+					],
+					[
+						"Change Char Alpha",
+						"2",
+						"0.0001"
+					],
+					[
+						"sethealth",
+						"1",
+						""
+					],
+					[
+						"Change Game Alpha",
+						"0.0",
+						"0.0001"
+					]
+				]
+			],
+			[
+				43500,
+				[
+					[
+						"Change Game Alpha",
+						"1.0",
+						"5.0"
+					],
+					[
+						"Camera Zoom Freq/Depth",
+						"4",
+						"0"
+					]
+				]
+			],
+			[
+				48833.3333333333,
+				[
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace-a-normal"
+					]
+				]
+			],
+			[
+				48833.3333333333,
+				[
+					[
+						"Play Sound",
+						"Omori_EmotionProvoke",
+						"0.8"
+					]
+				]
+			],
+			[
+				49583.3333333333,
+				[
+					[
+						"Emotion",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				53500,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						"0.03"
+					]
+				]
+			],
+			[
+				54166.6666666667,
+				[
+					[
+						"Camera Zoom Freq/Depth",
+						"4",
+						"1.0"
+					]
+				]
+			],
+			[
+				75500,
+				[
+					[
+						"Change Character",
+						"Dad",
+						"omori-darkspace"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace-a-dark"
+					],
+					[
+						"noteskinchange",
+						"BLACSPACE_NOTE_assets",
+						"no"
+					]
+				]
+			],
+			[
+				75541.6666666667,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				75583.3333333333,
+				[
+					[
+						"Note Combo Check",
+						"",
+						""
+					]
+				]
+			],
+			[
+				86250,
+				[
+					[
+						"Note Combo Check",
+						"",
+						""
+					]
+				]
+			],
+			[
+				96749.9999999999,
+				[
+					[
+						"Set Cam Zoom",
+						"0.75",
+						""
+					]
+				]
+			],
+			[
+				96833.3333333333,
+				[
+					[
+						"noteskinchange",
+						"NOTE_assets",
+						"no"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"omori"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace-a-normal"
+					]
+				]
+			],
+			[
+				110180.555555555,
+				[
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace-s-normal"
+					]
+				]
+			],
+			[
+				111500,
+				[
+					[
+						"Emotion",
+						"2",
+						""
+					]
+				]
+			],
+			[
+				118166.666666667,
+				[
+					[
+						"Change Character",
+						"Dad",
+						"omori-darkspace"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace-s-dark"
+					],
+					[
+						"noteskinchange",
+						"BLACSPACE_NOTE_assets",
+						"no"
+					]
+				]
+			],
+			[
+				118194.444444444,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				138208.333333333,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				139416.666666667,
+				[
+					[
+						"noteskinchange",
+						"NOTE_assets",
+						"no"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"omori"
+					],
+					[
+						"Change Character",
+						"BF",
+						"bf"
+					]
+				]
+			],
+			[
+				139458.333333333,
+				[
+					[
+						"Set Cam Zoom",
+						"0.75",
+						""
+					]
+				]
+			],
+			[
+				140166.666666667,
+				[
+					[
+						"Emotion",
+						"3",
+						""
+					]
+				]
+			],
+			[
+				150159.722222222,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				150170.138888888,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bf-emotioncard"
+					],
+					[
+						"Change Character",
+						"dad",
+						"omori-battle"
+					]
+				]
+			],
+			[
+				150170.138888889,
+				[
+					[
+						"Battle Mode",
+						"1",
+						""
+					],
+					[
+						"Change Scroll Speed",
+						"0.5",
+						"0.00001"
+					]
+				]
+			],
+			[
+				150173.611111111,
+				[
+					[
+						"camspeed",
+						"0",
+						""
+					]
+				]
+			],
+			[
+				171416.666666667,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				171500,
+				[
+					[
+						"Camera Zoom Freq/Depth",
+						"1",
+						"1.75"
+					],
+					[
+						"Battle Mode",
+						"0",
+						""
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf"
+					],
+					[
+						"Change Character",
+						"dad",
+						"omori"
+					],
+					[
+						"Change Scroll Speed",
+						"1.0",
+						"0.0001"
+					]
+				]
+			],
+			[
+				171500,
+				[
+					[
+						"Camera Change Zoom",
+						"0.35",
+						""
+					],
+					[
+						"Blackout",
+						"1",
+						"99.9"
+					]
+				]
+			],
+			[
+				171500,
+				[
+					[
+						"Change Character",
+						"BF",
+						"bf-darkspace"
+					],
+					[
+						"Change Character",
+						"Dad",
+						"omori-darkspace"
+					],
+					[
+						"noteskinchange",
+						"BLACSPACE_NOTE_assets",
+						"no"
+					]
+				]
+			],
+			[
+				182166.666666667,
+				[
+					[
+						"Camera Zoom Freq/Depth",
+						"4",
+						"1"
+					]
+				]
+			],
+			[
+				189916.666666667,
+				[
+					[
+						"Play Animation",
+						"death",
+						"dad"
+					]
+				]
+			],
+			[
+				190166.666666667,
+				[
+					[
+						"Camera Zoom Freq/Depth",
+						"4",
+						"0.0"
+					],
+					[
+						"Camera Change Zoom",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				192500,
+				[
+					[
+						"Screen Shake",
+						"0.4,0.01",
+						"0.4,0.01"
+					],
+					[
+						"Change White Alpha",
+						"1.0",
+						"0.30"
+					]
+				]
+			],
+			[
+				192750,
+				[
+					[
+						"Change White Alpha",
+						"0.0",
+						"9.0"
+					]
+				]
+			],
+			[
+				192833.333333334,
+				[
+					[
+						"Play Video",
+						"2",
+						""
+					],
+					[
+						"Change Game Alpha",
+						"0.0",
+						"0.0001"
+					],
+					[
+						"Change HUD Alpha",
+						"0.0",
+						"0.0001"
+					]
+				]
+			]
+		]
+	}
+}

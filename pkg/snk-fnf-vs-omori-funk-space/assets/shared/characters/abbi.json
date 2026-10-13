@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "A-Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				116,
+				-34
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "C-Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-170
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "E-Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				28,
+				50
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "D-Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "B-Right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/omoriboy/Abbi_Assets",
+	"position": [
+		30,
+		-10
+	],
+	"healthicon": "abbi",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		120,
+		-20
+	],
+	"sing_duration": 6.1,
+	"scale": 0.77
+}

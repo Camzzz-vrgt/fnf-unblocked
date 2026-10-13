@@ -1,0 +1,102 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-89
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-193,
+				-128
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "lef",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				-238
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-76,
+				-18
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-139,
+				-92
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-93
+			],
+			"anim": "confused",
+			"fps": 24,
+			"name": "confused",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-33,
+				-93
+			],
+			"indices": [
+				71
+			],
+			"fps": 1,
+			"anim": "confused-loop",
+			"loop": true,
+			"name": "confused"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/yarlownasu",
+	"position": [
+		-230,
+		200
+	],
+	"healthicon": "yarlowicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		253,
+		204,
+		55
+	],
+	"camera_position": [
+		-40,
+		170
+	],
+	"sing_duration": 6.1,
+	"scale": 0
+}

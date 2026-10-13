@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Calamardo_Suicida idle"
+		},
+		{
+			"offsets": [
+				328,
+				-12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Calamardo_Suicida front facing red mist left"
+		},
+		{
+			"offsets": [
+				169,
+				-18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Calamardo_Suicida front facing red mist down"
+		},
+		{
+			"offsets": [
+				220,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Calamardo_Suicida front facing red mist up"
+		},
+		{
+			"offsets": [
+				78,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Calamardo_Suicida front facing red mist right"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Calamardo_Suicida",
+	"position": [
+		670,
+		120
+	],
+	"healthicon": "calamardo",
+	"flip_x": false,
+	"healthbar_colors": [
+		180,
+		182,
+		215
+	],
+	"camera_position": [
+		-585,
+		-160
+	],
+	"sing_duration": 9.59999999999999,
+	"scale": 2,
+	"_editor_isPlayer": false
+}

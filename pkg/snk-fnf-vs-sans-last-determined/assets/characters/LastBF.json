@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				26
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BFIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BFDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				52
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BFUp",
+			"indices": []
+		},
+		{
+			"offsets": [
+				51,
+				12
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				3,
+				44
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				-41,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BFRight"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				41,
+				26
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BFLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				104,
+				31
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF NOTE LEFT MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				17
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF NOTE RIGHT MISS",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/LDBF",
+	"position": [
+		-170,
+		265
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		135,
+		255,
+		155
+	],
+	"camera_position": [
+		250,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}
