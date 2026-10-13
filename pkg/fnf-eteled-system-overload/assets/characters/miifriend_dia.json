@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				131,
+				76
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "miifriend idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				114,
+				54
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "miifriend left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				10
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "miifriend down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				48,
+				94
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "miifriend up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				49
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "miifriend right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				236,
+				64
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "miifriend miss left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				70
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "miifriend miss up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				18
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "miifriend miss down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				81
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "miifriend miss right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				450,
+				-100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "miifriend first death"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				450,
+				-100
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "miifriend death loop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				450,
+				-100
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "miifriend death confirm",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/miifriend_dia",
+	"position": [
+		20,
+		210
+	],
+	"healthicon": "miifriend",
+	"flip_x": true,
+	"healthbar_colors": [
+		75,
+		182,
+		223
+	],
+	"camera_position": [
+		310,
+		-60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

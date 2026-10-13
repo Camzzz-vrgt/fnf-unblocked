@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="Falling nugget.png" width="1920" height="1080">
+  <SubTexture name="idle0001" x="0" y="0"  width="662" height="900" frameX="-631" frameY="-69" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="idle0003" x="662" y="0"  width="665" height="902" frameX="-628" frameY="-67" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="idle0002" x="0" y="0"  width="662" height="900" frameX="-631" frameY="-69" frameWidth="1920" frameHeight="1080"/>
+  <SubTexture name="idle0004" x="662" y="0"  width="665" height="902" frameX="-628" frameY="-67" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>

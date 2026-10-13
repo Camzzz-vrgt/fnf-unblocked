@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bingoskugidle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				0
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "bingoskug6",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "bingoskug5",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bingoskug3",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bingoskug1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bingoskug2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				40,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bingoskug4",
+			"indices": []
+		},
+		{
+			"offsets": [
+				40,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "bingoskug7"
+		},
+		{
+			"offsets": [
+				-40,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "bingoskug8"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bingoskuggin",
+	"position": [
+		10,
+		30
+	],
+	"healthicon": "bingo",
+	"flip_x": true,
+	"healthbar_colors": [
+		227,
+		121,
+		59
+	],
+	"camera_position": [
+		-135,
+		30
+	],
+	"sing_duration": 7,
+	"scale": 0.85
+}

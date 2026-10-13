@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "Eteled_Calm Idle"
+		},
+		{
+			"offsets": [
+				-52,
+				-1
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Eteled_Calm down sing"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Eteled_Calm up sing"
+		},
+		{
+			"offsets": [
+				-70,
+				1
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Eteled_Calm right sing"
+		},
+		{
+			"offsets": [
+				29,
+				1
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Eteled_Calm left sing"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Eteled_Calm",
+	"position": [
+		-330,
+		-700
+	],
+	"healthicon": "eteleddop",
+	"flip_x": false,
+	"healthbar_colors": [
+		140,
+		140,
+		140
+	],
+	"camera_position": [
+		90,
+		600
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

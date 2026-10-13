@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF_Hasshaku idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF_Hasshaku left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BF_Hasshaku down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BF_Hasshaku up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF_Hasshaku right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF_Hasshaku Miss_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BF_Hasshaku Miss_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF_Hasshaku Miss_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [375, 510],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF_Hasshaku Miss_left",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/BF_Hasshaku1",
+	"position": [240, 650],
+	"healthicon": "BF_Hasshaku",
+	"flip_x": true,
+	"healthbar_colors": [109, 86, 155],
+	"camera_position": [-400, -530],
+	"sing_duration": 4,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

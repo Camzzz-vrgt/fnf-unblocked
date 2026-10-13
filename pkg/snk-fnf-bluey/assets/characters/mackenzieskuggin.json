@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "mackenzieskug3",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "mackenzieskug1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "mackenzieskug4",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "mackenzieskug2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "mackenzieskugidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				0
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "mackenzieskug5",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "mackenzieskug6",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "mackenzieskug7"
+		},
+		{
+			"offsets": [
+				-50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "mackenzieskug8"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mackenzieskuggin",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "mackenzie",
+	"flip_x": true,
+	"healthbar_colors": [
+		33,
+		34,
+		33
+	],
+	"camera_position": [
+		-100,
+		-30
+	],
+	"sing_duration": 7,
+	"scale": 1
+}

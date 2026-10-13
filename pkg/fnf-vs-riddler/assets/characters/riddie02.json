@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-40
+			],
+			"anim": "singLEFT-loop",
+			"fps": 15,
+			"name": "riddie01 left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-70,
+				-40
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 15,
+			"name": "riddie01 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-40
+			],
+			"anim": "singUP-loop",
+			"fps": 15,
+			"name": "riddie01 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-40
+			],
+			"anim": "singLEFT",
+			"fps": 15,
+			"name": "riddie02 left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-30,
+				-40
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "riddie02 down"
+		},
+		{
+			"offsets": [
+				-30,
+				-40
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUP",
+			"indices": [],
+			"name": "riddie02 up"
+		},
+		{
+			"offsets": [
+				-30,
+				-40
+			],
+			"loop": false,
+			"fps": 8,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "riddie02 idle"
+		},
+		{
+			"offsets": [
+				-70,
+				-40
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "riddie02 right"
+		},
+		{
+			"offsets": [
+				-30,
+				-40
+			],
+			"loop": false,
+			"fps": 7,
+			"anim": "idle",
+			"indices": [],
+			"name": "riddie02 idle"
+		},
+		{
+			"offsets": [
+				-30,
+				-40
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "THINK",
+			"indices": [],
+			"name": "riddie02 think"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-40
+			],
+			"anim": "HEY",
+			"fps": 8,
+			"name": "riddie02 hey",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/riddie02",
+	"position": [
+		80,
+		20
+	],
+	"healthicon": "riddie",
+	"flip_x": false,
+	"healthbar_colors": [
+		148,
+		201,
+		132
+	],
+	"camera_position": [
+		100,
+		150
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

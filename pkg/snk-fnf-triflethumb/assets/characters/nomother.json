@@ -1,0 +1,36 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				603,
+				405
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/mother",
+	"position": [
+		-9000,
+		100
+	],
+	"healthicon": "mother-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		212,
+		144
+	],
+	"camera_position": [
+		-250,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.7,
+	"_editor_isPlayer": false
+}

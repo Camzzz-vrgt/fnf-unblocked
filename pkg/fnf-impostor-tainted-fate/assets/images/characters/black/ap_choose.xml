@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="blackapchoose.png">
+    <SubTexture name="pre_flower0000" x="0" y="0" width="283" height="471" frameWidth="283" frameHeight="474" frameX="-50" frameY="416" />
+    <SubTexture name="pre_flower0001" x="284" y="0" width="271" height="474" frameWidth="283" frameHeight="474" frameX="-58" frameY="419" />
+    <SubTexture name="pre_flower0002" x="556" y="0" width="259" height="473" frameWidth="283" frameHeight="474" frameX="-67" frameY="418" />
+    <SubTexture name="pre_flower0003" x="816" y="0" width="259" height="472" frameWidth="283" frameHeight="474" frameX="-68" frameY="417" />
+    <SubTexture name="flower0000" x="1076" y="0" width="259" height="472" frameWidth="280" frameHeight="472" frameX="-70" frameY="415" />
+    <SubTexture name="flower0001" x="1336" y="0" width="276" height="469" frameWidth="280" frameHeight="472" frameX="-62" frameY="412" />
+    <SubTexture name="flower0002" x="1613" y="0" width="279" height="469" frameWidth="280" frameHeight="472" frameX="-57" frameY="412" />
+    <SubTexture name="flower0003" x="0" y="475" width="280" height="471" frameWidth="280" frameHeight="472" frameX="-56" frameY="414" />
+    <SubTexture name="flower0004" x="281" y="475" width="280" height="471" frameWidth="280" frameHeight="472" frameX="-56" frameY="414" />
+    <SubTexture name="flower0005" x="562" y="475" width="280" height="471" frameWidth="280" frameHeight="472" frameX="-56" frameY="414" />
+    <SubTexture name="flower0006" x="843" y="475" width="280" height="471" frameWidth="280" frameHeight="472" frameX="-56" frameY="414" />
+    <SubTexture name="pre_denied0000" x="1124" y="475" width="280" height="471" frameWidth="280" frameHeight="471" frameX="-56" frameY="413" />
+    <SubTexture name="denied0000" x="1405" y="475" width="357" height="344" frameWidth="474" frameHeight="344" frameX="245" frameY="177" />
+    <SubTexture name="denied0001" x="0" y="947" width="376" height="309" frameWidth="474" frameHeight="344" frameX="271" frameY="152" />
+    <SubTexture name="denied0002" x="377" y="947" width="438" height="314" frameWidth="474" frameHeight="344" frameX="344" frameY="155" />
+    <SubTexture name="denied0003" x="816" y="947" width="474" height="297" frameWidth="474" frameHeight="344" frameX="304" frameY="140" />
+</TextureAtlas>

@@ -1,0 +1,115 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				749,
+				329
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "what",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				750,
+				330
+			],
+			"anim": "singUP-alt-loop",
+			"fps": 24,
+			"name": "what",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/nugget",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "nugget-icon",
+	"flip_x": true,
+	"healthbar_colors": [
+		221,
+		155,
+		28
+	],
+	"camera_position": [
+		320,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.5,
+	"_editor_isPlayer": true
+}

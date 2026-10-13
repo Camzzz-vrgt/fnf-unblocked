@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		0
+	],
+	"scale": 0.97,
+	"no_antialiasing": false,
+	"image": "characters/chica/chica_normal, characters/chica/chica_pot, characters/chica/chica_anims",
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 8,
+	"healthicon": "face",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "chica still idle"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-instrument",
+			"loop": false,
+			"name": "chica instrument idle"
+		},
+		{
+			"offsets": [
+				5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "walk",
+			"loop": true,
+			"name": "chica walk"
+		},
+		{
+			"offsets": [
+				11,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "walk-instrument",
+			"loop": true,
+			"name": "chica instrument walk"
+		},
+		{
+			"offsets": [
+				-20,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singPOT",
+			"loop": false,
+			"name": "chica pot hit"
+		}
+	]
+}

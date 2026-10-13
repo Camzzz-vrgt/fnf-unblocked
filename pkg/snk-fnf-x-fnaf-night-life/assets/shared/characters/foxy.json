@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		0
+	],
+	"scale": 2,
+	"no_antialiasing": false,
+	"image": "characters/foxy/foxyHead",
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 8,
+	"healthicon": "face",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "foxy head idle"
+		},
+		{
+			"offsets": [
+				-8,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "foxy right"
+		},
+		{
+			"offsets": [
+				-10,
+				-6
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "foxy down"
+		},
+		{
+			"offsets": [
+				10,
+				12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "foxy up"
+		},
+		{
+			"offsets": [
+				9,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "foxy left"
+		}
+	]
+}

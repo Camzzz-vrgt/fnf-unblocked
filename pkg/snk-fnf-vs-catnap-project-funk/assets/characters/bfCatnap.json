@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1023,
+				140
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				1019,
+				147
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				1021,
+				139
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				999,
+				140
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				1014,
+				151
+			],
+			"loop": false,
+			"fps": 10,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Boyfriend_Catnap",
+	"position": [
+		0,
+		20
+	],
+	"healthicon": "bfcatnap",
+	"flip_x": true,
+	"healthbar_colors": [
+		55,
+		75,
+		80
+	],
+	"camera_position": [
+		440,
+		-650
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

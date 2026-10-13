@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-1, -1],
+			"anim": "idle",
+			"fps": 24,
+			"name": "GF_Hasshaku2 idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -1],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "GF_Hasshaku2 left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -1],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "GF_Hasshaku2 down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -1],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "GF_Hasshaku2 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -1],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "GF_Hasshaku2 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [484, 526],
+			"anim": "transform",
+			"fps": 24,
+			"name": "GF_Hasshaku2 transform",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/GF_Hasshaku2",
+	"position": [505, 680],
+	"healthicon": "GF_Hasshaku2",
+	"flip_x": false,
+	"healthbar_colors": [92, 53, 116],
+	"camera_position": [-1050, -600],
+	"sing_duration": 6.1,
+	"scale": 2,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,45 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		0
+	],
+	"scale": 1,
+	"no_antialiasing": false,
+	"image": "characters/guard/guardSneak",
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 8,
+	"healthicon": "face",
+	"flip_x": true,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sneak-left",
+			"loop": true,
+			"name": "guard sneak left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "sneak-right",
+			"loop": true,
+			"name": "guard sneak right"
+		}
+	]
+}

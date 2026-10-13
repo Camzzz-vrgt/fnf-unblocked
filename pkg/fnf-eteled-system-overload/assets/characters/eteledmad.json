@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "Eteled_crazy Idle"
+		},
+		{
+			"offsets": [
+				-2,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Eteled_crazy down sing"
+		},
+		{
+			"offsets": [
+				1,
+				1
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Eteled_crazy up sing"
+		},
+		{
+			"offsets": [
+				-3,
+				1
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Eteled_crazy right sing"
+		},
+		{
+			"offsets": [
+				62,
+				4
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Eteled_crazy left sing"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				1
+			],
+			"anim": "singDOWN-alt",
+			"fps": 12,
+			"name": "Eteled_crazy down scream",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				60,
+				2
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 12,
+			"name": "Eteled_crazy right scream",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 12,
+			"name": "Eteled_crazy up scream",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				30,
+				1
+			],
+			"anim": "singLEFT-alt",
+			"fps": 12,
+			"name": "Eteled_crazy left scream",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Eteled_Mad",
+	"position": [
+		-330,
+		-720
+	],
+	"healthicon": "eteleddia",
+	"flip_x": false,
+	"healthbar_colors": [
+		140,
+		140,
+		140
+	],
+	"camera_position": [
+		110,
+		600
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

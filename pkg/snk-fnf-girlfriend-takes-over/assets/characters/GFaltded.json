@@ -1,0 +1,57 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				4
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "retry gf",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "skillissue"
+		},
+		{
+			"offsets": [
+				-2,
+				-1
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "ded idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GFaltded",
+	"position": [
+		-340,
+		-20
+	],
+	"healthicon": "gfalt",
+	"flip_x": true,
+	"healthbar_colors": [
+		212,
+		22,
+		55
+	],
+	"camera_position": [
+		-130,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

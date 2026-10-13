@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				55,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Chomper down"
+		},
+		{
+			"offsets": [
+				148,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Chomper left"
+		},
+		{
+			"offsets": [
+				114,
+				95
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Chomper rigth"
+		},
+		{
+			"offsets": [
+				94,
+				178
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Chomper up"
+		},
+		{
+			"offsets": [
+				65,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "Chomper attack"
+		},
+		{
+			"offsets": [
+				70,
+				50
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Chomper Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Chomper",
+	"position": [
+		-30,
+		230
+	],
+	"healthicon": "chomper",
+	"flip_x": false,
+	"healthbar_colors": [
+		86,
+		65,
+		112
+	],
+	"camera_position": [
+		-70,
+		-30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

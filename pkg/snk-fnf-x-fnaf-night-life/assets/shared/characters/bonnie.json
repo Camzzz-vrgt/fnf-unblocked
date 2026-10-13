@@ -1,0 +1,100 @@
+{
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"position": [
+		0,
+		0
+	],
+	"scale": 0.84,
+	"no_antialiasing": false,
+	"image": "characters/bonnie/bonnie_normal, characters/bonnie/bonnie_anims, characters/bonnie/bonnie_guitar",
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 8,
+	"healthicon": "face",
+	"flip_x": false,
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "bonnie still idle"
+		},
+		{
+			"offsets": [
+				60,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle-instrument",
+			"loop": false,
+			"name": "bonnie instrument idle"
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "walk",
+			"loop": true,
+			"name": "bonnie walk"
+		},
+		{
+			"offsets": [
+				70,
+				9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "walk-instrument",
+			"loop": true,
+			"name": "bonnie instrument walk"
+		},
+		{
+			"offsets": [
+				62,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "strum1",
+			"loop": false,
+			"name": "bonnie strum 1"
+		},
+		{
+			"offsets": [
+				62,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "strum2",
+			"loop": false,
+			"name": "bonnie strum 2"
+		},
+		{
+			"offsets": [
+				62,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "strum3",
+			"loop": false,
+			"name": "bonnie strum 3"
+		}
+	]
+}

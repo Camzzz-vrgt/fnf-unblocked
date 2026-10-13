@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				3,
+				1
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Bananaled down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Bananaled up"
+		},
+		{
+			"offsets": [
+				5,
+				1
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Bananaled right"
+		},
+		{
+			"offsets": [
+				-1,
+				1
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Bananaled left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				1,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "Bananaled idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bananaled",
+	"position": [
+		-330,
+		-700
+	],
+	"healthicon": "banana",
+	"flip_x": false,
+	"healthbar_colors": [
+		188,
+		141,
+		17
+	],
+	"camera_position": [
+		100,
+		450
+	],
+	"sing_duration": 6.1,
+	"scale": 0.6
+}

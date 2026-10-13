@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singLEFT-loop",
+			"fps": 15,
+			"name": "riddie01 left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 15,
+			"name": "riddie01 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singUP-loop",
+			"fps": 15,
+			"name": "riddie01 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 15,
+			"name": "riddie03 down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singUP",
+			"fps": 15,
+			"name": "riddie03 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singRIGHT",
+			"fps": 15,
+			"name": "riddie03 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "singLEFT",
+			"fps": 15,
+			"name": "riddie03 left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-10,
+				-80
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "idle",
+			"indices": [],
+			"name": "riddie03 idle"
+		},
+		{
+			"offsets": [
+				-10,
+				-80
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "riddie03 idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				-80
+			],
+			"anim": "set",
+			"fps": 9,
+			"name": "riddie03 set",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/riddie03",
+	"position": [
+		-100,
+		-120
+	],
+	"healthicon": "riddie",
+	"flip_x": false,
+	"healthbar_colors": [
+		148,
+		201,
+		132
+	],
+	"camera_position": [
+		90,
+		160
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

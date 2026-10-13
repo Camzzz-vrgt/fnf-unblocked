@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "AINeutral0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				63,
+				-13
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "AILeft0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-40
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "AIDown0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "AIUp0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-31,
+				-17
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "AIRight0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ai-hoshino",
+	"position": [
+		-110,
+		-160
+	],
+	"healthicon": "ai",
+	"flip_x": true,
+	"healthbar_colors": [
+		72,
+		37,
+		99
+	],
+	"camera_position": [
+		-70,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

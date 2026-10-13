@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [0, -10],
+			"anim": "idle",
+			"fps": 18,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [84, 25],
+			"anim": "hey",
+			"fps": 18,
+			"name": "hey",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [51, -18],
+			"anim": "singDOWNmiss",
+			"fps": 18,
+			"name": "dmown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [14, 9],
+			"anim": "singRIGHTmiss",
+			"fps": 18,
+			"name": "rmight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [79, 97],
+			"anim": "singUPmiss",
+			"fps": 18,
+			"name": "ump",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [98, -17],
+			"anim": "singLEFTmiss",
+			"fps": 18,
+			"name": "lmeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [120, -2],
+			"anim": "gameover",
+			"fps": 18,
+			"name": "gameover",
+			"indices": [0, 0]
+		},
+		{
+			"offsets": [31, -28],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [14, -11],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [39, 77],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [68, -17],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/cutiebf",
+	"position": [130, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [-70, -10],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

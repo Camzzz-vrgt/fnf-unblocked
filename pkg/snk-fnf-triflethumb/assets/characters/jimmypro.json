@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				342,
+				771
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				349,
+				772
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				442,
+				759
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				365,
+				777
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up instance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				330,
+				770
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle instance",
+			"indices": [
+				10001,
+				10002,
+				10003,
+				10004,
+				10005,
+				10006,
+				10007,
+				10008,
+				10009,
+				10010,
+				10011,
+				10012,
+				10013,
+				10014,
+				10015,
+				10016,
+				10017,
+				10018,
+				10019,
+				10020,
+				10021,
+				10022
+			]
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/jimmy classic",
+	"position": [
+		-100,
+		-30
+	],
+	"healthicon": "jimmy-icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		85,
+		210,
+		238
+	],
+	"camera_position": [
+		-100,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 0.5,
+	"_editor_isPlayer": false
+}

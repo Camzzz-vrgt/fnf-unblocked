@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singDOWN",
+			"fps": 15,
+			"name": "riddie01 down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singUP",
+			"fps": 15,
+			"name": "riddie01 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singRIGHT",
+			"fps": 15,
+			"name": "riddie01 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singLEFT-loop",
+			"fps": 15,
+			"name": "riddie01 left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 15,
+			"name": "riddie01 right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singUP-loop",
+			"fps": 15,
+			"name": "riddie01 up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "singLEFT",
+			"fps": 15,
+			"name": "riddie01 left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "idle-loop",
+			"fps": 7,
+			"name": "riddie01 idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-80
+			],
+			"anim": "idle",
+			"fps": 7,
+			"name": "riddie01 idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/riddie01",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "riddie",
+	"flip_x": false,
+	"healthbar_colors": [
+		148,
+		201,
+		132
+	],
+	"camera_position": [
+		60,
+		180
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

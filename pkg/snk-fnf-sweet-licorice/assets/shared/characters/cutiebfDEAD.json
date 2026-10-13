@@ -1,0 +1,119 @@
+{
+	"animations": [
+		{
+			"offsets": [51, -33],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [4, -1],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [89, 127],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [84, 25],
+			"loop": false,
+			"fps": 18,
+			"anim": "hey",
+			"indices": [],
+			"name": "hey"
+		},
+		{
+			"offsets": [30, -15],
+			"loop": false,
+			"fps": 18,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "dmown"
+		},
+		{
+			"offsets": [10, 21],
+			"loop": false,
+			"fps": 18,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "rmight"
+		},
+		{
+			"offsets": [110, 140],
+			"loop": false,
+			"fps": 18,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "ump"
+		},
+		{
+			"offsets": [110, -10],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "lmeft"
+		},
+		{
+			"offsets": [98, -17],
+			"loop": false,
+			"fps": 18,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [120, -2],
+			"loop": false,
+			"fps": 18,
+			"anim": "gameover",
+			"indices": [],
+			"name": "gameover"
+		},
+		{
+			"loop": true,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 18,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [131, -2],
+			"loop": false,
+			"fps": 18,
+			"anim": "firstDeath",
+			"indices": [0],
+			"name": "gameover instance 1"
+		},
+		{
+			"offsets": [130, -20],
+			"loop": false,
+			"fps": 18,
+			"anim": "deathLoop",
+			"indices": [2],
+			"name": "gameover instance 1"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/cutiebf",
+	"position": [130, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [410, 0],
+	"sing_duration": 4,
+	"scale": 1.5,
+	"_editor_isPlayer": true
+}

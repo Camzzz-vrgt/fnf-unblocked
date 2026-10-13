@@ -1,0 +1,63 @@
+{
+	"position": [
+		100,
+		-90
+	],
+	"dialogue_pos": "left",
+	"scale": 1.4,
+	"image": "riddie_dialogue",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				-2
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "riddie_dialogue talk0005",
+			"loop_name": "riddie_dialogue talk"
+		},
+		{
+			"loop_name": "riddie_dialogue think",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "riddie_dialogue think0000",
+			"anim": "think",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "riddie_dialogue sorry",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "riddie_dialogue sorry0000",
+			"anim": "sorry",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "riddie_dialogue idle",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "riddie_dialogue idle0000",
+			"anim": "idle",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

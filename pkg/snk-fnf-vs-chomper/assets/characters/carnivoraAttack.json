@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				55,
+				-60
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "Chomper attack",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				70,
+				50
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Chomper Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/attack chomper",
+	"position": [
+		-30,
+		230
+	],
+	"healthicon": "chomper",
+	"flip_x": false,
+	"healthbar_colors": [
+		86,
+		65,
+		112
+	],
+	"camera_position": [
+		-70,
+		-30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

@@ -1,0 +1,102 @@
+{
+	"position": [
+		0,
+		-90
+	],
+	"dialogue_pos": "left",
+	"scale": 1.15,
+	"image": "redd",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "normal",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "normal",
+			"idle_name": "normal0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "happy",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "happy",
+			"idle_name": "happy0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "fun",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "fun",
+			"idle_name": "fun0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "sad",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "sad",
+			"idle_name": "sad0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "angry",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "angry",
+			"idle_name": "angry0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "ugh",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "ugh",
+			"idle_name": "ugh0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "bad",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "bad",
+			"idle_name": "bad0000"
+		}
+	]
+}

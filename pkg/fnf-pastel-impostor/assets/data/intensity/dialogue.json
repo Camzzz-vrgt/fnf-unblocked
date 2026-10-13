@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "what",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "happy",
+			"text": "hi",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "redd"
+		},
+		{
+			"expression": "talk",
+			"text": "who",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "normal",
+			"text": "I'm red",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "redd"
+		},
+		{
+			"expression": "pissed",
+			"text": "You look coral, not red.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "angry",
+			"text": "Not coral! Shit, my color is Pastel red",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "redd"
+		},
+		{
+			"expression": "confused",
+			"text": "I was wondering, why do you have a mouth?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "happy",
+			"text": "I'm an engineer. Engineers have mouths to feed:)",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "redd"
+		},
+		{
+			"expression": "demon",
+			"text": "Don't lie! Engineers have no mouths to feed!",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf"
+		},
+		{
+			"expression": "ugh",
+			"text": "(be flustered)",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0,
+			"portrait": "redd"
+		},
+		{
+			"expression": "talk",
+			"text": "Well, okay, how about a rap battle anyway?",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "fun",
+			"text": "sure,sure",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "redd"
+		}
+	]
+}

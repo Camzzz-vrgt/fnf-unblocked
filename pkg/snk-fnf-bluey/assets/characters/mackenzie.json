@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "_Mackenzie Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-17
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "_Mackenzie Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				62
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "_Mackenzie Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				10,
+				-8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "_Mackenzie Left"
+		},
+		{
+			"offsets": [
+				-6,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "_Mackenzie Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mackenzie",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "mackenzie",
+	"flip_x": false,
+	"healthbar_colors": [
+		33,
+		34,
+		33
+	],
+	"camera_position": [
+		50,
+		0
+	],
+	"sing_duration": 12,
+	"scale": 1
+}

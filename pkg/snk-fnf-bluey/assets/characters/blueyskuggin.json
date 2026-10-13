@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "blueyskug3"
+		},
+		{
+			"offsets": [
+				-50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "blueyskug1"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "blueyskug4"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "blueyskug2"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "blueyskugidle"
+		},
+		{
+			"offsets": [
+				-50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "blueyskug5"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "blueyskug6"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				0
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "blueyskug7",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "blueyskug8",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/blueyskuggin",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bluey",
+	"flip_x": true,
+	"healthbar_colors": [
+		133,
+		199,
+		250
+	],
+	"camera_position": [
+		-100,
+		-30
+	],
+	"sing_duration": 7,
+	"scale": 1
+}

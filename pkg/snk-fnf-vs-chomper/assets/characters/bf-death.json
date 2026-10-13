@@ -1,0 +1,34 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				766,
+				140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf-death",
+	"position": [
+		-1740,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-610,
+		-270
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

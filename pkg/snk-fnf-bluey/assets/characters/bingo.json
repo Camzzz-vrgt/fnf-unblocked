@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "_Bingo Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-8
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "_Bingo Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				65
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "_Bingo Up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				5,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "_Bingo Left"
+		},
+		{
+			"offsets": [
+				-6,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "_Bingo Right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bingo",
+	"position": [
+		0,
+		370
+	],
+	"healthicon": "bingo",
+	"flip_x": false,
+	"healthbar_colors": [
+		227,
+		121,
+		59
+	],
+	"camera_position": [
+		50,
+		-10
+	],
+	"sing_duration": 12,
+	"scale": 1
+}
