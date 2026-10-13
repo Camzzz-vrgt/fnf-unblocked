@@ -1,0 +1,23 @@
+{
+	"animations": [
+		{
+			"offsets": [784, 343],
+			"indices": [],
+			"fps": 24,
+			"anim": "ShotgunDeath",
+			"loop": false,
+			"name": "KILLING1"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/deaths/shotgundeath1",
+	"position": [0, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [510, -520],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

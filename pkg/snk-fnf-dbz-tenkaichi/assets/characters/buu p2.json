@@ -1,0 +1,179 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				1492,
+				368
+			],
+			"anim": "landing",
+			"fps": 24,
+			"name": "buu landing",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "alt-buu idle"
+		},
+		{
+			"offsets": [
+				151,
+				82
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "alt-buu up"
+		},
+		{
+			"offsets": [
+				16,
+				-78
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "alt-buu down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "alt-buu left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-22,
+				-69
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "alt-buu right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-73,
+				50
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "b buu up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-480,
+				100
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "b buu idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-372,
+				120
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "b buu down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				80
+			],
+			"anim": "land2",
+			"fps": 24,
+			"name": "buu land",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-320,
+				130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "b buu left"
+		},
+		{
+			"offsets": [
+				-20,
+				-100
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "b buu right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				88,
+				26
+			],
+			"anim": "melt",
+			"fps": 24,
+			"name": "buu melt",
+			"indices": []
+		},
+		{
+			"offsets": [
+				3,
+				-599
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "still",
+			"loop": false,
+			"name": "buu still melt"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/buu land",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

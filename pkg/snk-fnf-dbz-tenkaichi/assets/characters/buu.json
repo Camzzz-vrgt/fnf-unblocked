@@ -1,0 +1,146 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				1489,
+				326
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "buu left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1478,
+				305
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "buu down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1483,
+				363
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "buu up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				1480,
+				330
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "buu idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "alt-buu idle"
+		},
+		{
+			"offsets": [
+				1492,
+				368
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "landing",
+			"indices": [],
+			"name": "buu landing"
+		},
+		{
+			"offsets": [
+				1460,
+				329
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "buu right"
+		},
+		{
+			"offsets": [
+				1501,
+				379
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Cbuu hurt"
+		},
+		{
+			"offsets": [
+				1484,
+				492
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Cbuu left"
+		},
+		{
+			"offsets": [
+				1478,
+				381
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Cbuu right"
+		},
+		{
+			"offsets": [
+				1501,
+				379
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Cbuu hurt"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/buu",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

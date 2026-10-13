@@ -1,0 +1,24 @@
+{
+	"position": [
+		110,
+		20
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "starfire",
+	"animations": [
+		{
+			"loop_name": "StarfireWorried",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "StarfireWorried0004",
+			"anim": "worried",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

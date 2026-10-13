@@ -1,0 +1,37 @@
+{
+	"position": [
+		90,
+		10
+	],
+	"dialogue_pos": "left",
+	"scale": 1.4,
+	"image": "cyborg",
+	"animations": [
+		{
+			"loop_name": "CyborgHuh",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "CyborgHuh0004",
+			"anim": "huh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "CyborgHa",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "CyborgHa0004",
+			"anim": "smiling",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

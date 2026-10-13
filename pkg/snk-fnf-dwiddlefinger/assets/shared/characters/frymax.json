@@ -1,0 +1,133 @@
+{
+	"healthbar_colors": [
+		251,
+		139,
+		0
+	],
+	"position": [
+		-68,
+		-100
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		0,
+		40
+	],
+	"image": "characters/frymax",
+	"sing_duration": 4,
+	"healthicon": "max",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "max-idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				-5
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "max_left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				4
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "max_down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				35,
+				42
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "max_up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				22
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "max_right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "jawmax_i"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				10
+			],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "jawmax_l"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-45
+			],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "jawmax_d"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				105,
+				40
+			],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "jawmax_u"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				3
+			],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "jawmax_right"
+		}
+	]
+}

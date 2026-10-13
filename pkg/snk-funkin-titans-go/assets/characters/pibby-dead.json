@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-151,
+				-54
+			],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "retry confirm"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-75,
+				3
+			],
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "funny"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "heartbreak"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BOYFRIEND_NUBERT_GAMEOVER",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		123,
+		214,
+		246
+	],
+	"camera_position": [
+		50,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

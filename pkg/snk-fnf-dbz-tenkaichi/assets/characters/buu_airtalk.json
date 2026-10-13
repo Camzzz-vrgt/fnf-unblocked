@@ -1,0 +1,157 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1489,
+				326
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "buu left"
+		},
+		{
+			"offsets": [
+				1478,
+				305
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "buu down"
+		},
+		{
+			"offsets": [
+				1483,
+				363
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "buu up"
+		},
+		{
+			"offsets": [
+				1480,
+				330
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "buu idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				110,
+				0
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "alt-buu left",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "alt-buu idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				16,
+				-78
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "alt-buu down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				151,
+				82
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "alt-buu up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-22,
+				-69
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "alt-buu right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1492,
+				368
+			],
+			"anim": "landing",
+			"fps": 24,
+			"name": "buu landing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1460,
+				329
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "buu right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1480,
+				340
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "intro",
+			"loop": false,
+			"name": "buu intro"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/buu_airtalk",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

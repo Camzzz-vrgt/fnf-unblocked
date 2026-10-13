@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [296, 335],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [364, 339],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [342, 298],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "downpsoe",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [210, 459],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "uppose",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [209, 307],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [429, 329],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MISSleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [297, 292],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "downmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [206, 432],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "upmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [208, 300],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Rightmiss",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/HorrorSprunkiBF",
+	"position": [0, 350],
+	"healthicon": "bfScary",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [190, -250],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

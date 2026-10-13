@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [256, -194],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [172, -41],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [345, 48],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [112, -36],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [324, 181],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "uP"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/SprunkiFNF",
+	"position": [155, -62],
+	"healthicon": "wendigo",
+	"flip_x": false,
+	"healthbar_colors": [128, 128, 128],
+	"camera_position": [-200, 180],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

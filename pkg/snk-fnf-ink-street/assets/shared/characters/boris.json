@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [127, 44],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [-142, 66],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [43, -88],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [161, 286],
+			"loop": false,
+			"fps": 24,
+			"anim": "come back",
+			"indices": [],
+			"name": "come back"
+		},
+		{
+			"offsets": [169, 909],
+			"loop": false,
+			"fps": 24,
+			"anim": "gone",
+			"indices": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			"name": "come back"
+		},
+		{
+			"loop": false,
+			"offsets": [278, 358],
+			"anim": "axe",
+			"fps": 24,
+			"name": "axe",
+			"indices": []
+		},
+		{
+			"offsets": [242, -296],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/boris",
+	"position": [-70, -270],
+	"healthicon": "boris",
+	"flip_x": true,
+	"healthbar_colors": [179, 160, 128],
+	"camera_position": [-110, -70],
+	"sing_duration": 3.4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "GameOver"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-121,
+				-108
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Loop",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-62,
+				-51
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "Retry"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BeastBoyTVGameover",
+	"position": [
+		-330,
+		-410
+	],
+	"healthicon": "beastboy",
+	"flip_x": true,
+	"healthbar_colors": [
+		143,
+		199,
+		67
+	],
+	"camera_position": [
+		160,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				69,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				44,
+				-22
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				6,
+				15
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				1,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				171,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "miss1"
+		},
+		{
+			"offsets": [
+				80,
+				-50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "miss2"
+		},
+		{
+			"offsets": [
+				90,
+				60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "miss3"
+		},
+		{
+			"offsets": [
+				50,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "miss4"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BeastBoyTV",
+	"position": [
+		-30,
+		-10
+	],
+	"healthicon": "beastboy",
+	"flip_x": true,
+	"healthbar_colors": [
+		143,
+		199,
+		67
+	],
+	"camera_position": [
+		160,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

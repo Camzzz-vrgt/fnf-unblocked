@@ -1,0 +1,50 @@
+{
+	"storyName": "Titans Tower",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "tower",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Sidekick",
+			"robin",
+			[
+				255,
+				215,
+				60
+			]
+		],
+		[
+			"slacking-off",
+			"beastboy",
+			[
+				100,
+				215,
+				60
+			]
+		],
+		[
+			"bossed",
+			"mid",
+			[
+				255,
+				0,
+				20
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "titans"
+}

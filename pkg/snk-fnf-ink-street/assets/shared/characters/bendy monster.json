@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-151, -250],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "alt right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [126, -191],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "alt left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-152, 17],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "alt up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-32, -466],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "alt down",
+			"indices": []
+		},
+		{
+			"offsets": [-28, -380],
+			"indices": [],
+			"fps": 20,
+			"anim": "idle",
+			"loop": true,
+			"name": "idle"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bendy semimonster",
+	"position": [-70, -20],
+	"healthicon": "bendy monster",
+	"flip_x": true,
+	"healthbar_colors": [243, 212, 151],
+	"camera_position": [-20, 380],
+	"sing_duration": 5.99999999999999,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

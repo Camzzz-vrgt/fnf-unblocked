@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-1
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				-2
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				-14
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-84,
+				-5
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-65,
+				-26
+			],
+			"anim": "Getting Angy",
+			"fps": 24,
+			"name": "Getting Angy",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-34,
+				-14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Alt Down"
+		},
+		{
+			"offsets": [
+				-12,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Alt Up"
+		},
+		{
+			"offsets": [
+				-84,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Alt Right"
+		},
+		{
+			"offsets": [
+				7,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "Alt Left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-33,
+				-1
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "Alt Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Sun_Angy_Noon_ALL",
+	"position": [
+		30,
+		240
+	],
+	"healthicon": "sun-angry",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		235,
+		111
+	],
+	"camera_position": [
+		0,
+		-60
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

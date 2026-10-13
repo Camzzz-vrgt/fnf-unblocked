@@ -1,0 +1,201 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				1533,
+				666
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "G left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1523,
+				626
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "G down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1528,
+				679
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "G up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1518,
+				647
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "G right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1507,
+				646
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "G miss"
+		},
+		{
+			"offsets": [
+				1507,
+				646
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "G miss"
+		},
+		{
+			"offsets": [
+				1507,
+				646
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "G miss"
+		},
+		{
+			"offsets": [
+				1507,
+				646
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "G miss"
+		},
+		{
+			"offsets": [
+				-30,
+				140
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "alt-G idle"
+		},
+		{
+			"offsets": [
+				1423,
+				675
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "landing",
+			"indices": [],
+			"name": "G landing"
+		},
+		{
+			"offsets": [
+				1526,
+				651
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "G idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1690,
+				684
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "CG left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1520,
+				670
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "CG right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1723,
+				1139
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "CG reflect",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1723,
+				1139
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "CG reflect",
+			"indices": []
+		},
+		{
+			"offsets": [
+				1524,
+				658
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "intro",
+			"loop": false,
+			"name": "G intro"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gohan sky",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

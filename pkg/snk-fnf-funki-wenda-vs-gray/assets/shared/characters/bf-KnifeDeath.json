@@ -1,0 +1,23 @@
+{
+	"animations": [
+		{
+			"offsets": [754, 353],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "Stabbing"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/deaths/knifedeath",
+	"position": [0, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [-200, -400],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

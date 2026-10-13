@@ -1,0 +1,190 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-30,
+				140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "alt-G idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-38,
+				98
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "alt-G down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				181
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "alt-G up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				124
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "alt-G right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				116
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "alt-G left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				410,
+				168
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "DG left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				303,
+				146
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "DG right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				479,
+				537
+			],
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "DG reflect"
+		},
+		{
+			"offsets": [
+				479,
+				537
+			],
+			"indices": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "DG reflect"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gohan_2land",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

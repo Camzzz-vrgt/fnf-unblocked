@@ -1,0 +1,113 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-30,
+				140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "alt-G idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				2394,
+				494
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "masenko",
+			"indices": [],
+			"name": "G masenko"
+		},
+		{
+			"offsets": [
+				34,
+				1021
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "leave",
+			"indices": [],
+			"name": "G leave"
+		},
+		{
+			"offsets": [
+				-38,
+				178
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "too bad",
+			"indices": [],
+			"name": "G too bad"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gohan end",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

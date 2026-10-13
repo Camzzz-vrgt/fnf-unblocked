@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		60,
+		10
+	],
+	"scale": 1.15,
+	"animations": [
+		{
+			"loop_name": "BeastSmug",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BeastSmug0004",
+			"anim": "smug",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "beastboy"
+}

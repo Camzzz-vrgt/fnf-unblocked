@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"position": [
+		-68,
+		-100
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		150,
+		40
+	],
+	"image": "characters/dwiddlemax",
+	"sing_duration": 4,
+	"healthicon": "max",
+	"flip_x": false,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "dwiddlemax2 i"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				261,
+				10
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "dwiddlemax2 l"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				99,
+				-136
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "dwiddlemax2 d"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				122
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "dwiddlemax2 u"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				68,
+				-33
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "dwiddlemax2 r"
+		}
+	]
+}

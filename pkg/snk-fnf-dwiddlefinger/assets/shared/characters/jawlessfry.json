@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		251,
+		139,
+		0
+	],
+	"position": [
+		-68,
+		-106
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		150,
+		40
+	],
+	"image": "characters/jawlessFry",
+	"sing_duration": 4,
+	"healthicon": "jawlessFry",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "jawlessmax-idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				57,
+				-12
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "jawlessmax-left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-6,
+				-3
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "jawlessmax-down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				35,
+				24
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "jawlessmax-up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-49,
+				18
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "jawlessmax-right"
+		}
+	]
+}

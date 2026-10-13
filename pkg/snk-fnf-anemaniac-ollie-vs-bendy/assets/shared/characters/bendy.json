@@ -1,0 +1,167 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [90, -40],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [10, -50],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [10, 110],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [22, -9],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		},
+		{
+			"loop": false,
+			"offsets": [90, -40],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "LALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [10, -50],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "dALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [10, 100],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "uALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [20, -10],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "rALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-10, 0],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "idleALT",
+			"indices": []
+		},
+		{
+			"offsets": [-400, 110],
+			"loop": false,
+			"fps": 12,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "uALT"
+		},
+		{
+			"offsets": [-400, -50],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [8, 9],
+			"name": "dALT"
+		},
+		{
+			"offsets": [-400, -50],
+			"loop": false,
+			"fps": 12,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "dALT"
+		},
+		{
+			"loop": false,
+			"offsets": [10, 70],
+			"anim": "cutout",
+			"fps": 24,
+			"name": "Cutout",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [10, 70],
+			"anim": "cutout-alt",
+			"fps": 24,
+			"name": "CutDARK",
+			"indices": []
+		},
+		{
+			"offsets": [90, -40],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "LALT"
+		},
+		{
+			"offsets": [10, -50],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "dALT"
+		},
+		{
+			"offsets": [10, 100],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "uALT"
+		},
+		{
+			"offsets": [20, -10],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "rALT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bendy",
+	"position": [0, 160],
+	"healthicon": "bendy",
+	"flip_x": true,
+	"healthbar_colors": [255, 255, 255],
+	"camera_position": [450, 0],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

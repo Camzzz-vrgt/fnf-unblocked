@@ -1,0 +1,31 @@
+{
+	"animations": [
+		{
+			"offsets": [-56, 26],
+			"indices": [0, 1],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Laugh"
+		},
+		{
+			"offsets": [-56, 26],
+			"indices": [],
+			"fps": 24,
+			"anim": "Laugh",
+			"loop": false,
+			"name": "Laugh"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Laugh",
+	"position": [0, 110],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [161, 161, 161],
+	"camera_position": [0, -120],
+	"sing_duration": 4,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

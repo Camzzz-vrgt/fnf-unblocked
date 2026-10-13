@@ -1,0 +1,201 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-30,
+				140
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "alt-G idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-38,
+				98
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "alt-G down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				181
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "alt-G up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-67,
+				124
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "alt-G right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				158
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "alt-G miss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				116
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "alt-G left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				360,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "b G down"
+		},
+		{
+			"offsets": [
+				370,
+				360
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "b G up"
+		},
+		{
+			"offsets": [
+				290,
+				140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "b G right"
+		},
+		{
+			"offsets": [
+				680,
+				20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "b G left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				360,
+				90
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "b G idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-27,
+				189
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "talk",
+			"indices": [],
+			"name": "G talk"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				239,
+				98
+			],
+			"anim": "land2",
+			"fps": 24,
+			"name": "G land",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gohan land",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

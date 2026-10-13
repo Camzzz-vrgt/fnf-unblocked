@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "alt-buu idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				151,
+				82
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "alt-buu up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				16,
+				-78
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "alt-buu down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				110,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "alt-buu left"
+		},
+		{
+			"offsets": [
+				-22,
+				-69
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "alt-buu right"
+		},
+		{
+			"offsets": [
+				88,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "melt",
+			"indices": [],
+			"name": "buu melt"
+		},
+		{
+			"offsets": [
+				161,
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Dbuu hurt"
+		},
+		{
+			"offsets": [
+				-6,
+				69
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Dbuu right"
+		},
+		{
+			"offsets": [
+				68,
+				96
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Dbuu left"
+		},
+		{
+			"offsets": [
+				161,
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Dbuu hurt"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/buu_2land",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

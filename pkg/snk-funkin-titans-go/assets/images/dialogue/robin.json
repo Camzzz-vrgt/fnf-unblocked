@@ -1,0 +1,89 @@
+{
+	"position": [
+		0,
+		-80
+	],
+	"dialogue_pos": "left",
+	"scale": 1.15,
+	"image": "robin",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "mad",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "RobinMad",
+			"idle_name": "RobinMad0004"
+		},
+		{
+			"loop_name": "RobinBruh",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "RobinBruh0004",
+			"anim": "bruh",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "RobinCrazyLoop",
+			"idle_offsets": [
+				-70,
+				-30
+			],
+			"idle_name": "RobinCrazyLoop0003",
+			"anim": "crazy",
+			"loop_offsets": [
+				-70,
+				-29
+			]
+		},
+		{
+			"loop_name": "RobinNeutral",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "RobinNeutral0004",
+			"anim": "neutral",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "RobinSad",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "RobinSad0004",
+			"anim": "sad",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "RobinSmiling",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "RobinSmiling0004",
+			"anim": "smiling",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "HeckerIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "HeckerUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "HeckerDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "HeckerLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-281,
+				158
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "HeckerRight",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-281,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "he",
+			"indices": [],
+			"name": "HeckerScene"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/nop2",
+	"position": [
+		0,
+		280
+	],
+	"healthicon": "hecker",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		135,
+		45
+	],
+	"camera_position": [
+		670,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

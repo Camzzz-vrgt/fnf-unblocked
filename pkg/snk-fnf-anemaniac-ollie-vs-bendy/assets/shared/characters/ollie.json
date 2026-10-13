@@ -1,0 +1,127 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [50, 0],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-20, 60],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [50, 210],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-60, -20],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, -12],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "idleALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		},
+		{
+			"loop": false,
+			"offsets": [50, 0],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "lALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-20, 110],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "dALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [70, 200],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "uALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-60, -20],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "rALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-70, 20],
+			"anim": "laugh",
+			"fps": 24,
+			"name": "Laugh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-68, 68],
+			"anim": "laugh-alt",
+			"fps": 24,
+			"name": "LaALT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [60, 20],
+			"anim": "cutout",
+			"fps": 24,
+			"name": "Cutout",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [60, 20],
+			"anim": "cutout-alt",
+			"fps": 24,
+			"name": "CutDARK",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Ollie",
+	"position": [0, 110],
+	"healthicon": "ollie",
+	"flip_x": false,
+	"healthbar_colors": [234, 180, 106],
+	"camera_position": [450, -120],
+	"sing_duration": 4,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

@@ -1,0 +1,54 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "Call",
+		"player1": "bf-video",
+		"player2": "hecker-video",
+		"player3": null,
+		"events": [
+			[
+				232727.272727272,
+				[
+					[
+						"Play Animation",
+						"he",
+						"dad"
+					]
+				]
+			],
+			[
+				234181.818181817,
+				[
+					[
+						"Change Character",
+						"dad",
+						"nohecker"
+					],
+					[
+						"Play Animation",
+						"scene",
+						"BF"
+					]
+				]
+			],
+			[
+				237181.818181817,
+				[
+					[
+						"Change Character",
+						"BF",
+						"nobf"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 165,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "call"
+	}
+}

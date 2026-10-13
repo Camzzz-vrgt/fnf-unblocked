@@ -1,0 +1,111 @@
+{
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"position": [
+		-68,
+		400
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		150,
+		-100
+	],
+	"image": "characters/ncbroccoli",
+	"sing_duration": 4,
+	"healthicon": "broccoli",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "broccoli_idlel"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				4
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "broccoli_l"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-21
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "broccoli_d"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				37
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "broccoli_u"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-87,
+				-13
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "broccoli_r"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-10,
+				0
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "broccoli_idler"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "ohno",
+			"indices": [],
+			"name": "broccoli_ohno0"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "ohno-still",
+			"indices": [],
+			"name": "broccoli_ohno_still"
+		}
+	]
+}

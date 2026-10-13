@@ -1,0 +1,23 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [481, 600],
+			"anim": "DeathBite",
+			"fps": 24,
+			"name": "bitedeath",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/deaths/bitedeath2",
+	"position": [0, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [620, -560],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

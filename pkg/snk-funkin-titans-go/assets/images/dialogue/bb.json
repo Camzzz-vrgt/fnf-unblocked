@@ -1,0 +1,50 @@
+{
+	"position": [
+		10,
+		0
+	],
+	"dialogue_pos": "left",
+	"scale": 1.15,
+	"image": "beastboyopponent",
+	"animations": [
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "smug",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "BeastSmug",
+			"idle_name": "BeastSmug0004"
+		},
+		{
+			"loop_name": "BeastHappy",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BeastHappy0004",
+			"anim": "happy",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "BeastNeutral",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "BeastNeutral0004",
+			"anim": "neutral",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-33,
+				-19
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "Hit"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Bf_Speakers_Noon",
+	"position": [
+		-50,
+		410
+	],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		-220
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

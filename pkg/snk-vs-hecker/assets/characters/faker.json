@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-281,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "heccidle"
+		},
+		{
+			"offsets": [
+				-347,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "heccup"
+		},
+		{
+			"offsets": [
+				-329,
+				156
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "heccdown"
+		},
+		{
+			"offsets": [
+				-388,
+				158
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "heccright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-293,
+				158
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "heccleft",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/hecc_assets",
+	"position": [
+		200,
+		70
+	],
+	"healthicon": "hecc",
+	"flip_x": false,
+	"healthbar_colors": [
+		123,
+		95,
+		60
+	],
+	"camera_position": [
+		110,
+		200
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

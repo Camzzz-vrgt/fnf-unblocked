@@ -1,0 +1,100 @@
+{
+	"healthbar_colors": [
+		0,
+		170,
+		0
+	],
+	"position": [
+		-68,
+		140
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		120,
+		90
+	],
+	"image": "characters/broccoliAlt",
+	"sing_duration": 4,
+	"healthicon": "broccoli",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				113,
+				3
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				44,
+				-5
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				40
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				2
+			],
+			"fps": 24,
+			"anim": "full",
+			"indices": [],
+			"name": "bro-oh-no"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "idle"
+		}
+	]
+}

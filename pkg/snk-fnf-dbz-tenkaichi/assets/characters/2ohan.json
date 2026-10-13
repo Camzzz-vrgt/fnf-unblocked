@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-3,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				119,
+				26
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "alt-G left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				78,
+				24
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "alt-G right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				107,
+				7
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "alt-G down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				79,
+				90
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "alt-G up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				115,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "alt-G idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gohan",
+	"position": [
+		200,
+		250
+	],
+	"healthicon": "mom",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		156,
+		49
+	],
+	"camera_position": [
+		300,
+		90
+	],
+	"sing_duration": 5.99999999999999,
+	"scale": 1
+}
