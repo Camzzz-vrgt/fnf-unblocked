@@ -1,0 +1,181 @@
+{
+  "renderType": "multianimateatlas",
+  "offsets": [12, 4],
+  "applyStageMatrix": false,
+  "startingAnimation": "idle",
+  "death": {
+    "cameraZoom": 0.98,
+    "cameraOffsets": [90, 115]
+  },
+  "healthIcon": {
+    "isPixel": false,
+    "offsets": [0, 0],
+    "scale": 1,
+    "id": "steven",
+    "flipX": false
+  },
+  "assetPath": "shared:characters/steven-dark",
+  "version": "1.0.0",
+  "danceEvery": 1,
+  "scale": 1,
+  "name": "Steven Universe (Dark)",
+  "flipX": true,
+  "cameraOffsets": [10, 80],
+  "isPixel": false,
+  "singTime": 8,
+  "atlasSettings": {
+    "swfMode": false,
+    "applyStageMatrix": false,
+    "useRenderTexture": true,
+    "filterQuality": 1,
+    "cacheOnLoad": false
+  },
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "idle",
+      "name": "idle",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "left",
+      "name": "singLEFT",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "down",
+      "name": "singDOWN",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "up",
+      "name": "singUP",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "right",
+      "name": "singRIGHT",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "left miss",
+      "name": "singLEFTmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "down miss",
+      "name": "singDOWNmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "up miss",
+      "name": "singUPmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "right miss",
+      "name": "singRIGHTmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [-64, 131],
+      "prefix": "intro",
+      "name": "firstDeath",
+      "looped": false,
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-death",
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
+    },
+    {
+      "offsets": [-64, 131],
+      "prefix": "loop",
+      "looped": true,
+      "name": "deathLoop",
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-death"
+    },
+    {
+      "offsets": [-64, 131],
+      "prefix": "confirm",
+      "name": "deathConfirm",
+      "looped": false,
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-death"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "cheer",
+      "name": "cheer",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "hey",
+      "name": "hey",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    }
+  ]
+}

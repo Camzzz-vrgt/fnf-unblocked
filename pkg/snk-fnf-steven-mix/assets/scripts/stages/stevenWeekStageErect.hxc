@@ -1,0 +1,105 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.play.character.CharacterType;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.DropShadowShader;
+
+class StevenWeekStageErectStage extends Stage
+{
+  function new()
+  {
+    super('stevenWeekStageErect');
+  }
+
+  public var cloudScroll = 100;
+
+  var colorShader:AdjustColorShader;
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+  }
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    colorShader = new AdjustColorShader();
+
+    colorShader.brightness = -28;
+    colorShader.hue = -27;
+    colorShader.contrast = 0;
+    colorShader.saturation = -14;
+
+    clouds = new FlxBackdrop(Paths.image('bigdonutStage/CLOUDS'), true, false);
+    clouds.velocity.x = cloudScroll;
+	  clouds.zIndex = 130;
+    clouds.setPosition(0, -930);
+    clouds.scale.x = 0.5;
+    clouds.scale.y = clouds.scale.x;
+	  add(clouds);
+
+  }
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    // Apply the shader automatically to each character as it gets added.
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+
+    var rim = new DropShadowShader();
+    rim.setAdjustColor(-20, -31, 12, -9);
+    rim.color = 0xFF9B2B74;
+    rim.distance = 16;
+    rim.attachedSprite = character;
+    
+    switch (charType)
+    {
+      case CharacterType.BF:
+        character.shader = rim;
+        rim.angle = 135;
+
+        character.animation.onFrameChange.add(function() {
+          if (getBoyfriend() != null)
+          {
+            rim.updateFrameInfo(getBoyfriend().frame);
+          }
+        });
+
+      case CharacterType.DAD:
+        character.shader = rim;
+        rim.angle = 55;
+
+        character.animation.onFrameChange.add(function() {
+          if (getDad() != null)
+          {
+            rim.updateFrameInfo(getDad().frame);
+          }
+        });
+
+      /* 
+        case CharacterType.GF:
+        character.shader = colorShader;
+      */
+
+      case CharacterType.GF:
+        character.shader = rim;
+        rim.angle = 90;
+
+        character.animation.onFrameChange.add(function() {
+          if (getGirlfriend() != null)
+          {
+            rim.updateFrameInfo(getGirlfriend().frame);
+          }
+        });
+    }
+  }
+}

@@ -1,0 +1,70 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.SparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PauseSubState;
+
+class StevenDarkCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('steven-dark');
+	}
+
+  var normalChar:BaseCharacter;
+
+  override function set_alpha(val:Float):Float
+  {
+    super.set_alpha(val);
+
+    if (normalChar != null)
+    {
+      if (val != 1) normalChar.alpha = 1;
+      else
+        normalChar.alpha = 0.0001;
+    }
+
+    return val;
+  } 
+
+  var Xposchar:Float = -66;
+  // NEGATIVE        POSITIVE
+  //  <----            ---->
+
+  var Yposchar:Float = -268;
+  // NEGATIVE        POSITIVE
+  //    ^                |
+  //    |                |
+  //    |                V
+
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    super.playAnimation(name, restart, ignoreOther);
+    if (normalChar != null)
+    {
+      normalChar.playAnimation(name, restart, ignoreOther);
+      normalChar.setPosition(this.x + Xposchar, this.y + Yposchar);
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    if (!this.debug)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('steven');
+      normalChar.zIndex = 199;
+      normalChar.alpha = 0.0001;
+      normalChar.flipX = false;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
+  }
+
+}

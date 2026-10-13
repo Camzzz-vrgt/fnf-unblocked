@@ -1,0 +1,104 @@
+{
+  "version": "1.0.2",
+  "name": "Philly (Streets) [Steven]",
+  "props": [
+    {
+      "assetPath": "weekend1steven/Sky",
+      "atlasSettings": null,
+      "name": "sKY",
+      "position": [-445, -1184],
+      "scale": 1,
+      "scroll": [0.65, 1],
+      "startingAnimation": "",
+      "zIndex": 700
+    },
+    {
+      "assetPath": "weekend1steven/BackgroundShit",
+      "atlasSettings": null,
+      "name": "BGobjects",
+      "position": [-20, -793],
+      "scale": 1,
+      "scroll": [0.9, 1],
+      "startingAnimation": "",
+      "zIndex": 900
+    },
+    {
+      "assetPath": "weekend1steven/Alley",
+      "atlasSettings": null,
+      "name": "Alley",
+      "position": [-1614, -1018],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 1000
+    },
+    {
+      "assetPath": "weekend1steven/Boxes",
+      "atlasSettings": null,
+      "name": "Boxes",
+      "position": [-788, 639],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 1400
+    },
+    {
+      "assetPath": "weekend1steven/MULTIPLY",
+      "atlasSettings": null,
+      "blend": "multiply",
+      "name": "MULTIPLY",
+      "position": [-1619, -849],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 1600
+    },
+    {
+      "assetPath": "weekend1steven/ADD",
+      "atlasSettings": null,
+      "blend": "add",
+      "name": "ADD",
+      "position": [-398, -1182],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 1601
+    },
+    {
+      "assetPath": "weekend1steven/OVERLAY",
+      "atlasSettings": null,
+      "blend": "overlay",
+      "name": "OVERLAY",
+      "position": [-1615, -834],
+      "scale": 1,
+      "scroll": [0.65, 1],
+      "startingAnimation": "",
+      "zIndex": 1602
+    },
+    {
+      "assetPath": "weekend1steven/GREEN",
+      "atlasSettings": null,
+      "blend": "multiply",
+      "name": "GREEN",
+      "position": [-1632, -845],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 1603
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-237, -32],
+      "position": [1467, 605],
+      "zIndex": 1300
+    },
+    "dad": {
+      "cameraOffsets": [260, -79],
+      "position": [-206, 736],
+      "zIndex": 1200
+    },
+    "gf": {
+      "cameraOffsets": [-129, -69],
+      "position": [631.5, 647],
+      "zIndex": 1100
+    }
+  },
+  "cameraZoom": 0.55,
+  "directory": "weekend1"
+}

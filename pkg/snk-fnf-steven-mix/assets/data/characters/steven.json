@@ -1,0 +1,202 @@
+{
+  "version": "1.0.0",
+  "renderType": "multianimateatlas",
+  "offsets": [5, 27],
+  "danceEvery": 1,
+  "applyStageMatrix": false,
+  "scale": 1,
+  "name": "Steven Universe",
+  "flipX": true,
+  "cameraOffsets": [30, 150],
+  "death": {
+    "cameraZoom": 0.98,
+    "cameraOffsets": [90, 115]
+  },
+  "startingAnimation": "idle",
+  "isPixel": false,
+  "singTime": 8,
+  "assetPath": "shared:characters/steven",
+  "healthIcon": {
+    "offsets": [0, 0],
+    "id": "steven",
+    "flipX": false,
+    "isPixel": false,
+    "scale": 1
+  },
+  "atlasSettings": {
+    "applyStageMatrix": false,
+    "useRenderTexture": false,
+    "filterQuality": 1,
+    "cacheOnLoad": false,
+    "swfMode": false
+  },
+  "animations": [
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "idle",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "idle"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "left",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFT"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "down",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWN"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "up",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singUP"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "right",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHT"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "left miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFTmiss"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "down miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWNmiss"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "up miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singUPmiss"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "right miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHTmiss"
+    },
+    {
+      "offsets": [-139, -114],
+      "prefix": "intro",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "firstDeath",
+      "flipY": false,
+      "assetPath": "shared:characters/steven-death",
+      "frameRate": 24,
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
+    },
+    {
+      "offsets": [-139, -114],
+      "prefix": "loop",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "deathLoop",
+      "looped": true,
+      "flipY": false,
+      "assetPath": "shared:characters/steven-death",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-139, -114],
+      "prefix": "confirm",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "deathConfirm",
+      "flipY": false,
+      "assetPath": "shared:characters/steven-death",
+      "frameRate": 24
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "cutscene",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "cutscene"
+    },
+    {
+      "offsets": [0, 0],
+      "prefix": "cutscene",
+      "frameIndices": [0, 1],
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "cutsceneLOOP",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "cheer",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "cheer"
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "hey",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "hey"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxSprite;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.graphics.shaders.AdjustColorShader;
+
+class ConnieTankmenCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('connie-tankmen');
+  }
+
+  var lion:FlxSprite;
+  var gregSpeaker:FlxSprite;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    adjustColor = new AdjustColorShader();
+
+    adjustColor.hue = -40;
+    adjustColor.saturation = -20;
+    adjustColor.brightness = -40;
+    adjustColor.contrast = -25;
+
+    lion = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    lion.x = this.x;
+    lion.y = this.y;
+    lion.anim.play('dance', true, false, 0);
+    lion.useRenderTexture = true; 
+    lion.applyStageMatrix = true;
+
+    gregSpeaker = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    gregSpeaker.x = this.x;
+    gregSpeaker.y = this.y;
+    gregSpeaker.anim.play('speaker', true, false, 0);
+    gregSpeaker.useRenderTexture = true; 
+    gregSpeaker.applyStageMatrix = true;
+
+    tankBACK = new FunkinSprite(0, 0);
+    tankBACK.loadSparrow("characters/lion/tankmen");
+    tankBACK.animation.addByPrefix('tank', "TankmenBACK", 24, false);
+
+    tankFRONT = new FunkinSprite(0, 0);
+    tankFRONT.loadSparrow("characters/lion/tankmen");
+    tankFRONT.animation.addByPrefix('tank', "TankmenFRONT", 24, false);
+
+    lion.x = this.x;
+    lion.y = this.y;
+
+    gregSpeaker.x = this.x;
+    gregSpeaker.y = this.y;
+
+    tankBACK.x = this.x;
+    tankBACK.y = this.y;
+    tankFRONT.x = this.x;
+    tankFRONT.y = this.y;
+
+    lion.shader = this.shader;
+    gregSpeaker.shader = this.shader;
+    tankBACK.shader = adjustColor;
+    tankFRONT.shader = adjustColor;
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent)
+	{
+		super.onBeatHit(event);
+
+		if (event.beat % 1 == 0)
+		{
+			gregSpeaker.anim.play('speaker', true, false, 0);
+
+      lion.anim.play('worried', true, false, 0);
+
+      tankBACK.animation.play("tank", true);
+      tankFRONT.animation.play("tank", true);
+		}
+	}
+
+  var refershedLol:Bool = false;
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    // Set the visibility of ABot to match Nene's.
+    lion.visible = this.visible;
+    gregSpeaker.visible = this.visible;
+    tankBACK.visible = this.visible;
+    tankFRONT.visible = this.visible;
+
+    if (!refershedLol)
+    {
+
+      lion.x = this.x + 40;
+      lion.y = this.y + 230;
+      lion.zIndex = this.zIndex - 2;
+      currentStage.add(lion);
+
+      gregSpeaker.x = lion.x;
+      gregSpeaker.y = lion.y;
+      gregSpeaker.zIndex = lion.zIndex + 4;
+      currentStage.add(gregSpeaker);
+
+      synchronizeShaderDEFAULT();
+
+      tankBACK.x = lion.x - 110;
+      tankBACK.y = lion.y - 174;
+      tankBACK.zIndex = lion.zIndex - 1;
+      currentStage.add(tankBACK);
+
+      tankFRONT.x = tankBACK.x - 26;
+      tankFRONT.y = tankBACK.y - 139;
+      tankFRONT.zIndex = gregSpeaker.zIndex + 1;
+      currentStage.add(tankFRONT);
+
+      currentStage.refresh();
+      refershedLol = true;
+    }
+  }
+
+  var currentShader = null;
+
+  function synchronizeShaderDEFAULT():Void
+  {
+    if (currentShader == this.shader) return;
+
+    currentShader = this.shader;
+
+    lion.shader = currentShader;
+    gregSpeaker.shader = lion.shader;
+
+    trace("Synchronized " + currentStage.id + "shader!");
+  }
+}

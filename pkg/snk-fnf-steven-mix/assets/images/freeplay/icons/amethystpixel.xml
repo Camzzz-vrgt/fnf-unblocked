@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="amethystpixel.png" width="119" height="73">
+  <SubTexture name="idle0001" x="42" y="0"  width="40" height="37" frameX="-5" frameY="-7" frameWidth="50" frameHeight="50"/>  
+  <SubTexture name="confirm0001" x="0" y="0"  width="42" height="35" frameX="-4" frameY="-9" frameWidth="50" frameHeight="50"/>
+  <SubTexture name="confirm0002" x="82" y="0"  width="37" height="40" frameX="-8" frameY="-3" frameWidth="50" frameHeight="50"/>
+  <SubTexture name="confirm0003" x="0" y="35"  width="39" height="38" frameX="-7" frameY="-5" frameWidth="50" frameHeight="50"/>
+  <SubTexture name="confirm-hold0001" x="0" y="35"  width="39" height="38" frameX="-7" frameY="-5" frameWidth="50" frameHeight="50"/>
+</TextureAtlas>

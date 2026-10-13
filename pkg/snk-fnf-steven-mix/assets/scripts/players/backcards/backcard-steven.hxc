@@ -1,0 +1,167 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.math.FlxMath;
+import flixel.FlxSprite;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+
+class StevenCard extends BackingCard
+{
+  var cookieCats0:FlxBackdrop;
+  var cookieCats1:FlxBackdrop;
+  var cookieCats2:FlxBackdrop;
+  var cookieCats3:FlxBackdrop;
+  var cookieCats4:FlxBackdrop;
+  var cookieCats5:FlxBackdrop;
+
+  var bgSprite:FunkinSprite;
+
+  var cookieEnable = true;
+  var cookieOffset = 80;
+  var cookieScroll = 200;
+
+  public function new()
+  {
+    super("steven");
+  }
+
+  public override function enterCharSel():Void
+  {
+    FlxTween.tween(cookieCats0.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+    FlxTween.tween(cookieCats1.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+    FlxTween.tween(cookieCats2.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+    FlxTween.tween(cookieCats3.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+    FlxTween.tween(cookieCats4.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+    FlxTween.tween(cookieCats5.velocity, {x: 0}, 0.5, {ease: FlxEase.sineOut});
+  }
+
+  public override function applyExitMovers(?exitMovers:FreeplayState.ExitMoverData, ?exitMoversCharSel:FreeplayState.ExitMoverData):Void
+  {
+    super.applyExitMovers(exitMovers, exitMoversCharSel);
+    if (exitMovers == null || exitMoversCharSel == null) return;
+
+    exitMoversCharSel.set([cookieCats0],
+      {
+        y: -90,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
+    add(pinkBack);
+
+    confirmTextGlow.blend = 0;
+    confirmTextGlow.visible = false;
+
+    confirmGlow.blend = 0;
+
+    confirmGlow.visible = false;
+    confirmGlow2.visible = false;
+
+    cookieEnable = false;
+
+    cookieCats0 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, true);
+    cookieCats0.velocity.x = -cookieScroll;
+    cookieCats0.setPosition(0, 0 + cookieOffset);
+    add(cookieCats0);
+    cookieCats0.visible = cookieEnable;
+
+    cookieCats1 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, false);
+    cookieCats1.velocity.x = cookieScroll;
+    cookieCats1.setPosition(0, 110 + cookieOffset);
+    add(cookieCats1);
+    cookieCats1.visible = cookieEnable;
+
+    cookieCats2 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, false);
+    cookieCats2.velocity.x = -cookieScroll;
+    cookieCats2.setPosition(0, 220 + cookieOffset);
+    add(cookieCats2);
+    cookieCats2.visible = cookieEnable;
+
+    cookieCats3 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, false);
+    cookieCats3.velocity.x = cookieScroll;
+    cookieCats3.setPosition(0, 330 + cookieOffset);
+    add(cookieCats3);
+    cookieCats3.visible = cookieEnable;
+
+    cookieCats4 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, false);
+    cookieCats4.velocity.x = -cookieScroll;
+    cookieCats4.setPosition(0, 440 + cookieOffset);
+    add(cookieCats4);
+    cookieCats4.visible = cookieEnable;
+
+    cookieCats5 = new FlxBackdrop(Paths.image('freeplay/backingCards/steven/cookieCats'), true, false);
+    cookieCats5.velocity.x = cookieScroll;
+    cookieCats5.setPosition(0, 550 + cookieOffset);
+    add(cookieCats5);
+    cookieCats5.visible = cookieEnable;
+
+    cardGlow.blend = 0;
+    cardGlow.visible = false;
+    add(cardGlow);
+
+    bgSprite = new FunkinSprite(0, 0);
+    bgSprite.makeSolidColor(1000, 1000, 0xFF211426);
+    add(bgSprite);
+    bgSprite.visible = false;
+  }
+
+  public override function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    cookieCats0.visible = cookieEnable;
+    cookieCats1.visible = cookieEnable;
+    cookieCats2.visible = cookieEnable;
+    cookieCats3.visible = cookieEnable;
+    cookieCats4.visible = cookieEnable;
+    cookieCats5.visible = cookieEnable;
+  }
+
+  override public function confirm():Void
+  {
+    cookieEnable = true;
+    bgSprite.visible = true;
+  }
+
+  public override function introDone():Void
+  {
+    cookieEnable = true;
+    cookieCats0.visible = cookieEnable;
+    cookieCats1.visible = cookieEnable;
+    cookieCats2.visible = cookieEnable;
+    cookieCats3.visible = cookieEnable;
+    cookieCats4.visible = cookieEnable;
+    cookieCats5.visible = cookieEnable;
+
+    pinkBack.color = 0xFFFD82BF;
+
+    cardGlow.visible = true;
+    FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
+    FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.45, {ease: FlxEase.sineOut});
+  }
+
+  public override function disappear():Void
+  {
+    cookieEnable = false;
+    
+    FlxTween.color(pinkBack, 0.25, 0xFFFD82BF, 0xFFFFD0D5, {ease: FlxEase.quadOut});
+
+    cardGlow.visible = true;
+    cardGlow.alpha = 1;
+    cardGlow.scale.set(1, 1);
+    FlxTween.tween(cardGlow, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
+    FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.25, {ease: FlxEase.sineOut});
+  }
+}

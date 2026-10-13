@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "name": "PIZZA PARTY",
+  "titleAsset": "storymenu/titles/gemweek1",
+  "props": [
+    {
+      "assetPath": "storymenu/props/amethyst",
+      "scale": 0.9,
+      "offsets": [80, 90],
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "AMETHYSTSTORYDANCE",
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "assetPath": "storymenu/props/steven",
+      "scale": 0.82,
+      "offsets": [130, 20],
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "STEVENSTORYDANCE",
+          "frameRate": 24
+        },
+        {
+          "name": "confirm",
+          "prefix": "STEVENSTORYCONFIRM",
+          "offsets": [-5, 0],
+          "frameRate": 24
+        }
+      ]
+    },
+    {
+      "assetPath": "storymenu/props/connie",
+      "scale": 0.9,
+      "offsets": [155, 80],
+      "animations": [
+        {
+          "name": "danceLeft",
+          "prefix": "CONNIESTORYDANCE",
+          "frameIndices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        },
+        {
+          "name": "danceRight",
+          "prefix": "CONNIESTORYDANCE",
+          "frameIndices": [
+            15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+          ]
+        }
+      ]
+    }
+  ],
+  "background": "#FDC2CC",
+  "songs": ["amethyst", "out-4-pizzas", "8xm"]
+}

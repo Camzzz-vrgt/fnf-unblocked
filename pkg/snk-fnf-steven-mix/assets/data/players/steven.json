@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0",
+  "name": "Steven Universe",
+  "ownedChars": [
+    "steven", 
+    "steven-pixel",
+    "steven-dark",
+    "steven-winter",
+    "steven-holding-connie"
+  ],
+  "showUnownedChars": false,
+  "unlocked": true,
+  "freeplayStyle": "steven",
+  "stickerPack": "standard-steven",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-steven",
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 13,
+
+      "loopStartFrame": 0,
+      "loopEndFrame": 13,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 13,
+
+      "loopBadStartFrame": 0,
+      "loopBadEndFrame": 13
+    },
+    "charSelect": {
+      "transitionDelay": 0.45
+    },
+    "text1": "idk",
+    "text2": "what to",
+    "text3": "put here",
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "steven intro",
+        "offsets": [-196, -215]
+      },
+      {
+        "name": "idle",
+        "prefix": "steven idle",
+        "offsets": [-196, -215]
+      },
+      {
+        "name": "confirm",
+        "prefix": "steven confirm",
+        "offsets": [-196, -215]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "steven CS",
+        "offsets": [-196, -215]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "steven idle",
+        "offsets": [-196, -215]
+      },
+      {
+        "name": "loss",
+        "prefix": "steven idle",
+        "offsets": [-196, -215]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 1,
+    "gf": {
+      "assetPath": "charSelect/connieChill",
+      "animInfoPath": "charSelect/connieAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT",
+      "PERFECT": "resultsPERFECT",
+      "EXCELLENT": "resultsEXCELLENT",
+      "GREAT": "resultsNORMAL",
+      "GOOD": "resultsNORMAL",
+      "SHIT": "resultsSHIT-steven"
+    },
+    "perfectGold": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/stevonnie",
+        "startFrameLabel": "Intro",
+        "zIndex": 501,
+        "offsets": [104, -556],
+        "loopFrameLabel": "Loop"
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/gemsfront",
+        "startFrameLabel": "Intro",
+        "zIndex": 502,
+        "delay": 2.0,
+        "offsets": [363, 225],
+        "loopFrameLabel": "Loop"
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/pearl",
+        "startFrameLabel": "Intro",
+        "zIndex": 500,
+        "delay": 2.4,
+        "offsets": [935, 124],
+        "loopFrameLabel": "Loop"
+      }
+    ],
+    "perfect": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/stevonnie",
+        "startFrameLabel": "Intro",
+        "zIndex": 501,
+        "offsets": [104, -556],
+        "loopFrameLabel": "Loop"
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/gemsfront",
+        "startFrameLabel": "Intro",
+        "zIndex": 502,
+        "delay": 2.0,
+        "offsets": [363, 225],
+        "loopFrameLabel": "Loop"
+      },
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/pearl",
+        "startFrameLabel": "Intro",
+        "zIndex": 500,
+        "delay": 2.4,
+        "offsets": [935, 124],
+        "loopFrameLabel": "Loop"
+      }
+    ],
+    "excellent": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/stevonnie",
+        "startFrameLabel": "Intro",
+        "zIndex": 501,
+        "offsets": [104, -556],
+        "loopFrameLabel": "Loop"
+      }
+    ],
+    "great": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/stevonnie",
+        "startFrameLabel": "Intro",
+        "zIndex": 501,
+        "offsets": [104, -556],
+        "loopFrameLabel": "Loop"
+      }
+    ],
+    "good": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsPERFECT/stevonnie",
+        "startFrameLabel": "Intro",
+        "zIndex": 501,
+        "offsets": [104, -556],
+        "loopFrameLabel": "Loop"
+      }
+    ],
+    "loss": [
+      {
+        "renderType": "animateatlas",
+        "assetPath": "shared:resultScreen/results-steven/resultsSHIT",
+        "zIndex": 500,
+        "offsets": [650, -350],
+        "loopFrameLabel": "Loop Start"
+      }
+    ]
+  }
+}

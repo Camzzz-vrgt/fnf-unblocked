@@ -1,0 +1,183 @@
+{
+  "version": "1.0.2",
+  "name": "Beach City Stage [Erect]",
+  "props": [
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image5",
+      "atlasSettings": null,
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "SKY",
+      "position": [-1698, -1134],
+      "scale": 1,
+      "scroll": [0.7, 0.85],
+      "startingAnimation": "",
+      "zIndex": 100
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image4",
+      "atlasSettings": null,
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "BG SHIT",
+      "position": [-1465, -700],
+      "scale": 1,
+      "scroll": [0.9, 0.95],
+      "startingAnimation": "",
+      "zIndex": 400
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image1",
+      "atlasSettings": null,
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "Porch",
+      "position": [-1080, 562],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 450
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image0",
+      "atlasSettings": null,
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "DonutShop",
+      "position": [-96, -1466],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 500
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image3",
+      "atlasSettings": null,
+      "blend": "add",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "GLOW",
+      "position": [-50, -162],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 502
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "bigdonutStage/image2",
+      "atlasSettings": null,
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "front shit",
+      "position": [-1567, 779],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 900
+    },
+    {
+      "name": "sniper",
+      "assetPath": "bigdonutStage/TableAtlas",
+      "zIndex": 560,
+      "animType": "animateatlas",
+      "position": [1329, 71],
+      "scale": [1, 1],
+      "scroll": [1, 1],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "danceLeft",
+          "prefix": "beat1",
+          "looped": false
+        },
+        {
+          "name": "danceRight",
+          "prefix": "beat2",
+          "looped": false
+        }
+      ],
+      "atlasSettings": {
+        "applyStageMatrix": true
+      },
+      "startingAnimation": "danceRight"
+    }
+  ],
+  "characters": {
+    "bf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [-200, -150],
+      "position": [1310, 900],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 800
+    },
+    "dad": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [200, -150],
+      "position": [-10, 907],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 700
+    },
+    "gf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [170, 100],
+      "position": [757.5, 833],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 600
+    }
+  },
+  "cameraZoom": 0.45,
+  "directory": "weekgem"
+}

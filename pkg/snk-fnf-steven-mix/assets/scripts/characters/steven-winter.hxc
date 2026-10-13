@@ -1,0 +1,31 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+
+class StevenWinterCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('steven-winter');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		GameOverSubState.musicSuffix = '-steven';
+		GameOverSubState.blueBallSuffix = '-steven';
+
+		PauseSubState.musicSuffix = '';
+	}
+
+	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+
+		if (name == "firstDeath") {
+			this.shader = null;
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+	}
+}

@@ -1,0 +1,202 @@
+{
+  "renderType": "multianimateatlas",
+  "offsets": [15, 7],
+  "applyStageMatrix": false,
+  "startingAnimation": "idle",
+  "death": {
+    "cameraZoom": 0.98,
+    "cameraOffsets": [70, -25]
+  },
+  "healthIcon": {
+    "isPixel": false,
+    "offsets": [0, 0],
+    "scale": 1,
+    "id": "steven",
+    "flipX": false
+  },
+  "assetPath": "shared:characters/steven-winter",
+  "version": "1.0.0",
+  "danceEvery": 1,
+  "scale": 1,
+  "name": "Steven Universe (Christmas)",
+  "flipX": true,
+  "cameraOffsets": [0, 150],
+  "isPixel": false,
+  "singTime": 8,
+  "atlasSettings": {
+    "swfMode": false,
+    "applyStageMatrix": false,
+    "useRenderTexture": false,
+    "filterQuality": 1,
+    "cacheOnLoad": false
+  },
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "idle",
+      "name": "idle",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "left",
+      "name": "singLEFT",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "down",
+      "name": "singDOWN",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "up",
+      "name": "singUP",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "right",
+      "name": "singRIGHT",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "left miss",
+      "name": "singLEFTmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "down miss",
+      "name": "singDOWNmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "up miss",
+      "name": "singUPmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "right miss",
+      "name": "singRIGHTmiss",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [-68, 134],
+      "prefix": "intro",
+      "name": "firstDeath",
+      "looped": false,
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-winter-death",
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
+    },
+    {
+      "offsets": [-68, 134],
+      "prefix": "loop",
+      "looped": true,
+      "name": "deathLoop",
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-winter-death"
+    },
+    {
+      "offsets": [-68, 134],
+      "prefix": "confirm",
+      "name": "deathConfirm",
+      "looped": false,
+      "animType": "framelabel",
+      "flipX": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": "shared:characters/steven-winter-death"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "cutscene",
+      "name": "cutscene",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "prefix": "cutscene",
+      "frameIndices": [0, 1],
+      "looped": true,
+      "name": "cutsceneLOOP",
+      "flipX": false,
+      "animType": "framelabel",
+      "flipY": false,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "cheer",
+      "name": "cheer",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    },
+    {
+      "offsets": [0, 0],
+      "flipY": false,
+      "frameRate": 24,
+      "prefix": "hey",
+      "name": "hey",
+      "looped": false,
+      "flipX": false,
+      "animType": "framelabel"
+    }
+  ]
+}

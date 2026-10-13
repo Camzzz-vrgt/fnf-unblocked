@@ -1,0 +1,118 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Amethyst",
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"flipX": false,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"singTime": 4,
+	"flipY": false,
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"id": "amethyst"
+	},
+	"assetPath": "characters/AmethystAssets",
+	"generatedBy": "Nova Character Editor v3.0.0",
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "Idle",
+			"name": "idle",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				19,
+				-1
+			],
+			"frameIndices": [],
+			"prefix": "Left",
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-21,
+				-14
+			],
+			"frameIndices": [],
+			"prefix": "Down",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				3,
+				19
+			],
+			"frameIndices": [],
+			"prefix": "Up",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-20,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "Right",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"offsets": [
+				-2,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "AmethystCutscene",
+			"name": "cutscene",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/CUTSCENEamethyst"
+		}
+	]
+}

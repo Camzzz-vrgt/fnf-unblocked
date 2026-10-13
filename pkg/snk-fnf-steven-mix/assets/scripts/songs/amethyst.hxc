@@ -1,0 +1,157 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.math.FlxBasePoint;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import funkin.Conductor;
+import funkin.util.Constants;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.data.song.SongRegistry;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.stage.StageProp;
+import funkin.save.Save;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayStatePlaylist;
+
+class AmethystSong extends Song
+{
+  var hasPlayedInGameCutscene:Bool;
+
+  var cutsceneSound:FunkinSound;
+
+  public function new()
+  {
+    super('amethyst');
+
+    hasPlayedInGameCutscene = false;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!PlayStatePlaylist.isStoryMode)
+    {
+      hasPlayedInGameCutscene = true;
+    }
+
+    if (!hasPlayedInGameCutscene)
+    {
+      trace('Pausing countdown to play cutscene');
+
+      hasPlayedInGameCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      PlayState.instance.camHUD.visible = false;
+      introCutscene();
+    }
+  }
+
+  function introCutscene()
+  {
+    PlayState.instance.isInCutscene = true;
+    PlayState.instance.mayPauseGame = false;
+
+    var stevenPos:Array<Float> = [
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    ];
+    var conniePos:Array<Float> = [
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+    ];
+    var amethystPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    var cutsceneDelay:Float = 1.5;
+    var animDelay:Float = 1.5;
+
+    // camera sets up
+    new FlxTimer().start(0.1, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(conniePos[0] + 110 , conniePos[1] - 60, 0);
+
+      PlayState.instance.tweenCameraZoom(0.42, 0, true, FlxEase.quadInOut);
+
+      PlayState.instance.currentStage.getBoyfriend().playAnimation('cutsceneLOOP', true);
+      // PlayState.instance.currentStage.getBoyfriend().visible = false;
+    });
+
+    new FlxTimer().start(0.11, function(tmr) {
+      PlayState.instance.tweenCameraZoom(0.47, 3, true);
+    });
+
+    // play cutscene
+    new FlxTimer().start(0.1 + animDelay, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(conniePos[0] + 270 , conniePos[1] + 60, cutsceneDelay, FlxEase.quadInOut);
+
+      PlayState.instance.tweenCameraZoom(0.55, cutsceneDelay, true, FlxEase.quadInOut);
+
+      cutsceneSound = FunkinSound.load(Paths.sound("stevenCutscenePizza"), 1.0, false, false, false);
+      cutsceneSound.play(false);
+
+      // PlayState.instance.currentStage.getBoyfriend().visible = true;
+
+      PlayState.instance.currentStage.getBoyfriend().playAnimation('cutscene', true);
+      PlayState.instance.currentStage.getDad().playAnimation('cutscene', true);
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('cutscene', true);
+    });
+
+    // steven looks
+    new FlxTimer().start(40 / 24 + animDelay, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(stevenPos[0], stevenPos[1], 2, FlxEase.quadInOut);
+
+      PlayState.instance.tweenCameraZoom(0.72, 2, true, FlxEase.quadInOut);
+    });
+
+    // amethyst points to mic
+    new FlxTimer().start(110 / 24 + animDelay, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(amethystPos[0] + 30, amethystPos[1], 1.2, FlxEase.quadOut);
+    });
+
+    // steven shrugs
+    new FlxTimer().start(150 / 24 + animDelay, function(tmr) {
+      PlayState.instance.tweenCameraToPosition(stevenPos[0], stevenPos[1], 1.2, FlxEase.quadOut);
+    });
+
+    // camera returns to normal, cutscene flags set and countdown starts.
+    new FlxTimer().start(cutsceneDelay + 8 + 0.75, function(tmr) {
+      PlayState.instance.tweenCameraZoom(0.6, 1.5, true, FlxEase.sineInOut);
+      PlayState.instance.tweenCameraToPosition(amethystPos[0], amethystPos[1], 2, FlxEase.sineInOut);
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.startCountdown();
+
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.mayPauseGame = true;
+    });
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedInGameCutscene = true;
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedInGameCutscene = false;
+  }
+}

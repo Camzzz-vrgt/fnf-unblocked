@@ -1,0 +1,79 @@
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.play.character.CharacterType;
+
+class PhillyStreetsStevenStage extends Stage
+{
+  function new()
+  {
+    super('phillyStreetsSteven');
+  }
+
+  var colorShaderBf:DropShadowShader;
+  var colorShaderDad:AdjustColorShader;
+  var colorShaderGf:AdjustColorShader;
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+  }
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    colorShaderBf = new DropShadowShader();
+    colorShaderDad = new AdjustColorShader();
+    colorShaderGf = new AdjustColorShader();
+
+    colorShaderGf.brightness = -28;
+    colorShaderGf.hue = -7;
+    colorShaderGf.contrast = -12;
+    colorShaderGf.saturation = -22;
+
+    colorShaderDad.brightness = -50;
+    colorShaderDad.hue = -14;
+    colorShaderDad.contrast = -7;
+    colorShaderDad.saturation = -28;
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    // Apply the shader automatically to each character as it gets added.
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+
+    var colorShaderBf = new DropShadowShader();
+    colorShaderBf.setAdjustColor(-17, 9, -4, 0);
+    colorShaderBf.color = 0xFF207161;
+    colorShaderBf.distance = 14;
+    colorShaderBf.attachedSprite = character;
+    colorShaderBf.angle = 108;
+
+    trace('Applied stage shader to ' + character.characterName);
+    switch (charType)
+    {
+      case CharacterType.BF:
+        character.shader = colorShaderBf;
+
+        character.animation.onFrameChange.add(function() {
+          if (getBoyfriend() != null)
+          {
+            colorShaderBf.updateFrameInfo(getBoyfriend().frame);
+          }
+        });
+      case CharacterType.DAD:
+        character.shader = colorShaderDad;
+      case CharacterType.GF:
+        character.shader = colorShaderGf;
+    }
+  }
+}

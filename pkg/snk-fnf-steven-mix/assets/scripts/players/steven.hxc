@@ -1,0 +1,14 @@
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.save.Save;
+
+class StevenPlayableCharacter extends PlayableCharacter
+{
+  function new()
+  {
+    super('steven');
+  }
+
+  override function isUnlocked():Bool {
+    return Save.instance.hasBeatenLevel('gemweek1');
+  }
+}

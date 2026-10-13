@@ -1,0 +1,95 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxSprite;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+
+class ConnieCarCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('connie-car');
+  }
+
+  var gregSpeaker:FlxSprite;
+  var lion:FlxSprite;
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    lion = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    lion.x = this.x;
+    lion.y = this.y;
+    lion.anim.play('hairblow', true, false, 0);
+    lion.useRenderTexture = true; 
+    lion.applyStageMatrix = true;
+
+    gregSpeaker = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    gregSpeaker.x = this.x;
+    gregSpeaker.y = this.y;
+    gregSpeaker.anim.play('speaker', true, false, 0);
+    gregSpeaker.useRenderTexture = true; 
+    gregSpeaker.applyStageMatrix = true;
+
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent)
+	{
+		super.onBeatHit(event);
+
+		if (event.beat % 1 == 0)
+		{
+			gregSpeaker.anim.play('speaker', true, false, 0);
+
+      lion.anim.play('hairblow', true, false, 0);
+		}
+	}
+
+  var refershedLol:Bool = false;
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    // Set the visibility of ABot to match Nene's.
+    lion.visible = this.visible;
+    gregSpeaker.visible = this.visible;
+
+    if (!refershedLol)
+    {
+      lion.x = this.x + 120;
+      lion.y = this.y + 230;
+      lion.zIndex = this.zIndex - 2;
+      currentStage.add(lion);
+
+      gregSpeaker.x = lion.x;
+      gregSpeaker.y = lion.y;
+      gregSpeaker.zIndex = lion.zIndex + 4;
+      currentStage.add(gregSpeaker);
+
+      synchronizeShaderDEFAULT();
+
+      currentStage.refresh();
+      refershedLol = true;
+    }
+  }
+
+  var currentShader = null;
+
+  function synchronizeShaderDEFAULT():Void
+  {
+    if (currentShader == this.shader) return;
+
+    currentShader = this.shader;
+
+    lion.shader = currentShader;
+    gregSpeaker.shader = lion.shader;
+
+    trace("Synchronized " + currentStage.id + "shader!");
+  }
+} 

@@ -1,0 +1,200 @@
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.audio.FunkinSound;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.AdjustColorShader;
+
+class PhillyTrainStevenStage extends Stage
+{
+  function new()
+  {
+    super('phillyTrainSteven');
+  }
+
+  var trainSound:FunkinSound;
+
+  var colorShader:AdjustColorShader;
+
+  var trainEnabled:Bool = true;
+
+  public var cloudScroll = 70;
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    trainEnabled = true;
+
+    trainSound = FunkinSound.load(Paths.sound('train_passes'), 1.0, false, false, false);
+
+    clouds = new FlxBackdrop(Paths.image('week3steven/CloudsBackdrop'), true, false);
+    clouds.velocity.x = cloudScroll;
+	  clouds.zIndex = 400;
+    clouds.setPosition(0, -370);
+    clouds.scrollFactor.set(0.28, 1);
+    clouds.scale.x = 0.75;
+    clouds.scale.y = clouds.scale.x;
+	  add(clouds);
+
+    colorShader = new AdjustColorShader();
+  }
+
+  override function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    colorShader.hue = -18;
+    colorShader.saturation = -5;
+    colorShader.contrast = 5;
+    colorShader.brightness = -20;
+  }
+
+  /**
+   * Apply the shader to the character as it is added.
+   */
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    // Apply the shader automatically to each character as it gets added.
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+    character.shader = colorShader;
+  }
+
+  function fetchAssetPaths():Array<String>
+  {
+    var results:Array<String> = super.fetchAssetPaths();
+    results.push(Paths.sound('train_passes'));
+    return results;
+  }
+
+  var trainMoving:Bool = false;
+  var trainFrameTiming:Float = 0;
+  var trainCars:Int = 8;
+  var trainFinishing:Bool = false;
+  var trainCooldown:Int = 0;
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    // Update train
+    if (trainEnabled && trainMoving)
+    {
+      trainFrameTiming += event.elapsed;
+
+      if (trainFrameTiming >= 1 / 24)
+      {
+        updateTrainPos();
+        trainFrameTiming = 0;
+      }
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    if (trainEnabled)
+    {
+      // Update train cooldown
+      if (!trainMoving) trainCooldown += 1;
+
+      // Start train
+      if (event.beat % 8 == 4 && FlxG.random.bool(50) && !trainMoving && trainCooldown > 8)
+      {
+        trainCooldown = FlxG.random.int(-4, 0);
+        trainStart();
+      }
+    }
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    if (trainEnabled && trainSound?.time >= 4700 && trainMoving)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.75, 0);
+    }
+  }
+
+  public override function onSongEnd(event:CountdownScriptEvent):Void
+  {
+    trainMoving = false;
+    trainEnabled = false;
+    if (trainSound != null)
+    {
+      trainSound.stop();
+      trainSound = null;
+    }
+
+    super.onSongEnd(event);
+  }
+
+  function trainStart():Void
+  {
+    trainMoving = true;
+    trainSound.play(true);
+  }
+
+  var startedMoving:Bool = false;
+
+  function updateTrainPos():Void
+  {
+    if (trainSound.time >= 4700)
+    {
+      startedMoving = true;
+    }
+
+    if (trainSound.time >= 4900)
+    {
+      getGirlfriend().playAnimation('hairBlow');
+    }
+
+    if (startedMoving)
+    {
+      var train:FlxSprite = getNamedProp('train');
+      train.x -= 400;
+
+      if (train.x < -2000 && !trainFinishing)
+      {
+        train.x = -1150;
+        trainCars -= 0.96;
+
+        if (trainCars <= 0) trainFinishing = true;
+      }
+
+      if (train.x < -5000 && trainFinishing) trainReset();
+    }
+  }
+
+  function trainReset():Void
+  {
+    if (startedMoving) getGirlfriend().playAnimation('hairFall');
+
+    getNamedProp('train').x = 2617;
+
+    trainMoving = false;
+    trainCars = 8;
+    trainFinishing = false;
+    startedMoving = false;
+  }
+
+  /**
+   * Make sure the train is reset when the song restarts.
+   */
+  override function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+    trainReset();
+
+    if (trainSound != null) trainSound.stop();
+
+    if (getGirlfriend() != null)
+    {
+      getGirlfriend().dance(true);
+      getGirlfriend().animation.finish();
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": "1.0.2",
+  "name": "Philly (Train) [Steven]",
+  "props": [
+    {
+      "assetPath": "week3steven/Sky",
+      "atlasSettings": null,
+      "name": "Sky",
+      "position": [-1191, -687],
+      "scale": 1,
+      "scroll": [0.35, 0.9],
+      "startingAnimation": "",
+      "zIndex": 350
+    },
+    {
+      "assetPath": "week3steven/Mountains",
+      "atlasSettings": null,
+      "name": "Mountains",
+      "position": [-1127, 58],
+      "scale": 0.94,
+      "scroll": [0.65, 1],
+      "startingAnimation": "",
+      "zIndex": 450
+    },
+    {
+      "assetPath": "week3steven/BackRow",
+      "atlasSettings": null,
+      "name": "BackRow",
+      "position": [-1164, 332],
+      "scale": 1,
+      "scroll": [0.8, 1],
+      "startingAnimation": "",
+      "zIndex": 510
+    },
+    {
+      "assetPath": "week3steven/Train",
+      "atlasSettings": null,
+      "name": "train",
+      "position": [2617, 16],
+      "scale": 1,
+      "scroll": [0.8, 1],
+      "startingAnimation": "",
+      "zIndex": 500
+    },
+    {
+      "assetPath": "week3steven/PodiumRow",
+      "atlasSettings": null,
+      "name": "PodiumRow",
+      "position": [-1233, 366],
+      "scale": 1,
+      "startingAnimation": "",
+      "zIndex": 600
+    },
+    {
+      "assetPath": "week3steven/FrontRow",
+      "atlasSettings": null,
+      "name": "FrontRow",
+      "position": [-1290, 519],
+      "scale": 1,
+      "scroll": [1.2, 1],
+      "startingAnimation": "",
+      "zIndex": 1000
+    },
+    {
+      "assetPath": "week3steven/MULTIPLY",
+      "atlasSettings": null,
+      "blend": "multiply",
+      "name": "MULTIPLY",
+      "position": [-1193, 309],
+      "scale": 1,
+      "scroll": [0.35, 1],
+      "startingAnimation": "",
+      "zIndex": 1100
+    },
+    {
+      "assetPath": "week3steven/ADD",
+      "atlasSettings": null,
+      "blend": "add",
+      "name": "ADDBACK",
+      "position": [-1247, -747],
+      "alpha": 0.6,
+      "scale": 1,
+      "scroll": [0.4, 0.95],
+      "startingAnimation": "",
+      "zIndex": 540
+    },
+    {
+      "assetPath": "week3steven/ADD",
+      "atlasSettings": null,
+      "blend": "add",
+      "name": "ADDTOP",
+      "position": [-1247, -747],
+      "alpha": 0.4,
+      "scale": 1,
+      "scroll": [0.4, 0.95],
+      "startingAnimation": "",
+      "zIndex": 1200
+    },
+    {
+      "assetPath": "week3steven/OVERLAY",
+      "atlasSettings": null,
+      "blend": "overlay",
+      "name": "OVERLAY",
+      "position": [-1191, -687],
+      "scale": 1,
+      "scroll": [0.35, 0.35],
+      "startingAnimation": "",
+      "zIndex": 1300
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-100, -100],
+      "position": [1286, 821],
+      "zIndex": 750
+    },
+    "dad": {
+      "cameraOffsets": [150, -100],
+      "position": [62.5, 840],
+      "zIndex": 700
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [683.5, 662],
+      "scroll": [1, 1],
+      "zIndex": 550
+    }
+  },
+  "cameraZoom": 0.6,
+  "directory": "week3"
+}

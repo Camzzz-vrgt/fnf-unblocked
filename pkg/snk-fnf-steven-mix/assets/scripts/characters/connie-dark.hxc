@@ -1,0 +1,152 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxSprite;
+
+class ConnieDarkCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('connie-dark');
+	}
+
+	var lion:FlxSprite;
+  	var gregSpeaker:FlxSprite;
+	var lionDARK:FlxSprite;
+  	var gregSpeakerDARK:FlxSprite;
+
+  	var normalChar:BaseCharacter;
+
+	override function set_alpha(val:Float):Float{
+		super.set_alpha(val);
+		if(val != 1)
+			normalChar.alpha = 1;
+
+		else
+			normalChar.alpha = 0;
+
+    return val;
+	}
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+			super.playAnimation(name, restart, ignoreOther);
+      if(normalChar != null){
+        normalChar.playAnimation(name, restart, ignoreOther);
+        normalChar.setPosition(this.x - 47, this.y + 0.5);
+      }
+	}
+
+  function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+	  normalChar = CharacterDataParser.fetchCharacter('connie');
+    normalChar.zIndex = 99;
+		normalChar.alpha = 0;
+    normalChar.flipX = false;
+
+	currentStage.add(normalChar);
+	currentStage.refresh(); // Apply z-index.
+
+	  lion = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    lion.x = this.x;
+    lion.y = this.y;
+    lion.anim.play('dance', true, false, 0);
+    lion.useRenderTexture = true; 
+    lion.applyStageMatrix = true;
+
+    lionDARK = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    lionDARK.x = lion.x;
+    lionDARK.y = lion.y;
+    lionDARK.anim.play('danceDARK', true, false, 0);
+    lionDARK.useRenderTexture = true; 
+    lionDARK.applyStageMatrix = true;
+
+    gregSpeaker = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    gregSpeaker.x = this.x;
+    gregSpeaker.y = this.y;
+    gregSpeaker.anim.play('speaker', true, false, 0);
+    gregSpeaker.useRenderTexture = true; 
+    gregSpeaker.applyStageMatrix = true;
+
+    gregSpeakerDARK = FunkinSprite.createTextureAtlas(0, 0, "characters/lion-speaker-atlas", "shared");
+    gregSpeakerDARK.x = gregSpeaker.x;
+    gregSpeakerDARK.y = gregSpeaker.y;
+    gregSpeakerDARK.anim.play('speakerDARK', true, false, 0);
+    gregSpeakerDARK.useRenderTexture = true; 
+    gregSpeakerDARK.applyStageMatrix = true;
+
+	}
+
+	function onBeatHit(event:SongTimeScriptEvent)
+	{
+		super.onBeatHit(event);
+
+		if (event.beat % 1 == 0)
+		{
+			gregSpeaker.anim.play('speaker', true, false, 0);
+      gregSpeakerDARK.anim.play('speakerDARK', true, false, 0);
+      lion.anim.play("dance", true, false, 0);
+      lionDARK.anim.play('danceDARK', true, false, 0);
+		}
+	}
+
+	var refershedLol:Bool = false;
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    synchronizeShader();
+
+    // Set the visibility of ABot to match Nene's.
+    lion.visible = this.visible;
+    gregSpeaker.visible = this.visible;
+
+	  lionDARK.alpha = this.alpha ;
+	  gregSpeakerDARK.alpha = this.alpha;
+
+    if (!refershedLol)
+    {
+      lion.x = this.x + 70;
+      lion.y = this.y + 230;
+      lion.zIndex = this.zIndex - 3;
+      currentStage.add(lion);
+
+      gregSpeaker.x = lion.x;
+      gregSpeaker.y = lion.y;
+      gregSpeaker.zIndex = lion.zIndex + 4;
+      currentStage.add(gregSpeaker);
+
+	    lionDARK.x = lion.x;
+      lionDARK.y = lion.y;
+      lionDARK.zIndex = lion.zIndex + 1;
+      currentStage.add(lionDARK);
+
+      gregSpeakerDARK.x = gregSpeaker.x;
+      gregSpeakerDARK.y = gregSpeaker.y;
+      gregSpeakerDARK.zIndex = gregSpeaker.zIndex + 1;
+      currentStage.add(gregSpeakerDARK);
+
+      currentStage.refresh();
+      refershedLol = true;
+    }
+  }
+
+  var currentShader = null;
+  function synchronizeShader():Void
+  {
+    if (currentShader == this.shader) return;
+
+    currentShader = this.shader;
+
+    lion.shader = currentShader;
+    gregSpeaker.shader = currentShader;
+
+    trace("Synchronized shader between children!");
+  }
+
+}
