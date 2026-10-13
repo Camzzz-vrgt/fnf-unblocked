@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build single-file.html and single-file.svg — the whole site in one file.
 
-Everything external resolves to jsdelivr:
-  https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/<path>
+Everything external resolves to raw.githubusercontent.com:
+  https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/main/<path>
 
 Games whose packages are committed under pkg/<slug>/ (see pack-games.py)
 launch by fetching the staged wrapper html, rebasing it onto the CDN pkg
@@ -21,7 +21,7 @@ import re
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 
-CDN = "https://cdn.jsdelivr.net/gh/Camzzz-vrgt/fnf-unblocked@main/"
+CDN = "https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/main/"
 GAME_HOST_DEFAULT = "http://127.0.0.1:8642"
 
 
@@ -426,6 +426,7 @@ function prepGame(html, slug) {
 async function launchGame(slug) {
   let w = null;
   try { w = window.open("about:blank", "_blank"); } catch (e) {}
+  if (!games) await ensureGrid();
   if (repoSet.has(slug)) {
     try {
       const url = CDN + "games/" + encodeURIComponent(slug) + "/index.html";

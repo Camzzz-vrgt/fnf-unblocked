@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Pack staged game packages into the git repo for jsdelivr serving.
+"""Pack staged game packages into the git repo for raw.githubusercontent.com serving.
 
-jsdelivr refuses files >20MB, so any file >=19MB is split into
+github raw has no per-file cdn cap, so any file >=19MB is split into
 <name>.partNN chunks (16MB each) and listed in pkg/<slug>/chunks.json —
 the single-file launcher reassembles them client-side.
 
   pkg/<slug>/...          real files (git-committed)
   pkg/<slug>/chunks.json  {"path/from/pkg/root": numParts, ...}
-  data/repo-games.json    ["<slug>", ...]  — slugs served via jsdelivr
+  data/repo-games.json    ["<slug>", ...]  — slugs served via raw.githubusercontent.com
 
   python tools/pack-games.py <slug...>          pack specific games
   python tools/pack-games.py --budget 2e9       base game + smallest-first
@@ -25,7 +25,7 @@ OUT = os.path.join(SITE, "pkg")
 REPO_GAMES = os.path.join(SITE, "data", "repo-games.json")
 SIZES = os.path.join(SITE, "data", "pkg-sizes.json")
 
-LIMIT = 19 * 1024 * 1024   # jsdelivr hard cap is 20MB — stay under
+LIMIT = 19 * 1024 * 1024   # raw.githubusercontent.com hard cap is 20MB — stay under
 CHUNK = 16 * 1024 * 1024
 
 
