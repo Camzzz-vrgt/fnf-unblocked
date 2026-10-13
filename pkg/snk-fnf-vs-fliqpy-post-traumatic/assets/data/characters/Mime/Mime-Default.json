@@ -1,0 +1,31 @@
+{
+	"aspect": "Default",
+	"position": [
+		-2205.54385964912,
+		-154.830827067669
+	],
+	"icon": "default",
+	"scale": 1,
+	"script": "Mime_Script",
+	"image": "Default_0",
+	"color": "#5cc4ff",
+	"name": "Mime",
+	"antialiasing": true,
+	"singTime": 1,
+	"death": "fnf_loss_sfx",
+	"camera": [
+		234.833333333333,
+		442.166666666667
+	],
+	"onRight": true,
+	"animations": [
+		{
+			"symbol": "Cinematic",
+			"loop": false,
+			"fps": 22,
+			"loopTime": 0,
+			"key": "cinematic"
+		}
+	],
+	"danceIdle": false
+}

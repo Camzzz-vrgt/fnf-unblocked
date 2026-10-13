@@ -1,0 +1,45 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [-100,180],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"cameraOffsets": [
+		-50,
+		300
+	],
+	"flipX": false,
+	"name": "GF (grunt) [expurgation]",
+	"startingAnimation": "danceLeft",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "shared:characters/tricky/exGF",
+	"healthIcon": {
+		"id": "gf"
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+
+	    {
+			"prefix": "danceLeft",
+			"animType": "framelabel",
+			"name": "danceLeft"
+		},
+		{
+			"prefix": "danceRight",
+			"animType": "framelabel",
+			"name": "danceRight"
+		},
+		{
+			"prefix": "gooch",
+			"name": "warn"
+		},
+		{
+			"prefix": "death",
+			"name": "death"
+		}
+	]
+}

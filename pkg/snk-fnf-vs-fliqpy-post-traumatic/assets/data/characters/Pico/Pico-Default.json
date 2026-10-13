@@ -1,0 +1,112 @@
+{
+	"aspect": "Default",
+	"position": [
+		-179,
+		308
+	],
+	"icon": "pico",
+	"scale": 1,
+	"script": "Pico_Script",
+	"image": "default/Default",
+	"name": "Pico",
+	"color": "#ff6115",
+	"death": "picoDeath",
+	"antialiasing": true,
+	"singTime": 1,
+	"camera": [
+		119.620689655173,
+		545.275862068966
+	],
+	"onRight": false,
+	"skin": "Default",
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "PICO ENTRY",
+			"fps": 26,
+			"key": "entry",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS PICO DOWN",
+			"fps": 26,
+			"key": "singDOWNmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO DOWN",
+			"fps": 26,
+			"key": "singDOWN",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO IDLE",
+			"fps": 26,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS PICO LEFT",
+			"fps": 26,
+			"key": "singDOWNmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO LEFT",
+			"fps": 26,
+			"key": "singLEFT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS PICO RIGHT",
+			"fps": 26,
+			"key": "singRIGHTmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO HEY",
+			"fps": 26,
+			"key": "hey",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO RIGHT",
+			"fps": 26,
+			"key": "singRIGHT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS PICO UP",
+			"fps": 26,
+			"key": "singUPmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "PICO UP",
+			"fps": 26,
+			"key": "singUP",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

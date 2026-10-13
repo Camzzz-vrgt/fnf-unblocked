@@ -1,0 +1,235 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		14,
+		4
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "HenryAlt",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"death": {
+		"cameraOffsets": [
+			200,
+			0
+		]
+	},
+	"assetPath": "characters/sticking",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "henryalt"
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				30,
+				10
+			],
+			"frameRate": 24,
+			"prefix": "idle",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				16,
+				-23
+			],
+			"frameRate": 24,
+			"prefix": "leftalt0",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				72,
+				-71
+			],
+			"frameRate": 24,
+			"prefix": "downalt0",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				51,
+				37
+			],
+			"frameRate": 24,
+			"prefix": "upalt0",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				110,
+				-16
+			],
+			"frameRate": 24,
+			"prefix": "rightalt0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				146,
+				-8
+			],
+			"frameRate": 24,
+			"prefix": "lmiss0",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				82,
+				-74
+			],
+			"frameRate": 24,
+			"prefix": "dmiss0",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				10,
+				43
+			],
+			"frameRate": 24,
+			"prefix": "umiss0",
+			"flipX": false,
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				6,
+				-3
+			],
+			"frameRate": 24,
+			"prefix": "rmiss0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-7,
+				85
+			],
+			"frameRate": 24,
+			"prefix": "v0",
+			"flipX": false,
+			"looped": false,
+			"name": "hey"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				29,
+				-31
+			],
+			"frameRate": 24,
+			"prefix": "cheer",
+			"flipX": false,
+			"looped": false,
+			"name": "cheer"
+		},
+		{
+			"offsets": [
+				-41,
+				15
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/stickingextra",
+			"prefix": "wololo",
+			"name": "wololo",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				28,
+				8
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": "characters/stickingextra",
+			"prefix": "picomocking",
+			"name": "picomocking",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				320,
+				464
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dstart",
+			"name": "firstDeath",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				220,
+				17
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dloop",
+			"looped": true,
+			"name": "deathLoop",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				227,
+				17
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dconfirm",
+			"name": "deathConfirm",
+			"looped": false,
+			"flipX": false
+		}
+	]
+}

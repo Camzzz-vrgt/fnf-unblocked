@@ -1,0 +1,141 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [
+		-50,
+		50
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"cameraOffsets": [
+		50,
+		150
+	],
+	"name": "Tricky (Improbable Outset)",
+	"flipX": false,
+	"startingAnimation": "danceLeft",
+	"singTime": 8,
+	"isPixel": false,
+	"assetPath": "shared:characters/tricky/trickyMask",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "tricky",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "danceLeft",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "danceLeft"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "danceRight",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "danceRight"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singLEFT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-5
+			],
+			"frameRate": 24,
+			"prefix": "singDOWN",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-40,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singUP",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singRIGHT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "ha ha",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "ha"
+		},
+		{
+			"offsets": [
+				755,
+				255
+			],
+			"prefix": "intro",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "improbableOutsetIntro",
+			"flipY": false,
+			"assetPath": "shared:characters/tricky/introIO",
+			"frameRate": 24
+		}
+	]
+}

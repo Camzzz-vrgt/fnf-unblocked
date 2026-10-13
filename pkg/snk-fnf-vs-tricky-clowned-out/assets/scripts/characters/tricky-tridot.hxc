@@ -1,0 +1,28 @@
+import funkin.play.PlayState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class TrickyTriDotCharacter extends MultiAnimateAtlasCharacter {
+    function new() {
+        super('tricky-tridot');
+    }
+    
+    function onStepHit(event:SongTimeScriptEvent){
+        super.onStepHit(event);
+        state = PlayState.instance;
+        if (state == null || state.opponentStrumline.holdNotes.members.length == 0) return;
+
+        for (holdNote in state.opponentStrumline.holdNotes.members)
+        {
+            if (holdNote == null || !holdNote.alive) continue;
+
+            if (holdNote.hitNote && !holdNote.missedNote && holdNote.sustainLength > 0)
+            {
+                if (state.currentStage != null && this != null && this.isSinging())
+                {
+                    this.holdTimer = 0;
+                    this.playSingAnimation(holdNote.noteData.getDirection(), false);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+ "version": "2.2.4",
+ "songName": "Assault",
+ "artist": "Marc Cea",
+ "charter": "ChubbyGamer464",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf",
+   "opponent": "tricky-tridot",
+   "girlfriend": "gf",
+   "opponentVocals": [
+    "tricky"
+   ],
+   "playerVocals": [
+    "bf"
+   ]
+  },
+  "stage": "trickyAssaultStage",
+  "noteStyle": "funkin",
+  "ratings": {
+   "normal": 0,
+   "hard": 0
+  },
+  "album": "tricky"
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 180,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

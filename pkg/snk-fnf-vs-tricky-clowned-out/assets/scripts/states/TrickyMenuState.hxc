@@ -1,0 +1,942 @@
+import flixel.tweens.FlxEase;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.ui.MusicBeatState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.song.Song;
+import flixel.FlxCamera;
+import flixel.util.FlxGradient;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.transition.FlxTransitionableState;
+import funkin.Highscore;
+import funkin.Tallies;
+import funkin.save.Save;
+import funkin.ui.AtlasText;
+import funkin.ui.options.OptionsState;
+import funkin.ui.transition.LoadingState;
+import funkin.util.Constants;
+import funkin.util.TouchUtil;
+import funkin.data.song.SongRegistry;
+import funkin.data.story.level.LevelRegistry;
+import funkin.modding.base.ScriptedMusicBeatState;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import flixel.group.FlxTypedGroup;
+
+class TrickyMenuState extends ScriptedMusicBeatState {
+	public function new() {
+		super();
+	}
+
+	var bgCamera:FlxCamera;
+	var camJAW:FlxCamera;
+	var menuControllable:Bool = false;
+	var scanLinesShader:FlxRuntimeShader;
+	var cameraShaders = [];
+
+    var characters:Array<String> = [
+		"auditor",
+		"bf",
+		"burgergill",
+		"deimos",
+		"fluffgrunt",
+		"hank",
+		"jebus",
+		"phobos",
+		"sanford",
+		"scrapeface",
+		"sussy",
+		"torture",
+		"tricky"
+	];
+    var characterSelected:String;
+	var trophySprite:FunkinSprite;
+	var pussyWagon:FunkinSprite;
+	var catTrickyHitbox:FlxSprite;
+
+
+	//todo...
+	var scrapeMode:Bool = false;
+	var scrape_fx:FlxRuntimeShader;
+	var scrape_sound:FunkinSound;
+
+	var sussyMode:Bool = false;
+	var sussyHando:FunkinSprite;
+	var waggyHando:FunkinSprite;
+	var sussyHitbox:FlxSprite;
+	var sussySmudge:FunkinSprite;
+
+	var slapTimer:FlxTimer;
+
+	var charPos:Map<String, Array<Float>> = [
+		"auditor" => [-47,-114.5],
+		"bf" => [150,235],
+		"burgergill" => [60,70],
+        "deimos" => [100,200],
+		"fluffgrunt" => [200,350],
+        "hank" => [50,180],
+		"jebus" => [171.5,-102.5],
+		"phobos" => [0,50],
+		"sanford" => [89.5,233],
+		"scrapeface" => [120,260],
+		"sussy" => [-350,-120],
+		"torture" => [-120,20],
+		"tricky" => [120,90]
+	];
+
+	var grpCredits:FlxTypedGroup;
+	var credList:Map<String, Array<Array<Dynamic>>> = [
+		"art & animation" => [["banbuds",-30,0], ["marc cea",90,0], ["weretoons",180,0], ["mk",195,30], ["tri-dot",120,30], ["Braced Yeti",115,30]],
+		"programming" => [["fiffi the yoshi",280,0], ["luscious",690,0], ["hxzel",500,30], ["marc cea",505,30], ["ChubbyGamer464",435,30]],
+		"music" => [["rozebud",930,0], ["yingyang",1030,0], ["jads",1080,30], ["marc cea",1025,30]]
+	];
+
+	var diffSprites = [];
+
+	var grpStars:FlxTypedGroup;
+
+	var trophy2Stars = [
+		"" => ["star", 0],
+		"silver" => ["star", 0],
+		"gold" => ["star", 1],
+		"diamond" => ["star3", 2]
+	];
+
+	public override function create():Void {
+		super.create();
+
+        persistentUpdate = false;
+
+		FlxG?.state?.subState?.clearPreviews();
+        FlxG?.sound?.music?.stop();
+
+		characterSelected = characters[FlxG.random.int(0, characters.length - 1)];
+
+		if (FlxG.random.bool(0.5)) characterSelected = "scrapeface"; //1% chance for sussy to save you from seeing scrapy
+		if (FlxG.random.bool(1)) characterSelected = "sussy";
+
+		sussyMode = (characterSelected == "sussy");
+		scrapeMode = (characterSelected == "scrapeface");
+
+		if (scrapeMode){
+			scrape_sound = FunkinSound.load(Paths.sound("tricky/menu/note"), 0, true, null, null, null, () ->  {
+
+				if (scrape_sound.pitch < 10) scrape_sound.pitch += 0.5;
+
+				if (scrape_sound.pitch == 10){
+					menuControllable = false;
+					menuCharacter?.animation?.stop();
+					vignette.visible = diffTitle.visible = logo.visible = menuSlider.visible = false;
+					gridVoid.velocity.x = 0;
+					for (spr in diffSprites) spr.visible = false;
+
+					FlxTween.tween(menuCharacter, {x: menuCharacter.x - 300}, 2.2);
+
+					new FlxTimer().start(2, ()-> {
+						trace("restart");
+                        var newState:MusicBeatState = new TrickyMenuState();
+                        FlxG.switchState(newState);
+						//FlxG.resetState();
+					});
+				}
+
+				scrape_fx?.setFloat('prob', (scrape_sound.pitch * 0.05));
+
+			});
+			scrape_sound.pitch = 0.5;
+			scrape_sound.play();
+		}
+
+		for (sfx in ["burnSound","confirm","clink","swipe"]) FunkinSound.load(Paths.sound('tricky/menu/${sfx}'));
+
+		if (!Assets.exists(Paths.image("trickyMenu/main/characters/" + characterSelected + "/spritemap1", "preload"))){
+			trace("ERR. MISSING CHAR " + characterSelected);
+			characterSelected = "tricky";
+		}
+
+		bgCamera = new FlxCamera(0, 0, FlxG.width, FlxG.height, 0);
+		bgCamera.bgColor = 0xFF3a0000;
+		FlxG.cameras.add(bgCamera);
+
+		camJAW = new FlxCamera(0, 0, FlxG.width, FlxG.height);
+		camJAW.bgColor = 0x00000000;
+		FlxG.cameras.add(camJAW);
+
+		gridVoid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'));
+		gridVoid.velocity.x = -20;
+
+		menuCharacter = new FunkinSprite(charPos.get(characterSelected)[0],charPos.get(characterSelected)[1]).loadTextureAtlas("trickyMenu/main/characters/" + characterSelected, "preload");
+
+		menuCharacter.animation.play("idle", true);
+		menuCharacter?.animation?.curAnim?.looped = true;
+
+		makeSussyMess(sussyMode);
+
+        boxTop = new FunkinSprite(0,0).makeGraphic(FlxG.width, FlxG.height, 0xFF9d0a0a);
+        boxBottom = new FunkinSprite(0,0).makeGraphic(FlxG.width, FlxG.height, 0xFF9d0a0a);
+
+		menuSlider = new FlxBackdrop(Paths.image('trickyMenu/main/MenuSlider'), 0x01);
+		menuSlider.velocity.x = 20;
+        menuSlider.y = 200;
+		menuSlider.x = FlxG.random.int(0, menuSlider.width);
+
+        lineTop = FunkinSprite.create(0, 0, 'trickyMenu/main/MenuRedLine');
+        lineTop.scale.set(FlxG.width, 1.7);
+
+        lineBottom = FunkinSprite.create(0, 0, 'trickyMenu/main/MenuRedLine');
+        lineBottom.scale.set(FlxG.width, 1);
+
+        logo = FunkinSprite.create(0, 0, 'trickyMenu/main/Mainlogo');
+
+		if (curRank() != ""){
+			trophySprite = new FunkinSprite(FlxG.width * 0.8, FlxG.height * 0.4);
+		}
+
+		//last minute additions they pulled me out of bed for this ~Lu
+		grpStars = new FlxTypedGroup();
+		for (i in 0...3){
+			var star:FunkinSprite = new FunkinSprite(0,0);
+			star?.loadTextureAtlas("trickyMenu/main/star", "preload");
+			star.y = (i * star.height) + 200;
+			star?.animation?.play("empty", true);
+			grpStars.add(star);
+
+			if (i <= (trophy2Stars.get(curRank())[1])){
+				star?.animation?.play(trophy2Stars.get(curRank())[0] ?? "empty", true);
+				star?.animation?.curAnim?.looped = true;
+			}
+			if (curRank() == ""){
+				star?.animation?.play("empty", true);
+				star?.animation?.curAnim?.looped = true;
+			}
+		}
+
+		trophySprite?.loadTextureAtlas("trickyMenu/trophy/" + curRank(), "preload");
+        trophySprite?.animation?.play(curRank(), true);
+		trophySprite?.animation?.curAnim?.looped = true;
+
+		if (hasBeatenExpurgation('')){
+			pussyWagon = new FunkinSprite(FlxG.width * 0.55, -270);
+			catTrickyHitbox = new FlxSprite(970, 10).makeGraphic(1,1,0xFF0000FF);
+		}
+
+		pussyWagon?.loadTextureAtlas("trickyMenu/trophy/hellpussy", "preload");
+        pussyWagon?.animation?.play("idle", true);
+		pussyWagon?.animation?.finishCallback = () -> {
+			pussyWagon?.animation?.play((FlxG.random.bool(10) ? "idle-blink" : "idle"), true);
+		};
+
+		catTrickyHitbox?.setGraphicSize(170,160); catTrickyHitbox?.updateHitbox();
+		catTrickyHitbox?.alpha = 0;
+
+        vignette = FunkinSprite.create(0, 0, 'trickyMenu/main/vignette');
+        vignette.blend = 9;
+		vignette.alpha = 0.8;
+        vignette.setGraphicSize(FlxG.width, FlxG.height);
+
+        creditBackingGrad = FlxGradient.createGradientFlxSprite(FlxG.width, 150, [0xFFffffff, 0xFF000000], 1, 90, true);
+        creditBackingGrad.blend = 9;
+
+		trickyMouthTrans = new FunkinSprite(0, 0);
+		trickyMouthTrans.loadTextureAtlas("trickyMenu/main/jaws", "preload");
+		trickyMouthTrans.scale.set(1.3,1.3);
+		trickyMouthTrans.updateHitbox();
+		trickyMouthTrans.screenCenter().y -= 70;
+        trickyMouthTrans.animation.play("idle-open", true);
+
+		topButtons = [];
+        storyButton = FunkinSprite.create(0, 0, 'trickyMenu/main/Clown Mode Button-selected');
+		topButtons.push(storyButton);
+        freeplayButton = FunkinSprite.create(0, 0, 'trickyMenu/main/FreePlayButton');
+		topButtons.push(freeplayButton);
+
+		diffTitle = FunkinSprite.create(0, 0, 'trickyMenu/main/difficulties/difficultyTitle');
+		diffTitle.color = 0xFF0000;
+		diffLines = FunkinSprite.create(0, 0, 'trickyMenu/main/difficulties/Liners');
+
+        bottomButtons = [];
+        optionsButton = FunkinSprite.create(0, 0, 'trickyMenu/main/optionsButton');
+        bottomButtons.push(optionsButton);
+        extrasButton = FunkinSprite.create(0, 0, 'trickyMenu/main/extrasButton');
+        bottomButtons.push(extrasButton);
+
+        blackFade = new FunkinSprite(0,0).makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+
+		for (i in [gridVoid, menuSlider, storyButton, freeplayButton, optionsButton, extrasButton, boxTop, lineTop, logo]) {
+            i.updateHitbox();
+			i.cameras = [bgCamera];
+			add(i);
+		}
+
+		if (sussyMode){
+			for (o in [sussyHitbox,waggyHando,sussyHando,sussySmudge]){
+				o.cameras = [bgCamera];
+				add(o);
+			}
+		}
+
+        gridList = [];
+        for (i in 0...10){
+            grid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'), 0x01);
+            grid.alpha = 0.5;
+            if (i != 0) grid.y = gridList[i-1].y + gridList[i-1].height;
+            gridList.push(grid);
+			grid.cameras = [bgCamera];
+			add(grid);
+        }
+
+		for (i in [menuCharacter, boxBottom, diffTitle, diffLines, creditBackingGrad]) {
+            i.updateHitbox();
+			i.cameras = [bgCamera];
+			add(i);
+		}
+
+		difficulties = ["easy", "normal", "hard"];
+		for (i in 0...difficulties.length){
+			diffSprite = FunkinSprite.create(0, 0, 'trickyMenu/main/difficulties/' + difficulties[i]);
+			if (i != 1) diffSprite.color = 0xFFff0000;
+			diffSprites.push(diffSprite);
+			diffSprite.cameras = [bgCamera];
+			add(diffSprite);
+		}
+
+        gridList = [];
+        for (i in 0...10){
+            grid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'), 0x01);
+            grid.alpha = 0.5;
+            if (i == 0) grid.y = menuSlider.y + menuSlider.height - lineBottom.height/2;
+            else grid.y = gridList[i-1].y + gridList[i-1].height;
+            gridList.push(grid);
+			grid.cameras = [bgCamera];
+			add(grid);
+        }
+
+        for (i in [lineBottom, vignette]){
+            i.updateHitbox();
+			i.cameras = [bgCamera];
+			add(i);
+        }
+
+		credits = ["art & animation", " programming", "music"];
+        creditTitleSprites = [];
+
+        for (i in 0...credits.length){
+            var borderPadding = 190;
+            sprite = new AtlasText( 0, 0, credits[i].toUpperCase(), "trickyAlphabet");
+            sprite.scale.set(0.4,0.4);
+            sprite.updateHitbox();
+            sprite.setPosition(borderPadding + ((FlxG.width - borderPadding * 2) * i/(credits.length + -1)) - (sprite.width * 0.65), menuSlider.y + menuSlider.height);
+			sprite.cameras = [bgCamera];
+			add(sprite);
+            creditTitleSprites.push(sprite);
+		}
+
+		grpCredits = new FlxTypedGroup();
+		grpCredits.cameras = [bgCamera];
+		add(grpCredits);
+
+		if(hasBeatenExpurgation('')){
+			for (_ in [grpStars,trophySprite,pussyWagon,catTrickyHitbox]){
+				_?.cameras = [bgCamera];
+				add(_);
+			}
+		}
+
+		var inc:Int = 0;
+		for (credArr in ["art & animation", "programming", "music"]){
+			for (credArr in credList.get(credArr)){
+				var sprite = new AtlasText(0, 0, credArr[0].toUpperCase(), "trickyAlphabet");
+				sprite.color = 0xFFff0000;
+				sprite.scale.set(0.25,0.25); sprite.updateHitbox();
+				sprite.ID = inc;
+				sprite.setPosition(-200 + credArr[1],(FlxG.height * 0.86) + credArr[2]);
+				inc++;
+				grpCredits.add(sprite);
+			}
+		}
+		inc = 0;
+
+        for (i in [trickyMouthTrans, blackFade]){
+            i.updateHitbox();
+			i.cameras = [camJAW];
+			add(i);
+        }
+
+        logo.screenCenter();
+        logo.x -= 190;
+        logo.y = 40;
+
+        lineTop.y = menuSlider.y - lineTop.height/2;
+        lineBottom.y = menuSlider.y + menuSlider.height - lineBottom.height;
+
+        boxTop.y = lineTop.y + lineTop.height/2 - boxTop.height;
+        boxBottom.y = lineBottom.y + lineBottom.height/2;
+        creditBackingGrad.y = FlxG.height - creditBackingGrad.height;
+
+		for (i in topButtons){
+			i.x = 800;
+			if (topButtons.indexOf(i) != 0) i.x = topButtons[topButtons.indexOf(i)-1].x + i.width + 10;
+			if (topButtons.indexOf(i) == topRowSelected) i.y = boxTop.y + boxTop.height + 5;
+			else i.y = boxTop.y + boxTop.height - i.height + 30;
+		}
+
+		for (i in bottomButtons){
+			if (bottomButtons.indexOf(i) != 0) i.setPosition(bottomButtons[bottomButtons.indexOf(i)-1].x + i.width + 10, boxBottom.y - i.height);
+			else i.setPosition(600, boxBottom.y - 30);
+		}
+
+        diffTitle.screenCenter();
+        diffTitle.x += 160;
+        diffTitle.y = storyButton.y + storyButton.height + 40;
+
+		diffLines.setPosition(diffTitle.x + diffTitle.width/2 - diffLines.width/2, diffTitle.y + diffLines.height + 20);
+
+		for (i in 0...diffSprites.length){
+			diffSprites[i].setPosition(
+				(i * diffSprites[i].width) + diffLines.x,
+				diffLines.y + 30
+			);
+		}
+		diffSprites[2].x += 140;
+
+		new FlxTimer().start(0.1, _ -> {
+			FlxG.sound.playMusic(Paths.music("trickyMenuMusic/nexus_" + characterSelected));
+
+			FlxTween.tween(blackFade, {alpha: 0}, 0.3, { onComplete: _ -> {
+				menuControllable = true;
+			}});
+		});
+
+		if (scrapeMode){
+			scrape_fx = new FlxRuntimeShader(Assets.getText(Paths.frag('Glitch')));
+			scrape_fx.setFloat('time', 0.0);
+			scrape_fx.setFloat('prob', 0.0);
+			scrape_fx.setFloat('intensityChromatic', 0.0);
+
+			cameraShaders.push(new ShaderFilter(scrape_fx));
+		}
+
+		scanLinesShader = new FlxRuntimeShader(Assets.getText(Paths.frag('horiScanlines')));
+		scanLinesShader.setFloat('iTime', 0.0);
+		scanLinesShader.setBool('curveMe', false);
+		cameraShaders.push(new ShaderFilter(scanLinesShader));
+
+		bgCamera.filters = cameraShaders;
+	}
+
+	function curRank():String {
+		var rank:String = "";
+
+		if (hasBeatenClownWeek('normal')){
+			rank = 'silver';
+		}
+
+		if (hasBeatenClownWeek('hard') && hasBeatenFpSongs()){
+			rank = 'gold';
+		}
+
+		//ok so IF you beat Clown week in story mode on HARD diff, as well as og expurgation that gives diamond (erect mix clown week counts inplace of og week) ~lu
+		if ((hasBeatenClownWeek('hard') || hasBeatenClownWeekErect('nightmare')) && hasBeatenExpurgation()){
+			rank = 'diamond';
+		}
+
+		return rank;
+		//mmnn yes
+	}
+
+	function hasBeatenExpurgation(?diff:String = ''):Bool {
+		if (diff == "erect")
+			return Save.instance.hasBeatenSong("expurgation",["nightmare"], "erect");
+		else
+			return Save.instance.hasBeatenSong("expurgation",["unfair"]);
+	}
+
+	function hasBeatenFpSongs():Bool {
+		var boolVal:Bool = true;
+		if (!Save.instance.hasBeatenSong("expurgation",["unfair"])) boolVal = false;
+		if (!Save.instance.hasBeatenSong("assault", ["hard"])) boolVal = false;
+
+		return boolVal;
+	}
+
+	function hasBeatenClownWeek(diff:String):Bool {
+		return Save.instance.hasBeatenLevel('Clown', [diff]);
+	}
+
+	var weekSongs:Array<String> = ["improbable-outset", "madness", "hellclown"];
+	function hasBeatenClownWeekErect(diff:String):Bool {
+		var boolVal:Bool = true;
+		for (i in 0...weekSongs.length){
+			if (!Save.instance.hasBeatenSong(weekSongs[i],[diff], 'erect')){
+				boolVal = false;
+			}
+		}
+		return boolVal;
+	}
+
+	var mogusNuh:Float = 0.5;
+	function makeSussyMess(val:Bool){
+		if (val){
+			menuCharacter?.animation?.finishCallback = function(anim:String){
+				switch(anim){
+					case "slap_body":
+						menuCharacter.animation.play("wag_body", true);
+
+					case "wag_body":
+						menuCharacter.animation.play("idle", true);
+
+					case "die":
+						for (item in slapped_items){
+							FlxTween.tween(item, {"offset.x": 0, "offset.y": 0, angle: 0}, 0.8, {ease: FlxEase.quartOut});
+						}
+				}
+			};
+
+			sussyHando = new FunkinSprite(0,0).loadTextureAtlas("trickyMenu/main/characters/" + characterSelected, "preload");
+			sussyHando.visible = false;
+			sussyHando.animation.finishCallback = function(anim:String){
+				if (!sussyMode){
+					sussyHando.visible = false;
+					return;
+				}
+
+				sussyHando.visible = false;
+			};
+
+			waggyHando = new FunkinSprite(-400,-110).loadTextureAtlas("trickyMenu/main/characters/" + characterSelected, "preload");
+			waggyHando.animation.play("wag", true);
+			waggyHando.visible = false;
+			waggyHando.animation.finishCallback = function(){
+				waggyHando.visible = false;
+			};
+
+			sussyHitbox = new FlxSprite(190,280).makeGraphic(1,1, 0xFF0000FF);
+			sussyHitbox.setGraphicSize(150, 300); sussyHitbox.updateHitbox();
+			sussyHitbox.visible = false;
+
+			sussySmudge = new FunkinSprite(0,0).loadTextureAtlas("trickyMenu/main/characters/" + characterSelected, "preload");
+			sussySmudge.animation.play("smudge", true);
+			sussySmudge.animation.finishCallback = function(){
+				sussySmudge.visible = false;
+			};
+		}
+	}
+
+	var slapped_items:Array<Dynamic> = [];
+	function sussy_slap(o:FlxBasic):Bool {
+		if (sussyHando == null) return false;
+		if (!sussyMode) return false;
+		if (slapped_items.contains(o)) return false;
+
+		sussyHando?.setPosition(o.x - (sussyHando.width / 2),o.y - (sussyHando.height / 2) - 50);
+
+		sussySmudge?.visible = true;
+		sussySmudge?.setPosition(sussyHando.x - 260,sussyHando.y - 20);
+		sussySmudge?.animation.play("smudge", true);
+		sussyHando.animation.play("slap", true);
+
+		if (o == sussyHitbox){
+			sussyMode = false;
+
+			menuCharacter.animation.play("die", true);
+			// menuCharacter.setPosition(-260,-150);
+
+			FunkinSound.playOnce(Paths.sound("tricky/menu/sussy/die"), 1);
+			FunkinSound.playOnce(Paths.sound("tricky/menu/sussy/mogus_die"), 0.75);
+
+			return false;
+		}
+
+		FunkinSound.playOnce(Paths.sound('tricky/menu/sussy/slap${FlxG.random.int(0,2)}'), 1.0);
+
+		sussyHando.visible = true;
+		menuCharacter.animation.play("slap_body", true);
+		// menuCharacter.setPosition(charPos.get(characterSelected)[0] - 50,charPos.get(characterSelected)[1] - 50);
+
+		if (slapTimer != null){
+			slapTimer.reset(mogusNuh);
+		} else {
+			slapTimer = new FlxTimer().start(mogusNuh, () -> {
+				waggyHando.visible = true;
+				waggyHando.animation.play("wag", true);
+				FunkinSound.playOnce(Paths.sound("tricky/menu/sussy/wag"), 0.8);
+			});
+		}
+
+		// o.alpha = 0;
+		FlxTween.tween(o,{"offset.x": -1000, "offset.y": 1000 * FlxG.random.float(-1,1), angle: FlxG.random.int(-180,180)}, 0.5, {ease: FlxEase.expoOut});
+		// o.active = false;
+
+		slapped_items.push(o);
+
+		return true;
+	}
+
+	var topRowSelected:Int = 0;
+	var diffSelected:Int = 1;
+	var currentRow:Int = 0;
+    var bottomRowSelected:Int = 1;
+
+	function moveVertical(target: Int) {
+		trace("move " + target);
+		currentRow = target;
+		var rows:Int = 3;
+		if (currentRow >= rows) currentRow = 0;
+		if (0 > currentRow) currentRow = rows-1;
+
+		if (currentRow == 0){
+			for (i in topButtons) {
+				var imagePath:String;
+				switch (i) {
+					case storyButton : imagePath = 'Clown Mode Button';
+					case freeplayButton : imagePath = 'FreePlayButton';
+				}
+				if (topButtons.indexOf(i) == topRowSelected) i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath + '-selected'));
+				else i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+			}
+		}
+		else{
+			for (i in topButtons){
+				var imagePath:String;
+				switch (i) {
+					case storyButton : imagePath = 'Clown Mode Button';
+					case freeplayButton : imagePath = 'FreePlayButton';
+				}
+				i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+			}
+		}
+
+		if (currentRow == 1) diffTitle.color = 0xFFffffff;
+		else diffTitle.color = 0xFFff0000;
+
+		if (currentRow == 2){
+			for (i in bottomButtons){
+				FlxTween.cancelTweensOf(i);
+				var imagePath:String;
+				switch (i) {
+					case extrasButton : imagePath = 'extrasButton';
+					case optionsButton : imagePath = 'optionsButton';
+				}
+				if (bottomButtons.indexOf(i) == bottomRowSelected) {
+					FlxTween.tween(i, {y: boxBottom.y - i.height}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath + 'Selected'));
+				}
+				else {
+					FlxTween.tween(i, {y: boxBottom.y - 30}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+				}
+			}
+		}
+		else{
+			for (i in bottomButtons){
+                var imagePath:String;
+                switch (i) {
+                    case extrasButton : imagePath = 'extrasButton';
+                    case optionsButton : imagePath = 'optionsButton';
+                }
+                i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+            }
+		}
+	}
+
+	function moveHorizontal(target: Int) {
+		if (currentRow == 0){
+			topRowSelected = target;
+			if (topRowSelected >= topButtons.length) topRowSelected = 0;
+			if (0 > topRowSelected) topRowSelected = topButtons.length - 1;
+
+			for (i in topButtons){
+				FlxTween.cancelTweensOf(i);
+				var imagePath:String;
+				switch (i) {
+					case storyButton : imagePath = 'Clown Mode Button';
+					case freeplayButton : imagePath = 'FreePlayButton';
+				}
+				if (topButtons.indexOf(i) == topRowSelected) {
+					FlxTween.tween(i, {y: boxTop.y + boxTop.height + 5}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath + '-selected'));
+				}
+				else {
+					FlxTween.tween(i, {y: boxTop.y + boxTop.height - i.height + 30}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+				}
+			}
+		}
+		if (currentRow == 1){
+			diffSelected = target;
+			if (diffSelected >= difficulties.length) diffSelected = 0;
+			if (0 > diffSelected) diffSelected = difficulties.length - 1;
+
+			for (i in diffSprites){
+				if (diffSprites.indexOf(i) == diffSelected) i.color = 0xFFffffff;
+				else i.color = 0xFFff0000;
+			}
+		}
+        if (currentRow == 2){
+			bottomRowSelected = target;
+			if (bottomRowSelected >= bottomButtons.length) bottomRowSelected = 0;
+			if (0 > bottomRowSelected) bottomRowSelected = bottomButtons.length - 1;
+
+			for (i in bottomButtons){
+				FlxTween.cancelTweensOf(i);
+				var imagePath:String;
+				switch (i) {
+					case extrasButton : imagePath = 'extrasButton';
+					case optionsButton : imagePath = 'optionsButton';
+				}
+				if (bottomButtons.indexOf(i) == bottomRowSelected) {
+					FlxTween.tween(i, {y: boxBottom.y - i.height}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath + 'Selected'));
+				}
+				else {
+					FlxTween.tween(i, {y: boxBottom.y - 30}, 0.3, { ease: FlxEase.quartOut });
+					i.loadGraphic(Paths.image('trickyMenu/main/' + imagePath));
+				}
+			}
+        }
+	}
+
+	var elapsedTime:Float = 0;
+	override function update(elapsed:Float):Void {
+		super.update(elapsed);
+
+		elapsedTime += elapsed;
+		scanLinesShader?.setFloat('iTime', elapsedTime);
+		scrape_fx?.setFloat('time', elapsedTime * scrape_sound?.pitch);
+
+		if (scrapeMode){
+			// scrape_fx?.setFloat('prob', 0.05 * (elapsedTime / 10.0));
+
+			FlxG.sound?.music?.volume = (1 - (elapsedTime / 10.0));
+			scrape_sound?.volume = (elapsedTime / 10.0);
+
+			if ((elapsedTime / 10.0) > 0.75){
+
+				if (FlxG.random.bool(5)){
+					var cred = grpCredits?.members[FlxG.random.int(0,grpCredits?.members?.length-1)];
+
+					if (cred.text != "ERR") cred.text = "ERR";
+				}
+
+			}
+		}
+
+		if (!menuControllable) return;
+
+		keyboardControls();
+		touchControls();
+	}
+
+	function keyboardControls(){
+		if (controls.BACK_P) {
+			//exitTrickyState();
+		}
+
+		if (controls.UI_LEFT_P || controls.UI_RIGHT_P) {
+            if (currentRow == 0) moveHorizontal(topRowSelected + (controls.UI_RIGHT_P ? 1 : -1));
+            if (currentRow == 1) moveHorizontal(diffSelected + (controls.UI_RIGHT_P ? 1 : -1));
+            if (currentRow == 2) moveHorizontal(bottomRowSelected + (controls.UI_RIGHT_P ? 1 : -1));
+		}
+
+		if (controls.UI_DOWN_P || controls.UI_UP_P) moveVertical(currentRow + (controls.UI_DOWN_P ? 1 : -1));
+
+		if (controls.ACCEPT_P) {
+
+			switch(currentRow){
+				case 0:
+					if (topRowSelected == 0) startWeek();
+					if (topRowSelected == 1) enterTrickyFreeplay();
+				case 1:
+					moveVertical(0);
+					moveHorizontal(0);
+				case 2:
+					if (bottomRowSelected == 0) openOptions();
+					if (bottomRowSelected == 1) enterTrickyExtras();
+			}
+		}
+	}
+
+	function touchControls(){
+        /*
+		if (TouchUtil.pressAction(menuCharacter)) {
+			menuControllable = false;
+			FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+			FlxTween.tween(blackFade, {alpha: 1}, 0.2, { onComplete: _ -> {
+				openSubState(new TrickyOptionState());
+				FlxTween.tween(blackFade, {alpha: 0}, 0.2, { onComplete: _ -> {
+					menuControllable = true;
+				}});
+			}});
+		} */
+
+		if (TouchUtil.pressAction(storyButton)) {
+
+			if (sussy_slap(storyButton)) return;
+
+			if (topRowSelected == 0 && currentRow == 0)
+				startWeek();
+			else {
+				moveVertical(0);
+				moveHorizontal(0);
+			}
+		}
+
+		if (TouchUtil.pressAction(freeplayButton)) {
+			if (sussy_slap(freeplayButton)) return;
+
+			if (topRowSelected == 1 && currentRow == 0) enterTrickyFreeplay()
+            else {
+				moveVertical(0);
+				moveHorizontal(1);
+            }
+		}
+		if (TouchUtil.pressAction(diffTitle)) {
+			if (sussy_slap(diffTitle)) return;
+
+			moveVertical(1);
+		}
+
+		if (TouchUtil.pressAction(diffSprites)) {
+			for (i in diffSprites){
+				if (TouchUtil.overlaps(i, bgCamera)) {
+
+					if (sussy_slap(i)) return;
+
+					moveVertical(1);
+					moveHorizontal(diffSprites.indexOf(i));
+				}
+			}
+		}
+
+		if (TouchUtil.pressAction(optionsButton)) {
+
+			if (sussy_slap(optionsButton)) return;
+
+			if (bottomRowSelected == 0 && currentRow == 2)
+				openOptions();
+			else {
+				moveVertical(2);
+				moveHorizontal(0);
+			}
+		}
+
+		if (TouchUtil.pressAction(extrasButton)) {
+
+			if (sussy_slap(extrasButton)) return;
+
+			if (bottomRowSelected == 1 && currentRow == 2)
+				enterTrickyExtras();
+			else {
+				moveVertical(2);
+				moveHorizontal(1);
+			}
+		}
+
+		if (TouchUtil.pressAction(sussyHitbox)) {
+			if (sussy_slap(sussyHitbox)) return;
+		}
+
+		if (TouchUtil.pressAction(catTrickyHitbox)) {
+			if(hasBeatenExpurgation('')){
+				cat_touch();
+			}
+
+		}
+	}
+
+	function cat_touch(){
+		if (FlxG.random.bool(10)){
+			FunkinSound.playOnce(Paths.sound("tricky/menu/" + (FlxG.random.bool(10) ? "Meoow" : "Meow")), 1.0);
+			pussyWagon?.animation?.play("meow", true);
+		} else {
+			pussyWagon?.animation?.play("click", true);
+		}
+	}
+
+	function exitTrickyState() {
+		bgCamera.visible = false;
+		FlxG.sound.music.stop();
+		close();
+	}
+
+    function openOptions(){
+		menuControllable = false;
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+		FlxTween.tween(blackFade, {alpha: 1}, 0.2, { onComplete: _ -> {
+            FlxTransitionableState.skipNextTransIn = false;
+            var state:MusicBeatState = new OptionsState();
+            FlxG.switchState(state);
+		}});
+    }
+
+    function enterTrickyFreeplay(){
+		menuControllable = false;
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+		FlxTween.tween(blackFade, {alpha: 1}, 0.2, { onComplete: _ -> {
+        	var state:MusicBeatState = new TrickyFreeplayState();
+            FlxG.switchState(state);
+		}});
+    }
+
+    function enterTrickyExtras(){
+		menuControllable = false;
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+		FlxTween.tween(blackFade, {alpha: 1}, 0.2, { onComplete: _ -> {
+			var state:MusicBeatState = new TrickyExtrasState();
+            FlxG.switchState(state);
+			FlxTween.tween(blackFade, {alpha: 0}, 0.2, { onComplete: _ -> {
+
+				menuControllable = true;
+			}});
+		}});
+    }
+
+	function startWeek() {
+		menuControllable = false;
+		FlxG.sound.music.stop();
+
+		new FlxTimer().start(0.45,() -> {
+			trickyMouthTrans.animation.play("close", true);
+			FunkinSound.playOnce(Paths.sound("tricky/menu/burnSound"));
+			FunkinSound.playOnce(Paths.sound("tricky/menu/clink"));
+		});
+
+
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+
+
+		FunkinSound.playOnce(Paths.sound("tricky/menu/swipe"), 1, () -> {
+			levelId = "Clown";
+			var level = LevelRegistry.instance.fetchEntry(levelId);
+
+			Paths.setCurrentLevel(levelId);
+
+			PlayStatePlaylist.playlistSongIds = level.getSongs();
+			PlayStatePlaylist.isStoryMode = true;
+			PlayStatePlaylist.campaignScore = 0;
+
+			PlayStatePlaylist.campaignId = levelId;
+			PlayStatePlaylist.campaignTitle = level.getTitle();
+			PlayStatePlaylist.campaignDifficulty = difficulties[diffSelected]; // Change for difficulty
+
+			var targetSongId:String = PlayStatePlaylist.playlistSongIds.shift();
+
+			var targetSong:Song = SongRegistry.instance.fetchEntry(targetSongId, {variation: Constants.DEFAULT_VARIATION});
+
+			var targetVariation:String = targetSong.getFirstValidVariation(PlayStatePlaylist.campaignDifficulty);
+
+			Highscore.talliesLevel = new Tallies();
+
+			FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = false;
+
+			LoadingState.loadPlayState({
+				targetSong: targetSong,
+				targetDifficulty: PlayStatePlaylist.campaignDifficulty,
+				targetVariation: targetVariation
+			}, true);
+		});
+	}
+}

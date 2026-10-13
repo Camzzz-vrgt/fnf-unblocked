@@ -1,0 +1,83 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Henry Intro",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		200
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "henry",
+		"flipX": false
+	},
+	"assetPath": "characters/stickingintro",
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				-34,
+				-230
+			],
+			"frameRate": 24,
+			"prefix": "appear",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				320,
+				464
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dstart",
+			"name": "firstDeath",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				220,
+				17
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dloop",
+			"looped": true,
+			"name": "deathLoop",
+			"flipX": false
+		},
+		{
+			"offsets": [
+				227,
+				17
+			],
+			"flipY": false,
+			"assetPath": "characters/stickingDEAD",
+			"frameRate": 24,
+			"prefix": "dconfirm",
+			"name": "deathConfirm",
+			"looped": false,
+			"flipX": false
+		}
+	]
+}

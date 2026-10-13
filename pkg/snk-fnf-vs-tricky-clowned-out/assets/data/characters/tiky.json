@@ -1,0 +1,114 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [
+		-50,
+		20
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 0.8,
+	"cameraOffsets": [
+		50,
+		-20
+	],
+	"name": "Tiky",
+	"flipX": false,
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"isPixel": false,
+	"assetPath": "shared:characters/tricky/tiky",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "tiky",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "idle",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "danceLeft"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singLEFT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singDOWN",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singUP",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singRIGHT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "hey",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "hey"
+		}
+	]
+}

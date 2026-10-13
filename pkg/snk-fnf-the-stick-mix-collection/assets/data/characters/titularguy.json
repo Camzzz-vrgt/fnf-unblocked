@@ -1,0 +1,104 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "titularguy",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		-100
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/titularguy",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "titularguy",
+		"flipX": false
+	},
+	"animations": [
+		{
+			"offsets": [
+				20,
+				121
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "idle",
+			"name": "idle",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				113,
+				87
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "left",
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				13,
+				38
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "down",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-67,
+				58
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "right",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-62,
+				63
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "wait",
+			"name": "wait",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-5,
+				175
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "up",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false
+		}
+	]
+}

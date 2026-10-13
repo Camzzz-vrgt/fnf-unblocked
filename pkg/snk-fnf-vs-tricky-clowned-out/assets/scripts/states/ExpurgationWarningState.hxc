@@ -1,0 +1,166 @@
+import flixel.tweens.FlxEase;
+import flixel.text.FlxText;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.song.Song;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.transition.FlxTransitionableState;
+import funkin.ui.transition.LoadingState;
+import funkin.util.Constants;
+import funkin.effects.IntervalShake;
+import funkin.data.song.SongRegistry;
+import funkin.modding.base.ScriptedMusicBeatSubState;
+import flixel.FlxCamera;
+import funkin.util.TouchUtil;
+
+class ExpurgationWarningState extends ScriptedMusicBeatSubState {
+
+    var diffString:String;
+
+	public function new(variation:String) {
+		super();
+        diffString = variation;
+	}
+
+	var menuControllable:Bool = false;
+
+	var mobileChanges = [
+		['PRESS [SPACEBAR]', 'PRESS ANY BUTTON'],
+		['TAP HER [THAT GIRL]', 'PRESS ANY BUTTON'],
+	];
+
+	public override function create():Void {
+		super.create();
+
+		bgCamera = FlxG.camera = new FlxCamera(0, 0, FlxG.width, FlxG.height, 0);
+		bgCamera.bgColor = 0xFF3a0000;
+		FlxG.cameras.add(bgCamera);
+
+		redBG = new FunkinSprite(0, 0).makeGraphic(1, 1, 0xFF4a0007);
+		redBG.scale.set(FlxG.width, FlxG.height);
+		redBG.updateHitbox();
+
+		gridVoid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'));
+
+        boxes = FunkinSprite.create(0, 0, 'trickyMenu/expurgationWarning/boxes');
+        boxes.screenCenter();
+
+        seperator = FunkinSprite.create(0, 0, 'trickyMenu/expurgationWarning/seperator');
+        seperator.setPosition(FlxG.width/2 - seperator.width/2, boxes.y + 470);
+
+        screenie = FunkinSprite.create(0, 0, 'trickyMenu/expurgationWarning/ss');
+        screenie.setPosition(FlxG.width/2 - screenie.width/2, boxes.y + 240);
+
+        danger = FunkinSprite.create(0, 0, 'trickyMenu/expurgationWarning/danger');
+        danger.setPosition(FlxG.width/2 - danger.width/2, boxes.y + 30);
+
+        watchout = FunkinSprite.create(0, 0, 'trickyMenu/expurgationWarning/watchout');
+        watchout.setPosition(FlxG.width/2 - watchout.width/2, boxes.y + 110);
+
+        explain = new FlxText(0, 0, boxes.width, "", 10);
+        explain.setFormat(Paths.font('tahoma-bold.ttf'), 30, 0xFFff0000, "center");
+        explain.setPosition(boxes.x, boxes.y + 500);
+
+        vignette = FunkinSprite.create(0, 0, 'trickyMenu/main/vignette');
+        vignette.blend = 9;
+        vignette.setGraphicSize(FlxG.width, FlxG.height);
+
+		cover = new FunkinSprite(0, 0).makeGraphic(1, 1, 0xFF000000);
+		cover.scale.set(FlxG.width, FlxG.height);
+		cover.updateHitbox();
+
+        var screenStuff = [redBG, gridVoid, boxes, seperator, screenie, danger, watchout, explain, vignette, cover];
+
+        for (i in screenStuff){
+            add(i);
+            i.alpha = 0;
+        }
+
+		FlxTween.tween(cover, { alpha: 1}, 0.2, { ease: FlxEase.expoIn, onComplete: _ -> {
+            vignette.alpha = 0.5;
+            gridVoid.alpha = 0.5;
+            for (i in [redBG, boxes, seperator, danger, watchout, explain, screenie]) i.alpha = 1;
+            IntervalShake.shake( watchout, 1000000, 0.04, 0.001, 0.001);
+            IntervalShake.shake( danger, 1000000, 0.04, 0.005, 0.005);
+            IntervalShake.shake( screenie, 1000000, 0.04, 0.001, 0.001);
+            IntervalShake.shake( explain, 1000000, 0.04, 0.0005, 0.0005);
+		    FlxTween.tween(cover, { alpha: 0}, 0.2, { ease: FlxEase.expoOut, onComplete: _ -> {
+                for (i in [screenie]) i.alpha = 1;
+                if(FlxG.onMobile) printText("KEEP TRACK OF GF [THAT CHICK IN THE BACK]!!\nTAP [UR GIRL] WHENEVER SHE FLASHEZ YOU WITH THAT AWESOME SIGN, OR ELSE YOU'LL DIE!!! [LOL]\n1 2 3 DODGE!! TAP YOUR SCREEN TO CONTINUE, GET GOIN'!!", explain);
+				else printText("KEEP TRACK OF GF [THAT CHICK IN THE BACK]!!\nPRESS [SPACEBAR] WHENEVER SHE FLASHEZ YOU WITH THAT AWESOME SIGN, OR ELSE YOU'LL DIE!!! [LOL]\n1 2 3 DODGE!! PRESS ANY BUTTON TO CONTINUE, GET GOIN'!!", explain);
+                menuControllable = true;
+            }});
+        }});
+	}
+
+	override function update(elapsed:Float):Void {
+		super.update(elapsed);
+		if (!menuControllable) return;
+		if (FlxG.onMobile ? TouchUtil.justPressed : controls.ACCEPT_P) startSong();
+	}
+    
+    function printText(text:String, sprite){
+        if (sprite.text.length != text.length){
+            FunkinSound.playOnce(Paths.sound('tricky/menu/trickyType'), 0.7);
+            sprite.text += text.substr(sprite.text.length, 1);
+            var delay:Float = 0.04;
+            if (text.substr(sprite.text.length, 1) == "\n" || text.substr(sprite.text.length, 1) == "[" || text.substr(sprite.text.length-2, 2) == "] " || text.substr(sprite.text.length, 1) == ",") delay = 0.5;
+            else if (text.substr(sprite.text.length, 1) == "[" || text.substr(sprite.text.length-2, 2) == "] ") delay = 0.5;
+            new FlxTimer().start(delay, function(tmr) { printText(text, sprite); });
+        }
+    }
+
+	function startSong() {
+		FlxTransitionableState.skipNextTransIn = false;
+		FlxTransitionableState.skipNextTransOut = false;
+
+		PlayStatePlaylist.isStoryMode = false;
+		PlayStatePlaylist.campaignId = null;
+
+		var targetSongId:String = "expurgation";
+		var targetSongNullable:Null<Song> = SongRegistry.instance.fetchEntry(targetSongId);
+		if (targetSongNullable == null) {
+            FunkinSound.playOnce(Paths.sound('tricky/menu/burnSound'), 0.7);
+		  	trace('WARN: could not find song with id (${targetSongId})');
+		  	return;
+		}
+		var targetSong:Song = targetSongNullable;
+		var targetVariation:String = "erect";
+		var currentDifficulty:String = diffString;
+        if (diffString == "unfair") targetVariation = Constants.DEFAULT_VARIATION;
+		var targetInstId:String = null;
+	
+		var targetDifficulty:SongDifficulty = targetSong.getDifficulty(currentDifficulty, targetVariation); // returns "hard"
+	    if (targetDifficulty == null) {
+            FunkinSound.playOnce(Paths.sound('tricky/menu/burnSound'), 0.7);
+      		trace('WARN: could not find difficulty with id (${currentDifficulty})');
+			return;
+		}
+		
+		if (targetInstId == null) {
+			var baseInstrumentalId:String = targetSong.getBaseInstrumentalId(currentDifficulty, targetVariation);
+			targetInstId = baseInstrumentalId;
+		}
+
+		FlxG.sound.music.stop();
+        menuControllable = false;
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+        
+        FlxTween.tween(cover, {alpha: 1}, 0.2, { onComplete: _ -> {
+			LoadingState.loadPlayState(
+			{
+				targetSong: targetSong,
+				targetDifficulty: currentDifficulty,
+				targetVariation: targetVariation,
+				targetInstrumental: targetInstId,
+				practiceMode: false,
+				minimalMode: false,
+	
+				botPlayMode: false,
+			}, true);
+        }});
+	}
+}

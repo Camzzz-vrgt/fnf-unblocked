@@ -1,0 +1,47 @@
+{
+	"aspect": "Default",
+	"icon": "bf",
+	"position": [
+		-135,
+		345
+	],
+	"scale": 1,
+	"color": "#75ff73",
+	"name": "Boyfriend",
+	"image": "soldier/Death",
+	"death": "bfSoldierDeath",
+	"singTime": 1,
+	"antialiasing": true,
+	"skin": "Default",
+	"onRight": false,
+	"camera": [
+		94.9999999999998,
+		565
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "BF Dead Loop",
+			"loopTime": 0,
+			"fps": 24,
+			"key": "deathLoop",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "BF Dead confirm",
+			"loopTime": 0,
+			"fps": 24,
+			"key": "deathConfirm",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "BF dies",
+			"loopTime": 0,
+			"fps": 24,
+			"key": "firstDeath",
+			"indices": []
+		}
+	]
+}

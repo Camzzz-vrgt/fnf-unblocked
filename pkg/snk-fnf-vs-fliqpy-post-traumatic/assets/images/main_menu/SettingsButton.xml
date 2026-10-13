@@ -1,0 +1,15 @@
+<TextureAtlas imagePath="SettingsButton.png">
+	<!-- Created with Magic XML Editor version 2.0 -->
+	<SubTexture name="Idle0000" x="0" y="0" width="277" height="258" frameX="0" frameY="0" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hover0000" x="0" y="0" width="277" height="258" frameX="0" frameY="0" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0000" x="277" y="0" width="263" height="245" frameX="-13" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0001" x="277" y="0" width="263" height="245" frameX="-13" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0002" x="540" y="0" width="291" height="271" frameX="15" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0003" x="540" y="0" width="291" height="271" frameX="15" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0004" x="0" y="271" width="292" height="272" frameX="16" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0005" x="0" y="271" width="292" height="272" frameX="16" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0006" x="292" y="271" width="274" height="255" frameX="-2" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0007" x="292" y="271" width="274" height="255" frameX="-2" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0008" x="0" y="0" width="277" height="258" frameX="1" frameY="-1" frameWidth="277" frameHeight="258"/>
+	<SubTexture name="Hit0009" x="0" y="0" width="277" height="258" frameX="1" frameY="-1" frameWidth="277" frameHeight="258"/>
+</TextureAtlas>

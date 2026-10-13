@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "Tricky (Freeplay)",
+  "capsule":{
+    "name": "CLOWN"
+  },
+  "titleAsset": "storymenu/titles/week1",
+  "props": [ { "assetPath": "" } ],
+  "background": "#F9CF51",
+  "visible": false,
+  "songs": ["expurgation", "assault", "tiky"]
+}

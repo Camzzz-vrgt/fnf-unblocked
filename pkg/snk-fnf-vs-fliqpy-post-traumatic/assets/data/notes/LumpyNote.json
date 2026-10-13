@@ -1,0 +1,12 @@
+{
+    "Events": [
+        ["Set_Note_Property", ["hitMiss", true], "OnCreate"],
+        ["Set_Note_Property", ["flipDown", true], "OnCreate"],
+        ["Set_Note_Property", ["missHealth", 0.2], "OnCreate"],
+        ["Set_Note_Property", ["useColor", false], "OnCreate"],
+        ["Set_Note_Property", ["ignoreMiss", true], "OnCreate"],
+        ["Set_Note_Property", ["image", "LUMPY_NOTE_assets"], "OnCreate"],
+        ["Set_Note_Function", ["addAnim", ["grab", "Grab", 26, true]], "OnCreated"],
+        ["Lumpy_Note", [], "OnMiss"]
+    ]
+}

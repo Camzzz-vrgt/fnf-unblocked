@@ -1,0 +1,98 @@
+{
+	"color": "#69ff87",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"camera": [
+		95.5882352941176,
+		366.764705882354
+	],
+	"emote": "hey",
+	"aspect": "Default",
+	"position": [
+		-403.235294117647,
+		-306
+	],
+	"script": "Fliqpy_W2_Happy_Script",
+	"icon": "fliqpy",
+	"scale": 1,
+	"image": "wammy/Happy_2",
+	"name": "Fliqpy",
+	"singTime": 1,
+	"onRight": false,
+	"skin": "Default",
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "MISS FLIPPY DOWN",
+			"fps": 24,
+			"key": "singDOWNmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIPPY UP",
+			"fps": 24,
+			"key": "singUPmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY DOWN",
+			"fps": 24,
+			"key": "singDOWN",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY IDLE",
+			"fps": 24,
+			"key": "idle",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIPPY LEFT",
+			"fps": 24,
+			"key": "singLEFTmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY LEFT",
+			"fps": 24,
+			"key": "singLEFT",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY RIGHT",
+			"fps": 24,
+			"key": "singRIGHT",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY UP",
+			"fps": 24,
+			"key": "singUP",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIPPY RIGHT",
+			"fps": 24,
+			"key": "singRIGHTmiss",
+			"loopTime": 3,
+			"loop": false
+		}
+	],
+	"sound": "hey"
+}

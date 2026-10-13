@@ -1,0 +1,61 @@
+{
+  "version": "2.2.4",
+  "songName": "Bopeebo (Stick Mix)",
+  "artist": "MMaker156",
+  "charter": "Estrogen_Storm, Baldrek",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+  "album": "stickvolume1",
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "henry",
+      "girlfriend": "ellie",
+      "opponent": "dad",
+      "altInstrumentals": [],
+      "opponentVocals": [
+        "dad"
+      ],
+      "playerVocals": [
+        "henry"
+      ]
+    },
+    "stage": "mainStageErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 2,
+      "normal": 2,
+      "hard": 2
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 100,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

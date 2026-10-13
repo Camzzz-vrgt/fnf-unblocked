@@ -1,0 +1,13 @@
+import funkin.play.notes.notekind.ScriptedNoteKind;
+
+class trickyDeathNote extends ScriptedNoteKind {
+
+    function new() {
+        super("trickyDeathNote", "[Tricky] Death Note", "trickyDeathNote");
+        this.scoreable = false;
+    }
+
+    function onNoteMiss(callback) {
+	    callback.cancelEvent();
+	}
+}

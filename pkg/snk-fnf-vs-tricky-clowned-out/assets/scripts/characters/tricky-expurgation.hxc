@@ -1,0 +1,150 @@
+import flixel.text.FlxText;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.util.FlxTimerManager;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class TrickyExpurgationCharacter extends MultiAnimateAtlasCharacter{
+    function new()
+    {
+        super('tricky-expurgation');
+    }
+
+    var timerMan:FlxTimerManager = new FlxTimerManager();
+    var staticSprite:FunkinSprite;
+    var word:FlxText;
+    var trickyWords = ["SUFFER", "INCORRECT", "INCOMPLETE", "INSUFFICIENT", "INVALID", "CORRECTION", "MISTAKE", "REDUCE", "ERROR", "ADJUSTING", "IMPROBABLE", "IMPLAUSIBLE", "MISJUDGED", "FATUOUS", "INSIPID", "MORE", "COME ON", "FREAK", "SCUMBAG", "OMFG"];
+    var missWords = ["TERRIBLE", "WASTE", "MISS CALCULTED", "PREDICTED", "FAILURE", "DISGUSTING", "ABHORRENT", "FORESEEN", "CONTEMPTIBLE", "PROGNOSTICATE", "DISPICABLE", "REPREHENSIBLE", "UNSURPRISING", "PREDETERMINED", "CYAN RAT"];
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        state = PlayState.instance;
+        if (state == null) return;
+        
+        word = new FlxText(0, 0, 0, "RARRR", 10);
+        word.setFormat(Paths.font('impact.ttf'), 120, 0xFFff0000);
+        word.zIndex = this.zIndex + 1;
+
+        staticSprite = FunkinSprite.create(0, 0, 'characters/tricky/trickyM/TrickyStatic');
+        staticSprite.alpha = 0.4;
+        staticSprite.setGraphicSize(FlxG.width, 0);
+        staticSprite.updateHitbox();
+        staticSprite.cameras = [state.camHUD];
+        staticSprite.zIndex = state.healthBarBG.zIndex - 1;
+
+        for (i in [word, staticSprite]) {
+            i.visible = false;
+            state.add(i);
+        }
+        state.refresh();
+        this.visible = false;
+	}
+
+    function onCountdownStart(event:CountdownScriptEvent){
+        super.onCountdownStart(event);
+        if (this.visible == false) {
+            event.cancel(); // CANCEL THE COUNTDOWN!
+            this.playAnimation("intro", true);
+        }
+    }
+
+    function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false) {
+        var state = PlayState.instance;
+        if (state == null) return;
+        var stage = state.currentStage;
+        if (stage == null) return;
+        switch (name){
+            case "singDOWN":
+                stage.getNamedProp("handz")?.visible = true;
+                stage.getNamedProp("handz")?.animation.play("down", true);
+            case "singDOWN-hold":
+                stage.getNamedProp("handz")?.visible = true;
+            case "intro":
+                if (!this.visible){
+                    FunkinSound.playOnce(Paths.sound("tricky/expurgation-intro"));
+                    this.visible = true;
+                    new FlxTimer(timerMan).start(0.7, _ -> {
+                        PlayState.instance.startCountdown();
+                    });
+                }
+                else return;
+            default:
+                stage.getNamedProp("handz")?.visible = false;
+        }
+        super.playAnimation(name, restart, ignoreOther);
+
+        if (FlxG.random.bool(8)) trickyStatic();
+    }
+
+	public override function onNoteHit(event:HitNoteScriptEvent) {
+        super.onNoteHit(event);
+
+        if (PlayState.instance == null) return;
+        if (!event.note.noteData.getMustHitNote() && event.note.noteData.getDirection() == 2) PlayState.instance.currentStage?.getNamedProp("knives")?.animation.play("up");
+	}
+
+    override function onStepHit(event){
+        super.onStepHit(event);
+        state = PlayState.instance;
+        if (state == null || state.opponentStrumline.holdNotes.members.length == 0) return;
+
+        for (holdNote in state.opponentStrumline.holdNotes.members)
+        {
+            if (holdNote == null || !holdNote.alive) continue;
+
+            if (holdNote.hitNote && !holdNote.missedNote && holdNote.sustainLength > 0)
+            {
+                if (state.currentStage != null && state.currentStage.getDad() != null && state.currentStage.getDad().isSinging())
+                {
+                    state.currentStage.getDad().holdTimer = 0;
+                    state.currentStage.getDad().playSingAnimation(holdNote.noteData.getDirection(), false);
+                }
+            }
+        }
+    }
+
+	var totalElapsed:Float = 0.0;
+
+    function onUpdate(event:UpdateScriptEvent){
+        super.onUpdate(event);
+
+		timerMan?.update(event?.elapsed ?? 0);
+        if (!staticSprite?.visible || PlayState.instance.isChartingMode) return;
+
+
+        staticSprite?.y = FlxG.random.float(0,FlxG.height - staticSprite.height);
+        word.angle = FlxG.random.float(-10, 10);
+    }
+
+    function onNoteGhostMiss(event:GhostMissNoteScriptEvent):Void
+    {
+        super.onNoteGhostMiss(event);
+        if (staticSprite.visible || PlayState.instance.isChartingMode) return;
+        trickyStatic(true);
+    }
+
+    function onNoteMiss(event:NoteScriptEvent):Void
+    {
+        super.onNoteMiss(event);
+        if (staticSprite.visible || PlayState.instance.isChartingMode) return;
+        trickyStatic(true);
+    }
+
+    function trickyStatic(miss:Bool = false){
+        if (staticSprite?.visible || PlayState.instance.isChartingMode || PlayState.instance == null) return;
+        for (i in [word, staticSprite]) i?.visible = true;
+		FunkinSound.playOnce(Paths.sound("tricky/staticSound"));
+        var dad = PlayState.instance.currentStage.getDad();
+        if (!miss) word?.text = trickyWords[FlxG.random.int(1,trickyWords.length) - 1];
+        else word?.text = missWords[FlxG.random.int(1,missWords.length) - 1];
+        word?.updateHitbox();
+        word?.setPosition(dad.x - word.width/2 + FlxG.random.float(0,dad.width), dad.y + FlxG.random.float(0,dad.height - word.height));
+        
+		new FlxTimer(timerMan).start(FlxG.random.float(0.1,0.7), _ -> {
+            for (i in [word, staticSprite]) i.visible = false;
+		});
+    }
+}

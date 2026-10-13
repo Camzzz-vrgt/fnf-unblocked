@@ -1,0 +1,46 @@
+{
+    "version": "1.0.2",
+    "name": "Assault Stage [tricky]",
+    "props": [
+        {
+            "name": "stage",
+            "assetPath": "trickyStages/assault/stage",
+            "position": [-2050, -1400],
+            "zIndex": 10
+        },
+        {
+            "name": "speaker",
+            "assetPath": "trickyStages/assault/Speaker",
+            "position": [-700, -900],
+            "zIndex": 20,
+            "danceEvery": 2,
+            "animType": "animateatlas",
+            "startingAnimation": "idle",
+            "animations": [
+                {
+                    "prefix": "idle",
+                    "animType": "framelabel",
+                    "name": "idle"
+                }
+            ]
+        }
+    ],
+    "characters": {
+        "bf": {
+            "cameraOffsets": [-300, -200],
+            "position": [400, 100],
+            "zIndex": 200
+        },
+        "dad": {
+            "cameraOffsets": [400, -120],
+            "position": [-400, 100],
+            "zIndex": 300
+        },
+        "gf": {
+            "cameraOffsets": [0, 0],
+            "position": [30, -160],
+            "zIndex": 110
+        }
+    },
+    "cameraZoom": 0.65
+}

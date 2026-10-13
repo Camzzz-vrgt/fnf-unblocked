@@ -1,0 +1,40 @@
+{
+	"timeFormat": "ms",
+	"songName": "Fresh (Stick Mix)",
+	"artist": "Baldrek",
+	"charter": "Estrogen_Storm, Baldrek",
+	"playData": {
+		"album": "stickvolume1",
+		"stage": "mainStageErect",
+		"noteStyle": "funkin",
+		"difficulties": [
+			"easy",
+			"normal",
+			"hard"
+		],
+		"characters": {
+      "player": "henry",
+      "girlfriend": "ellie",
+      "opponent": "dad",
+      "altInstrumentals": [],
+      "opponentVocals": [
+		"dad"
+	  ],
+      "playerVocals": [
+        "henry"
+      ]
+	},
+	"ratings": {
+      "easy": 3,
+      "normal": 3,
+	  "hard": 3
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+	},
+	"timeChanges": [
+		{"t": 0, "bpm": 120}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

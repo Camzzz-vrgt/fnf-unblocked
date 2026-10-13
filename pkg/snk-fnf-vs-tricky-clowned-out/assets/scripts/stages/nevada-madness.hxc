@@ -1,0 +1,168 @@
+import flixel.tweens.FlxEase;
+import flixel.text.FlxText;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.util.FlxTimerManager;
+import funkin.effects.IntervalShake;
+import funkin.ui.FullScreenScaleMode;
+import funkin.play.stage.Stage;
+
+class NevadaMadnessStage extends Stage
+{
+	function new()
+	{
+		super('nevada-madness');
+	}
+    var consoleText:FlxText;
+    var consoleStrings = ["ERROR:  function murder() unavailable - FNF mode active"];
+
+    var timerMan:FlxTimerManager = new FlxTimerManager();
+    var front:Bool = true;
+    
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        // These sign variants begin transparent or hidden, then are shown by
+        // the stage logic. Upload their atlases before the first beat.
+        for (texture in [
+            "trickyStages/nevada/madnessSigns/start/spritemap1",
+            "trickyStages/nevada/madnessSigns/front/spritemap1",
+            "trickyStages/nevada/madnessSigns/back/spritemap1",
+            "trickyStages/nevada/madnessSigns/skeleton/spritemap1"
+        ]) FunkinMemory.cacheTexture(Paths.image(texture, "shared"));
+
+        for (sound in [
+            "tricky/skeleton/incitingIndcident",
+            "tricky/skeleton/skeleRun"
+        ]) FunkinMemory.cacheSound(Paths.sound(sound, "shared"));
+
+        front = true;
+
+        state = PlayState.instance;
+        if (state.currentStage == null) return;
+        
+        consoleText = new FlxText(0, 0, 0, consoleStrings[0], 10);
+		consoleText.setFormat('VCR OSD Mono', 20, 0xFFff0000, "left");
+		consoleText.setPosition (10 + FullScreenScaleMode.gameNotchSize.x, 10);
+
+		consoleRect = new FunkinSprite(0, 0).makeGraphic(1, 1, 0xFFff0000);
+		consoleRect.scale.set(4, consoleText.height);
+		consoleRect.updateHitbox();
+        consoleRect.y = consoleText.y;
+
+        for (i in [consoleText, consoleRect]){
+            state.add(i);
+            i.cameras = [state.camCutscene];
+            i.alpha = 0;
+            i.blend = 0;
+        }
+        state.refresh();
+
+        getNamedProp(getSign("stopsign")).animation.finishCallback = function(anim:String){
+            if (anim == "trans") getNamedProp(getSign("stopsign")).visible = false;
+		};
+
+        skeletonChance();
+	}
+
+    var skeletonShit:Array<String> = ["stopsign-sans","stopsign-front-sans","stopsign-back-sans"];
+    var skele:Bool = false;
+    function skeletonChance(){
+
+        skele = FlxG.random.bool(5); //5% chance of dick n balls
+
+        for (i in skeletonShit) getNamedProp(i).visible = skele;
+        for (i in skeletonShit) getNamedProp(i.substring(0,i.length - 5)).visible = !skele;
+        if (skele) FunkinSound.playOnce(Paths.sound("tricky/skeleton/incitingIndcident"));
+
+        trace((skele ? "SKELETON ENGAGED" : "SKELETON OFFLINE"));
+    }
+
+    function onSongEvent(event:SongEventScriptEvent)
+	{
+        if (!skele) return;
+        if (event.eventData.eventKind != "PlayAnimation") return;
+        if (event.eventData.getString("target") != "stopsign") return;
+
+        getNamedProp(getSign("stopsign")).animation.play("trans");
+    }
+
+    function onUpdate(event:UpdateScriptEvent){
+        super.onUpdate(event);
+		timerMan.update(event?.elapsed ?? 0);
+    }
+
+    function getSign(val:String):String{
+        return val + (skele ? "-sans" : "");
+    }
+
+    var intensity:Float = 0.002;
+    function onBeatHit(event:SongTimeScriptEvent) {
+        super.onBeatHit(event);
+
+        if (getNamedProp(getSign("stopsign")).visible && event.beat < 7) return;
+        if (event.beat % 8 == 0){
+            intensity = 0.002;
+            if (front) {
+                if (skele) FunkinSound.playOnce(Paths.sound("tricky/skeleton/skeleRun"));
+                getNamedProp(getSign("stopsign-back")).alpha = 0;
+                getNamedProp(getSign("stopsign-front")).alpha = 1;
+                front = false;
+            }
+            else {
+                if (skele) FunkinSound.playOnce(Paths.sound("tricky/skeleton/skeleRun"), 0.7);
+                getNamedProp(getSign("stopsign-back")).alpha = 1;
+                getNamedProp(getSign("stopsign-front")).alpha = 0;
+                front = true;
+                intensity = 0.001;
+            }
+
+            new FlxTimer(timerMan).start(0.15, _ -> {
+                IntervalShake.shake( PlayState.instance.currentStage , 0.3, 0.02, 0, intensity );
+            });
+        }
+
+        if (event.beat == 16 || event.beat == 250){
+            consolePrint();
+        }
+    }
+
+    var targetText:String;
+
+    function consolePrint(){
+        if (consoleText.alpha != 0) return;
+        consoleRect.alpha = 1;
+        consoleText.alpha = 1;
+        consoleText.text = "";
+        targetText = "- <" + consoleStrings[FlxG.random.int(0,consoleStrings.length - 1)] + ">;";
+        printText();
+    }
+
+    function printText(){
+        if (consoleText.text.length != targetText.length){
+            consoleText.text += targetText.substr(consoleText.text.length, 1);
+            consoleRect.x = consoleText.x + consoleText.width - consoleRect.width;
+            new FlxTimer().start(0.04, function(tmr) { printText(); });
+        }
+        else {
+            consoleRect.alpha = 0;
+            var steppedFade = function(x) {
+                var xSnapped = Math.floor(x * 6)/6;
+                consoleText.alpha = xSnapped;
+            };
+            FlxTween.num(1, 0, 2, { ease: FlxEase.linear }, steppedFade);
+        }
+    }
+
+    function onSongRetry(event:SongRetryEvent) {
+        // skeletonChance();
+
+        if (getNamedProp(getSign("stopsign")).animation.name == "trans"){
+            getNamedProp(getSign("stopsign")).visible = false;
+        }
+    }
+}

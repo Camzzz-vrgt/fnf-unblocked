@@ -1,0 +1,32 @@
+{
+  "version": "2.2.4",
+  "songName": "Darnell (Stick Mix)",
+  "artist": "Shygee",
+  "charter": "Cryfur",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "henry",
+      "girlfriend": "ellie",
+      "opponent": "darnell",
+      "altInstrumentals": [],
+      "opponentVocals": [
+		"darnell"
+	  ],
+      "playerVocals": [
+        "henry"
+      ]
+    },
+    "stage": "phillyStreetsErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 6, "hard": 6 },
+    "album": "stickvolume1",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Chart Editor Import (FNF Legacy)",
+  "timeFormat": "ms",
+  "timeChanges": [
+    { "t": 0, "b": 0, "bpm": 155, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }
+  ]
+}

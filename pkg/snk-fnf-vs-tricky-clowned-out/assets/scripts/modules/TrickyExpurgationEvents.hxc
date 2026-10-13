@@ -1,0 +1,325 @@
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.graphics.FunkinSprite;
+import Std;
+import flixel.util.FlxTimerManager;
+import funkin.Conductor;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.util.TouchUtil;
+import funkin.modding.module.Module;
+import funkin.save.Save;
+import flixel.tweens.FlxTween;
+
+class TrickyExpurgationEvents extends Module {
+
+    var validSong:String = "expurgation";
+
+    var hpGremlin:FunkinSprite;
+    var signPost1:FunkinSprite;
+    var signPost2:FunkinSprite;
+    var signPost3:FunkinSprite;
+
+	public function new() {
+        super('TrickyExpurgationEvents');
+
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+	}
+
+	var timerMan:FlxTimerManager = new FlxTimerManager();
+    var pullingHealth:Bool = false;
+
+    function onSongLoaded(event:ScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+        super.onSongLoaded(event);
+		GameOverSubState.blueBallSuffix = '-tricky-expurgation';
+
+        var state = PlayState.instance; // Initialize the cutscene sprites.
+        // trace("BF Z                             " + currentStage.getBoyfriend());
+
+        // These atlases only appear after gameplay has started.  Force their
+        // first GPU upload during loading instead of on the triggering event.
+        FunkinMemory.cacheTexture(Paths.image("trickyStages/phase4/tricklingHP/spritemap1", "shared"));
+        FunkinMemory.cacheTexture(Paths.image("trickyStages/phase4/signpost/spritemap1", "shared"));
+
+		hpGremlin = new FunkinSprite(0,0).loadTextureAtlas("trickyStages/phase4/tricklingHP", "shared");
+		hpGremlin.zIndex = (state.currentStage?.getBoyfriend()?.zIndex + 1) ?? 110;
+        hpGremlin.cameras = [state.camHUD];
+        hpGremlin.zIndex = state.iconP1?.zIndex + 4;
+        state.add(hpGremlin);
+		hpGremlin.scale.set(0.45, 0.45);
+		hpGremlin.animation.play("start", true);
+        hpGremlin.y = state.iconP1?.y - 680;
+        hpGremlin.visible = false;
+        if (Preferences.downscroll) {
+            hpGremlin.flipY = true;
+            //hpGremlin.y -= 720;
+        }
+
+		signPost1 = new FunkinSprite(0,0).loadTextureAtlas("trickyStages/phase4/signpost", "shared");
+		signPost2 = new FunkinSprite(0,0).loadTextureAtlas("trickyStages/phase4/signpost", "shared");
+		signPost3 = new FunkinSprite(0,0).loadTextureAtlas("trickyStages/phase4/signpost", "shared");
+
+        for (i in [signPost1, signPost2, signPost3]){
+            i.cameras = [state.camHUD];
+            i.zIndex = state.playerStrumline?.zIndex + 1;
+            state.add(i);
+            i.scale.set(0.35, 0.35);
+            i.setPosition(-430, -1200);
+            if(Save.instance.modOptions.get("shouldUsePussyMode")) i.alpha = 0.666;
+            if (i == signPost1) i.x = -330;
+            i.visible = false;
+            if (Preferences.downscroll) {
+                i.flipY = true;
+                i.y -= 720;
+            }
+        }
+
+        thousandYardStare = new FunkinSprite(0,0).makeGraphic(1, 1, 0xFFff0000);
+        thousandYardStare.scale.set(FlxG.width, FlxG.height);
+        thousandYardStare.updateHitbox();
+        thousandYardStare.cameras = [state.camHUD];
+        thousandYardStare.alpha = 0.001;
+        state.add(thousandYardStare);
+
+        if(FlxG.onMobile){
+            hitbox = new FunkinSprite(state.currentStage.getGirlfriend().x + 1100, state.currentStage.getGirlfriend().y + 700).makeGraphic(700, 500, FlxColor.TRANSPARENT);
+            hitbox.updateHitbox();
+            state.add(hitbox);
+        }
+        
+
+		state.currentStage.refresh();
+        PlayState.instance.mayPauseGame = false;
+    }
+
+    var strength:Float = 1;
+    var duration:Float = 1;
+
+    var needaDodge:Bool = false;
+    var shouldDodge:Bool = false;
+    var dodged:Bool = false;
+    var dodgeSuccess:Bool = false;
+
+	public function onUpdate(event:UpdateScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+        var state = PlayState.instance;
+		super.onUpdate(event);
+		if (!state.isGamePaused) timerMan.update(event?.elapsed ?? 0);
+        for (i in [signPost1, signPost2, signPost3]) if (i?.isAnimationFinished() && i?.visible) i?.visible = false;
+
+        if (hpGremlin?.visible) {
+            if (hpGremlin?.isAnimationFinished()) {
+                if (hpGremlin?.animation.name == "start") doHealthPull(duration);
+                else if (hpGremlin?.animation.name == "loop") hpGremlin?.animation.play("loop", true);
+                else if (hpGremlin?.animation.name == "end") {
+                    hpGremlin?.visible = false;
+                    pullingHealth = false;
+                }
+            }
+
+            if (hpGremlin?.animation.name == "loop" || hpGremlin?.animation.name == "start") if (hpGremlin?.x != state.iconP1.x - 500) hpGremlin?.x = state.iconP1?.x - 500;
+
+            // Botplay is intended to complete a chart unattended, so scripted
+            // health-drain hazards must not be able to end the song.
+            if (pullingHealth && !state.isBotPlayMode && hpGremlin?.animation.name == "loop") {
+                strength = state.health * 0.5;
+                state.health -= (strength * (Save.instance.modOptions.get("shouldUsePussyMode") ? 0.25 : 0.5) * event?.elapsed ?? 0);
+            }
+        }
+
+        if (needaDodge){
+            if (state.currentStage == null) return;
+            if ((FlxG.onMobile ? (TouchUtil.pressAction(hitbox) || FlxG.keys.justPressed.SPACE) : FlxG.keys.justPressed.SPACE) && !dodged) performDodge(state);
+        }
+	}
+
+    override function onCountdownStart(event:Dynamic):Void {
+        if(PlayState.instance?.currentChart?.song?.id != validSong) return;
+        PlayState.instance.mayPauseGame = false;
+
+        event.cancel();
+        PlayState.instance.isInCutscene = true;
+        new FlxTimer().start(0.6, _ -> {
+            PlayState.instance.isInCountdown = true;
+            PlayState.instance.isInCutscene = false;
+        });
+    }
+
+    function performDodge(state:PlayState):Void {
+        if (dodged || state.currentStage == null) return;
+
+        state.currentStage.getBoyfriend()?.playAnimation("dodge");
+        dodged = true;
+        if (shouldDodge) {
+            FunkinSound.playOnce(Paths.sound("tricky/pillar-success"));
+            dodgeSuccess = true;
+        }
+        else {
+            // This optional effect is absent from the supplied mod assets.
+            if (Assets.exists(Paths.sound("ANGRY"))) FunkinSound.playOnce(Paths.sound("ANGRY"), 2);
+            dodgeSuccess = false;
+        }
+    }
+
+    function onSongRetry(event:ScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+        super.onSongRetry(event);
+        for (i in [hpGremlin, signPost1, signPost2, signPost3]) {
+            i.visible = false;
+            i.destroy();
+        }
+    }
+
+    var usedBeat:Int = 0;
+
+	function onSongEvent(event:SongEventScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+		super.onSongEvent(event);
+        if (event.eventData.eventKind == "PlayAnimation") {
+            if (event.eventData.getString("target") == "healthTricky") {
+                hpGremlin?.visible = true;
+                hpGremlin.animation.play("start", true);
+                duration = Std.parseFloat(event.eventData.getString("anim")) ?? 1;
+            }
+
+            if (event.eventData.getString("target") == "noteBlock") {
+                switch (event.eventData.getString("anim")) {
+                    case "1":
+                        signPost1?.visible = true;
+		                signPost1?.animation.play("block1", true);
+                    case "2":
+                        signPost2?.visible = true;
+		                signPost2?.animation.play("block2", true);
+                    case "3":
+                        signPost3?.visible = true;
+		                signPost3?.animation.play("block3", true);
+                    default:
+                }
+            }
+            if (event.eventData.getString("target") == "gf" && (event.eventData.getString("anim") == "warn")) {
+                needaDodge = true;
+                dodged = false;
+                dodgeSuccess = false;
+                usedBeat = Conductor.instance.currentBeat;
+            }
+		}
+	}
+
+    function doHealthPull(dur:Int){
+        pullingHealth = true;
+        hpGremlin?.animation.play("loop", true);
+        new FlxTimer(timerMan).start(dur, _ -> {
+            hpGremlin?.animation.play("end", true);
+        });
+    }
+
+    function onBeatHit(event){
+        super.onBeatHit(event);
+        var state = PlayState.instance;
+        if (state?.currentStage == null) return;
+
+        if(event.beat == 1) PlayState.instance.mayPauseGame = true;
+
+        if(needaDodge){
+            switch(event.beat){
+                case usedBeat + 1:
+                    thousandYardStare.alpha = 0.3;
+		            FunkinSound.playOnce(Paths.sound("tricky/pillarCount"), 2);
+                    FlxTween.tween(thousandYardStare, {alpha: 0}, 0.1);
+                    if(FlxG.onMobile){
+                        state.currentStage.getGirlfriend().color = FlxColor.RED;
+                        FlxTween.color(state.currentStage.getGirlfriend(), 0.2, state.currentStage.getGirlfriend().color, 0xFFFFFFFF);
+                    }
+                case usedBeat + 2:
+                    thousandYardStare.alpha = 0.3;
+		            FunkinSound.playOnce(Paths.sound("tricky/pillarCount"), 2);
+                    FlxTween.tween(thousandYardStare, {alpha: 0}, 0.1);
+                    if(FlxG.onMobile){
+                        state.currentStage.getGirlfriend().color = FlxColor.RED;
+                        FlxTween.color(state.currentStage.getGirlfriend(), 0.2, state.currentStage.getGirlfriend().color, 0xFFFFFFFF);
+                    }
+                case usedBeat + 3:
+                    thousandYardStare.alpha = 0.3;
+		            FunkinSound.playOnce(Paths.sound("tricky/pillarCount"), 2);
+                    FlxTween.tween(thousandYardStare, {alpha: 0}, 0.1);
+                    if(FlxG.onMobile){
+                        state.currentStage.getGirlfriend().color = FlxColor.RED;
+                        FlxTween.color(state.currentStage.getGirlfriend(), 0.2, state.currentStage.getGirlfriend().color, 0xFFFFFFFF);
+                    }
+                    shouldDodge = true;
+                    if (state.isBotPlayMode) performDodge(state);
+                case usedBeat + 4:
+                    if(!dodgeSuccess && !state.isBotPlayMode){
+                        GameOverSubState.blueBallSuffix = '-tricky-expurgation-pillar';
+                        PlayState.instance.health = 0;
+                    } else PlayState.instance.currentStage.getNamedProp("pillar")?.animation.play("slam");
+                    needaDodge = false;
+            }
+        }
+    }
+
+	public override function onNoteHit(event:HitNoteScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+        var state = PlayState.instance;
+		if (event.note.noteData.getMustHitNote()) {
+            switch (event.note.kind) {
+                case "trickyDeathNote": 
+                    if (state.isBotPlayMode || event.isComboBreak) event.cancel();
+                    else {
+                        if(!Save.instance.modOptions.get("shouldUsePussyMode")) state.health = 0;
+                        else{
+                            state.health -= 1;
+                            state.currentStage.getBoyfriend().playSingAnimation(event.note.noteData.getDirection(), true, '');
+                            event.shouldPropagate = false;
+                            
+                            event.doesNotesplash = false;
+                        }
+                    }
+                    trace(event.judgement, event.noteDiff);
+                default: super.onNoteHit(event);
+            }
+        }
+	}
+
+	public override function onNoteMiss(event:NoteScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+        if (event.note.kind == "trickyDeathNote") return; 
+        super.onNoteMiss(event);
+        if (!PlayState.instance.isBotPlayMode) PlayState.instance.health -= Save.instance.modOptions.get("shouldUsePussyMode") ? 0.1 : 0.2;
+	}
+
+	public override function onGameOver(event:ScriptEvent) {
+        if (PlayState.instance == null) return;
+        if (PlayState.instance.currentSong.id != validSong) return;
+
+        var state = PlayState.instance;
+
+        super.onGameOver(event);
+        for (i in [hpGremlin, signPost1, signPost2, signPost3]) {
+            i.visible = false;
+            i.destroy();
+        }
+
+        // bc marc is a bitch baby boy and doesn't know what he's talking about LMAO :3
+        
+        for(i in [signPost1, signPost2, signPost3]){
+            state.remove(i);
+            state.insert(10000, i);
+        }
+	}
+}

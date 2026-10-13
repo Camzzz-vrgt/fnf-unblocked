@@ -1,0 +1,59 @@
+{
+    "version": "1.0.2",
+    "name": "Nevada",
+    "props": [
+        {
+            "assetPath": "trickyStages/nevada/ground1",
+            "name": "ground",
+            "position": [-2000, -450],
+            "zIndex": 40
+        },
+        {
+            "assetPath": "trickyStages/nevada/bgBuildings1",
+            "name": "bgBuildings",
+            "position": [-1370, -850],
+            "scroll": [0.8, 1],
+            "zIndex": 30
+        },
+        {
+            "assetPath": "trickyStages/nevada/bgMountain1",
+            "name": "bgMountain",
+            "position": [310, -768],
+            "scroll": [0.8, 1],
+            "zIndex": 30
+        },
+        {
+            "assetPath": "trickyStages/nevada/farbackground",
+            "name": "farBack",
+            "position": [-1720, -600],
+            "scroll": [0.7, 1],
+            "color": "#1b1b1b",
+            "zIndex": 20
+        },
+        {
+            "assetPath": "trickyStages/nevada/stopsign",
+            "name": "stopsign",
+            "position": [-1159, -987],
+            "zIndex": 80
+        }
+    ],
+    "characters": {
+        "bf": {
+            "cameraOffsets": [-250, -180],
+            "position": [500, 50],
+            "zIndex": 100
+        },
+        "dad": {
+            "cameraOffsets": [250, -80],
+            "position": [-500, 0],
+            "zIndex": 100
+        },
+        "gf": {
+            "cameraOffsets": [0, 0],
+            "position": [-50, -150],
+            "scale": 1.1,
+            "zIndex": 90
+        }
+    },
+    "cameraZoom": 0.6
+}

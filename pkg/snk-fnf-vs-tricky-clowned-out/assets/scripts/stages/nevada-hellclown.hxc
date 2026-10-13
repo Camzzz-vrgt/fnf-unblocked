@@ -1,0 +1,67 @@
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterType;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.FunkinMemory;
+import funkin.play.stage.Stage;
+
+class NevadaHellclownStage extends Stage
+{
+	function new()
+	{
+		super('nevada-hellclown');
+	}
+
+	var tankmanRim:DropShadowShader;
+
+    var adjustColor = [-50, 0, 0, 0];//brightness hue contrast saturation
+
+	override function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        // Hank starts hidden and rises on a later song event.
+        FunkinMemory.cacheTexture(Paths.image("trickyStages/hellclownStage/hank/spritemap1", "shared"));
+        FunkinMemory.cacheSound(Paths.sound("tricky/menu/burnSound"));
+
+		var rim = new DropShadowShader();
+		rim.setAdjustColor(adjustColor[0], adjustColor[1], adjustColor[2], adjustColor[3]);
+    	rim.color = 0xFFFF0004;
+		getNamedProp("hank").shader = rim;
+		rim.attachedSprite = getNamedProp("hank");
+        rim.angle = 180;
+        getNamedProp("hank").animation.onFrameChange.add(function() { rim.updateFrameInfo(getNamedProp("hank").frame);});
+	}
+
+	override function onUpdate(event:ScriptEvent)
+	{
+		super.onUpdate(event);
+	}
+	
+	public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		getBoyfriend().shader = null;
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+		if (charType == CharacterType.DAD) return;
+
+		var rim = new DropShadowShader();
+		rim.setAdjustColor(adjustColor[0], adjustColor[1], adjustColor[2], adjustColor[3]);
+    	rim.color = 0xFFFF0004;
+		character.shader = rim;
+		rim.attachedSprite = character;
+		switch(charType){
+			case CharacterType.BF:
+				rim.angle = 120;
+				character.animation.onFrameChange.add(function() { if (getBoyfriend() != null) { rim.updateFrameInfo(getBoyfriend().frame); }});
+
+			case CharacterType.GF:
+				rim.angle = 135;
+				character.animation.onFrameChange.add(function() { rim.updateFrameInfo(getGirlfriend().frame);});
+
+			default:
+		}
+	}
+}

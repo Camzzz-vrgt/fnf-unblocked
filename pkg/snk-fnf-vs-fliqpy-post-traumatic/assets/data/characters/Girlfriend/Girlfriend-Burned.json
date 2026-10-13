@@ -1,0 +1,86 @@
+{
+	"aspect": "Default",
+	"icon": "gf",
+	"position": [
+		-212.159090909091,
+		236.765151515152
+	],
+	"scale": 1,
+	"image": "burned/Default",
+	"name": "Girlfriend",
+	"script": "",
+	"color": "#75ff73",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"onRight": false,
+	"camera": [
+		-10,
+		-100
+	],
+	"deathCharacter": "Boyfriend",
+	"animations": [
+		{
+			"symbol": "GIRLFRIEND BURNED INTRO",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "intro",
+			"indices": []
+		},
+		{
+			"symbol": "GIRLFRIEND BURNED HEY",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "hey",
+			"indices": []
+		},
+		{
+			"symbol": "GIRLFRIEND BURNED IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"symbol": "GIRLFRIEND BURNED IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"symbol": "GIRLFRIEND BURNED IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceRight",
+			"indices": [
+				6,
+				7,
+				8,
+				9
+			]
+		},
+		{
+			"indices": [
+				0
+			],
+			"symbol": "GIRLFRIEND BURNED INTRO",
+			"fps": 26,
+			"key": "scared",
+			"loopTime": 0,
+			"loop": true
+		}
+	],
+	"danceIdle": true
+}

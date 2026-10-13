@@ -1,0 +1,91 @@
+{
+	"aspect": "Default",
+	"icon": "gf",
+	"position": [
+		-80.5882352941176,
+		170
+	],
+	"scale": 1,
+	"zoom": 0.8,
+	"color": "#75ff73",
+	"name": "Girlfriend",
+	"image": "default/Default",
+	"antialiasing": true,
+	"death": "fnf_loss_sfx",
+	"camera": [
+		283.793103448276,
+		495.123152709361
+	],
+	"onRight": false,
+	"danceIdle": true,
+	"animations": [
+		{
+			"loop": true,
+			"symbol": "GIRLFRIEND IDLE",
+			"fps": 26,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "GIRLFRIEND MIME",
+			"fps": 24,
+			"loopTime": 0,
+			"key": "mime",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "GIRLFRIEND HEY",
+			"fps": 26,
+			"loopTime": 0,
+			"key": "hey",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "GIRLFRIEND IDLE",
+			"fps": 26,
+			"key": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": false,
+			"symbol": "GIRLFRIEND IDLE",
+			"fps": 26,
+			"key": "danceRight",
+			"indices": [
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		}
+	]
+}

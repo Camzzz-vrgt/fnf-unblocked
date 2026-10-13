@@ -1,0 +1,27 @@
+import funkin.audio.FunkinSound;
+import StringTools;
+import funkin.ui.UIState;
+import funkin.modding.module.Module;
+
+using StringTools;
+
+class TrickyFreeplayExpurgationWarningModule extends Module {
+
+	public function new(){
+		super('TrickyFreeplayExpurgationWarningModule');
+	}
+    
+    function onCapsuleSelected(event:CapsuleScriptEvent) {
+        if (event.capsule.freeplayData?.data?.id == "expurgation") {
+            event.capsule.onConfirm = () -> {
+                enterExpurgationWarningState(event.difficultyId);
+            }
+		}
+    }
+
+	function enterExpurgationWarningState(varString:String) {
+		FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+		FlxG.state.subState.uiStateMachine.transition(UIState.Interacting);
+		FlxG.state.subState.openSubState(new ExpurgationWarningState(varString));
+	}
+}

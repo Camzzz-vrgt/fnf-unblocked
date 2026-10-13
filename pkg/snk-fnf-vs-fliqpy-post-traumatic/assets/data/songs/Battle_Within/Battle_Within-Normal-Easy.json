@@ -1,0 +1,7216 @@
+{
+	"song": {
+		"player": 1,
+		"voices": true,
+		"style": "Wammy",
+		"events": [],
+		"characters": [
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				true,
+				"W0_Happy",
+				"Boyfriend",
+				0
+			],
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				false,
+				"W0_Angry",
+				"Opponent",
+				0
+			],
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				false,
+				"W1_Happy",
+				"Boyfriend",
+				0
+			],
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				true,
+				"W1_Angry",
+				"Opponent",
+				0
+			],
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				false,
+				"W2_Happy",
+				"Boyfriend",
+				0
+			],
+			[
+				"Fliqpy",
+				[
+					0,
+					0
+				],
+				1,
+				true,
+				"W2_Angry",
+				"Opponent",
+				0
+			]
+		],
+		"strums": [
+			{
+				"keys": 4,
+				"style": "Wammy_Angry",
+				"sections": [
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								1000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								1400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								1800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								2200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								2600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								3800,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								4400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								3200,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								5000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								6200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								6400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								6800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								8200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								9200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								8600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								9600,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10200,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								11400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								11800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								12400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								12800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								13400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								14000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								14600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								15000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								15400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								15800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								16000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								16400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								16600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								19200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								19600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								20800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								22400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								23000,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								23400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								25400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								25000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								25600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								26000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								26400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								26800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								27400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								27800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								28200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								28800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								29200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								29600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								30000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								30400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								30800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								31200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								31600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								32000,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								38400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								38800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								39200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								39600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								39800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								40600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								40200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								41000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								41400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								41600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								42400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								42900,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								42000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								43200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								43600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								44000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								44400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								44600,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								45000,
+								2,
+								1300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								51200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								51600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								53000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								53400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								53800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								54400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								54800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								56200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								56600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								57000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								57200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								57600,
+								0,
+								1200,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								59000,
+								1,
+								700,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								60000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								60400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								60800,
+								3,
+								900,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								62200,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								62600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								63000,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								64000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								64400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								64800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								65200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								65600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66800,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								67200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								67600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								68000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								68400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								69000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								69400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								69800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								70400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71000,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								72000,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								73000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								73200,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								73600,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								75200,
+								2,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								76800,
+								3,
+								100,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								77000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								77400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								78200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								77800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								78600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								79400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								79000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								79800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								80000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								80400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								80800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								81200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								81800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								82200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								82600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								83000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								83200,
+								0,
+								1100,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								88200,
+								1,
+								1300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								89600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								90000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								90400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								90800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								91400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								91800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								92400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								92800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								93000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								93400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								93650,
+								3,
+								200,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								94000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								94250,
+								2,
+								200,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								94600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								95000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								95400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								95800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								96000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								96400,
+								1,
+								1100,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								102400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								102800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								103800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								103200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								103600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								104200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								104600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								105000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								105200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								105600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								107400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								108200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								108600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								108800,
+								0,
+								1100,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								110200,
+								1,
+								900,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								111200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111600,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								112000,
+								0,
+								600,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								113000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								113400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								113800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								115200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								115600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								116000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								116400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								116800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								117200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								117600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								118000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								118400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								118800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								120200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								120600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								121200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								121600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122200,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122800,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								123200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								123800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								124200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								124400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								124800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126000,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								126400,
+								2,
+								700,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								128200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								128600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								129000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								129400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								129800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								131200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								131600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								131800,
+								2,
+								200,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								133000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								133400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								134000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								134400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								135000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								135600,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								137600,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								138200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								138800,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								141000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								141400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								141800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								142200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								147400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								148600,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								147800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								148200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					}
+				],
+				"characters": [
+					1, 3, 5
+				],
+				"playable": true
+			},
+			{
+				"keys": 4,
+				"style": "Wammy",
+				"sections": [
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								3400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								4200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								3800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								4600,
+								2,
+								100,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								5000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								6200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								6400,
+								0,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								8200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								9000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								9200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								8600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								9600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10800,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								11400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								11800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								12000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								12400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								12800,
+								3,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								16000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								16600,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								17000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								17400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								17800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								18200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								18600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								19200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								19800,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								21000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								22400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								23200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								23600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								24000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								24400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								24600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								25000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								25400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								25600,
+								1,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								32000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								32800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								33200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								32400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								33400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								33800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34900,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								35200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								35400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								35600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								35800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								36800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								37200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								38000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								37600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								38400,
+								3,
+								400,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								44800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								45200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								45600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								46200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								46600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								47000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								47400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								47800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								48000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								48400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								48800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								49100,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								49600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								50000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								50400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								50800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								51200,
+								1,
+								1100,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52600,
+								3,
+								900,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								53600,
+								2,
+								700,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								54400,
+								1,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55800,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								56200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								56600,
+								1,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								57200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								57600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								58000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								58400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								58800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								59000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								59800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								60200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								59400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								60400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								60800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								62200,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								62600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								63000,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								63400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								64000,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								64600,
+								2,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								65200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								65600,
+								0,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								67200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								67800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								68200,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								68600,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								69000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								69400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								70000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								70400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								70800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								72000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72800,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								73200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								73600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74600,
+								2,
+								100,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								75000,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								75400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								75800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								76400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								76000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								76800,
+								2,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								83200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								84000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								84400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								84600,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								83600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								85000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								85800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								85400,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								86200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								86400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								86800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								87200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								87400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								87800,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								88000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								88400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								89000,
+								2,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								88800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								89600,
+								1,
+								400,
+								3,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								96200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								96600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								97000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								97400,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								97800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								98200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								98400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								98800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								99200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								99400,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								99800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								100000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								100400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								100600,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								101000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								101400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								101800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								102200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								102400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								102800,
+								1,
+								900,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								103800,
+								0,
+								900,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								104800,
+								2,
+								700,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								105600,
+								3,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107000,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								107400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107800,
+								1,
+								500,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								108400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								108800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								109200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								110200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								109600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								110000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								110600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								112000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								113200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								113400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112400,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								113800,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114600,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								115000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								115200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								115800,
+								3,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								116400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								116800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								117400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								118000,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								118400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119000,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119400,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119800,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								120200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								120600,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								121200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								121600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								123200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								124000,
+								0,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								124400,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								123800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								123600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								124800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								126600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								127000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								127400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								127800,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								128000,
+								0,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								134600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								135400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								135800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								135000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								136200,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								136600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								136800,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								137200,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								137600,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								138200,
+								2,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								138800,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								139400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								139800,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								140200,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								140400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								140800,
+								2,
+								1500,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								144200,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								145000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								145400,
+								2,
+								600,
+								2,
+								"Default",
+								[],
+								[]
+							],
+							[
+								144600,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								150600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								151400,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								151600,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								151000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								152000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								152600,
+								1,
+								300,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								153200,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								152400,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": [
+							[
+								153600,
+								2,
+								1500,
+								0,
+								"Default",
+								[
+									[
+										"Wammy_Note",
+										[],
+										"OnMiss"
+									]
+								],
+								[]
+							]
+						]
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					},
+					{
+						"characters": [
+							0
+						],
+						"changeCharacters": false,
+						"changeAlt": false,
+						"notes": []
+					}
+				],
+				"characters": [
+					0, 2, 4
+				],
+				"playable": true,
+				"friendly": true
+			}
+		],
+		"difficulty": "Easy",
+		"song": "Battle_Within",
+		"stage": "Wammy_Transit",
+		"sections": [
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 1,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"character": 0,
+				"strum": 0,
+				"bpm": 150,
+				"changeBPM": false
+			}
+		],
+		"category": "Normal",
+		"bpm": 150,
+		"speed": 2.0
+	}
+}

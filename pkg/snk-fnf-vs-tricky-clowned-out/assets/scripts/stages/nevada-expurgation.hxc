@@ -1,0 +1,152 @@
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterType;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.play.PlayState;
+import funkin.effects.IntervalShake;
+import funkin.play.stage.Stage;
+
+class NevadaExpurgationStage extends Stage
+{
+	function new()
+	{
+		super('nevada-expurgation');
+	}
+
+    var adjustColor = [-30, -17, -5, -20];//brightness hue contrast saturation
+	var totalElapsed:Float = 0.0;
+
+    var floatingStartYs = [];
+    var floatingProps = ["rock1", "rock2", "pebble1", "pebble2", "pebble3", "pebble4"];
+    var floatingDistances = [40, -50, 30, -25, 20, -25];
+    var floatingSpeeds = [1, 1.1, 0.7, 0.65, 0.6, 0.55];
+
+	override function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+		totalElapsed = 0;
+
+        // The following images are hidden or created by later song events.
+        // Cache and render them now so their first appearance cannot stall HTML5.
+        for (texture in [
+            "trickyStages/phase4/skeleton/spritemap1",
+            "trickyStages/phase4/tricklingBack/spritemap1",
+            "trickyStages/phase4/tricklingLeft/spritemap1",
+            "trickyStages/phase4/tricklingRight/spritemap1",
+            "trickyStages/phase4/tricklingHP/spritemap1",
+            "trickyStages/phase4/signpost/spritemap1",
+            "trickyStages/phase4/pillar/spritemap1",
+            "characters/tricky/trickyM/TrickyStatic"
+        ]) FunkinMemory.cacheTexture(Paths.image(texture, "shared"));
+
+        for (sound in [
+            "tricky/skeletonIntro",
+            "tricky/pillarCount",
+            "tricky/pillar-success",
+            "tricky/expurgation-intro",
+            "tricky/staticSound"
+        ]) FunkinMemory.cacheSound(Paths.sound(sound, "shared"));
+
+        for (i in ["handz", "skeleton", "tricklingBack", "tricklingLeft", "tricklingRight"]) {
+            var rim = new DropShadowShader();
+            rim.setAdjustColor(adjustColor[0], adjustColor[1], adjustColor[2], adjustColor[3]);
+            rim.color = 0xFFF5D9DB;
+            rim.angle = 75;
+            getNamedProp(i)?.shader = rim;
+            rim.attachedSprite = getNamedProp(i);
+            getNamedProp(i)?.animation.onFrameChange.add(function() { rim.updateFrameInfo(getNamedProp(i).frame);});
+        }
+        getNamedProp("skeleton")?.visible = false;
+        getNamedProp("tricklingBack")?.visible = false;
+
+        for (i in floatingProps) floatingStartYs.push( getNamedProp(i).y );
+	}
+
+    function onSongRetry(event:ScriptEvent) {
+        super.onSongRetry(event);
+
+        getNamedProp("skeleton")?.visible = false;
+    }
+
+	override function onUpdate(event:ScriptEvent) {
+		super.onUpdate(event);
+
+        for (i in ["skeleton", "handz", "tricklingLeft", "tricklingRight", "tricklingBack"]) if (getNamedProp(i)?.isAnimationFinished()) getNamedProp(i)?.playAnimation("idle");
+
+		totalElapsed += event?.elapsed ?? 0; // This resulted in a NOR for some reason????
+
+        for (i in floatingProps) {
+            var index = floatingProps.indexOf(i);
+            getNamedProp(i).y = floatingStartYs[index] + Math.cos(totalElapsed * floatingSpeeds[index] ?? 1) * floatingDistances[index] ?? 40;
+        }
+	}
+
+	public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		getBoyfriend().shader = null;
+	}
+
+    function onBeatHit(event:SongTimeScriptEvent) {
+        super.onBeatHit(event);
+
+        if (event.beat % 2 == 0 && FlxG.random.bool()){
+            var lings = ["tricklingLeft", "tricklingRight"];
+            var target = getNamedProp(lings[FlxG.random.int(0,1)]);
+            if ( target.animation.name != "play" ) target.animation.play("play");
+        }
+        if (event.beat == 100){
+            if (!getNamedProp("tricklingBack").visible){
+                getNamedProp("tricklingBack").visible = true;
+                getNamedProp("tricklingBack").animation.play("intro", true);
+            }
+        }
+    }
+
+	function onSongEvent(event:SongEventScriptEvent)
+	{
+		if (event.eventData.eventKind == "PlayAnimation" && event.eventData.getString("target") == "skeletonJIT") {
+            if (getNamedProp("skeleton")?.visible == false) {
+                getNamedProp("skeleton")?.visible = true;
+                getNamedProp("skeleton")?.animation.play("intro");
+                FunkinSound.playOnce(Paths.sound("tricky/skeletonIntro"),4);
+                IntervalShake.shake( PlayState.instance.currentStage , 1, 0.04, 0, 0.003 );
+            }
+		}
+		super.onSongEvent(event);
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+
+        // On HTML5, MultiAnimate characters are drawn limb by limb when the
+        // render texture is disabled. A rim light then follows each limb and
+        // flickers at their overlaps, so keep the stable rim only on Tricky.
+        if (charType == CharacterType.BF || charType == CharacterType.GF) return;
+
+		var rim = new DropShadowShader();
+		rim.setAdjustColor(adjustColor[0], adjustColor[1], adjustColor[2], adjustColor[3]);
+    	rim.color = 0xFFF5D9DB;
+		character.shader = rim;
+		rim.attachedSprite = character;
+		switch(charType){
+			case CharacterType.BF:
+
+				rim.angle = 120;
+				character.animation.onFrameChange.add(function() { if (getBoyfriend() != null) rim.updateFrameInfo(getBoyfriend().frame); });
+
+			case CharacterType.GF:
+
+				rim.angle = 90;
+				character.animation.onFrameChange.add(function() { rim.updateFrameInfo(getGirlfriend().frame); });
+
+			case CharacterType.DAD:
+
+				rim.angle = 75;
+				character.animation.onFrameChange.add(function() { rim.updateFrameInfo(getDad().frame); });
+
+			default:
+		}
+	}
+}

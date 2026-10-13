@@ -1,0 +1,80 @@
+{
+	"aspect": "Default",
+	"position": [
+		-278.785310734463,
+		148.389830508475
+	],
+	"icon": "sniper",
+	"scale": 1,
+	"name": "Soldier",
+	"image": "flame/Default",
+	"color": "#00c6ff",
+	"death": "fnf_loss_sfx",
+	"script": "Soldier_Script",
+	"antialiasing": true,
+	"singTime": 1,
+	"onRight": true,
+	"danceIdle": true,
+	"camera": [
+		108.731381612737,
+		486.928608115049
+	],
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "Hit",
+			"fps": 26,
+			"key": "hit",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "Running",
+			"fps": 26,
+			"key": "running",
+			"loopTime": 0,
+			"loop": true
+		},
+		{
+			"indices": [],
+			"symbol": "ShootingRunning",
+			"fps": 26,
+			"key": "shootingrunning",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "Idle",
+			"fps": 26,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+			"symbol": "Idle",
+			"fps": 26,
+			"key": "danceLeft",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+			"symbol": "Idle",
+			"fps": 26,
+			"key": "danceRight",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "ShootingIdle",
+			"fps": 26,
+			"key": "shooting",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

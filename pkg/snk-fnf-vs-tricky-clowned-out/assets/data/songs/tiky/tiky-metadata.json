@@ -1,0 +1,44 @@
+{
+ "version": "2.2.4",
+ "songName": "Tiky",
+ "artist": "Marc Cea",
+ "charter": "Marc Cea",
+ "offsets": { },
+ "playData": {
+  "songVariations": [
+  ],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf",
+   "girlfriend": "gf",
+   "opponent": "tiky",
+   "opponentVocals": [
+    "tiky"
+   ],
+   "playerVocals": [
+    "bf"
+   ]
+  },
+  "stage": "tikyStage",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 4,
+   "normal": 5,
+   "hard": 7
+  },
+  "album": "tricky"
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 128,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

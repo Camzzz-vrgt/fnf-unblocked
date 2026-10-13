@@ -1,0 +1,63 @@
+import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterType;
+import flixel.math.FlxMatrix;
+import funkin.play.PauseSubState;
+import funkin.FunkinMemory;
+import funkin.play.stage.Stage;
+
+class TrickyAssaultStage extends Stage
+{
+	function new()
+	{
+		super('trickyAssaultStage');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        // This replacement speaker is inserted into GF's Animate atlas and
+        // is not part of the visible stage prop list at song start.
+        FunkinMemory.cacheTexture(Paths.image("trickyStages/assault/trickyBox", "shared"));
+
+		PauseSubState.musicSuffix = '-tricky';
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+
+        /*
+        if (character.characterId == 'nene'){
+            for (i in [
+            character.abot,
+            character.abotViz,
+            character.stereoBG,
+            character.eyeWhites,
+            character.pupil])
+                i?.zIndex = 0;
+        }
+        */
+        if (character.characterId == 'gf'){
+            var speakerPath:String = "trickyStages/assault/trickyBox";
+            var offsetX:Float = -150;
+            var offsetY:Float = -12;
+            
+            switchOutSymbol(character, "speakerbod1", speakerPath, offsetX, offsetY);
+            switchOutSymbol(character, "speakerbod2", speakerPath, offsetX - 7, offsetY);
+            for (piece in ["main speaker bump", "smallspeakerbod1", "small speaker bod2", "small speaker openering"]){
+                for (element in character.getSymbolElements(piece)) element.visible = false;
+            }
+        }
+        refresh();
+	}
+
+    function switchOutSymbol( char:BaseCharacter, targetSymbol:String, newImage:String, offsetX:Float, offsetY:Float){
+        if (!char.anim.hasAnimateAtlas || targetSymbol == null) return;
+        char.replaceSymbolGraphic(targetSymbol, Paths.image(newImage), false);
+        for (i in char.getSymbolElements(targetSymbol)) {
+            var elementMatrix:FlxMatrix = i.matrix;
+            elementMatrix.tx += offsetX;
+            elementMatrix.ty += offsetY;
+        }
+    }
+}

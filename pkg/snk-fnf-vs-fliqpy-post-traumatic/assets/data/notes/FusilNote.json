@@ -1,0 +1,9 @@
+{
+    "Events": [
+        ["Set_Note_Property", ["image", "BULLET_2_NOTE_assets"], "OnCreate"],
+        ["Set_Note_Property", ["useColor", false], "OnCreate"],
+        ["Set_Note_Property", ["canSplash", false], "OnCreated"],
+        ["Shoot_Note", [false, "Fusil"], "OnHit"],
+        ["Shoot_Note", [true, "Fusil"], "OnMiss"]
+    ]
+}

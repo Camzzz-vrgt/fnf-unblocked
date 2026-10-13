@@ -1,0 +1,94 @@
+{
+	"aspect": "Default",
+	"position": [
+		-95,
+		264
+	],
+	"icon": "sniper",
+	"scale": 1,
+	"name": "Sniper",
+	"image": "default/Default",
+	"color": "#2492ff",
+	"death": "soldierDeath",
+	"antialiasing": true,
+	"singTime": 1,
+	"onRight": false,
+	"camera": [
+		190.207792207792,
+		486.74025974026
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "SNIPER DOWN",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "MISS SNIPER DOWN",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singDOWNmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "SNIPER IDLE",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "SNIPER LEFT",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "MISS SNIPER LEFT",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singLEFTmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "SNIPER RIGHT",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "MISS SNIPER RIGHT",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singRIGHTmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "SNIPER UP",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "MISS SNIPER UP",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "singUPmiss",
+			"indices": []
+		}
+	]
+}

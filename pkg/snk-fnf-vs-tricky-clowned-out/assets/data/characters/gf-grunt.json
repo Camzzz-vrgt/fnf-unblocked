@@ -1,0 +1,37 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [0,0],
+	"danceEvery": 2,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"cameraOffsets": [
+		-50,
+		70
+	],
+	"flipX": false,
+	"name": "GF (grunt)",
+	"startingAnimation": "danceLeft",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "shared:characters/tricky/gruntGF",
+	"healthIcon": {
+		"id": "gf"
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+
+	    {
+			"prefix": "danceLeft",
+			"animType": "framelabel",
+			"name": "danceLeft"
+		},
+		{
+			"prefix": "danceRight",
+			"animType": "framelabel",
+			"name": "danceRight"
+		}
+	]
+}

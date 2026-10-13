@@ -1,0 +1,106 @@
+{
+	"color": "#00c6ff",
+	"zoom": 0.8,
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"camera": [
+		212.121212121212,
+		553.030303030303
+	],
+	"emote": "hey",
+	"aspect": "Default",
+	"position": [
+		-9,
+		341
+	],
+	"icon": "bf",
+	"scale": 1,
+	"name": "Boyfriend",
+	"image": "burned/Happy",
+	"singTime": 1,
+	"skin": "Default",
+	"onRight": false,
+	"sound": "hey",
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND BURNED DOWN",
+			"fps": 24,
+			"key": "singDOWNmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED DOWN",
+			"fps": 24,
+			"key": "singDOWN",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND BURNED LEFT",
+			"fps": 24,
+			"key": "singLEFTmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED LEFT",
+			"fps": 24,
+			"key": "singLEFT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND BURNED RIGHT",
+			"fps": 24,
+			"key": "singRIGHTmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED RIGHT",
+			"fps": 24,
+			"key": "singRIGHT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND BURNED UP",
+			"fps": 24,
+			"key": "singUPmiss",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED UP",
+			"fps": 24,
+			"key": "singUP",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED FINAL",
+			"fps": 24,
+			"key": "falling",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND BURNED IDLE",
+			"fps": 24,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

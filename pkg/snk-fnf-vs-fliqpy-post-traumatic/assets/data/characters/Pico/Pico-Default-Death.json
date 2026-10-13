@@ -1,0 +1,46 @@
+{
+	"aspect": "Default",
+	"position": [
+		0,
+		340
+	],
+	"icon": "bf",
+	"scale": 1,
+	"name": "Pico",
+	"image": "default/Death",
+	"color": "#00c6ff",
+	"death": "picoDeath",
+	"antialiasing": true,
+	"singTime": 1,
+	"onRight": false,
+	"camera": [
+		419.264069264069,
+		577.316017316017
+	],
+	"animations": [
+		{
+			"loop": true,
+			"symbol": "PICO RETRY IDLE",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "deathLoop"
+		},
+		{
+			"loop": false,
+			"symbol": "PICO RETRY CONFIRM",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "deathConfirm"
+		},
+		{
+			"loop": false,
+			"symbol": "PICO RETRY ENTRY",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "firstDeath"
+		}
+	]
+}

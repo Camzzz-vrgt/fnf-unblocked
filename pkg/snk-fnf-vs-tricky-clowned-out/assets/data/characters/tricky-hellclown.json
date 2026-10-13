@@ -1,0 +1,82 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [
+		0,
+		20
+	],
+	"danceEvery": 1,
+	"scale": 1.1,
+	"cameraOffsets": [
+		50,
+		80
+	],
+	"name": "HELLCLOWN",
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"assetPath": "shared:characters/tricky/HClown",
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"prefix": "idle",
+			"name": "idle",
+			"looped": true,
+			"animType": "framelabel"
+		},
+		{
+			"prefix": "singRIGHT",
+			"name": "singRIGHT",
+			"animType": "framelabel"
+		},
+		{
+			"prefix": "singLEFT",
+			"name": "singLEFT",
+			"animType": "framelabel"
+		},
+		{
+			"prefix": "singUP",
+			"name": "singUP",
+			"animType": "framelabel"
+		},
+		{
+			"prefix": "singDOWN",
+			"name": "singDOWN",
+			"animType": "framelabel"
+		},
+		{
+			"prefix": "singRIGHT",
+			"name": "singRIGHT-hold",
+			"animType": "framelabel",
+			"frameIndices": [13, 14, 15, 16, 17, 18, 19],
+			"looped": true
+		},
+		{
+			"prefix": "singLEFT",
+			"name": "singLEFT-hold",
+			"animType": "framelabel",
+			"frameIndices": [13, 14, 15, 16, 17, 18, 19],
+			"looped": true
+		},
+		{
+			"prefix": "singUP",
+			"name": "singUP-hold",
+			"animType": "framelabel",
+			"frameIndices": [13, 14, 15, 16, 17, 18, 19],
+			"looped": true
+		},
+		{
+			"prefix": "singDOWN",
+			"name": "singDOWN-hold",
+			"animType": "framelabel",
+			"frameIndices": [13, 14, 15, 16, 17, 18, 19],
+			"looped": true
+		},
+		{
+			"prefix": "pussy",
+			"name": "pussy",
+			"animType": "framelabel"
+		}
+	]
+}

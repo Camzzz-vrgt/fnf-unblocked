@@ -1,0 +1,39 @@
+{
+	"aspect": "Default",
+	"icon": "bf",
+	"position": [
+		-973.436781609195,
+		-386.19540229885
+	],
+	"scale": 1,
+	"script": "Boyfriend_Script",
+	"color": "#00c6ff",
+	"image": "Microphone",
+	"name": "Microphone",
+	"singTime": 1,
+	"antialiasing": true,
+	"death": "fnf_loss_sfx",
+	"camera": [
+		212.121212121212,
+		553.030303030303
+	],
+	"onRight": false,
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "Static",
+			"fps": 26,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "Cinematic",
+			"fps": 24,
+			"key": "cinematic",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

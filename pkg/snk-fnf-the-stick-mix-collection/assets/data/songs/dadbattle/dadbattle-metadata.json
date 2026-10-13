@@ -1,0 +1,41 @@
+{
+	"timeFormat": "ms",
+	"songName": "Dad Battle (Stick Mix)",
+	"artist": "MMaker156",
+	"charter": "Estrogen_Storm, Baldrek",
+	  "album": "stickvolume1",
+	"playData": {
+		  "album": "stickvolume1",
+		"stage": "mainStageErect",
+		"noteStyle": "funkin",
+		"difficulties": [
+			"easy",
+			"normal",
+			"hard"
+		],
+		"characters": {
+      "player": "henryalt",
+      "girlfriend": "ellie",
+      "opponent": "dad",
+      "altInstrumentals": [],
+      "opponentVocals": [
+		"dad"
+	  ],
+      "playerVocals": [
+        "henry"
+      ]
+	},
+	"ratings": {
+      "easy": 4,
+      "normal": 4,
+	  "hard": 4
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+	},
+	"timeChanges": [
+		{"t": 0, "bpm": 180}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

@@ -1,0 +1,71 @@
+import funkin.ui.MusicBeatState;
+import flixel.FlxCamera;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.util.Constants;
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.ui.AtlasText;
+import flixel.group.FlxTypedGroup;
+import flixel.util.FlxAxes;
+
+class TrickyBootScreenState extends ScriptedMusicBeatState {
+
+	public function new() {
+		super();
+	}
+
+	var allowShit = [false, true];
+
+	var texts = ['THIS MOD IS ONLY', 'PLAYABLE ON PC', '', 'SORRY FOR THE INCONVIENCE'];
+
+	var group:FlxTypedGroup;
+
+	public override function create():Void {
+		super.create();
+
+		group = new FlxTypedGroup();
+
+		bgCamera = FlxG.camera = new FlxCamera(0, 0, FlxG.width, FlxG.height, 0);
+		bgCamera.bgColor = 0xff000000;
+		FlxG.cameras.add(bgCamera);
+
+        image = FunkinSprite.create(0, 0, 'trickyMenu/loadingButDone');
+        image.screenCenter();
+		image.visible = false;
+        add(image);
+
+		if(FlxG.onMobile){
+			for(i in 0...texts.length){
+				if(texts[i] != ''){
+					sprite = new AtlasText(0, 260 + (i * 65), texts[i], "trickyAlphabet");
+					sprite.scale.set(0.4,0.4);
+					sprite.updateHitbox();
+					sprite.x = ((FlxG.width - sprite.width) * 0.7) - 270;
+					group.add(sprite);
+				}
+			}
+			add(group);
+		} else allowShit[0] = true;
+	}
+
+	public override function update(){
+		if(!allowShit[0]) if(controls.ACCEPT_P){
+			for(i in group.members) i.visible = false;
+			allowShit[0] = true;
+		}
+		if(allowShit[0] && allowShit[1]){
+			allowShit[1] = false;
+			image.visible = true;
+			FunkinSound.playOnce(Paths.sound("tricky/menu/loadComplete"));
+			new FlxTimer().start(0.9, _ -> {
+				FlxTween.tween(image, {alpha: 0}, 1, { ease: FlxEase.expoIn, onComplete: _ -> {
+					var state:MusicBeatState = new TrickyTitleState();
+					FlxG.switchState(state);
+				}});
+			});
+		}
+	}
+}

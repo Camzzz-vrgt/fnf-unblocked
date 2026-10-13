@@ -1,0 +1,144 @@
+import funkin.graphics.FunkinSprite;
+import funkin.FunkinMemory;
+import flixel.math.FlxRect;
+import funkin.Preferences;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+
+class TrickyHUDModule extends Module
+{
+    var validSongs = [
+        "improbable-outset",
+        "madness",
+        "hellclown",
+        "expurgation"
+    ];
+
+    var healthBarFlames:FunkinSprite;
+    var healthBarGlow:FunkinSprite;
+    var hudReady:Bool = false;
+    var hudState:PlayState;
+
+    function new() {
+        super("TrickyHUDModule");
+    }
+
+    function shouldUseTrickyHUD():Bool {
+        var state = PlayState.instance;
+        if (state == null || state.isChartingMode) return false;
+
+        // The song ID differs for some menu/variation paths, while the four
+        // core Tricky tracks consistently use the Tricky note style.
+        return validSongs.contains(state.currentSong.id) || state.currentChart?.noteStyle == 'tricky';
+    }
+
+    override function onStateChangeEnd(event:StateChangeScriptEvent) {
+        if (!shouldUseTrickyHUD()) return;
+        HUDsetup();
+	}
+
+    // Some HTML5 transitions emit onStateChangeEnd before the PlayState HUD
+    // has finished laying itself out. Retry at a point where the song HUD is
+    // guaranteed to exist instead of silently leaving the default HUD active.
+    function onSongLoaded(event:ScriptEvent) {
+        if (!shouldUseTrickyHUD()) return;
+        HUDsetup();
+    }
+
+    function onSongStart(event:ScriptEvent) {
+        if (!shouldUseTrickyHUD()) return;
+        HUDsetup();
+    }
+
+    function HUDsetup() {
+        var state = PlayState.instance;
+        if ((hudReady && hudState == state) || state == null || state.healthBar == null || state.healthBarBG == null) return;
+        hudReady = true;
+        hudState = state;
+
+        prevHealth = 0;
+
+        // The Tricky HUD lives in the on-demand shared library. Cache it now
+        // and address it explicitly so it loads correctly on every stage.
+        FunkinMemory.cacheTexture(Paths.image('trickyHud/healthBar', 'shared'));
+        FunkinMemory.cacheTexture(Paths.image('trickyHud/healthBarGlow', 'shared'));
+
+        state.healthBarBG.visible = false;
+        state.healthBar.createFilledBar(0xFFff0000, 0xFF222222);
+        state.healthBar.scale.set(1,1.2);
+
+        //state.scoreText.font = Paths.font('impact.ttf');
+
+		healthBarFlames = new FunkinSprite(0, 0);
+		healthBarFlames.frames = Paths.getSparrowAtlas('trickyHud/healthBar', 'shared');
+		healthBarFlames.animation.addByPrefix('idle', 'loop', 24, true);
+        healthBarFlames.animation.play("idle");
+        healthBarFlames.flipX = true;
+        healthBarFlames.zIndex = state.healthBarBG.zIndex + 1;
+        healthBarFlames.setPosition(state.healthBarBG.x - 25, state.healthBarBG.y - healthBarFlames.height + state.healthBarBG.height);
+
+        healthBarGlow = new FunkinSprite(0, 0);
+        healthBarGlow.loadGraphic(Paths.image('trickyHud/healthBarGlow', 'shared'));
+        healthBarGlow.flipX = true;
+        healthBarGlow.zIndex = state.healthBarBG.zIndex + 2;
+        healthBarGlow.setPosition(healthBarFlames.x + 7, state.healthBar.y + state.healthBar.height/2 - healthBarGlow.height/2);
+        healthBarGlow.clipRect = new FlxRect(0, 0, healthBarGlow.width, healthBarGlow.height);
+
+        for (i in [healthBarFlames, healthBarGlow]) {
+            i.cameras = [state.camHUD];
+            state.add(i);
+        }
+
+		if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [480, 300];
+		else PlayState.instance.comboPopUps.offsets = [480, -150];
+
+        state.refresh();
+
+        if (PlayState.instance.currentSong.id == "hellclown" || PlayState.instance.currentSong.id == "expurgation") {
+            if (!FlxG.onMobile) for (i in [state.healthBar, state.scoreText, healthBarFlames, healthBarGlow]) i.x -= 200;
+
+            PlayState.instance.opponentStrumline.visible = false;
+            if (PlayState.instance.currentSong.id != "hellclown") return;
+
+            var cinemaBars = [];
+
+            for (i in 0...2){
+                i = new FunkinSprite(0,0).makeGraphic(1, 1, 0xFF000000);
+                cinemaBars.push(i);
+                i.scale.set(FlxG.width*2, FlxG.height/4);
+                i.antialiasing = true;
+                i.updateHitbox();
+                i.angle = 10;
+                i.setPosition(FlxG.width/2 - i.width/2, 0 - i.height);
+                if (cinemaBars.indexOf(i) != 0) i.y = FlxG.height;
+                i.zIndex = state.healthBarBG.zIndex - cinemaBars.indexOf(i);
+                i.cameras = [state.camHUD];
+                state.add(i);
+            }
+            state.refresh();
+        }
+    }
+
+    var prevHealth:Float = 0;
+    
+    override function onUpdate(event:UpdateScriptEvent) {
+        if (!shouldUseTrickyHUD()) return;
+        var state = PlayState.instance;
+        if (!hudReady || hudState != state) HUDsetup();
+        if (!hudReady || hudState != state) return;
+        if (state?.health != prevHealth) {
+            healthBarGlow?.clipRect?.x = 14 + (state?.healthBar?.width * ((state?.health * 50)/100));
+            prevHealth = state?.health;
+        }
+    }
+
+    override function onSongRetry(event:ScriptEvent):Void {
+        super.onSongRetry(event);
+        if (!shouldUseTrickyHUD()) return;
+    }
+
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent) {
+		super.onSongEvent(scriptEvent);
+        if (!shouldUseTrickyHUD()) return;
+	}
+}

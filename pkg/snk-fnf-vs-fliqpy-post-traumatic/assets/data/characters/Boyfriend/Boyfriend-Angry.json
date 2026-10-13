@@ -1,0 +1,96 @@
+{
+	"aspect": "Burned",
+	"position": [
+		3,
+		339
+	],
+	"icon": "bf",
+	"scale": 1,
+	"zoom": 0.8,
+	"image": "burned/Angry",
+	"name": "Boyfriend",
+	"color": "#00c6ff",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"singTime": 1,
+	"camera": [
+		192.708333333333,
+		554.166666666667
+	],
+	"onRight": false,
+	"skin": "Default",
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND DOWN",
+			"fps": 24,
+			"key": "singDOWNmiss",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND DOWN",
+			"fps": 24,
+			"key": "singDOWN",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND LEFT",
+			"fps": 24,
+			"key": "singLEFTmiss",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND LEFT",
+			"fps": 24,
+			"key": "singLEFT",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND RIGHT",
+			"fps": 24,
+			"key": "singRIGHTmiss",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND RIGHT",
+			"fps": 24,
+			"key": "singRIGHT",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS BOYFRIEND UP",
+			"fps": 24,
+			"key": "singUPmiss",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND UP",
+			"fps": 24,
+			"key": "singUP",
+			"loopTime": 1,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BOYFRIEND IDLE",
+			"fps": 24,
+			"key": "idle",
+			"loopTime": 1,
+			"loop": false
+		}
+	]
+}

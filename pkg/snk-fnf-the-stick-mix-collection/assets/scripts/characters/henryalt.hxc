@@ -1,0 +1,26 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import funkin.util.Constants;
+import funkin.util.HapticUtil;
+
+class HenryAltCharacter extends MultiSparrowCharacter
+{
+  function new()
+  {
+    super('henryalt');
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    GameOverSubState.musicSuffix = '-henryalt';
+    GameOverSubState.blueBallSuffix = '-henryalt';
+    PauseSubState.musicSuffix = '-henry';
+  }
+}

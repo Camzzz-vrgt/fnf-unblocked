@@ -1,0 +1,69 @@
+{
+	"aspect": "Default",
+	"icon": "fliqpy_kapow",
+	"position": [
+		5,
+		190
+	],
+	"scale": 1,
+	"color": "#75ff73",
+	"name": "Fliqpy",
+	"image": "soldier/Default",
+	"singTime": 1,
+	"antialiasing": true,
+	"onRight": true,
+	"camera": [
+		171.111111111111,
+		482.777777777778
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW IDLE",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW SCARED",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "scared",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW RIGHT",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW DOWN",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW LEFT",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY KAPOW UP",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singUP",
+			"indices": []
+		}
+	]
+}

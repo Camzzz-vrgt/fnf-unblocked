@@ -1,0 +1,45 @@
+{
+ "version": "2.2.4",
+ "songName": "Madness",
+ "artist": "Rozebud",
+ "charter": "ChubbyGamer464",
+ "offsets": { },
+ "playData": {
+  "songVariations": [
+   "erect"
+  ],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-grunt-madness",
+   "girlfriend": "gf-grunt",
+   "opponent": "tricky-madness",
+   "opponentVocals": [
+    "trickyM"
+   ],
+   "playerVocals": [
+    "gruntBF"
+   ]
+  },
+  "stage": "nevada-madness",
+  "noteStyle": "tricky",
+  "ratings": {
+   "easy": 4,
+   "normal": 5,
+   "hard": 7
+  },
+  "album": "tricky"
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 212,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

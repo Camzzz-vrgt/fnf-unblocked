@@ -1,0 +1,112 @@
+{
+	"aspect": "Default",
+	"icon": "fliqpy",
+	"position": [
+		-35,
+		290
+	],
+	"scale": 1,
+	"name": "Fliqpy",
+	"image": "default/Default",
+	"color": "#69ff87",
+	"script": "Fliqpy_Default_Script",
+	"singTime": 1,
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"onRight": true,
+	"camera": [
+		198.941176470588,
+		552.941176470589
+	],
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "FLIQPY ANGRY",
+			"fps": 24,
+			"key": "angry",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY ALT IDLE",
+			"fps": 24,
+			"key": "idle-ALT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY IDLE",
+			"fps": 24,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY ALT DOWN",
+			"fps": 24,
+			"key": "singDOWN-ALT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY DOWN",
+			"fps": 24,
+			"key": "singDOWN",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY ALT LEFT",
+			"fps": 24,
+			"key": "singLEFT-ALT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY LEFT",
+			"fps": 24,
+			"key": "singLEFT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY ALT RIGHT",
+			"fps": 24,
+			"key": "singRIGHT-ALT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY RIGHT",
+			"fps": 24,
+			"key": "singRIGHT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY ALT UP",
+			"fps": 24,
+			"key": "singUP-ALT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY UP",
+			"fps": 24,
+			"key": "singUP",
+			"loopTime": 0,
+			"loop": false
+		}
+	],
+	"sound": "hey"
+}

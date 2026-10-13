@@ -1,0 +1,126 @@
+import flixel.util.FlxColor;
+import flixel.tweens.FlxEase;
+import flixel.text.FlxText;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import StringTools;
+import funkin.ui.AtlasText;
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+using StringTools;
+
+class ImprobableOutsetSong extends Song {
+
+	public function new(){ super('improbable-outset'); }
+
+	function onCreate(event:ScriptEvent){
+		super.onCreate(event);
+
+        // Song scripts can be retained after leaving a PlayState. Reset this
+        // per playthrough so Story Mode shows the intro when the song is
+        // selected again, while retries still keep the intro skipped.
+        hasPlayedCutscene = false;
+
+        // Story-transition graphics are not part of the stage and otherwise
+        // upload only when the cutscene begins.
+        FunkinMemory.cacheTexture(Paths.image('trickyMenu/main/jaws/spritemap1', 'preload'));
+        FunkinMemory.cacheTexture(Paths.image('characters/tricky/trickyMask/spritemap1', 'shared'));
+        FunkinMemory.cacheTexture(Paths.image('characters/tricky/introIO/spritemap1', 'shared'));
+        FunkinMemory.cacheSound(Paths.sound('tricky/menu/burnSound'));
+        FunkinMemory.cacheSound(Paths.sound('tricky/menu/trickyType'));
+
+        if (PlayStatePlaylist.isStoryMode && Save.instance.modOptions.exists("shouldUseTrickyMenus") && Save.instance.modOptions.get("shouldUseTrickyMenus")){
+            trickyMouthTrans = new FunkinSprite(0, 0);
+            trickyMouthTrans.loadTextureAtlas("trickyMenu/main/jaws", "preload");
+            trickyMouthTrans.animation.play("idle-close", true);
+            trickyMouthTrans.scale.set(1.3,1.3);
+            trickyMouthTrans.updateHitbox();
+            trickyMouthTrans.screenCenter().y -= 50;
+            trickyMouthTrans.cameras = [PlayState.instance.camCutscene];
+            PlayState.instance.add(trickyMouthTrans);
+            
+            new FlxTimer().start(0.25,() -> {
+                FunkinSound.playOnce(Paths.sound("tricky/menu/burnSound"));
+                trickyMouthTrans.animation.play("open", true);
+            });
+            
+            trickyMouthTrans?.animation?.finishCallback = function(anim:String){
+                if (anim == "open"){
+                    FlxTween.tween(trickyMouthTrans, {"scale.x": 1.5, "scale.y": 1.5}, 1, {ease: FlxEase.smootherStepInOut,onComplete: () -> {
+                        trickyMouthTrans.visible = false;
+                        PlayState.instance.remove(trickyMouthTrans);
+                        trickyMouthTrans.destroy();
+                    }});
+                }
+            };
+        }
+        PlayState.instance.currentStage.getDad().visible = false;
+        PlayState.instance.currentStage.getNamedProp("stopsign").visible = false;
+	}
+
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent){
+		super.onSongEvent(scriptEvent);
+
+        if (scriptEvent.eventData.eventKind == "PlayAnimation" && scriptEvent.eventData.getString("anim") == "intro" && PlayState.instance.currentStage.getDad().visible == false) {
+            PlayState.instance.currentStage.getDad().visible = true;
+            PlayState.instance.currentStage.getDad().playAnimation("improbableOutsetIntro");
+        }
+	}
+
+    var hasPlayedCutscene:Bool = false;
+
+    public override function onCountdownStart(event:CountdownScriptEvent):Void{
+        super.onCountdownStart(event);
+        var state = PlayState.instance;
+        event.eventCanceled = true;
+        if (!PlayStatePlaylist.isStoryMode){
+            hasPlayedCutscene = true;
+            PlayState.instance.isInCountdown = true;
+            PlayState.instance.startSong();
+        }
+        
+        if(!hasPlayedCutscene){
+            hasPlayedCutscene = true;
+            block = new FunkinSprite().makeGraphic(1, 1, FlxColor.BLACK);
+            block.setGraphicSize(FlxG.width, FlxG.height);
+            block.updateHitbox();
+            block.camera = state.camCutscene;
+            state.insert(0, block);
+
+            txt = new FlxText(0, 0, 1280, "", 10);
+            txt.setFormat(Paths.font('tahoma-bold.ttf'), 60, 0xFFff0000, "center");
+            txt.camera = state.camCutscene;
+            state.insert(1, txt);
+            new FlxTimer().start(1, function(tmr) { printText('SOMEWHERE IN NEVADA', txt); });
+            new FlxTimer().start(6, function(tmr) {
+                for(i in [block, txt])
+                    FlxTween.tween(i, {alpha: 0}, 1.3, {onComplete: () -> {
+                        if(i == block){
+                            PlayState.instance.isInCountdown = true;
+                            PlayState.instance.startSong();
+                        }
+                    }});
+            });
+        }
+    }
+
+    function printText(text:String, sprite){
+        if (sprite.text.length != text.length){
+
+            FunkinSound.playOnce(Paths.sound('tricky/menu/trickyType'), 0.7);
+            sprite.text += text.substr(sprite.text.length, 1);
+            sprite.screenCenter();
+            var delay:Float = 0.1;
+            if (text.substr(sprite.text.length, 1) == " ") delay = 0.2;
+            new FlxTimer().start(delay, function(tmr) { printText(text, sprite); });
+
+            
+        }
+    }
+}

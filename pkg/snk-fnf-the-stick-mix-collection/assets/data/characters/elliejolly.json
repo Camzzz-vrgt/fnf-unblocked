@@ -1,0 +1,68 @@
+{
+	"version": "1.0.0",
+	"renderType": "sparrow",
+	"offsets": [
+		-40,
+		40
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Ellie (Jolly)",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/redhead_jolly",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "elliejolly",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				34,
+				142
+			],
+			"frameRate": 24,
+			"prefix": "idle",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				34,
+				142
+			],
+			"frameRate": 24,
+			"prefix": "wow",
+			"flipX": false,
+			"looped": false,
+			"name": "combo100"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				34,
+				143
+			],
+			"frameRate": 24,
+			"prefix": "hehe",
+			"flipX": false,
+			"looped": false,
+			"name": "drop110"
+		}
+	]
+}

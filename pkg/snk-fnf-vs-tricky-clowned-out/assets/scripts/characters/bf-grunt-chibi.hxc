@@ -1,0 +1,34 @@
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class BoyfriendGruntChibiCharacter extends MultiAnimateAtlasCharacter
+{
+    function new() {
+        super('bf-grunt-chibi');
+    }
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		GameOverSubState.blueBallSuffix = '-tricky-hellclown';
+        GameOverSubState.musicSuffix = '-tricky';
+		PauseSubState.musicSuffix = '-tricky';
+	}
+
+    function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false) {
+        if (name == "deathConfirm" && this.animation.name == "firstDeath") return;
+        else super.playAnimation(name, restart, ignoreOther);
+        if (name == "deathConfirm") FunkinSound.playOnce(Paths.sound("gameplay/gameover/fnf_loss_sfx-tricky-hellclown-end"));
+    }
+
+    override function onGameOver(event:ScriptEvent):Void {
+        super.onGameOver(event);
+        new FlxTimer().start(0.00001, function(timer:FlxTimer){
+            FlxTween.tween(FlxG.camera.scroll, {x: GameOverSubState.instance.cameraFollowPoint.x - FlxG.width/2, y: GameOverSubState.instance.cameraFollowPoint.y - FlxG.height/2}, 0.00001);
+        });
+    }
+}

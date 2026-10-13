@@ -1,0 +1,151 @@
+{
+	"aspect": "Default",
+	"icon": "bf_soldier",
+	"position": [
+		-116,
+		341
+	],
+	"script": "Boyfriend_Soldier_Script",
+	"scale": 1,
+	"color": "#00c6ff",
+	"image": "soldier/Default",
+	"name": "Boyfriend",
+	"death": "bfSoldierDeath",
+	"singTime": 1,
+	"antialiasing": true,
+	"camera": [
+		183.333333333333,
+		516.666666666667
+	],
+	"onRight": false,
+	"animations": [
+		{
+			"symbol": "BOYFRIEND SOLDIER HEY",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "hey",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RELOAD",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "reload0",
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RELOAD",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "reload1",
+			"indices": [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RELOAD",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "reload2",
+			"indices": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
+		},
+		{
+			"symbol": "MISS BOYFRIEND SOLDIER DOWN",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singDOWNmiss",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER DOWN",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"symbol": "MISS BOYFRIEND SOLDIER LEFT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singLEFTmiss",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER LEFT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"symbol": "MISS BOYFRIEND SOLDIER RIGHT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singRIGHTmiss",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RIGHT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"symbol": "MISS BOYFRIEND SOLDIER UP",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singUPmiss",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER UP",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "singUP",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RELOAD",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "reload",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER RUNNING",
+			"loop": true,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "running",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER SHOOTING",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "shooting",
+			"indices": []
+		},
+		{
+			"symbol": "BOYFRIEND SOLDIER IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "idle",
+			"indices": []
+		}
+	]
+}

@@ -1,0 +1,259 @@
+import flixel.tweens.FlxTween;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import StringTools;
+import flixel.FlxCamera;
+import flixel.group.FlxTypedGroup;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.MusicBeatSubState;
+import funkin.modding.base.ScriptedMusicBeatSubState;
+import funkin.ui.AtlasText;
+
+class TrickyMusicState extends ScriptedMusicBeatSubState {
+	public function new() { super(); }
+
+	var menuControllable:Bool = false;
+    var inSection:Bool = false;
+    var titleSprites = [];
+    var rozeBudSprites = [];
+    var marcCeaSprites = [];
+    var yingyangSprites = [];
+    var songMap = [
+        "rozebud" => [ "improbable-outset", "madness", "hellclown", "expurgation" ],
+        "marc cea" => [ "improbable-outset-erect", "madness-erect", "hellclown-erect", "expurgation-erect", "assault", "tiky" ],
+        "yingyang" => [ "honkers", "nexus" ]
+    ];
+
+	public override function create():Void {
+		super.create();
+
+        inSection = false;
+
+		bgCamera = FlxG.camera = new FlxCamera(0, 0, FlxG.width, FlxG.height, 0);
+		bgCamera.bgColor = 0xFF3a0000;
+		FlxG.cameras.add(bgCamera);
+
+		gridVoid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'));
+        add(gridVoid);
+
+        vignette = FunkinSprite.create(0, 0, 'trickyMenu/main/vignette');
+        vignette.blend = 9;
+        vignette.setGraphicSize(FlxG.width, FlxG.height);
+        vignette.updateHitbox();
+
+        blackFade = new FunkinSprite(0,0).makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+
+        rozeBudSprites = [];
+        marcCeaSprites = [];
+        yingyangSprites = [];
+        var targetY = FlxG.height;
+        var titleIndex:Int = 0;
+
+        for (list in songMap){ // goes backward for some reason
+            var displayTitle:String;
+            var titles = [];
+            var borderPadding = 80;
+            for (titleName in songMap.keys()){
+                titles.push(titleName);
+            }
+            displayTitle = titles[titleIndex];
+            switch (displayTitle){
+                case "rozebud": borderPadding = 200;
+                case "marc cea": borderPadding = 250;
+                case "yingyang": borderPadding = 450;
+            }
+            title = new AtlasText( 0, 0, displayTitle, "trickyAlphabet");
+            title.color = 0xFFff0000;
+            title.scale.set(0.4,0.4);
+            title.updateHitbox();
+            titleSprites.push(title);
+
+            titleIndex ++;
+            targetY -= 30;
+
+            topLine = new FunkinSprite(0,0).makeGraphic(FlxG.width - (borderPadding * 2), 2, 0xFFff0000);
+            topLine.setPosition(FlxG.width/2 - topLine.width/2, targetY - 50);
+
+            if (list.length > 4) {
+                topLine2 = new FunkinSprite(0,0).makeGraphic(FlxG.width - (borderPadding * 3), 2, 0xFFff0000);
+                topLine2.setPosition(FlxG.width/2 - topLine2.width/2, topLine.y);
+                topLine.y -= 60;
+                add(topLine2);
+            }
+
+            for (i in list){
+                strip = new FunkinSprite(0,0).makeGraphic(2, 15, 0xFFff0000);
+                if (list.length > 4) {
+                    var difference = list.length - 4;
+                    if (list.indexOf(i) % 2 != 0) strip.setPosition(topLine2.x + ((topLine2.width - strip.width) * ((list.indexOf(i) - difference) / (list.length - difference - 2))), topLine2.y + topLine2.height);
+                    else strip.setPosition(topLine.x + ((topLine.width - strip.width) * ( list.indexOf(i) / (list.length-1))), topLine.y + topLine.height);
+                }
+                else strip.setPosition(topLine.x + ((topLine.width - strip.width) * ( list.indexOf(i) / (list.length - 1))), topLine.y + topLine.height);
+
+                if (i == "madness") strip.x += 40;
+                if (i == "hellclown-erect") strip.x += 80;
+
+                songSprite = new AtlasText( 0, 0, i, "trickyAlphabet");
+                songSprite.scale.set(0.3,0.3);
+                songSprite.updateHitbox();
+                songSprite.setPosition(strip.x - (songSprite.width * 0.65), strip.y + strip.height, targetY);
+                songSprite.color = 0xFFff0000;
+                switch (displayTitle){
+                    case "rozebud": rozeBudSprites.push(songSprite);
+                    case "marc cea": marcCeaSprites.push(songSprite);
+                    case "yingyang": yingyangSprites.push(songSprite);
+                }
+                for (o in [songSprite, strip]) add(o);
+            }
+            
+            targetY -= 100;
+            if (list.length > 4) targetY -= 60;
+
+            title.setPosition(FlxG.width/2 - (title.width * 0.7), targetY);
+            for (i in [topLine, title]) add(i);
+        }
+
+		for (i in [vignette, blackFade]) add(i);
+
+        setSection(titleSprites.length - 1);
+
+        FlxTween.tween(blackFade, {alpha: 0}, 0.2, { onComplete: _ -> {
+            menuControllable = true;
+        }});
+	}
+
+	var currentSong:Int = 0;
+	var currentSection:Int = 0;
+
+	function setSection(target: Int) {
+		if (target >= titleSprites.length) target = 0;
+		if (0 > target) target = titleSprites.length-1;
+		currentSection = target;
+
+        for (i in titleSprites){
+            if (titleSprites.indexOf(i) == currentSection) i.color = 0xFFffffff;
+            else i.color = 0xFFff0000;
+        }
+	}
+
+	function changeSong(target: Int) {
+        var targetList;
+        switch (currentSection){
+            case 2: targetList = rozeBudSprites;
+            case 1: targetList = marcCeaSprites;
+            case 0: targetList = yingyangSprites;
+        }
+        
+        if (!inSection) {
+            for (i in targetList) i.color = 0xFFff0000;
+            return;
+        }
+
+		if (target >= targetList.length) target = 0;
+		if (0 > target) target = targetList.length-1;
+		currentSong = target;
+
+        for (i in targetList){
+            if (targetList.indexOf(i) == currentSong) i.color = 0xFFffffff;
+            else i.color = 0xFFff0000;
+        }
+	}
+
+    var musicRequestId:Int = 0;
+
+	function playSong() {
+        var targetList;
+        switch (currentSection){
+            case 2: targetList = "rozebud";
+            case 1: targetList = "marc cea";
+            case 0: targetList = "yingyang";
+        }
+
+        var targetSong:String = songMap.get(targetList)[currentSong];
+        var requestId = ++musicRequestId;
+        if (targetSong == "nexus" || targetSong == "honkers") {
+            playLoadedSong(targetSong);
+            return;
+        }
+
+        Assets.loadLibrary("songs").onComplete(_ -> {
+            if (exists && requestId == musicRequestId) playLoadedSong(targetSong);
+        }).onError(error -> {
+            if (exists && requestId == musicRequestId) trace("Tricky music loading failed: " + error);
+        });
+    }
+
+    function playLoadedSong(targetSong:String) {
+
+        if (targetSong == "nexus") {
+			var menuMusic = FunkinSound.load(Paths.music("trickyMenuMusic/nexus"), 1, true, false, true);
+			FunkinSound.setMusic(menuMusic);
+        }
+        else if (targetSong == "honkers") {
+            FunkinSound.playMusic(targetSong, {
+                startingVolume: 1,
+                overrideExisting: true,
+                restartTrack: false,
+                mapTimeChanges: false,
+                persist: true
+            });
+        }
+        else if (StringTools.endsWith(targetSong, "-erect")) {
+            targetSong = targetSong.substr(0, targetSong.length - 6);
+            FunkinSound.playMusic(targetSong, {
+                startingVolume: 1,
+                suffix: '-erect',
+                mapTimeChanges: false,
+                overrideExisting: true,
+                restartTrack: false,
+                persist: true,
+                pathsFunction: 'INST'
+            });
+        }
+        else FunkinSound.playMusic(targetSong, {
+            mapTimeChanges: false,
+            startingVolume: 1,
+            overrideExisting: true,
+            restartTrack: false,
+            persist: true,
+            pathsFunction: 'INST'
+        });
+	}
+
+	override function update(elapsed:Float):Void {
+		super.update(elapsed);
+		if (!menuControllable) return;
+		if (controls.UI_LEFT_P || controls.UI_RIGHT_P) changeSong(currentSong + (controls.UI_RIGHT_P ? 1 : -1));
+		if (controls.UI_DOWN_P || controls.UI_UP_P) if (!inSection) setSection(currentSection + (controls.UI_UP_P ? 1 : -1));
+		if (controls.BACK_P) {
+            if (!inSection) exitTrickyState();
+            else {
+                inSection = false;
+                setSection(currentSection);
+                changeSong(currentSong);
+            }
+        }
+		if (controls.ACCEPT_P) {
+		    FunkinSound.playOnce(Paths.sound("tricky/menu/confirm"));
+            if (inSection) playSong();
+            else {
+                inSection = true;
+                changeSong(currentSong);
+                for (i in titleSprites) i.color = 0xFFff0000;
+            }
+        }
+	}
+
+	function exitTrickyState() {
+        musicRequestId++;
+        FlxTween.tween(blackFade, {alpha: 1}, 0.2, { onComplete: _ -> {
+            bgCamera.visible = false;
+            close();
+        }});
+	}
+
+    override function destroy() {
+        musicRequestId++;
+        super.destroy();
+    }
+}

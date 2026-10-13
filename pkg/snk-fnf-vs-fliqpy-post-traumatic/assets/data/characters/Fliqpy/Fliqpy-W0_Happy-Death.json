@@ -1,0 +1,45 @@
+{
+	"aspect": "Default",
+	"icon": "bf",
+	"position": [
+		-362.5,
+		177.5
+	],
+	"scale": 1,
+	"color": "#00c6ff",
+	"image": "wammy/Gameover_Eyes",
+	"name": "Fliqpy",
+	"singTime": 1,
+	"antialiasing": true,
+	"death": "lampDeath",
+	"camera": [
+		0, 0
+	],
+	"onRight": false,
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "BF Dead confirm",
+			"fps": 24,
+			"key": "deathConfirm",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BF Dead Loop",
+			"fps": 24,
+			"key": "deathLoop",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "BF dies",
+			"fps": 24,
+			"key": "firstDeath",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

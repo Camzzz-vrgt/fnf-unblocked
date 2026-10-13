@@ -1,0 +1,61 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [0,0],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 0.79,
+	"cameraOffsets": [
+		-100,
+		50
+	],
+	"name": "Tricky (Assault)",
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"assetPath": "shared:characters/tricky/trickyAlt",
+	"healthIcon":{
+		"scale": 1.1
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"prefix": "idle",
+			"animType": "framelabel",
+			"name": "idle"
+		},
+		{
+			"prefix": "idle",
+			"animType": "framelabel",
+			"flipX": false,
+			"frameIndices": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+			"looped": true,
+			"name": "idle-hold"
+		},
+		{
+			"prefix": "left",
+			"animType": "framelabel",
+			"name": "singLEFT",
+			"frameRate": 30
+		},
+		{
+			"prefix": "down",
+			"animType": "framelabel",
+			"name": "singDOWN",
+			"frameRate": 30
+		},
+		{
+			"prefix": "up",
+			"animType": "framelabel",
+			"name": "singUP",
+			"frameRate": 30
+		},
+		{
+			"prefix": "right",
+			"animType": "framelabel",
+			"name": "singRIGHT",
+			"frameRate": 30
+		}
+	]
+}

@@ -1,0 +1,24 @@
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class BoyfriendGruntMadnessCharacter extends MultiAnimateAtlasCharacter
+{
+    function new() {
+        super('bf-grunt-madness');
+    }
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		GameOverSubState.blueBallSuffix = '-tricky-madness';
+        GameOverSubState.musicSuffix = '-tricky';
+		PauseSubState.musicSuffix = '-tricky';
+	}
+
+    function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false) {
+        if (name == "deathConfirm" && this.animation.name == "firstDeath") return;
+        else super.playAnimation(name, restart, ignoreOther);
+    }
+
+}

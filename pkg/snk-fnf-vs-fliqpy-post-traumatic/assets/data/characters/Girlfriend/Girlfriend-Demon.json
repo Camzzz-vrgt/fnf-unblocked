@@ -1,0 +1,67 @@
+{
+	"aspect": "Default",
+	"icon": "gf",
+	"position": [
+		-212.159090909091,
+		236.765151515152
+	],
+	"scale": 1,
+	"image": "burned/Demon",
+	"name": "Girlfriend",
+	"script": "Girlfriend_Demon_Script",
+	"color": "#75ff73",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"onRight": false,
+	"camera": [
+		-10,
+		-100
+	],
+	"animations": [
+		{
+			"symbol": "GIRLFRIEND DEMON HEY",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "hey",
+			"indices": []
+		},
+		{
+			"symbol": "GIRLFRIEND DEMON IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"symbol": "GIRLFRIEND DEMON IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"symbol": "GIRLFRIEND DEMON IDLE",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceRight",
+			"indices": [
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"danceIdle": true
+}

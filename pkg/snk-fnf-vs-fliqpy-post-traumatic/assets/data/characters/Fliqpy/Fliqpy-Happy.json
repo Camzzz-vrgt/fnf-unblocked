@@ -1,0 +1,135 @@
+{
+	"aspect": "Default",
+	"position": [
+		18.578947368421,
+		307.315789473684
+	],
+	"icon": "flippy",
+	"scale": 1,
+	"zoom": 0.8,
+	"image": "burned/Happy",
+	"name": "Fliqpy",
+	"color": "#75ff73",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"singTime": 1,
+	"camera": [
+		162.105263157895,
+		567.368421052631
+	],
+	"onRight": true,
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 1 ENTRY",
+			"fps": 26,
+			"key": "entry1",
+			"loopTime": 0,
+			"loop": true
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 2 ENTRY",
+			"fps": 26,
+			"key": "entry2",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [99],
+			"symbol": "FLIPPY BURNED 2 ENTRY",
+			"fps": 26,
+			"key": "entry2static",
+			"loopTime": 0,
+			"loop": true
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 3 ENTRY",
+			"fps": 26,
+			"key": "entry3",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED LAUGH",
+			"fps": 26,
+			"key": "laugh",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 1 EXIT",
+			"fps": 26,
+			"key": "exit1",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 1 STATIC EXIT",
+			"fps": 26,
+			"key": "exit1static",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 2 EXIT",
+			"fps": 26,
+			"key": "exit2",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED 2 STATIC EXIT",
+			"fps": 26,
+			"key": "exit2static",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED IDLE",
+			"fps": 26,
+			"key": "idle",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED DOWN",
+			"fps": 26,
+			"key": "singDOWN",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED LEFT",
+			"fps": 26,
+			"key": "singLEFT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED RIGHT",
+			"fps": 26,
+			"key": "singRIGHT",
+			"loopTime": 0,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIPPY BURNED UP",
+			"fps": 26,
+			"key": "singUP",
+			"loopTime": 0,
+			"loop": false
+		}
+	]
+}

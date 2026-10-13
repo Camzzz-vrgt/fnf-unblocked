@@ -1,0 +1,137 @@
+{
+	"aspect": "Default",
+	"icon": "lumpy",
+	"position": [
+		-110,
+		-50
+	],
+	"death": "lumpyDeath",
+	"scale": 1,
+	"name": "Lumpy",
+	"color": "#5cc4ff",
+	"image": "default/Default",
+	"singTime": 1,
+	"antialiasing": true,
+	"onRight": false,
+	"script": "Lumpy_Default_Script",
+	"camera": [
+		214,
+		253
+	],
+	"danceIdle": false,
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "LUMPY_LEFT",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "MISS_LUMPY_LEFT",
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "MISS_LUMPY_RIGHT",
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "LUMPY_DOWN",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "MISS_LUMPY_DOWN",
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWNmiss"
+		},
+		{
+			"loop": true,
+			"symbol": "LUMPY_IDLE",
+			"fps": 26,
+			"indices": [],
+			"key": "idle"
+		},
+		{
+			"loop": false,
+			"symbol": "LUMPY_UP",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "MISS_LUMPY_UP",
+			"fps": 26,
+			"indices": [],
+			"key": "singUPmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "LUMPY_RIGHT",
+			"loopTime": 2,
+			"fps": 26,
+			"key": "singRIGHT"
+		},
+		{
+			"symbol": "LUMPY_IDLE",
+			"loop": false,
+			"fps": 26,
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			],
+			"key": "danceLeft"
+		},
+		{
+			"symbol": "LUMPY_IDLE",
+			"loop": false,
+			"fps": 26,
+			"indices": [
+				21,
+				22,
+				23,
+				30,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34
+			],
+			"key": "danceRight"
+		}
+	]
+}

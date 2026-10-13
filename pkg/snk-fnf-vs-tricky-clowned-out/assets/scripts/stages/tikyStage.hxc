@@ -1,0 +1,36 @@
+import funkin.play.PlayState;
+import funkin.play.PauseSubState;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import funkin.play.stage.Stage;
+
+class TikyStage extends Stage
+{
+    var pixelz:FlxRuntimeShader;
+    var jpegify:FlxRuntimeShader;
+
+	function new()
+	{
+		super('tikyStage');
+	}
+
+    var shadersArr = [];
+    override function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        pixelz = new FlxRuntimeShader(Assets.getText(Paths.frag('MosaicShader')));
+        pixelz.setFloatArray('uBlocksize', [3.0, 3.0]);
+
+        // jpegify = new FlxRuntimeShader(Assets.getText(Paths.frag('jpegify')));
+		// jpegify.setFloat('u_strength', 0.8);
+		// jpegify.setFloat('u_quality', -20.0);
+
+        shadersArr.push(new ShaderFilter(pixelz));
+        // shadersArr.push(new ShaderFilter(jpegify));
+
+        PlayState.instance.camGame.filters = shadersArr;
+        PlayState.instance.camHUD.filters = shadersArr;
+
+		PauseSubState.musicSuffix = '-tricky';
+    }
+}

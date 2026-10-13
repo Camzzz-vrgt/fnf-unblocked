@@ -1,0 +1,237 @@
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.math.FlxMath;
+import flixel.FlxSprite;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.Conductor;
+
+class HenryCard extends BackingCard
+{
+  var bgSky:FlxSprite;
+  var bgMult:FlxSprite;
+  var bgWhite:FlxSprite;
+  var scrollLower:FlxBackdrop;
+  var scrollTop:FlxBackdrop;
+  var scrollMiddle:FlxBackdrop;
+  var tumbleWeed:FlxBackdrop;
+
+  var confirmAtlas:FlxAtlasSprite;
+
+  public function new()
+  {
+    super("henry");
+  }
+
+  public override function enterCharSel():Void
+  {
+    FlxTween.tween(scrollLower.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(scrollTop.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(scrollMiddle.velocity, {x: 0}, 0.8, {ease: FlxEase.sineIn});
+  }
+
+  public override function applyExitMovers(?exitMovers:FreeplayState.ExitMoverData, ?exitMoversCharSel:FreeplayState.ExitMoverData):Void
+  {
+    super.applyExitMovers(exitMovers, exitMoversCharSel);
+    if (exitMovers == null || exitMoversCharSel == null) return;
+
+    exitMoversCharSel.set([scrollTop],
+      {
+        y: -90,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([scrollMiddle],
+      {
+        y: -80,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+    exitMoversCharSel.set([scrollLower],
+      {
+        y: -60,
+        speed: 0.8,
+        wait: 0.1
+      });
+
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    bgSky = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/backingCards/henry/bgSky'));
+    add(bgSky);
+
+    bgMult = new FlxSprite(0, 0).loadGraphic(Paths.image('freeplay/backingCards/henry/multiply'));
+    bgMult.blend = 9;
+    
+
+    confirmTextGlow.visible = false;
+    confirmGlow.visible = false;
+    confirmGlow2.visible = false;
+
+    scrollTop = new FlxBackdrop(Paths.image('freeplay/backingCards/henry/topLoop'), 0x01, 160);
+    scrollTop.setPosition(0, 200);
+    scrollTop.velocity.x = -25;
+    add(scrollTop);
+
+    scrollMiddle = new FlxBackdrop(Paths.image('freeplay/backingCards/henry/middleLoop'), 0x01, 150);
+    scrollMiddle.setPosition(0, 85);
+    add(scrollMiddle);
+    scrollMiddle.velocity.x = -50;
+
+    scrollLower = new FlxBackdrop(Paths.image('freeplay/backingCards/henry/lowerLoop'), 0x01, 80);
+    scrollLower.setPosition(0, 300);
+    scrollLower.velocity.x = -150;
+    add(scrollLower);
+
+    tumbleWeed = new FlxBackdrop(Paths.image('freeplay/backingCards/henry/tumbleweed'), 0x01, 5000);
+    tumbleWeed.setPosition(0, 300);
+    tumbleWeed.velocity.x = -340;
+    add(tumbleWeed);
+    FlxTween.tween(tumbleWeed, {y: tumbleWeed.y - 10}, 0.2, {ease: FlxEase.sineOut, type: 4});
+
+    add(bgMult);
+
+    bgWhite = new FlxSprite(0, 0).makeGraphic(1280, 720, 0xFFFFFFFF);
+    add(bgWhite);
+
+    scrollLower.visible = true;
+    scrollTop.visible = true;
+    scrollMiddle.visible = true;
+    bgSky.visible = true;
+    bgMult.visible = false;
+    bgWhite.visible = false;
+
+  }
+
+  override public function confirm():Void
+  {
+    // confirmAtlas.visible = true;
+    // confirmAtlas.anim.play("");
+
+    bgMult.visible = true;
+    bgMult.blend = 9;
+    bgWhite.visible = true;
+    FlxTween.tween(bgWhite, {alpha: 0}, 0.5, {ease: FlxEase.cubeOut});
+
+    FlxTween.tween(scrollLower.velocity, {x: 0}, 0.6, {ease: FlxEase.circIn});
+    FlxTween.tween(scrollMiddle.velocity, {x: 0}, 0.6, {ease: FlxEase.circIn});
+    FlxTween.tween(scrollTop.velocity, {x: 0}, 0.6, {ease: FlxEase.circIn});
+    FlxTween.tween(tumbleWeed.velocity, {x: 0}, 0.6, {ease: FlxEase.circIn});
+
+    // FlxTween.color(instance.backingImage, 10 / 24, 0xFFFFFFFF, 0xFF8A8A8A,
+    //   {
+    //     ease: FlxEase.expoOut,
+    //     onUpdate: function(_) {
+    //       instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //     }
+    //   });
+
+    // new FlxTimer().start(10 / 24, function(_) {
+    //   // shoot
+    //   FlxTween.color(instance.backingImage, 3 / 24, 0xFF343036, 0xFF696366,
+    //     {
+    //       ease: FlxEase.expoOut,
+    //       onUpdate: function(_) {
+    //         instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //       }
+    //     });
+    // });
+
+    // new FlxTimer().start(14 / 24, function(_) {
+    //   // shoot
+    //   FlxTween.color(instance.backingImage, 3 / 24, 0xFF27292D, 0xFF686A6F,
+    //     {
+    //       ease: FlxEase.expoOut,
+    //       onUpdate: function(_) {
+    //         instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //       }
+    //     });
+    // });
+
+    // new FlxTimer().start(18 / 24, function(_) {
+    //   // shoot
+    //   FlxTween.color(instance.backingImage, 3 / 24, 0xFF2D282D, 0xFF676164,
+    //     {
+    //       ease: FlxEase.expoOut,
+    //       onUpdate: function(_) {
+    //         instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //       }
+    //     });
+    // });
+
+    // new FlxTimer().start(21 / 24, function(_) {
+    //   // shoot
+    //   FlxTween.color(instance.backingImage, 3 / 24, 0xFF29292F, 0xFF62626B,
+    //     {
+    //       ease: FlxEase.expoOut,
+    //       onUpdate: function(_) {
+    //         instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //       }
+    //     });
+    // });
+
+    // new FlxTimer().start(24 / 24, function(_) {
+    //   // shoot
+    //   FlxTween.color(instance.backingImage, 3 / 24, 0xFF29232C, 0xFF808080,
+    //     {
+    //       ease: FlxEase.expoOut,
+    //       onUpdate: function(_) {
+    //         instance.angleMaskShader.extraColor = instance.backingImage.color;
+    //       }
+    //     });
+    // });
+  }
+
+  var beatFreq:Int = 1;
+  var beatFreqList:Array<Int> = [1, 2, 4, 8];
+
+  public override function beatHit():Void
+  {
+    // increases the amount of beats that need to go by to pulse the glow because itd flash like craazy at high bpms.....
+    // beatFreq = beatFreqList[Math.floor(Conductor.instance.bpm / 140)];
+
+    // if (Conductor.instance.currentBeat % beatFreq != 0) return;
+    // FlxTween.cancelTweensOf(glow);
+    // FlxTween.cancelTweensOf(glowDark);
+
+    // glow.alpha = 1;
+    // FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
+    // glowDark.alpha = 0;
+    // FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+  }
+
+  public override function introDone():Void
+  {
+    bgSky.visible = true;
+    scrollLower.visible = true;
+    scrollTop.visible = true;
+    scrollMiddle.visible = true;
+
+  }
+
+  public override function disappear():Void
+  {
+    bgSky.visible = false;
+    bgMult.visible = false;
+    tumbleWeed.visible = false;
+    scrollLower.visible = false;
+    scrollTop.visible = false;
+    scrollMiddle.visible = false;
+    bgWhite.visible = false;
+  }
+
+  override public function update(elapsed:Float):Void
+  {
+    super.update(elapsed);
+
+    tumbleWeed.angle -= 2;
+  }
+}

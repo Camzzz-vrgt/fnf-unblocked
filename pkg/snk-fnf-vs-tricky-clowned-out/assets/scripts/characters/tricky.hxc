@@ -1,0 +1,24 @@
+import funkin.audio.FunkinSound;
+import funkin.play.PlayState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class TrickyCharacter extends MultiAnimateAtlasCharacter
+{
+    function new()
+    {
+        super('tricky');
+    }
+
+    override function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false)
+    {
+        super.playAnimation(name, restart, ignoreOther);
+        if (PlayState.instance == null) return;
+        if (name == 'improbableOutsetIntro') FunkinSound.playOnce(Paths.sound("tricky/improbable-outset-intro"));
+
+        if (!this.visible) return;
+        if (name != 'danceRight') return;
+        if (PlayState.instance.currentStage.getNamedProp("stopsign") == null) return;
+
+        PlayState.instance.currentStage.getNamedProp("stopsign").visible = true;
+    }
+}

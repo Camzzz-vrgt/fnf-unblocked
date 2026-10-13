@@ -1,0 +1,28 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [0,0],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 0.8,
+	"cameraOffsets": [
+		-50,
+		70
+	],
+	"flipX": false,
+	"name": "Girlfriend (Grunt) [Hellclown]",
+	"startingAnimation": "danceLeft",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "shared:characters/tricky/chibiGF",
+	"healthIcon": {
+		"id": "gf"
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+	    { "prefix": "danceLeft", "animType": "framelabel", "name": "danceLeft" },
+		{ "prefix": "danceRight", "animType": "framelabel", "name": "danceRight" }
+	]
+}

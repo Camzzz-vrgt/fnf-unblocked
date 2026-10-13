@@ -1,0 +1,287 @@
+{
+	"aspect": "Default",
+	"position": [
+		-272,
+		-75.9999999999999
+	],
+	"icon": "flippy",
+	"scale": 1,
+	"script": "Fliqpy_W0_Happy_Script",
+	"name": "Fliqpy",
+	"image": "wammy/Happy_Body_0",
+	"color": "#00c6ff",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"singTime": 1,
+	"onRight": true,
+	"camera": [
+		192.121212121212,
+		415.030303030303
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "FLIPPY IDLE BODY",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "idle"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY SING NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWNmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY SING MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWNmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE-singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE-singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE-singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY DOWN BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE-singRIGHT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY SING NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY SING MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFTmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE-singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE-singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE-singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY LEFT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE-singRIGHT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY SING NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY SING MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHTmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE-singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE-singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE-singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY RIGHT BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE-singRIGHT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY SING NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY SING MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUPmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUPmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE-singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE-singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE-singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIPPY UP BODY IDLE NORMAL",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE-singRIGHT"
+		}
+	]
+}

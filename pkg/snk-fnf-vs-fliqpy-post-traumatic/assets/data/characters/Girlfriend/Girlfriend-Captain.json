@@ -1,0 +1,99 @@
+{
+	"aspect": "Captain",
+	"position": [
+		-145.566148835754,
+		-19.5477422942876
+	],
+	"icon": "gf",
+	"scale": 1,
+	"script": "Girlfriend_Captain_Script",
+	"image": "soldier/Default",
+	"name": "Girlfriend",
+	"color": "#75ff73",
+	"antialiasing": true,
+	"death": "fnf_loss_sfx",
+	"camera": [
+		323.546944998638,
+		205.604321919658
+	],
+	"onRight": false,
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "CHEER",
+			"loopTime": 0,
+			"fps": 26,
+			"key": "hey",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "",
+			"fps": 26,
+			"key": "transition",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "DANCING",
+			"fps": 26,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "SAD",
+			"fps": 26,
+			"key": "sad",
+			"indices": []
+		},
+		{
+			"symbol": "DANCING",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceLeft",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"symbol": "DANCING",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "danceRight",
+			"indices": [
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
+			]
+		}
+	],
+	"danceIdle": true
+}

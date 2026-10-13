@@ -1,0 +1,159 @@
+{
+	"aspect": "Default",
+	"position": [
+		-86,
+		190.666666666667
+	],
+	"icon": "fliqpy",
+	"scale": 1,
+	"script": "Fliqpy_W0_Angry_Script",
+	"name": "Fliqpy",
+	"image": "wammy/Default_Body_0",
+	"color": "#00c6ff",
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"singTime": 1,
+	"onRight": false,
+	"camera": [
+		165.454545454545,
+		510.030303030303
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "FLIQPY IDLE BODY",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "idle"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY DOWN BODY SING",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY DOWN BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWNmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY DOWN BODY IDLE",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWN-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY DOWN BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singDOWNmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY LEFT BODY SING",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY LEFT BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY LEFT BODY IDLE",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFT-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY LEFT BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singLEFTmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY RIGHT BODY SING",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY RIGHT BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHTmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY RIGHT BODY IDLE",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHT-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY RIGHT BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singRIGHTmiss-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY UP BODY SING",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY UP BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUPmiss"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY UP BODY IDLE",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUP-IDLE"
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY UP BODY MISS",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [],
+			"key": "singUPmiss-IDLE"
+		}
+	]
+}

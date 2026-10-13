@@ -1,0 +1,95 @@
+{
+	"aspect": "Default",
+	"icon": "bf",
+	"position": [
+		-82.5000000000001,
+		-302.5
+	],
+	"scale": 1,
+	"color": "#00c6ff",
+	"script": "Fliqpy_W_Script",
+	"image": "wammy/Default_2",
+	"name": "Fliqpy",
+	"singTime": 1,
+	"antialiasing": true,
+	"death": "fnf_loss_sfx",
+	"camera": [
+		357.121212121212,
+		283.030303030303
+	],
+	"onRight": true,
+	"animations": [
+		{
+			"indices": [],
+			"symbol": "MISS FLIQPY LEFT",
+			"fps": 24,
+			"key": "singLEFTmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY DOWN",
+			"fps": 24,
+			"key": "singDOWN",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIQPY DOWN",
+			"fps": 24,
+			"key": "singDOWNmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY IDLE",
+			"fps": 24,
+			"key": "idle",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY LEFT",
+			"fps": 24,
+			"key": "singLEFT",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIQPY RIGHT",
+			"fps": 24,
+			"key": "singRIGHTmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY RIGHT",
+			"fps": 24,
+			"key": "singRIGHT",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "MISS FLIQPY UP",
+			"fps": 24,
+			"key": "singUPmiss",
+			"loopTime": 3,
+			"loop": false
+		},
+		{
+			"indices": [],
+			"symbol": "FLIQPY UP",
+			"fps": 24,
+			"key": "singUP",
+			"loopTime": 3,
+			"loop": false
+		}
+	]
+}

@@ -1,0 +1,106 @@
+import flixel.tweens.FlxEase;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import flixel.tweens.FlxTween;
+
+class HellclownSong extends Song {
+
+	public function new() {
+		super('hellclown');
+	}
+
+    var smokes = [];
+
+    function onCreate(event:ScriptEvent) {
+        super.onCreate(event);
+        smokes = [];
+
+        // This effect is only animated once a hell note is hit.
+        FunkinMemory.cacheTexture(Paths.image('trickyHud/hurtSplash', 'shared'));
+
+        var state = PlayState.instance;
+        for (i in 0...4) {
+            var smoke = new FunkinSprite(0, 0);
+            smoke.frames = Paths.getSparrowAtlas('trickyHud/hurtSplash');
+            smoke.animation.addByPrefix("boom", "smoke", 30, false);
+            smoke.animation.addByPrefix("idle", "idle", 1, true);
+            smoke.animation.play("idle");
+            smoke.cameras = [state.camHUD];
+            state.add(smoke);
+            smokes.push(smoke);
+            smoke.setPosition(state.playerStrumline.x - 100 + (smokes.indexOf(smoke) * 117), state.playerStrumline.y - 70);
+            smoke.zIndex = state.playerStrumline.zIndex + smokes.indexOf(smoke);
+        }
+        PlayState.instance.currentStage.getNamedProp("hank").visible = false;
+    }
+
+    function onSongStart(event:ScriptEvent) {
+        super.onSongStart(event);
+        if (!PlayState.instance.isBotPlayMode && FlxG.random.bool(1)) PlayState.instance.health = 0;
+    }
+
+    public override function onCountdownStart(event:CountdownScriptEvent):Void{
+        super.onCountdownStart(event);
+        var state = PlayState.instance;
+        event.cancel();
+        state.isInCountdown = true;
+        state.startSong();
+    }
+
+    override function onSongRetry(event:ScriptEvent) {
+        super.onSongRetry(event);
+        for (smoke in smokes) smoke.animation.play("idle");
+    }
+    
+	public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+	{
+		super.onSongEvent(scriptEvent);
+
+        if (scriptEvent.eventData.eventKind == "PlayAnimation" && scriptEvent.eventData.getString("anim") == "comeUp" && !PlayState.instance.currentStage.getNamedProp("hank").visible) {
+            var hank = PlayState.instance.currentStage.getNamedProp("hank");
+            hank.y += 400;
+            hank.visible = true;
+            FlxTween.tween(hank, {y: hank.y - 400}, 1, {ease: FlxEase.quartOut});
+        }
+	}
+
+	public override function onNoteHit(event:HitNoteScriptEvent) {
+        var state = PlayState.instance;
+		if (event.note.noteData.getMustHitNote()) {
+            switch (event.note.kind) {
+                case "hellNote":
+                    if (state.isBotPlayMode) {
+                        event.cancel();
+                        return;
+                    }
+                    FunkinSound.playOnce(Paths.sound('tricky/menu/burnSound'));
+                    state.health -= 0.4;
+                    state.currentStage.getBoyfriend().playSingAnimation(event.note.noteData.getDirection(), true, '');
+                    event.shouldPropagate = false;
+                    
+                    event.doesNotesplash = false;
+                    smokes[event.note.noteData.getDirection()]?.animation.play("boom");
+                default:
+                    super.onNoteHit(event);
+            }
+        }
+	}
+
+    override function onNoteIncoming(event:NoteScriptEvent){ // flips fire 
+		super.onNoteIncoming(event);
+        if (event.note.kind == "hellNote") {
+            if (Preferences.downscroll) {
+                event.note.flipY = true;
+                var noteDir = event.note.noteData.getDirection();
+                if (noteDir == 1 || noteDir == 2) {
+                    event.note.flipX = true;
+                    if (noteDir == 1) event.note.playNoteAnimation(2);
+                    else event.note.playNoteAnimation(1);
+                }
+            }
+        }
+    }
+}

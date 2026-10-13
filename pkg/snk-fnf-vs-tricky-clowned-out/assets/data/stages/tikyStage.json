@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "name": "tiky",
+  "cameraZoom": 0.7,
+  "props": [
+    {
+      "name": "sky",
+      "assetPath": "#0A0104",
+      "position": [-600, -1000],
+      "scale": [24000, 2000],
+      "alpha": 1,
+      "scroll": [0, 0],
+      "zIndex": 10
+    },
+    {
+        "assetPath": "trickyStages/tiky/fire",
+        "name": "fire",
+        "position": [-1570, -1050],
+        "scroll": [0.9, 1],
+        "zIndex": 40,
+        "scale": 1.2
+    },
+    {
+        "assetPath": "trickyStages/tiky/ground",
+        "name": "ground",
+        "position": [-1570, -250],
+        "zIndex": 50,
+        "scale": 1.2
+    }
+  ],
+  "characters": {
+      "bf": {
+          "cameraOffsets": [-250, -180],
+          "position": [500, 50],
+          "zIndex": 100
+      },
+      "dad": {
+          "cameraOffsets": [250, -100],
+          "position": [-500, 0],
+          "zIndex": 100
+      },
+      "gf": {
+          "cameraOffsets": [0, 0],
+          "position": [-50, -150],
+          "scale": 1,
+          "zIndex": 90
+        }
+  }
+}

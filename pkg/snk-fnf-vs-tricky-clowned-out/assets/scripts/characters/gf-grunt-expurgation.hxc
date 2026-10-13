@@ -1,0 +1,34 @@
+import funkin.audio.FunkinSound;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class GirlfriendGruntExpurgationCharacter extends MultiAnimateAtlasCharacter
+{
+    function new()
+    {
+        super('gf-grunt-expurgation');
+    }
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+        dead = false;
+	}
+
+    function onSongRetry(event:ScriptEvent) {
+        super.onSongRetry(event);
+
+        dead = false;
+        this.visible = true;
+    }
+
+    var dead:Bool = false;
+
+    function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false)
+    {
+        if (name == "death") {
+            dead = true;
+            FunkinSound.playOnce(Paths.sound('tricky/expurgation-gfDie'), 2);
+        }
+        else if (dead && this.visible) this.visible = false;
+        super.playAnimation(name, restart, ignoreOther);
+    }
+}

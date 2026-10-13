@@ -1,0 +1,4311 @@
+{
+	"song": {
+		"player": 1,
+		"voices": true,
+		"style": "Soldier",
+		"events": [],
+		"characters": [
+			[
+				"MusicMan",
+				[
+					4,
+					-124
+				],
+				1,
+				true,
+				"Default",
+				"Boyfriend",
+				0
+			],
+			[
+				"Sniper",
+				[
+					715,
+					-130
+				],
+				1,
+				false,
+				"Default",
+				"Boyfriend",
+				0
+			]
+		],
+		"strums": [
+			{
+				"keys": 4,
+				"style": "Soldier",
+				"characters": [
+					0
+				],
+				"playable": true,
+				"sections": [
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								2647.05882352941,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								3235.29411764706,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								3676.47058823529,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								3970.58823529412,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								4411.76470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								4705.88235294118,
+								2,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5147.05882352941,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								5735.29411764706,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								6176.47058823529,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								6617.64705882353,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								7058.82352941176,
+								0,
+								1176.47058823529,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								12058.8235294118,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								13235.2941176471,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								12794.1176470588,
+								0,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								13529.4117647059,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								13823.5294117647,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								14117.6470588235,
+								1,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								14558.8235294118,
+								0,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								15000,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								15588.2352941176,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								16176.4705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								16470.5882352941,
+								0,
+								1470.58823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								21470.5882352941,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22794.1176470588,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								23088.2352941176,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								22352.9411764706,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								21764.7058823529,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								23529.4117647059,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								24411.7647058823,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								25294.1176470588,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								25588.2352941176,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								24117.6470588235,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								24705.8823529412,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								25882.3529411765,
+								3,
+								735.294117647059,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								30882.3529411765,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								31470.5882352941,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								32205.8823529412,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								31764.7058823529,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								32941.1764705882,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								33529.4117647059,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34117.6470588235,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34852.9411764706,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								35294.1176470588,
+								3,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36176.4705882353,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								37058.8235294118,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36470.5882352941,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								37647.0588235294,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								40000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								40588.2352941176,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								41176.4705882353,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								41617.6470588235,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								41911.7647058823,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								42352.9411764706,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								43088.2352941176,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								43676.4705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								42794.1176470588,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								44264.7058823529,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								44705.8823529412,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								45147.0588235294,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								45735.294117647,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								46470.5882352941,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								47058.8235294118,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								47500,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								47867.6470588235,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								48235.294117647,
+								0,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								48676.4705882353,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								49191.1764705882,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								49411.7647058823,
+								2,
+								1176.47058823529,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								59117.6470588235,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								59411.7647058823,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								59852.9411764706,
+								2,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								60588.2352941176,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								61176.4705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61617.6470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								62352.9411764706,
+								3,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								62794.1176470588,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								63088.2352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								61985.294117647,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								63529.4117647059,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								63970.5882352941,
+								1,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								64411.7647058823,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								64852.9411764706,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								65514.7058823529,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								65882.3529411765,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								66470.5882352941,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								67352.9411764706,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								67867.6470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								67058.8235294118,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								68235.294117647,
+								2,
+								1176.47058823529,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								77941.1764705882,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								78529.4117647059,
+								0,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								79411.7647058823,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								80294.1176470588,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								80882.3529411765,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								81470.5882352941,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								82058.8235294117,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								82352.9411764706,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								83823.5294117647,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								84338.2352941176,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								82941.1764705882,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								83529.4117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								84705.8823529412,
+								2,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								85147.0588235294,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								85588.2352941176,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								86029.4117647059,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								86764.7058823529,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								87058.8235294117,
+								0,
+								1029.41176470588,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								96764.7058823529,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								97352.9411764706,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								98382.3529411764,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								97941.1764705882,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								98823.5294117647,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								99411.7647058823,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								99705.8823529412,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								100147.058823529,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								100588.235294118,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								101176.470588235,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								101764.705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								102941.176470588,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								102205.882352941,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								103529.411764706,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								103970.588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								104338.235294118,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								104705.882352941,
+								3,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								105294.117647059,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								105882.352941176,
+								0,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106764.705882353,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107352.941176471,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107941.176470588,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								108235.294117647,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								109411.764705882,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								110000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								110588.235294118,
+								3,
+								588.235294117647,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111470.588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112058.823529412,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112647.058823529,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								112941.176470588,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								115294.117647059,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								115882.352941176,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								117058.823529412,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								116470.588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								117647.058823529,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								118823.529411765,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								119411.764705882,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								118382.352941176,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								120000,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								120588.235294118,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								120882.352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								121323.529411765,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								121764.705882353,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								120294.117647059,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								122352.941176471,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								122941.176470588,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								123235.294117647,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								123676.470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								124264.705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								124705.882352941,
+								2,
+								2352.94117647059,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								131470.588235294,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								131764.705882353,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132205.882352941,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								133529.411764706,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132794.117647059,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [
+							[
+								134117.647058824,
+								2,
+								2352.94117647059,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [
+							1
+						],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					}
+				]
+			},
+			{
+				"keys": 4,
+				"style": "Soldier",
+				"characters": [
+					1
+				],
+				"playable": true,
+				"sections": [
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								7352.94117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								7941.17647058824,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								8529.41176470588,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								8970.58823529412,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								9411.76470588235,
+								3,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10147.0588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								10735.2941176471,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								11029.4117647059,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								11764.7058823529,
+								2,
+								1176.47058823529,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								16764.7058823529,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								17205.8823529412,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								17500,
+								0,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								18235.2941176471,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								18823.5294117647,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								19264.7058823529,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								19705.8823529412,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20000,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20441.1764705882,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								20882.3529411765,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								21176.4705882353,
+								2,
+								1470.58823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								26176.4705882353,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								26764.7058823529,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								27058.8235294118,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								27500,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								28235.2941176471,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								28823.5294117647,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								29117.6470588235,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								29705.8823529412,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								30000,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								30588.2352941176,
+								2,
+								882.35294117647,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								31470.5882352941,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								32058.8235294118,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								32647.0588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								32941.1764705882,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34117.6470588235,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								34705.8823529412,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								35588.2352941176,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36176.4705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								36911.7647058823,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								37647.0588235294,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								38235.2941176471,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								38676.4705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								39264.7058823529,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								39705.8823529412,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								40000,
+								1,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								49411.7647058823,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								50000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								50588.2352941176,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								51029.4117647059,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								51764.7058823529,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52500,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								52205.8823529412,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								53088.2352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								53676.4705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								54117.6470588235,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								54852.9411764706,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55882.3529411765,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								55588.2352941176,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								56470.5882352941,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								56911.7647058823,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								57647.0588235294,
+								2,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								58088.2352941176,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								57279.4117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								58455.8823529412,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								58823.5294117647,
+								2,
+								1029.41176470588,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								68529.4117647059,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								69264.7058823529,
+								2,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								70000,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								70588.2352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71029.4117647059,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71397.0588235294,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								71764.7058823529,
+								3,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72205.8823529412,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								72647.0588235294,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								72941.1764705882,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								73382.3529411765,
+								1,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74926.4705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74117.6470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								74558.8235294117,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								75294.1176470588,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								75588.2352941176,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								77279.4117647059,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								76470.5882352941,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								76764.7058823529,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								77647.0588235294,
+								2,
+								1029.41176470588,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								87352.9411764706,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								87941.1764705882,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								88970.5882352941,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								88529.4117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								89705.8823529412,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								90294.1176470588,
+								2,
+								441.176470588235,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								91176.4705882353,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								91764.7058823529,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								93750,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								93235.294117647,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								92352.9411764706,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								92941.1764705882,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								94117.6470588235,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								94558.8235294117,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								95000,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								95441.1764705882,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								96029.4117647059,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								96470.5882352941,
+								2,
+								1176.47058823529,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								106176.470588235,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								106764.705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107500,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								107794.117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								108235.294117647,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								109117.647058824,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								109411.764705882,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								110000,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								108823.529411765,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								110588.235294118,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111176.470588235,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112647.058823529,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112352.941176471,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								112058.823529412,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								111617.647058824,
+								1,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								112941.176470588,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114117.647058824,
+								3,
+								294.117647058824,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								114632.352941176,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								113750,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								115294.117647059,
+								2,
+								1029.41176470588,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								124705.882352941,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125000,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125294.117647059,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125588.235294118,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								125882.352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126176.470588235,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126470.588235294,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								126764.705882353,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								127058.823529412,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								127794.117647059,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								128235.294117647,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								128823.529411765,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								129411.764705882,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								129705.882352941,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130000,
+								0,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130294.117647059,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130588.235294118,
+								1,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								130882.352941176,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								131176.470588235,
+								3,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								131764.705882353,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132058.823529412,
+								0,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132352.941176471,
+								3,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								132941.176470588,
+								2,
+								0,
+								0,
+								"Default",
+								[],
+								[]
+							],
+							[
+								133529.411764706,
+								2,
+								147.058823529412,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [
+							[
+								134117.647058824,
+								0,
+								2352.94117647059,
+								0,
+								"Default",
+								[],
+								[]
+							]
+						],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					},
+					{
+						"characters": [],
+						"changeCharacters": false,
+						"notes": [],
+						"changeAlt": false
+					}
+				],
+				"friendly": true
+			}
+		],
+		"difficulty": "Easy",
+		"song": "Breaktime",
+		"stage": "War_Tower",
+		"sections": [
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 1,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			},
+			{
+				"lengthInSteps": 16,
+				"strum": 0,
+				"character": 0,
+				"bpm": 150,
+				"changeBPM": false
+			}
+		],
+		"category": "Normal",
+		"bpm": 102,
+		"speed": 2.0
+	}
+}

@@ -1,0 +1,101 @@
+{
+	"aspect": "Zombie",
+	"position": [
+		30,
+		375
+	],
+	"icon": "fliqpy_zombie",
+	"scale": 1,
+	"color": "#00ff27",
+	"name": "Fliqpy",
+	"image": "zombie/Default",
+	"zoom": 0.8,
+	"antialiasing": true,
+	"singTime": 1,
+	"script": "Fliqpy_Zombie_Script",
+	"onRight": true,
+	"camera": [
+		262.170731707317,
+		575.224390243903
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE UP",
+			"fps": 26,
+			"loopTime": 2,
+			"key": "singUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE DOWN",
+			"fps": 26,
+			"loopTime": 2,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE ENTRY",
+			"loopTime": 0,
+			"fps": 26,
+			"key": "hide",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE FINAL",
+			"fps": 26,
+			"key": "final",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE IDLE",
+			"fps": 26,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE LEFT",
+			"fps": 26,
+			"loopTime": 2,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE RIGHT",
+			"fps": 26,
+			"loopTime": 2,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE LAUGH",
+			"loopTime": 0,
+			"fps": 26,
+			"key": "laugh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE EXIT",
+			"loopTime": 0,
+			"fps": 26,
+			"key": "appear",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"symbol": "FLIQPY ZOMBIE START",
+			"fps": 24,
+			"loopTime": 2,
+			"key": "start",
+			"indices": []
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"script": "Fliqpy_Burned_Script",
+	"color": "#75ff73",
+	"antialiasing": true,
+	"camera": [
+		274.549761391522,
+		544.019042125705
+	],
+	"aspect": "Crazy",
+	"position": [
+		-78.266029670606,
+		278.736736233342
+	],
+	"icon": "fliqpy_burned",
+	"scale": 1,
+	"image": "burned/Default",
+	"name": "Fliqpy",
+	"singTime": 1,
+	"onRight": true,
+	"animations": [
+		{
+			"symbol": "FLIQPY DOWN",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 1,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"symbol": "FLIQPY IDLE",
+			"loop": false,
+			"fps": 26,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"symbol": "FLIQPY LEFT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 1,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"symbol": "FLIQPY RIGHT",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 1,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"symbol": "FLIQPY UP",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 1,
+			"key": "singUP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"symbol": "FLIQPY IDLE",
+			"fps": 26,
+			"indices": [
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			],
+			"key": "idle-loop"
+		}
+	]
+}

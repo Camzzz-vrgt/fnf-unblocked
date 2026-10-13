@@ -1,0 +1,92 @@
+{
+	"color": "#75ff73",
+	"zoom": 0.8,
+	"death": "fnf_loss_sfx",
+	"antialiasing": true,
+	"deathCharacter": "Boyfriend",
+	"camera": [
+		209.649607781691,
+		537.221807102664
+	],
+	"aspect": "Crazy",
+	"emote": "hey",
+	"position": [
+		15.1625417579655,
+		299.665307661913
+	],
+	"icon": "fliqpy_crazy",
+	"scale": 1,
+	"image": "default/Crazy_0",
+	"script": "Fliqpy_Crazy_Script",
+	"name": "Fliqpy",
+	"singTime": 1,
+	"onRight": true,
+	"skin": "Default",
+	"animations": [
+		{
+			"symbol": "Fliqpy Scream",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "scream",
+			"indices": []
+		},
+		{
+			"symbol": "Fliqpy Idle",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 0,
+			"key": "idle",
+			"indices": []
+		},
+		{
+			"symbol": "Fliqpy Down",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 3,
+			"key": "singDOWN",
+			"indices": []
+		},
+		{
+			"symbol": "Fliqpy Left",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 3,
+			"key": "singLEFT",
+			"indices": []
+		},
+		{
+			"symbol": "Fliqpy Right",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 3,
+			"key": "singRIGHT",
+			"indices": []
+		},
+		{
+			"symbol": "Fliqpy Up",
+			"loop": false,
+			"fps": 26,
+			"loopTime": 3,
+			"key": "singUP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"symbol": "Fliqpy Idle",
+			"loopTime": 0,
+			"fps": 26,
+			"indices": [
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"key": "idle-loop"
+		}
+	],
+	"sound": "hey"
+}

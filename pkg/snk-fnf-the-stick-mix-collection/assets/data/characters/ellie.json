@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Ellie",
+  "renderType": "sparrow",
+  "assetPath": "characters/redhead",
+  "startingAnimation": "idle",
+  "flipX": false,
+  "singTime": 4.0,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [30,-5]
+    },
+        {
+      "name": "combo100",
+      "prefix": "wow",
+      "offsets": [30,-5]
+    },
+        {
+      "name": "drop110",
+      "prefix": "hehe",
+      "offsets": [30,-5]
+    }
+  ]
+}

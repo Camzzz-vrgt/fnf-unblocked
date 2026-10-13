@@ -1,0 +1,60 @@
+{
+    "weekData": [
+        {
+            "name": "Fliqpy",
+            "display": "Week 1",
+            "title": "Fliqpy",
+            "categories": [
+                {"name": "Normal", "difficulties": ["Easy", "Normal", "Hard", "Trauma"]}
+            ],
+            "songs": ["Flippy_Roll", "Massacre", "Flippin_Out", "UnFlipped_Out"],
+            "keyLock": null,
+            "hiddenOnWeeks": false,
+            "hiddenOnFreeplay": false,
+            "colorFreeplay": "#10e846"
+        },
+        {
+            "name": "Kapow",
+            "display": "Week 2",
+            "title": "Kapow",
+            "categories": [
+                {"name": "Normal", "difficulties": ["Easy", "Normal", "Hard", "Trauma"]}
+            ],
+            "songs": ["Breaktime", "Confrontation"],
+            "keyLock": null,
+            "hiddenOnWeeks": false,
+            "hiddenOnFreeplay": false,
+            "colorFreeplay": "#10e846"
+        },
+        {
+            "name": "Wammy",
+            "display": "Week 3",
+            "title": "Wammy",
+            "categories": [
+                {"name": "Normal", "difficulties": ["Easy", "Normal", "Hard", "Trauma"]}
+            ],
+            "songs": ["Battle_Within"],
+            "keyLock": null,
+            "hiddenOnWeeks": false,
+            "hiddenOnFreeplay": false,
+            "colorFreeplay": "#10e846"
+        },
+        {
+            "name": "Zombie",
+            "display": "Week 4",
+            "title": "Zombie",
+            "categories": [
+                {"name": "Normal", "difficulties": ["Easy", "Normal", "Hard", "Trauma"]}
+            ],
+            "songs": ["Zombified"],
+            "keyLock": null,
+            "hiddenOnWeeks": false,
+            "hiddenOnFreeplay": false,
+            "colorFreeplay": "#10e846"
+        }
+    ],
+
+    "freeplayData": [ ],
+        
+    "showArchiveSongs": false
+}

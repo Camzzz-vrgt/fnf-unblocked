@@ -1,0 +1,32 @@
+{
+	"aspect": "Default",
+	"icon": "sniper",
+	"position": [
+		-95,
+		264
+	],
+	"scale": 1,
+	"color": "#75ff73",
+	"name": "Sniper",
+	"image": "default/Death_0",
+	"zoom": 0.8,
+	"script": "Sniper_Death_Script",
+	"singTime": 1,
+	"death": "soldierDeath",
+	"antialiasing": true,
+	"onRight": false,
+	"camera": [
+		214,
+		594
+	],
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "SNIPER DEATH",
+			"loopTime": 1,
+			"fps": 24,
+			"key": "firstDeath",
+			"indices": []
+		}
+	]
+}

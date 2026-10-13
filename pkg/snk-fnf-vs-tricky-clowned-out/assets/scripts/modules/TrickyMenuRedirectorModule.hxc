@@ -1,0 +1,146 @@
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.ui.MusicBeatState;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import Std;
+import flixel.addons.transition.FlxTransitionableState;
+import funkin.ui.title.TitleState;
+import funkin.ui.options.OptionsState;
+import funkin.graphics.shaders.HSVShader;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.transition.stickers.StickerSubState;
+import funkin.ui.FullScreenScaleMode;
+import flixel.system.scaleModes.RatioScaleMode;
+import funkin.play.ResultState;
+
+import flixel.addons.display.FlxBackdrop;
+import flixel.graphics.frames.FlxBitmapFont;
+import flixel.math.FlxBasePoint;
+import funkin.modding.module.Module;
+import funkin.save.Save;
+
+
+class TrickyMenuRedirectorModule extends Module {
+    public function new() { super("TrickyMenuRedirectorModule", 1000); }
+
+    var isGayMode:Bool = false;
+    override function onSongLoaded(event){
+        super.onSongLoaded(event);
+        isGayMode = PlayStatePlaylist.isStoryMode;
+    }
+
+    public function onStateChangeEnd(event:StateChangeScriptEvent) {
+        super.onStateChangeEnd(event);
+        if(!FlxG.onMobile){
+            var useTrickyMenus:Bool = !Save.instance.modOptions.exists("shouldUseTrickyMenus") || Save.instance.modOptions.get("shouldUseTrickyMenus") != false;
+            var openingTitle:Bool = Std.isOfType(event.targetState, TitleState);
+            // The Tricky title screen is always used on desktop. The menu option only
+            // controls the menu reached after Press Start and later redirects.
+            if (event.eventCanceled || (!useTrickyMenus && !openingTitle)) return;
+            FlxG.scaleMode = new FullScreenScaleMode(false);
+
+            if (openingTitle || (useTrickyMenus && Std.isOfType(event.targetState, MainMenuState))){
+                event.cancel();
+                //this.active = false; 
+
+                FlxG.sound?.music?.stop();
+                FlxTransitionableState.skipNextTransIn = true;
+                FlxTransitionableState.skipNextTransOut = true;
+
+                if(Std.isOfType(event.targetState, MainMenuState)){
+                    var state:MusicBeatState = new TrickyMenuState();
+                    FlxG.switchState(state);
+                } else if(Std.isOfType(event.targetState, TitleState)){
+                    var state:MusicBeatState = new TrickyBootScreenState();
+                    FlxG.switchState(state);
+                }            
+            }
+
+            if (Std.isOfType(event.targetState, OptionsState)){
+                FlxG.state.members[0].shader = null;
+                FlxG.state.members[0].color = 0xFF330000;
+            }
+        } else {
+            if(Std.isOfType(event.targetState, TitleState)){
+                var state:MusicBeatState = new TrickyMobileChecker();
+                FlxG.switchState(state);
+            }
+        }
+    }
+
+    public function onSubStateOpenBegin(event:SubStateScriptEvent) {
+        super.onSubStateOpenBegin(event);
+        if (Save.instance.modOptions.exists("shouldUseTrickyMenus") && Save.instance.modOptions.get("shouldUseTrickyMenus") == false) return;
+        if(FlxG.onMobile) return;
+        if (!Std.isOfType(event.targetState, StickerSubState) || PlayState.instance == null || PlayState.instance.isChartingMode) return;
+
+        
+        var newState:MusicBeatState = isGayMode ? new TrickyMenuState() : new TrickyFreeplayState();
+        FlxG.switchState(newState);        
+    }
+
+    var validSongs = [
+        "improbable-outset",
+        "madness",
+        "hellclown",
+        "expurgation",
+        "assault",
+        "tiky"
+    ];
+
+    public function onSubStateOpenEnd(event:SubStateScriptEvent) {
+        super.onSubStateOpenEnd(event);
+
+        // Don't do anything if we're not in the result screen or in the chart editor.
+        if (!Std.isOfType(event.targetState, ResultState) || PlayState.instance == null || PlayState.instance.isChartingMode) return;
+        if (FlxG.onMobile) return;
+
+        var state:ResultState = event.targetState;
+
+        // Don't do anything if not the right song.
+        if (!validSongs.contains(state.params.songId)) return;
+
+        if (Save.instance.modOptions.exists("shouldUseTrickyMenus") && Save.instance.modOptions.get("shouldUseTrickyMenus") == true) {
+            colorBack = new FunkinSprite(0, 0).makeSolidColor(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+            colorBack.zIndex = 140;
+            state.add(colorBack);
+            state.refresh();
+
+            var newState:MusicBeatState = isGayMode ? new TrickyMenuState() : new TrickyFreeplayState();
+            FlxG.switchState(newState);
+        }
+        else {
+            state.resultsAnim.color = 0xFFab0024;
+            state.members[6]?.color = 0xFF757575; // sound system
+            //state.score.color = 0xFFff0000;
+        
+            colorBack = new FunkinSprite(0, 0).makeSolidColor(FlxG.width * 2, FlxG.height * 2, 0xFF9d0a0a);
+            colorBack.zIndex = 140;
+
+            grid = new FlxBackdrop(Paths.image('trickyMenu/main/grid'));
+            grid.zIndex = 150;
+
+            vignette = FunkinSprite.create(0, 0, 'trickyMenu/main/vignette');
+            vignette.blend = 9;
+            vignette.zIndex = 150;
+            vignette.setGraphicSize(FlxG.width, FlxG.height);
+            vignette.updateHitbox();
+
+            for (i in [ colorBack, grid, vignette]){
+                state.add(i);
+            }
+            state.refresh();
+
+            FlxTimer.globalManager._timers[FlxTimer.globalManager._timers.length - 1].cancel(); // cancels the timer that sets off the actual results music
+            var resultMusic = FunkinSound.load(Paths.music("trickyMenuMusic/nexus"), 1, true, false, true);
+            FunkinSound.setMusic(resultMusic);
+
+            // Replace the font of the text with the song name - it already has a shader so we use a different font spritesheet.
+            var fontLetters:String = "AaBbCcDdEeFfGgHhiIJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz:1234567890().-&";
+            state.songName.font = FlxBitmapFont.fromMonospace(Paths.image("resultScreen/tardlingSpritesheet-tricky"), fontLetters, FlxBasePoint.get(49, 61));
+            state.songName.text = state.params.title;
+        }
+    }
+}

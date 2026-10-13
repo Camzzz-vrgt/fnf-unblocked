@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "Ellie (Dark)",
+  "renderType": "sparrow",
+  "assetPath": "characters/redhead_dark",
+  "startingAnimation": "idle",
+  "flipX": false,
+  "singTime": 4.0,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle 2",
+      "offsets": [30,-5]
+    },
+        {
+      "name": "combo100",
+      "prefix": "wow 2",
+      "offsets": [30,-5]
+    },
+        {
+      "name": "drop110",
+      "prefix": "hehe 2",
+      "offsets": [30,-5]
+    }
+  ]
+}

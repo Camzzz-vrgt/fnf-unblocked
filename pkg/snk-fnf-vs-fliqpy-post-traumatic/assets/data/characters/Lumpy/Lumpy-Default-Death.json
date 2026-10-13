@@ -1,0 +1,33 @@
+{
+	"aspect": "Default",
+	"icon": "lumpi",
+	"position": [
+		-160,
+		0
+	],
+	"scale": 1,
+	"color": "#75ff73",
+	"script": "Lumpy_Default_Death_Script",
+	"image": "default/Death_0",
+	"name": "Lumpy",
+	"death": "lumpyDeath",
+	"antialiasing": true,
+	"singTime": 1,
+	"camera": [
+		148.333333333333,
+		398.333333333333
+	],
+	"onRight": false,
+	"skin": "Default",
+	"danceIdle": false,
+	"animations": [
+		{
+			"loop": false,
+			"symbol": "firstDeath",
+			"loopTime": 0,
+			"fps": 24,
+			"key": "firstDeath",
+			"indices": []
+		}
+	]
+}

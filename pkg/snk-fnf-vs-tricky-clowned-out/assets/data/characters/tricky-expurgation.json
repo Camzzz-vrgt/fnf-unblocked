@@ -1,0 +1,140 @@
+{
+	"version": "1.0.0",
+	"renderType": "multianimateatlas",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1.1,
+	"cameraOffsets": [
+		50,
+		80
+	],
+	"name": "Tricky (Expurgation)",
+	"flipX": false,
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"isPixel": false,
+	"assetPath": "shared:characters/tricky/exTricky",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			10
+		],
+		"scale": 1.3,
+		"id": "tricky-expurgation",
+		"flipX": false
+	},
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"prefix": "idle",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				-60
+			],
+			"prefix": "singLEFT",
+			"animType": "framelabel",
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [
+				0,
+				-60
+			],
+			"prefix": "singLEFT-hold",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "singLEFT-hold"
+		},
+		{
+			"offsets": [
+				0,
+				-100
+			],
+			"prefix": "singDOWN",
+			"animType": "framelabel",
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [
+				0,
+				-100
+			],
+			"prefix": "singDOWN-hold",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "singDOWN-hold"
+		},
+		{
+			"offsets": [
+				0,
+				85
+			],
+			"prefix": "singUP",
+			"animType": "framelabel",
+			"name": "singUP"
+		},
+		{
+			"offsets": [
+				0,
+				85
+			],
+			"prefix": "singUP-hold",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "singUP-hold"
+		},
+		{
+			"offsets": [
+				-10,
+				-20
+			],
+			"prefix": "singRIGHT",
+			"animType": "framelabel",
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [
+				-10,
+				-20
+			],
+			"prefix": "singRIGHT-hold",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "singRIGHT-hold"
+		},
+		{
+			"prefix": "intro",
+			"animType": "framelabel",
+			"looped": false,
+			"name": "intro"
+		},
+		{
+			"prefix": "idle",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "intro-hold"
+		},
+		{
+			"offsets": [
+				0,
+				200
+			],
+			"prefix": "hank",
+			"animType": "framelabel",
+			"looped": true,
+			"name": "hank"
+		}
+	]
+}

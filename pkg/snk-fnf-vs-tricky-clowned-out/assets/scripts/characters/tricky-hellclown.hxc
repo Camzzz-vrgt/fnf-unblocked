@@ -1,0 +1,96 @@
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.util.FlxTimerManager;
+import funkin.effects.IntervalShake;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+
+class TrickyHellclownCharacter extends MultiAnimateAtlasCharacter
+{
+    function new()
+    {
+        super('tricky-hellclown');
+    }
+    
+    var timerMan:FlxTimerManager = new FlxTimerManager();
+    var staticSprite:FunkinSprite;
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+        state = PlayState.instance;
+        if (state == null) return;
+
+        staticSprite = FunkinSprite.create(0, 0, 'characters/tricky/trickyM/TrickyStatic');
+        staticSprite.alpha = 0;
+        staticSprite.setGraphicSize(FlxG.width, 0);
+        staticSprite.updateHitbox();
+        staticSprite.cameras = [state.camHUD];
+        staticSprite.zIndex = state.healthBarBG.zIndex - 1;
+        state.add(staticSprite);
+        state.refresh();
+	}
+    
+    function onUpdate(event:UpdateScriptEvent){
+        super.onUpdate(event);
+        if (PlayState.instance == null) return;
+		timerMan.update(event?.elapsed ?? 0);
+        if (staticSprite.alpha == 0.4) staticSprite.y = FlxG.random.float(0,FlxG.height - staticSprite.height);
+    }
+
+	public override function onNoteHit(event:HitNoteScriptEvent)
+	{
+        super.onNoteHit(event);
+	}
+    
+    function playAnimation(name:String = false, restart:Bool = false, ignoreOther:Bool = false){
+        super.playAnimation(name, restart, ignoreOther);
+        if (name == "idle" || PlayState.instance == null ) return;
+
+        IntervalShake.shake( PlayState.instance.currentStage , 0.1, 0.04, 0.001, 0.001 );
+        if (FlxG.random.bool(8)) trickyStatic();
+    }
+
+    function onNoteGhostMiss(event:GhostMissNoteScriptEvent){
+        super.onNoteGhostMiss(event);
+        trickyStatic();
+    }
+
+    function onNoteMiss(event:NoteScriptEvent){
+        super.onNoteMiss(event);
+        trickyStatic();
+    }
+
+    function trickyStatic(){
+        if (PlayState.instance == null) return;
+        if (staticSprite.alpha == 0.4) return;
+        staticSprite.alpha = 0.4;
+		FunkinSound.playOnce(Paths.sound("tricky/staticSound"));
+        var dad = PlayState.instance.currentStage.getDad();
+        
+		new FlxTimer(timerMan).start(FlxG.random.float(0.1,0.7), _ -> {
+            staticSprite.alpha = 0;
+		});
+    }
+    
+    override function onStepHit(event){
+        super.onStepHit(event);
+        state = PlayState.instance;
+        if (state == null || state.opponentStrumline.holdNotes.members.length == 0) return;
+
+        for (holdNote in state.opponentStrumline.holdNotes.members)
+        {
+            if (holdNote == null || !holdNote.alive) continue;
+
+            if (holdNote.hitNote && !holdNote.missedNote && holdNote.sustainLength > 0)
+            {
+                if (state.currentStage != null && state.currentStage.getDad() != null && state.currentStage.getDad().isSinging())
+                {
+                    state.currentStage.getDad().holdTimer = 0;
+                    state.currentStage.getDad().playSingAnimation(holdNote.noteData.getDirection(), false);
+                }
+            }
+        }
+    }
+}

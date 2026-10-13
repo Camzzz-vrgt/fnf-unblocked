@@ -1,0 +1,12 @@
+{
+    "Events": [
+        ["Set_Note_Property", ["hitMiss", true], "OnCreate"],
+        ["Set_Note_Property", ["flipDown", true], "OnCreate"],
+        ["Set_Note_Property", ["useColor", false], "OnCreate"],
+        ["Set_Note_Property", ["missHealth", 0.2], "OnCreate"],
+        ["Set_Note_Property", ["ignoreMiss", true], "OnCreate"],
+        ["Set_Note_Property", ["splashNote", "Blood"], "OnCreate"],
+        ["Set_Note_Property", ["image", "BLOOD_NOTE_assets"], "OnCreate"],
+        ["Blood_Note", [], "OnMiss"]
+    ]
+}

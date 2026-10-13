@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "name": "CLOWN",
+  "titleAsset": "storymenu/titles/trickyWeek",
+  "props": [
+    {
+      "assetPath": "storymenu/props/tricky",
+      "offsets": [15, 56]
+    }
+  ],
+  "background": "#d20b0b",
+  "songs": ["improbable-outset", "madness", "hellclown"]
+}

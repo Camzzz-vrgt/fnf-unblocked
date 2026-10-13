@@ -1,0 +1,1 @@
+import funkin.play.notes.notekind.ScriptedNoteKind;

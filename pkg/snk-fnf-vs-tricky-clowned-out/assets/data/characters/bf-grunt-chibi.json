@@ -1,0 +1,203 @@
+{
+	"renderType": "multianimateatlas",
+	"offsets": [
+		0,
+		0
+	],
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraZoom": 1.3,
+		"cameraOffsets": [
+			-50,
+			-150
+		]
+	},
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"id": "bf-grunt",
+		"flipX": true
+	},
+	"assetPath": "shared:characters/tricky/chibiBF",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"scale": 0.8,
+	"cameraOffsets": [
+		-50,
+		70
+	],
+	"flipX": true,
+	"name": "Boyfriend (Grunt) [Hellclown]",
+	"isPixel": false,
+	"singTime": 8,
+	"atlasSettings": {
+		"useRenderTexture": true
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "idle",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singLEFT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singDOWN",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singUP",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singRIGHT",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singLEFTmiss",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singDOWNmiss",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singUPmiss",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "singRIGHTmiss",
+			"flipX": false,
+			"looped": false,
+			"animType": "framelabel",
+			"name": "singRIGHTmiss"
+		},
+		{
+			"offsets": [
+				2635,
+				2570
+			],
+			"prefix": "firstDeath",
+			"flipX": false,
+			"looped": false,
+			"name": "firstDeath",
+			"animType": "framelabel",
+			"scale": 0.2,
+			"flipY": false,
+			"assetPath": "shared:characters/tricky/gameOverHellclown",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				2635,
+				2570
+			],
+			"prefix": "deathLoop",
+			"flipX": false,
+			"looped": true,
+			"name": "deathLoop",
+			"animType": "framelabel",
+			"flipY": false,
+			"assetPath": "shared:characters/tricky/gameOverHellclown",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				2635,
+				2570
+			],
+			"prefix": "retryConfirm",
+			"flipX": false,
+			"looped": false,
+			"name": "deathConfirm",
+			"animType": "framelabel",
+			"flipY": false,
+			"assetPath": "shared:characters/tricky/gameOverHellclown",
+			"frameRate": 24
+		}
+	]
+}
