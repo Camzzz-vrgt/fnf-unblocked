@@ -1,0 +1,168 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import flixel.FlxCamera;
+import flixel.FlxG;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.play.stage.Stage;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.FlxCamera;
+import funkin.play.PlayStatePlaylist;
+import flixel.util.FlxTimer;
+import funkin.util.MathUtil;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayState;
+
+class WifeForeverSong extends Song {
+	var gradientBorder:FlxSprite;
+	var wifeBorder:FlxSprite;
+	var borderScale = 0.55;
+	var curBeat = 0;
+	var hasPlayedInGameCutscene:Bool;
+
+	var targetAlpha = 0;
+	var camBorder;
+
+	// cutscene stuff
+	var hasPlayedCutscene:Bool;
+	var bgSprite:FunkinSprite;
+	var bfCanDance = false;
+
+	public function new() {
+		super('wife-forever');
+		hasPlayedInGameCutscene = false;
+	}
+
+
+	function onCreate() {
+		super.onCreate();
+
+		hasPlayedCutscene = false;
+
+
+		gradientBorder = new FunkinSprite(0, 0).loadGraphic(Paths.image('shift/fx/borderGradient'));
+		gradientBorder.updateHitbox();
+		gradientBorder.blend = 0;
+		gradientBorder.cameras = [PlayState.instance.camHUD];
+		gradientBorder.setGraphicSize(FlxG.width, FlxG.height);
+		gradientBorder.screenCenter();
+		PlayState.instance.add(gradientBorder);
+
+		wifeBorder = new FunkinSprite(0, 0).loadGraphic(Paths.image('shift/fx/wifeBorder'));
+		wifeBorder.updateHitbox();
+		wifeBorder.flipX = true;
+		wifeBorder.cameras = [PlayState.instance.camHUD];
+		wifeBorder.frames = Paths.getSparrowAtlas("shift/fx/wifeBorder");
+		wifeBorder.animation.addByPrefix('idle', 'love bored instance 1', 24, true, true);
+		wifeBorder.animation.play('idle', true);
+		wifeBorder.scale.set(borderScale * 1.15, borderScale);
+		wifeBorder.screenCenter();
+		wifeBorder.y -= 3;
+		PlayState.instance.add(wifeBorder);
+
+		camBorder = new FlxCamera();
+		camBorder.bgColor = 0x00000000;
+		FlxG.cameras.add(camBorder, false);
+		camBorder.alpha = 0;
+
+		gradientBorder.cameras = [camBorder];
+		wifeBorder.cameras = [camBorder];
+	}
+
+	function introCutscene() {
+		var bfPos:Array<Float> = [
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+		];
+		var gfPos:Array<Float> = [
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+		];
+		var skyPos:Array<Float> = [
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+		];
+
+		// PlayState.instance.currentStage.getDad().playAnimation('dazed', true);
+		PlayState.instance.tweenCameraToPosition(bfPos[0], bfPos[1], 0, FlxEase.quadInOut);
+		PlayState.instance.tweenCameraZoom(1.2, 0, true, FlxEase.quadInOut);
+		FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.01);
+
+		new FlxTimer().start(0.1, function(tmr) {
+			FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2);
+			PlayState.instance.tweenCameraToPosition(skyPos[0], skyPos[1], 2, FlxEase.sineInOut);
+			FlxTween.tween(bgSprite, {alpha: 0}, 1.4, {startDelay: 0.3}, function() {
+				bgSprite.visible = false;
+			});
+			PlayState.instance.tweenCameraZoom(0.6, 2, true, FlxEase.sineInOut);
+			PlayState.instance.startCountdown();
+		});
+	}
+
+	// create cutscene when song starts
+
+	public override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+		
+
+		if (hasPlayedCutscene && !hasPlayedInGameCutscene) {
+			trace('Pausing countdown to play in game cutscene');
+			hasPlayedInGameCutscene = true;
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			PlayState.instance.camHUD.visible = false;
+			introCutscene();
+		}
+
+		if (!PlayStatePlaylist.isStoryMode) {
+			hasPlayedCutscene = true;
+			hasPlayedInGameCutscene = true;
+		}
+
+		if (!hasPlayedCutscene) {
+			trace('Pausing countdown to play a video cutscene (`wf`)');
+
+			hasPlayedCutscene = true;
+
+			event.cancel(); // CANCEL THE COUNTDOWN!
+
+			PlayState.instance.tweenCameraZoom(0.6, 0, true);
+
+			// trace('Adding black background behind cutscene over UI');
+			bgSprite = new FunkinSprite(0, 0);
+			bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+			bgSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
+			// this
+			bgSprite.zIndex = -10000;
+			PlayState.instance.add(bgSprite);
+			PlayState.instance.refresh();
+
+			startVideo();
+		}
+	}
+
+	function startVideo() {
+		VideoCutscene.play(Paths.videos('wifeForeverCutscene'));
+	}
+
+	var frameStep = 0;
+	var updateStep = 0;
+
+	function onUpdate(event) {
+		super.onUpdate(event);
+
+		if (curBeat < 1) {
+			camBorder.alpha = 0;
+			targetAlpha = 0;
+		}
+		camBorder.alpha = MathUtil.coolLerp(camBorder.alpha, targetAlpha, 0.05);
+		updateStep++;
+		if (updateStep % 4 == 0) {
+			frameStep++;
+		}
+	} 
+}
+

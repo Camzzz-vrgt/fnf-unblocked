@@ -1,0 +1,97 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+import funkin.modding.events.HitNoteScriptEvent;
+import funkin.play.character.BaseCharacter;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+
+class FlyingGhostNoteKind extends NoteKind
+{
+    var currentGhost:FlxSprite = null;
+    var currentTween:FlxTween = null;
+
+    function new()
+    {
+        super("flyingGhost", "Flying Ghost Note", "flyingGhost", []);
+        this.noanim = true;
+    }
+
+    override public function onNoteHit(event:HitNoteScriptEvent):Void
+    {
+        super.onNoteHit(event);
+
+        var note = event.note;
+        if (note.isSustainNote) return;
+
+        var ps = PlayState.instance;
+        if (ps == null) return;
+
+        var player = ps.currentStage.getBoyfriend();
+        if (player == null) return;
+
+        var dir = note.noteData.getDirection();
+        var dirs = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
+        var directionName = dirs[dir];
+
+        if (directionName == "LEFT" || directionName == "RIGHT")
+        {
+
+            var ghost = new FlxSprite();
+            ghost.frames = player.frames;
+            ghost.animation.copyFrom(player.animation);
+            ghost.scale.set(player.scale.x, player.scale.y);
+            ghost.antialiasing = player.antialiasing;
+            ghost.alpha = 0.6;
+            ghost.cameras = [ps.camGame];
+            ghost.zIndex = 1;
+
+            ghost.x = player.x;
+            ghost.y = player.y;
+
+            ps.currentStage.add(ghost);
+        
+            currentGhost = ghost;
+            currentGhost.y = player.y + 40;
+
+            ghost.animation.play("sing" + directionName, true);
+
+            var startX = player.x;
+            var targetX = (directionName == "LEFT") ? startX - 200 : startX + 200;
+
+            currentTween = FlxTween.tween(ghost, {x: targetX}, 0.15, {
+                ease: FlxEase.backOut,
+                onComplete: function(_) {
+                    FlxTween.tween(ghost, {x: startX}, 0.8, {
+                        ease: FlxEase.backIn,
+                        onComplete: function(_) {
+
+                            ps.currentStage.remove(ghost);
+                            ghost.destroy();
+                            if (currentGhost == ghost) currentGhost = null;
+                            currentTween = null;
+                        }
+                    });
+                }
+            });
+        }
+
+        else if (directionName == "UP" || directionName == "DOWN")
+        {
+
+            if (currentGhost == null) return;
+
+            currentGhost.animation.play("sing" + directionName, true);
+
+            if (directionName == "DOWN")
+            {
+                currentGhost.y = player.y + 40;
+            }
+            else if (directionName == "UP")
+            {
+                currentGhost.y = player.y + 40;
+            }
+        }
+    }
+}

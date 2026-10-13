@@ -1,0 +1,35 @@
+import funkin.play.event.SongEvent;
+
+class CastleControlEvent extends SongEvent
+{
+    public override function handleEvent(data) {
+        // Função vazia de propósito — quem trata de verdade é o CastleStage.hxc
+        // (scripts/stages/), via onSongEvent. Essa classe só existe pra
+        // registrar 'CastleControl' como um evento válido pro engine reconhecer.
+    }
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Modo (blackout/dark/luz1/luz2/luz3)",
+                defaultValue: "dark",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Parâmetros (ex: 'bf,0.8,0.1' ou '0.9,0.1')",
+                defaultValue: "",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Castle Control";
+    }
+
+    public function new() {
+        super('CastleControl');
+    }
+}

@@ -1,0 +1,27 @@
+import funkin.play.event.SongEvent;
+
+// Registration-only — handled by `CowardIntroModule.hxc`. See CameraSpeedEvent.hxc
+// for why the empty registration matters.
+class MoveArrowsToMiddleEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "1 = centre the player strumline, 0 = restore",
+                defaultValue: "1",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Move Arrows To Middle";
+    }
+
+    public function new() {
+        super('MoveArrowsToMiddle');
+    }
+}

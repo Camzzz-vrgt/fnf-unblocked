@@ -1,0 +1,188 @@
+import funkin.play.PlayState; 
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxRect;
+import flixel.FlxG;
+import funkin.Paths;
+import funkin.modding.module.Module;
+import flixel.FlxSprite;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.Highscore;
+
+class HarxeretBar extends Module
+{
+    var healthBarBG:FunkinSprite;
+    var healthBarGreen:FunkinSprite;
+    var healthBar:FunkinSprite;
+    var scoreText:FlxText;
+    var scoreBg:FlxSprite;
+var missedBg:FlxSprite;
+    var missedText:FlxText;
+
+    var game:PlayState;
+    var added:Bool = false;
+
+    public function new()
+    {
+        super("HarxeretBar");
+    }
+
+    public function onCountdownStart(event)
+    {
+        super.onCountdownStart(event);
+        
+        game = PlayState.instance;
+
+        if(added || game == null) return;
+
+        if(game.currentSong.id != "BANGBANG") return;
+        added = true;
+        
+        var barY = game.healthBarBG.y - 60;
+        var hbzIndex = game.healthBarBG.zIndex;
+
+        game.healthBar.visible = false;
+        game.healthBarBG.visible = false;
+        game.scoreText.visible = false;
+        game.scoreText.active = false;
+
+        healthBarBG = new FunkinSprite(0, 0, Paths.image("ui/HealthbarHP"));
+        healthBarBG.screenCenter(0x01);
+        healthBarBG.y = barY;
+        healthBarBG.zIndex = hbzIndex;
+        healthBarBG.cameras = [game.camHUD];
+        healthBarBG.scrollFactor.set();
+        healthBarBG.color = 0xFFFF0000;
+        game.add(healthBarBG);
+
+        healthBarGreen = new FunkinSprite(0, 0, Paths.image("ui/HealthbarHP"));
+        healthBarGreen.screenCenter(0x01);
+        healthBarGreen.y = barY;
+        healthBarGreen.zIndex = hbzIndex + 1;
+        healthBarGreen.cameras = [game.camHUD];
+        healthBarGreen.scrollFactor.set();
+        healthBarGreen.color = 0xFF66FF33;
+        game.add(healthBarGreen);
+
+        healthBar = new FunkinSprite(0, 0, Paths.image("ui/Healthbar"));
+        healthBar.screenCenter(0x01);
+        healthBar.y = barY;
+        healthBar.zIndex = hbzIndex + 2;
+        healthBar.cameras = [game.camHUD];
+        healthBar.scrollFactor.set();
+        game.add(healthBar);
+
+        scoreText = new FlxText(20, FlxG.height - 50, 0, "Score: 0", 28);
+        scoreText.setFormat(Paths.font("bar.ttf"), 28, 0xFFFFFFFF, "left", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+        scoreText.borderSize = 2;
+        scoreText.scrollFactor.set();
+        scoreText.cameras = [game.camHUD];
+        scoreText.zIndex = 1000;
+        game.add(scoreText);
+        
+        missedText = new FlxText(FlxG.width - 200, FlxG.height - 50, 0, "Misses: 0", 28);
+        missedText.setFormat(Paths.font("bar.ttf"), 28, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+        missedText.borderSize = 2;
+        missedText.scrollFactor.set();
+        missedText.cameras = [game.camHUD];
+        missedText.zIndex = 1000;
+        game.add(missedText);
+
+scoreBg = createRoundedBg(-20, FlxG.height - 70, 280, 80, 0xFF000000);
+scoreBg.alpha = 0.7;
+game.add(scoreBg);
+
+missedBg = createRoundedBg(FlxG.width - 230, FlxG.height - 70, 280, 80, 0xFF000000);
+missedBg.alpha = 0.7;
+game.add(missedBg);
+
+        game.refresh();
+    }
+
+    public function onUpdate(event)
+    {
+        super.onUpdate(event);
+
+        if(game == null) return;
+        if(healthBarGreen == null) return;
+        
+        if(game.healthLerp >= 1.8) game.healthLerp = 1.8;
+        if(game.healthLerp <= 0.25) game.healthLerp = 0.25;
+
+        var healthPercent = game.health / 2;
+        if(healthPercent < 0) healthPercent = 0;
+        if(healthPercent > 1) healthPercent = 1;
+        
+        var clipWidth = healthPercent * healthBarGreen.frameWidth;
+        var offset = healthBarGreen.frameWidth - clipWidth;
+               
+        healthBarGreen.clipRect = new FlxRect(offset, 0, clipWidth, healthBarGreen.frameHeight);
+        
+        if(scoreText != null)
+        {
+            scoreText.text = "Score: " + Std.int(game.songScore);
+        }
+        
+        if(missedText != null)
+        {
+            missedText.text = "Misses: " + Highscore.tallies.missed;
+        }
+    }
+
+    public function onStateChangeEnd(event)
+    {
+        added = false;
+    }
+    function createRoundedBg(x:Float, y:Float, width:Float, height:Float, color:Int):FlxSprite
+{
+    var bg = new FlxSprite(x, y);
+    bg.makeGraphic(Std.int(width), Std.int(height), color);
+    bg.cameras = [game.camHUD];
+    bg.scrollFactor.set();
+    bg.zIndex = 999;
+    
+    var pixels = bg.graphic.bitmap;
+    for(px in 0...Std.int(width))
+    {
+        for(py in 0...Std.int(height))
+        {
+            var distX = 0;
+            var distY = 0;
+            var radius = 12;
+            
+            if(px < radius && py < radius)
+            {
+                distX = radius - px;
+                distY = radius - py;
+                if(Math.sqrt(distX * distX + distY * distY) > radius)
+                    pixels.setPixel32(px, py, 0x00000000);
+            }
+            else if(px > width - radius && py < radius)
+            {
+                distX = px - (width - radius);
+                distY = radius - py;
+                if(Math.sqrt(distX * distX + distY * distY) > radius)
+                    pixels.setPixel32(px, py, 0x00000000);
+            }
+            else if(px < radius && py > height - radius)
+            {
+                distX = radius - px;
+                distY = py - (height - radius);
+                if(Math.sqrt(distX * distX + distY * distY) > radius)
+                    pixels.setPixel32(px, py, 0x00000000);
+            }
+            else if(px > width - radius && py > height - radius)
+            {
+                distX = px - (width - radius);
+                distY = py - (height - radius);
+                if(Math.sqrt(distX * distX + distY * distY) > radius)
+                    pixels.setPixel32(px, py, 0x00000000);
+            }
+        }
+    }
+    bg.graphic.bitmap = pixels;
+    bg.updateHitbox();
+    
+    return bg;
+}
+}

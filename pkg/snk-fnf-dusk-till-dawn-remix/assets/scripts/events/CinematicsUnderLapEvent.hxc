@@ -1,0 +1,14 @@
+import funkin.play.event.SongEvent;
+
+class CinematicsUnderLapEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+    public function getEventSchema() {
+        return [
+            { name: "value1", title: "Velocidade em segundos (min 0.2)", defaultValue: "0.5", type: "string" },
+            { name: "value2", title: "Distância (0 = tira as barras)", defaultValue: "90", type: "string" }
+        ];
+    }
+    public function getTitle() { return "Cinematics (UnderLap)"; }
+    public function new() { super('Cinematics (UnderLap)'); }
+}

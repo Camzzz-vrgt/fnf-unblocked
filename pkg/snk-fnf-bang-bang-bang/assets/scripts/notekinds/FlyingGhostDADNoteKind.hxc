@@ -1,0 +1,12 @@
+import funkin.modding.events.ScriptEvent;
+import funkin.play.character.BaseCharacter;
+import funkin.play.notes.notekind.ScriptedNoteKind;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+
+class flyingGhostDAD extends ScriptedNoteKind {
+    function new() {
+        super("flyingGhostDAD", "Flying Ghost NoteDAD", "flyingGhostDAD", []);
+        this.noanim = true;
+    }
+}

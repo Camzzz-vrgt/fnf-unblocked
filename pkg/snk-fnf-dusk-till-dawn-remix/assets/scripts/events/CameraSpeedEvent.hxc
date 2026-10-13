@@ -1,0 +1,29 @@
+import funkin.play.event.SongEvent;
+
+// Registration-only, like the other Castle events: `CowardIntroModule.hxc` does the
+// actual work in `onSongEvent`. This class exists so the kind is in the event cache —
+// without it `PlayState` drops the event outright once it is more than 1s stale
+// (PlayState.hx:1489), and the chart uses it 24 times.
+class CameraSpeedEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Camera follow speed",
+                defaultValue: "1",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Camera Speed";
+    }
+
+    public function new() {
+        super('Camera Speed');
+    }
+}

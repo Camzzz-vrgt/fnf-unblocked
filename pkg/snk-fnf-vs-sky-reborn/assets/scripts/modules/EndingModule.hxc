@@ -1,0 +1,151 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.Highscore;
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayStatePlaylist;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import flixel.FlxCamera;
+import funkin.audio.FunkinSound;
+
+class EndingModule extends Module {
+
+    var canInput:Bool = false;
+    var seenImage:Bool = false;
+    var playedSound:Bool = false;
+
+    var otherEnd:FlxSprite;
+    var pereftEnd:FlxSprite;
+    var blackSprite:FunkinSprite;
+    var endingJingleBAD:FunkinSound;
+    var endingJingleGOOD:FunkinSound;
+
+    var extraCam:FlxCamera;
+
+    function new() {
+        super('EndingModule');
+    }
+
+    //shoutouts to genzu for coding this
+    //i coded some of the shittier stuff soooo
+
+
+    function onCountdownStart(event) {
+        super.onCountdownStart(event);
+        if (PlayState?.instance?.currentSong?.id.toLowerCase() == "manifest" && PlayStatePlaylist.isStoryMode)
+        {
+            createBlackSprite();
+            extraCam = new FlxCamera();
+            extraCam.bgColor = 0x00FFFFFF;
+            FlxG.cameras.add(extraCam, false);
+
+            pereftEnd = new FlxSprite(0, 0);
+            pereftEnd.loadGraphic(Paths.image("endings/skyrebornGOODend"));
+            pereftEnd.cameras = [PlayState.instance.camHUD];
+            pereftEnd.scale.set(0.7, 0.7);
+            PlayState.instance.add(pereftEnd);
+            pereftEnd.screenCenter();
+            pereftEnd.zIndex = 1000000;
+            pereftEnd.visible = false;
+
+            otherEnd = new FlxSprite(0, 0);
+            otherEnd.loadGraphic(Paths.image("endings/skyrebornBADend"));
+            otherEnd.cameras = [PlayState.instance.camHUD];
+            otherEnd.scale.set(0.7, 0.7);
+            PlayState.instance.add(otherEnd);
+            otherEnd.screenCenter();
+            otherEnd.zIndex = 1000000;
+            otherEnd.visible = false;
+
+            PlayState.instance.refresh();
+
+		    endingJingleBAD = FunkinSound.load(Paths.sound("endings/endingJingleBAD"), true, false);
+            endingJingleGOOD = FunkinSound.load(Paths.sound("endings/endingJingleGOOD"), true, false);
+
+            seenImage = false;
+        }
+        else if (!PlayStatePlaylist.isStoryMode)
+        {
+            seenImage = true;
+        }
+
+
+    }
+
+    override function onSongEnd(event) {
+        super.onSongEnd(event);
+        trace("Song has ended!");
+
+
+
+        if (PlayState?.instance?.currentSong?.id.toLowerCase() == "manifest" && PlayStatePlaylist.isStoryMode) {
+            if (!seenImage) {
+                //blackSprite.alpha = 1;
+                event.cancel();
+            }
+            if (Highscore.tallies.missed < 25) {
+                canInput = true;
+                endScreen("perfect");
+
+            } else {
+                canInput = true;
+                endScreen("other");
+
+            }
+
+        }
+    }
+
+    function endScreen(rank:String) {
+        switch (rank) {
+            case "perfect" :
+                trace("You achieved a perfect run! Displaying special ending image.");
+                pereftEnd.visible = true;
+                if (!seenImage && !playedSound)
+                {
+
+                        endingJingleGOOD.play();
+                        playedSound = true;
+                    }
+            case "other" :
+                if (!seenImage && !playedSound)
+                    {
+                        endingJingleBAD.play();
+                        playedSound = true;
+                    }
+                otherEnd.visible = true;
+        }
+    }
+
+    override function onUpdate(event) {
+        super.onUpdate(event);
+
+        if (canInput && !seenImage) {
+            var mousePos = FlxG.mouse.getWorldPosition(extraCam);
+            if (FlxG.keys.justPressed.ENTER || (FlxG.mouse.justReleased)) {
+                seenImage = true;
+
+                FlxTween.tween(blackSprite, {alpha: 1}, 1);
+                new FlxTimer().start(1, function(tmr) {
+			        PlayState.instance.endSong();
+		        });
+
+
+            }
+
+
+        }
+    }
+
+    function createBlackSprite(){
+		blackSprite = new FunkinSprite(0, 0);
+		blackSprite.makeSolidColor(2000, 2500, 0xFF000000);
+		blackSprite.cameras = [PlayState.instance.camHUD]; // Show over the HUD but below the video.
+		blackSprite.zIndex = 1000001;
+        blackSprite.alpha = 0;
+		PlayState.instance.add(blackSprite);
+		PlayState.instance.refresh();
+	}
+}

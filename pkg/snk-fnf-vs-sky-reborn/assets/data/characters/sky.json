@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "renderType": "multianimateatlas",
+  "offsets": [0, 0],
+  "danceEvery": 1,
+  "scale": 1,
+  "name": "Sky",
+  "cameraOffsets": [0, 20],
+  "singTime": 8,
+  "startingAnimation": "idle",
+  "isPixel": false,
+  "assetPath": "shared:characters/sky",
+  "healthIcon": {"id": "sky"},
+  "generatedBy": "Nova Character Editor REFRESHED v0.1.2",
+  "animations": [
+    {
+      "prefix": "Left",
+      "name": "singLEFT"
+    },
+    {
+      "prefix": "Down",
+      "name": "singDOWN"
+    },
+    {
+      "prefix": "Up",
+      "name": "singUP"
+    },
+    {
+      "prefix": "Right",
+      "name": "singRIGHT"
+    },
+    {
+      "prefix": "Idle",
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8],
+      "name": "danceLeft"
+    },
+    {
+      "prefix": "Idle",
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16],
+      "name": "danceRight"
+    },
+    {
+      "prefix": "Dance Prep",
+      "name": "caramelTransition"
+    },
+    {
+      "prefix": "Dance",
+      "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "name": "danceLeft-caramel"
+    },
+    {
+      "prefix": "Dance",
+      "frameIndices": [14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+      "name": "danceRight-caramel"
+    },
+    {
+      "prefix": "Tomato Splat",
+      "name": "tomatoHit"
+    },
+    {
+      "prefix": "Left Tomato",
+      "name": "singLEFT-tomato"
+    },
+    {
+      "prefix": "Down Tomato",
+      "name": "singDOWN-tomato"
+    },
+    {
+      "prefix": "Up Tomato",
+      "name": "singUP-tomato"
+    },
+    {
+      "prefix": "Right Tomato",
+      "name": "singRIGHT-tomato"
+    },
+    {
+      "prefix": "Idle Tomato",
+      "frameIndices": [1, 2, 3, 4, 5, 6, 7, 8],
+      "name": "danceLeft-tomato"
+
+    },
+    {
+      "prefix": "Idle Tomato",
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16],
+      "name": "danceRight-tomato"
+    }
+  ]
+}

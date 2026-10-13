@@ -1,0 +1,70 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class camerabopRotateEvent extends SongEvent {
+
+    public var eventTitle:String = "Camera Bop Rotate";
+
+    var enabled:Bool = false;
+    var defaultAngle:Float = 1.5;
+    var lastBeat:Int = -1;
+
+    public function new() {
+        super("camerabopRotateEvent");
+    }
+
+    override function getTitle():String {
+        return eventTitle;
+    }
+
+    override function handleEvent(data):Void {
+        var val:Int = data.getInt('enabled') != null ? data.getInt('enabled') : 0;
+        enabled = (val == 1);
+        lastBeat = -1;
+
+        var game = PlayState.instance;
+        if (game == null) return;
+
+        if (!enabled) {
+            FlxTween.cancelTweensOf(game.camGame, ["angle"]);
+            FlxTween.tween(game.camGame, {angle: 0}, 0.6, {
+                ease: FlxEase.circOut
+            });
+        }
+    }
+
+    override function onBeatHit(event):Void {
+        if (!enabled) return;
+
+        var game = PlayState.instance;
+        if (game == null) return;
+        if (game.isSongEnd || game.isPlayerDying) return;
+
+        var currentBeat:Int = Math.floor(event.beat);
+        if (currentBeat == lastBeat) return;
+        lastBeat = currentBeat;
+
+        var targetAngle:Float = (currentBeat % 2 == 0) ? defaultAngle : -defaultAngle;
+
+        FlxTween.cancelTweensOf(game.camGame, ["angle"]);
+        FlxTween.tween(game.camGame, {angle: targetAngle}, 0.6, {ease: FlxEase.quadOut});
+    }
+
+    override function getEventSchema() {
+        return [
+            {
+                name: "enabled",
+                title: "Enabled",
+                defaultValue: 0,
+                type: "enum",
+                keys: [
+                    "Disabled" => 0,
+                    "Enabled" => 1
+                ]
+            }
+        ];
+    }
+}

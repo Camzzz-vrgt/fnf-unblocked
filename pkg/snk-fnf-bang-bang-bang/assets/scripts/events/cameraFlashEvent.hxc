@@ -1,0 +1,146 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import flixel.FlxG;
+
+import funkin.play.event.SongEvent;
+import funkin.data.event.SongEventSchema;
+
+import funkin.modding.PolymodErrorHandler;
+import funkin.Preferences;
+
+class CameraFlashFixes extends Module {
+  var shouldFixFlashEvent:Bool = true;
+
+  public function new(){
+    super('extra-events-cameraFlashFixes');
+  }
+  
+  function onGameOver(event:ScriptEvent){
+    super.onGameOver(event);
+    if (!shouldFixFlashEvent) return;
+
+    PlayState.instance.camGame?.stopFlash();
+    PlayState.instance.camHUD?.stopFlash();
+  }
+
+  function onSongRetry(event:ScriptEvent){
+    super.onSongRetry(event);
+    if (!shouldFixFlashEvent) return;
+
+    PlayState.instance.camGame?.stopFlash();
+    PlayState.instance.camHUD?.stopFlash();
+  }
+}
+
+class CameraFlashEvent extends SongEvent {
+  
+  function new() {
+      super("extra-events-cameraFlashEvent");
+  }
+
+  public var eventTitle:String = "Extra Events | Camera Flash";
+  public var DEFAULT_DURATION:Float = 1.0;
+  public var DEFAULT_APPLYTOHUD:Bool = false;
+  public var DEFAULT_COLOR:Int = 12; // White (safe)
+
+  override function handleEvent(data):Void {
+    if (PlayState.instance == null) return;
+    if (PlayState.instance.currentStage == null) return;
+    if (PlayState.instance.isMinimalMode) return;
+    if (!Preferences.flashingLights) return;
+
+    var duration:Float = data.getFloat('duration') != null ? data.getFloat('duration') : DEFAULT_DURATION;
+    var applyToHud:Bool = data.getBool('applyToHud') != null ? data.getBool('applyToHud') : DEFAULT_APPLYTOHUD;
+    var colorIndex:Int = data.getInt('color') != null ? data.getInt('color') : DEFAULT_COLOR;
+
+    if (duration <= 0) {
+      PolymodErrorHandler.showAlert(
+        "Event execution error for " + eventTitle,
+        "Duration must be greater than 0."
+      );
+      return;
+    }
+
+    // Переводим шаги в секунды
+    var durSeconds = Conductor.instance.stepLengthMs * duration / 1000;
+
+    // ===== SAFE COLOR SYSTEM (iOS FIX) =====
+    var color:Int;
+
+    switch (colorIndex) {
+      case 0:  color = 0xCC000000; // Black (с пониженной альфой)
+      case 1:  color = 0xCC0000FF; // Blue
+      case 2:  color = 0xCCA52A2A; // Brown
+      case 3:  color = 0xCC00FFFF; // Cyan
+      case 4:  color = 0xCC808080; // Gray
+      case 5:  color = 0xCC008000; // Green
+      case 6:  color = 0xCC00FF00; // Lime
+      case 7:  color = 0xCCFF00FF; // Magenta
+      case 8:  color = 0xCCFFA500; // Orange
+      case 9:  color = 0xCC800080; // Purple
+      case 10: color = 0xCCFF0000; // Red
+      case 11: color = 0x00000000; // Transparent
+      case 12: color = 0xCCF5F5F5; // SAFE WHITE (НЕ 0xFFFFFFFF)
+      case 13: color = 0xCCFFFF00; // Yellow
+      default: color = 0xCCF5F5F5;
+    }
+
+    // ===== STOP OLD FLASH (CRUCIAL FOR iOS) =====
+    PlayState.instance.camGame?.stopFlash();
+    PlayState.instance.camHUD?.stopFlash();
+
+    // ===== APPLY FLASH =====
+    if (!applyToHud) {
+      FlxG.camera.flash(color, durSeconds);
+    } else {
+      PlayState.instance.camHUD?.flash(color, durSeconds);
+    }
+  }
+
+  public override function getTitle() {
+    return eventTitle;
+  }
+
+  override function getEventSchema(){
+    return [
+      {
+        name: 'duration',
+        title: 'Duration',
+        defaultValue: 1.0,
+        step: 0.5,
+        min: 0.5,
+        type: "float",
+        units: 'steps'
+      },
+      {
+        name: 'applyToHud',
+        title: 'Apply to camHUD',
+        defaultValue: false,
+        type: "bool"
+      },
+      {
+        name: 'color',
+        title: 'Color',
+        defaultValue: 12,
+        type: "enum",
+        keys: [
+          "Black" => 0,
+          "Blue" => 1,
+          "Brown" => 2,
+          "Cyan" => 3,
+          "Gray" => 4,
+          "Green" => 5,
+          "Lime" => 6,
+          "Magenta" => 7,
+          "Orange" => 8,
+          "Purple" => 9,
+          "Red" => 10,
+          "Transparent" => 11,
+          "White" => 12,
+          "Yellow" => 13
+        ]
+      }
+    ];
+  }
+}

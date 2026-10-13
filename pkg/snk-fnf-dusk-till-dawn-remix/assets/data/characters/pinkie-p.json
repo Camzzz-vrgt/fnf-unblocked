@@ -1,0 +1,159 @@
+{
+	"version": "1.0.1",
+	"name": "pinkie-p",
+	"renderType": "sparrow",
+	"assetPath": "characters/SurvivorPinkie",
+	"scale": 2.3,
+	"healthIcon": {
+		"id": "triplefun",
+		"isPixel": false
+	},
+	"healthBarColor": "#E66CF1",
+	"offsets": [
+		-200,
+		-30
+	],
+	"cameraOffsets": [
+		-720,
+		-450
+	],
+	"isPixel": false,
+	"danceEvery": 2,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"animations": [
+		{
+			"name": "singDOWN",
+			"prefix": "Pink_Down",
+			"offsets": [
+				-33,
+				40
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "idle",
+			"prefix": "Pink_Idle",
+			"offsets": [
+				-15,
+				112
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "Pink_Left",
+			"offsets": [
+				100,
+				65
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "Pink_Up",
+			"offsets": [
+				-77,
+				131
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "Pink_Right",
+			"offsets": [
+				-100,
+				120
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "idle-alt",
+			"prefix": "Pink_Idle_",
+			"offsets": [
+				-14,
+				112
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN-alt",
+			"prefix": "Pink_Down_",
+			"offsets": [
+				-33,
+				40
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT-alt",
+			"prefix": "Pink_Left_",
+			"offsets": [
+				100,
+				75
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP-alt",
+			"prefix": "Pink_Up_",
+			"offsets": [
+				-77,
+				131
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT-alt",
+			"prefix": "Pink_Right_",
+			"offsets": [
+				-100,
+				120
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "awesome",
+			"prefix": "Pink_Awesome",
+			"offsets": [
+				113,
+				196
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "scream",
+			"prefix": "Pink_AAA",
+			"offsets": [
+				101,
+				138
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		}
+	],
+	"flipX": false
+}

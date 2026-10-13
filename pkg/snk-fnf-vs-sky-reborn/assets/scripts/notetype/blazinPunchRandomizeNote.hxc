@@ -1,0 +1,137 @@
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.play.notes.Strumline;
+import funkin.play.notes.notekind.ScriptedNoteKind;
+
+class blazinPunchRandomizeNote extends ScriptedNoteKind {
+    function new() {
+        super("blazinPunchRandomizeNote", "Blazin Punch (Randomize)");
+    }
+
+    var dad;
+    var boyfriend;
+
+    var animPunchList:Array<String> = [
+        "punchHigh1",
+        "punchHigh2",
+        "punchLow1",
+        "punchLow2"
+    ];
+
+    var animDodgeList:Array<String> = [
+        "block",
+        "dodge",
+        "dodge2",
+        "hitHigh",
+        "hitLow"
+    ];
+
+    var animPunchRare:Array<String> = [
+        "hitSpin",
+        "cringe",
+        "thisGuy"
+    ];
+
+    var daPunchAnim:String;
+    var daDodgeAnim:String;
+    var lastPunchAnim:String = '';
+    var lastDodgeAnim:String = '';
+
+    public function onNoteHit(event) {
+        super.onNoteHit(event);
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        randomAnim();
+
+        dad = PlayState?.instance?.currentStage?.getDad();
+        boyfriend = PlayState?.instance?.currentStage?.getBoyfriend();
+
+        if (dad == null || boyfriend == null) return;
+
+        if (event.note.noteData.getMustHitNote(Strumline.KEY_COUNT)) {
+            if (FlxG.random.bool(50)) {
+                boyfriend.ignoreExclusionPref = [];
+                boyfriend.playAnimation(daPunchAnim, true, false);
+    
+                dad.ignoreExclusionPref = [];
+                if (daPunchAnim == 'punchLow1' || daPunchAnim == 'punchLow2') dad.playAnimation('hitLow', true, false);
+                else dad.playAnimation(daDodgeAnim, true, false);
+
+                boyfriend.zIndex = dad.zIndex + 1;
+            } else {
+                boyfriend.ignoreExclusionPref = [];
+                boyfriend.playAnimation('dodge', true, false);
+                if (FlxG.random.bool()) boyfriend.playAnimation('block', true, false);
+    
+                dad.ignoreExclusionPref = [];
+                dad.playAnimation(daPunchAnim, true, false);
+
+                dad.zIndex = boyfriend.zIndex + 1;
+            }
+        } else {
+            if (FlxG.random.bool(50)) {
+                dad.ignoreExclusionPref = [];
+                dad.playAnimation(daPunchAnim, true, false);
+    
+                boyfriend.ignoreExclusionPref = [];
+                if (daPunchAnim == 'punchLow1' || daPunchAnim == 'punchLow2') boyfriend.playAnimation('hitLow', true, false);
+                else boyfriend.playAnimation(daDodgeAnim, true, false);
+
+                dad.zIndex = boyfriend.zIndex + 1;
+
+            } else {
+                dad.ignoreExclusionPref = [];
+                dad.playAnimation('dodge', true, false);
+                if (FlxG.random.bool()) dad.playAnimation('block', true, false);
+    
+                boyfriend.ignoreExclusionPref = [];
+                boyfriend.playAnimation(daPunchAnim, true, false);
+
+                boyfriend.zIndex = dad.zIndex + 1;
+            }
+        }
+        PlayState.instance.currentStage.refresh();
+    }
+
+    function onNoteMiss(event) {
+        super.onNoteMiss(event);
+        
+        randomAnim();
+        
+        dad = PlayState?.instance?.currentStage?.getDad();
+        boyfriend = PlayState?.instance?.currentStage?.getBoyfriend();
+
+        dad.ignoreExclusionPref = [];
+        dad.playAnimation(daPunchAnim, true, false);
+
+        boyfriend.ignoreExclusionPref = [];
+        if (daPunchAnim == 'punchLow1' || daPunchAnim == 'punchLow2') boyfriend.playAnimation('hitLow', true, false);
+        else if (FlxG.random.bool(90)) boyfriend.playAnimation('hitHigh', true, false);
+        else boyfriend.playAnimation('hitSpin', true, false);
+
+        dad.zIndex = boyfriend.zIndex + 1;
+        PlayState.instance.currentStage.refresh();
+
+    }
+    
+    function randomAnim() {
+        do {      
+            var randomPunchIndex:Int = FlxG.random.int(0, animPunchList.length - 1);
+            daPunchAnim = animPunchList[randomPunchIndex];
+        } while (daPunchAnim == lastPunchAnim);
+        lastPunchAnim = daPunchAnim;
+
+        do {
+            var randomDodgeIndex:Int = FlxG.random.int(0, animDodgeList.length - 1);
+            daDodgeAnim = animDodgeList[randomDodgeIndex];
+        } while (daDodgeAnim == lastDodgeAnim);
+        lastDodgeAnim = daDodgeAnim;
+
+        if (Math.random() < 0.1) {
+            var rareAnimIndex = FlxG.random.int(0, animPunchRare.length - 1);
+            daDodgeAnim = animPunchRare[rareAnimIndex];
+        } else {
+            // do nothing lmao
+        }
+    }
+}

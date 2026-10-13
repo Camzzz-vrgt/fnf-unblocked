@@ -1,0 +1,3 @@
+class NoteKindsConstants {
+    public static var DIRECTION_NAMES:Array<String> = ["LEFT", "DOWN", "UP", "RIGHT"];
+}

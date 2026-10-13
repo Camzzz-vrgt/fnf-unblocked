@@ -1,0 +1,124 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.data.event.SongEventSchema;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class HudFadePlusEvent extends SongEvent {
+
+  public var eventTitle:String = "HUD Fade";
+
+  public var DEFAULT_SHOW:Bool = true;
+  public var DEFAULT_DURATION:Float = 1.0;
+
+  function new() {
+    super("hudFadePlus");
+  }
+
+  override function handleEvent(data):Void {
+    if (PlayState.instance == null) return;
+    if (PlayState.instance.isMinimalMode) return;
+    if (PlayState.instance.camHUD == null) return;
+
+    var show:Bool = data.getBool('show') != null
+      ? data.getBool('show')
+      : DEFAULT_SHOW;
+
+    var duration:Float = data.getFloat('duration') != null
+      ? data.getFloat('duration')
+      : DEFAULT_DURATION;
+
+    if (!show) {
+      if (PlayState.instance.playerStrumline != null) {
+        FlxTween.tween(PlayState.instance.playerStrumline, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.opponentStrumline != null) {
+        FlxTween.tween(PlayState.instance.opponentStrumline, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      if (PlayState.instance.healthBar != null) {
+        FlxTween.tween(PlayState.instance.healthBar, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.healthBarBG != null) {
+        FlxTween.tween(PlayState.instance.healthBarBG, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      if (PlayState.instance.scoreText != null) {
+        FlxTween.tween(PlayState.instance.scoreText, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      // comboGroup does not exist on this fork. The nearest member, comboPopUps, is a
+      // PopUpStuff -- FlxTypedGroup -> FlxBasic, which has no alpha -- so tweening it
+      // would be a silent no-op. Branch removed rather than faked.
+      
+      if (PlayState.instance.iconP1 != null) {
+        FlxTween.tween(PlayState.instance.iconP1, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.iconP2 != null) {
+        FlxTween.tween(PlayState.instance.iconP2, {alpha: 0}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      // This fork has no song time bar or time text: neither timeBar nor timeTxt
+      // exists anywhere in source/. Both fade branches removed.
+      
+      // This fork has no song time bar or time text (no timeBar/timeTxt anywhere in
+      // source/), so the two fade branches that targeted them were removed.
+      PlayState.instance.camHUD.alpha = 1;
+      PlayState.instance.camHUD.visible = true;
+      
+    } else {
+      if (PlayState.instance.playerStrumline != null) {
+        PlayState.instance.playerStrumline.alpha = 0;
+        PlayState.instance.playerStrumline.visible = true;
+        FlxTween.tween(PlayState.instance.playerStrumline, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.opponentStrumline != null) {
+        PlayState.instance.opponentStrumline.alpha = 0;
+        PlayState.instance.opponentStrumline.visible = true;
+        FlxTween.tween(PlayState.instance.opponentStrumline, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      if (PlayState.instance.healthBar != null) {
+        FlxTween.tween(PlayState.instance.healthBar, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.healthBarBG != null) {
+        FlxTween.tween(PlayState.instance.healthBarBG, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      if (PlayState.instance.scoreText != null) {
+        FlxTween.tween(PlayState.instance.scoreText, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      
+      if (PlayState.instance.iconP1 != null) {
+        FlxTween.tween(PlayState.instance.iconP1, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      if (PlayState.instance.iconP2 != null) {
+        FlxTween.tween(PlayState.instance.iconP2, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+      
+    }
+  }
+
+  override function getTitle() {
+    return eventTitle;
+  }
+
+  override function getEventSchema():SongEventSchema {
+    return [
+      {
+        name: 'show',
+        title: 'Show HUD Elements',
+        defaultValue: true,
+        type: "bool"
+      },
+      {
+        name: 'duration',
+        title: 'Fade Duration',
+        defaultValue: 1.0,
+        min: 0.0,
+        step: 0.1,
+        type: "float",
+        units: 'seconds'
+      }
+    ];
+  }
+}

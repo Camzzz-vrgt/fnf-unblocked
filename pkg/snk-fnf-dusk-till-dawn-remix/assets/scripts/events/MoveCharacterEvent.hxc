@@ -1,0 +1,13 @@
+import funkin.play.event.SongEvent;
+class MoveCharacterEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+    public function getEventSchema() {
+        return [
+            { name: "value1", title: "Personagem (bf/dad/gf)", defaultValue: "bf", type: "string" },
+            { name: "value2", title: "x,y,tempo", defaultValue: "0,0,1", type: "string" }
+        ];
+    }
+    public function getTitle() { return "Move Character"; }
+    public function new() { super('Move Character'); }
+}

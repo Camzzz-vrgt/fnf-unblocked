@@ -1,0 +1,33 @@
+import funkin.play.event.SongEvent;
+
+class CamaraZoomEvent extends SongEvent
+{
+    public override function handleEvent(data) {
+        // Vazio de propósito — quem trata é o CowardIntroModule.hxc.
+    }
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Zoom alvo (ex: 1.05)",
+                defaultValue: "1",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Duração em segundos (vazio = instantâneo)",
+                defaultValue: "",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Camara Zoom";
+    }
+
+    public function new() {
+        super('CamaraZoom');
+    }
+}

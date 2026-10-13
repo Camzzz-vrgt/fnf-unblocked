@@ -1,0 +1,40 @@
+{
+	"version": "1.0.0",
+	"renderType": "animateatlas",
+	"offsets": [0,0],
+	"danceEvery": 1,
+	"name": "Sky Mini",
+	"cameraOffsets": [0,0],
+	"singTime": 8,
+	"startingAnimation": "idle",
+	"assetPath": "shared:characters/skymini",
+	"healthIcon": {"id": "skymini"},
+	"generatedBy": "Nova Character Editor REFRESHED v0.1.0",
+	"animations": [
+		{
+			"prefix": "Left",
+			"name": "singLEFT"
+		},
+		{
+			"prefix": "Down",
+			"name": "singDOWN"
+		},
+		{
+			"prefix": "Up",
+			"name": "singUP"
+		},
+		{
+			"prefix": "Right",
+			"name": "singRIGHT"
+		},
+		{
+
+			"prefix": "Idle",
+			"name": "idle"
+		},
+		{
+			"prefix": "Idle Blink",
+			"name": "idle-blink"
+		}
+	]
+}

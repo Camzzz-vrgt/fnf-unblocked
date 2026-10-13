@@ -1,0 +1,63 @@
+{
+  "version": "2.2.4",
+  "songName": "Wife Forever! (Pico Mix)",
+  "artist": "NunosDX (ft. SojaWooz)",
+  
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "stickerPack": "skypico",
+    "songVariations": [],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "album": "skyexpansion2",
+    "characters": {
+      "player": "pico-playable",
+      "girlfriend": "nene-wifeforever",
+      "opponent": "sky",
+      "instrumental": "pico",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "sky"
+      ],
+      "playerVocals": [
+        "pico"
+      ]
+    },
+    "stage": "theShiftErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 3,
+      "normal": 5,
+      "hard": 7
+    },
+    "previewStart": 0,
+    "previewEnd": 0
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 195,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import funkin.util.Constants;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import flixel.math.FlxMath;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.character.CharacterType;
+
+class BoyfriendCandyCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('bf-candy');
+  }
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    if (name == "fakeoutDeath" && !this.debug)
+    {
+      doFakeoutDeath();
+    }
+    else
+    {
+      super.playAnimation(name, restart, ignoreOther);
+    }
+  }
+
+  function doFakeoutDeath():Void
+  {
+    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
+
+    var bfFakeout:FlxAtlasSprite = new FlxAtlasSprite(this.x - 440, this.y - 240, Paths.animateAtlas("characters/bfFakeOut", "shared"));
+    GameOverSubState.instance.add(bfFakeout);
+    bfFakeout.zIndex = 1000;
+    bfFakeout.playAnimation('');
+    // We don't want people to miss this.
+    GameOverSubState.instance.mustNotExit = true;
+    bfFakeout.onAnimationComplete.add(() -> {
+      bfFakeout.visible = false;
+      this.visible = true;
+      GameOverSubState.instance.mustNotExit = false;
+      this.playAnimation('firstDeath', true, true);
+      // Play the "blue balled" sound. May play a variant if one has been assigned.
+      GameOverSubState.playBlueBalledSFX();
+    });
+    bfFakeout.visible = true;
+    this.visible = false;
+  	}
+	
+  	function onCountdownStart() {
+		super.onCountdownStart();
+		if (PlayState.instance.currentStage != null){
+		candyStick = new FlxSprite(780, 874).loadGraphic(Paths.image('shift/candyStick'));
+		candyStick.updateHitbox();
+		candyStick.scale.set(1, 1);
+		candyStick.zIndex = 350;
+
+		PlayState.instance.currentStage.refresh();
+		}
+		
+	}
+
+	var hasCandy:Bool = true; // set to false by default
+	var hawkTuah:FunkinSound;
+
+	var candyMode:String = "default"; // "candy", "lollipop", "default"
+
+	function onNoteHit(event:HitNoteScriptEvent) {
+		super.onNoteHit(event);
+		if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF) {
+			switch (candyMode) {
+				case "default":
+					return;
+				default:
+					this.ignoreExclusionPref = [];
+					this.playSingAnimation(event.note.noteData.getDirection(), false, candyMode);
+					holdTimer = 0;
+			}
+		}
+	}
+
+	override function onBeatHit(event) {
+		super.onBeatHit(event);
+
+		if (PlayState.instance.currentSong.id == "wife-forever" && PlayState.instance.currentVariation != 'erect') {
+			if (event.beat == 92) {
+				hawkTuah = FunkinSound.load(Paths.sound("boyfriendHawk"), false, false);
+				hawkTuah.volume = 1;
+				candyMode = "candy";
+				candyUpdate();
+			}
+		}
+
+		if (PlayState.instance.currentSong.id == "wife-forever") {
+			if (event.beat == 200 && candyMode == "candy")
+			{
+				PlayState.instance.disableKeys = true;
+				this.playAnimation('candyflip', true, true);
+				this.animation.finishCallback = (candyFlip) -> {
+					candyMode = "lollipop";
+					PlayState.instance.disableKeys = false;
+					candyUpdate();
+				}
+			}
+		}
+		if (PlayState.instance.currentSong.id == "wife-forever") {
+			if (event.beat == 336 && candyMode == "lollipop")
+			{
+				PlayState.instance.disableKeys = true;
+				this.playAnimation('candyspit', true, true);
+				hawkTuah.play(false);
+				this.animation.finishCallback = (candySpit) -> {
+					candyMode = "default";
+					PlayState.instance.currentStage.add(candyStick);
+					PlayState.instance.disableKeys = false;
+					candyUpdate();
+				}
+			}
+		}
+	}
+
+	function candyUpdate() {
+		if (candyMode == "candy") {
+			this.idleSuffix = "-candy";
+		}
+
+		if (candyMode == "lollipop") {
+			this.idleSuffix = "-lollipop";
+		}
+		if (candyMode == "default") {
+			this.idleSuffix = "";
+		}
+	}
+}

@@ -1,0 +1,27 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.modding.base.ScriptedFlxSpriteGroup;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.components.HealthIcon;
+import funkin.modding.PolymodHandler;
+
+class ScenecoreSong extends Song {
+	public function new() {
+		super('scenecore');
+	}
+
+
+	function onCreate() {
+		super.onCreate();
+		
+		if (PlayState.instance.currentSong.id == 'scenecore') {
+			PlayState.instance.currentStage.getDad().destroy();
+			character = CharacterDataParser.fetchCharacter("scenecoresky");
+			PlayState.instance.currentStage.addCharacter(character, CharacterType.DAD);
+			PlayState.instance.currentStage.refresh();
+		}
+	}
+}

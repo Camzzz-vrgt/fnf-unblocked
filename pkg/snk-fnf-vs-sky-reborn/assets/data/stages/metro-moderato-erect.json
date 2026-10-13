@@ -1,0 +1,188 @@
+{
+  "props": [
+    {
+      "zIndex": 0,
+      "position": [330, -400],
+      "name": "sky",
+      "assetPath": "stages/Metronopolis/Moderato/sky",
+      "scroll": [0.3, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [550, -400],
+      "name": "water",
+      "assetPath": "stages/Metronopolis/Moderato/water",
+      "scroll": [0.4, 1]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 0,
+      "position": [880, -400],
+      "animType": "sparrow",
+      "name": "sparkle1",
+      "startingAnimation": "idle",
+      "assetPath": "stages/Metronopolis/sparkles",
+      "scroll": [0.3, 1],
+      "animations": [
+        {
+          "frameRate": 4,
+          "prefix": "sparkle1",
+          "name": "idle",
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 0,
+      "position": [880, -400],
+      "animType": "sparrow",
+      "name": "sparkle2",
+      "startingAnimation": "idle",
+      "assetPath": "stages/Metronopolis/sparkles",
+      "scroll": [0.4, 1],
+      "animations": [
+        {
+          "frameRate": 4,
+          "prefix": "sparkle2",
+          "name": "idle",
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 0,
+      "position": [880, -400],
+      "name": "sparkle3",
+      "startingAnimation": "idle",
+      "animType": "sparrow",
+      "assetPath": "stages/Metronopolis/sparkles",
+      "scroll": [0.5, 1],
+      "animations": [
+        {
+          "frameRate": 4,
+          "prefix": "sparkle3",
+          "name": "idle",
+          "looped": true
+        }
+      ]
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 0,
+      "position": [880, -400],
+      "name": "sparkle4",
+      "startingAnimation": "idle",
+      "animType": "sparrow",
+      "assetPath": "stages/Metronopolis/sparkles",
+      "scroll": [0.6, 1],
+      "animations": [
+        {
+          "frameRate": 4,
+          "prefix": "sparkle4",
+          "name": "idle",
+          "looped": true
+        }
+      ]
+    },
+    {
+      "zIndex": 0,
+      "position": [650, -400],
+      "name": "furtherSil",
+      "assetPath": "stages/Metronopolis/Moderato/furtherSil",
+      "scroll": [0.3, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [600, -400],
+      "name": "closeSil",
+      "assetPath": "stages/Metronopolis/Moderato/closeSil",
+      "scroll": [0.3, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [550, -400],
+      "name": "buildings",
+      "assetPath": "stages/Metronopolis/Moderato/buildings",
+      "scroll": [0.4, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [-400, -400],
+      "name": "wall",
+      "assetPath": "stages/Metronopolis/Moderato/erect/wall",
+      "scroll": [0.6, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [-1600, 200],
+      "name": "bottomBuilding",
+      "assetPath": "stages/Metronopolis/Moderato/erect/bottomBuilding",
+      "scroll": [0.8, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [-1600, -400],
+      "name": "topBuilding",
+      "assetPath": "stages/Metronopolis/Moderato/erect/topBuilding",
+      "scroll": [0.9, 1]
+    },
+    {
+      "zIndex": 0,
+      "position": [-1500, 600],
+      "name": "floor",
+      "assetPath": "stages/Metronopolis/Moderato/erect/floor"
+    },
+    {
+      "zIndex": 0,
+      "position": [1350, -400],
+      "name": "periph",
+      "assetPath": "stages/Metronopolis/Moderato/erect/periph"
+    },
+    {
+      "zIndex": 500,
+      "position": [400, -400],
+      "name": "light",
+      "assetPath": "stages/Metronopolis/Moderato/erect/light",
+      "scroll": [1.1, 1],
+      "blend": "add",
+      "alpha": 0.3
+    },
+    {
+      "zIndex": 500,
+      "position": [-1500, -400],
+      "name": "treeLeft",
+      "assetPath": "stages/Metronopolis/Moderato/erect/treeLeft",
+      "scroll": [1.1, 1]
+    },
+    {
+      "zIndex": 500,
+      "position": [2000, -400],
+      "name": "treeRight",
+      "assetPath": "stages/Metronopolis/Moderato/erect/treeRight",
+      "scroll": [1.1, 1]
+    }
+  ],
+  "cameraZoom": 0.43,
+  "version": "1.0.2",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1050, 1240],
+      "cameraOffsets": [-210, -350]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [200, 1250],
+      "cameraOffsets": [250, -150]
+    },
+    "gf": {
+      "zIndex": 100,
+      "position": [700, 1050],
+      "cameraOffsets": [-80, -50]
+    }
+  },
+  "name": "Metronopolis (Moderato) [Erect]",
+  "directory": "weekallegro"
+}

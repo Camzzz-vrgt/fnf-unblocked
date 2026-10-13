@@ -1,0 +1,43 @@
+import funkin.ui.freeplay.ScriptedAlbum;
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import StringTools;
+import flixel.FlxG;
+
+class DiscordRCPModuleForYourMod extends Module
+{
+  final ASSETS_URL:String = "https://raw.githubusercontent.com/Harxeret/BANG-BANG/main/discord-rpc-assets/";
+  final RAW_EXTENSION:String = ".png";
+
+  function new()
+  {
+    super("fnf-base-discord-rpc-test", 20);
+  }
+
+  override public function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (FlxG.onMobile) return;
+
+    if (PlayState.instance == null) return;
+
+    if (PlayState.instance.currentChart != null && isModPlay(PlayState.instance))
+    {
+      var albumImage:String = "bangbangbang";
+      
+      PlayState.instance.discordRPCAlbum = ASSETS_URL + albumImage + RAW_EXTENSION;
+      
+      PlayState.instance.initDiscord();
+    }
+  }
+
+  function isModPlay(play:PlayState):Bool
+  {
+    var text:String = "";
+    try { text += " " + Std.string(play.currentSong.id).toLowerCase(); } catch (e:Dynamic) {}
+    try { text += " " + Std.string(play.currentChart.songName).toLowerCase(); } catch (e:Dynamic) {}
+    try { text += " " + Std.string(play.currentChart.album).toLowerCase(); } catch (e:Dynamic) {}
+    return StringTools.contains(text, "bang bang") || StringTools.contains(text, "bang-bang") || StringTools.contains(text, "bangbang");
+  }
+}

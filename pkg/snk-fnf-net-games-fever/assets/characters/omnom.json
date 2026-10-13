@@ -1,0 +1,174 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "om nom IDLE"
+		},
+		{
+			"offsets": [
+				10,
+				-4
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "om nom LEFT"
+		},
+		{
+			"offsets": [
+				-1,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "om nom DOWN"
+		},
+		{
+			"offsets": [
+				22,
+				49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "om nom UP"
+		},
+		{
+			"offsets": [
+				-12,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "om nom RIGHT"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				3
+			],
+			"anim": "uhah",
+			"fps": 24,
+			"name": "om nom intentando agarrar el caramelo xdd",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-39
+			],
+			"anim": "tite",
+			"fps": 24,
+			"name": "om nom trite",
+			"indices": []
+		},
+		{
+			"offsets": [
+				41,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "om nom HEY"
+		},
+		{
+			"offsets": [
+				-6,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "felitite",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12,
+				12
+			],
+			"name": "om nom de feli a trite"
+		},
+		{
+			"offsets": [
+				-8,
+				-38
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "om nom trite"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/om_nom",
+	"position": [
+		0,
+		420
+	],
+	"healthicon": "om_nom_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		155,
+		255,
+		80
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

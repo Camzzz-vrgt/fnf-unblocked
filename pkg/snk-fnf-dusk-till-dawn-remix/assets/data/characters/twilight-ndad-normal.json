@@ -1,0 +1,82 @@
+{
+	"version": "1.0.1",
+	"name": "twilight-nDad-normal",
+	"renderType": "sparrow",
+	"assetPath": "characters/NormalTwilight",
+	"scale": 1.8,
+	"healthIcon": {
+		"id": "twily-ohno",
+		"isPixel": false
+	},
+	"healthBarColor": "#B878D2",
+	"offsets": [
+		0,
+		0
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 2,
+	"singTime": 6.1,
+	"startingAnimation": "idle",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "Idle",
+			"offsets": [
+				37,
+				-240
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "Left",
+			"offsets": [
+				43,
+				-211
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "Up",
+			"offsets": [
+				-15,
+				-197
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "Right",
+			"offsets": [
+				0,
+				-199
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "Down",
+			"offsets": [
+				50,
+				-235
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		}
+	],
+	"flipX": false
+}

@@ -1,0 +1,20 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.math.FlxPoint;
+import funkin.util.HapticUtil;
+import flixel.tweens.FlxTween;
+
+class SkyExcellentResults extends FlxAtlasSprite
+{
+  function new(x:Float, y:Float)
+  {
+    super(x, y, Paths.animateAtlas("resultScreen/results-sky/resultsEXCELLENT", "shared"),
+      {
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        FrameRate: 17,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
+  }
+}

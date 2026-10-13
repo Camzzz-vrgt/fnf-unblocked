@@ -1,0 +1,67 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.play.song.Song;
+import flixel.util.FlxTimer;
+
+class SkyCharacter extends MultiAnimateAtlasCharacter {
+	var isTomatoed:Bool;
+	
+	function new() {
+		super('sky');
+	}
+
+	override function onSongStart(event){
+		super.onSongStart(event);
+		preloadSfx();
+	}
+
+	override function playAnimation(name:String,restart:Bool, ignoreOther:Bool, reversed:Bool):Void
+	{
+		if (PlayState.instance != null) 
+			switch (name) {
+				case "tomatoHit":
+					FunkinSound.playOnce(Paths.sound('tomatoSplat'), 1);
+					isTomatoed = true;
+
+					new FlxTimer().start(1, function(tmr) fixIdleAnim());
+					
+			}
+		if(isTomatoed){ 
+		  super.playAnimation(name + '-tomato', restart, ignoreOther);
+    	}else{
+		  super.playAnimation(name, restart, ignoreOther);
+    	}
+	}
+
+
+	override function onSongRetry(){
+		isTomatoed = false;
+		idleSuffix = '';
+	}
+
+	function preloadSfx(){
+		FunkinSound.load(Paths.sound('tomatoSplat'));
+	}
+
+	override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name); // call the idlesuffix stuff AFTER the animation is done so the shit dont interfere wit da main stuff
+	if (PlayState.instance != null) 
+		switch (name) {
+			case "caramelTransition":
+				idleSuffix = '-caramel';
+				shouldAlternate = true;
+
+			case "tomatoHit":
+				//idleSuffix = ''; //turns out for whatever reason this just doesnt work so now this just goes into the song script
+				//update it WORKS
+		}
+  	}
+
+	function fixIdleAnim(){
+		idleSuffix = '';
+		//ive tried like 3 different methods if the timer method doesn't work its OVER
+	}
+}

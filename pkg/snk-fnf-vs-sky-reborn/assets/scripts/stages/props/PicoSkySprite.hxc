@@ -1,0 +1,35 @@
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxPoint;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.Preferences;
+
+class PicoSkySprite extends FunkinSprite {
+
+	public function new(x:Float, y:Float) 
+	{
+		super(x, y);
+		loadTextureAtlas("skyweek/erect/pico_sky_anims", "shared");
+	}
+
+	function inspectAnim() {
+		this.animation.play('Inspect', true);
+	}
+
+	function upPoleAnim() {
+		this.animation.play('Up Pole', true);
+	}
+
+	function shootAnim() {
+		this.animation.play('Shoot Fake', true);
+	}
+
+	function blamAnim() {
+		this.animation.play('Shoot Real', true);
+	}
+}

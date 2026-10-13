@@ -1,0 +1,26 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class HideOpponentStrums extends Module
+{
+    public function new()
+    {
+        super("HideOpponentStrums", 10);
+    }
+
+    public override function onUpdate(event)
+    {
+        var ps = PlayState.instance;
+        if (ps == null) return;
+
+        var ps = PlayState.instance;
+
+        if (ps.currentSong.id != "BANGBANG") return;
+
+        if (ps.opponentStrumline != null)
+        {
+            ps.opponentStrumline.visible = false;
+        }
+    }
+}

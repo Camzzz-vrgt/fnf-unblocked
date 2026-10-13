@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "Plush Boombox (Dark)",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/plushieBoombox-dark",
+  "offsets": [50, -13],
+  "cameraOffsets": [-80, -200],
+  "danceEvery": 1,
+  "startingAnimation": "danceRight",
+  "singTime": 8.0,
+  "atlasSettings": {"useRenderTexture": true},
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "Bounce"
+    },
+    {
+      "name": "danceRight",
+      "prefix": "Bounce"
+    }
+  ]
+}

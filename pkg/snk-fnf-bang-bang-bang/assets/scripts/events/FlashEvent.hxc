@@ -1,0 +1,125 @@
+import funkin.play.event.SongEvent;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import funkin.Conductor;
+import openfl.filters.ShaderFilter;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class BloomEvent extends SongEvent {
+    
+    var bloomShader:FlxRuntimeShader;
+    var shaderFilter:ShaderFilter;
+    var flashSprite:FlxSprite;
+    var currentTween:FlxTween = null;
+    
+    public function new() { 
+        super("Bloom"); 
+    }
+    
+    override function getTitle() { 
+        return "Bloom Effect"; 
+    }
+    
+    function cleanupBloom():Void {
+        var game = PlayState.instance;
+        if (game == null) return;
+        
+        if (currentTween != null) {
+            currentTween.cancel();
+            currentTween = null;
+        }
+        
+        if (shaderFilter != null && game.camGame.filters != null) {
+            var newFilters = game.camGame.filters.slice(0);
+            var _rmIdx0 = newFilters.indexOf(shaderFilter);
+            if (_rmIdx0 != -1) newFilters.splice(_rmIdx0, 1);
+            game.camGame.filters = newFilters;
+            shaderFilter = null;
+        }
+        
+        bloomShader = null;
+        
+        if (flashSprite != null) {
+            game.remove(flashSprite, true);
+            flashSprite.destroy();
+            flashSprite = null;
+        }
+    }
+    
+    override function handleEvent(data:Dynamic):Void {
+        var game = PlayState.instance;
+        if (game == null) return;
+        
+        cleanupBloom();
+        
+        var duration:Float = (data != null && data.v1 != null) ? data.v1 : 1.0;
+        var intensity:Float = (data != null && data.v2 != null) ? data.v2 : 1.0;
+        var contrastVal:Float = (data != null && data.v3 != null) ? data.v3 : 1.0;
+        var brightnessVal:Float = (data != null && data.v4 != null) ? data.v4 : 0.0;
+        
+        flashSprite = new FlxSprite(0, 0);
+        flashSprite.makeGraphic(Std.int(FlxG.width), Std.int(FlxG.height), 0xFFFFFFFF);
+        flashSprite.scale.set(10.2, 10.2);
+        flashSprite.alpha = intensity * 0.5;
+        flashSprite.scrollFactor.set(0, 0);
+        flashSprite.cameras = [game.camGame];
+        game.add(flashSprite);
+        
+        FlxTween.tween(flashSprite, {alpha: 0}, duration * 0.3, {
+            ease: FlxEase.quadOut,
+            onComplete: function(_) {
+                if (flashSprite != null) {
+                    flashSprite.destroy();
+                    flashSprite = null;
+                }
+            }
+        });
+
+        if (!Preferences.shaders) return;
+        
+        try {
+            bloomShader = new FlxRuntimeShader(Assets.getText(Paths.frag("bloom")));
+            
+            bloomShader.setFloat("effect", intensity);
+            bloomShader.setFloat("strength", intensity);
+            bloomShader.setFloat("contrast", contrastVal);
+            bloomShader.setFloat("brightness", brightnessVal);
+            
+            shaderFilter = new ShaderFilter(bloomShader);
+            
+            var currentFilters = game.camGame.filters.slice(0);
+            if (currentFilters == null) currentFilters = [];
+            currentFilters.push(shaderFilter);
+            game.camGame.filters = currentFilters;
+            
+            var animObj = { effectVal: intensity, strengthVal: intensity };
+            currentTween = FlxTween.tween(animObj, { effectVal: 0, strengthVal: 0 }, duration, {
+                ease: FlxEase.quadOut,
+                onUpdate: function(_) {
+                    if (bloomShader != null) {
+                        bloomShader.setFloat("effect", animObj.effectVal);
+                        bloomShader.setFloat("strength", animObj.strengthVal);
+                    }
+                },
+                onComplete: function(_) {
+                    cleanupBloom();
+                }
+            });
+        } catch(e:Dynamic) {
+            trace("Bloom shader error: " + e);
+        }
+    }
+
+    override function getEventSchema() {
+        return [
+            { name: "v1", title: "Duration", defaultValue: 1.0, step: 0.1, min: 0.1, type: "float", units: "sec" },
+            { name: "v2", title: "Intensity", defaultValue: 1.0, step: 0.1, min: 0.0, max: 2.0, type: "float", units: "x" },
+            { name: "v3", title: "Contrast", defaultValue: 1.0, step: 0.1, min: 0.0, max: 2.0, type: "float", units: "x" },
+            { name: "v4", title: "Brightness", defaultValue: 0.0, step: 0.05, min: -0.5, max: 0.5, type: "float", units: "x" }
+        ];
+    }
+}

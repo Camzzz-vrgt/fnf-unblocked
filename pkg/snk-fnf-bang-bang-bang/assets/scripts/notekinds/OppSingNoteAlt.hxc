@@ -1,0 +1,29 @@
+import funkin.modding.events.ScriptEvent;
+import funkin.play.character.BaseCharacter;
+import funkin.play.notes.notekind.ScriptedNoteKind;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+
+class OppSingNoteAlt extends ScriptedNoteKind {
+    function new() {
+        super("opp-sing-alt", "Opponent Sing Alt");
+        this.noanim = true;
+    }
+
+    override public function onNoteHit(event:HitNoteScriptEvent) {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        var opp:BaseCharacter = PlayState.instance.currentStage.getDad();
+
+        var dirName:String = NoteKindsConstants.DIRECTION_NAMES[event.note.direction];
+        if (event.note.isHoldNote && opp.hasAnimation(dirName + "-alt" + Constants.ANIMATION_HOLD_SUFFIX)) dirName += "-alt" + Constants.ANIMATION_HOLD_SUFFIX;
+
+        var animToPlay:String = "sing" + dirName + "-alt";
+
+        if (!opp.hasAnimation(animToPlay)) return;
+        opp.playAnimation(animToPlay, true, true);
+
+        if (opp.isSinging())
+            opp.holdTimer = 0;
+    }
+}

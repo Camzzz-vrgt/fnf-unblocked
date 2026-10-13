@@ -1,0 +1,92 @@
+import funkin.modding.module.Module;
+import funkin.play.song.Song;
+import funkin.Conductor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayState;
+import Reflect;
+import Std;
+
+class CinematicBarsHandler extends Module {
+	function new() {
+		super("CinematicBarsModule");
+	}
+	
+	var cinematicBarTween1:FlxTween = null;
+	var cinematicBarTween2:FlxTween = null;
+
+	var cinematicBar1:FunkinSprite = null;
+	var cinematicBar2:FunkinSprite = null;
+	
+	override function onCountdownStart(event) {
+		super.onCountdownStart(event);
+		for (i in 0...2) {
+			var cinematicBar = new FunkinSprite(0, 0);
+			cinematicBar.makeSolidColor(1, 1, 0xFF000000);
+			cinematicBar.scrollFactor.set(0, 0);
+			cinematicBar.cameras = [PlayState.instance.camHUD];
+			cinematicBar.zIndex = 0;
+			PlayState.instance.add(cinematicBar);
+					// this
+			cinematicBar.scale.set(FlxG.width, 0);
+			cinematicBar.updateHitbox();
+			
+			if (i == 1) cinematicBar2 = cinematicBar;
+			else cinematicBar1 = cinematicBar;
+		}
+	}
+	
+	override function onUpdate(elapsed){
+		if (cinematicBarTween2 != null && cinematicBarTween2.active && cinematicBarTween1 != null && cinematicBarTween1.active)
+			for (bar in [cinematicBar1, cinematicBar2]) bar.updateHitbox();
+		cinematicBar2?.y = FlxG.height - cinematicBar2?.height;
+	}
+	
+	override function onSongEvent(event) {
+		super.onSongEvent(event);
+		var eventParams = event.eventData;
+		var colorHex = Std.parseInt("0xFF" + eventParams.value.hexcolor);
+		if (eventParams.eventKind == "CinematicBarsEvent") {
+			for (bar in [cinematicBar1, cinematicBar2]) bar.color = colorHex;
+			if (eventParams.value.tweenBars == false)
+				for (bar in [cinematicBar1, cinematicBar2]) {
+					bar.scale.y = (FlxG.height/2) * eventParams.value.size;
+					bar.updateHitbox();
+				}
+			else {
+				for (twn in [cinematicBarTween1, cinematicBarTween2])
+					if (twn != null) twn.cancel();
+
+				for (bar in [cinematicBar1, cinematicBar2]) {
+					var tween:FlxTween = FlxTween.tween(bar.scale, {y: (FlxG.height/2) * eventParams.value.size}, ((Conductor.instance.beatLengthMs / 4) / 1000) * eventParams.value.time, {ease: Reflect.field(FlxEase, eventParams.value.tweenEase)});
+					if (bar == cinematicBar1) cinematicBarTween1 = tween;
+					else cinematicBarTween2 = tween;
+				}
+				
+			}
+		}
+	}
+	
+	override function onSongRetry(event) {
+		super.onSongRetry(event);
+		for (bar in [cinematicBar1, cinematicBar2]) {
+			bar.destroy();
+		}
+	}
+	
+	override function onGameOver(event) {
+		super.onGameOver(event);
+		for (bar in [cinematicBar1, cinematicBar2]) {
+			bar.destroy();
+		}
+	}
+	
+	override function onSongEnd(event) {
+		super.onSongRetry(event);
+		for (bar in [cinematicBar1, cinematicBar2]) {
+			bar.destroy();
+		}
+	}
+}

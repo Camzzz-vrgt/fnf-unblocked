@@ -1,0 +1,137 @@
+{
+	"version": "1.0.1",
+	"name": "twilight-pS",
+	"renderType": "sparrow",
+	"assetPath": "characters/PibbyTwilight_SM",
+	"scale": 1.925,
+	"healthIcon": {
+		"id": "twilight",
+		"isPixel": false
+	},
+	"healthBarColor": "#B878D2",
+	"offsets": [
+		-100,
+		260
+	],
+	"cameraOffsets": [
+		250,
+		-260
+	],
+	"isPixel": false,
+	"danceEvery": 2,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "Twi_Idle_S",
+			"offsets": [
+				-60,
+				230
+			],
+			"looped": true,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "Twi_Down_S",
+			"offsets": [
+				109,
+				236
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "Twi_Left_S",
+			"offsets": [
+				-38,
+				222
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "Twi_Up_S",
+			"offsets": [
+				-47,
+				301
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "Twi_Right_S",
+			"offsets": [
+				-94,
+				249
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "idle-alt",
+			"prefix": "Twi_Idle_M",
+			"offsets": [
+				-60,
+				230
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN-alt",
+			"prefix": "Twi_Down_M",
+			"offsets": [
+				109,
+				236
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT-alt",
+			"prefix": "Twi_Left_M",
+			"offsets": [
+				-38,
+				222
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP-alt",
+			"prefix": "Twi_Up_M",
+			"offsets": [
+				-138,
+				301
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT-alt",
+			"prefix": "Twi_Right_M",
+			"offsets": [
+				-94,
+				209
+			],
+			"looped": false,
+			"frameRate": 24,
+			"frameIndices": []
+		}
+	],
+	"flipX": false
+}

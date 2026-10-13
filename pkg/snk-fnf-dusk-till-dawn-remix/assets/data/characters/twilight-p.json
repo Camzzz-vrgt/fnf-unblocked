@@ -1,0 +1,93 @@
+{
+	"version": "1.0.1",
+	"name": "twilight-p",
+	"renderType": "sparrow",
+	"assetPath": "characters/PibbyTwilightv2",
+	"scale": 1.925,
+	"healthIcon": {
+		"id": "twilight",
+		"isPixel": false
+	},
+	"healthBarColor": "#B878D2",
+	"offsets": [
+		-100,
+		260
+	],
+	"cameraOffsets": [
+		250,
+		-260
+	],
+	"isPixel": false,
+	"danceEvery": 2,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "Twi_Idle",
+			"offsets": [
+				-60,
+				230
+			],
+			"looped": true,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "Twi_Down",
+			"offsets": [
+				109,
+				236
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "Twi_Left",
+			"offsets": [
+				-38,
+				222
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "Twi_Up",
+			"offsets": [
+				-47,
+				301
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "Twi_Right",
+			"offsets": [
+				-94,
+				249
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "fp",
+			"prefix": "Twi_F",
+			"offsets": [
+				-60,
+				340
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		}
+	],
+	"flipX": false
+}

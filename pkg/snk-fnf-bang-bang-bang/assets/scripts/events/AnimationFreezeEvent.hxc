@@ -1,0 +1,41 @@
+import funkin.play.event.SongEvent;
+
+class AnimationFreezeEvent extends SongEvent {
+    function new () {
+        super("AnimationFreezeEvent");
+    }
+
+    public override function getTitle() {
+        return "Animation Freeze Event";
+    }
+
+    public override function getEventSchema() {
+    return [
+        {
+            name : "target",
+            type : "enum",
+            title : "Target",
+            defaultValue : "bf",
+            keys: [
+                'Player' => 'bf',
+                'Opponent' => 'dad',
+                'Girlfriend' => 'gf',
+            ]
+        },
+        {
+            name : "animation",
+            title : "Animation",
+            type : "string",
+            defaultValue : "",
+        },
+        {
+            name: "freeze",
+            type: "bool",
+            title: "Freeze",
+            defaultValue: true,
+        }
+    ];
+}
+
+    public override function handleEvent(data) {}
+}

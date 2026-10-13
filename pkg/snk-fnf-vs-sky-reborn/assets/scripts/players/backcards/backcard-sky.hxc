@@ -1,0 +1,236 @@
+import funkin.ui.freeplay.BGScrollingText;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.freeplay.backcards.BackingCard;
+import flixel.FlxSprite;
+import funkin.util.BitmapUtil;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxSpriteUtil;
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.data.freeplay.player.PlayerRegistry;
+import flixel.FlxG;
+import funkin.Conductor;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.FullScreenScaleMode;
+import funkin.graphics.FunkinSprite;
+
+class SkyCard extends BackingCard
+{
+  public var skyScroll:BGScrollingText;
+  public var skyScroll2:BGScrollingText;
+  public var skyScroll3:BGScrollingText;
+
+  var glow:FlxSprite;
+  var glowDark:FlxSprite;
+  var skyBoyfriends:FlxBackdrop;
+  var skyGlow:FlxBackdrop;
+  var skyHalftone:FlxBackdrop;
+  var skyAurora:FlxBackdrop;
+  var skyConfirmAtlas:FlxAtlasSprite;
+  var skyBar:FlxSprite;
+
+  public override function applyExitMovers(?exitMovers:FreeplayState.ExitMoverData, ?exitMoversCharSel:FreeplayState.ExitMoverData):Void
+  {
+    super.applyExitMovers(exitMovers, exitMoversCharSel);
+    if (exitMovers == null || exitMoversCharSel == null) return;
+      exitMovers.set([skyScroll],
+      {
+        x: -skyScroll.width * 2,
+        speed: 0.3
+      });
+
+      exitMovers.set([skyScroll2],
+      {
+        x: -skyScroll2.width * 2,
+        speed: 0.3
+      });
+
+      exitMovers.set([skyScroll3],
+      {
+        x: -skyScroll3.width * 2,
+        speed: 0.3
+      });
+
+    exitMoversCharSel.set([skyScroll, skyScroll2, skyScroll3],
+      {
+        y: -60,
+        speed: 0.8,
+        wait: 0.1
+      });
+  }
+
+  public override function enterCharSel():Void
+  {
+    FlxTween.tween(skyScroll, {speed: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(skyScroll2, {speed: 0}, 0.8, {ease: FlxEase.sineIn});
+    FlxTween.tween(skyScroll3, {speed: 0}, 0.8, {ease: FlxEase.sineIn});
+  }
+
+  public override function new()
+  {
+    super("sky");
+
+    var player = PlayerRegistry.instance.fetchEntry(this.currentCharacter);
+    skyScroll = new BGScrollingText(0, 366, player.getFreeplayDJText(1), FlxG.width / 2, false, 30);
+    skyScroll2 = new BGScrollingText(0, 620, player.getFreeplayDJText(2), FlxG.width / 2, false, 55);
+    skyScroll3 = new BGScrollingText(0, 125, player.getFreeplayDJText(3), FlxG.width / 2, false, 80);
+  }
+
+  public override function onCreate(event:ScriptEvent):Void
+  {
+    
+    // backing card assets
+
+    skyGradient = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) -20, 10).loadGraphic(Paths.image('freeplay/backingCards/sky/backingGradient'));
+    skyGradient.scale.set(1.5, 1);
+    //add(skyGradient);
+
+    skyHalftone = new FlxSprite(Paths.image('freeplay/backingCards/sky/sillyHalftone'));
+    skyHalftone.setPosition(0, 0);
+    skyHalftone.alpha = 1;
+    add(skyHalftone);
+
+    skyGlow = new FlxBackdrop(Paths.image('freeplay/backingCards/sky/bluGlow'),0x10, 20);
+    skyGlow.scale.set(2, 1);
+    skyGlow.setPosition(-240, 0);
+    skyGlow.blend = 0;
+    skyGlow.velocity.y = 75;
+    add(skyGlow);
+
+    skyGlow2 = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 200, 200).loadGraphic(Paths.image('freeplay/backingCards/sky/bluGlow'));
+    skyGlow2.scale.set(1.25, 1);
+    skyGlow2.blend = 0;
+    //add(skyGlow2);
+
+    skyBoyfriends = new FlxBackdrop(Paths.image('freeplay/backingCards/sky/boyfriendHeads'), 0x01, 20);
+    skyBoyfriends.setPosition(0, 436);
+    skyBoyfriends.alpha = 1;
+    skyBoyfriends.velocity.x = 110;
+    add(skyBoyfriends);
+
+    skyBar = new FlxSprite(77, 99).loadGraphic(Paths.image('freeplay/backingCards/sky/backCardLines'));
+    skyBar.scale.set(1.5, 1);
+    skyBar.alpha = 1;
+    add(skyBar);
+
+    skyBoyfriends = new FlxBackdrop(Paths.image('freeplay/backingCards/sky/boyfriendHeads'), 0x01, 20);
+    skyBoyfriends.setPosition(0, 436);
+    skyBoyfriends.alpha = 1;
+    skyBoyfriends.velocity.x = 110;
+    add(skyBoyfriends);
+
+    skyClouds = new FlxBackdrop(Paths.image('freeplay/backingCards/sky/cloudsScrolling'), 0x01, 20);
+    skyClouds.setPosition(0, 246);
+    skyClouds.alpha = 1;
+    skyClouds.blend = 0;
+    skyClouds.velocity.x = -110;
+    add(skyClouds);
+
+    skyAurora = new FlxBackdrop(Paths.image('freeplay/backingCards/sky/aeros'), 0x01, 0);
+    skyAurora.setPosition(0, -336);
+    skyAurora.alpha = 0.2;
+    skyAurora.velocity.x = 50;
+    skyAurora.blend = 0;
+    
+
+
+
+    add(backingTextYeah);
+
+    cardGlow.blend = 0;
+    cardGlow.visible = false;
+
+    // scrolling text
+
+    skyScroll.visible = false;
+    skyScroll.funnyColor = 0xFFff00ea;
+    skyScroll.speed = 3.8;
+    add(skyScroll);
+
+    skyScroll2.visible = false;
+    skyScroll2.funnyColor = 0xFF5100ff;
+    skyScroll2.speed = 6.7;
+    add(skyScroll2);
+
+    skyScroll3.visible = false;
+    skyScroll3.funnyColor = 0xFF5100ff;
+    skyScroll3.speed = 2;
+    add(skyScroll3);
+
+    add(skyAurora);
+
+
+
+    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300, 330).loadGraphic(Paths.image('freeplay/beatglow'));
+    glowDark.blend = 9;
+    add(glowDark);
+
+    
+
+    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300, 330).loadGraphic(Paths.image('freeplay/beatglow'));
+    glow.blend = 0;
+    add(glow);
+
+    glowDark.visible = false;
+    glow.visible = false;
+
+    add(cardGlow);
+
+
+    skyConfirm = FunkinSprite.createSparrow(-400, -60, "freeplay/backingCards/sky/sky-confirm");
+    skyConfirm.animation.addByPrefix('confirm', "skyselectingbackincard", 18, true);
+    skyConfirm.scale.set(1.1,1.1);
+    skyConfirm.visible = false;
+    add(skyConfirm);
+  }
+
+  var beatFreq:Int = 1;
+  var beatFreqList:Array<Int> = [1, 2, 4, 8];
+
+  public override function beatHit():Void
+  {
+    // increases the amount of beats that need to go by to pulse the glow because itd flash like craazy at high bpms.....
+    beatFreq = beatFreqList[Math.floor(Conductor.instance.bpm / 140)];
+
+    if (Conductor.instance.currentBeat % beatFreq != 0) return;
+    FlxTween.cancelTweensOf(glow);
+    FlxTween.cancelTweensOf(glowDark);
+
+    glow.alpha = 0.8;
+    FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
+    glowDark.alpha = 0;
+    FlxTween.tween(glowDark, {alpha: 0.6}, 18 / 24, {ease: FlxEase.quartOut});
+  }
+
+  public override function introDone():Void
+  {
+    super.introDone();
+    skyScroll.visible = true;
+    skyScroll2.visible = true;
+    skyScroll3.visible = true;
+  }
+
+  public override function confirm():Void
+  {
+    super.confirm();
+    // FlxTween.color(bgDad, 0.33, 0xFFFFFFFF, 0xFF555555, {ease: FlxEase.quadOut});
+
+    skyScroll.visible = false;
+    skyScroll2.visible = false;
+    skyScroll3.visible = false;
+    glowDark.visible = false;
+    glow.visible = false;
+
+    skyConfirm.visible = true;
+    skyConfirm.animation.play('confirm');
+  }
+
+  public override function disappear():Void
+  {
+    super.disappear();
+    skyScroll.visible = false;
+    skyScroll2.visible = false;
+    skyScroll3.visible = false;
+  }
+}

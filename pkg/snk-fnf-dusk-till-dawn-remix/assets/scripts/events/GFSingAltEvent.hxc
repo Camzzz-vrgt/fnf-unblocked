@@ -1,0 +1,30 @@
+import funkin.play.event.SongEvent;
+
+class GFSingAltEvent extends SongEvent
+{
+    public override function handleEvent(data) {
+        // Função vazia de propósito — quem trata de verdade é o
+        // PinkieSingModule.hxc (scripts/modules/), via onSongEvent. Essa
+        // classe só existe pra registrar 'GF Sing Alt' como um evento válido
+        // pro engine reconhecer.
+    }
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Direção (0=LEFT 1=DOWN 2=UP 3=RIGHT)",
+                defaultValue: "0",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "GF Sing Alt";
+    }
+
+    public function new() {
+        super('GF Sing Alt');
+    }
+}

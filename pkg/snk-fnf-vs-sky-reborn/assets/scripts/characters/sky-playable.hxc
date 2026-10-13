@@ -1,0 +1,238 @@
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import funkin.play.PauseSubState;
+import funkin.play.stage.Stage;
+import funkin.FunkinMemory;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.shaders.DropShadowShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.audio.FunkinSound;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+
+class SkyPlayableCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('sky-playable');
+	}
+
+  var hasDoneQTAnim:Bool;
+  var skyHiSFX:FunkinSound;
+  var hasMaterialized:Bool;
+  var materializeSfx:FunkinSound;
+
+	function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    materializeSfx = FunkinSound.load(Paths.sound('gameplay/sky/skyMaterializeSfx'), true, false);
+
+   	GameOverSubState.musicSuffix = '-sky';
+    GameOverSubState.blueBallSuffix = '-sky';
+    PauseSubState.musicSuffix = '-sky';
+    hasDoneQTAnim = false;
+    hasMaterialized = false;
+
+    var images:Array<String> = ["skyplayable/SkyRetryBubble"];
+
+    for (img in images)
+    {
+      var file:String = Paths.stripLibrary(img);
+
+      FunkinMemory.cacheTexture(Paths.image(file));
+    }
+
+  }
+
+    function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+
+    // Override the hit note animation.
+    switch (event.note.kind)
+    {
+      case "skyUghNote":
+        holdTimer = 0;
+        this.playAnimation('ugh', true, true);
+        return;
+      case "skyHeyNote":
+        holdTimer = 0;
+        this.playAnimation('hey', true, true);
+        return;
+    }
+  }
+
+  function onSongStart(event)
+  {
+    PlayState.instance.currentStage.getBoyfriend().shouldAlternate = true;
+  }
+
+  override function playAnimation(name:String,restart:Bool, ignoreOther:Bool, reversed:Bool)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (PlayState.instance != null)
+    switch (name) {
+
+        case "laugh":
+          PlayState.instance.disableKeys = true;
+          PlayState.instance.vocals.playerVolume = 1;
+          //makin sure u can't cancel the laugh, and also making sure u can hear the laugh
+
+        case "deathConfirm":
+          createDeathSprites();
+          retryBubble.visible = true;
+          retryBubble.animation.play('confirm');
+
+        case "tongue":
+          PlayState.instance.disableKeys = true;
+
+    }
+  }
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name); // call the idlesuffix stuff AFTER the animation is done so the shit dont interfere wit da main stuff
+	  if (PlayState.instance != null)
+		  switch (name) {
+			  case "preDance":
+				  idleSuffix = '-caramel';
+				  shouldAlternate = true;
+          PlayState.instance.isInCutscene = true; //disables hitting keys when dancing
+
+        case "hey":
+				  idleSuffix = '';
+          PlayState.instance.isInCutscene = false; //re enables keys cos we no longer dancing prolly
+
+        case "laugh":
+          PlayState.instance.disableKeys = false;
+          PlayState.instance.vocals.playerVolume = 1;
+
+        case "tongue":
+          PlayState.instance.disableKeys = false;
+
+		  }
+  	}
+
+
+    public override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+    var ps = PlayState.instance;
+    if (ps == null || ps.currentStage == null || PlayState.instance.isChartingMode) return;
+
+    if (ps.currentSong.id == 'moderato' && !hasMaterialized)
+    {
+
+      var skyPos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
+
+      PlayState.instance.isInCutscene = true;
+
+      ps.tweenCameraToPosition(skyPos[0] + 550, skyPos[1] + 300, 0, FlxEase.sineInOut);
+
+		  ps.tweenCameraZoom(0.8, 0, true, FlxEase.sineInOut);
+      FlxG.camera.shake(0.02, 1.4);
+      this.visible = false;
+      event.cancel(); //cancel cd
+      createSkyCutsceneSprite();
+      materializeSfx.play(true);
+      ps.tweenCameraZoom(1, 1.4, true, FlxEase.expoIn);
+
+      new FlxTimer().start(1.3, (_) -> {
+      skySparrow.visible = true;
+      skySparrow.animation.play('materialize');
+      ps.tweenCameraZoom(0.7, 2, true, FlxEase.circOut);
+      });
+
+      new FlxTimer().start(4, (_) -> {
+        hasMaterialized = true;
+        skySparrow.visible = false;
+        this.visible = true;
+        PlayState.instance.startCountdown();
+        ps.tweenCameraZoom(0.5, 8, true, FlxEase.quadInOut);
+        ps.tweenCameraToPosition(skyPos[0], skyPos[1], 8, FlxEase.quadInOut);
+
+        PlayState.instance.isInCutscene = false;
+      });
+    }
+
+    //only doin this so it works wit blissful lolk
+		if (ps.currentStage.getDad()?.characterId != 'QT') return;
+    {
+      if (!hasDoneQTAnim && ps.currentSong.id == 'blissful') {
+
+      new FlxTimer().start(0.5, (_) -> {
+        skyHiSFX = FunkinSound.load(Paths.sound("skyHi"), true, false);
+        this.playAnimation('wave', true, true);
+
+        //skyHiSFX.play(); //didnt like how it sounded ingame, shoutout to asserelrefaey tho
+			});
+      hasDoneQTAnim = true;
+		}
+    }
+
+
+
+
+	}
+
+  var retryBubble:FunkinSprite;
+  var skySparrow:FunkinSprite;
+
+  function createDeathSprites()
+  {
+
+    retryBubble = FunkinSprite.createSparrow(0, 0, "skyplayable/SkyRetryBubble");
+    retryBubble.animation.addByPrefix('confirm', "retry bubble", 24, false);
+    retryBubble.flipX = true;
+    retryBubble.zIndex = this.zIndex + 5;
+    retryBubble.setPosition(this.x + -83, this.y + 160);
+    retryBubble.visible = true;
+    GameOverSubState.instance.add(retryBubble);
+    retryBubble.blend = 0;
+
+  }
+
+  function createSkyCutsceneSprite()
+  {
+    skySparrow = FunkinSprite.createSparrow(0, 0, 'skyplayable/Sky_Materialize');
+    skySparrow.animation.addByPrefix('materialize', 'sky materializ', 24, false);
+    skySparrow.flipX = true;
+    skySparrow.zIndex = this.zIndex + 20;
+    skySparrow.setPosition(this.x, this.y + 60);
+    skySparrow.visible = false;
+    PlayState.instance.currentStage.add(skySparrow);
+    trace('sky sprite added!');
+
+
+    var colorShader = new AdjustColorShader();
+    colorShader.saturation = -20;
+		colorShader.contrast = -15;
+		colorShader.brightness = -46;
+    colorShader.hue = -20;
+    skySparrow.shader = colorShader;
+  }
+
+  function onSongRetry()
+  {
+    PlayState.instance.disableKeys = false;
+  }
+
+  var repositionSparrow = false;
+  function onUpdate(event) //weird visual glitch where the asset goes down like 10 pixels for no reason, this is fix
+  {
+    super.onUpdate(event);
+
+    if (skySparrow != null && skySparrow.animation != null && skySparrow.animation.curAnim != null && skySparrow.animation.curAnim.curFrame == 21 && !repositionSparrow)
+    {
+      skySparrow.y -= 4.5;
+      repositionSparrow = true;
+      }
+  }
+
+  public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		PlayState.instance.currentStage.getBoyfriend().shader = null;
+	}
+}

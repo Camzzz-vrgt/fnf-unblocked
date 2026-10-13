@@ -1,0 +1,635 @@
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.util.MathUtil;
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.tweens.FlxEase;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+import flixel.FlxSprite;
+import flixel.FlxObject;
+import funkin.util.FileUtil;
+import funkin.graphics.shaders.DropShadowShader;
+import flixel.addons.display.FlxBackdrop;
+import flixel.tweens.FlxTween;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.play.character.CharacterType;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import flixel.tweens.FlxTween;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.play.character.CharacterType;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import funkin.audio.FunkinSound;
+import flixel.effects.FlxFlicker;
+
+class TheShiftManifestErectStage extends Stage {
+	var characterShader:AdjustColorShader;
+	var bluShader:AdjustColorShader;
+	var giygasOverlay:FlxBackdrop;
+	var wallBlurShader;
+
+	// laser shit
+	var laserAngle = 0;
+	var laserAngleR = 0;
+	var laserPos = 0;
+	var laserPosR = 0;
+	var laser:FlxSprite;
+	var laser2:FlxSprite;
+	var laserGrp = [];
+	var defaultLaserPos = 1600;
+
+	//sky shader cutscene stuff
+	var skyFried:FunkinSprite;
+  	var skyRim:DropShadowShader;
+
+	//cutscene sprites n props
+	var waterFxBlur:FunkinSprite;
+	var waterFx:FunkinSprite;
+	var soloCup:FunkinSprite;
+	var brainChunklet:FunkinSprite;
+	var organChunklets:FunkinSprite;
+
+	var liquidType:String;
+	var hasPlayedEndingCutscene:Bool = false;
+
+	public function new() {
+		super('theShiftManifestErect');
+		hasPlayedEndingCutscene = false;
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		bluShader = new AdjustColorShader();
+		bluShader.hue = [-97, 0][FlxG.onMobile ? 0 : 1];
+		bluShader.saturation = 0;
+		bluShader.contrast = 0;
+		bluShader.brightness = 0;
+
+		laser = new FlxSprite(0, -500).loadGraphic(Paths.image('shift/manifest/delusionRay'));
+		laser.updateHitbox();
+		laser.frames = Paths.getSparrowAtlas('shift/manifest/delusionRay');
+		laser.animation.addByPrefix('idle', 'gaster laser', 24, true);
+		laser.animation.play('idle');
+		laser.scale.set(1, 4);
+		laser.angle = laserAngle;
+		laser.shader = bluShader;
+
+		laser.zIndex = 15;
+
+		laser2 = new FlxSprite(defaultLaserPos, -500).loadGraphic(Paths.image('shift/manifest/delusionRay'));
+		laser2.updateHitbox();
+		laser2.frames = Paths.getSparrowAtlas('shift/manifest/delusionRay');
+		laser2.animation.addByPrefix('idle', 'gaster laser', 24, true);
+		laser2.animation.play('idle');
+		laser2.scale.set(0.4, 4);
+		laser2.angle = laserAngle;
+		laser2.zIndex = 500;
+		laser2.blend = 0;
+		laser2.alpha = 1;
+		laser2.shader = bluShader;
+		add(laser2);
+
+		add(laser);
+		refresh();
+
+		giygasOverlay = new FlxBackdrop((Paths.image('shift/manifest/giygas')), 0x11, 0, 0);
+		giygasOverlay.velocity.set(50, 0);
+		giygasOverlay.y = -500;
+		giygasOverlay.frames = Paths.getSparrowAtlas('shift/manifest/giygas');
+		giygasOverlay.animation.addByPrefix('idle', 'giygas_gif', 12, true);
+		giygasOverlay.animation.play('idle');
+		giygasOverlay.alpha = 0.3;
+		giygasOverlay.zIndex = 1;
+		giygasOverlay.scale.set(6, 6);
+		giygasOverlay.blend = 0;
+		giygasOverlay.antialiasing = false;
+		giygasOverlay.updateHitbox();
+		giygasOverlay.shader = bluShader;
+		// giygasOverlay.screenCenter();
+
+		add(giygasOverlay);
+		var wall = new FlxBackdrop((Paths.image('shift/manifest/manifestWall')), 0x10, 0, 0);
+		wall.velocity.set(0, -2000);
+		wall.y = -150;
+		wall.frames = Paths.getSparrowAtlas('shift/manifest/manifestWall');
+		wall.animation.addByPrefix('idle', 'manifestText', 12, true);
+		wall.animation.play('idle');
+		wall.alpha = 0.5;
+		wall.zIndex = 18;
+		wall.scale.set(1, 1);
+		wall.blend = 0;
+		wall.antialiasing = false;
+		wall.updateHitbox();
+		wall.screenCenter();
+		wall.shader = bluShader;
+
+		add(wall);
+
+		laserGrp.push(laser);
+		laserGrp.push(laser2);
+
+		getNamedProp('gradientTop').shader = bluShader;
+		getNamedProp('gradientBottom').shader = bluShader;
+		getNamedProp('text').shader = bluShader;
+		PlayState.instance.refresh();
+
+		liquidType = "water";
+		if (PlayState.instance.currentVariation != 'pico')
+		{
+			hasPlayedEndingCutscene = true;
+		}
+	}
+
+	function onUpdate(elapsed) {
+		super.onUpdate(elapsed);
+
+		laser.angle = laserAngle;
+		laser2.angle = laserAngleR * 2;
+		laser.x = laserPos;
+		laser2.x = defaultLaserPos + laserPosR * 2;
+
+		laserPos = 1 + Math.sin((Conductor.instance.songPosition / 2500) * 10) * 200;
+		laserPosR = 1 - Math.sin((Conductor.instance.songPosition / 2500) * 10) * 200;
+
+		laserAngle = 1 + Math.sin((Conductor.instance.songPosition / 500) * 1) * 10;
+		laserAngleR = 1 - Math.sin((Conductor.instance.songPosition / 500) * 1) * 10;
+
+		if (skyFried == null || skyFried.frame == null || skyRim == null)
+		return;
+
+
+		skyRim.updateFrameInfo(skyFried.frame);
+	}
+
+	function buildStage() {
+		super.buildStage();
+
+
+		getNamedProp('gradientTop').blend = 0;
+		getNamedProp('gradientBottom').blend = 0;
+
+		if (PlayState.instance.currentVariation == 'pico')
+		{
+		getNamedProp('crucifixBlock').alpha = 0.00001;
+		getNamedProp('rocket').alpha = 0.00001;
+
+		}
+		if (PlayState.instance.currentVariation != 'pico')
+		{
+		getNamedProp('crucifixBlock').alpha = 1;
+		getNamedProp('rocket').alpha = 0.00001;
+		}
+	}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+
+		trace('Applied stage shader to ' + character.characterName);
+
+		var rim = new DropShadowShader();
+		// bright, hue, contrast, saturation
+		rim.setAdjustColor(-30, -30, 38, 10);
+		rim.color = [0xFF3a00ff, 0xFFFF0000][FlxG.onMobile ? 0 : 1];
+		character.shader = rim;
+		rim.attachedSprite = character;
+
+		switch (charType) {
+			case CharacterType.BF:
+				rim.angle = 140;
+
+				character.animation.callback = function() {
+					if (getBoyfriend() != null) {
+						rim.updateFrameInfo(getBoyfriend().frame);
+					}
+				};
+			case CharacterType.GF:
+				rim.angle = 90;
+
+				character.animation.callback = function() {
+					rim.updateFrameInfo(getGirlfriend().frame);
+				};
+
+			case CharacterType.DAD:
+				rim.angle = 45;
+
+				character.animation.callback = function() {
+					rim.updateFrameInfo(getDad().frame);
+				};
+			default:
+		}
+
+
+	}
+
+	function setupCutsceneObjects(){
+		//setup cutscene stuff 4 easy playback
+		var picoPos:Array<Float> = [
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+		];
+		soloCup = FunkinSprite.createSparrow(picoPos[0], picoPos[1] + 150, 'shift/manifest/soloCup');
+		soloCup.animation.addByPrefix('fall', "solo cup falling anim0", 24, false);
+		PlayState.instance.currentStage.add(soloCup);
+    	soloCup.visible = false;
+		soloCup.zIndex = 315;
+
+		waterFx = FunkinSprite.createSparrow(picoPos[0] -1000, picoPos[1] -50, 'shift/fx/waterFlying');
+		waterFx.animation.addByPrefix('splash', "water anim", 24, false);
+		PlayState.instance.currentStage.add(waterFx);
+    	waterFx.visible = false;
+
+		waterFx.blend = 0;
+		waterFx.zIndex = 320;
+
+		waterFxBlur = FunkinSprite.createSparrow(picoPos[0] -1000, picoPos[1] -50, 'shift/fx/waterFlying');
+		waterFxBlur.animation.addByPrefix('splash', "water anim", 24, false);
+		PlayState.instance.currentStage.add(waterFxBlur);
+    	waterFxBlur.visible = waterFx.visible;
+		waterFxBlur.zIndex = waterFx.zIndex + 1;
+		waterFxBlur.shader = wallBlurShader;
+		waterFxBlur.blend = 0;
+
+		brainChunklet = FunkinSprite.createSparrow(picoPos[0] -300, picoPos[1] - 700, 'shift/manifest/nenesGuts');
+		brainChunklet.animation.addByPrefix('fall', "falling chunklet0", 24, false);
+		PlayState.instance.currentStage.add(brainChunklet);
+    	brainChunklet.visible = false;
+		brainChunklet.zIndex = 50;
+
+		organChunklets = FunkinSprite.createSparrow(picoPos[0] -940, picoPos[1] - 1000, 'shift/manifest/nenesGuts');
+		organChunklets.animation.addByPrefix('fall', "raining chunklets0", 24, false);
+		PlayState.instance.currentStage.add(organChunklets);
+    	organChunklets.visible = false;
+		organChunklets.zIndex = 50;
+		PlayState.instance.currentStage.refresh();
+	}
+
+	override function onBeatHit(event) {
+		super.onBeatHit(event);
+
+		if (PlayState.instance.currentVariation == 'pico') {
+			switch (event.beat) {
+				// intro stuff
+				case 148:
+				PlayState.instance.vocals.playerVolume = 0;
+				PlayState.instance.disableKeys = true;
+				case 160:
+				PlayState.instance.vocals.opponentVolume = 0;
+
+				picoCupCutscene();
+
+				case 168:
+
+				PlayState.instance.vocals.playerVolume = 1;
+				PlayState.instance.isInCutscene = false;
+				PlayState.instance.disableKeys = false;
+				if (liquidType == "boiling")
+					return;
+				if (liquidType == "water")
+				{
+					PlayState.instance.vocals.opponentVolume = 1;
+				}
+
+			}
+		}
+	}
+
+	function picoCupCutscene()
+	{
+		PlayState.instance.isInCutscene = true;
+		// make sure the game knows we in a cutscene, so we cant hit notes type shit
+
+		var picoPos:Array<Float> = [
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+		];
+		var nenePos:Array<Float> = [
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+		];
+		var skyPos:Array<Float> = [
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+		];
+
+		var cupFlicker:FlxFlicker;
+		// set variables for the character positions so we dont gotta type ALLAT
+		//actual cutscene
+
+		//setup cutsceneOutcomes
+
+
+		liquidType = "water"; //swap these later
+		if (FlxG.random.bool(20)) //20% chance 1 in 5
+		{
+			liquidType = "boiling";
+		}
+
+		new FlxTimer().start(0, function(tmr) {
+
+			PlayState.instance.currentStage.getBoyfriend().playAnimation('cupThrow', true);
+			//PlayState.instance.tweenCameraToPosition(picoPos[0] + 50, picoPos[1] + 50, 0.7, FlxEase.quadOut);
+			PlayState.instance.tweenCameraZoom(0.8, 0.7, true, FlxEase.quadOut);
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/runYoPockets'), 1);
+
+		});
+		new FlxTimer().start(0.7, function(tmr) {
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/waterThrow'), 2);
+
+			PlayState.instance.tweenCameraToPosition(skyPos[0], skyPos[1] + 120, 0.5, FlxEase.cubeOut);
+			PlayState.instance.tweenCameraZoom(0.7, 0.5, true, FlxEase.cubeOut);
+
+			waterFx.visible = true;
+			waterFx.animation.play('splash');
+			waterFx.alpha = 0.5;
+
+			waterFxBlur.visible = true;
+			waterFxBlur.animation.play('splash');
+			waterFxBlur.alpha = 0.1;
+			waterFx.alpha = 0.5;
+		});
+		new FlxTimer().start(1, function(tmr) {
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/waterSplat'), 1);
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/demonAngry'), 1);
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/skyYell'), 1);
+			PlayState.instance.tweenCameraZoom(1, 0.5, true, FlxEase.elasticOut);
+			if (liquidType == "water")
+			{
+				PlayState.instance.currentStage.getDad().playAnimation('angry', true);
+			}
+			if (liquidType == "boiling")
+			{
+				PlayState.instance.currentStage.getDad().playAnimation('burning', true);
+
+				boilingCutscene();
+			}
+
+		});
+		new FlxTimer().start(1.8, function(tmr) {
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/flexatone'), 0.71);
+
+		});
+
+		new FlxTimer().start(1.85, function(tmr) {
+
+			soloCup.visible = true;
+			soloCup.animation.play('fall');
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/cupHittinTheGround'), 1);
+		});
+
+		new FlxTimer().start(2.4, function(tmr) {
+			FlxFlicker.flicker(soloCup, 3, 0.06, true, false, FlxFlicker.flicker(soloCup, 3, 0.02, false));
+		});
+
+		if (liquidType == "water")
+		{
+			new FlxTimer().start(0.7, function(tmr) {
+
+			PlayState.instance.currentStage.getDad().playAnimation('drenched', true);
+			trace('played drench animation!');
+
+
+		});
+		}
+
+	}
+
+	function boilingCutscene() {
+	var picoPos:Array<Float> = [
+		PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+		PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+	];
+	var nenePos:Array<Float> = [
+		PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+		PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+	];
+	var skyPos:Array<Float> = [
+		PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+		PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+	];
+
+
+
+	new FlxTimer().start(0.8, function(tmr) {
+		var dad = PlayState.instance.currentStage.getDad();
+
+		skyFried = FunkinSprite.createSparrow(skyPos[0] - 1005, skyPos[1] + 128, 'shift/manifest/Sky_Grilled');
+		skyFried.animation.addByPrefix('dead', "Sky Grilled Dead", 24, true);
+		skyFried.zIndex = 315;
+		skyFried.visible = false;
+		skyFried.animation.play('dead', true);
+		PlayState.instance.currentStage.add(skyFried);
+		refresh();
+
+		dad.animation.finishCallback = null;
+		dad.playAnimation('falling', true, true);
+		PlayState.instance.tweenCameraZoom(0.55, 2, true, FlxEase.quadOut);
+
+		dad.animation.finishCallback = function(animName:String) {
+			if (animName == 'falling') {
+				trace('sky hit the ground');
+				dad.playAnimation('cooked', true, true);
+				dad.animation.finishCallback = null;
+				skyFried.visible = true;
+				PlayState.instance.currentStage.getDad().visible = false;
+
+				PlayState.instance.currentStage.getDad().cameraFocusPoint.x = PlayState.instance.currentStage.getDad().cameraFocusPoint.x - 500;
+				PlayState.instance.currentStage.getDad().cameraFocusPoint.y = PlayState.instance.currentStage.getDad().cameraFocusPoint.y + 200;
+			}
+		};
+
+		new FlxTimer().start(0.55, function(tmr) {
+			//playin da hiss sound when she hit the ground
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/steamyHiss'), 1);
+		});
+
+		// apply shader shortly after
+		new FlxTimer().start(1.4, function(tmr) {
+			skyRim = new DropShadowShader();
+			skyRim.setAdjustColor(-30, -30, 38, 10);
+			skyRim.color = 0xFFff0000;
+			skyFried.shader = skyRim;
+			skyRim.attachedSprite = skyFried;
+			skyRim.angle = 45;
+			});
+		});
+	}
+	function onNoteHit(event:HitNoteScriptEvent)
+		{
+    if (PlayState.instance.currentStage == null) return;
+
+    if (!event.note.noteData.getMustHitNote() && liquidType == "boiling")
+    {
+        event.cancelEvent();
+
+        return;
+    }
+
+
+    	super.onNoteHit(event);
+	}
+
+	function onCountdownStart()
+	{
+		setupCutsceneObjects();
+		loadInGameSounds();
+		loadCutsceneSounds();
+		//var gf = PlayState.instance.currentStage.getGirlfriend();
+		//FlxTween.tween(gf, {x: gf.x, y: gf.y -390}, 3, {ease: FlxEase.quadIn});
+	}
+
+	override function onSongEnd(event:CountdownScriptEvent):Void {
+		super.onSongEnd(event);
+
+		if (PlayState.instance.currentVariation == 'pico' && hasPlayedEndingCutscene == false && liquidType !='boiling')
+		{
+			event.cancel();
+			playExecutionCutscene();
+		}
+		else if (liquidType == 'boiling')
+		{
+			hasPlayedEndingCutscene = true;
+			return;
+		}
+	}
+
+	function playExecutionCutscene(){
+		hasPlayedEndingCutscene = true;
+		FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2);
+		var neneGoated = PlayState.instance.currentStage.getGirlfriend();
+		//initializing the cammera positions again
+		var picoPos:Array<Float> = [
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+		];
+		var nenePos:Array<Float> = [
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y
+		];
+		var skyPos:Array<Float> = [
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+			PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+		];
+		cutsceneTimer(0, function(tmr) {
+			PlayState.instance.tweenCameraToPosition(skyPos[0]- 100, skyPos[1] + 50, 1, FlxEase.sineOut);
+			PlayState.instance.tweenCameraZoom(0.5, 1, true, FlxEase.sineOut);
+			PlayState.instance.currentStage.getDad().playAnimation('pressGadget', false);
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/gadgetGrabSfx'), 1);
+		});
+
+		cutsceneTimer(2.05, function(tmr) {
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/gadgetClickSfx'), 1);
+			PlayState.instance.currentStage.getGirlfriend().playAnimation('guh', true);
+			PlayState.instance.tweenCameraZoom(0.6, 0.5, true, FlxEase.expoOut);
+			PlayState.instance.tweenCameraToPosition(nenePos[0], skyPos[1] + 50, 0.6, FlxEase.expoOut);
+		});
+
+		cutsceneTimer(2.35, function(tmr) {
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/danganronpaJingle'), 1);
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/fuckedUpPercs'), 1);
+		});
+		cutsceneTimer(3.25, function(tmr) {
+
+			FlxTween.tween(neneGoated, {x: neneGoated.x, y: neneGoated.y -1090}, 1.2, {ease: FlxEase.expoIn});
+			PlayState.instance.currentStage.getGirlfriend().playAnimation('neneScramble', true);
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/blastoffScream'), 1);
+			PlayState.instance.tweenCameraToPosition(nenePos[0], skyPos[1] - 50, 1, FlxEase.sineInOut);
+
+		});
+		cutsceneTimer(4.5, function(tmr) {
+
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/neneExplodes'), 1);
+		});
+
+		cutsceneTimer(6.5, function(tmr) {
+
+			PlayState.instance.tweenCameraToPosition(nenePos[0], skyPos[1], 1, FlxEase.sineInOut);
+			brainChunklet.visible = true;
+			brainChunklet.animation.play('fall');
+		});
+		cutsceneTimer(6.7, function(tmr) {
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/chunkletDrop'), 1);
+		});
+		cutsceneTimer(8, function(tmr) {
+			FunkinSound.playOnce(Paths.sound('manifestCutscene/goreDrops'), 1);
+			PlayState.instance.tweenCameraToPosition(nenePos[0], skyPos[1] + 100, 1, FlxEase.sineInOut);
+			PlayState.instance.tweenCameraZoom(0.5, 1, true, FlxEase.expoOut);
+			organChunklets.visible = true;
+			organChunklets.animation.play('fall');
+			PlayState.instance.camCutscene.fade(0xFF000000, 2, false, null, true);
+
+		});
+		cutsceneTimer(12.5, function(tmr) {
+
+			PlayState.instance.endSong(true);
+		});
+	}
+
+	function cutsceneTimer(time:Float, callback:FlxTimer->Void):Void {
+		new FlxTimer().start(time, callback);
+	}
+
+	function onSongStart(event:ScriptEvent) {
+	super.onSongStart(event);
+
+		hasPlayedEndingCutscene = false;
+
+	var currentPlayer = PlayState.instance.currentStage.getBoyfriend();
+	var currentOpponent = PlayState.instance.currentStage.getDad();
+
+
+	for (animName in ['drenched', 'burning', 'falling', 'angry']) {
+		currentOpponent.animation.play(animName, true);
+		currentOpponent.draw(); //renders the frames 4 later use
+	}
+	for (animName in ['cupThrow']) {
+		currentPlayer.animation.play(animName, true);
+		currentPlayer.draw();
+	}
+
+	currentPlayer.animation.play('idle');
+
+	trace('animations preloaded!');
+
+	if (PlayState.instance.comboPopUps != null && !FlxG.isMobile)
+		PlayState.instance.comboPopUps.offsets = [0, -120];
+	}
+
+	function loadInGameSounds(){
+		FunkinSound.load(Paths.sound('manifestCutscene/runYoPockets'));
+		FunkinSound.load(Paths.sound('manifestCutscene/waterThrow'));
+		FunkinSound.load(Paths.sound('manifestCutscene/waterSplat'));
+		FunkinSound.load(Paths.sound('manifestCutscene/demonAngry'));
+		FunkinSound.load(Paths.sound('manifestCutscene/skyYell'));
+		FunkinSound.load(Paths.sound('manifestCutscene/flexatone'));
+		FunkinSound.load(Paths.sound('manifestCutscene/cupHittinTheGround'));
+		FunkinSound.load(Paths.sound('manifestCutscene/steamyHiss'));
+	}
+	function loadCutsceneSounds(){
+		FunkinSound.load(Paths.sound('manifestCutscene/gadgetGrabSfx'));
+		FunkinSound.load(Paths.sound('manifestCutscene/gadgetClickSfx'));
+		FunkinSound.load(Paths.sound('manifestCutscene/danganronpaJingle'));
+		FunkinSound.load(Paths.sound('manifestCutscene/fuckedUpPercs'));
+		FunkinSound.load(Paths.sound('manifestCutscene/blastoffScream'));
+		FunkinSound.load(Paths.sound('manifestCutscene/neneExplodes'));
+		FunkinSound.load(Paths.sound('manifestCutscene/chunkletDrop'));
+		FunkinSound.load(Paths.sound('manifestCutscene/goreDrops'));
+	}
+
+	public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		getBoyfriend().shader = null;
+	}
+
+
+
+}

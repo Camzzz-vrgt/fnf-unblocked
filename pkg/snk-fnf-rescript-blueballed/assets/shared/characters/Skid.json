@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [-30, 78],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [-12, 92],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [-49, 134],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [-49, 92],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": true,
+			"offsets": [-50, 90],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Skid",
+	"position": [-30, 340],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [55, 255, 1],
+	"camera_position": [30, -110],
+	"sing_duration": 5.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

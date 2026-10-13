@@ -1,0 +1,106 @@
+import funkin.modding.module.Module;
+import flixel.FlxG;
+import funkin.Paths;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.util.ReflectUtil;
+import funkin.ui.freeplay.SongMenuItem;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxTimer;
+import funkin.PlayerSettings;
+import funkin.util.TouchUtil;
+import funkin.util.SwipeUtil;
+import funkin.ui.freeplay.CapsuleNumber;
+
+using StringTools;
+
+class SkyFreeplayCapsules extends Module {
+	public function new(){
+		super('SkyFreeplayCapsules', 1, {state: FreeplayState});
+	}
+	//shoutout to doyliah mod pack, this week capsule code was totally stolen frm their mod 
+	//hi krim
+	var skyWeeks = ['weekSky', 'weekScene', 'weekSkyMobile'];
+
+	var changedCapsules:Array<SongMenuItem>;
+	var changeSelectionCallback:String->Void;
+
+	override function onSubStateOpenEnd(event) {
+        super.onSubStateOpenEnd(event);
+		var state = event.targetState;
+		if (!Std.isOfType(event.targetState, FreeplayState)) return;
+		changedCapsules = [];
+		changeSelectionCallback = state.letterSort.changeSelectionCallback;
+		state.letterSort.changeSelectionCallback = (str) -> {
+			changeSelectionCallback(str);
+			checkCapsules();
+		};
+		var filteredCapsules:Array<SongMenuItem> = FlxG.state.subState.grpCapsules.members.filter(function(cap:SongMenuItem) {
+       		// Dead capsules are ones which were removed from the list when changing filters.
+        	return cap != null && cap.alive && cap.freeplayData != null && skyWeeks.contains(cap.freeplayData.levelId);
+      	});
+		for (capsule in filteredCapsules){
+			if (capsule == null || !capsule.alive) continue;
+
+			changedCapsules.push(capsule); // Push these changed capsules
+			customDisplay(capsule);
+		}	
+	}
+
+	function customDisplay(cap:SongMenuItem) {
+		if (cap?.freeplayData == null) return;
+		cap.weekType.visible = true;
+		switch (cap.freeplayData.levelId) {
+			case 'weekSky', 'weekScene', 'weekSkyMobile':
+				cap.weekType.frames = Paths.getSparrowAtlas('freeplay/freeplayCapsule/skyweektypes');
+				cap.weekType.animation.addByPrefix('SKY', 'SKY text instance 1', 24, false);
+				cap.weekType.animation.play('SKY', true);		}
+	}
+
+	function checkCapsules(){
+		new FlxTimer().start(0.1, _ -> { // Add a small delay to grab the right capsules
+			while (changedCapsules.length > 0) {
+				var capsule = changedCapsules.shift();
+				if (capsule.weekType.graphic.key.contains('freeplay/freeplayCapsule/skyweektypes')) resetCapsules(capsule); 
+			}
+			if (changedCapsules.length != 0) changedCapsules = []; // Clear the array just in case
+			var filteredCapsules:Array<SongMenuItem> = FlxG.state.subState.grpCapsules.members.filter(function(cap:SongMenuItem) {
+       			// Dead capsules are ones which were removed from the list when changing filters.
+        		return cap != null && cap.alive && cap.freeplayData != null && skyWeeks.contains(cap.freeplayData.levelId);
+      		});
+			for (capsule in filteredCapsules){
+				if (capsule == null || !capsule.alive) continue;
+
+				var extra = capsule.weekNumbers[1];
+				if (extra != null) {
+					extra.visible = false;
+					capsule.weekNumbers.remove(extra);
+					capsule.remove(extra);
+					extra.destroy();
+				}
+
+				changedCapsules.push(capsule); // Push these changed capsules
+				customDisplay(capsule);
+			}
+		});			
+	}
+
+	// NOTE: YOU SHOULD NOT EDIT ANYTHING BELOW HERE AS IT COULD CAUSE ISSUES WITH RESETTING THE CAPSULES
+	function resetCapsules(cap:SongMenuItem) {
+		if (cap?.freeplayData == null) return;
+		cap.weekType.frames = Paths.getSparrowAtlas('freeplay/freeplayCapsule/weektypes');
+		cap.weekType.animation.addByPrefix('WEEK', 'WEEK text instance 1', 24, false);
+    	cap.weekType.animation.addByPrefix('WEEKEND', 'WEEKEND text instance 1', 24, false);
+		cap.checkWeek(cap.freeplayData.data.id);
+	}
+
+	override function onUpdate(event:UpdateScriptEvent) {
+		super.onUpdate(event);
+		var switched = PlayerSettings.player1.controls.UI_LEFT_P || PlayerSettings.player1.controls.UI_RIGHT_P;
+		if (FlxG.state.subState.controls.active && (switched || 
+		TouchUtil.pressAction(FlxG.state.subState.diffSelLeft, FlxG.state.subState.funnyCam, false) || 
+		TouchUtil.pressAction(FlxG.state.subState.diffSelRight, FlxG.state.subState.funnyCam, false) || 
+		SwipeUtil.swipeLeft || SwipeUtil.swipeRight)){
+			checkCapsules();
+		}
+	}
+}

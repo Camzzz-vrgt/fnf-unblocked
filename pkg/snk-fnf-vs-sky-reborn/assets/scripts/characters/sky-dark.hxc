@@ -1,0 +1,90 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import funkin.play.PauseSubState;
+import funkin.Preferences;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.stage.Stage;
+import funkin.graphics.FunkinSprite;
+
+
+class SkyDarkCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('sky-dark');
+	}
+
+  var normalChar:BaseCharacter;
+
+  override function set_alpha(val:Float):Float
+  {
+    super.set_alpha(val);
+    if (val != 1) normalChar.alpha = 1;
+    else
+      normalChar.alpha = 0.00001;
+
+    return val;
+  }
+
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+
+    super.playAnimation(name, restart, ignoreOther);
+    if (normalChar != null)
+    {
+      normalChar.playAnimation(name, restart, ignoreOther);
+      normalChar.setPosition(this.x, this.y);
+    }
+    if (PlayState.instance != null)
+    switch (name) {
+    case "deathConfirm":
+          createDeathSprites();
+          retryBubble.visible = true;
+          retryBubble.animation.play('confirm');
+    }
+
+  }
+
+	function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    normalChar = CharacterDataParser.fetchCharacter('sky-playable');
+    normalChar.zIndex = 199;
+    normalChar.alpha = 0;
+    normalChar.flipX = false;
+
+   	GameOverSubState.musicSuffix = '-sky';
+    GameOverSubState.blueBallSuffix = '-sky';
+    PauseSubState.musicSuffix = '-sky';
+
+    PlayState.instance.currentStage.add(normalChar);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+  }
+
+  var retryBubble:FunkinSprite;
+
+  function createDeathSprites()
+  {
+
+    retryBubble = FunkinSprite.createSparrow(0, 0, "skyplayable/SkyRetryBubble");
+    retryBubble.animation.addByPrefix('confirm', "retry bubble", 24, false);
+    retryBubble.flipX = true;
+    retryBubble.zIndex = this.zIndex + 5;
+    retryBubble.setPosition(this.x - 80 , this.y + 160);
+    retryBubble.visible = true;
+    GameOverSubState.instance.add(retryBubble);
+    retryBubble.blend = 0;
+
+  }
+
+  public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		PlayState.instance.currentStage.getBoyfriend().shader = null;
+	}
+
+}

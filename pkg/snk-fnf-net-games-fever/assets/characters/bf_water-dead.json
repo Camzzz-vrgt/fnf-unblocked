@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				177,
+				182
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "firstdeath"
+		},
+		{
+			"offsets": [
+				169,
+				166
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "confirm"
+		},
+		{
+			"offsets": [
+				119,
+				69
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "deathloop"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bf_agua_ded",
+	"position": [
+		290,
+		400
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		370,
+		10
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

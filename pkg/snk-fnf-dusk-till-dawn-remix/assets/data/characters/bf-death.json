@@ -1,0 +1,71 @@
+{
+	"renderType": "sparrow",
+	"version": "1.0.1",
+	"offsets": [
+		0,
+		350
+	],
+	"danceEvery": 2,
+	"scale": 0.8,
+	"name": "",
+	"cameraOffsets": [
+		0,
+		-200
+	],
+	"flipX": true,
+	"isPixel": false,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"healthIcon": {
+		"id": "bfpibby",
+		"isPixel": false
+	},
+	"healthBarColor": "#31A7D2",
+	"assetPath": "characters/BF_Death",
+	"animations": [
+		{
+			"frameIndices": [],
+			"prefix": "BF_Idle",
+			"offsets": [
+				60,
+				330
+			],
+			"frameRate": 15,
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF_Death_S",
+			"offsets": [
+				202,
+				293
+			],
+			"frameRate": 15,
+			"name": "firstDeath",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF_Death_L",
+			"offsets": [
+				202,
+				293
+			],
+			"frameRate": 15,
+			"name": "deathLoop",
+			"looped": true
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF_Death_E",
+			"offsets": [
+				202,
+				293
+			],
+			"frameRate": 15,
+			"name": "deathConfirm",
+			"looped": false
+		}
+	]
+}

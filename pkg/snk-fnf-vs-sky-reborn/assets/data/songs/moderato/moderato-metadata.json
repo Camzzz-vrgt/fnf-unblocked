@@ -1,0 +1,49 @@
+{
+  "version": "2.2.4",
+  "songName": "Moderato (Sky Mix)",
+  "artist": "st4rcannon",
+  "charter": "st4rcannon",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "sky-playable",
+      "girlfriend": "plushboombox",
+      "opponent": "allegro",
+      "instrumental": "sky",
+      "altInstrumentals": [],
+      "opponentVocals": ["allegro"],
+      "playerVocals": ["sky"]
+    },
+    "stage": "metro-moderato-erect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 2,
+      "normal": 3,
+      "hard": 4
+    },
+    "album": "skyxallegro",
+    "stickerPack": "skycollab",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 135,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+
+class AddCameraZoom extends SongEvent
+{
+    public function new()
+    {
+        super("AddCameraZoom");
+    }
+
+    public var eventTitle:String = "Add Camera Zoom (HARXERET Edition)";
+
+    override public function handleEvent(data:Dynamic):Void
+    {
+        if (PlayState.instance == null) return;
+
+        var state = PlayState.instance;
+
+        var hudStrength:Float = data?.getFloat("hud") ?? 0.08;
+        var gameStrength:Float = data?.getFloat("game") ?? 0.05;
+
+        state.camHUD.zoom += hudStrength;
+
+        state.cameraBopMultiplier += gameStrength;
+    }
+
+    override public function getTitle():String
+    {
+        return eventTitle;
+    }
+
+    override public function getEventSchema()
+    {
+        return [
+            {
+                name: "hud",
+                title: "HUD Zoom Strength",
+                type: "float",
+                defaultValue: 0.08
+            },
+            {
+                name: "game",
+                title: "Game Zoom Strength",
+                type: "float",
+                defaultValue: 0.05
+            }
+        ];
+    }
+}

@@ -1,0 +1,171 @@
+{
+  "version": "1.0.0",
+  "renderType": "multianimateatlas",
+  "offsets": [0, 10],
+  "danceEvery": 1,
+  "scale": 1,
+  "name": "Sky (Anxious)",
+  "cameraOffsets": [0, 30],
+  "singTime": 8,
+  "startingAnimation": "idle",
+  "assetPath": "shared:characters/sky",
+  "healthIcon": {
+    "id": "sky"
+  },
+  "generatedBy": "st4rcannon (By Hand)",
+  "animations": [
+    {
+      "prefix": "Left Anxious",
+      "name": "singLEFT"
+    },
+    {
+      "prefix": "Down Anxious",
+      "name": "singDOWN"
+    },
+    {
+      "prefix": "Up Anxious",
+      "name": "singUP"
+    },
+    {
+      "prefix": "Right Anxious",
+      "name": "singRIGHT"
+    },
+    {
+      "prefix": "Left Pissed",
+      "name": "singLEFT-alt"
+    },
+    {
+      "prefix": "Down Pissed",
+      "name": "singDOWN-alt"
+    },
+    {
+      "prefix": "Up Pissed",
+      "name": "singUP-alt"
+    },
+    {
+      "prefix": "Right Pissed",
+      "name": "singRIGHT-alt"
+    },
+    {
+      "prefix": "Yell",
+      "frameIndices": [0,1,2,3,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7
+    ,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7,4,5,6,7],
+      "name": "yell"
+    },
+    {
+      "prefix": "Bitch What",
+      "name": "flabbergasted"
+    },
+    {
+      "prefix": "Bitch What",
+      "name": "mad"
+    },
+    {
+      "prefix": "Huh",
+      "name": "huh"
+    },
+    {
+      "prefix": "Bothered",
+      "name": "bothered"
+    },
+    {
+      "prefix": "Idle Anxious",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
+      "name": "danceLeft"
+    },
+    {
+      "prefix": "Idle Anxious",
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14],
+      "name": "danceRight"
+    },
+    {
+      "frameIndices": [2, 4],
+      "prefix": "Right Pissed",
+      "looped": true,
+      "name": "singRIGHT-alt-hold"
+    },
+    {
+      "frameIndices": [2, 4],
+      "prefix": "Left Pissed",
+      "looped": true,
+      "name": "singLEFT-alt-hold"
+    },
+    {
+      "prefix": "Down Pissed",
+      "frameIndices": [2, 4],
+      "looped": true,
+      "name": "singDOWN-alt-hold"
+    },
+    {
+      "prefix": "Up Pissed",
+      "frameIndices": [2, 4],
+      "looped": true,
+      "name": "singUP-alt-hold"
+    },
+    {
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
+      "prefix": "Idle Pissed",
+      "name": "danceLeft-alt"
+    },
+    {
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
+      "prefix": "Idle Pissed",
+      "name": "danceRight-alt"
+    },
+    {
+      "prefix": "Scream",
+      "name": "scream",
+      "looped": true
+    },
+    {
+      "prefix": "Left Sad",
+      "name": "singLEFT-sad"
+    },
+    {
+      "frameIndices": [2, 3],
+      "prefix": "Left Sad",
+      "looped": true,
+      "name": "singLEFT-sad-hold"
+    },
+    {
+      "prefix": "Right Sad",
+      "name": "singRIGHT-sad"
+    },
+    {
+      "frameIndices": [2, 3],
+      "prefix": "Right Sad",
+      "looped": true,
+      "name": "singRIGHT-sad-hold"
+    },
+    {
+      "prefix": "Down Sad",
+      "name": "singDOWN-sad"
+    },
+    {
+      "frameIndices": [2, 3],
+      "prefix": "Down Sad",
+      "looped": true,
+      "name": "singDOWN-sad-hold"
+    },
+    {
+      "prefix": "Up Sad",
+      "name": "singUP-sad"
+    },
+    {
+      "frameIndices": [2, 3],
+      "prefix": "Up Sad",
+      "looped": true,
+      "name": "singUP-sad-hold"
+    },
+    {
+      "prefix": "Idle Sad",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
+      "name": "danceLeft-sad"
+    },
+    {
+      "prefix": "Idle Sad",
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
+      "name": "danceRight-sad"
+    }
+  ]
+}

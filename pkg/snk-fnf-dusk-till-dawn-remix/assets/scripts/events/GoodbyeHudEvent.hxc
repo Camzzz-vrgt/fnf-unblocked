@@ -1,0 +1,31 @@
+import funkin.play.event.SongEvent;
+
+class GoodbyeHudEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Opacidade alvo (0-1)",
+                defaultValue: "0",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Duração em segundos",
+                defaultValue: "0.5",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Goodbye Hud";
+    }
+
+    public function new() {
+        super('Goodbye Hud');
+    }
+}

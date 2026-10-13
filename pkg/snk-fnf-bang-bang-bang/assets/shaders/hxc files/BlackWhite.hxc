@@ -1,0 +1,21 @@
+import openfl.filters.ShaderFilter;
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.utils.Assets;
+import funkin.Paths;
+
+class BlackWhite extends FlxRuntimeShader
+{
+    public var uIntensity:Float = 0.0;
+
+    public function new()
+    {
+        var fragText:String = Assets.getText(Paths.frag('BlackWhite'));
+        super(fragText);
+    }
+
+    public function setIntensity(value:Float):Float
+{
+    this.setFloat('u_intensity', value);
+    return uIntensity = value;
+}
+}

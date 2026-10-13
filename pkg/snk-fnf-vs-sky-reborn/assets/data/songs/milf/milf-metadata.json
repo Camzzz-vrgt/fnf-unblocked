@@ -1,0 +1,28 @@
+{
+  "version": "2.2.4",
+  "songName": "M.I.L.F (Sky Mix)",
+  "artist": "st4rcannon",
+  "charter": "st4rcannon",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "sky-car",
+      "girlfriend": "plushboombox",
+      "opponent": "mom-car",
+      "instrumental": "sky",
+      "playerVocals": ["sky"]
+    },
+    "stage": "limoRideErect",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 4, "normal": 5, "hard": 6 },
+    "album": "skymixes",
+    "stickerPack": "skymixes",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "st4rcannon (by hand)",
+  "timeFormat": "ms",
+  "timeChanges": [
+    { "t": 0, "b": 0, "bpm": 180, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }
+  ]
+}

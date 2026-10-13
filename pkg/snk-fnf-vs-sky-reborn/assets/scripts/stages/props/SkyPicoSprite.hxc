@@ -1,0 +1,39 @@
+import flixel.math.FlxPoint;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.Preferences;
+
+class SkyPicoSprite extends FunkinSprite {
+
+	public function new(x:Float, y:Float) {
+		super(x, y);
+
+		loadTextureAtlas("skyweek/erect/sky_pico_anims", "shared");
+	}
+
+
+	function pointAnim() {
+		this.animation.play("Point", true);
+	}
+
+	function scrambleAnim() {
+		this.animation.play("Scramble", true);
+	}
+
+	function deathAnim() {
+		this.animation.play("Blammed", true);
+	}
+
+	function dodgeAnim() {
+		this.animation.play("Dodge", true);
+	}
+
+	function deadAnim() {
+		this.animation.play("Dead", true);
+	}
+}

@@ -1,0 +1,77 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+
+class AnimationFreezeEventHandler extends Module {
+
+    public function new() {
+        super("AnimationFreezeEventHandler");
+    }
+
+    override function onSongEvent(event) {
+        super.onSongEvent(event);
+
+        var data = event.eventData;
+        if (data.eventKind != "AnimationFreezeEvent") return;
+
+        var target = data.value.target;
+        var anim = data.value.animation;
+        var freeze:Bool = data.value.freeze;
+
+        var dad = PlayState.instance.currentStage.getDad();
+        var bf = PlayState.instance.currentStage.getBoyfriend();
+        var gf = PlayState.instance.currentStage.getGirlfriend();
+
+        if (freeze)
+        {
+            switch (target)
+            {
+                case "bf": freezeAnim(bf, anim);
+                case "dad": freezeAnim(dad, anim);
+                case "gf": freezeAnim(gf, anim);
+            }
+        }
+        else
+        {
+            switch (target)
+            {
+                case "bf": unfreezeAnim(bf);
+                case "dad": unfreezeAnim(dad);
+                case "gf": unfreezeAnim(gf);
+            }
+        }
+    }
+
+    function freezeAnim(char, anim:String)
+    {
+        if (char == null) return;
+        if (!char.animation.getNameList().contains(anim)) return;
+
+        char.canPlayOtherAnims = false;
+        char.animation.play(anim, true);
+        char.applyAnimationOffsets(anim);
+
+        var a = char.animation.curAnim;
+        if (a != null)
+        {
+            a.curFrame = a.numFrames - 1;
+            a.paused = true;
+            a.finished = true;
+        }
+    }
+    
+    function unfreezeAnim(char)
+    {
+        if (char == null) return;
+        
+        char.canPlayOtherAnims = true;
+        
+        var a = char.animation.curAnim;
+        if (a != null)
+        {
+            a.paused = false;
+            a.finished = false;
+        }
+        
+        char.playAnimation("idle", true);
+    }
+}

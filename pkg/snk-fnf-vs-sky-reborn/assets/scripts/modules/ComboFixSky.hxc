@@ -1,0 +1,21 @@
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.graphics.FunkinSprite;
+import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayStatePlaylist;
+import funkin.save.Save;
+import funkin.modding.module.Module;
+
+class ComboFix extends Module {
+	public function new() {
+		super('ComboFix');
+	}
+
+	function onUpdate(event){
+		super.onUpdate(event);
+		//if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [0, -200];
+	}
+
+}

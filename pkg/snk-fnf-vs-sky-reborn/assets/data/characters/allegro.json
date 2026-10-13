@@ -1,0 +1,29 @@
+{
+  "version": "1.0.1",
+  "name": "Allegro",
+  "assetPath": "characters/allegro",
+  "singTime": 4,
+  "offsets": [0, 30],
+  "animations": [
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "idle",
+      "prefix": "idle"
+    }
+  ]
+}

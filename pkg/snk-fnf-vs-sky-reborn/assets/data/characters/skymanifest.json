@@ -1,0 +1,66 @@
+{
+	"renderType": "animateatlas",
+	"version": "1.0.0",
+	"danceEvery": 1,
+	"name": "Sky (Manifest)",
+	"startingAnimation": "idle",
+	"singTime": 8,
+	"offsets": [-100, 20],
+	"cameraOffsets": [89, 100],
+	"healthIcon": {"id": "skymanifest"},
+	"assetPath": "shared:characters/skyManifest",
+	"generatedBy": "Nova Character Editor REFRESHED v0.1.0",
+	"animations": [
+		{
+			"prefix": "Idle",
+			"name": "idle"
+		},
+		{
+			"frameIndices": [11,12,13],
+			"prefix": "Idle",
+			"looped": true,
+			"name": "idle-hold"
+		},
+		{
+			"prefix": "Right",
+			"name": "singRIGHT"
+		},
+		{
+			"prefix": "Right",
+			"frameIndices": [3,4,5],
+			"looped": true,
+			"name": "singRIGHT-hold"
+		},
+		{
+			"prefix": "Down",
+			"name": "singDOWN"
+		},
+		{
+			"prefix": "Down",
+			"frameIndices": [3,4,5],
+			"looped": true,
+			"name": "singDOWN-hold"
+		},
+		{
+			"prefix": "Up",
+			"name": "singUP"
+		},
+		{
+			"prefix": "Up",
+			"frameIndices": [3,4,5],
+			"looped": true,
+			"name": "singUP-hold"
+		},
+		{
+			"prefix": "Left",
+			"name": "singLEFT"
+		},
+		{
+			"prefix": "Left",
+			"frameIndices": [3,4,5],
+			"looped": true,
+			"name": "singLEFT-hold"
+		}
+		
+	]
+}

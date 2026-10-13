@@ -1,0 +1,143 @@
+{
+  "renderType": "animateatlas",
+  "version": "1.0.0",
+  "assetPath": "shared:characters/skyManifest",
+  "healthIcon": {"id": "skymanifest"},
+  "generatedBy": "st4rcannon",
+  "offsets": [-100, 20],
+  "cameraOffsets": [0, 100],
+  "name": "Sky (Manifest) [Wet]",
+  "animations": [
+    {
+      "prefix": "Idle",
+      "name": "idle"
+    },
+    {
+      "frameIndices": [11, 12, 13],
+      "prefix": "Idle",
+      "name": "idle-hold",
+      "looped": true
+    },
+    {
+      "prefix": "Right",
+      "name": "singRIGHT"
+    },
+    {
+      "prefix": "Right",
+      "frameIndices": [2,3,4],
+      "name": "singRIGHT-hold",
+      "looped": true
+    },
+    {
+      "prefix": "Down",
+      "name": "singDOWN"
+    },
+    {
+      "prefix": "Down",
+      "frameIndices": [2,3,4],
+      "looped": true,
+      "name": "singDOWN-hold"
+    },
+    {
+      "prefix": "Up",
+      "name": "singUP"
+    },
+    {
+      "prefix": "Up",
+      "frameIndices": [2,3,4],
+      "looped": true,
+      "name": "singUP-hold"
+    },
+    {
+      "prefix": "Left",
+      "name": "singLEFT"
+    },
+    {
+      "prefix": "Left ",
+      "frameIndices": [2,3,4],
+      "name": "singLEFT-hold"
+    },
+    {
+      "prefix": "Idle Wet",
+      "name": "idle-wet"
+    },
+    {
+      "frameIndices": [11, 12, 13],
+      "prefix": "Idle Wet",
+      "name": "idle-wet-hold",
+      "looped": true
+    },
+    {
+      "prefix": "Right Wet",
+      "name": "singRIGHT-wet"
+    },
+    {
+      "prefix": "Right Wet",
+      "frameIndices": [2, 3, 4],
+      "name": "singRIGHT-wet-hold",
+      "looped": true
+    },
+    {
+      "prefix": "Down Wet",
+      "name": "singDOWN-wet"
+    },
+    {
+      "prefix": "Down Wet",
+      "frameIndices": [2,3,4],
+      "looped": true,
+      "name": "singDOWN-wet-hold"
+    },
+    {
+      "prefix": "Up Wet",
+      "name": "singUP-wet"
+    },
+    {
+      "prefix": "Up Wet",
+      "frameIndices": [2,3,4],
+      "looped": true,
+      "name": "singUP-wet-hold"
+    },
+    {
+      "prefix": "Left Wet",
+      "name": "singLEFT-wet"
+    },
+    {
+      "prefix": "Left Wet",
+      "frameIndices": [2,3,4],
+      "looped": true,
+      "name": "singLEFT-wet-hold"
+    },
+    {
+      "prefix": "Drenched",
+      "name": "drenched"
+    },
+    {
+      "prefix": "Agony",
+      "looped": true,
+      "name": "burning"
+    },
+    {
+      "prefix": "Fall",
+      "name": "falling"
+    },
+    {
+      "prefix": "Dead",
+      "looped": true,
+      "name": "cooked"
+    },
+    {
+      "prefix": "Yell",
+      "looped": true,
+      "name": "angry"
+    },
+    {
+      "prefix": "Gadget",
+      "name": "pressGadget"
+    },
+    {
+      "prefix": "Gadget Loop",
+      "looped": true,
+      "name": "gadgetAurafarm"
+    }
+  ]
+}

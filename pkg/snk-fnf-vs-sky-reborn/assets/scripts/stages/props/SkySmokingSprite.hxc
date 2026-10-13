@@ -1,0 +1,21 @@
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class SkySmokingSprite extends FunkinSprite {
+
+	public function new(x:Float, y:Float) {
+
+		super(x, y);
+
+		loadTextureAtlas("skymobile/skymini_smoking_anims", "shared");
+	}
+
+
+	function playAnim() {
+		this.animation.play("smoke", true);
+	}
+	function loopAnim() {
+		this.animation.play('high loop', true);
+	}
+}

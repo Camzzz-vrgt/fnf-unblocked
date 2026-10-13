@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				202,
+				-109
+			],
+			"anim": "anim",
+			"fps": 24,
+			"name": "run anim",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				202,
+				-109
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "run idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				202,
+				-109
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "run idle"
+		},
+		{
+			"offsets": [
+				202,
+				-109
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "run idle"
+		},
+		{
+			"offsets": [
+				202,
+				-109
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "run idle"
+		},
+		{
+			"offsets": [
+				202,
+				-109
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "run idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/run",
+	"position": [
+		-1413,
+		-290
+	],
+	"healthicon": "lies",
+	"flip_x": true,
+	"healthbar_colors": [
+		225,
+		214,
+		138
+	],
+	"camera_position": [
+		-700,
+		130
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

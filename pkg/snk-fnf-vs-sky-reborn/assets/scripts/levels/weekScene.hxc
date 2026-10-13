@@ -1,0 +1,15 @@
+import flixel.FlxG;
+import funkin.ui.story.Level;
+import funkin.save.Save;
+
+class SceneWeek extends Level {
+
+
+	function new() {
+		super('weekScene');
+	}
+
+	override function isVisible() {
+		return false;
+	}
+}

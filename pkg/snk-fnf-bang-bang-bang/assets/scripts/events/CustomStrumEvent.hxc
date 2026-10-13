@@ -1,0 +1,140 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.data.event.SongEventSchema;
+import funkin.Conductor;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class StrumTweenEvent extends SongEvent {
+
+    public var eventTitle:String = "Strum Tween";
+
+    var originalDadX:Array<Float> = [];
+    var originalDadScale:Array<Float> = [];
+    var originalBFX:Float = 0;
+    var hasSaved:Bool = false;
+    
+    static var isHooked:Bool = false;
+
+    public function new() {
+        super("strumTween");
+    }
+
+    override public function handleEvent(data:Dynamic):Void {
+        var ps = PlayState.instance;
+        if (ps == null) return;
+        
+        var val:Int = data.getInt('enabled');
+        var durationSteps:Float = data.getFloat('duration');
+        var seconds:Float = (durationSteps * Conductor.instance.stepLengthMs) / 1000;
+        
+        var targetSpacing:Float = 82.0; 
+        var rightOffset:Float = -30.0;
+        var targetAlpha:Float = (val == 1) ? 0.4 : 1.0;
+        var isMobile:Bool = FlxG.onMobile;
+
+        if (!isHooked) {
+            FlxG.signals.postUpdate.add(syncNoteScales);
+            isHooked = true;
+        }
+
+        if (!hasSaved) {
+            hasSaved = true;
+            if (ps.opponentStrumline != null && ps.opponentStrumline.strumlineNotes != null) {
+                for (strum in ps.opponentStrumline.strumlineNotes.members) {
+                    originalDadX.push(strum.x);
+                    originalDadScale.push(strum.scale.x);
+                }
+            }
+            if (ps.playerStrumline != null) {
+                originalBFX = ps.playerStrumline.x;
+            }
+        }
+
+        if (val == 1) {
+            if (ps.opponentStrumline != null && ps.opponentStrumline.strumlineNotes != null) {
+                var startX = originalDadX[0] + rightOffset; 
+
+                for (i in 0...ps.opponentStrumline.strumlineNotes.members.length) {
+                    var strum = ps.opponentStrumline.strumlineNotes.members[i];
+                    if (strum != null) {
+                        FlxTween.cancelTweensOf(strum);
+                        FlxTween.cancelTweensOf(strum.scale);
+                        
+                        FlxTween.tween(strum, {x: startX + (i * targetSpacing), alpha: targetAlpha}, seconds, {ease: FlxEase.smoothStepInOut});
+                        FlxTween.tween(strum.scale, {x: 0.5, y: 0.5}, seconds, {ease: FlxEase.smoothStepInOut});
+                    }
+                }
+            }
+            if (!isMobile && ps.playerStrumline != null) {
+                FlxTween.cancelTweensOf(ps.playerStrumline);
+                FlxTween.tween(ps.playerStrumline, {x: 420}, seconds, {ease: FlxEase.smoothStepInOut});
+            }
+        } else {
+            if (ps.opponentStrumline != null && ps.opponentStrumline.strumlineNotes != null) {
+                for (i in 0...ps.opponentStrumline.strumlineNotes.members.length) {
+                    var strum = ps.opponentStrumline.strumlineNotes.members[i];
+                    if (strum != null && i < originalDadX.length) {
+                        FlxTween.cancelTweensOf(strum);
+                        FlxTween.cancelTweensOf(strum.scale);
+                        FlxTween.tween(strum, {x: originalDadX[i], alpha: targetAlpha}, seconds, {ease: FlxEase.smoothStepInOut});
+                        FlxTween.tween(strum.scale, {x: originalDadScale[i], y: originalDadScale[i]}, seconds, {ease: FlxEase.smoothStepInOut});
+                    }
+                }
+            }
+            if (!isMobile && ps.playerStrumline != null) {
+                FlxTween.cancelTweensOf(ps.playerStrumline);
+                FlxTween.tween(ps.playerStrumline, {x: originalBFX}, seconds, {ease: FlxEase.smoothStepInOut});
+            }
+        }
+    }
+
+    static function syncNoteScales():Void {
+        var ps = PlayState.instance;
+        if (ps == null || ps.notes == null || ps.opponentStrumline == null || ps.opponentStrumline.strumlineNotes == null) return;
+        
+        ps.notes.forEachAlive(function(note:Dynamic) {
+            if (note != null && !note.mustPress) {
+                var receptors = ps.opponentStrumline.strumlineNotes.members;
+                if (note.noteData >= 0 && note.noteData < receptors.length) {
+                    var targetStrum = receptors[note.noteData];
+                    if (targetStrum != null) {
+                        note.scale.x = targetStrum.scale.x;
+                        if (!note.isSustainNote) {
+                            note.scale.y = targetStrum.scale.y;
+                        }
+                        note.x = targetStrum.x;
+                        note.alpha = targetStrum.alpha;
+                    }
+                }
+            }
+        });
+    }
+
+    override public function getTitle():String {
+        return eventTitle;
+    }
+
+    override public function getEventSchema():SongEventSchema {
+        return [
+            {
+                name: 'enabled',
+                title: 'Enabled',
+                defaultValue: 0,
+                type: "enum",
+                keys: ["Disabled" => 0, "Enabled" => 1]
+            },
+            {
+                name: 'duration',
+                title: 'Duration (steps)',
+                defaultValue: 4.0,
+                step: 1.0,
+                min: 1.0,
+                max: 999.0,
+                type: "float",
+                units: 'steps'
+            }
+        ];
+    }
+}

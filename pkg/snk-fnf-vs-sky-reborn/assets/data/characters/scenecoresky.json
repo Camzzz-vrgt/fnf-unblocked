@@ -1,0 +1,42 @@
+{
+  "danceEvery": 1,
+  "offsets": [0, 0],
+  "renderType": "animateatlas",
+  "version": "1.0.0",
+  "scale": 1,
+  "cameraOffsets": [0, 0],
+  "name": "Sky (Scenecore)",
+  "startingAnimation": "idle",
+  "singTime": 8,
+  "healthIcon": {"offsets": [0, 0], "scale": 1, "id": "scenecoresky"},
+  "assetPath": "shared:characters/sky-scenecore",
+  "generatedBy": "st4rcannon",
+  "animations": [
+    {
+      "prefix": "Left",
+      "name": "singLEFT"
+    },
+    {
+      "prefix": "Up",
+      "name": "singDOWN"
+    },
+    {
+      "prefix": "Down",
+      "name": "singUP"
+    },
+    {
+      "prefix": "Right",
+      "name": "singRIGHT"
+    },
+    {
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
+      "prefix": "Idle",
+      "name": "danceLeft"
+    },
+    {
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15, 16],
+      "prefix": "Idle",
+      "name": "danceRight"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": "2.2.4",
+  "songName": "2hot (Sky Mix)",
+  "timeFormat": "ms",
+  "artist": "st4rcannon",
+  "charter": "st4rcannon",
+  "playData": {
+    "stage": "phillyStreetsErect",
+    "characters": {
+      "player": "sky-playable",
+      "girlfriend": "plushboombox",
+      "opponent": "darnell",
+      "instrumental": "sky",
+      "playerVocals": ["sky"]
+    },
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "difficulties": ["easy", "normal", "hard"],
+    "noteStyle": "funkin",
+    "album": "skymixes",
+    "stickerPack": "skymixes",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "timeChanges": [{ "d": 4, "n": 4, "t": -1, "bt": [4, 4, 4, 4], "bpm": 182 }],
+  "generatedBy": "Chart Editor Import (FNF Legacy)"
+}

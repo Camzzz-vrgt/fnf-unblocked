@@ -1,0 +1,943 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.PauseScriptEvent;
+import funkin.modding.events.UpdateScriptEvent;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.modding.events.SongTimeScriptEvent;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import funkin.Paths;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.math.FlxMath;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
+import openfl.filters.ShaderFilter;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.graphics.FunkinSprite;
+import funkin.graphics.FunkinCamera;
+import StringTools;
+import Std;
+import Reflect;
+
+// Abertura/intro da Coward: Set Cam Zoom, Screen Flash, Cinematics (No Hud),
+// hideStuff, Duet Cam, Change HUD Opacity, greyscale.
+// "BnW bg" NÃO é tratado aqui — vive no room.hxc (stage), pois mexe direto nos
+// personagens e em sprites do próprio stage (smile/pupils/Light/Bulb).
+// particleToggle e "Set Property cameraSpeed" ficam de fora por enquanto (dependem
+// do sistema de partícula / do lerp nativo de câmera, que ainda não confirmei a API certa —
+// prefiro deixar de fora a arriscar chutar um nome de propriedade errado de novo).
+class CowardIntroModule extends Module
+{
+    var baseZoom:Float = 1.0;
+    var zoomInitialized:Bool = false;
+
+    var duetOffsetX:Float = 0;
+    var duetOffsetY:Float = 0;
+    var duetActive:Bool = false;
+    var customPosHold:Bool = false;
+    var camTarget:String = null; // 'bf'/'dad'/'gf'/null
+    var camTargetInstant:Bool = true;
+    var tiltEnabled:Bool = false;
+    var tiltLeftSide:Bool = true;
+    var tiltTime:Float = 2.5;
+    var tiltTimer:FlxTimer;
+    var tiltTween:FlxTween;
+    var tiltTimerWasActive:Bool = false;
+    var tiltTweenWasActive:Bool = false;
+
+    var bopRate:Int = 4;
+    var bopIntensity:Float = 0;
+
+    var strumMiddleActive:Bool = false;
+    var playerStrumDefaultX:Float = 0;
+    var playerStrumDefaultXSet:Bool = false;
+    var oppShowTimer:FlxTimer = null;
+
+    var bwShader:Dynamic = null;
+    var bwActive:Bool = false;
+
+    var camBars:FunkinCamera;
+    var upperBar:FunkinSprite;
+    var lowerBar:FunkinSprite;
+
+    var hideStuffOn:Bool = false;
+
+    function new()
+    {
+        super('CowardIntroModule', 1);
+    }
+
+    // HScript cannot call Math.isNaN(): Haxe compiles that to the JS *global*
+    // isNaN(), so there is no 'isNaN' field on the runtime Math object the
+    // interpreter is handed, and every call raised "Invalid access to field
+    // isNaN". NaN is the only value that is not equal to itself.
+    function isNan(v:Float):Bool
+    {
+        return v != v;
+    }
+
+    var initialized:Bool = false;
+
+    override function onCountdownStart(event:ScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+        if (PlayState.instance != null)
+        {
+            baseZoom = PlayState.instance.currentCameraZoom;
+        }
+        zoomInitialized = true;
+        initialized = false; // permite recriar as barras na próxima música
+        resetStrumMiddle();
+    }
+
+    // Le timer et le tween du CameraTilt sont gérés par Flixel en dehors de
+    // l'update du PlayState : sans ceci, la caméra continue à se balancer
+    // derrière le menu pause.
+    override function onPause(event:PauseScriptEvent):Void
+    {
+        super.onPause(event);
+        tiltTimerWasActive = tiltTimer != null && tiltTimer.active;
+        tiltTweenWasActive = tiltTween != null && tiltTween.active;
+        if (tiltTimerWasActive) tiltTimer.active = false;
+        if (tiltTweenWasActive) tiltTween.active = false;
+    }
+
+    override function onResume(event:ScriptEvent):Void
+    {
+        super.onResume(event);
+        if (tiltTimerWasActive && tiltTimer != null) tiltTimer.active = true;
+        if (tiltTweenWasActive && tiltTween != null) tiltTween.active = true;
+        tiltTimerWasActive = false;
+        tiltTweenWasActive = false;
+    }
+
+    // Morrer e dar retry NÃO recria as strumlines — o bloco `needsReset` do
+    // PlayState só chama clean()/vwoosh nelas. Ou seja: se o jogador morrer com
+    // as setas centralizadas, o x da strumline do player e o alpha 0 da do
+    // oponente sobrevivem pro retry e ficam assim até o próximo evento (que pode
+    // estar a minutos de distância). Então desfaz na mão a cada countdown.
+    function resetStrumMiddle():Void
+    {
+        if (!strumMiddleActive) return;
+        strumMiddleActive = false;
+        if (PlayState.instance == null) return;
+
+        var pStrum = PlayState.instance.playerStrumline;
+        if (pStrum != null && playerStrumDefaultXSet)
+        {
+            FlxTween.cancelTweensOf(pStrum);
+            pStrum.x = playerStrumDefaultX;
+        }
+
+        if (oppShowTimer != null)
+        {
+            oppShowTimer.cancel();
+            oppShowTimer = null;
+        }
+
+        var oStrum = PlayState.instance.opponentStrumline;
+        if (oStrum != null)
+        {
+            FlxTween.cancelTweensOf(oStrum);
+            oStrum.alpha = 1;
+            oStrum.visible = true;
+        }
+    }
+
+    // Cria as barras só na primeira vez que forem realmente necessárias
+    // (igual ao LaserModule, que cria o sprite dele na hora do evento em vez
+    // de adiantado — isso é o que realmente funcionou).
+    function ensureBars():Bool
+    {
+        if (initialized) return true;
+        if (PlayState.instance == null) return false;
+
+        try
+        {
+            camBars = new FunkinCamera();
+            camBars.width = PlayState.instance.camHUD.width;
+            camBars.height = PlayState.instance.camHUD.height;
+            camBars.zoom = PlayState.instance.camHUD.zoom;
+            camBars.x = PlayState.instance.camHUD.x;
+            camBars.y = PlayState.instance.camHUD.y;
+            camBars.bgColor = 0x00000000;
+            FlxG.cameras.remove(PlayState.instance.camHUD, false);
+            FlxG.cameras.remove(PlayState.instance.camCutscene, false);
+            FlxG.cameras.remove(PlayState.instance.camCutouts, false);
+            FlxG.cameras.add(camBars, false);
+            FlxG.cameras.add(PlayState.instance.camHUD, false);
+            FlxG.cameras.add(PlayState.instance.camCutscene, false);
+            FlxG.cameras.add(PlayState.instance.camCutouts, false);
+
+            upperBar = new FunkinSprite(0, 0);
+            upperBar.makeSolidColor(1, 1, 0xFF000000);
+            upperBar.scrollFactor.set(0, 0);
+            upperBar.cameras = [camBars];
+            upperBar.scale.set(camBars.width / camBars.zoom, 0);
+            upperBar.updateHitbox();
+            upperBar.setPosition(0, 0 - upperBar.height);
+            PlayState.instance.add(upperBar);
+
+            lowerBar = new FunkinSprite(0, 0);
+            lowerBar.makeSolidColor(1, 1, 0xFF000000);
+            lowerBar.scrollFactor.set(0, 0);
+            lowerBar.cameras = [camBars];
+            lowerBar.scale.set(camBars.width / camBars.zoom, 0);
+            lowerBar.updateHitbox();
+            lowerBar.setPosition(0, camBars.height / camBars.zoom);
+            PlayState.instance.add(lowerBar);
+
+            initialized = true;
+            return true;
+        }
+        catch (e:Dynamic)
+        {
+            trace('CowardIntroModule: falhou ao criar as barras: ' + e);
+            return false;
+        }
+    }
+
+    override function onCreate(event:ScriptEvent):Void
+    {
+        super.onCreate(event);
+        initialized = false;
+    }
+
+    override function onUpdate(event:UpdateScriptEvent):Void
+    {
+        super.onUpdate(event);
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        if (duetActive)
+        {
+            try
+            {
+                var bf = PlayState.instance.currentStage.getBoyfriend();
+                var dad = PlayState.instance.currentStage.getDad();
+                if (bf == null || dad == null) return;
+
+                var midX = (bf.cameraFocusPoint.x + dad.cameraFocusPoint.x) / 2;
+                var midY = (bf.cameraFocusPoint.y + dad.cameraFocusPoint.y) / 2;
+
+                PlayState.instance.cameraFollowPoint.setPosition(midX + duetOffsetX, midY + duetOffsetY);
+            }
+            catch (e:Dynamic) {}
+            return;
+        }
+
+        if (camTarget != null)
+        {
+            try
+            {
+                var target = null;
+                if (camTarget == 'bf') target = PlayState.instance.currentStage.getBoyfriend();
+                else if (camTarget == 'dad') target = PlayState.instance.currentStage.getDad();
+                else if (camTarget == 'gf') target = PlayState.instance.currentStage.getGirlfriend();
+
+                if (target != null && target.cameraFocusPoint != null)
+                {
+                    var fx = target.cameraFocusPoint.x;
+                    var fy = target.cameraFocusPoint.y;
+                    if (camTargetInstant)
+                    {
+                        PlayState.instance.cameraFollowPoint.setPosition(fx, fy);
+                    }
+                    else
+                    {
+                        var cur = PlayState.instance.cameraFollowPoint;
+                        cur.setPosition(FlxMath.lerp(cur.x, fx, 0.08), FlxMath.lerp(cur.y, fy, 0.08));
+                    }
+                }
+            }
+            catch (e:Dynamic) {}
+            return;
+        }
+
+        // Removido: rede de segurança que chamava restoreNativeFollow() todo
+        // frame usando PlayState.instance.mustHitSection — esse campo é do
+        // Psych Engine, não existe no V-Slice. Isso brigava (60x/s) com o
+        // FocusCamera nativo, que já funciona sozinho e é quem deveria
+        // controlar a câmera sempre que a gente não estiver segurando uma
+        // posição customizada.
+    }
+
+    override function onSongEvent(event:SongEventScriptEvent):Void
+    {
+        super.onSongEvent(event);
+        if (event == null || event.eventData == null) return;
+        var kind:String = event.eventData.eventKind;
+        if (kind == null) return;
+
+        try
+        {
+            switch (kind)
+            {
+                case 'Set Cam Zoom': handleSetCamZoom(event);
+                case 'CamaraZoom': handleCamaraZoom(event);
+                case 'Camera Speed': handleCameraSpeed(event);
+                case 'SetCameraBop': handleSetCameraBop(event);
+                case 'MoveArrowsToMiddle': handleMoveArrowsToMiddle(event);
+                case 'Camera Switch no HUD': handleCameraSwitchNoHud(event);
+                case 'Camera Switch': handleCameraSwitch(event);
+                case 'Move Character': handleMoveCharacter(event);
+                case 'Play Animation': handlePlayAnimation(event);
+                case 'Change Scroll Speed': handleChangeScrollSpeed(event);
+                case 'Icon Switch': handleIconSwitch(event);
+                case 'Camera Follow Pos': handleCameraFollowPos(event);
+                case 'camera_target': handleCameraTarget(event);
+                case 'CameraTilt': handleCameraTilt(event);
+                case 'Screen Flash': handleScreenFlash(event, false);
+                case 'Screen FlashOTHER': handleScreenFlash(event, true);
+                case 'Cinematics (No Hud)', 'Cinematics (With HUD)', 'Cinematics', 'Cinematics (UnderLap)': handleCinematics(event, kind);
+                case 'hideStuff': handleHideStuff();
+                case 'Duet Cam': handleDuetCam(event);
+                case 'Change HUD Opacity', 'Goodbye Hud': handleHudOpacity(event);
+                case 'Hide Hud': handleHideHud(event);
+                case 'greyscale': handleGreyscale(event);
+            }
+        }
+        catch (e:Dynamic) {}
+    }
+
+    function getStr(event:SongEventScriptEvent, key:String):String
+    {
+        var v:String = "";
+        try { v = event.eventData.getString(key); } catch (e:Dynamic) {}
+        return (v == null) ? "" : v;
+    }
+
+    // CamaraZoom (evento original do Psych): value1 = zoom alvo (absoluto),
+    // value2 = duração em segundos (vazio = aplica na hora, sem tween).
+    function handleCamaraZoom(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+
+        var target:Float = Std.parseFloat(v1);
+        if (isNan(target)) return;
+
+        var dur:Float = Std.parseFloat(v2);
+
+        FlxTween.cancelTweensOf(PlayState.instance);
+        if (v2 == "" || isNan(dur) || dur <= 0)
+        {
+            PlayState.instance.currentCameraZoom = target;
+        }
+        else
+        {
+            FlxTween.tween(PlayState.instance, {currentCameraZoom: target}, dur, {ease: FlxEase.quadOut});
+        }
+    }
+
+    function handleCameraTarget(event:SongEventScriptEvent):Void
+    {
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        if (v1 == 'bf' || v1 == 'dad' || v1 == 'gf')
+        {
+            duetActive = false;
+            customPosHold = false;
+            camTarget = v1;
+            camTargetInstant = (v2 == 'inst' || v2 == '');
+        }
+        else
+        {
+            camTarget = null;
+        }
+    }
+
+    function handleCameraTilt(event:SongEventScriptEvent):Void
+    {
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+
+        // Só 'on'/'off' fazem algo — igual ao original (outros valores tipo
+        // 'r'/'l' que aparecem no chart não tinham tratamento nenhum na mod
+        // original, então são ignorados aqui também).
+        if (v1 == 'off')
+        {
+            tiltEnabled = false;
+            if (tiltTimer != null) tiltTimer.cancel();
+            var resetDur:Float = Std.parseFloat(v2);
+            if (isNan(resetDur)) resetDur = 1;
+            if (PlayState.instance != null && PlayState.instance.camGame != null)
+                tiltTween = FlxTween.tween(PlayState.instance.camGame, {angle: 0}, resetDur, {ease: FlxEase.quadInOut});
+            return;
+        }
+
+        if (v1 == 'on')
+        {
+            var t:Float = Std.parseFloat(v2);
+            if (isNan(t)) t = 2.5;
+            tiltTime = t;
+            tiltEnabled = true;
+            tiltLeftSide = true;
+            doTiltStep();
+        }
+    }
+
+    function doTiltStep():Void
+    {
+        if (!tiltEnabled || PlayState.instance == null || PlayState.instance.camGame == null) return;
+        var target:Float = tiltLeftSide ? 5 : -5;
+        tiltLeftSide = !tiltLeftSide;
+        tiltTween = FlxTween.tween(PlayState.instance.camGame, {angle: target}, tiltTime, {ease: FlxEase.quadInOut});
+        tiltTimer = new FlxTimer().start(tiltTime, function(t) { doTiltStep(); });
+    }
+
+    // Camera Speed: define a velocidade de "lerp" da câmera (o quão rápido ela
+    // persegue o alvo). value1 = velocidade.
+    function handleCameraSpeed(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        var v1:String = getStr(event, 'value1');
+        var speed:Float = Std.parseFloat(v1);
+        if (isNan(speed)) return;
+        try { PlayState.instance.cameraSpeed = speed; } catch (e:Dynamic) {}
+    }
+
+    // SetCameraBop: a cada N beats, dá um "pulinho" de zoom na câmera.
+    // value1 = a cada quantos beats (rate), value2 = intensidade.
+    function handleSetCameraBop(event:SongEventScriptEvent):Void
+    {
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var r:Float = Std.parseFloat(v1);
+        var i:Float = Std.parseFloat(v2);
+        if (!isNan(r) && r >= 1) bopRate = Std.int(r);
+        if (!isNan(i)) bopIntensity = i;
+    }
+
+    override function onBeatHit(event:SongTimeScriptEvent):Void
+    {
+        super.onBeatHit(event);
+        if (bopIntensity == 0 || PlayState.instance == null) return;
+        if (Conductor.instance.currentBeat % bopRate != 0) return;
+
+        try
+        {
+            PlayState.instance.camGame.zoom += 0.015 * bopIntensity;
+            PlayState.instance.camHUD.zoom += 0.03 * bopIntensity;
+        }
+        catch (e:Dynamic) {}
+    }
+
+    // MoveArrowsToMiddle: centraliza as setas do player na tela (versão
+    // simplificada — sem as animações extras de "outta here"/alpha do
+    // original, só o movimento principal pro centro e de volta).
+    //
+    // Build com controle por toque (mobile e o build web `-DASTC`): NÃO mexe nas
+    // setas. Lá o PlayState.initNoteHitbox() já deixa a strumline do player
+    // centralizada desde o create(), e as "hints" do hitbox seguem cada seta
+    // (hint.follow(...)) — arrastar a strumline tiraria as áreas de toque de
+    // cima das setas. Como nada se move, também não existe sobreposição, então
+    // a strumline do oponente (que lá já está em mini mode) continua visível.
+    function handleMoveArrowsToMiddle(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        if (Constants.TOUCH_CONTROLS) return;
+
+        var v1:String = getStr(event, 'value1');
+        // O chart escreve 'l' (letra ele) em 2 dos 6 eventos de "liga" — os
+        // eventos alternam liga/desliga perfeitamente no tempo, e o value2
+        // desses dois é '1', então é typo de '1'. Sem isso os dois trechos
+        // simplesmente não centralizavam nada.
+        var on:Bool = (v1 == '1' || v1 == 'l');
+        if (!on && v1 != '0') return;
+
+        var pStrum = PlayState.instance.playerStrumline;
+        if (pStrum == null) return;
+
+        if (!playerStrumDefaultXSet)
+        {
+            playerStrumDefaultX = pStrum.x;
+            playerStrumDefaultXSet = true;
+        }
+
+        strumMiddleActive = on;
+
+        var targetX:Float = on ? ((FlxG.width / 2) - (pStrum.width / 2)) : playerStrumDefaultX;
+        FlxTween.cancelTweensOf(pStrum);
+        FlxTween.tween(pStrum, {x: targetX}, 0.6, {ease: FlxEase.quartInOut});
+
+        // Centralizada, a strumline do player cai exatamente em cima da do
+        // oponente. Some com a do oponente enquanto durar a centralização.
+        //
+        // Usa `visible`, NÃO `alpha`: NoteSprite.revive() (NoteSprite.hx:249) faz
+        // `this.visible = true; this.alpha = 1.0;` em TODA nota reciclada, então o
+        // alpha 0 do grupo é desfeito nota a nota e a strumline do oponente continua
+        // desenhando (medido: 170/170 amostras com maxDrawnAlpha = 1.0 mesmo com o
+        // alpha do grupo em 0). Grupo invisível o FlxGroup.draw() pula inteiro, e as
+        // notas mortas do pool não voltam junto porque o draw() também testa `exists`.
+        var oStrum = PlayState.instance.opponentStrumline;
+        if (oStrum != null)
+        {
+            if (oppShowTimer != null)
+            {
+                oppShowTimer.cancel();
+                oppShowTimer = null;
+            }
+
+            if (on)
+            {
+                oStrum.visible = false;
+            }
+            else
+            {
+                // só reaparece depois que a strumline do player saiu do meio, senão
+                // as duas se cruzam na volta
+                oppShowTimer = new FlxTimer().start(0.35, function(t)
+                {
+                    oppShowTimer = null;
+                    if (PlayState.instance == null) return;
+                    var s = PlayState.instance.opponentStrumline;
+                    if (s != null) s.visible = true;
+                });
+            }
+        }
+    }
+
+    function handleCameraSwitchNoHud(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.camGame == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var speed:Float = Std.parseFloat(v1);
+        if (isNan(speed)) speed = 0.5;
+        var alpha:Float = (v2 == 'on') ? 1 : 0;
+        FlxTween.cancelTweensOf(PlayState.instance.camGame);
+        FlxTween.tween(PlayState.instance.camGame, {alpha: alpha}, speed, {ease: FlxEase.linear});
+    }
+
+    function handleCameraSwitch(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.camGame == null || PlayState.instance.camHUD == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var speed:Float = Std.parseFloat(v1);
+        if (isNan(speed)) speed = 0.5;
+        var alpha:Float = (v2 == 'on') ? 1 : 0;
+        FlxTween.cancelTweensOf(PlayState.instance.camGame);
+        FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+        FlxTween.tween(PlayState.instance.camGame, {alpha: alpha}, speed, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: alpha}, speed, {ease: FlxEase.linear});
+    }
+
+    function handleMoveCharacter(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var data = v2.split(',');
+        var x:Float = data.length > 0 ? Std.parseFloat(data[0]) : 0;
+        var y:Float = data.length > 1 ? Std.parseFloat(data[1]) : 0;
+        var time:Float = data.length > 2 ? Std.parseFloat(data[2]) : 1;
+        if (isNan(x)) x = 0;
+        if (isNan(y)) y = 0;
+        if (isNan(time)) time = 1;
+
+        var target = null;
+        if (v1 == 'bf') target = PlayState.instance.currentStage.getBoyfriend();
+        else if (v1 == 'dad') target = PlayState.instance.currentStage.getDad();
+        else if (v1 == 'gf') target = PlayState.instance.currentStage.getGirlfriend();
+        if (target == null) return;
+
+        try
+        {
+            FlxTween.cancelTweensOf(target);
+            FlxTween.tween(target, {x: x, y: y}, time, {ease: FlxEase.linear});
+        }
+        catch (e:Dynamic) {}
+    }
+
+    // Play Animation: evento nativo do Psych sem custom_events próprio.
+    // value1 = nome da animação, value2 = personagem (BF/Dad/Gf).
+    function handlePlayAnimation(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2').toLowerCase();
+
+        var target = null;
+        if (v2 == 'bf' || v2 == 'boyfriend') target = PlayState.instance.currentStage.getBoyfriend();
+        else if (v2 == 'dad') target = PlayState.instance.currentStage.getDad();
+        else if (v2 == 'gf' || v2 == 'girlfriend') target = PlayState.instance.currentStage.getGirlfriend();
+        if (target == null || v1 == "") return;
+
+        try { target.playAnimation(v1, true, true); } catch (e:Dynamic) {}
+    }
+
+    // Change Scroll Speed: evento nativo do Psych sem custom_events próprio.
+    // value1 = multiplicador. Campo não 100% confirmado nessa versão do
+    // engine — tentativa segura (try/catch).
+    function handleChangeScrollSpeed(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        var v1:String = getStr(event, 'value1');
+        var mult:Float = Std.parseFloat(v1);
+        if (isNan(mult)) return;
+        try { PlayState.instance.scrollSpeed = mult; } catch (e:Dynamic) {}
+    }
+
+    // Icon Switch: no mod original ('icon.lua'), isso NÃO era uma troca única —
+    // era um glitch que troca o ícone do Dad a CADA nota do oponente acertada,
+    // ciclando entre sprites diferentes por direção (LEFT/DOWN/UP/RIGHT),
+    // enquanto o modo está ativo ('on'). Ao desativar ('off'), volta ao ícone
+    // normal da Twilight. Antes essa função só fazia uma troca estática única
+    // (errado) — os assets icon-blue-react/icon-pinkie-react/icon-tan-react
+    // existem no mod mas nunca eram usados em lugar nenhum.
+    var iconSwitchActive:Bool = false;
+
+    function handleIconSwitch(event:SongEventScriptEvent):Void
+    {
+        var v1:String = getStr(event, 'value1');
+        iconSwitchActive = (v1 == 'on');
+
+        if (!iconSwitchActive && PlayState.instance != null && PlayState.instance.iconP2 != null)
+        {
+            try { PlayState.instance.iconP2.loadGraphic(Paths.image('icons/icon-twilight'), true, 150, 150); }
+            catch (e:Dynamic) { trace('CowardIntroModule: falhou ao restaurar o ícone: ' + e); }
+        }
+    }
+
+    // Ciclo dos ícones de glitch, um por direção (0=LEFT 1=DOWN 2=UP 3=RIGHT).
+    // Só existem 3 assets prontos (blue/pinkie/tan), pro RIGHT reaproveitamos o
+    // blue — se tiver um 4º sprite específico, é só trocar aqui.
+    static var ICON_SWITCH_FRAMES:Array<String> = [
+        'icons/icon-blue-react',
+        'icons/icon-pinkie-react',
+        'icons/icon-tan-react',
+        'icons/icon-blue-react'
+    ];
+
+    public override function onNoteHit(event:HitNoteScriptEvent):Void
+    {
+        super.onNoteHit(event);
+        if (!iconSwitchActive) return;
+        if (event == null || event.note == null) return;
+        if (event.note.noteData.getMustHitNote()) return; // só nota do oponente (Dad), igual ao original
+        if (PlayState.instance == null || PlayState.instance.iconP2 == null) return;
+
+        var dir:Int = event.note.noteData.data % 4;
+        if (dir < 0) dir += 4;
+        var frame = ICON_SWITCH_FRAMES[dir];
+
+        try { PlayState.instance.iconP2.loadGraphic(Paths.image(frame), true, 150, 150); }
+        catch (e:Dynamic) { trace('CowardIntroModule: falhou ao ciclar o ícone: ' + e); }
+    }
+
+    function handleSetCamZoom(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+
+        var target:Float = baseZoom;
+        if (v1 != "" && v1 != "reset")
+        {
+            if (StringTools.startsWith(v1, "+") || StringTools.startsWith(v1, "-"))
+                target = baseZoom + Std.parseFloat(v1);
+            else
+            {
+                var parsed = Std.parseFloat(v1);
+                if (!isNan(parsed)) target = parsed;
+            }
+        }
+
+        var dur:Float = 0;
+        var ease:String = "quintOut";
+        if (v2 != "")
+        {
+            var parts = v2.split(",");
+            if (parts.length >= 1) dur = Std.parseFloat(StringTools.trim(parts[0]));
+            if (parts.length >= 2) ease = StringTools.trim(parts[1]);
+        }
+
+        // usa o campo nativo currentCameraZoom (confirmado no Set Cam Zoom.hxc do Ssv3)
+        // em vez de dar tween direto em camGame.zoom, que brigaria com o próprio
+        // sistema de zoom por foco de personagem da engine
+        FlxTween.cancelTweensOf(PlayState.instance);
+        if (dur <= 0 || isNan(dur))
+        {
+            PlayState.instance.currentCameraZoom = target;
+        }
+        else
+        {
+            var easeFn = Reflect.field(FlxEase, ease);
+            if (easeFn == null) easeFn = FlxEase.quintOut;
+            FlxTween.tween(PlayState.instance, {currentCameraZoom: target}, dur, {ease: easeFn});
+        }
+    }
+
+    function handleCameraFollowPos(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.cameraFollowPoint == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+
+        // 'R'/'r' é o jeito do Psych original dizer "reset" (volta a seguir
+        // quem tá cantando, solta a posição customizada). Só soltamos o
+        // controle aqui — não tentamos mais adivinhar a posição manualmente
+        // (isso usava um campo que não existe no V-Slice); o FocusCamera
+        // nativo do chart assume sozinho assim que paramos de segurar.
+        if (v1 == "" || v1 == "R" || v1 == "r" || v2 == "" || v2 == "R" || v2 == "r")
+        {
+            duetActive = false;
+            customPosHold = false;
+            return;
+        }
+
+        duetActive = false;
+        customPosHold = true;
+        var x:Float = Std.parseFloat(v1);
+        var y:Float = Std.parseFloat(v2);
+        if (!isNan(x) && !isNan(y))
+            PlayState.instance.cameraFollowPoint.setPosition(x, y);
+    }
+
+    function restoreNativeFollow():Void
+    {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+        try
+        {
+            var target = PlayState.instance.mustHitSection ? PlayState.instance.currentStage.getBoyfriend() : PlayState.instance.currentStage.getDad();
+            if (target == null || target.cameraFocusPoint == null) return;
+
+            var fx = target.cameraFocusPoint.x;
+            var fy = target.cameraFocusPoint.y;
+
+            PlayState.instance.cameraFollowPoint.setPosition(fx, fy);
+
+            // força a câmera de verdade também, direto, caso o cameraFollowPoint
+            // sozinho não esteja sendo aplicado por algum motivo
+            var cam = PlayState.instance.camGame;
+            if (cam != null)
+            {
+                var targetScrollX = fx - (cam.width / cam.zoom) / 2;
+                var targetScrollY = fy - (cam.height / cam.zoom) / 2;
+                cam.scroll.x = FlxMath.lerp(cam.scroll.x, targetScrollX, 0.05);
+                cam.scroll.y = FlxMath.lerp(cam.scroll.y, targetScrollY, 0.05);
+            }
+        }
+        catch (e:Dynamic) {}
+    }
+
+    function handleScreenFlash(event:SongEventScriptEvent, otherCam:Bool):Void
+    {
+        if (PlayState.instance == null) return;
+        var colorStr:String = getStr(event, 'value1');
+        var durStr:String = getStr(event, 'value2');
+        var dur:Float = Std.parseFloat(durStr);
+        if (isNan(dur) || dur <= 0) dur = 1;
+
+        var color:Int = FlxColor.WHITE;
+        try { color = FlxColor.fromString('#' + colorStr); } catch (e:Dynamic) {}
+
+        if (otherCam)
+            PlayState.instance.camHUD.flash(color, dur);
+        else
+            PlayState.instance.camGame.flash(color, dur);
+    }
+
+    function handleCinematics(event:SongEventScriptEvent, kind:String):Void
+    {
+        // as barras de cinema (tarja preta em cima/embaixo) — NÃO mexe no camHUD.
+        // value1 = velocidade (segundos), value2 = distância (0 ou menos = recolhe)
+        if (!ensureBars()) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var speed:Float = Std.parseFloat(v1);
+        var distance:Float = Std.parseFloat(v2);
+        if (isNan(speed)) speed = 0.2;
+        if (isNan(distance)) distance = 0;
+
+        FlxTween.cancelTweensOf(upperBar);
+        FlxTween.cancelTweensOf(lowerBar);
+
+        if (distance > 0)
+        {
+            FlxTween.tween(upperBar, {y: (0 - upperBar.height) + distance}, speed, {ease: FlxEase.quadOut});
+            FlxTween.tween(lowerBar, {y: (camBars.height / camBars.zoom) - distance}, speed, {ease: FlxEase.quadOut});
+            if (kind == 'Cinematics (UnderLap)') fadeHudFields(0, Math.max(speed - 0.1, 0));
+        }
+        else
+        {
+            FlxTween.tween(upperBar, {y: 0 - upperBar.height}, speed, {ease: FlxEase.quadIn});
+            FlxTween.tween(lowerBar, {y: camBars.height / camBars.zoom}, speed, {ease: FlxEase.quadIn});
+            if (kind == 'Cinematics (UnderLap)') fadeHudFields(1, speed + 0.1);
+        }
+    }
+
+    // Usado só pelo Cinematics (UnderLap): esconde vida/pontuação/ícones/tempo
+    // junto com a entrada das barras (igual ao HudAssets do Lua original).
+    function fadeHudFields(alpha:Float, dur:Float):Void
+    {
+        var fields = ['healthBar', 'scoreText', 'iconP1', 'iconP2', 'timeTxt'];
+        for (f in fields)
+        {
+            try
+            {
+                var target = Reflect.field(PlayState.instance, f);
+                if (target != null) FlxTween.tween(target, {alpha: alpha}, dur, {ease: FlxEase.linear});
+            }
+            catch (e:Dynamic) {}
+        }
+    }
+
+    function handleHideStuff():Void
+    {
+        // toggle — psych original só esconde/mostra placar, vida e ícones,
+        // NÃO mexe na strumline (as setas que o jogador aperta)
+        if (PlayState.instance == null) return;
+        hideStuffOn = !hideStuffOn;
+        var target:Float = hideStuffOn ? 0 : 1;
+        var dur:Float = 0.2;
+
+        var targets = [PlayState.instance.scoreText, PlayState.instance.healthBar,
+                       PlayState.instance.healthBarBG, PlayState.instance.iconP1, PlayState.instance.iconP2];
+        for (t in targets)
+        {
+            if (t == null) continue;
+            FlxTween.cancelTweensOf(t);
+            FlxTween.tween(t, {alpha: target}, dur, {ease: FlxEase.quadInOut});
+        }
+    }
+
+    function handleDuetCam(event:SongEventScriptEvent):Void
+    {
+        // toggle — igual ao original: primeira vez liga (foca no meio dos dois),
+        // segunda vez desliga e devolve o foco pro personagem que tá cantando
+        duetActive = !duetActive;
+
+        if (duetActive)
+        {
+            var v2:String = getStr(event, 'value2'); // "500, 100" offset
+            duetOffsetX = 0;
+            duetOffsetY = 0;
+            if (v2 != "")
+            {
+                var parts = v2.split(",");
+                if (parts.length >= 1) duetOffsetX = Std.parseFloat(StringTools.trim(parts[0]));
+                if (parts.length >= 2) duetOffsetY = Std.parseFloat(StringTools.trim(parts[1]));
+            }
+        }
+        else if (PlayState.instance != null && PlayState.instance.currentStage != null)
+        {
+            customPosHold = false;
+        }
+    }
+
+    // Hide Hud: no chart original só aparecem 'healthBar' e 'all' (raríssimo
+    // 'strums'). IMPORTANTE: 'all' NUNCA deve esconder as setas — só vida/
+    // ícones/tempo. Antes eu tava usando camHUD.alpha pro 'all', que também
+    // apaga as setas (mesma câmera) — isso fazia o jogador não conseguir ver
+    // as notas e morrer à toa. Corrigido pra mexer só nos elementos certos.
+    function handleHideHud(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var alpha:Float = (v2 == '0') ? 0 : 1;
+        var dur:Float = 0.5;
+
+        if (v1 == 'strums')
+        {
+            try
+            {
+                var pStrum = PlayState.instance.playerStrumline;
+                var oStrum = PlayState.instance.opponentStrumline;
+                if (pStrum != null) FlxTween.tween(pStrum, {alpha: alpha}, dur, {ease: FlxEase.linear});
+                if (oStrum != null) FlxTween.tween(oStrum, {alpha: alpha}, dur, {ease: FlxEase.linear});
+            }
+            catch (e:Dynamic) {}
+            return;
+        }
+
+        // 'healthBar' e 'all' — cada campo tentado separado, pra um nome
+        // errado não travar os outros (nomes de campo não 100% confirmados
+        // nessa versão do engine, mas isolados assim é seguro tentar).
+        if (v1 == 'healthBar' || v1 == 'all')
+        {
+            tweenFieldAlpha('healthBar', alpha, dur);
+            tweenFieldAlpha('healthBarBG', alpha, dur);
+        }
+        if (v1 == 'all')
+        {
+            tweenFieldAlpha('iconP1', alpha, dur);
+            tweenFieldAlpha('iconP2', alpha, dur);
+            tweenFieldAlpha('timeBar', alpha, dur);
+            tweenFieldAlpha('timeBarBG', alpha, dur);
+            tweenFieldAlpha('timeTxt', alpha, dur);
+            tweenFieldAlpha('scoreText', alpha, dur);
+        }
+    }
+
+    function tweenFieldAlpha(fieldName:String, alpha:Float, dur:Float):Void
+    {
+        try
+        {
+            var target = Reflect.field(PlayState.instance, fieldName);
+            if (target != null) FlxTween.tween(target, {alpha: alpha}, dur, {ease: FlxEase.linear});
+        }
+        catch (e:Dynamic) {}
+    }
+
+    function handleHudOpacity(event:SongEventScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.camHUD == null) return;
+        var v1:String = getStr(event, 'value1');
+        var v2:String = getStr(event, 'value2');
+        var target:Float = Std.parseFloat(v1);
+        if (isNan(target)) target = 1;
+        var dur:Float = Std.parseFloat(v2);
+        if (isNan(dur) || dur <= 0) dur = 0.01;
+
+        FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: target}, dur, {ease: FlxEase.linear});
+    }
+
+    function handleGreyscale(event:SongEventScriptEvent):Void
+    {
+        // psych original tweena um uniform "strength" de 0 a 1 (com duração/ease em value2).
+        // Nosso shader (BlackAndWhite.frag) não tem uniform de intensidade, então aqui é uma
+        // aproximação binária: liga/desliga no fim da duração informada, sem o blend gradual.
+        if (PlayState.instance == null) return;
+        var v2:String = getStr(event, 'value2'); // "1, 8, cubeOut" ou "0, 1, cubeOut"
+        var parts = v2.split(",");
+        var target:Float = (parts.length >= 1) ? Std.parseFloat(StringTools.trim(parts[0])) : 0;
+        var dur:Float = (parts.length >= 2) ? Std.parseFloat(StringTools.trim(parts[1])) : 0;
+        if (isNan(dur) || dur < 0) dur = 0;
+
+        var on:Bool = target >= 0.5;
+        new FlxTimer().start(dur, function(t) { applyGreyscale(on); });
+    }
+
+    function applyGreyscale(on:Bool):Void
+    {
+        if (on == bwActive) return;
+        bwActive = on;
+
+        if (on)
+        {
+            if (bwShader == null)
+            {
+                try { bwShader = ScriptedFlxRuntimeShader.init('BlackAndWhite'); }
+                catch (e:Dynamic) { bwShader = null; }
+            }
+            if (bwShader != null)
+            {
+                var filter = new ShaderFilter(bwShader);
+                PlayState.instance.camGame.filters = [filter];
+                PlayState.instance.camHUD.filters = [filter];
+            }
+        }
+        else
+        {
+            PlayState.instance.camGame.filters = null;
+            PlayState.instance.camHUD.filters = null;
+        }
+    }
+}

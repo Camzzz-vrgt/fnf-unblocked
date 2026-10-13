@@ -1,0 +1,140 @@
+import StringTools;
+import flixel.FlxG;
+import funkin.Paths;
+import flixel.FlxSprite;
+import funkin.util.Constants;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.util.ReflectUtil;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.module.Module;
+import funkin.modding.base.ScriptedMusicBeatState;
+import flixel.addons.transition.FlxTransitionableState;
+
+import funkin.input.Cursor;
+
+import flixel.FlxCamera;
+import flixel.FlxG;
+
+class SkyMainMenuInjection extends Module {
+
+    var extraCam:FlxCamera;
+
+    // var yourMainMenuText = "Vs Sky: REBORN v1.0.4";
+	var currentState = "";
+
+    function new() {
+		super("main-menu-inject");
+	}
+
+	function onStateChangeEnd() {
+		super.onStateChangeEnd();
+		var daThing = ReflectUtil.getClassNameOf(FlxG.state).split(".");
+
+        var bgScale = (FlxG.onMobile ? 0.6 : 1.2);
+		// trace(daThing[daThing.length - 1]);
+		currentState = daThing[daThing.length - 1];
+		if (daThing[daThing.length - 1] == "MainMenuState") {
+
+            extraCam = new FlxCamera();
+            extraCam.bgColor = 0x00FFFFFF;
+            FlxG.cameras.add(extraCam, false);
+
+			// FlxG.state.leftWatermarkText.text += "\n" + yourMainMenuText;
+			FlxG.state.leftWatermarkText.y -= 15;
+
+			FlxG.state.members[0].loadGraphic(Paths.image(FlxG.onMobile ? "sky_mobile" : "sky_pee"));
+			FlxG.state.members[0].scale.x = bgScale;
+			FlxG.state.members[0].scale.y = bgScale;
+			FlxG.state.members[0].updateHitbox();
+			FlxG.state.members[0].screenCenter();
+			//FlxG.state.members[0].color = 0xFF86C4FF;
+
+			FlxG.state.magenta.loadGraphic(Paths.image(FlxG.onMobile ? "sky_mobileBlue" : "sky_lean"));
+			FlxG.state.magenta.scale.x = bgScale;
+			FlxG.state.magenta.scale.y = bgScale;
+			FlxG.state.magenta.updateHitbox();
+			FlxG.state.magenta.screenCenter();
+			//FlxG.state.magenta.color = 0xFFfd719b;
+			bgPos = FlxG.state.magenta.x + (FlxG.isMobile ? 0 : 100);
+
+		    bgHeight = FlxG.state.magenta.y;
+
+			// galleryBttn = new FlxSprite(0, 0);
+			// galleryBttn.frames = Paths.getSparrowAtlas("gallery/gallery_mobile");
+			// galleryBttn.animation.addByPrefix('hold', 'hold', 24, true);
+			// galleryBttn.animation.addByPrefix('select', 'select', 24, false);
+			// galleryBttn.animation.addByPrefix('idle', 'button', 24, false);
+			// galleryBttn.x = FlxG.width - galleryBttn.width + 90;
+			// galleryBttn.y = 50;
+			// galleryBttn.scale.set(0.55, 0.55);
+            // galleryBttn.alpha = 1;
+            // galleryBttn.cameras = [extraCam];
+			// galleryBttn.updateHitbox();
+
+
+            // if (!FlxG.onMobile) {
+            //     FlxG.state.remove(galleryBttn);
+            // } else {
+            //     FlxG.state.add(galleryBttn);
+            // }
+        }
+	}
+
+	function onUpdate(event) {
+        super.onUpdate(event);
+
+
+
+
+        if (currentState == "MainMenuState") {
+            if (!StringTools.contains(FlxG.state.leftWatermarkText.text, "Friday Night Funkin'")) {
+                FlxG.state.leftWatermarkText.text = StringTools.replace(
+                    FlxG.state.leftWatermarkText.text,
+                    Constants.VERSION,
+                    "Friday Night Funkin' " + Constants.VERSION
+                );
+            }
+            FlxG.state.leftWatermarkText.alignment = 'left';
+
+            var array = FlxG.state.leftWatermarkText.text.split("\n");
+            array.sort(function(a, b) return a.length - b.length);
+            FlxG.state.leftWatermarkText.text = array.join("\n");
+
+            // if (galleryBttn != null) {
+            //     var mousePos = FlxG.mouse.getWorldPosition(extraCam);
+            //     if (galleryBttn.overlapsPoint(mousePos)) {
+            //         if (FlxG.mouse.justReleased) {
+            //             galleryBttn.animation.play("select");
+            //             galleryBttn.x = galleryBttn.x - 5;
+            //             FunkinSound.playOnce(Paths.sound('confirmMenu'));
+            //             var fade = new FunkinSprite().makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+            //             fade.alpha = 0;
+            //             fade.scrollFactor.set();
+            //             fade.screenCenter();
+            //             FlxG.state.add(fade);
+
+            //             FlxTween.tween(FlxG.sound.music, {volume: 0}, 1, {
+            //                 onComplete: () -> {
+            //                     FlxG.sound.music.stop();
+            //                     FlxTween.tween(galleryBttn, {alpha: 0.00001}, 0.1, {ease: FlxEase.sineIn});
+            //                 }
+            //             });
+            //             FlxTween.tween(fade, {alpha: 1}, 1, {
+            //                 onComplete: () -> {
+            //                     var targetState = ScriptedMusicBeatState.init('GalleryMenuState');
+            //                     FlxTransitionableState.skipNextTransIn = true;
+            //                     FlxG.state.startExitState(targetState);
+            //                 }
+            //             });
+            //         } else if (galleryBttn.animation.curAnim == null || galleryBttn.animation.curAnim.name != "hold" && galleryBttn.animation.curAnim.name != 'select') {
+            //             galleryBttn.animation.play("hold");
+            //         }
+            //     } else if (galleryBttn.animation.curAnim == null || galleryBttn.animation.curAnim.name != "idle") {
+            //         galleryBttn.animation.play("idle");
+            //     }
+            // }
+        }
+    }
+}

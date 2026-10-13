@@ -1,0 +1,100 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.Conductor;
+import funkin.Paths;
+
+/**
+ * Plays the credits over gameplay near the end of BANGBANG, then ends the song
+ * when the video has completed.
+ *
+ * FunkinVideoSprite is only compiled with hxvlc (native builds), so HTML5 must
+ * use VideoCutscene's FlxVideo implementation instead.
+ */
+class BANGBANGSong extends Song
+{
+    var game:PlayState;
+
+    var videoTriggered:Bool = false;
+    var videoWatching:Bool = false;
+    var videoSeenPlaying:Bool = false;
+
+    var timeVideoStart:Float = 167740;
+
+    public function new()
+    {
+        super("BANGBANG");
+    }
+
+    override function onCreate(event)
+    {
+        super.onCreate(event);
+
+        game = PlayState.instance;
+        resetVideoState();
+    }
+
+    override function onUpdate(event)
+    {
+        super.onUpdate(event);
+
+        if (game == null) return;
+
+        var currentTime:Float = 0;
+        if (Conductor.instance != null) currentTime = Conductor.instance.songPosition;
+
+        if (!videoTriggered && currentTime >= timeVideoStart)
+        {
+            videoTriggered = true;
+            videoWatching = true;
+            VideoCutscene.playMidsong(Paths.videos('credits'), true);
+        }
+
+        if (videoWatching)
+        {
+            // VideoCutscene owns FlxVideo's completion callback. Polling avoids
+            // a listener on its static signal surviving into a later PlayState.
+            if (VideoCutscene.isPlaying())
+            {
+                videoSeenPlaying = true;
+            }
+            else if (videoSeenPlaying)
+            {
+                videoWatching = false;
+                game.endSong();
+            }
+            // If the video never started, let the chart finish normally.
+        }
+    }
+
+    override function onSongRetry(event)
+    {
+        super.onSongRetry(event);
+        teardownVideo();
+    }
+
+    override function onGameOver(event)
+    {
+        super.onGameOver(event);
+        teardownVideo();
+    }
+
+    override function onDestroy(event)
+    {
+        super.onDestroy(event);
+        teardownVideo();
+    }
+
+    function teardownVideo():Void
+    {
+        if (VideoCutscene.isPlaying()) VideoCutscene.destroyVideo();
+        resetVideoState();
+    }
+
+    function resetVideoState():Void
+    {
+        videoTriggered = false;
+        videoWatching = false;
+        videoSeenPlaying = false;
+    }
+}

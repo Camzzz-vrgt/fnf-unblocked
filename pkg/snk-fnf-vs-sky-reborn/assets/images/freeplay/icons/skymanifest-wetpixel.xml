@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="skymanifestpixel.png">
+	<SubTexture name="idle0001" x="10" y="10" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+
+	<SubTexture name="confirm0001" x="10" y="10" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+	<SubTexture name="confirm0002" x="66" y="10" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+	<SubTexture name="confirm0003" x="10" y="63" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+	<SubTexture name="confirm0004" x="66" y="63" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+	
+	<SubTexture name="confirm-hold0001" x="66" y="63" width="46" height="43" frameX="0" frameY="0" frameWidth="46" frameHeight="43" />
+</TextureAtlas>

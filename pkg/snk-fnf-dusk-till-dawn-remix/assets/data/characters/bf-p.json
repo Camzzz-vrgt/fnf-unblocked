@@ -1,0 +1,93 @@
+{
+	"version": "1.0.1",
+	"name": "bf-p",
+	"renderType": "sparrow",
+	"assetPath": "characters/SurvivorBF",
+	"scale": 1.5,
+	"healthIcon": {
+		"id": "bfpibby",
+		"isPixel": false
+	},
+	"healthBarColor": "#31A7D2",
+	"offsets": [
+		0,
+		0
+	],
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"isPixel": false,
+	"danceEvery": 2,
+	"singTime": 4,
+	"startingAnimation": "idle",
+	"animations": [
+		{
+			"name": "idle",
+			"prefix": "BF_Idle",
+			"offsets": [
+				-25,
+				110
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singLEFT",
+			"prefix": "BF_Left",
+			"offsets": [
+				101,
+				90
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "BF_Down",
+			"offsets": [
+				2,
+				84
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singUP",
+			"prefix": "BF_Up",
+			"offsets": [
+				-26,
+				200
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "BF_Right",
+			"offsets": [
+				-34,
+				92
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		},
+		{
+			"name": "scared",
+			"prefix": "BF_Spooked",
+			"offsets": [
+				106,
+				80
+			],
+			"looped": false,
+			"frameRate": 15,
+			"frameIndices": []
+		}
+	],
+	"flipX": true
+}

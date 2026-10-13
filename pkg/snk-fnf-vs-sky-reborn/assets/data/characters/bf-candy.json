@@ -1,0 +1,183 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/bf",
+  "flipX": true,
+  "singTime": 8.0,
+  "cameraOffsets": [-18, 36],
+  "healthIcon": {
+    "id": "bf"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle"
+    },
+    {
+      "name": "idle-candy",
+      "prefix": "Candy Idle",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [141, -3]
+    },
+    {
+      "name": "idle-lollipop",
+      "prefix": "Stick Idle",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [141, -3]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Left"
+    },
+    {
+      "name": "singLEFT-candy",
+      "prefix": "Candy Left",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [138, -2]
+    },
+    {
+      "name": "singLEFT-lollipop",
+      "prefix": "Stick Left",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [138, -2]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Down"
+    },
+    {
+      "name": "singDOWN-candy",
+      "prefix": "Candy Down",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [133, 0]
+    },
+    {
+      "name": "singDOWN-lollipop",
+      "prefix": "Stick Down",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [133, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "Up"
+    },
+    {
+      "name": "singUP-candy",
+      "prefix": "Candy Up",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [138, 0]
+    },
+    {
+      "name": "singUP-lollipop",
+      "prefix": "Stick Up",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [138, 0]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Right"
+    },
+    {
+      "name": "singRIGHT-candy",
+      "prefix": "Candy Right",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [141, -2]
+    },
+    {
+      "name": "singRIGHT-lollipop",
+      "prefix": "Stick Right",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [141, -2]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "Left Miss"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "Down Miss"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "Up Miss"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "Right Miss"
+    },
+    {
+      "name": "hey",
+      "prefix": "Hey"
+    },
+    {
+      "name": "cheer",
+      "prefix": "Cheer"
+    },
+    {
+      "name": "hey-candy",
+      "prefix": "BF candy HEY!!",
+      "assetPath": "shared:characters/bf-candy",
+      "animType": "symbol",
+      "offsets": [7, 4]
+    },
+    {
+      "name": "hey-lollipop",
+      "prefix": "BF candy alt HEY!!",
+      "assetPath": "shared:characters/bf-candy",
+      "animType": "symbol",
+      "offsets": [7, 4]
+    },
+    {
+      "asset": "shared:characters/bf-death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [22, 15],
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
+    },
+    {
+      "assetPath": "shared:characters/bf-death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "offsets": [22, 15]
+    },
+    {
+      "asset": "shared:characters/bf-death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "offsets": [22, 15]
+    },
+    {
+      "assetPath": "shared:characters/bfFakeOut",
+      "name": "fakeoutDeath",
+      "prefix": "fake out death BF",
+      "animType": "symbol",
+      "offsets": [-3, -65]
+    },
+    {
+      "name": "scared",
+      "prefix": "Scared"
+    },
+    {
+      "name": "stare",
+      "prefix": "Stare",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [139, -3]
+    },
+    {
+      "name": "candyflip",
+      "prefix": "Candy Adjust",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [141, -3]
+    },
+    {
+      "name": "candyspit",
+      "prefix": "Candy Spit",
+      "assetPath": "shared:characters/bf-candy",
+      "offsets": [148, 3]
+    }
+  ]
+}

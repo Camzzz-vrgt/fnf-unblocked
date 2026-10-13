@@ -1,0 +1,79 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "huggy idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				12
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "huggy left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-8
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "huggy down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				48
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "huggy up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				11
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "huggy right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/huggy1_vents",
+	"position": [
+		20,
+		0
+	],
+	"healthicon": "hug",
+	"flip_x": false,
+	"healthbar_colors": [
+		8,
+		31,
+		180
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

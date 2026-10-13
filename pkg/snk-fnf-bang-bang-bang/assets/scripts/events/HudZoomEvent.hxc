@@ -1,0 +1,139 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.data.event.SongEventSchema;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxCamera;
+import funkin.Conductor;
+import funkin.modding.PolymodErrorHandler;
+
+class HudZoomEvent extends SongEvent {
+
+  public var eventTitle:String = "HUD Zoom";
+
+  public var DEFAULT_ZOOM:Float = 1.0;
+  public var DEFAULT_DURATION:Float = 0.5;
+  public var DEFAULT_EASE:String = "quadout";
+
+  var zoomTween:FlxTween = null;
+
+  function new() {
+    super("hudZoom");
+  }
+
+  override function handleEvent(data):Void {
+    if (PlayState.instance == null) return;
+    if (PlayState.instance.isMinimalMode) return;
+    if (PlayState.instance.camHUD == null) return;
+
+    var zoom:Float = data.getFloat('zoom') != null
+      ? data.getFloat('zoom')
+      : DEFAULT_ZOOM;
+
+    var duration:Float = data.getFloat('duration') != null
+      ? data.getFloat('duration')
+      : DEFAULT_DURATION;
+
+    var ease:String = data.getString('ease') != null
+      ? data.getString('ease')
+      : DEFAULT_EASE;
+
+    if (duration < 0) {
+      PolymodErrorHandler.showAlert("Event execution error for " + eventTitle, "Duration cannot be less than 0.");
+      return;
+    }
+
+    var durSeconds = Conductor.instance.stepLengthMs * duration / 1000;
+
+    if (zoomTween != null) zoomTween.cancel();
+
+    zoomTween = FlxTween.tween(PlayState.instance.camHUD, { zoom: zoom }, durSeconds, {
+      ease: getEaseByString(ease)
+    });
+  }
+
+  private function getEaseByString(easeName:String):EaseFunction {
+    return switch(easeName.toLowerCase()) {
+      case "quadin": FlxEase.quadIn;
+      case "quadout": FlxEase.quadOut;
+      case "quadinout": FlxEase.quadInOut;
+      case "cubicin": FlxEase.cubeIn;
+      case "cubicout": FlxEase.cubeOut;
+      case "cubicinout": FlxEase.cubeInOut;
+      case "sinein": FlxEase.sineIn;
+      case "sineout": FlxEase.sineOut;
+      case "sineinout": FlxEase.sineInOut;
+      case "bouncein": FlxEase.bounceIn;
+      case "bounceout": FlxEase.bounceOut;
+      case "bounceinout": FlxEase.bounceInOut;
+      case "elasticin": FlxEase.elasticIn;
+      case "elasticout": FlxEase.elasticOut;
+      case "elasticinout": FlxEase.elasticInOut;
+      case "backin": FlxEase.backIn;
+      case "backout": FlxEase.backOut;
+      case "backinout": FlxEase.backInOut;
+      default: FlxEase.quadOut;
+    }
+  }
+
+  override function getTitle() {
+    return eventTitle;
+  }
+
+  override function getIconPath() {
+    return 'ui/chart-editor/events/hudZoom';
+  }
+
+  override function getEventSchema():SongEventSchema {
+    return [
+      {
+        name: 'zoom',
+        title: 'Zoom Level',
+        description: '1.0 = нормальный, 0.5 = отдаление, 2.0 = приближение',
+        defaultValue: 0.5,
+        step: 0.1,
+        min: 0.1,
+        max: 3.0,
+        type: "float",
+        units: 'x'
+      },
+      {
+        name: 'duration',
+        title: 'Duration',
+        description: 'Длительность в тактах (шагах)',
+        defaultValue: 2.0,
+        step: 0.5,
+        min: 0.0,
+        type: "float",
+        units: 'steps'
+      },
+      {
+        name: 'ease',
+        title: 'Ease',
+        description: 'Тип плавности анимации',
+        defaultValue: "quadout",
+        type: "enum",
+        keys: [
+          "Quad In" => "quadin",
+          "Quad Out" => "quadout",
+          "Quad In/Out" => "quadinout",
+          "Cube In" => "cubicin",
+          "Cube Out" => "cubicout",
+          "Cube In/Out" => "cubicinout",
+          "Sine In" => "sinein",
+          "Sine Out" => "sineout",
+          "Sine In/Out" => "sineinout",
+          "Bounce In" => "bouncein",
+          "Bounce Out" => "bounceout",
+          "Bounce In/Out" => "bounceinout",
+          "Elastic In" => "elasticin",
+          "Elastic Out" => "elasticout",
+          "Elastic In/Out" => "elasticinout",
+          "Back In" => "backin",
+          "Back Out" => "backout",
+          "Back In/Out" => "backinout"
+        ]
+      }
+    ];
+  }
+}

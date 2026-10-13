@@ -1,0 +1,82 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.play.PlayState;
+
+// "Pinkie Sing" no mod original era um tipo de nota INVISÍVEL (alpha 0, sem
+// julgamento de acerto) que só existia pra disparar a animação de canto da GF
+// (Pinkie) no exato momento da strumTime, sem depender do player apertar nada.
+// Isso não é uma "nota" de verdade no sentido V-Slice — é um cue de animação.
+// Por isso convertemos as 201 ocorrências pra EVENTOS de chart em vez de tentar
+// forçar como NoteKind invisível (mais simples e mais confiável).
+// "Pinkie Sing", "GF Sing Alt" e "Bf Sing" no mod original eram tipos de nota
+// INVISÍVEL (alpha 0, sem julgamento de acerto) que só existiam pra disparar
+// uma animação de canto no exato momento da strumTime, sem depender do player
+// apertar nada:
+//   - Pinkie Sing -> Pinkie (GF) canta normal
+//   - GF Sing Alt -> Pinkie (GF) canta a animação ALT (singX-alt)
+//   - Bf Sing     -> o próprio BF canta
+// Isso não é uma "nota" de verdade no sentido V-Slice — é um cue de animação.
+// Por isso convertemos todas as ocorrências pra EVENTOS de chart em vez de
+// tentar forçar como NoteKind invisível (mais simples e mais confiável).
+class PinkieSingModule extends Module
+{
+    public function new()
+    {
+        super('PinkieSingModule', 1);
+    }
+
+    // HScript cannot call Math.isNaN(): Haxe compiles that to the JS *global*
+    // isNaN(), so there is no 'isNaN' field on the runtime Math object the
+    // interpreter is handed, and every call raised "Invalid access to field
+    // isNaN". NaN is the only value that is not equal to itself.
+    function isNan(v:Float):Bool
+    {
+        return v != v;
+    }
+
+    override function onSongEvent(event:SongEventScriptEvent):Void
+    {
+        super.onSongEvent(event);
+        if (event == null || event.eventData == null) return;
+
+        var kind:String = event.eventData.eventKind;
+        if (kind != 'Pinkie Sing' && kind != 'GF Sing Alt' && kind != 'Bf Sing') return;
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        var dirStr:String = "";
+        try { dirStr = event.eventData.getString('value1'); } catch (e:Dynamic) {}
+        var dir:Int = Std.parseInt(dirStr);
+        if (dir == null || isNan(dir)) dir = 0;
+
+        // The chart stores these as raw Psych note-data indices, where 0-3 is the
+        // opponent side and 4-7 is the player side. 'Bf Sing' uses 4-7 for nine of its
+        // fifteen cues, and passing those straight through asked for "singUNKNOWN"
+        // (Bopper logs "animation does not exist" and plays nothing). Strip the
+        // strumline offset the same way the engine's own NoteData.getDirection does.
+        dir = dir % 4;
+        if (dir < 0) dir += 4;
+
+        if (kind == 'Bf Sing')
+        {
+            var bf = PlayState.instance.currentStage.getBoyfriend();
+            if (bf == null) return;
+            bf.holdTimer = 0;
+            bf.playSingAnimation(dir, false);
+            return;
+        }
+
+        var gf = PlayState.instance.currentStage.getGirlfriend();
+        if (gf == null) return;
+        gf.holdTimer = 0;
+
+        if (kind == 'GF Sing Alt')
+        {
+            gf.playSingAnimation(dir, false, 'alt');
+        }
+        else
+        {
+            gf.playSingAnimation(dir, false);
+        }
+    }
+}

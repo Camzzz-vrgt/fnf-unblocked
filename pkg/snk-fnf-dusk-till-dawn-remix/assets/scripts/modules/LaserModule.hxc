@@ -1,0 +1,57 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.play.PlayState;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import funkin.Paths;
+
+// Laser: a Twilight (na forma twilight-pL, depois da troca de personagem lá
+// pelos 163s) atira um laser que atravessa a tela. Adaptado do Laser.lua —
+// só a parte do próprio laser + animação de tiro do dad; a parte que
+// recolorindo wall/midground/pillar foi deixada de fora porque esses props
+// não existem no nosso Castle (já não funcionava no mod original também).
+class LaserModule extends Module
+{
+    public function new()
+    {
+        super('LaserModule', 1);
+    }
+
+    override function onSongEvent(event:SongEventScriptEvent):Void
+    {
+        super.onSongEvent(event);
+        if (event == null || event.eventData == null) return;
+
+        var kind:String = event.eventData.eventKind;
+        if (kind != 'Laser') return;
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        try
+        {
+            var dad = PlayState.instance.currentStage.getDad();
+            if (dad == null) return;
+
+            dad.playAnimation('shoot', true, true);
+
+            var laser = new FlxSprite(dad.x + 100, dad.y + 250);
+            laser.frames = Paths.getSparrowAtlas('Laser');
+            laser.animation.addByPrefix('shoot', 'Laser instance 1', 24, true);
+            laser.animation.play('shoot');
+            laser.cameras = [PlayState.instance.camGame];
+            PlayState.instance.add(laser);
+
+            FlxTween.tween(laser, {x: 2000}, 0.2, {ease: FlxEase.linear});
+            new FlxTimer().start(0.25, function(t)
+            {
+                laser.destroy();
+            });
+        }
+        catch (e:Dynamic)
+        {
+            trace('LaserModule: falhou: ' + e);
+        }
+    }
+}

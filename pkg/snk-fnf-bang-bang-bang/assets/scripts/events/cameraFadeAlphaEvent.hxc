@@ -1,0 +1,159 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+import funkin.play.event.SongEvent;
+import funkin.data.event.SongEventSchema;
+
+import funkin.modding.PolymodErrorHandler;
+
+class CameraFadeAlphaFixes extends Module {
+
+  var shouldFixFadeEvent:Bool = true;
+
+  public function new(){
+    super('extra-events-cameraFadeAlphaFixed');
+  }
+
+  function onGameOver(event:ScriptEvent){
+    super.onGameOver(event);
+    if (PlayState.instance.camGame != null && shouldFixFadeEvent) PlayState.instance.camGame.stopFade();
+    if (PlayState.instance.camHUD != null && shouldFixFadeEvent) PlayState.instance.camHUD.stopFade();
+  }
+
+  function onSongRetry(event:ScriptEvent){
+    super.onSongRetry(event);
+    if (PlayState.instance.camGame != null && shouldFixFadeEvent) PlayState.instance.camGame.stopFade();
+    if (PlayState.instance.camHUD != null && shouldFixFadeEvent) PlayState.instance.camHUD.stopFade();
+  }
+}
+
+class CameraFadeAlphaEvent extends SongEvent {
+  function new() {
+    super("extra-events-cameraFadeAlphaEvent");
+  }
+
+  public var eventTitle:String = "Extra Events | Camera Fade Alpha";
+
+  public var DEFAULT_DURATION:Float = 4.0;
+  public var DEFAULT_SHOULDFADEIN:Bool = true;
+  public var DEFAULT_APPLYTOHUD:Bool = false;
+  public var DEFAULT_COLOR:Int = 0;
+  public var DEFAULT_ALPHA:Float = 1.0;
+
+  override function handleEvent(data):Void {
+    if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+    if (PlayState.instance.isMinimalMode) return;
+
+    var duration:Float = data.getFloat('duration') != null ? data.getFloat('duration') : DEFAULT_DURATION;
+    var shouldFadeIn:Bool = data.getBool('shouldFadeIn') != null ? data.getBool('shouldFadeIn') : DEFAULT_SHOULDFADEIN;
+    var applyToHud:Bool = data.getBool('applyToHud') != null ? data.getBool('applyToHud') : DEFAULT_APPLYTOHUD;
+    var color:Int = data.getInt('color') != null ? data.getInt('color') : DEFAULT_COLOR;
+    var alpha:Float = data.getFloat('alpha') != null ? data.getFloat('alpha') : DEFAULT_ALPHA;
+
+    if (alpha < 0) alpha = 0;
+    if (alpha > 1) alpha = 1;
+
+    switch (color) {
+      case 0: color = 0xFF000000;
+      case 1: color = 0xFF0000FF;
+      case 2: color = 0xFFA52A2A;
+      case 3: color = 0xFF00FFFF;
+      case 4: color = 0xFF808080;
+      case 5: color = 0xFF008000;
+      case 6: color = 0xFF00FF00;
+      case 7: color = 0xFFFF00FF;
+      case 8: color = 0xFFFFA500;
+      case 9: color = 0xFF800080;
+      case 10: color = 0xFFFF0000;
+      case 11: color = 0x00000000;
+      case 12: color = 0xFFFFFFFF;
+      case 13: color = 0xFFFFFF00;
+    }
+
+    color = (color & 0x00FFFFFF) | (Std.int(alpha * 255) << 24);
+
+    var durSeconds = Conductor.instance.stepLengthMs * duration / 1000;
+
+    if (duration < 0) {
+      PolymodErrorHandler.showAlert("Event execution error for " + eventTitle, "Duration cannot be less than 0.");
+      return;
+    }
+
+    if (!applyToHud) {
+      FlxG.camera.fade(color, durSeconds, shouldFadeIn);
+    } else {
+      PlayState.instance.camHUD?.fade(color, durSeconds, shouldFadeIn);
+    }
+  }
+
+  public override function getTitle() {
+    return eventTitle;
+  }
+
+  public override function getIconPath(){
+    return 'ui/chart-editor/events/extra-events-cameraFadealphaEvent';
+  }
+
+  override function getEventSchema(){
+    return [
+      {
+        name: 'color',
+        title: 'Color',
+        defaultValue: 0,
+        type: "enum",
+        keys: [
+          "Black" => 0,
+          "Blue" => 1,
+          "Brown" => 2,
+          "Cyan" => 3,
+          "Gray" => 4,
+          "Green" => 5,
+          "Lime" => 6,
+          "Magenta" => 7,
+          "Orange" => 8,
+          "Purple" => 9,
+          "Red" => 10,
+          "Transparent" => 11,
+          "White" => 12,
+          "Yellow" => 13
+        ]
+      },
+      {
+        name: 'duration',
+        title: 'Duration',
+        defaultValue: 4.0,
+        step: 1.0,
+        min: 0.0,
+        type: "float",
+        units: 'steps'
+      },
+      {
+        name: 'shouldFadeIn',
+        title: 'Fade in',
+        defaultValue: false,
+        type: "bool"
+      },
+      {
+        name: 'applyToHud',
+        title: 'Apply to camHUD',
+        defaultValue: false,
+        type: "bool"
+      },
+      {
+        name: 'alpha',
+        title: 'Alpha (Opacity)',
+        defaultValue: 1.0,
+        step: 0.05,
+        min: 0.0,
+        max: 1.0,
+        type: "float"
+      }
+    ];
+  }
+}

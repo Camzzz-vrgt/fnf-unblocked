@@ -1,0 +1,66 @@
+{
+  "version": "1.0.1",
+  "name": "Sky (Pixel)",
+  "assetPath": "characters/skyPixel",
+  "flipX": true,
+  "danceEvery": 2,
+  "renderType": "sparrow",
+  "singTime": 8.0,
+  "offsets": [-7, -5],
+  "isPixel": true,
+  "healthIcon": {
+    "id": "bf-pixel",
+    "isPixel": true
+  },
+  "death": {
+    "cameraOffsets": [0, 0]
+  },
+  "scale": 6,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "SKY IDLE",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "SKY UP0",
+      "offsets": [23, 4]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "SKY LEFT0",
+      "offsets": [24, 3]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "SKY RIGHT0",
+      "offsets": [25, 4]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "SKY DOWN0",
+      "offsets": [26, 4]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "SKY UP MISS",
+      "offsets": [23, 4]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "SKY LEFT MISS",
+      "offsets": [24, 3]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "SKY RIGHT MISS",
+      "offsets": [25, 4]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "SKY DOWN MISS",
+      "offsets": [26, 4]
+    }
+  ]
+}

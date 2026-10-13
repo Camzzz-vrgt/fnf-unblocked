@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="allegropixel.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="0" y="39" width="31" height="37" frameX="1" frameY="1" frameWidth="38" frameHeight="38"/>
+	<SubTexture name="confirm0000" x="66" y="0" width="33" height="38" frameX="2" frameY="2" frameWidth="38" frameHeight="38"/>
+	<SubTexture name="confirm0001" x="33" y="0" width="33" height="39" frameX="-1" frameY="2" frameWidth="38" frameHeight="38"/>
+	<SubTexture name="confirm0002" x="0" y="0" width="33" height="39" frameX="0" frameY="2" frameWidth="38" frameHeight="38"/>
+	<SubTexture name="confirm-hold0000" x="0" y="0" width="33" height="39" frameX="0" frameY="2" frameWidth="38" frameHeight="38"/>
+</TextureAtlas>

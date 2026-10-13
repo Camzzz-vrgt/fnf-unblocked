@@ -1,0 +1,70 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class CameraShakeEvent extends SongEvent
+{
+    public function new()
+    {
+        super("CameraShakeEvent");
+    }
+
+    public var eventTitle:String = "Camera Shake";
+
+    override public function handleEvent(data:Dynamic):Void
+    {
+        if (PlayState.instance == null) return;
+
+        var state = PlayState.instance;
+
+        var shakeIntensity:Float = data?.getFloat("intensity") ?? 0.01;
+        var shakeDuration:Float = data?.getFloat("duration") ?? 0.15;
+        var shakeHUD:Bool = data?.getBool("shakeHUD") ?? true;
+        var shakeGame:Bool = data?.getBool("shakeGame") ?? true;
+
+        if (shakeGame)
+        {
+            state.camGame.shake(shakeIntensity, shakeDuration);
+        }
+
+        if (shakeHUD)
+        {
+            state.camHUD.shake(shakeIntensity, shakeDuration);
+        }
+    }
+
+    override public function getTitle():String
+    {
+        return eventTitle;
+    }
+
+    override public function getEventSchema()
+    {
+        return [
+            {
+                name: "intensity",
+                title: "Shake Intensity (сила)",
+                type: "float",
+                defaultValue: 0.01
+            },
+            {
+                name: "duration",
+                title: "Shake Duration (длительность в секундах)",
+                type: "float",
+                defaultValue: 0.15
+            },
+            {
+                name: "shakeHUD",
+                title: "Shake HUD?",
+                type: "bool",
+                defaultValue: true
+            },
+            {
+                name: "shakeGame",
+                title: "Shake Game?",
+                type: "bool",
+                defaultValue: true
+            }
+        ];
+    }
+}

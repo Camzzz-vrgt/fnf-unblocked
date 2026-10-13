@@ -1,0 +1,64 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import funkin.play.PauseSubState;
+import funkin.play.stage.Stage;
+import funkin.graphics.FunkinSprite;
+
+class SkyCarCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('sky-car');
+	}
+
+	function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+   	GameOverSubState.musicSuffix = '-sky';
+    GameOverSubState.blueBallSuffix = '-sky';
+    PauseSubState.musicSuffix = '-sky';
+
+  }
+
+  var retryBubble:FunkinSprite;
+
+  function createDeathSprites()
+  {
+
+    retryBubble = FunkinSprite.createSparrow(0, 0, "skyplayable/SkyRetryBubble");
+    retryBubble.animation.addByPrefix('confirm', "retry bubble", 24, false);
+    retryBubble.flipX = true;
+    retryBubble.zIndex = this.zIndex + 5;
+    retryBubble.setPosition(this.x - 15 , this.y + 160);
+    retryBubble.visible = true;
+    GameOverSubState.instance.add(retryBubble);
+    retryBubble.blend = 0;
+
+  }
+
+  override function playAnimation(name:String,restart:Bool, ignoreOther:Bool, reversed:Bool)
+  {
+    super.playAnimation(name, restart, ignoreOther, reversed);
+    if (PlayState.instance != null)
+    switch (name) {
+      
+        case "deathConfirm":
+          createDeathSprites();
+          retryBubble.visible = true;
+          retryBubble.animation.play('confirm');
+ 
+    }
+  }
+
+  public function onGameOver(event:ScriptEvent) {
+		super.onGameOver(event);
+		PlayState.instance.currentStage.getBoyfriend().shader = null;
+	}
+
+
+}

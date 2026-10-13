@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "spongebobsec1 idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "spongebobsec1 left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "spongebobsec1 down"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "spongebobsec1 up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "spongebobsec1 right"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "anim",
+			"loop": false,
+			"name": "spongebobsec1 anim"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/spongebobsec1",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "lies",
+	"flip_x": true,
+	"healthbar_colors": [
+		225,
+		214,
+		138
+	],
+	"camera_position": [
+		-100,
+		100
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

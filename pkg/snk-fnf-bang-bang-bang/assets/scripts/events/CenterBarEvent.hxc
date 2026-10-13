@@ -1,0 +1,217 @@
+import funkin.play.event.SongEvent;
+import funkin.modding.module.Module;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.PlayState;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.Paths;
+
+class CenterBarEvent extends SongEvent {
+    public function new() { super('CenterBarEvent'); }
+    public override function getTitle() { return "Center Bar Text"; }
+
+    public override function handleEvent(data) {
+        var mod = ModuleHandler.getModule('CenterBarModule');
+        if (mod == null) return;
+        mod.showText(
+            data.getString('v1'),
+            data.getString('v2'),
+            data.getFloat('v3'),
+            data.getFloat('v4'),
+            Std.int(data.getFloat('v5')),
+            data.getBool('v6'),
+            data.getFloat('v7'),
+            data.getFloat('v8'),
+            data.getBool('v9'),
+            data.getFloat('v10'),
+            data.getFloat('v11'),
+            data.getBool('v12')
+        );
+    }
+
+    public override function getEventSchema() {
+        return [
+            {
+                name: "v1",
+                title: "Text",
+                defaultValue: "",
+                type: "string"
+            },
+            {
+                name: "v2",
+                title: "Text Color",
+                defaultValue: "white",
+                type: "enum",
+                keys: [
+                    "White"   => "white",
+                    "Black"   => "black",
+                    "Red"     => "red",
+                    "Green"   => "green",
+                    "Blue"    => "blue",
+                    "Yellow"  => "yellow",
+                    "Cyan"    => "cyan",
+                    "Magenta" => "magenta",
+                    "Orange"  => "orange",
+                    "Pink"    => "pink"
+                ]
+            },
+            {
+                name: "v3",
+                title: "Text X",
+                defaultValue: 0.0,
+                type: "float"
+            },
+            {
+                name: "v4",
+                title: "Text Y",
+                defaultValue: 300.0,
+                type: "float"
+            },
+            {
+                name: "v5",
+                title: "Font Size",
+                defaultValue: 40,
+                type: "float"
+            },
+            {
+                name: "v6",
+                title: "Use White Box",
+                defaultValue: false,
+                type: "bool"
+            },
+            {
+                name: "v7",
+                title: "Box Height",
+                defaultValue: 150,
+                type: "float"
+            },
+            {
+                name: "v8",
+                title: "Box Width (0 = full width)",
+                defaultValue: 0,
+                type: "float"
+            },
+            {
+                name: "v9",
+                title: "Clear Previous",
+                defaultValue: true,
+                type: "bool"
+            },
+            {
+                name: "v10",
+                title: "Box X",
+                defaultValue: 0.0,
+                type: "float"
+            },
+            {
+                name: "v11",
+                title: "Box Y",
+                defaultValue: 0.0,
+                type: "float"
+            },
+            {
+                name: "v12",
+                title: "Animate Box",
+                defaultValue: true,
+                type: "bool"
+            }
+        ];
+    }
+}
+
+class CenterBarModule extends Module {
+    function new() { super("CenterBarModule"); }
+
+    var texts:Array<{text:FlxText, bg:FlxSprite}> = [];
+
+    function getColor(name:String):Int {
+        switch (name) {
+            case "yellow":  return 0xFFFFFF00;
+            case "red":     return 0xFFFF0000;
+            case "green":   return 0xFF00FF00;
+            case "blue":    return 0xFF0000FF;
+            case "cyan":    return 0xFF00FFFF;
+            case "magenta": return 0xFFFF00FF;
+            case "orange":  return 0xFFFFA500;
+            case "pink":    return 0xFFFF69B4;
+            case "black":   return 0xFF000000;
+            default:        return 0xFFFFFFFF;
+        }
+    }
+
+    public function showText(text:String, color:String, textX:Float, textY:Float, fontSize:Int, useBox:Bool, boxHeight:Float, boxWidth:Float, clearPrevious:Bool, boxX:Float, boxY:Float, animateBox:Bool) {
+    
+        if (text == null || text == "") {
+            clearAll();
+            return;
+        }
+
+        clearAll();
+
+        var bg:FlxSprite = null;
+        if (useBox) {
+    bg = new FlxSprite();
+    var bw:Float = boxWidth > 0 ? boxWidth : FlxG.width;
+    bg.makeGraphic(Std.int(bw), 1, 0xFFFFFFFF);
+    bg.alpha = 1;
+    bg.scrollFactor.set();
+    bg.cameras = [PlayState.instance.camHUD];
+    bg.zIndex = 99;
+    bg.origin.y = 0.5;
+    bg.y = textY + (fontSize / 2) + boxY;
+    bg.x = (FlxG.width / 2) - (bw / 2) + boxX;
+    bg.scale.y = 0;
+    PlayState.instance.add(bg);
+
+    if (animateBox) {
+        FlxTween.tween(bg.scale, {y: boxHeight}, 0.15, {ease: FlxEase.sineInOut});
+    } else {
+        bg.scale.y = boxHeight;
+    }
+}
+
+        var txt = new FlxText(0, 0, FlxG.width, "");
+        // A white outline keeps black CenterBar text legible on every background.
+        var borderColor = color == "black" ? 0xFFFFFFFF : 0xFF000000;
+        txt.setFormat(Paths.font("vcr.ttf"), fontSize, getColor(color), "center", FlxTextBorderStyle.OUTLINE, borderColor);
+        txt.borderSize = 4;
+        txt.alpha = 1;
+        txt.bold = true;
+        txt.zIndex = 100;
+        txt.scrollFactor.set();
+        txt.cameras = [PlayState.instance.camHUD];
+        txt.text = text;
+        txt.scale.set(1.5, 1.5);
+        txt.x = (FlxG.width / 2) - (txt.width / 2) + textX;
+        txt.y = textY;
+        PlayState.instance.add(txt);
+
+        texts.push({text: txt, bg: bg});
+
+        FlxTween.cancelTweensOf(txt.scale);
+        FlxTween.tween(txt.scale, {x: 1, y: 1}, 0.2, {ease: FlxEase.backOut});
+    }
+
+    function clearAll() {
+        for (item in texts) {
+            if (item.bg != null) {
+                FlxTween.cancelTweensOf(item.bg.scale, ["y"]);
+                item.bg.destroy();
+            }
+            if (item.text != null) {
+                FlxTween.cancelTweensOf(item.text);
+                item.text.destroy();
+            }
+        }
+        texts = [];
+    }
+
+    function onSongRetry(event) { super.onSongRetry(event); clearAll(); }
+    function onDestroy(event)   { super.onDestroy(event);   clearAll(); }
+    function onGameOver(event)  { super.onGameOver(event);  clearAll(); }
+    function onSongEnd(event)   { super.onSongEnd(event);   clearAll(); }
+}

@@ -1,0 +1,47 @@
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import flixel.FlxG;
+
+class GlobalCameraMovement extends Module {
+
+    var localNoteOffset:Float = 20;
+    var camReturnSpeed:Float = 6;
+
+    public function new() {
+        super("Global Camera Movement (Independent)");
+    }
+
+    override function onNoteHit(event) {
+        super.onNoteHit(event);
+
+        if (PlayState.instance == null) return;
+        if (FlxG.camera == null) return;
+        if (FlxG.camera.target == null) return;
+
+        FlxG.camera.targetOffset.set(0, 0);
+
+        switch (event.note.direction) {
+            case 0:
+                FlxG.camera.targetOffset.x = -localNoteOffset;
+            case 1:
+                FlxG.camera.targetOffset.y = localNoteOffset;
+            case 2: 
+                FlxG.camera.targetOffset.y = -localNoteOffset;
+            case 3: 
+                FlxG.camera.targetOffset.x = localNoteOffset;
+        }
+    }
+
+    override function onUpdate(elapsed:Float) {
+        super.onUpdate(elapsed);
+
+        if (FlxG.camera == null) return;
+
+        FlxG.camera.targetOffset.x = lerp(FlxG.camera.targetOffset.x, 0, elapsed * camReturnSpeed);
+        FlxG.camera.targetOffset.y = lerp(FlxG.camera.targetOffset.y, 0, elapsed * camReturnSpeed);
+    }
+
+    function lerp(a:Float, b:Float, t:Float):Float {
+        return a + (b - a) * t;
+    }
+}

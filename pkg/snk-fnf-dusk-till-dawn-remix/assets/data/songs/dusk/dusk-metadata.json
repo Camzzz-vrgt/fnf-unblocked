@@ -1,0 +1,54 @@
+{
+  "version": "2.2.4",
+  "songName": "Dusk Till Dawn",
+  "artist": "Bengamer1997",
+  "charter": "V-Slice Converter",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
+  },
+  "playData": {
+    "difficulties": ["normal"],
+    "characters": {
+      "player": "bf-p",
+      "girlfriend": "pinkie-p",
+      "opponent": "twilight-ndad-normal",
+      "instrumental": "",
+      "opponentVocals": ["twilight-ndad-normal"],
+      "playerVocals": ["bf-p"]
+    },
+    "stage": "Castle",
+    "noteStyle": "pibbytwili",
+    "ratings": {
+      "easy": 3,
+      "normal": 6,
+      "hard": 7
+    },
+    "previewStart": 0,
+    "previewEnd": 0,
+    "album": "DTD"
+  },
+  "generatedBy": "Friday Night Funkin' - v0.8.1",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 120,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 18000,
+      "b": 0,
+      "bpm": 190,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
+}

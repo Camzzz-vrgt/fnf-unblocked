@@ -1,0 +1,97 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+import funkin.modding.events.HitNoteScriptEvent;
+import funkin.play.character.BaseCharacter;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+
+class FlyingGhostDADNoteKind extends NoteKind
+{
+    var currentGhost:FlxSprite = null;
+    var currentTween:FlxTween = null;
+
+    function new()
+    {
+        super("flyingGhostDAD", "Flying Ghost NoteDAD", "flyingGhostDAD", []);
+        this.noanim = true;
+    }
+
+    override public function onNoteHit(event:HitNoteScriptEvent):Void
+    {
+        super.onNoteHit(event);
+
+        var note = event.note;
+        if (note.isSustainNote) return;
+
+        var ps = PlayState.instance;
+        if (ps == null) return;
+
+
+        var opponent = ps.currentStage.getDad();
+        if (opponent == null) return;
+
+        var dir = note.noteData.getDirection();
+        var dirs = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
+        var directionName = dirs[dir];
+
+        if (directionName == "LEFT" || directionName == "RIGHT")
+        {
+
+            var ghost = new FlxSprite();
+            ghost.frames = opponent.frames;
+            ghost.animation.copyFrom(opponent.animation);
+            ghost.scale.set(opponent.scale.x, opponent.scale.y);
+            ghost.antialiasing = opponent.antialiasing;
+            ghost.alpha = 0.6;
+            ghost.cameras = [ps.camGame];
+            ghost.zIndex = 1;
+            
+            ghost.x = opponent.x;
+            ghost.y = opponent.y;
+            
+            ps.currentStage.add(ghost);
+
+            currentGhost = ghost;
+
+
+            var animToPlay = (directionName == "LEFT") ? "singRIGHT" : "singLEFT";
+            ghost.animation.play(animToPlay, true);
+
+            var startX = opponent.x;
+            var targetX = (directionName == "LEFT") ? startX - 200 : startX + 200;
+
+            currentTween = FlxTween.tween(ghost, {x: targetX}, 0.15, {
+                ease: FlxEase.backOut,
+                onComplete: function(_) {
+                    FlxTween.tween(ghost, {x: startX}, 0.3, {
+                        ease: FlxEase.backIn,
+                        onComplete: function(_) {
+                            ps.currentStage.remove(ghost);
+                            ghost.destroy();
+                            if (currentGhost == ghost) currentGhost = null;
+                            currentTween = null;
+                        }
+                    });
+                }
+            });
+        }
+
+        else if (directionName == "UP" || directionName == "DOWN")
+        {
+            if (currentGhost == null) return;
+
+            currentGhost.animation.play("sing" + directionName, true);
+
+            if (directionName == "DOWN")
+            {
+                currentGhost.y = opponent.y + 40;
+            }
+            else if (directionName == "UP")
+            {
+                currentGhost.y = opponent.y;
+            }
+        }
+    }
+}

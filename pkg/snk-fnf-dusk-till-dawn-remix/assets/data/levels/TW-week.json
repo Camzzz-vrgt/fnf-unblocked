@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "visible": true,
+    "name": "friendship",
+    "titleAsset": "storymenu/titles/week_twilight",
+    "props": [
+	{
+      "assetPath": "storymenu/props/menu_twilight",
+      "scale": 1.05,
+      "offsets": [0, 64]
+    }
+],
+    "background": "#F9CF51",
+    "songs": ["dusk"]
+}

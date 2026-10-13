@@ -1,0 +1,221 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-7,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF NOTE LEFT MISS"
+		},
+		{
+			"offsets": [
+				-19,
+				-71
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF NOTE DOWN MISS"
+		},
+		{
+			"offsets": [
+				-21,
+				30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BF NOTE UP MISS"
+		},
+		{
+			"offsets": [
+				-32,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"offsets": [
+				8,
+				57
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"offsets": [
+				9,
+				46
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hurt",
+			"indices": [],
+			"name": "BF hit"
+		},
+		{
+			"offsets": [
+				-7,
+				-4
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "scared",
+			"indices": [],
+			"name": "BF idle shaking"
+		},
+		{
+			"offsets": [
+				37,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				37,
+				5
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				37,
+				69
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead confirm"
+		},
+		{
+			"offsets": [
+				-10,
+				-16
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge",
+			"indices": [],
+			"name": "boyfriend dodge"
+		},
+		{
+			"offsets": [
+				294,
+				267
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "attack",
+			"indices": [],
+			"name": "boyfriend attack"
+		},
+		{
+			"offsets": [
+				-40,
+				-40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "pre-attack",
+			"indices": [],
+			"name": "bf pre attack"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-129,
+				486
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "drcocktopus_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-118,
+				484
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "drcocktopus_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-140,
+				477
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "drcocktopus_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-129,
+				487
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "drcocktopus_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				481
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "drcocktopus_down",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/austinmenace",
+	"position": [
+		240,
+		190
+	],
+	"healthicon": "austin",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		60,
+		-380
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}

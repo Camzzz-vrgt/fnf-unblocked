@@ -1,0 +1,116 @@
+import funkin.play.notes.notekind.NoteKind;
+import funkin.play.PlayState;
+import funkin.Paths;
+
+// Nota da Pinkie: ela canta junto quando essa nota é acertada/errada.
+// onNoteHit/onNoteMiss PRECISAM de 'override' e dos tipos exatos da classe-mãe
+// (HitNoteScriptEvent / NoteScriptEvent, ver NoteKind.hx do engine oficial).
+// Sem 'override' o método só sombreia o da classe-base e o engine nunca
+// chama a versão daqui — a GF nunca cantava junto com a Pinkie por isso.
+class pinki extends NoteKind
+{
+    // Per-direction offsets for the pNotes2 atlas. Adjust these values from the
+    // one-time traces below after checking each note against its receptor.
+var pNotes2Offsets = [
+  [39, 0], // left
+  [39, 0], // down
+  [39, 0], // up
+  [39, 0]  // right
+];
+    var pNotes2Directions = ["LEFT", "DOWN", "UP", "RIGHT"];
+    var pNotes2Traced = [false, false, false, false];
+
+    public function new()
+    {
+        super('pinki');
+        this.noteKind = 'pinki';
+        this.description = 'Nota da Pinkie - ela canta junto quando essa nota é acertada.';
+        // Sem isso, o BaseCharacter.onNoteHit nativo do engine faz o BF cantar
+        // automaticamente em TODA nota do lado do player, inclusive essa —
+        // noanim=true desliga esse canto automático do BF só pra esse kind,
+        // e quem continua cuidando da Pinkie é o onNoteHit logo abaixo.
+        this.noanim = true;
+    }
+
+    public override function onNoteIncoming(event:NoteScriptEvent)
+    {
+        super.onNoteIncoming(event);
+        if (event.note.noteData.kind != 'pinki') return;
+
+        // buildNoteSprite() has already centered the default note. Keep that
+        // center when swapping to pNotes2, whose frames and scale differ.
+        var noteCenterX = event.note.x + event.note.width / 2;
+        var noteCenterY = event.note.y + event.note.height / 2;
+
+        event.note.frames = Paths.getSparrowAtlas('notes/pNotes2');
+        event.note.animation.addByPrefix('purpleScroll', 'purple0');
+        event.note.animation.addByPrefix('blueScroll', 'blue0');
+        event.note.animation.addByPrefix('greenScroll', 'green0');
+        event.note.animation.addByPrefix('redScroll', 'red0');
+        event.note.scale.set(0.75, 0.75);
+        event.note.updateHitbox();
+        event.note.x = noteCenterX - event.note.width / 2;
+        event.note.y = noteCenterY - event.note.height / 2;
+
+        var direction = event.note.noteData.data % 4;
+        var offsets = pNotes2Offsets[direction];
+        event.note.offset.set(offsets[0], offsets[1]);
+
+        var anim:String;
+
+        switch (direction)
+        {
+            case 0:
+                anim = 'purpleScroll';
+            case 1:
+                anim = 'blueScroll';
+            case 2:
+                anim = 'greenScroll';
+            case 3:
+                anim = 'redScroll';
+            default:
+                anim = 'purpleScroll';
+        }
+
+        event.note.animation.play(anim);
+
+        // One trace per direction: it keeps the console readable while giving
+        // us the exact baseline values to tune every pNotes2 arrow separately.
+        if (!pNotes2Traced[direction])
+        {
+            trace('[pNotes2] ' + pNotes2Directions[direction]
+                + ' offset=[' + offsets[0] + ', ' + offsets[1] + ']'
+                + ' scale=' + event.note.scale.x
+                + ' size=[' + event.note.width + ', ' + event.note.height + ']'
+                + ' center=[' + noteCenterX + ', ' + noteCenterY + ']');
+            pNotes2Traced[direction] = true;
+        }
+    }
+
+    // Assigning through `?.` is not valid Haxe and is not something HScript can
+    // lower either, so the null check is spelled out. It also saves a second
+    // getGirlfriend() lookup per note.
+    function singGirlfriend(e, miss:Bool):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+        if (e.note.noteData.kind != 'pinki') return;
+
+        var gf = PlayState.instance.currentStage.getGirlfriend();
+        if (gf == null) return;
+
+        gf.holdTimer = 0;
+        gf.playSingAnimation(e.note.noteData.getDirection(), miss);
+    }
+
+    public override function onNoteHit(e:HitNoteScriptEvent)
+    {
+        super.onNoteHit(e);
+        singGirlfriend(e, false);
+    }
+
+    public override function onNoteMiss(e:NoteScriptEvent)
+    {
+        super.onNoteMiss(e);
+        singGirlfriend(e, true);
+    }
+}

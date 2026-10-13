@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "renderType": "multisparrow",
+  "name": "QT (QT Rewired).",
+  "singTime": 8.0,
+  "flipX": false,
+  "startingAnimation": "idle",
+  "cameraOffsets": [
+    0,
+    0
+  ],
+  "assetPath": "characters/QT_assets/QT",
+  "animations": [
+    {
+      "offsets": [
+        46,
+        -27
+      ],
+      "name": "idle",
+      "prefix": "qt idle"
+    },
+    {
+      "assetPath": "characters/QT_assets/QT_intro",
+      "offsets": [
+        48,
+        -18
+      ],
+      "name": "intro",
+      "prefix": "qt hi"
+    },
+    {
+      "name": "danceLeft-alt",
+      "prefix": "qt dance",
+      "frameIndices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "offsets": [
+        32,
+        -23
+      ]
+    },
+    {
+      "name": "danceRight-alt",
+      "prefix": "qt dance",
+      "frameIndices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "offsets": [
+        32,
+        -23
+      ]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "qt left0",
+      "offsets": [
+        97,
+        -29
+      ]
+    },
+    {
+      "assetPath": "characters/QT_assets/QT_CONFUSED",
+      "name": "singLEFT-alt",
+      "prefix": "qtLeftConfused",
+      "offsets": [
+        97,
+        -29
+      ]
+    },
+    {
+      "assetPath": "characters/QT_assets/QT_DISGUST",
+      "name": "disgust",
+      "prefix": "qt poker face",
+      "offsets": [
+        44,
+        -28
+      ]
+    },
+    {
+      "name": "cheer",
+      "prefix": "qt hey",
+      "offsets": [
+        171,
+        -109
+      ]
+    },
+    {
+      "name": "preDance",
+      "prefix": "qt pre dance",
+      "offsets": [
+        43,
+        -22
+      ]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "qt down",
+      "offsets": [
+        119,
+        -119
+      ]
+    },
+    {
+      "name": "singUP",
+      "prefix": "qt up",
+      "offsets": [
+        32,
+        5
+      ]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "qt right",
+      "offsets": [
+        101,
+        -33
+      ]
+    }
+  ]
+}

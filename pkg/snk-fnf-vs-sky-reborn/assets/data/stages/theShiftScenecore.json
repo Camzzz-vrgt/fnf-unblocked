@@ -1,0 +1,94 @@
+{
+  "version": "1.0.2",
+  "name": "The Shift [Scenecore]",
+  "props": [
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "shift/scenecore/scenecoreShift",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "scenecoreShift",
+      "position": [-933, -200],
+      "scale": [1, 1.2],
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 50
+    },
+    {
+      "alpha": 0,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "shift/scenecore/disco01",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "disco01",
+      "position": [-486, 781],
+      "scale": [1.3, 1.15],
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 55
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "shift/scenecore/sceneGradient",
+      "blend": "add",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "scenecoreGradient",
+      "position": [-1057, 700],
+      "scale": [1.35, 1.25],
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 800
+    }
+  ],
+  "characters": {
+    "bf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [-100, -50],
+      "position": [989.5, 885],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 300
+    },
+    "dad": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [150, -50],
+      "position": [335, 885],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 200
+    },
+    "gf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [0, 0],
+      "position": [751.5, 787],
+      "scale": 1,
+      "scroll": [1, 1],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.7,
+  "directory": "shared"
+}

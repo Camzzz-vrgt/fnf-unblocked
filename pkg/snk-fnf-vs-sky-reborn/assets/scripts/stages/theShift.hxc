@@ -1,0 +1,166 @@
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.util.MathUtil;
+import flixel.FlxG;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.Conductor;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+
+class TheShiftStage extends Stage {
+	var dih:Int = 0;
+	var colorShader:AdjustColorShader;
+
+	var candyStuff:Array<String> = ['boyfriendHeart', 'jollyRancher', 'lollipop', 'packofSkittles', 'popTart', 'xoxoHeart'];
+	var candyList:Array<FlxSprite> = []; 
+	var candySpawnTimer:FlxTimer;
+    var wePaused:Bool;
+    var candyEnabled:Bool;
+	var candyGradient:FunkinSprite;
+
+	public function new() {
+		super('theShift');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+		hudZoom = PlayState.instance.defaultHUDCameraZoom;
+
+        //candy stuff
+        candyEnabled = false;
+		candySpawnTimer = new FlxTimer();
+		candySpawnTimer.start(0.2, function(_) {
+			spawnCandy();
+		}, 0);
+
+		//make background shader earlier 4 less lag
+		colorShader = new AdjustColorShader();
+    	var backGround:FlxSprite = getNamedProp('pinkWorld');
+    	backGround.shader = colorShader;
+
+    
+	}
+
+	function spawnCandy() {
+    if (!candyEnabled || wePaused) return;
+	if (candyList.length >= 100) return;
+	var candyVar = candyStuff[FlxG.random.int(0, candyStuff.length - 1)];
+	var candy = new FlxSprite();
+    var candySize = FlxG.random.float(1, 1.5);
+	candy.loadGraphic(Paths.image('shift/candy/' + candyVar));
+	candy.x = FlxG.random.float(0, FlxG.width * 2 - candy.width) - 500;
+	candy.y = candy.height - 600;
+	candy.velocity.y = FlxG.random.float(400, 700);
+	candy.acceleration.y = 50;
+    
+    candy.scale.x = candySize;
+    candy.scale.y = candySize;
+
+	candy.angularVelocity = FlxG.random.float(-300, 300);
+	candy.angularDrag = 0;
+	candy.angle = FlxG.random.float(0, 360);
+	
+    add(candy);
+    candyList.push(candy);
+	}
+	
+
+
+
+	function onUpdate(event) {
+		super.onUpdate(event);
+
+
+		dih += 0.5 + Math.sin((event.elapsed));
+		colorShader.hue = dih;
+
+		for (i in 0...candyList.length) {
+    var candy = candyList[i];
+    if (candy == null) continue; 
+
+    if (candy.y > FlxG.height * 2) {
+        remove(candy);
+        candyList.splice(i, 1);
+        i--;
+        continue;
+
+	
+    }
+
+    var candyFade = FlxG.height - 150;
+
+    if (candy.y > candyFade) {
+        var fadeness = (candy.y - candyFade) / 300;
+        candy.alpha = 1 - fadeness;
+        if (candy.alpha < 0) candy.alpha = 0;
+        } else {
+        candy.alpha = 1;
+        }
+        }
+	}
+    
+    function onPause() {
+		super.onPause();
+		wePaused = true;
+	}
+    function onResume() {
+		super.onResume();
+		wePaused = false;
+	}
+
+    override function onBeatHit(event) {
+		super.onBeatHit(event);
+
+		switch (event.beat) {
+				
+			case 72:
+				candyEnabled = true;
+				spawnCandyGradient();
+				PlayState.instance.disableKeys = true;
+			case 104:
+			PlayState.instance.disableKeys = false;
+			case 136:
+				candyEnabled = false;
+				destroyCandyGradient();	
+		}
+	} 
+    function spawnCandyGradient() {
+	
+
+	var gradientName = switch (PlayState.instance.currentVariation) {
+		case 'default': 'lollipopGradient';
+		case 'erect': 'tacoGradient';
+		default: null;
+	};
+
+	if (gradientName == null) return; 
+
+	candyGradient = new FunkinSprite(0, 0).loadGraphic(Paths.image('shift/' + gradientName));
+	candyGradient.cameras = [PlayState.instance.camHUD];
+	candyGradient.blend = 0;
+	candyGradient.alpha = 0;
+	candyGradient.zIndex = 500;
+	trace('added candy gradient!');
+	PlayState.instance.add(candyGradient);
+	FlxTween.tween(candyGradient, {alpha: 0.5}, 1);
+	}
+
+	function destroyCandyGradient(){
+	FlxTween.tween(candyGradient, {alpha: 0}, 1).onComplete = function(twn:FlxTween) {
+	remove(candyGradient);
+		};
+	}
+
+	function onSongRetry()
+	{
+		//ideally, if u restart during the candy part shit goes back 2 normal (it works woohooo)
+		candyEnabled = false;
+		destroyCandyGradient();
+	}
+	function onSongStart(event:ScriptEvent) { //makes the popups in between the arrows n shite
+			super.onSongStart(event);
+			if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [0, -120];
+	}
+}

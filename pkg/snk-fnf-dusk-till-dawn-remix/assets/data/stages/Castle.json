@@ -1,0 +1,257 @@
+{
+  "version": "1.0.0",
+  "cameraZoom": 0.7,
+  "props": [
+    {
+      "name": "sky",
+      "assetPath": "BG/Castle/sky",
+      "position": [
+        -2100,
+        -1400
+      ],
+      "scale": [
+        3.7,
+        3.7
+      ],
+      "zIndex": 0,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "sky2",
+      "assetPath": "BG/Castle/Sky2",
+      "position": [
+        -2500,
+        -1200
+      ],
+      "scale": [
+        2,
+        2
+      ],
+      "zIndex": 0,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "place",
+      "assetPath": "BG/Castle/place",
+      "position": [
+        -850,
+        -550
+      ],
+      "scale": [
+        1.9,
+        1.9
+      ],
+      "zIndex": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "place2",
+      "assetPath": "BG/Castle/place2",
+      "position": [
+        -1200,
+        -650
+      ],
+      "scale": [
+        2.4,
+        2.4
+      ],
+      "zIndex": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "vidrio",
+      "assetPath": "BG/Castle/vidrio",
+      "position": [
+        -1200,
+        -650
+      ],
+      "scale": [
+        2.4,
+        2.4
+      ],
+      "zIndex": 2,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "Inkfall",
+      "assetPath": "BG/Castle/Inkfall",
+      "position": [
+        0,
+        -650
+      ],
+      "scale": [
+        1.9,
+        1.9
+      ],
+      "zIndex": 6,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "ink waterfall instance",
+          "frameRate": 24,
+          "looped": true,
+          "offsets": [
+            0,
+            0
+          ],
+          "flipX": false,
+          "flipY": false
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "Foreground",
+      "assetPath": "BG/Castle/Foreground",
+      "position": [
+        -1100,
+        -500
+      ],
+      "scale": [
+        1.9,
+        1.9
+      ],
+      "zIndex": 100,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "Luz3",
+      "assetPath": "BG/Castle/Luz3",
+      "position": [
+        -500,
+        -1150
+      ],
+      "scale": [
+        4.5,
+        4.5
+      ],
+      "zIndex": 9,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "Luz2",
+      "assetPath": "BG/Castle/Luz2",
+      "position": [
+        700,
+        -850
+      ],
+      "scale": [
+        3.8,
+        3.8
+      ],
+      "zIndex": 10,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    },
+    {
+      "name": "Luz1",
+      "assetPath": "BG/Castle/Luz1",
+      "position": [
+        950,
+        -1150
+      ],
+      "scale": [
+        4.5,
+        4.5
+      ],
+      "zIndex": 10000,
+      "scroll": [
+        1,
+        1
+      ],
+      "isPixel": false,
+      "animType": "sparrow",
+      "animations": []
+    }
+  ],
+  "directory": "dusktil",
+  "characters": {
+    "bf": {
+      "zIndex": 200,
+      "position": [
+        1093,
+        830
+      ],
+      "cameraOffsets": [
+        0,
+        -200
+      ]
+    },
+    "gf": {
+      "zIndex": 300,
+      "position": [
+        1373,
+        950
+      ],
+      "cameraOffsets": [
+        0,
+        0
+      ]
+    },
+    "dad": {
+      "zIndex": 50,
+      "position": [
+        -40,
+        360
+      ],
+      "cameraOffsets": [
+        0,
+        300
+      ]
+    }
+  },
+  "name": "Stage from Psych"
+}

@@ -1,0 +1,28 @@
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
+import funkin.play.PlayState;
+
+class SkyPukeSprite extends FunkinSprite {
+
+    public function new(x:Float, y:Float) {
+
+		super(x, y);
+
+    loadTextureAtlas("skyplayable/sky_puke", "shared");
+  }
+
+  public function playAnim() {
+		this.animation.play("Puke", true);
+	}
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+	  if (PlayState.instance != null) 
+		  switch (name) {
+			  case "Puke":
+				  this.animation.play("Puke Loop", true, true, true);
+
+		  }
+  	}
+}

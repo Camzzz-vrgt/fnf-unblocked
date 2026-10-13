@@ -1,0 +1,153 @@
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import funkin.play.stage.Stage;
+import flixel.FlxG;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.util.MathUtil;
+
+
+class ManifestSong extends Song {
+
+	var hasPlayedIntroCutscene:Bool;
+	var bgSprite:FunkinSprite;
+	var hasPlayedEndCredits:Bool;
+	var gfPos:Array;
+	var gotPos = false;
+	var curVar:String;
+
+	function new() {
+		super('manifest');
+		
+	}
+
+	function onCreate(event){
+		super.onCreate(event);
+		curVar = PlayState.instance.currentVariation;
+		hasPlayedIntroCutscene = false;
+		hasPlayedEndCredits = true;
+
+		bgSprite = new FunkinSprite(0, 0);
+		bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+		bgSprite.cameras = [PlayState.instance.camCutscene]; // Show over the HUD but below the video.
+		bgSprite.zIndex = -10000;
+		PlayState.instance.add(bgSprite);
+		PlayState.instance.refresh();
+		bgSprite.alpha = 0;
+
+		if (curVar == 'erect')
+		{
+			bgSprite.alpha = 1;
+		}
+
+		if(PlayState.instance.currentStage.getGirlfriend() != null && !gotPos)
+		{
+			gfPos = [PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y];
+			gotPos = true;
+		}
+	}
+
+	
+	override function onCountdownStart(event:CountdownScriptEvent):Void {
+		super.onCountdownStart(event);
+		if (!hasPlayedIntroCutscene && curVar == 'default' && PlayStatePlaylist.isStoryMode){
+			event.cancel(); 
+			bgSprite.alpha = 1;
+			manifestIntro();
+			hasPlayedIntroCutscene = true;
+		}
+		if(PlayState.instance.currentStage.getGirlfriend() != null && !gotPos)
+		{
+			gfPos = [PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y];
+			gotPos = true;
+		}
+	}
+
+	override function onSongStart(){
+		super.onSongStart();
+		if (!hasPlayedIntroCutscene && curVar == 'erect')
+		{
+			hasPlayedIntroCutscene = true;
+			manifestErectIntro();
+			
+		}	
+	}
+
+	override function onSongRetry(){
+		super.onSongRetry();
+		if (curVar == 'erect' && bgSprite.alpha < 1){
+		FlxTween.tween(bgSprite, {alpha: 1}, 1);
+		hasPlayedIntroCutscene = false;
+		}
+	}	
+	
+	function onUpdate(event){
+
+		if (hasPlayedIntroCutscene && curVar == 'erect' && bgSprite.alpha != 0)
+		{
+			bgSprite.alpha -= event.elapsed / 20;
+		}
+
+	}
+
+	function manifestIntro() {
+		var cutsceneSfx:FunkinSound;
+		cutsceneSfx = FunkinSound.load(Paths.sound("manifestSound"), true, true);
+		cutsceneSfx.volume = 0;
+		
+
+		PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1], 0.01, FlxEase.quadInOut);
+		PlayState.instance.tweenCameraZoom(2, 0.01, true, FlxEase.expoOut);
+
+		PlayState.instance.add(bgSprite);
+		new FlxTimer().start(1, function(tmr) {
+			PlayState.instance.tweenCameraZoom(0.4, 8, true, FlxEase.quadOut);
+			PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1] + 200, 6, FlxEase.cubeOut);
+			FlxTween.tween(bgSprite, {alpha: 0}, 8);
+			cutsceneSfx.play(true);
+			FlxTween.tween(cutsceneSfx, {volume: 1}, 2);
+		});
+
+		new FlxTimer().start(7, function(tmr) {
+			FlxTween.tween(cutsceneSfx, {volume: 0}, 2);
+		});
+
+		new FlxTimer().start(9, function(tmr) {
+			PlayState.instance.startCountdown();
+		});
+	}
+
+	function manifestErectIntro(){
+	PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1], 0.01, FlxEase.quadInOut);
+	PlayState.instance.tweenCameraZoom(2, 0.01, true, FlxEase.expoOut);
+
+	new FlxTimer().start(1, function(tmr) {
+			PlayState.instance.tweenCameraZoom(0.4, 20, true, FlxEase.quadInOut);
+			PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1] + 200, 20, FlxEase.cubeInOut);
+		});
+	}
+
+	//play end credits
+	override function onSongEnd(event:CountdownScriptEvent):Void {
+		super.onSongEnd(event);
+
+		if (!PlayStatePlaylist.isStoryMode)
+			hasPlayedEndCredits = true;
+
+		if (!hasPlayedEndCredits) {
+			hasPlayedEndCredits = true;
+			event.cancel();
+			VideoCutscene.play(Paths.videos('skyEndCredits'), CutsceneType.ENDING);
+		} else {
+			hasPlayedEndCredits = false;
+		}
+	}
+
+}

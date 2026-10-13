@@ -1,0 +1,89 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.play.PlayState;
+import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
+
+// "chat": texto tipo legenda/mensagem que aparece, some depois de 1s com fade
+// + desce um pouco. Usado 96x no chart pra criar o efeito de "digitando"
+// (cada evento aumenta o texto uma letra/palavra de cada vez). Adaptado do
+// chat.lua original.
+class ChatModule extends Module
+{
+    var chatText:FlxText;
+    var removeTimer:FlxTimer;
+
+    public function new()
+    {
+        super('ChatModule', 1);
+    }
+
+    // Cria o texto só na primeira vez que for realmente necessário (igual ao
+    // LaserModule, que funcionou criando o sprite dele na hora do evento em
+    // vez de adiantado no onCreate/onCountdownStart).
+    function ensureText():Bool
+    {
+        if (chatText != null) return true;
+        if (PlayState.instance == null) return false;
+
+        try
+        {
+            chatText = new FlxText(0, 500, 500, '', 38);
+            // "center", not the bare `CENTER`: unqualified enum-abstract values rely on
+            // Haxe type inference, which HScript does not have, so `CENTER` resolved to
+            // nothing ("Invalid access to field CENTER") and the chat text was never
+            // created. FlxTextAlign is `enum abstract FlxTextAlign(String) from String`,
+            // so the literal is exactly what compiled code would pass.
+            chatText.setFormat(null, 38, FlxColor.WHITE, "center");
+            chatText.x = 1800 - (500 / 2);
+            chatText.alpha = 0;
+            chatText.cameras = [PlayState.instance.camHUD];
+            PlayState.instance.add(chatText);
+            return true;
+        }
+        catch (e:Dynamic)
+        {
+            trace('ChatModule: falhou ao criar o texto: ' + e);
+            chatText = null;
+            return false;
+        }
+    }
+
+    override function onSongEvent(event:SongEventScriptEvent):Void
+    {
+        super.onSongEvent(event);
+        if (event == null || event.eventData == null) return;
+
+        var kind:String = event.eventData.eventKind;
+        if (kind != 'chat') return;
+        if (!ensureText()) return;
+
+        var v1:String = "";
+        var v2:String = "";
+        try { v1 = event.eventData.getString('value1'); } catch (e:Dynamic) {}
+        try { v2 = event.eventData.getString('value2'); } catch (e:Dynamic) {}
+
+        try
+        {
+            FlxTween.cancelTweensOf(chatText);
+            if (removeTimer != null) removeTimer.cancel();
+
+            chatText.y = 500;
+            chatText.alpha = 1;
+            chatText.text = v2;
+
+            var colorInt:Null<Int> = Std.parseInt('0x' + v1);
+            if (colorInt != null) chatText.color = colorInt;
+
+            removeTimer = new FlxTimer().start(1, function(t)
+            {
+                FlxTween.tween(chatText, {alpha: 0, y: 520}, 0.15, {ease: FlxEase.quadOut});
+            });
+        }
+        catch (e:Dynamic) {}
+    }
+}

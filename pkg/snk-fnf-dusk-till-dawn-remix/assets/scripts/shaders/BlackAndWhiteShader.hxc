@@ -1,0 +1,15 @@
+import flixel.addons.display.FlxRuntimeShader;
+
+// Full-strength greyscale, wrapped as a scripted shader so `CowardIntroModule`
+// can fetch it by name via `ScriptedFlxRuntimeShader.init('BlackAndWhite')`.
+// The mod shipped no shader of its own; `grayscale.frag` already does exactly
+// this, it just needs its `_amount` uniform pinned to 1.0 (full conversion).
+class BlackAndWhite extends FlxRuntimeShader
+{
+  function new()
+  {
+    var fragText:String = Assets.getText(Paths.frag('grayscale'));
+    super(fragText);
+    this.setFloat('_amount', 1.0);
+  }
+}

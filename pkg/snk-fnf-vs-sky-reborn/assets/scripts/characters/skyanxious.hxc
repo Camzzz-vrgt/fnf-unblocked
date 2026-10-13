@@ -1,0 +1,63 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.play.song.Song;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+
+class SkyAnxiousCharacter extends MultiAnimateAtlasCharacter {
+	function new() {
+		super('skyanxious');
+	}
+
+	var screamFX:FunkinSprite;
+
+	override function onCreate(event)
+	{
+		super.onCreate(event);
+		if (PlayState.instance != null)
+		{
+			createScreamFX();
+		}
+
+	}
+
+	override function playAnimation(name:String,restart:Bool, ignoreOther:Bool, reversed:Bool):Void
+	{
+		
+		
+		if (PlayState.instance != null) 
+
+			if (name != 'scream' && screamFX != null){
+				destroyScreamFX();  
+				//if any other animation is playing, destroy the effect
+			}
+
+			switch (name) {
+				case "scream":
+					addScreamFX();
+
+			}
+			super.playAnimation(name, restart, ignoreOther, reversed);
+	}
+
+	function createScreamFX(){
+		screamFX = FunkinSprite.createSparrow(this.x + 200, this.y + 280, "skyweek/skyScreamingFX");
+    	screamFX.animation.addByPrefix('scream', "screambeam", 24, true);
+    	screamFX.zIndex = this.zIndex + 5;
+    	screamFX.visible = false;
+    	PlayState.instance.add(screamFX);
+    	//screamFX.blend = 0;
+	}
+	function addScreamFX(){
+    	screamFX.visible = true;
+		screamFX.animation.play('scream');
+
+	}
+	function destroyScreamFX(){
+    	screamFX.visible = false;
+
+	}
+	
+}

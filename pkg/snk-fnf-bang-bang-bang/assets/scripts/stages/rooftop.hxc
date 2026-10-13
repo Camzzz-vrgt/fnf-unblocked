@@ -1,0 +1,1433 @@
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.FlxG;
+import openfl.filters.ShaderFilter;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.Stage;
+import funkin.play.character.CharacterType;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.SongTimeScriptEvent;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.Paths;
+import funkin.Conductor;
+import funkin.graphics.FunkinSprite;
+import flixel.util.FlxTimer;
+
+class rooftopStage extends Stage
+{
+	var hudSprites:Array<FlxSprite> = [];
+	var game:PlayState;
+    var whiteBox:FlxSprite;
+    var whiteBoxText:FlxText;
+    var whiteBoxLeft:FlxSprite;
+    var bars:Array<FlxSprite> = [];
+var barHeights:Array<Float> = [];
+static inline var NUM_BARS:Int = 30;
+var soundwaveOn:Bool = false;
+var swKhz:Float = 0;
+var swCh:Int = 0;
+var swBts:Dynamic = null;
+var bloom:FlxRuntimeShader;
+var bloomFilter:ShaderFilter;
+var effect:Float = 0;
+var strength:Float = 0;
+    var whiteBoxLeftText:FlxText;
+	var invertShader:FlxRuntimeShader;
+    var chromShader:FlxRuntimeShader;
+	var invertFilter:ShaderFilter;
+    var whiteBoxRight:FlxSprite;
+    var pulseShader:FlxRuntimeShader;
+    var bwShader:FlxRuntimeShader;
+	var pulseFilter:ShaderFilter;
+    var whiteBoxRightText:FlxText;
+    var blackScreen:FlxSprite;
+    var camFrozen:Bool = false;
+    var freezeX:Float = 0;
+    var freezeY:Float = 0;
+    var breakAnim:FlxSprite = null;
+    var fishShader:FlxRuntimeShader;
+    var hudChromShader:FlxRuntimeShader;
+    var fishFilter:ShaderFilter;
+    var hudChromFilter:ShaderFilter;
+    var hudEffectsEnabled:Bool = false;
+    var fisheyeShader:FlxRuntimeShader;
+    var fisheyeFilter:ShaderFilter;
+    var fisheyeStrength:Float = 0.0;
+
+	function new()
+	{
+		super('rooftop');
+	}
+
+	 override function onCreate(event:ScriptEvent)
+    {
+        super.onCreate(event);
+        game = PlayState.instance;
+
+bloom = new FlxRuntimeShader(Assets.getText(Paths.frag("bloom")));
+bloom.setFloat("effect", 0);
+bloom.setFloat("strength", 0);
+bloom.setFloat("contrast", 1);
+bloom.setFloat("brightness", 0);
+bloomFilter = new ShaderFilter(bloom);
+
+        breakAnim = new FlxSprite();
+        breakAnim.frames = Paths.getSparrowAtlas('break');
+        breakAnim.animation.addByPrefix('play', 'break', 32, false);
+        // The atlas was reduced to fit within WebGL's texture limit. Restore
+        // its original on-screen dimensions before centering the animation.
+        breakAnim.scale.set(4, 4);
+        breakAnim.updateHitbox();
+        breakAnim.screenCenter();
+        breakAnim.scrollFactor.set();
+        breakAnim.cameras = [game.camHUD];
+        breakAnim.zIndex = 1000001;
+        breakAnim.blend = 0;
+        breakAnim.visible = true;
+        game.insert(1, breakAnim);
+
+        breakAnim.animation.play('play');
+
+        var a = breakAnim.animation.curAnim;
+            if (a != null)
+            {
+                a.curFrame = a.numFrames - 1;
+                a.paused = true;
+                a.finished = true;
+            }
+        fisheyeShader = new FlxRuntimeShader("
+#pragma header
+
+uniform float strength;
+
+void main() {
+    vec2 uv = openfl_TextureCoordv;
+    vec4 color = flixel_texture2D(bitmap, uv);
+
+    vec2 center = vec2(0.5, 0.5);
+    vec2 offset = uv - center;
+    float dist = length(offset);
+
+    float strength = clamp(strength, 0.0, 1.0);
+    float distortion = 1.0 + (0.8 * strength * dist * dist);
+
+    vec2 distortedUv = center + offset * distortion;
+
+    if (distortedUv.x < 0.0 || distortedUv.x > 1.0 || distortedUv.y < 0.0 || distortedUv.y > 1.0) {
+        gl_FragColor = color;
+    } else {
+        gl_FragColor = flixel_texture2D(bitmap, distortedUv);
+    }
+}
+");
+        fisheyeShader.setFloat("strength", 0.0);
+        fisheyeFilter = new ShaderFilter(fisheyeShader);
+        addFilter(fisheyeFilter);
+
+        fishShader = new FlxRuntimeShader("
+#pragma header
+
+#define iResolution vec3(openfl_TextureSize, 0.)
+uniform float iTime;
+#define iChannel0 bitmap
+#define texture flixel_texture2D
+
+vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+float snoise(vec2 v) {
+    const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+    vec2 i = floor(v + dot(v, C.yy));
+    vec2 x0 = v - i + dot(i, C.xx);
+    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+    i = mod289(i);
+    vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+    m = m*m; m = m*m;
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+    m *= 1.79284291400159 - 0.85373472095314 * (a0*a0 + h*h);
+    vec3 g;
+    g.x = a0.x * x0.x + h.x * x0.y;
+    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+}
+
+float rand(vec2 co) { return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453); }
+
+vec2 brownConradyDistortion(vec2 uv, float scalar) {
+    uv = (uv - 0.5) * 2.0;
+    float barrelDistortion1 = -0.02 * scalar;
+    float r2 = dot(uv, uv);
+    uv *= 1.0 + barrelDistortion1 * r2;
+    return (uv / 2.0) + 0.5;
+}
+
+void main() {
+    vec2 fragCoord = openfl_TextureCoordv * openfl_TextureSize;
+    vec2 uv = fragCoord / iResolution.xy;
+    float time = iTime * 2.0;
+
+    float noise = max(0.0, snoise(vec2(time, uv.y * 0.3)) - 0.3) * (1.0 / 0.7);
+    noise = noise + (snoise(vec2(time * 10.0, uv.y * 2.4)) - 0.5) * 0.15;
+    float xpos = uv.x - noise * noise * 0.25;
+
+    float scalar = 1.5 * (1.0 - 1.0 / iResolution.x);
+    vec4 colourScalar = vec4(700.0, 560.0, 490.0, 1.0);
+    colourScalar /= max(max(colourScalar.x, colourScalar.y), colourScalar.z);
+    colourScalar *= 2.0 * scalar;
+
+    const float numTaps = 8.0;
+    vec4 fragColor = vec4(0.0);
+    for (float tap = 0.0; tap < numTaps; tap += 1.0) {
+        fragColor.r += texture(iChannel0, brownConradyDistortion(vec2(xpos, uv.y), colourScalar.r)).r;
+        fragColor.g += texture(iChannel0, brownConradyDistortion(vec2(xpos, uv.y), colourScalar.g)).g;
+        fragColor.b += texture(iChannel0, brownConradyDistortion(vec2(xpos, uv.y), colourScalar.b)).b;
+        colourScalar *= 0.99;
+    }
+    fragColor /= numTaps;
+
+    fragColor.rgb = mix(fragColor.rgb, vec3(rand(vec2(uv.y * time))), noise * 0.6);
+
+    if (floor(mod(fragCoord.y * 0.25, 2.0)) == 0.0) {
+        fragColor.rgb *= 1.0 - (0.15 * noise);
+    }
+
+    fragColor.a = 1.0;
+    gl_FragColor = fragColor;
+}
+");
+        fishShader.setFloat("iTime", 0.0);
+        fishFilter = new ShaderFilter(fishShader);
+
+        invertShader = new Inverted();
+        invertShader.setIntensity(0.0);
+        invertFilter = new ShaderFilter(invertShader);
+        addFilter(invertFilter);
+
+        chromShader = new ChromaticAberration();
+        chromShader.setIntensity(0.0);
+        var chromFilter = new ShaderFilter(chromShader);
+        addFilter(chromFilter);
+
+        pulseShader = new HeadachePulse();
+        pulseShader.setIntensity(0.0);
+        pulseShader.setTime(0.0);
+        pulseFilter = new ShaderFilter(pulseShader);
+        addFilter(pulseFilter);
+
+        bwShader = new BlackWhite();
+        bwShader.setIntensity(0.0);
+        bwFilter = new ShaderFilter(bwShader);
+        addFilter(bwFilter);
+
+
+        whiteBox = new FlxSprite();
+        whiteBox.makeGraphic(FlxG.width, 1, 0xFFFFFFFF);
+        whiteBox.x = 0;
+        whiteBox.y = (FlxG.height / 2);
+        whiteBox.alpha = 0;
+        whiteBox.scrollFactor.set();
+        whiteBox.cameras = [game.camHUD];
+        whiteBox.zIndex = 10;
+        whiteBox.origin.y = 0.5;
+        game.insert(1, whiteBox);
+
+        whiteBoxText = new FlxText(0, 0, FlxG.width, "");
+        whiteBoxText.setFormat(Paths.font("vcr.ttf"), 35, 0xFF000000, "center", FlxTextBorderStyle.OUTLINE, 0xFFFFFFFF);
+        whiteBoxText.borderSize = 3;
+        whiteBoxText.alpha = 0;
+        whiteBoxText.bold = true;
+        whiteBoxText.zIndex = 11;
+        whiteBoxText.antialiasing = true;
+        whiteBoxText.scrollFactor.set();
+        whiteBoxText.cameras = [game.camHUD];
+        whiteBoxText.y = (FlxG.height / 2) - 20;
+        game.insert(1, whiteBoxText);
+
+        whiteBoxLeft = new FlxSprite();
+        whiteBoxLeft.makeGraphic(Std.int(FlxG.width * 0.3), 1, 0xFFFFFFFF);
+        whiteBoxLeft.alpha = 0;
+        whiteBoxLeft.scrollFactor.set();
+        whiteBoxLeft.cameras = [game.camHUD];
+        whiteBoxLeft.zIndex = 10;
+        whiteBoxLeft.origin.x = 0;
+        whiteBoxLeft.origin.y = 0.5;
+        whiteBoxLeft.y = (FlxG.height / 2);
+        whiteBoxLeft.x = FlxG.width * 0.08;
+        whiteBoxLeft.scale.y = FlxG.height;
+        game.insert(1, whiteBoxLeft);
+
+        whiteBoxLeftText = new FlxText(0, 0, Std.int(FlxG.height), "");
+        whiteBoxLeftText.setFormat(Paths.font("vcr.ttf"), 135, 0xFF000000, "center", FlxTextBorderStyle.OUTLINE, 0xFFFFFFFF);
+        whiteBoxLeftText.borderSize = 4;
+        whiteBoxLeftText.alpha = 0;
+        whiteBoxLeftText.bold = true;
+        whiteBoxLeftText.zIndex = 11;
+        whiteBoxLeftText.antialiasing = true;
+        whiteBoxLeftText.scrollFactor.set();
+        whiteBoxLeftText.cameras = [game.camHUD];
+        whiteBoxLeftText.angle = -90;
+        whiteBoxLeftText.x = FlxG.width / 2 - 150;
+        whiteBoxLeftText.y = FlxG.height / 2;
+        game.insert(1, whiteBoxLeftText);
+
+        whiteBoxRight = new FlxSprite();
+        whiteBoxRight.makeGraphic(Std.int(FlxG.width * 0.3), 1, 0xFFFFFFFF);
+        whiteBoxRight.alpha = 0;
+        whiteBoxRight.scrollFactor.set();
+        whiteBoxRight.cameras = [game.camHUD];
+        whiteBoxRight.zIndex = 10;
+        whiteBoxRight.origin.x = 1.0;
+        whiteBoxRight.origin.y = 0.5;
+        whiteBoxRight.y = (FlxG.height / 2);
+        whiteBoxRight.x = FlxG.width * 0.6;
+        whiteBoxRight.scale.y = FlxG.height;
+        game.insert(1, whiteBoxRight);
+
+        whiteBoxRightText = new FlxText(0, 0, Std.int(FlxG.height), "");
+        whiteBoxRightText.setFormat(Paths.font("vcr.ttf"), 125, 0xFF000000, "center", FlxTextBorderStyle.OUTLINE, 0xFFFFFFFF);
+        whiteBoxRightText.borderSize = 4;
+        whiteBoxRightText.alpha = 0;
+        whiteBoxRightText.bold = true;
+        whiteBoxRightText.zIndex = 11;
+        whiteBoxRightText.antialiasing = true;
+        whiteBoxRightText.scrollFactor.set();
+        whiteBoxRightText.cameras = [game.camHUD];
+        whiteBoxRightText.angle = 90;
+        whiteBoxRightText.x = FlxG.width / 2 + 150;
+        whiteBoxRightText.y = FlxG.height / 2;
+        game.insert(1, whiteBoxRightText);
+
+blackScreen = new FlxSprite();
+blackScreen.makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+blackScreen.alpha = 1;
+blackScreen.scrollFactor.set();
+blackScreen.cameras = [game.camHUD];
+blackScreen.zIndex = 100;
+game.insert(1, blackScreen);
+
+buildBars();
+game.currentStage.refresh();
+    }
+
+        function addFilter(filter:ShaderFilter):Void
+    {
+        if (!Preferences.shaders) return;
+        if (game.camGame.filters == null)
+            game.camGame.filters = [filter];
+        else
+            game.camGame.filters.push(filter);
+    }
+    function showWhiteBoxRight(text:String):Void
+    {
+        whiteBoxRight.alpha = 1;
+        whiteBoxRight.scale.x = 0;
+        whiteBoxRight.scale.y = FlxG.height;
+        whiteBoxRight.x = FlxG.width * 0.65;
+        whiteBoxRight.y = (FlxG.height / 2);
+        whiteBoxRight.origin.x = 1.0;
+        whiteBoxRight.origin.y = 0.5;
+
+        whiteBoxRightText.text = text;
+        whiteBoxRightText.alpha = 1;
+        whiteBoxRightText.x = FlxG.width / 2 - 30;
+        whiteBoxRightText.y = FlxG.height / 2 - 60;
+
+        FlxTween.cancelTweensOf(whiteBoxRight.scale, ["x"]);
+        FlxTween.cancelTweensOf(whiteBoxRight, ["x"]);
+
+        FlxTween.tween(whiteBoxRight.scale, {x: 1}, 0.15, {ease: FlxEase.sineInOut});
+        FlxTween.tween(whiteBoxRight, {x: FlxG.width * 0.6}, 0.15, {ease: FlxEase.sineInOut});
+    }
+
+    function hideWhiteBoxRight():Void
+    {
+        FlxTween.cancelTweensOf(whiteBoxRight.scale, ["x"]);
+        FlxTween.cancelTweensOf(whiteBoxRight, ["x"]);
+
+        FlxTween.tween(whiteBoxRight.scale, {x: 0}, 0.1, {ease: FlxEase.sineInOut});
+        FlxTween.tween(whiteBoxRight, {x: FlxG.width * 0.65}, 0.1, {
+            ease: FlxEase.sineInOut,
+            onComplete: function(_) {
+                whiteBoxRight.alpha = 0;
+                whiteBoxRightText.alpha = 0;
+            }
+        });
+    }
+
+    function showWhiteBox(text:String):Void
+    {
+        whiteBox.alpha = 1;
+        whiteBox.scale.y = 0;
+        whiteBox.y = (FlxG.height / 2);
+        whiteBox.origin.y = 0.5;
+
+        whiteBoxText.text = text;
+        whiteBoxText.alpha = 1;
+        whiteBoxText.scale.set(1.0, 1.0);
+        whiteBoxText.x = (FlxG.width / 2) - (whiteBoxText.width / 2);
+
+        FlxTween.cancelTweensOf(whiteBox.scale, ["y"]);
+        FlxTween.tween(whiteBox.scale, {y: 150}, 0.1, {ease: FlxEase.sineInOut});
+    }
+
+    function showWhiteBoxLeft(text:String):Void
+    {
+        whiteBoxLeft.alpha = 1;
+        whiteBoxLeft.scale.x = 0;
+        whiteBoxLeft.scale.y = FlxG.height;
+        whiteBoxLeft.x = FlxG.width * 0.15;
+        whiteBoxLeft.y = (FlxG.height / 2);
+        whiteBoxLeft.origin.x = 0;
+        whiteBoxLeft.origin.y = 0.5;
+
+        whiteBoxLeftText.text = text;
+        whiteBoxLeftText.alpha = 1;
+        whiteBoxLeftText.x = FlxG.width / 2 - 700;
+        whiteBoxLeftText.y = FlxG.height / 2 - 60;
+
+        FlxTween.cancelTweensOf(whiteBoxLeft.scale, ["x"]);
+        FlxTween.cancelTweensOf(whiteBoxLeft, ["x"]);
+
+        FlxTween.tween(whiteBoxLeft.scale, {x: 1}, 0.15, {ease: FlxEase.sineInOut});
+        FlxTween.tween(whiteBoxLeft, {x: FlxG.width * 0.08}, 0.15, {ease: FlxEase.sineInOut});
+    }
+
+    function hideWhiteBoxLeft():Void
+    {
+        FlxTween.cancelTweensOf(whiteBoxLeft.scale, ["x"]);
+        FlxTween.cancelTweensOf(whiteBoxLeft, ["x"]);
+
+        FlxTween.tween(whiteBoxLeft.scale, {x: 0}, 0.1, {ease: FlxEase.sineInOut});
+        FlxTween.tween(whiteBoxLeft, {x: FlxG.width * 0.15}, 0.1, {
+            ease: FlxEase.sineInOut,
+            onComplete: function(_) {
+                whiteBoxLeft.alpha = 0;
+                whiteBoxLeftText.alpha = 0;
+            }
+        });
+    }
+
+	function spawnHUDImage(imagePath:String, x:Float, y:Float, ?isCentered:Bool = false, ?targetScale:Float = 1.0):Void
+	{
+		var sprite = new FlxSprite();
+		sprite.loadGraphic(Paths.image(imagePath));
+
+		if (isCentered)
+		{
+			sprite.screenCenter();
+			sprite.x += x;
+			sprite.y += y;
+		}
+		else
+		{
+			sprite.x = x;
+			sprite.y = y;
+		}
+
+		var startScale:Float = isCentered ? 1.8 : 1.5;
+		sprite.scale.set(startScale, startScale);
+		sprite.updateHitbox();
+
+		sprite.scrollFactor.set();
+		sprite.cameras = [game.camHUD];
+		sprite.blend = 1;
+
+		game.insert(1, sprite);
+		hudSprites.push(sprite);
+
+		FlxTween.tween(sprite.scale, {x: targetScale, y: targetScale}, 0.2, {ease: FlxEase.quadOut});
+	}
+
+	function clearHUDSprites():Void
+	{
+		for (sprite in hudSprites)
+		{
+			game.remove(sprite);
+			sprite.destroy();
+		}
+		hudSprites = [];
+	}
+
+
+    function headachePulse(intensity:Float, duration:Float):Void
+{
+    pulseShader.setIntensity(intensity);
+    game.camGame.filtersEnabled = true;
+
+    new FlxTimer().start(duration, function(_) {
+        pulseShader.setIntensity(0.0);
+    });
+}
+
+function buildBars():Void
+{
+    var baseX:Float = -400;
+    var baseY:Float = 920;
+    bars = [];
+    barHeights = [];
+
+    for (i in 0...NUM_BARS)
+    {
+        var bx:Float = baseX + i * 90;
+        var bar = new FlxSprite(bx, baseY);
+        try { bar.loadGraphic(Paths.image('circle')); } catch (e:Dynamic) {
+            bar.makeGraphic(20, 200, 0xFFFFFFFF);
+        }
+        bar.scale.x = 0.8;
+        bar.scale.y = 0.001;
+        bar.angle = 180;
+        bar.origin.y = 1;
+        bar.scrollFactor.set(0.4, 0.4);
+        bar.zIndex = 3;
+        bar.visible = false;
+        game.currentStage.add(bar);
+        bars.push(bar);
+        barHeights.push(0);
+    }
+    game.currentStage.refresh();
+}
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+	{
+		super.addCharacter(character, charType);
+	}
+
+        override function onUpdate(event:UpdateScriptEvent):Void
+    {
+        super.onUpdate(event);
+
+        if (bloom != null)
+    {
+        bloom.setFloat("effect", effect);
+        bloom.setFloat("strength", strength);
+    }
+
+        if (soundwaveOn && bars.length > 0)
+{
+    var swSm:Float = 1 - Math.pow(0.9, event.elapsed * 60);
+    try {
+        var snd = FlxG.sound.music;
+        if (swBts == null && snd != null && snd._sound != null && snd._sound.__buffer != null && snd._sound.__buffer.data != null) {
+            var buf0 = snd._sound.__buffer;
+            swKhz = buf0.sampleRate / 1000;
+            swCh = buf0.channels;
+            swBts = buf0.data.buffer;
+        }
+        if (swBts != null && snd != null) {
+            var khz:Float = swKhz;
+            var channels:Int = swCh;
+            var bts = swBts;
+            var index:Int = Std.int(snd.time * khz);
+            var i2:Int = 0;
+            while (i2 < bars.length) {
+                var sampleIndex:Int = index + ((i2 + 1) * 100);
+                var pos:Int = sampleIndex * channels * 2;
+                var byte:Float = 0;
+                if (pos >= 0 && pos < bts.length - 2) byte = bts.getUInt16(pos);
+                if (byte > 32767) byte = byte - 65535;
+                if (byte < 0) byte = -byte;
+                var targetHeight:Float = byte / 32767 * 8.0;
+                if (targetHeight < 0) targetHeight = 0;
+                barHeights[i2] += (targetHeight - barHeights[i2]) * swSm;
+                var finalScale:Float = barHeights[i2];
+                if (finalScale < 0.01) finalScale = 0.01;
+                bars[i2].scale.y = finalScale;
+                i2++;
+            }
+        }
+    } catch (e:Dynamic) {}
+}
+
+        if (fisheyeShader != null)
+        {
+            fisheyeShader.setFloat("strength", fisheyeStrength);
+        }
+
+        if (camFrozen)
+        {
+            game.camGame.scroll.set(freezeX, freezeY);
+        }
+    }
+
+    function doBloom(duration:Float, intensity:Float):Void
+{
+    if (!Preferences.shaders) return;
+    effect = intensity;
+    strength = intensity;
+
+    if (game.camGame.filters == null)
+        game.camGame.filters = [];
+
+    if (game.camGame.filters.indexOf(bloomFilter) == -1)
+        game.camGame.filters.push(bloomFilter);
+
+    FlxTween.cancelTweensOf(effect);
+    FlxTween.num(effect, 0, duration, {
+        onUpdate: function(t) {
+            effect = t.value;
+            if (bloom != null) bloom.setFloat("effect", effect);
+        }
+    });
+
+    FlxTween.cancelTweensOf(strength);
+    FlxTween.num(strength, 0, duration, {
+        onUpdate: function(t) {
+            strength = t.value;
+            if (bloom != null) bloom.setFloat("strength", strength);
+        },
+        onComplete: function(_) {
+            if (game.camGame.filters != null)
+            {
+                var removeIndex = game.camGame.filters.indexOf(bloomFilter);
+                if (removeIndex != -1) game.camGame.filters.splice(removeIndex, 1);
+            }
+        }
+    });
+}
+
+    override function onStepHit(event:SongTimeScriptEvent)
+    {
+        super.onStepHit(event);
+        var currentStep:Int = event.step;
+
+       if (event.step == 0 && blackScreen != null)
+        {
+            blackScreen.alpha = 0;
+        }
+
+        if (pulseShader != null)
+    pulseShader.setTime(Conductor.instance.songPosition / 1000);
+
+        if (currentStep >= 160 && currentStep <= 288 && currentStep % 4 == 0)
+        {
+            FlxTween.cancelTweensOf(game.camGame, ["y"]);
+            FlxTween.tween(game.camGame, {y: 10}, 0.2, {
+                ease: FlxEase.sineOut,
+                onComplete: function(_) {
+                    FlxTween.tween(game.camGame, {y: 0}, 0.2, {ease: FlxEase.sineIn});
+                }
+            });
+        }
+
+        if (currentStep >= 752 && currentStep <= 800 && currentStep % 4 == 0)
+        {
+            FlxTween.cancelTweensOf(game.camGame, ["y"]);
+            FlxTween.tween(game.camGame, {y: 10}, 0.2, {
+                ease: FlxEase.sineOut,
+                onComplete: function(_) {
+                    FlxTween.tween(game.camGame, {y: 0}, 0.2, {ease: FlxEase.sineIn});
+                }
+            });
+        }
+        if (currentStep >= 1264 && currentStep <= 1484 && currentStep % 4 == 0)
+        {
+            FlxTween.cancelTweensOf(game.camGame, ["y"]);
+            FlxTween.tween(game.camGame, {y: 10}, 0.2, {
+                ease: FlxEase.sineOut,
+                onComplete: function(_) {
+                    FlxTween.tween(game.camGame, {y: 0}, 0.2, {ease: FlxEase.sineIn});
+                }
+            });
+        }
+
+        if (whiteBoxText.alpha == 1 && currentStep % 4 == 0 && currentStep >= 180 && currentStep <= 288)
+        {
+            var currentScale:Float = whiteBoxText.scale.x;
+            whiteBoxText.scale.set(currentScale + 0.3, currentScale + 0.3);
+            whiteBoxText.x = (FlxG.width / 2) - (whiteBoxText.width / 2);
+        }
+
+        if (whiteBoxText.alpha == 1 && currentStep % 4 == 0 && currentStep >= 772 && currentStep <= 784)
+        {
+            var currentScale:Float = whiteBoxText.scale.x;
+            whiteBoxText.scale.set(currentScale + 0.3, currentScale + 0.3);
+            whiteBoxText.x = (FlxG.width / 2) - (whiteBoxText.width / 2);
+        }
+
+        if (whiteBoxText.alpha == 1 && currentStep % 4 == 0 && currentStep >= 1264 && currentStep <= 1484)
+        {
+            var currentScale:Float = whiteBoxText.scale.x;
+            whiteBoxText.scale.set(currentScale + 0.3, currentScale + 0.3);
+            whiteBoxText.x = (FlxG.width / 2) - (whiteBoxText.width / 2);
+        }
+        else if (currentStep == 292)
+        {
+            FlxTween.cancelTweensOf(game.camGame, ["y"]);
+            FlxTween.tween(game.camGame, {y: 0}, 0.2, {ease: FlxEase.backOut});
+        }
+                if (currentStep >= 816 && currentStep <= 880 && currentStep % 4 == 0)
+        {
+            var dad = game.currentStage.getDad();
+            if (dad != null) dad.flipX = !dad.flipX;
+        }
+        if (currentStep == 880)
+        {
+            var dad = game.currentStage.getDad();
+            if (dad != null) dad.flipX = true;
+        }
+        if (currentStep == 1264)
+        {
+            if (!soundwaveOn)
+    {
+        soundwaveOn = true;
+        for (b in bars)
+        {
+            FlxTween.cancelTweensOf(b);
+            b.y = 720;
+            b.visible = true;
+            b.alpha = 1;
+            b.color = 0xFFFFFFFF;
+        }
+    }
+            var bf = game.currentStage.getBoyfriend();
+            var dad = game.currentStage.getDad();
+
+            if (bf != null)
+            {
+                var targetX = bf.x - 300;
+                FlxTween.tween(bf, {x: targetX}, 0.5, {ease: FlxEase.quadOut});
+                bf.flipX = true;
+            }
+
+            if (dad != null)
+            {
+                var targetX = dad.x + 300;
+                FlxTween.tween(dad, {x: targetX}, 0.5, {ease: FlxEase.quadOut});
+                dad.flipX = false;
+            }
+        }
+        if (currentStep == 1263)
+        {
+            var oldDad = game.currentStage.getDad();
+            if (oldDad != null)
+            {
+                var newDad = CharacterDataParser.fetchCharacter("bf-PLbang");
+                if (newDad != null)
+                {
+                    var targetX = oldDad.x;
+                    var targetY = oldDad.y;
+                    var targetZIndex = oldDad.zIndex;
+
+                    game.currentStage.remove(oldDad);
+                    oldDad.destroy();
+
+                    newDad.x = targetX;
+                    newDad.y = targetY;
+                    newDad.zIndex = targetZIndex;
+                    game.currentStage.addCharacter(newDad, CharacterType.DAD);
+                    newDad.initHealthIcon(true);
+                }
+            }
+            var oldBF = game.currentStage.getBoyfriend();
+            if (oldBF != null)
+            {
+                var newBF = CharacterDataParser.fetchCharacter("gf-notplayable");
+                if (newBF != null)
+                {
+                    var targetX = oldBF.x;
+                    var targetY = oldBF.y;
+                    var targetZIndex = oldBF.zIndex;
+
+                    game.currentStage.remove(oldBF);
+                    oldBF.destroy();
+
+                    newBF.x = targetX;
+                    newBF.y = targetY;
+                    newBF.zIndex = targetZIndex;
+                    game.currentStage.addCharacter(newBF, CharacterType.BF);
+                    newBF.initHealthIcon(false);
+                }
+            }
+            game.currentStage.refresh();
+        }
+
+        if (currentStep == 48)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 50)
+{
+    blackScreen.alpha = 0;
+}
+if (currentStep == 80)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 82)
+{
+    blackScreen.alpha = 0;
+}
+if (currentStep == 640)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 642)
+{
+    blackScreen.alpha = 0;
+}
+if (currentStep == 704)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 706)
+{
+    blackScreen.alpha = 0;
+}
+if (currentStep == 736)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 738)
+{
+    blackScreen.alpha = 0;
+}
+
+if (currentStep == 672)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 674)
+{
+    blackScreen.alpha = 0;
+}
+
+if (currentStep == 112)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 114)
+{
+    blackScreen.alpha = 0;
+}
+
+if (currentStep == 144)
+{
+    blackScreen.alpha = 1;
+}
+if (currentStep == 146)
+{
+    blackScreen.alpha = 0;
+}
+
+if (currentStep == 752)
+{
+    headachePulse(1.0, 0.2);
+}
+
+if (currentStep == 756)
+{
+    headachePulse(1.0, 0.2);
+}
+
+if (currentStep == 760)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 764)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 768)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 784)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 788)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 792)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 796)
+{
+    headachePulse(1.0, 0.2);
+}
+if (currentStep == 150)
+{
+    FlxTween.tween(blackScreen, {alpha: 1}, 0.2, {ease: FlxEase.quadOut});
+chromShader.setFloat('u_intensity', 1.0);
+game.camGame.filtersEnabled = true;
+}
+if (currentStep == 152)
+{
+    FlxTween.tween(blackScreen, {alpha: 0}, 0.1, {ease: FlxEase.quadOut});
+    chromShader.setFloat('u_intensity', 0.0);
+}
+if (currentStep == 878)
+{
+    FlxTween.tween(blackScreen, {alpha: 1}, 0.2, {ease: FlxEase.quadOut});
+}
+if (currentStep == 880)
+{
+    FlxTween.tween(blackScreen, {alpha: 0}, 0.8, {ease: FlxEase.quadOut});
+}
+if (currentStep == 620)
+{
+    FlxTween.tween(blackScreen, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+chromShader.setFloat('u_intensity', 1.0);
+game.camGame.filtersEnabled = true;
+}
+if (currentStep == 624)
+{
+    FlxTween.tween(blackScreen, {alpha: 0}, 0.1, {ease: FlxEase.quadOut});
+    chromShader.setFloat('u_intensity', 0.0);
+}
+if (currentStep == 480)
+{
+    if (!FlxG.onMobile)
+    {
+        var playerStrums = game.playerStrumline;
+        if (playerStrums != null)
+        {
+            var startX = playerStrums.x;
+            var targetX = startX - 600;
+
+            FlxTween.tween(playerStrums, {x: targetX}, 0.5, {
+                ease: FlxEase.sineInOut,
+                onComplete: function(_) {
+                }
+            });
+        }
+    }
+}
+
+if (currentStep == 880)
+{
+    if (!FlxG.onMobile)
+    {
+        var playerStrums = game.playerStrumline;
+        if (playerStrums != null)
+        {
+            var startX = playerStrums.x;
+            var targetX = startX + 600;
+
+            FlxTween.tween(playerStrums, {x: targetX}, 1.5, {
+                ease: FlxEase.sineInOut,
+                onComplete: function(_) {
+                }
+            });
+        }
+    }
+}
+
+        if (currentStep == 66)
+        {
+            showWhiteBoxLeft("MY LOVE");
+        }
+        if (currentStep == 72)
+        {
+            hideWhiteBoxLeft();
+        }
+
+        if (currentStep == 74)
+        {
+            showWhiteBoxRight("YOUR RAGE");
+        }
+        if (currentStep == 80)
+        {
+            hideWhiteBoxRight();
+        }
+
+        if (currentStep == 658)
+        {
+            showWhiteBoxLeft("YOUR WAR");
+        }
+        if (currentStep == 665)
+        {
+            hideWhiteBoxLeft();
+        }
+
+        if (currentStep == 666)
+        {
+            showWhiteBoxRight("YOU WAGE");
+        }
+        if (currentStep == 672)
+        {
+            hideWhiteBoxRight();
+        }
+
+        if (currentStep == 180)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 192)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 210)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("I WANT YOU IN THE GROUND");
+        }
+        if (currentStep == 224)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 244)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 256)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 274)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("I WANT YOU IN THE GROUND");
+        }
+        if (currentStep == 288)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 160) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 164) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 168) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 172)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 176) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 180) clearHUDSprites();
+
+        if (currentStep == 192) spawnHUDImage('down', -50, 500, false, 1.1);
+        if (currentStep == 196) spawnHUDImage('down', -50, 380, false, 1.1);
+        if (currentStep == 200) spawnHUDImage('down', -50, 260, false, 1.1);
+        if (currentStep == 204)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down', -250, -150, true, 1.5);
+        }
+        if (currentStep == 208) clearHUDSprites();
+
+        if (currentStep == 224) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 228) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 232) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 236)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 240) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 244) clearHUDSprites();
+
+        if (currentStep == 256) spawnHUDImage('down', -50, 500, false, 1.1);
+        if (currentStep == 260) spawnHUDImage('down', -50, 380, false, 1.1);
+        if (currentStep == 264) spawnHUDImage('down', -50, 260, false, 1.1);
+        if (currentStep == 268)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down', -250, -150, true, 1.5);
+        }
+        if (currentStep == 272) clearHUDSprites();
+
+
+        if (currentStep == 752) spawnHUDImage('bang2', -50, 50, false, 1.1);
+        if (currentStep == 756) spawnHUDImage('bang2', -50, 160, false, 1.1);
+        if (currentStep == 760) spawnHUDImage('bang2', -50, 270, false, 1.1);
+        if (currentStep == 764)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang2', -220, -150, true, 1.5);
+        }
+        if (currentStep == 768) spawnHUDImage('bang2', -220, 150, true, 1.5);
+        if (currentStep == 772) clearHUDSprites();
+
+        if (currentStep == 784) spawnHUDImage('down2', -50, 500, false, 1.1);
+        if (currentStep == 788) spawnHUDImage('down2', -50, 380, false, 1.1);
+        if (currentStep == 792) spawnHUDImage('down2', -50, 260, false, 1.1);
+        if (currentStep == 796)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down2', -250, -150, true, 1.5);
+        }
+        if (currentStep == 800) clearHUDSprites();
+
+        if (currentStep == 772)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'Til the sun comes");
+        }
+        if (currentStep == 1196)
+        {
+            breakAnim.animation.play('play');
+            fisheyeStrength = 1.0;
+
+            FlxTween.num(fisheyeStrength, 0.0, 7.0, {
+                ease: FlxEase.quadOut,
+                onUpdate: function(t) {
+                    fisheyeStrength = t.value;
+                }
+            });
+
+            breakAnim.animation.finishCallback = function(name:String) {
+                breakAnim.visible = false;
+            };
+        }
+        if (currentStep == 784)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+        if (currentStep == 1136)
+        {
+            fishShader.setFloat("iTime", Conductor.instance.songPosition / 1000);
+            if (Preferences.shaders) game.camGame.filters.push(fishFilter);
+        }
+                if (currentStep == 1196)
+        {
+            fishShader.setFloat("iTime", 0.0);
+            if (game.camGame.filters != null)
+            {
+                var removeIndex = game.camGame.filters.indexOf(fishFilter);
+                if (removeIndex != -1) game.camGame.filters.splice(removeIndex, 1);
+            }
+        }
+        if (currentStep == 880)
+        {
+
+            bwShader.setIntensity(1.0);
+            var gf = game.currentStage.getGirlfriend();
+            if (gf == null) return;
+
+            clearStageImage();
+
+            var targetX = gf.x - 1700;
+            var targetY = gf.y - 500;
+
+            var bg = new FlxSprite();
+            bg.makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
+            bg.x = 0;
+            bg.y = 0;
+            bg.scrollFactor.set(1, 1);
+            bg.cameras = [game.camGame];
+            bg.zIndex = 10;
+            game.currentStage.add(bg);
+            if (stagebg == null) stagebg = [];
+            stagebg.push(bg);
+
+            var sprite = new FlxSprite();
+            sprite.loadGraphic(Paths.image('tv'));
+            sprite.x = targetX;
+            sprite.y = targetY;
+            sprite.scale.set(1.6, 1.6);
+            sprite.updateHitbox();
+            sprite.scrollFactor.set(1, 1);
+            sprite.cameras = [game.camGame];
+            sprite.zIndex = 5000;
+            game.currentStage.add(sprite);
+            if (stageSprite == null) stageSprite = [];
+            stageSprite.push(sprite);
+            game.currentStage.refresh();
+        }
+        if (currentStep == 885)
+        {
+            camFrozen = true;
+            freezeX = game.camGame.scroll.x;
+            freezeY = game.camGame.scroll.y;
+            game.camGame.scroll.set(freezeX, freezeY);
+        }
+
+        if (currentStep == 1136)
+        {
+            bwShader.setIntensity(0.0);
+            clearStageImage();
+        }
+
+        if (currentStep == 1134)
+        {
+
+            camFrozen = false;
+        }
+        if (currentStep == 1264) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 1268) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 1272) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 1276)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 1280) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 1284) clearHUDSprites();
+
+        if (currentStep == 1296) spawnHUDImage('down', -50, 500, false, 1.1);
+        if (currentStep == 1300) spawnHUDImage('down', -50, 380, false, 1.1);
+        if (currentStep == 1304) spawnHUDImage('down', -50, 260, false, 1.1);
+        if (currentStep == 1308)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down', -250, -150, true, 1.5);
+        }
+        if (currentStep == 1314) clearHUDSprites();
+
+        if (currentStep == 1328) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 1332) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 1336) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 1340)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 1344) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 1348) clearHUDSprites();
+
+        if (currentStep == 1360) spawnHUDImage('down', -50, 500, false, 1.1);
+        if (currentStep == 1364) spawnHUDImage('down', -50, 380, false, 1.1);
+        if (currentStep == 1368) spawnHUDImage('down', -50, 260, false, 1.1);
+        if (currentStep == 1372)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down', -250, -150, true, 1.5);
+        }
+        if (currentStep == 1378) clearHUDSprites();
+
+        if (currentStep == 1392) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 1396) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 1400) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 1404)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 1408) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 1412) clearHUDSprites();
+
+        if (currentStep == 1424) spawnHUDImage('down', -50, 500, false, 1.1);
+        if (currentStep == 1428) spawnHUDImage('down', -50, 380, false, 1.1);
+        if (currentStep == 1432) spawnHUDImage('down', -50, 260, false, 1.1);
+        if (currentStep == 1436)
+        {
+            clearHUDSprites();
+            spawnHUDImage('down', -250, -150, true, 1.5);
+        }
+        if (currentStep == 1442) clearHUDSprites();
+
+        if (currentStep == 1456) spawnHUDImage('bang', -50, 50, false, 1.1);
+        if (currentStep == 1460) spawnHUDImage('bang', -50, 160, false, 1.1);
+        if (currentStep == 1464) spawnHUDImage('bang', -50, 270, false, 1.1);
+        if (currentStep == 1468)
+        {
+            clearHUDSprites();
+            spawnHUDImage('bang', -220, -150, true, 1.5);
+        }
+        if (currentStep == 1472) spawnHUDImage('bang', -220, 150, true, 1.5);
+        if (currentStep == 1476) clearHUDSprites();
+
+        if (currentStep == 1284)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 1296)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 1314)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("I WANT YOU IN THE GROUND");
+        }
+        if (currentStep == 1328)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+        if (currentStep == 1348)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 1360)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 1378)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("I WANT YOU IN THE GROUND");
+        }
+        if (currentStep == 1392)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+        if (currentStep == 1412)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 1424)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+
+        if (currentStep == 1442)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("I WANT YOU IN THE GROUND");
+        }
+        if (currentStep == 1456)
+        {
+            invertShader.setIntensity(0.0);
+
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+        if (currentStep == 1476)
+        {
+            invertShader.setIntensity(1.0);
+            game.camGame.filtersEnabled = true;
+            showWhiteBox("'til i take you");
+        }
+        if (currentStep == 1488)
+        {
+            invertShader.setIntensity(0.0);
+             soundwaveOn = false;
+    for (b in bars)
+    {
+        FlxTween.cancelTweensOf(b);
+        FlxTween.tween(b, {alpha: 0}, 1.0, {onComplete: function(t) { b.visible = false; }});
+    }
+            whiteBox.alpha = 0;
+            whiteBoxText.alpha = 0;
+        }
+    }
+    var stageSprite:Array<FlxSprite> = [];
+    var stagebg:Array<FlxSprite> = [];
+
+
+    function clearStageImage():Void
+    {
+        if (stageSprite != null && stageSprite.length > 0)
+        {
+            for (sprite in stageSprite)
+            {
+                game.currentStage.remove(sprite);
+                sprite.destroy();
+            }
+            stageSprite = [];
+        }
+
+        if (stagebg != null && stagebg.length > 0)
+        {
+            for (bg in stagebg)
+            {
+                game.currentStage.remove(bg);
+                bg.destroy();
+            }
+            stagebg = [];
+        }
+    }
+
+	override function onSongRetry(event:ScriptEvent)
+    {
+        if (PlayState.instance == null) return;
+
+soundwaveOn = false;
+swBts = null;
+swKhz = 0;
+swCh = 0;
+for (b in bars)
+{
+    if (b != null)
+    {
+        FlxTween.cancelTweensOf(b);
+        b.visible = false;
+        b.alpha = 1;
+        b.y = 1720;
+        b.scale.y = 0.001;
+    }
+}
+
+    if (game != null && game.camHUD != null)
+    {
+        game.camHUD.visible = true;
+        game.camHUD.alpha = 1;
+    }
+        clearHUDSprites();
+        clearStageImage();
+
+        if (invertShader != null) invertShader.setIntensity(0.0);
+        if (fisheyeShader != null) fisheyeShader.setFloat("strength", 0.0);
+        fisheyeStrength = 0.0;
+        if (game != null && game.camGame.filters != null)
+        {
+            var removeIndex = game.camGame.filters.indexOf(invertFilter);
+            if (removeIndex != -1) game.camGame.filters.splice(removeIndex, 1);
+            removeIndex = game.camGame.filters.indexOf(fisheyeFilter);
+            if (removeIndex != -1) game.camGame.filters.splice(removeIndex, 1);
+            removeIndex = game.camGame.filters.indexOf(fishFilter);
+            if (removeIndex != -1) game.camGame.filters.splice(removeIndex, 1);
+        }
+
+        // onSongRetry already performs PlayState's in-place reset. Creating a
+        // second PlayState bypasses HTML5's async loading path and can leave
+        // the next state without its instrumental or vocals.
+    }
+}

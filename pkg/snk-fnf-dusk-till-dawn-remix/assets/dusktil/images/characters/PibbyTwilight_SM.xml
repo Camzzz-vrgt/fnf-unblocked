@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+--><TextureAtlas imagePath="PibbyTwilight_SM.png" width="4545" height="2514">
+	<SubTexture name="Twi_Down_MONSTER instance 10000" x="2936" y="1392" width="519" height="305" frameX="0" frameY="0" frameWidth="550" frameHeight="307"/>
+	<SubTexture name="Twi_Down_MONSTER instance 10001" x="2936" y="1392" width="519" height="305" frameX="0" frameY="0" frameWidth="550" frameHeight="307"/>
+	<SubTexture name="Twi_Down_MONSTER instance 10002" x="1" y="1644" width="542" height="307" frameX="-8" frameY="0" frameWidth="550" frameHeight="307"/>
+	<SubTexture name="Twi_Down_MONSTER instance 10003" x="1" y="1644" width="542" height="307" frameX="-8" frameY="0" frameWidth="550" frameHeight="307"/>
+	<SubTexture name="Twi_Down_SAD instance 10000" x="1313" y="790" width="293" height="286" rotated="true" frameX="-165" frameY="0" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Down_SAD instance 10001" x="1" y="1" width="452" height="231" frameX="-55" frameY="-71" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Down_SAD instance 10002" x="881" y="1" width="503" height="240" frameX="-1" frameY="-59" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Down_SAD instance 10003" x="1384" y="1" width="493" height="244" frameX="-3" frameY="-54" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Down_SAD instance 10004" x="2559" y="1" width="433" height="260" frameX="-60" frameY="-55" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Down_SAD instance 10005" x="2992" y="1" width="423" height="261" frameX="-71" frameY="-56" frameWidth="507" frameHeight="349"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10000" x="1962" y="533" width="323" height="279" frameX="0" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10001" x="283" y="237" width="335" height="264" frameX="-9" frameY="-16" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10002" x="2160" y="260" width="335" height="272" frameX="-8" frameY="-8" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10003" x="1" y="502" width="335" height="277" frameX="-7" frameY="-4" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10004" x="1628" y="529" width="334" height="278" frameX="-6" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10005" x="2942" y="536" width="333" height="279" frameX="-6" frameY="-1" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10006" x="650" y="785" width="332" height="281" frameX="-5" frameY="0" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10007" x="982" y="790" width="331" height="281" frameX="-5" frameY="0" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10008" x="1606" y="808" width="330" height="281" frameX="-4" frameY="0" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10009" x="1" y="778" width="329" height="280" frameX="-4" frameY="-1" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10010" x="3275" y="538" width="329" height="279" frameX="-4" frameY="-1" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10011" x="2285" y="535" width="329" height="279" frameX="-4" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10012" x="2614" y="535" width="329" height="279" frameX="-4" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10013" x="2285" y="535" width="329" height="279" frameX="-4" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_MONSTER instance 10014" x="2614" y="535" width="329" height="279" frameX="-4" frameY="-2" frameWidth="344" frameHeight="281"/>
+	<SubTexture name="Twi_Idle_SAD instance 10000" x="1623" y="1382" width="322" height="295" frameX="-1" frameY="-1" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10001" x="1945" y="1382" width="322" height="295" frameX="-1" frameY="-1" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10002" x="2267" y="1385" width="323" height="295" frameX="0" frameY="-1" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10003" x="980" y="1365" width="323" height="293" frameX="0" frameY="-2" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10004" x="3288" y="1099" width="323" height="292" frameX="-1" frameY="-3" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10005" x="2306" y="1095" width="323" height="291" frameX="-1" frameY="-4" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10006" x="1276" y="1076" width="324" height="288" frameX="-2" frameY="-7" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10007" x="952" y="1071" width="324" height="287" frameX="-2" frameY="-8" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10008" x="1" y="1058" width="324" height="285" frameX="-4" frameY="-10" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10009" x="2728" y="815" width="325" height="282" frameX="-6" frameY="-13" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10010" x="1937" y="811" width="325" height="281" frameX="-7" frameY="-15" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10011" x="982" y="512" width="326" height="278" frameX="-10" frameY="-17" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10012" x="657" y="507" width="325" height="277" frameX="-11" frameY="-18" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10013" x="643" y="1065" width="309" height="287" frameX="-14" frameY="-8" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10014" x="3313" y="262" width="323" height="276" frameX="-15" frameY="-19" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10015" x="335" y="507" width="321" height="277" frameX="-16" frameY="-18" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10016" x="1308" y="512" width="320" height="278" frameX="-17" frameY="-17" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10017" x="330" y="783" width="320" height="280" frameX="-16" frameY="-15" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10018" x="3053" y="817" width="319" height="282" frameX="-15" frameY="-13" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10019" x="325" y="1063" width="319" height="286" frameX="-12" frameY="-10" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10020" x="1599" y="1088" width="319" height="289" frameX="-9" frameY="-6" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10021" x="2968" y="1099" width="320" height="292" frameX="-6" frameY="-3" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Idle_SAD instance 10022" x="1303" y="1377" width="321" height="293" frameX="-3" frameY="-2" frameWidth="338" frameHeight="295"/>
+	<SubTexture name="Twi_Left_MONSTER instance 10000" x="2590" y="1388" width="346" height="305" frameX="-26" frameY="-1" frameWidth="373" frameHeight="310"/>
+	<SubTexture name="Twi_Left_MONSTER instance 10001" x="2590" y="1388" width="346" height="305" frameX="-26" frameY="-1" frameWidth="373" frameHeight="310"/>
+	<SubTexture name="Twi_Left_MONSTER instance 10002" x="543" y="1650" width="371" height="308" frameX="-1" frameY="-2" frameWidth="373" frameHeight="310"/>
+	<SubTexture name="Twi_Left_MONSTER instance 10003" x="543" y="1650" width="371" height="308" frameX="-1" frameY="-2" frameWidth="373" frameHeight="310"/>
+	<SubTexture name="Twi_Left_SAD instance 10000" x="1878" y="1" width="262" height="260" frameX="-5" frameY="-36" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Left_SAD instance 10001" x="1" y="232" width="283" height="263" rotated="true" frameX="-4" frameY="-8" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Left_SAD instance 10002" x="618" y="241" width="288" height="266" rotated="true" frameX="-2" frameY="-2" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Left_SAD instance 10003" x="1197" y="245" width="291" height="268" rotated="true" frameX="0" frameY="0" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Left_SAD instance 10004" x="1487" y="245" width="290" height="268" rotated="true" frameX="0" frameY="-1" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Left_SAD instance 10005" x="907" y="241" width="290" height="267" rotated="true" frameX="-1" frameY="-1" frameWidth="268" frameHeight="296"/>
+	<SubTexture name="Twi_Right_MONSTER instance 10000" x="2495" y="261" width="491" height="274" frameX="0" frameY="-2" frameWidth="491" frameHeight="281"/>
+	<SubTexture name="Twi_Right_MONSTER instance 10001" x="2495" y="261" width="491" height="274" frameX="0" frameY="-2" frameWidth="491" frameHeight="281"/>
+	<SubTexture name="Twi_Right_MONSTER instance 10002" x="2262" y="814" width="466" height="281" frameX="0" frameY="-1" frameWidth="491" frameHeight="281"/>
+	<SubTexture name="Twi_Right_MONSTER instance 10003" x="2262" y="814" width="466" height="281" frameX="0" frameY="-1" frameWidth="491" frameHeight="281"/>
+	<SubTexture name="Twi_Right_SAD instance 10000" x="1919" y="1095" width="387" height="287" frameX="0" frameY="-30" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Right_SAD instance 10001" x="1296" y="1676" width="396" height="310" frameX="-25" frameY="-7" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Right_SAD instance 10002" x="913" y="1658" width="383" height="316" frameX="-27" frameY="-1" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Right_SAD instance 10003" x="2455" y="1693" width="382" height="317" frameX="-28" frameY="0" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Right_SAD instance 10004" x="2071" y="1680" width="384" height="316" frameX="-27" frameY="-1" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Right_SAD instance 10005" x="1692" y="1676" width="379" height="316" frameX="-27" frameY="-1" frameWidth="421" frameHeight="317"/>
+	<SubTexture name="Twi_Up_MONSTER instance 10000" x="452" y="1" width="428" height="237" rotated="true" frameX="-7" frameY="0" frameWidth="260" frameHeight="428"/>
+	<SubTexture name="Twi_Up_MONSTER instance 10001" x="452" y="1" width="428" height="237" rotated="true" frameX="-7" frameY="0" frameWidth="260" frameHeight="428"/>
+	<SubTexture name="Twi_Up_MONSTER instance 10002" x="2140" y="1" width="419" height="260" rotated="true" frameX="-1" frameY="-6" frameWidth="260" frameHeight="428"/>
+	<SubTexture name="Twi_Up_MONSTER instance 10003" x="2140" y="1" width="419" height="260" rotated="true" frameX="-1" frameY="-6" frameWidth="260" frameHeight="428"/>
+	<SubTexture name="Twi_Up_SAD instance 10000" x="2986" y="262" width="327" height="274" frameX="0" frameY="-90" frameWidth="328" frameHeight="383"/>
+	<SubTexture name="Twi_Up_SAD instance 10001" x="1777" y="260" width="383" height="269" rotated="true" frameX="-49" frameY="0" frameWidth="328" frameHeight="383"/>
+	<SubTexture name="Twi_Up_SAD instance 10002" x="2628" y="1098" width="340" height="291" rotated="true" frameX="-26" frameY="-31" frameWidth="328" frameHeight="383"/>
+	<SubTexture name="Twi_Up_SAD instance 10003" x="1" y="1343" width="324" height="293" rotated="true" frameX="-22" frameY="-42" frameWidth="328" frameHeight="383"/>
+	<SubTexture name="Twi_Up_SAD instance 10004" x="325" y="1352" width="325" height="292" rotated="true" frameX="-23" frameY="-41" frameWidth="328" frameHeight="383"/>
+	<SubTexture name="Twi_Up_SAD instance 10005" x="650" y="1358" width="330" height="292" rotated="true" frameX="-24" frameY="-38" frameWidth="328" frameHeight="383"/>
+</TextureAtlas>

@@ -1,0 +1,127 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [-50, 80],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [-11, 59],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down0"
+		},
+		{
+			"offsets": [-44, 108],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up0"
+		},
+		{
+			"offsets": [-76, 79],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right0"
+		},
+		{
+			"offsets": [8, 86],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left0"
+		},
+		{
+			"loop": false,
+			"offsets": [7, 85],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "left alt0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-75, 81],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "right alt0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-46, 107],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "up alt0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-10, 66],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "down alt0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-15, 231],
+			"anim": "singLEFT-alt2",
+			"fps": 24,
+			"name": "left alt2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-39, 212],
+			"anim": "singRIGHT-alt2",
+			"fps": 24,
+			"name": "right alt2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-15, 285],
+			"anim": "singUP-alt2",
+			"fps": 24,
+			"name": "up alt2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-33, 186],
+			"anim": "singDOWN-alt2",
+			"fps": 24,
+			"name": "down alt2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-67, 297],
+			"anim": "tran",
+			"fps": 24,
+			"name": "transition",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/CBF",
+	"position": [0, 0],
+	"healthicon": "pibboyfriend",
+	"flip_x": false,
+	"healthbar_colors": [9, 121, 171],
+	"camera_position": [-120, -50],
+	"sing_duration": 6.3,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

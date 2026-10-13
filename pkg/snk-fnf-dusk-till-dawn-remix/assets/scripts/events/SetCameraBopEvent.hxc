@@ -1,0 +1,33 @@
+import funkin.play.event.SongEvent;
+
+// Registration-only — handled by `CowardIntroModule.hxc`. See CameraSpeedEvent.hxc
+// for why the empty registration matters.
+class SetCameraBopEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Bop every N beats",
+                defaultValue: "4",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Bop intensity",
+                defaultValue: "1",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Set Camera Bop";
+    }
+
+    public function new() {
+        super('SetCameraBop');
+    }
+}

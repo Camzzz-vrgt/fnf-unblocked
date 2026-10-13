@@ -1,0 +1,163 @@
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.util.MathUtil;
+import flixel.FlxG;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.tweens.FlxEase;
+import funkin.Conductor;
+import flixel.tweens.FlxTween;
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import funkin.audio.FunkinSound;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+
+class TheShiftMini extends Stage {
+    //shader variables
+    var dih:Int = 0;
+    var colorShader:AdjustColorShader;
+
+    //cutscene variables
+    var hasPlayedWeedCutscene:Bool = false;
+    var isSheHighYet:Bool = false;
+    var theBG:FlxSprite;
+    var theGradient:FlxSprite;
+    var skyOpponent:ScriptedFlxAtlasSprite; //for whatever reason u DONT have to declare this variable at all it kinda just works but im doin it anyway cos im a real ass nigga
+
+
+	public function new() {
+		super('theShiftMini');
+	}
+
+    function onCreate(event:ScriptEvent) {
+        super.onCreate(event);
+        getNamedProp('babyGradient').blend = 0;
+        isSheHighYet = false;
+
+        theBG = getNamedProp('miniShift');
+        theGradient = getNamedProp('babyGradient');
+
+        hasPlayedWeedCutscene = false; //make sure we havent played the cutscene till the song ends
+
+        
+    }
+
+    override function onCountdownStart()
+	{
+		super.onCountdownStart();
+
+        PlayState.instance.currentStage.getGirlfriend().alpha = 0;
+	}
+
+    function onUpdate(event) {
+        super.onUpdate(event);
+        colorShader = new AdjustColorShader();
+        colorShader.hue = dih;
+        colorShader.saturation = 0;
+		colorShader.contrast = 0;
+		colorShader.brightness = 0;
+        var backGround:FlxSprite = getNamedProp('miniShift');
+		backGround.shader = colorShader;
+
+		dih = 1 + Math.sin((Conductor.instance.songPosition / 1000) * 1) * 100 ;
+        
+        if (isSheHighYet)
+        {
+            theBG.alpha = Math.max(0.25, theBG.alpha - event.elapsed / 8);
+            theGradient.alpha = Math.max(0.25, theGradient.alpha - event.elapsed / 8);
+            PlayState.instance.currentStage.getBoyfriend().alpha = Math.max(0, PlayState.instance.currentStage.getBoyfriend().alpha - event.elapsed / 8);
+        }
+
+    }
+
+    function onBeatHit(event){
+        super.onBeatHit(event);
+        
+        if (event.beat == 256 && PlayState.instance.currentSong.id == 'sky-mobile')
+        {
+            weedCutscene();
+        }
+    }
+
+
+    function weedCutscene()
+    {
+        var skyPos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y]; //sky's camera position so we can easily access that mf
+        //settin up the texture atlas
+        skyOpponent = ScriptedFlxAtlasSprite.init('SkySmokingSprite', 0, 0); 
+        skyOpponent.setPosition(PlayState.instance.currentStage.getDad().x + 32, PlayState.instance.currentStage.getDad().y + 35);
+        skyOpponent.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
+        PlayState.instance.currentStage.add(skyOpponent);
+        PlayState.instance.currentStage.getDad().visible = false; //this is for later
+        PlayState.instance.currentStage.refresh();
+
+        var weedSmoke:FunkinSprite = FunkinSprite.createSparrow(skyPos[0] - 75, skyPos[1] - 260, 'skymobile/cigarSmoke');
+		weedSmoke.animation.addByPrefix('smoked', "smokey", 24, true);
+        weedSmoke.alpha = 0;
+    	weedSmoke.visible = false;
+        weedSmoke.blend = 0;
+		weedSmoke.zIndex = 315;
+        weedSmoke.animation.play('smoked');
+        add(weedSmoke);
+		refresh();
+
+        PlayState.instance.isInCutscene = true;
+
+
+        new FlxTimer().start(1, function(tmr) {
+            
+			skyOpponent.scriptCall('playAnim');
+            FunkinSound.playOnce(Paths.sound('mobileCutscene/wooshSound'), 1);
+            
+
+		});
+        new FlxTimer().start(3.05, function(tmr) {
+            
+            FunkinSound.playOnce(Paths.sound('mobileCutscene/smokinSound'), 1);
+            weedSmoke.visible = true;
+            FlxTween.tween(weedSmoke, {alpha: 0.4}, 0.5);
+            FlxTween.tween(theBG, {alpha: 0}, 10);
+            isSheHighYet = true;
+            FunkinSound.playOnce(Paths.sound('mobileCutscene/puffySound'), 1);
+
+		});
+        new FlxTimer().start(5, function(tmr) {
+            FlxTween.tween(weedSmoke, {alpha: 0}, 2);
+            FunkinSound.playOnce(Paths.sound('mobileCutscene/wobbly'), 0.4);
+
+		});
+        new FlxTimer().start(12, function(tmr) {
+           skyOpponent.scriptCall('loopAnim');
+            
+		});
+        new FlxTimer().start(15.5, function(tmr) {
+           PlayState.instance.endSong(true);
+            
+		});
+    }
+
+    override function onSongRetry(event)
+    {
+    
+    reloadSkyStuff();
+
+    }
+
+    function reloadSkyStuff()
+    {
+    isSheHighYet = false;
+    skyOpponent.alpha = 0;
+    PlayState.instance.currentStage.getDad().visible = true;
+    PlayState.instance.currentStage.getBoyfriend().alpha = 1;
+    theBG.alpha = 1;
+    theGradient.alpha = 1;
+
+    }
+    
+    function onSongEnd(){
+
+        PlayState.instance.isInCutscene = false;
+    }
+}

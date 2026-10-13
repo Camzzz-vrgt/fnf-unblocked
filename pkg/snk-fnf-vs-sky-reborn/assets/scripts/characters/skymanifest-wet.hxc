@@ -1,0 +1,36 @@
+import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class SkyManifestWetCharacter extends AnimateAtlasCharacter {
+	function new() {
+		super('skymanifest-wet');
+	}
+
+	var isWet:Bool = false;
+	var ignoredAnims = ['drenched', 'burning', 'falling', 'cooked', 'pressGadget'];
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+    if(isWet && ignoredAnims.indexOf(name) == -1){ 
+		  super.playAnimation(name + '-wet', restart, ignoreOther);
+    	}else{
+		  super.playAnimation(name, restart, ignoreOther);
+    	}
+	if(name == 'drenched') isWet = true;
+	}
+	override function onSongRetry(event:ScriptEvent):Void {
+		super.onSongRetry(event);
+
+		isWet = false;
+	}
+
+	function onAnimationFinished(name:String)
+  	{
+    super.onAnimationFinished(name);
+	if(name == 'pressGadget')
+	{
+		playAnimation('gadgetAurafarm');
+	}
+	}
+}

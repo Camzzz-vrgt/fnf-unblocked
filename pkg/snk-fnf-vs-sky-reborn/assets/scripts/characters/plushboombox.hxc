@@ -1,0 +1,34 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.character.BaseCharacter;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+
+class PlushieBoomboxCharacter extends AnimateAtlasCharacter
+{
+  function new()
+  {
+    super('plushboombox');
+  }
+
+  function onUpdate(event)
+  {
+    super.onUpdate();
+    
+    switch (PlayState.instance.currentStage.id)
+    {
+    case "qtStage":
+      this.y = 550;
+
+    case "metro-moderato":
+      this.y = 900;
+
+
+  }
+  }
+}

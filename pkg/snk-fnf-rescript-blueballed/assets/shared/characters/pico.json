@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-30,
+				66
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Down"
+		},
+		{
+			"offsets": [
+				-23,
+				124
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Left"
+		},
+		{
+			"offsets": [
+				-40,
+				138
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
+		},
+		{
+			"offsets": [
+				-60,
+				96
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right"
+		},
+		{
+			"offsets": [
+				-10,
+				177
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "Tran",
+			"loop": false,
+			"name": "Tran"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pico",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		55,
+		255,
+		1
+	],
+	"camera_position": [
+		-130,
+		-60
+	],
+	"sing_duration": 6.3,
+	"scale": 1
+}

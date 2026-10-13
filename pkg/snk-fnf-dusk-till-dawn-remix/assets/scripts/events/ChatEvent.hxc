@@ -1,0 +1,33 @@
+import funkin.play.event.SongEvent;
+
+class ChatEvent extends SongEvent
+{
+    public override function handleEvent(data) {
+        // Vazio de propósito — quem trata é o ChatModule.hxc.
+    }
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "Cor (hex, sem #, ex: 9B59D0)",
+                defaultValue: "FFFFFF",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Texto",
+                defaultValue: "",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Chat";
+    }
+
+    public function new() {
+        super('chat');
+    }
+}

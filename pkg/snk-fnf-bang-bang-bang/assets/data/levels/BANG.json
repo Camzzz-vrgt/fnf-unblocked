@@ -1,0 +1,96 @@
+{
+	"version": "1.0.0",
+	"titleAsset": "storymenu/titles/funkin",
+	"props": [
+		{
+			"danceEvery": 1,
+			"offsets": [
+				-70,
+				-50
+			],
+			"isPixel": false,
+			"assetPath": "storymenu/props/dad",
+			"alpha": 1,
+			"scale": 0.4,
+			"animations": [
+				{
+					"offsets": [
+						0,
+						0
+					],
+					"frameIndices": [],
+					"prefix": "idle0",
+					"looped": false,
+					"name": "idle",
+					"flipX": false,
+					"animType": "framelabel",
+					"flipY": false,
+					"assetPath": null,
+					"frameRate": 24
+				}
+			]
+		},
+		{
+			"danceEvery": 1,
+			"offsets": [
+				30,
+				-70
+			],
+			"isPixel": false,
+			"assetPath": "storymenu/props/bf",
+			"alpha": 1,
+			"scale": 0.4,
+			"animations": [
+				{
+					"offsets": [
+						0,
+						0
+					],
+					"frameIndices": [],
+					"prefix": "idle0",
+					"looped": false,
+					"name": "idle",
+					"flipX": false,
+					"animType": "framelabel",
+					"flipY": false,
+					"assetPath": null,
+					"frameRate": 24
+				}
+			]
+		},
+		{
+			"danceEvery": 1,
+			"offsets": [
+				180,
+				-240
+			],
+			"isPixel": false,
+			"assetPath": "storymenu/props/gf",
+			"alpha": 1,
+			"scale": 0.4,
+			"animations": [
+				{
+					"offsets": [
+						0,
+						0
+					],
+					"frameIndices": [],
+					"prefix": "idle0",
+					"looped": false,
+					"name": "idle",
+					"flipX": false,
+					"animType": "framelabel",
+					"flipY": false,
+					"assetPath": null,
+					"frameRate": 24
+				}
+			]
+		}
+	],
+	"songs": [
+		"BANGBANG"
+	],
+	"visible": false,
+	"background": "#F9CF51",
+	"name": "BANG-BANG"
+}

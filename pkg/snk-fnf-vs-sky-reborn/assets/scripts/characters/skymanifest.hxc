@@ -1,0 +1,31 @@
+import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.PlayState;
+
+class SkyManifestCharacter extends AnimateAtlasCharacter {
+	function new() {
+		super('skymanifest');
+	}
+
+	var canDoHealthDrain:Bool;
+	function onNoteHit(event:HitNoteScriptEvent) {
+
+		canDoHealthDrain = (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD && PlayState.instance.health > 0.1 && PlayState.instance.currentVariation == 'erect');
+
+		if (canDoHealthDrain && PlayState.lastParams.targetDifficulty == "nightmare") 
+			{
+			PlayState.instance.health = PlayState.instance.health - 0.03;
+			}
+
+		else if (canDoHealthDrain && PlayState.lastParams.targetDifficulty == "erect") 
+			{
+				
+			PlayState.instance.health = PlayState.instance.health - 0.02;
+			}
+
+		// this script makes sky do healthdrain
+		// on nightmare it is very intense, on erect it is slightly less intenecse
+
+		super.onNoteHit(event);
+	}
+}

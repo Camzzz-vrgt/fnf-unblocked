@@ -1,0 +1,109 @@
+{
+  "props": [
+    {
+      "zIndex": 20,
+      "danceEvery": 0,
+      "position": [-3191, 603],
+      "scale": [1, 1],
+      "flipX": false,
+      "name": "text",
+      "animType": "sparrow",
+      "flipY": false,
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "shift/manifest/manifestFloor",
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 400,
+      "position": [-1577, -633],
+      "scale": [2, 1],
+      "animType": "sparrow",
+      "name": "gradientTop",
+      "flipX": false,
+      "isPixel": false,
+      "flipY": false,
+      "assetPath": "shift/manifest/manifestGradient",
+      "scroll": [0, 0],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 401,
+      "position": [-1562, -62],
+      "scale": [2, 1],
+      "animType": "sparrow",
+      "name": "gradientBottom",
+      "flipX": false,
+      "isPixel": false,
+      "flipY": true,
+      "assetPath": "shift/manifest/manifestGradient",
+      "scroll": [0, 0],
+      "animations": []
+    },
+    {
+      "zIndex": 80,
+      "danceEvery": 0,
+      "position": [508, -159],
+      "scale": [1, 1],
+      "flipX": false,
+      "name": "crucifixBlock",
+      "animType": "sparrow",
+      "flipY": false,
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "shift/manifest/crucifixBlock",
+      "animations": []
+    },
+    {
+      "zIndex": 19,
+      "danceEvery": 0,
+      "position": [-3762, 609],
+      "scale": [1, 1],
+      "flipX": false,
+      "name": "textCover",
+      "animType": "sparrow",
+      "flipY": false,
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "shift/manifest/textCover",
+      "animations": []
+    },
+    {
+      "zIndex": 85,
+      "danceEvery": 0,
+      "position": [562, 111],
+      "scale": [1, 1],
+      "flipX": false,
+      "name": "rocket",
+      "animType": "sparrow",
+      "flipY": false,
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "shift/manifest/manifestRocket",
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.6,
+  "version": "1.0.0",
+  "directory": "",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1136.5, 902],
+      "cameraOffsets": [-100, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [335, 905],
+      "cameraOffsets": [150, -100]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [762.5, 459]
+    }
+  },
+  "name": "The Shift (Manifest) [Erect]"
+}

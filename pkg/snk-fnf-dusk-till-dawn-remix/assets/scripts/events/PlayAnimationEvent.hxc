@@ -1,0 +1,13 @@
+import funkin.play.event.SongEvent;
+class PlayAnimationEvent extends SongEvent
+{
+    public override function handleEvent(data) {}
+    public function getEventSchema() {
+        return [
+            { name: "value1", title: "Nome da animação", defaultValue: "", type: "string" },
+            { name: "value2", title: "Personagem (BF/Dad/Gf)", defaultValue: "BF", type: "string" }
+        ];
+    }
+    public function getTitle() { return "Play Animation"; }
+    public function new() { super('Play Animation'); }
+}

@@ -1,0 +1,36 @@
+import funkin.play.PlayState;
+import funkin.modding.module.ScriptedModule;
+
+class HudFadeFixes extends ScriptedModule {
+
+  public function new() {
+    super('hudFadeFixes');
+  }
+
+  function resetHUD() {
+    if (PlayState.instance == null) return;
+    
+    if (PlayState.instance.camHUD != null) {
+      PlayState.instance.camHUD.visible = true;
+      PlayState.instance.camHUD.alpha = 1;
+    }
+    
+    for (cam in FlxG.cameras.list) {
+      if (cam != null && cam.bgColor == 0) {
+        cam.visible = true;
+        cam.alpha = 1;
+        break;
+      }
+    }
+  }
+
+  override function onGameOver(event) {
+    super.onGameOver(event);
+    resetHUD();
+  }
+
+  override function onSongRetry(event) {
+    super.onSongRetry(event);
+    resetHUD();
+  }
+}

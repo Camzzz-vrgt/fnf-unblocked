@@ -1,0 +1,49 @@
+{
+ "version": "2.2.4",
+ "songName": "BANG BANG BANG",
+ "artist": "BBpanzu",
+ "charter": "Harxeret",
+ "offsets": { },
+ "playData": {
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "gf-playable",
+   "girlfriend": "gf-bang",
+   "opponent": "bf-bang",
+   "opponentVocals": [
+    "bf-bang"
+   ],
+   "playerVocals": [
+    "gf-playable"
+   ]
+  },
+  "stage": "rooftop",
+  "noteStyle": "BANG",
+  "ratings": {
+   "easy": 8,
+   "normal": 10,
+   "hard": 11
+  },
+  "album": "BANG",
+  "previewEnd": 0
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.6",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 133,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 91925.8272,
+   "b": 203.7689,
+   "bpm": 133,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
+}

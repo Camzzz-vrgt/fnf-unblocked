@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Pelegrano.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Idle0000" x="485" y="714" width="448" height="702" frameX="2" frameY="-10" frameWidth="491" frameHeight="710"/>
+	<SubTexture name="Idle0001" x="966" y="693" width="476" height="689" frameX="1" frameY="-23" frameWidth="491" frameHeight="710"/>
+	<SubTexture name="Idle0002" x="966" y="0" width="490" height="693" frameX="-3" frameY="-19" frameWidth="491" frameHeight="710"/>
+	<SubTexture name="Idle0003" x="0" y="0" width="485" height="710" frameX="-4" frameY="-2" frameWidth="491" frameHeight="710"/>
+	<SubTexture name="Idle0004" x="0" y="710" width="482" height="714" frameX="-4" frameY="2" frameWidth="491" frameHeight="710"/>
+	<SubTexture name="Idle0005" x="485" y="0" width="481" height="714" frameX="-4" frameY="2" frameWidth="491" frameHeight="710"/>
+</TextureAtlas>

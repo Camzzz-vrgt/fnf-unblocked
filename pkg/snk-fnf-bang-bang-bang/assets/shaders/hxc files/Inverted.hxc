@@ -1,0 +1,21 @@
+import flixel.addons.display.FlxRuntimeShader;
+import openfl.filters.ShaderFilter;
+import openfl.utils.Assets;
+import funkin.Paths;
+
+class Inverted extends FlxRuntimeShader
+{
+    public var uIntensity:Float = 0.0;
+    
+    function new()
+    {
+        var fragText:String = Assets.getText(Paths.frag('Inverted'));
+        super(fragText);
+    }
+
+    function setIntensity(value:Float):Float
+    {
+        this.setFloat('u_intensity', value);
+        return uIntensity = value;
+    }
+}

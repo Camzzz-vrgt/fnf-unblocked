@@ -1,0 +1,373 @@
+import funkin.play.stage.Stage;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.events.SongEventScriptEvent;
+import funkin.modding.events.UpdateScriptEvent;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxColor;
+
+// Troca de cenário da Castle: o stage tem duas "partes" visuais que nunca
+// aparecem juntas. 'Change Part' (value1 '1' ou '2') alterna entre elas,
+// igual ao onEvent('Change Part', ...) do castle.lua original.
+//
+// Parte 1 (padrão, visível ao criar o stage): sky2, place2, vidrio
+// Parte 2: sky, place, Inkfall, Foreground, Luz1, Luz2, Luz3
+//
+// Também trata o 'CastleControl' (blackout por personagem, escurecer a tela,
+// luzes 1/2/3, névoa 1/2), adaptado do CastleControl.lua original.
+// IMPORTANTE: 'mist1'/'mist2' nunca tiveram sprite criado nem imagem no mod
+// original (CastleControl.lua já referenciava eles sem nunca ter sido
+// spawnados em nenhum lugar do código-fonte) — ou seja, já era código morto
+// no mod scrapped. Deixei o parsing pronto, mas sem sprite, então por
+// enquanto ele só ignora com segurança (sem crashar). Se algum dia vocês
+// desenharem a arte da névoa, é só eu completar essa parte.
+class CastleStage extends Stage
+{
+    var pSky:FlxSprite;
+    var pSky2:FlxSprite;
+    var pPlace:FlxSprite;
+    var pPlace2:FlxSprite;
+    var pVidrio:FlxSprite;
+    var pInkfall:FlxSprite;
+    var pForeground:FlxSprite;
+    var pLuz1:FlxSprite;
+    var pLuz2:FlxSprite;
+    var pLuz3:FlxSprite;
+    var pDark:FlxSprite;
+
+    // The scenery layer the camera is not allowed to see past, for the part that is
+    // currently on screen. See updateCameraBounds().
+    var boundsProp:FlxSprite = null;
+
+    // Intro blackout: camGame is held fully black until the song is past this many ms.
+    // songPosition is negative during the countdown, so the countdown stays black too.
+    var introBlackUntilMs:Float = 150;
+    // Length of the reveal once the threshold passes. 0 = hard cut.
+    var introRevealSecs:Float = 0.4;
+    var introBlackApplied:Bool = false;
+    var introBlackCleared:Bool = false;
+    // Conductor.songPosition follows whatever music is currently playing -- in the menus
+    // that is freakyMenu, so it is a large POSITIVE number before this song begins and
+    // the threshold below would be satisfied on the very first frame. Only trust it once
+    // onSongStart has fired and the Conductor is aligned to this song.
+    var songStarted:Bool = false;
+
+    public function new()
+    {
+        super('Castle');
+    }
+
+    // HScript cannot call Math.isNaN(): Haxe compiles that to the JS *global*
+    // isNaN(), so there is no 'isNaN' field on the runtime Math object the
+    // interpreter is handed, and every call raised "Invalid access to field
+    // isNaN". NaN is the only value that is not equal to itself.
+    function isNan(v:Float):Bool
+    {
+        return v != v;
+    }
+
+    override function onCreate(event:ScriptEvent):Void
+    {
+        super.onCreate(event);
+
+        pSky = getNamedProp('sky');
+        pSky2 = getNamedProp('sky2');
+        pPlace = getNamedProp('place');
+        pPlace2 = getNamedProp('place2');
+        pVidrio = getNamedProp('vidrio');
+        pInkfall = getNamedProp('Inkfall');
+        pForeground = getNamedProp('Foreground');
+        pLuz1 = getNamedProp('Luz1');
+        pLuz2 = getNamedProp('Luz2');
+        pLuz3 = getNamedProp('Luz3');
+
+        // Igual ao castle.lua original: as luzes nascem com alpha 0 e só
+        // aparecem quando o evento CastleControl ('luz1'/'luz2'/'luz3') faz
+        // o tween de alpha. Sem isso, elas ficam em opacidade total o tempo
+        // todo assim que a Parte 2 do stage é ativada (Luz1 tem zIndex 10000,
+        // então cobre a tela inteira).
+        if (pLuz1 != null) pLuz1.alpha = 0;
+        if (pLuz2 != null) pLuz2.alpha = 0;
+        if (pLuz3 != null) pLuz3.alpha = 0;
+
+        // Começa na Parte 1, igual ao original. Isso roda ANTES de criar o
+        // "Dark" de propósito: se algo der errado lá embaixo, o stage pelo
+        // menos já fica com a visibilidade certa em vez de mostrar as duas
+        // partes sobrepostas (bug feio e confuso de debugar).
+        setPart(1);
+
+        // "Dark": retângulo preto full-screen, igual ao makeGraphic do Lua.
+        // Não existe como prop no Castle.json (não tem imagem), então criamos
+        // direto no código. Em try/catch: se a API mudar de nome nessa versão
+        // do engine, prefiro perder só o efeito "dark" a travar o stage inteiro.
+        //
+        // Começa OPACO de propósito: cobre o frame inicial onde os personagens
+        // ainda estão nas posições erradas antes dos scripts corrigirem tudo.
+        // Some suave assim que a contagem regressiva começa (onCountdownStart).
+        try
+        {
+            pDark = new FlxSprite(-2000, -2000);
+            pDark.makeGraphic(6000, 6000, FlxColor.BLACK);
+            pDark.scrollFactor.set(0, 0);
+            pDark.alpha = 1;
+            add(pDark);
+        }
+        catch (e:Dynamic)
+        {
+            trace('CastleStage: falhou ao criar o sprite Dark: ' + e);
+            pDark = null;
+        }
+
+        introBlackApplied = false;
+        introBlackCleared = false;
+        songStarted = false;
+        applyIntroBlack();
+    }
+
+    // Uses a CAMERA fade rather than a sprite on purpose. `pDark` is a stage member and
+    // Stage.refresh() sorts members by zIndex (SortUtil.byZIndex); pDark is created with
+    // the default zIndex 0, while the characters carry 50/200/300 from Castle.json, so a
+    // sprite can never black the whole game camera out without also changing where the
+    // 50 'CastleControl dark' events land. camGame.fade() draws over the entire viewport
+    // after everything else, so it is immune to z-order and touches nothing else --
+    // camGame's fade channel is otherwise unused in this project, and `flash` (used by
+    // Screen Flash) is a separate channel.
+    function applyIntroBlack():Void
+    {
+        if (introBlackApplied) return;
+        if (PlayState.instance == null || PlayState.instance.camGame == null) return;
+
+        // FadeIn = false ramps to the colour and HOLDS it once complete.
+        PlayState.instance.camGame.fade(FlxColor.BLACK, 0.000001, false, null, true);
+        introBlackApplied = true;
+    }
+
+    override function onUpdate(event:UpdateScriptEvent):Void
+    {
+        super.onUpdate(event);
+
+        // Every frame, not just on part change: the limits depend on the live zoom and
+        // tilt angle, both of which the chart animates.
+        updateCameraBounds();
+
+        if (introBlackCleared) return;
+
+        // camGame may not exist yet during onCreate, so keep trying until it takes.
+        applyIntroBlack();
+        if (!introBlackApplied || Conductor.instance == null) return;
+        if (!songStarted) return;
+        if (Conductor.instance.songPosition <= introBlackUntilMs) return;
+
+        introBlackCleared = true;
+        // FadeIn = true ramps back from the colour to fully clear.
+        PlayState.instance.camGame.fade(FlxColor.BLACK, introRevealSecs, true, null, true);
+    }
+
+    override function onSongRetry(event:ScriptEvent):Void
+    {
+        super.onSongRetry(event);
+        introBlackApplied = false;
+        introBlackCleared = false;
+        applyIntroBlack();
+    }
+
+    override function onSongStart(event:ScriptEvent):Void
+    {
+        super.onSongStart(event);
+        // From here on Conductor.songPosition belongs to THIS song (it starts near 0).
+        songStarted = true;
+        if (pDark != null)
+        {
+            FlxTween.cancelTweensOf(pDark);
+            FlxTween.tween(pDark, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
+        }
+    }
+
+    function setPart(part:Int):Void
+    {
+        var part1On:Bool = (part == 1);
+        var part2On:Bool = (part == 2);
+
+        if (pSky2 != null) pSky2.visible = part1On;
+        if (pPlace2 != null) pPlace2.visible = part1On;
+        if (pVidrio != null) pVidrio.visible = part1On;
+
+        if (pSky != null) pSky.visible = part2On;
+        if (pPlace != null) pPlace.visible = part2On;
+        if (pInkfall != null) pInkfall.visible = part2On;
+        if (pForeground != null) pForeground.visible = part2On;
+        if (pLuz1 != null) pLuz1.visible = part2On;
+        if (pLuz2 != null) pLuz2.visible = part2On;
+        if (pLuz3 != null) pLuz3.visible = part2On;
+
+        // place2 / place are the layers that actually END. The sky behind them is much
+        // larger, which is exactly why the leak read as a flat navy band rather than as
+        // a hole: it was Sky2's fill colour showing past the edge of the room.
+        boundsProp = part1On ? pPlace2 : pPlace;
+    }
+
+    // Keeps the camera viewport inside the current scenery so its edges never come on
+    // screen, instead of enlarging the artwork to chase the camera.
+    //
+    // Goes through FlxCamera's own scroll bounds: bindScrollPos() applies them inside
+    // the camera's update, after PlayState's follow has run, so this never fights the
+    // follow logic and needs no particular ordering here.
+    //
+    // Flixel's bounds are zoom-aware (they offset by viewMargin*), but NOT angle-aware,
+    // and CameraTilt rotates camGame by up to 5 degrees. A rotated viewport sweeps its
+    // own bounding box, so that extra margin is taken off the limits by hand — without
+    // it the corners still clip past the scenery while tilted.
+    function updateCameraBounds():Void
+    {
+        if (PlayState.instance == null || boundsProp == null) return;
+
+        var cam = PlayState.instance.camGame;
+        if (cam == null) return;
+
+        var z:Float = cam.zoom;
+        if (z <= 0) return;
+
+        var viewW:Float = cam.width / z;
+        var viewH:Float = cam.height / z;
+
+        var r:Float = Math.abs(cam.angle) * Math.PI / 180;
+        var ca:Float = Math.cos(r);
+        var sa:Float = Math.sin(r);
+        var needW:Float = viewW * ca + viewH * sa;
+        var needH:Float = viewW * sa + viewH * ca;
+
+        var bx:Float = boundsProp.x;
+        var by:Float = boundsProp.y;
+        var bw:Float = boundsProp.width;
+        var bh:Float = boundsProp.height;
+
+        // If the scenery is smaller than what the camera needs, centre on it rather than
+        // let the clamp pin to one edge and put the whole shortfall on the other side.
+        if (bw < needW)
+        {
+            bx -= (needW - bw) / 2;
+            bw = needW;
+        }
+        if (bh < needH)
+        {
+            by -= (needH - bh) / 2;
+            bh = needH;
+        }
+
+        var mx:Float = (needW - viewW) / 2;
+        var my:Float = (needH - viewH) / 2;
+
+        cam.setScrollBoundsRect(bx + mx, by + my, bw - 2 * mx, bh - 2 * my, false);
+    }
+
+    override function onSongEvent(event:SongEventScriptEvent):Void
+    {
+        super.onSongEvent(event);
+        if (event == null || event.eventData == null) return;
+
+        var kind:String = event.eventData.eventKind;
+        if (kind == 'Change Part')
+        {
+            var v1:String = "";
+            try { v1 = event.eventData.getString('value1'); } catch (e:Dynamic) {}
+            if (v1 == '1') setPart(1);
+            else if (v1 == '2') setPart(2);
+            return;
+        }
+
+        if (kind == 'Stage Red')
+        {
+            handleStageRed(event);
+            return;
+        }
+
+        if (kind == 'CastleControl')
+        {
+            handleCastleControl(event);
+            return;
+        }
+    }
+
+    function handleStageRed(event:SongEventScriptEvent):Void
+    {
+        var v1:String = "";
+        try { v1 = event.eventData.getString('value1'); } catch (e:Dynamic) {}
+
+        var target:FlxColor = (v1 == 'on') ? 0xFFDD3333 : 0xFFFFFFFF;
+        var sprites = [pSky, pPlace, pInkfall, pForeground];
+        for (s in sprites)
+        {
+            if (s != null)
+            {
+                try { FlxTween.color(s, 1, s.color, target, {ease: FlxEase.quadInOut}); } catch (e:Dynamic) {}
+            }
+        }
+    }
+
+    function handleCastleControl(event:SongEventScriptEvent):Void
+    {
+        var v1:String = "";
+        var v2:String = "";
+        try { v1 = event.eventData.getString('value1'); } catch (e:Dynamic) {}
+        try { v2 = event.eventData.getString('value2'); } catch (e:Dynamic) {}
+        var data:Array<String> = v2.split(',');
+
+        if (v1 == 'blackout')
+        {
+            var aliasKey:String = data.length > 0 ? data[0] : '';
+            var bAlpha:Float = data.length > 1 ? Std.parseFloat(data[1]) : 1;
+            var bTime:Float = data.length > 2 ? Std.parseFloat(data[2]) : 0.5;
+            if (isNan(bAlpha)) bAlpha = 1;
+            if (isNan(bTime)) bTime = 0.5;
+
+            var target:FlxSprite = null;
+            if (aliasKey == 'bf' || aliasKey == 'boyfriend') target = getBoyfriend();
+            else if (aliasKey == 'dad') target = getDad();
+            else if (aliasKey == 'gf') target = getGirlfriend();
+            if (target == null) return;
+
+            // toMult 1 = cor normal, 0 = preto total (mesma ideia do multiplicador
+            // do colorTransform no Lua; aqui usamos o tint/color do FlxSprite,
+            // que funciona como multiplicador de cor igualzinho).
+            var toMult:Float = 1 - bAlpha;
+            var toColor:FlxColor = FlxColor.fromRGBFloat(toMult, toMult, toMult);
+            FlxTween.color(target, bTime, target.color, toColor, {ease: FlxEase.linear});
+            return;
+        }
+
+        // dark / luz1 / luz2 / luz3 / mist1 / mist2 — todos passam primeiro
+        // pelo crossfade do Foreground, igual ao Lua original.
+        var alpha:Float = data.length > 0 ? Std.parseFloat(data[0]) : 1;
+        var time:Float = data.length > 1 ? Std.parseFloat(data[1]) : 0.5;
+        if (isNan(alpha)) alpha = 1;
+        if (isNan(time)) time = 0.5;
+
+        if (pForeground != null)
+        {
+            // Simplificação: só o alpha (0 = "sumido", 1 = visível). No Lua
+            // original ele também escondia (visible=false) depois do fade-out
+            // por otimização, mas isso é puramente cosmético/perf — não muda
+            // o resultado visual, então deixei de fora pra não arriscar a
+            // sintaxe de callback onComplete sem poder testar no engine.
+            pForeground.visible = true;
+            FlxTween.tween(pForeground, {alpha: alpha > 0 ? 0 : 1}, 1, {ease: FlxEase.linear});
+        }
+
+        switch (v1)
+        {
+            case 'dark':
+                if (pDark != null) FlxTween.tween(pDark, {alpha: alpha}, time, {ease: FlxEase.linear});
+            case 'luz1':
+                if (pLuz1 != null) FlxTween.tween(pLuz1, {alpha: alpha}, time, {ease: FlxEase.linear});
+            case 'luz2':
+                if (pLuz2 != null) FlxTween.tween(pLuz2, {alpha: alpha}, time, {ease: FlxEase.linear});
+            case 'luz3':
+                if (pLuz3 != null) FlxTween.tween(pLuz3, {alpha: alpha}, time, {ease: FlxEase.linear});
+            case 'mist1', 'mist2':
+                // sem sprite/arte no mod original — ignorado com segurança.
+        }
+    }
+}

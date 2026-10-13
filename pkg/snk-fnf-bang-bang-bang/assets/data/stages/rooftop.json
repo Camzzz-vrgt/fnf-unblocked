@@ -1,0 +1,150 @@
+{
+ "version": "1.0.2",
+ "name": "rooftop",
+ "props": [
+  {
+   "assetPath": "stage/v2normalmoon",
+   "atlasSettings": null,
+   "name": "TheSky1",
+   "position": [-800, -400],
+   "scale": 1,
+   "scroll": [0, 0],
+   "startingAnimation": ""
+  },
+  {
+   "assetPath": "stage/v2buildings2",
+   "atlasSettings": null,
+   "name": "TheCity1",
+   "position": [-1000, -500],
+   "scale": 1,
+   "scroll": [0.1, 0.1],
+   "startingAnimation": "",
+   "zIndex": 1
+  },
+  {
+   "assetPath": "stage/v2normaltint2",
+   "atlasSettings": null,
+   "name": "TheTint1",
+   "position": [-800, -500],
+   "scale": 1,
+   "scroll": [0.5, 0.5],
+   "startingAnimation": "",
+   "zIndex": 2
+  },
+  {
+   "assetPath": "stage/v2buildings1",
+   "atlasSettings": null,
+   "name": "TheCity2",
+   "position": [-1000, -500],
+   "scale": 1,
+   "scroll": [0.35, 0.35],
+   "startingAnimation": "",
+   "zIndex": 3
+  },
+  {
+   "assetPath": "stage/v2normalstagelarger",
+   "atlasSettings": null,
+   "name": "TheStage",
+   "position": [-1000, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 4
+  },
+  {
+   "assetPath": "stage/v2normalstagelarger",
+   "atlasSettings": null,
+   "flipX": true,
+   "name": "TheStage (1)",
+   "position": [-3995, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 4
+  },
+  {
+   "assetPath": "stage/v2normalstagelarger",
+   "atlasSettings": null,
+   "flipX": true,
+   "name": "TheStage (1) (1)",
+   "position": [1997, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 4
+  },
+  {
+   "assetPath": "stage/v2normalglow",
+   "atlasSettings": null,
+   "name": "TheStage2",
+   "position": [-1000, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 20
+  },
+  {
+   "assetPath": "stage/v2normalglow",
+   "atlasSettings": null,
+   "flipX": true,
+   "name": "TheStage2 (1)",
+   "position": [-4000, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 20
+  },
+  {
+   "assetPath": "stage/v2normalglow",
+   "atlasSettings": null,
+   "flipX": true,
+   "name": "TheStage2 (1) (1)",
+   "position": [1998, -500],
+   "scale": 1,
+   "startingAnimation": "",
+   "zIndex": 20
+  },
+  {
+   "assetPath": "stage/v2normaltint1",
+   "atlasSettings": null,
+   "name": "TheTint2",
+   "position": [-800, -200],
+   "scale": 1,
+   "scroll": [0, 0.5],
+   "startingAnimation": "",
+   "zIndex": 1000
+  },
+  {
+   "assetPath": "stage/v2normaltint1",
+   "atlasSettings": null,
+   "name": "TheTint2 (1)",
+   "position": [-3801, -200],
+   "scale": 1,
+   "scroll": [0, 0.5],
+   "startingAnimation": "",
+   "zIndex": 1000
+  },
+  {
+   "assetPath": "stage/v2normaltint1",
+   "atlasSettings": null,
+   "name": "TheTint2 (2)",
+   "position": [2200, -200],
+   "scale": 1,
+   "scroll": [0, 0.5],
+   "startingAnimation": "",
+   "zIndex": 1000
+  }
+ ],
+ "characters": {
+  "bf": {
+   "cameraOffsets": [-100, -100],
+   "position": [1002, 1286],
+   "zIndex": 300
+  },
+  "dad": {
+   "cameraOffsets": [150, -100],
+   "position": [52, 1245],
+   "zIndex": 200
+  },
+  "gf": {
+   "cameraOffsets": [0, 0],
+   "position": [512, 1148],
+   "zIndex": 100
+  }
+ }
+}

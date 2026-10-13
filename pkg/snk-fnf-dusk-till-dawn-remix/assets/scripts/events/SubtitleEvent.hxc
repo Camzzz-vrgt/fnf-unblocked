@@ -1,0 +1,95 @@
+import funkin.play.event.SongEvent;
+import funkin.util.SubtitleEntry;
+import funkin.util.Constants;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import funkin.Preferences;
+import flixel.FlxG;
+import Assets;
+
+class SubtitlesSongEvent extends SongEvent {
+	public function new() {
+		super('Subtitles');
+	}
+
+	public override function handleEvent(data) {
+		if (Preferences.subtitles == false) return;
+		if (PlayState.instance?.subtitles == null) return;
+
+		var dur = data.getFloat('duration') ?? 4;
+		var end = Conductor.instance.songPosition + Conductor.instance.beatLengthMs*dur;
+
+		var line1 = data.getString('lyrics') ?? '';
+		var line2 = data.getString('lyrics2') ?? '';
+
+		var data = PlayState.instance.subtitles.subtitlesData;
+		var should = true;
+
+		if (data == null) data = [];
+		if (PlayState.instance.subtitles.assignedSound == null) PlayState.instance.subtitles.assignedSound = FlxG.sound.music;
+
+		var i = data.length;
+		for (a in data) if (a.start > Conductor.instance.songPosition) {
+			if (a.id < i) i = a.id;
+			if (line2 != '') a.id += 1;
+		}
+
+		if (i <= 1) {
+			var path = 'songs/' + PlayState.instance.currentSong.id + '/subtitles/song-lyrics';
+			if (PlayState.instance.currentVariation != Constants.DEFAULT_VARIATION)
+				path += '-' + PlayState.instance.currentVariation;
+			if (!Assets.exists(path)) data = [];
+		}
+
+		var text = line1;
+		if (line2 != '') text = line2;
+		var subt = new SubtitleEntry(
+			i,
+			Conductor.instance.songPosition,
+			end,
+			text
+		);
+		data.push(subt);
+		if (line2 != '') {
+			var subt2 = new SubtitleEntry(
+				i+1,
+				Conductor.instance.songPosition,
+				end,
+				line1
+			);
+			data.push(subt2);
+		}
+
+		PlayState.instance.subtitles.subtitlesData = data;
+	}
+
+	public function getTitle() {
+		return "Subtitles";
+	}
+
+	public function getEventSchema() {
+		return [
+			{
+				name: "lyrics",
+				title: "Line 1",
+				defaultValue: '',
+				type: "string"
+			},
+			{
+				name: "lyrics2",
+				title: "Line 2",
+				defaultValue: '',
+				type: "string"
+			},
+			{
+				name: "duration",
+				title: "Duration",
+				defaultValue: 4,
+				min: 0,
+				step: 0.25,
+				units: 'beats',
+				type: "float"
+			}
+		];
+	}
+}

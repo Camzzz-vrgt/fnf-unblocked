@@ -1,0 +1,34 @@
+import funkin.play.event.SongEvent;
+
+class CameraFollowPosEvent extends SongEvent
+{
+    public override function handleEvent(data) {
+        // Vazio de propósito — quem trata é o CowardIntroModule.hxc, via
+        // onSongEvent. Essa classe só registra 'Camera Follow Pos' pro engine.
+    }
+
+    public function getEventSchema() {
+        return [
+            {
+                name: "value1",
+                title: "X (vazio = solta e volta a seguir quem canta)",
+                defaultValue: "",
+                type: "string",
+            },
+            {
+                name: "value2",
+                title: "Y",
+                defaultValue: "",
+                type: "string",
+            }
+        ];
+    }
+
+    public function getTitle() {
+        return "Camera Follow Pos";
+    }
+
+    public function new() {
+        super('Camera Follow Pos');
+    }
+}

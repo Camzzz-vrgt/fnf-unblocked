@@ -1,0 +1,170 @@
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+
+class AnimationSuffixEvent extends SongEvent {
+    function new () {
+        super("AnimationSuffixEvent");
+    }
+
+    public override function getTitle() {
+        return "Animation Suffix Event";
+    }
+
+    public override function getEventSchema() {
+        return [
+            {
+                name : "target",
+                type : "enum",
+                title : "Target",
+                defaultValue : "bf",
+                keys: [
+                    'Player' => 'bf',
+                    'Opponent' => 'dad',
+                    'Girlfriend' => 'gf',
+                ]
+            },
+            {
+                name : "suffix",
+                title : "Suffix",
+                type : "string",
+            },
+            {
+                name: "onIdle",
+                type: "bool",
+                title: "Idle",
+                defaultValue : false,
+            },
+            {
+                name: "onSing",
+                type: "bool",
+                title: "Sing Poses",
+                defaultValue : true,
+
+            }
+        ];
+    }
+
+    public override function handleEvent(data) {
+
+    }
+}
+
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.play.notes.Strumline;
+import funkin.modding.module.Module;
+
+class AnimationSuffixEventHandler extends Module {
+
+    var singSuffix:String = '';
+    var isBFSingSuffix:Bool = false;
+    var isDADSingSuffix:Bool = false;
+    var DIRECTION_NAMES:Array<String> = ["LEFT", "DOWN", "UP", "RIGHT"];
+
+    public function new() {
+        super('AnimationSuffixEventHandler');
+    }
+
+    override function onSongEvent(event) {
+        super.onSongEvent(event);
+        var data = event.eventData;
+        if (data.eventKind == "AnimationSuffixEvent") {
+            var target = data.value.target;
+            var suffix = data.value.suffix;
+            var onIdle = data.value.onIdle;
+            var onSing = data.value.onSing;
+
+            singSuffix = data.value.suffix;
+
+            var dad = PlayState.instance.currentStage.getDad();
+            var boyfriend = PlayState.instance.currentStage.getBoyfriend();
+            var girlfriend = PlayState.instance.currentStage.getGirlfriend();
+
+            trace('--------------------------------------');
+            trace("Current Target: " + target);
+            trace("Play the suffix " + '"' + suffix  + '" on ' + target);
+            trace("Play on Idle?: " + onIdle);
+            trace("Play on Note Hit?: " + onSing);
+            switch (target) {
+                case "bf":
+                    if (onIdle) boyfriend.idleSuffix = suffix;
+                    isBFSingSuffix = onSing;
+                case "dad":
+                    if (onIdle) dad.idleSuffix = suffix;
+                    isDADSingSuffix = onSing;
+                case "gf":
+            }
+
+            trace('--------------------------------------');
+        }
+    }
+
+    function onNoteHit(event) {
+        super.onNoteHit(event);
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+
+        var dad = PlayState?.instance?.currentStage?.getDad();
+        var boyfriend = PlayState?.instance?.currentStage?.getBoyfriend();
+        if (event.note.noteData.getMustHitNote(Strumline.KEY_COUNT) && isBFSingSuffix) {
+
+            if (boyfriend == null) return;
+
+            var direction = DIRECTION_NAMES[event.note.direction];
+            var animToPlay = "sing" + direction + singSuffix;
+
+            if (!boyfriend.animation.getNameList().contains(animToPlay)) return;
+            boyfriend.ignoreExclusionPref = [];
+            boyfriend.canPlayOtherAnims = false;
+            boyfriend.animation.play(animToPlay, true);
+            boyfriend.applyAnimationOffsets(animToPlay);
+            FlxG.signals.postUpdate.addOnce(() -> boyfriend.canPlayOtherAnims = true);
+        }
+
+        if (!event.note.noteData.getMustHitNote(Strumline.KEY_COUNT) && isDADSingSuffix) {
+
+            if (dad == null) return;
+
+            var direction = DIRECTION_NAMES[event.note.direction];
+            var animToPlay = "sing" + direction + singSuffix;
+            if (!dad.animation.getNameList().contains(animToPlay)) return;
+            dad.ignoreExclusionPref = [];
+            dad.canPlayOtherAnims = false;
+            dad.animation.play(animToPlay, true);
+            dad.applyAnimationOffsets(animToPlay);
+            FlxG.signals.postUpdate.addOnce(() -> dad.canPlayOtherAnims = true);
+        }
+    }
+
+    override function onSongRetry(event) {
+        super.onSongRetry(event);
+        resetSuffixStuff();
+    }
+
+    override function onSongStart(event) {
+        super.onSongRetry(event);
+        resetSuffixStuff();
+    }
+
+    override function onSongEnd(event) {
+        super.onSongEnd(event);
+        resetSuffixStuff();
+    }
+
+    function resetSuffixStuff() {
+        isBFSingSuffix = false;
+        isDADSingSuffix = false;
+        if (PlayState.instance.currentStage.getDad() != null)
+        {
+            PlayState.instance.currentStage.getDad().idleSuffix = "";
+        }
+
+        if (PlayState.instance.currentStage.getBoyfriend() != null)
+        {
+        PlayState.instance.currentStage.getBoyfriend().idleSuffix = "";
+        }
+        if (PlayState.instance.currentStage.getGirlfriend() != null)
+        {
+            PlayState.instance.currentStage.getGirlfriend().idleSuffix = "";
+        }
+    }
+}

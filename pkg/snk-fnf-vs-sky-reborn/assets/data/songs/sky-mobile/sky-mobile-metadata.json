@@ -1,0 +1,34 @@
+{
+  "version": "2.2.4",
+  "songName": "Sky (Mobile Mix)",
+  "artist": "st4rcannon",
+  "charter": "st4rcannon",
+  "timeFormat": "ms",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0
+  },
+  "timeChanges": [
+    { "t": 0, "b": 0, "bpm": 180, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }
+  ],
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "characters": {
+      "player": "bf",
+      "girlfriend": "gf",
+      "opponent": "skymini",
+      "instrumental": "",
+      "altInstrumentals": [],
+      "opponentVocals": ["sky"],
+      "playerVocals": ["bf"]
+    },
+    "stage": "theShiftMini",
+    "noteStyle": "funkin",
+    "album": "skymobile",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.4"
+}

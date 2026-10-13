@@ -1,0 +1,101 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				134,
+				60
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "huggy left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				83,
+				-19
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "huggy down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-4
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "huggy right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				104,
+				128
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "huggy up"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "huggy idle"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-3,
+				-4
+			],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "huggy alt",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-2,
+				-4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "attack",
+			"loop": false,
+			"name": "huggy_attack"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/huggy_assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "hug",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		40,
+		117
+	],
+	"camera_position": [
+		0,
+		120
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

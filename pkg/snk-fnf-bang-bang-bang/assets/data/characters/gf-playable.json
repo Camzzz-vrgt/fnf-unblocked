@@ -1,0 +1,275 @@
+{
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"applyStageMatrix": false,
+	"startingAnimation": "idle",
+	"death": {
+		"cameraOffsets": [
+			-137,
+			125
+		]
+	},
+	"assetPath": "characters/GF_V3",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"shouldBop": true,
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "gf"
+	},
+	"version": "1.0.1",
+	"danceEvery": 1,
+	"scale": 1,
+	"flipX": true,
+	"name": "Girlfriend (Playable)",
+	"cameraOffsets": [
+		50,
+		40
+	],
+	"isPixel": false,
+	"singTime": 8,
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false,
+		"swfMode": true
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "gfDanceLeft",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "danceLeft",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-13,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "gfDanceRight",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "danceRight",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				26
+			],
+			"frameRate": 24,
+			"prefix": "gfUp",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				40,
+				-1
+			],
+			"frameRate": 24,
+			"prefix": "gfLeft",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-108,
+				-38
+			],
+			"frameRate": 24,
+			"prefix": "gfRight",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				2,
+				-30
+			],
+			"frameRate": 24,
+			"prefix": "gfDown",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-13,
+				39
+			],
+			"frameRate": 24,
+			"prefix": "gfMISSUp",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				42,
+				-32
+			],
+			"frameRate": 24,
+			"prefix": "gfMISSLeft",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-98,
+				-53
+			],
+			"frameRate": 24,
+			"prefix": "gfMISSRight",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singRIGHTmiss",
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-6,
+				-34
+			],
+			"frameRate": 24,
+			"prefix": "gfMISSDown",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"offsets": [
+				275,
+				33
+			],
+			"prefix": "gfTantrumStart",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "firstDeath",
+			"flipY": false,
+			"assetPath": "characters/GF_DeadAlt",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				276,
+				-349
+			],
+			"prefix": "gfTantrumLoop",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": true,
+			"name": "deathLoop",
+			"flipY": false,
+			"assetPath": "characters/GF_DeadAlt",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				302,
+				-349
+			],
+			"prefix": "gfTantrumConfirm",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "deathConfirm",
+			"flipY": false,
+			"assetPath": "characters/GF_DeadAlt",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-11,
+				-14
+			],
+			"prefix": "GFhey",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "GFhey",
+			"flipY": false,
+			"assetPath": "characters/ChibiGF-V2",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				145,
+				3
+			],
+			"prefix": "firstDeath",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "firstDeath-normal",
+			"flipY": false,
+			"assetPath": "characters/GF_Dead",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				85,
+				3
+			],
+			"prefix": "deathLoop",
+			"animType": "framelabel",
+			"flipX": false,
+			"name": "deathLoop-normal",
+			"looped": true,
+			"flipY": false,
+			"assetPath": "characters/GF_Dead",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				85,
+				3
+			],
+			"prefix": "deathConfirm",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "deathConfirm-normal",
+			"flipY": false,
+			"assetPath": "characters/GF_Dead",
+			"frameRate": 24
+		}
+	]
+}

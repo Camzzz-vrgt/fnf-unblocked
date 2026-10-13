@@ -1,0 +1,62 @@
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.util.MathUtil;
+import flixel.FlxG;
+import funkin.graphics.shaders.AdjustColorShader;
+import flixel.addons.display.FlxBackdrop;
+import funkin.Conductor;
+
+class TheShiftScenecore extends Stage {
+	var characterShader:AdjustColorShader;
+	var discoVariants:Int = 8;
+	var shaderHue:Int = 0;
+
+	public function new() {
+		super('theShiftScenecore');
+	}
+
+
+	override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
+		// Apply the shader automatically to each character as it gets added.
+		super.addCharacter(character, charType);
+		trace('Applied stage shader to ' + character.characterName);
+
+		characterShader = new AdjustColorShader();
+
+		characterShader.hue = -8;
+		characterShader.saturation = 10;
+		characterShader.contrast = 25;
+		characterShader.brightness = 0;
+
+		character.shader = characterShader;
+  }
+
+  function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		heartsOverlay = new FlxBackdrop((Paths.image('shift/erect/seamlessHearts')), 0x11, 0, 0);
+		heartsOverlay.velocity.set(125, 125);
+		heartsOverlay.y = -500;
+		heartsOverlay.alpha = 0.3;
+		heartsOverlay.zIndex = 600;
+		heartsOverlay.scale.set(1, 1);
+		heartsOverlay.blend = 0;
+		heartsOverlay.antialiasing = false;
+		heartsOverlay.updateHitbox();
+		add(heartsOverlay);
+	}
+	function onUpdate(elapsed:Float) {
+		super.onUpdate(elapsed);
+		shaderHue = Math.sin((Conductor.instance.songPosition / 400) * 1) * 50 - 15;
+		characterShader.hue = shaderHue;
+	}
+	function onCountdownStart(event:ScriptEvent) { 
+			super.onCountdownStart(event);
+			setupCharacterShaders();
+	}
+	function setupCharacterShaders(){
+		PlayState.instance.currentStage.getDad().shader = characterShader;
+		PlayState.instance.currentStage.getBoyfriend().shader = characterShader;
+		PlayState.instance.currentStage.getGirlfriend().shader = characterShader;
+	}
+}

@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "name": "Sky",
+  "ownedChars": ["sky-playable", "sky-dark", "sky-car", "sky-blazin"],
+  "showUnownedChars": false,
+  "unlocked": true,
+  "freeplayStyle": "sky",
+  "stickerPack": "skymixes",
+  "freeplayDJ": {
+    "assetPath": "freeplay/freeplay-sky",
+    "text1": "boyfriend, just give me a chance! pretty please?",
+    "text2": "PICK ME, FUK DAT HOE",
+    "text3": "SKY REBORN > YOUR FAV MOD",
+    "fistPump": {
+      "introStartFrame": 0,
+      "introEndFrame": 36,
+
+      "loopStartFrame": 36,
+      "loopEndFrame": -1,
+
+      "introBadStartFrame": 0,
+      "introBadEndFrame": 36,
+
+      "loopBadStartFrame": 36,
+      "loopBadEndFrame": -1
+    },
+    "charSelect": {
+      "transitionDelay": 0.67
+    },
+    "animations": [
+      {
+        "name": "intro",
+        "prefix": "Sky DJ enter",
+        "offsets": [10, 294]
+      },
+      {
+        "name": "idle",
+        "prefix": "Sky DJ",
+        "offsets": [10, 290]
+      },
+      {
+        "name": "confirm",
+        "prefix": "Sky DJ Confirm",
+        "offsets": [10, 242]
+      },
+      {
+        "name": "fistPump",
+        "prefix": "Sky DJ Fistpump",
+        "offsets": [10, 233.5]
+      },
+      {
+        "name": "loss",
+        "prefix": "Sky DJ Fistpump fucked up",
+        "offsets": [10, 255]
+      },
+      {
+        "name": "charSelect",
+        "prefix": "Sky DJ exit",
+        "offsets": [10, 218]
+      }
+    ]
+  },
+  "charSelect": {
+    "position": 7,
+    "gf": {
+      "assetPath": "charSelect/invisibleChill",
+      "animInfoPath": "charSelect/invisibleAnimInfo",
+      "visualizer": false
+    }
+  },
+  "results": {
+    "music": {
+      "PERFECT_GOLD": "resultsPERFECT-sky",
+      "PERFECT": "resultsPERFECT-sky",
+      "EXCELLENT": "resultsEXCELLENT-sky",
+      "GREAT": "resultsNORMAL-sky",
+      "GOOD": "resultsNORMAL-sky",
+      "SHIT": "resultsSHIT-sky"
+    },
+    "perfectGold": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsPERFECT", "zIndex": 500, "scale": 1, "offsets": [200, -250], "looped": true, "loopFrame": 280} ],
+    "perfect": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsPERFECT", "zIndex": 500, "scale": 1, "offsets": [200, -250], "looped": true, "loopFrame": 280} ],
+    "excellent": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsEXCELLENT", "zIndex": 500, "scale": 1, "offsets": [780, 150], "looped": true, "loopFrame": 0} ],
+    "great": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsGOOD", "zIndex": 500, "scale": 0.85, "offsets": [610, -317], "looped": true, "loopFrame": 174} ],
+    "good": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsGOOD", "zIndex": 500, "scale": 0.85, "offsets": [610, -317], "looped": true, "loopFrame": 174} ],
+    "loss": [ {"renderType": "animateatlas", "assetPath": "shared:resultScreen/results-sky/resultsSHIT", "zIndex": 500, "scale": 1.1, "offsets": [710, 240], "looped": true, "loopFrame": 37} ]
+  }
+}

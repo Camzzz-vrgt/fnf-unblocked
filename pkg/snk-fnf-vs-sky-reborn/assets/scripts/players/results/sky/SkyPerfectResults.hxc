@@ -1,0 +1,46 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.math.FlxPoint;
+import funkin.util.HapticUtil;
+import flixel.tweens.FlxTween;
+
+class SkyPerfectResults extends FlxAtlasSprite
+{
+  
+
+  function new(x:Float, y:Float)
+  {
+    super(x, y, Paths.animateAtlas("resultScreen/results-sky/resultsPERFECT", "shared"),
+      {
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
+
+      var resultState:ResultState = FlxG.state;
+      var blackFlash:FunkinSprite = new FunkinSprite(0, 0).makeSolidColor(FlxG.width, FlxG.height, 0x33000000);
+      while (resultState.subState != null)
+      {
+        resultState = resultState.subState;
+      }
+
+
+      resultState.add(blackFlash);
+      blackFlash.zIndex = 1000;
+      blackFlash.visible = false;
+
+    onAnimationFrame.add((animation:String, frame:Int) -> {
+      if (!HapticUtil.hapticsAvailable) return;
+
+      // Pico shoots.
+      if (frame == 45) HapticUtil.vibrate(0, 0.01, 0.8);
+      blackFlash.visible = true;
+      blackFlash.alpha = 1;
+      FlxTween.tween(blackFlash, { alpha: 0 }, 1);
+      
+      // The targets explode.
+      if (frame == 50) HapticUtil.vibrate(0.1, 0.1, 1);
+    });
+  }
+}
