@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				1,
+				-20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "EpicoF idle"
+		},
+		{
+			"offsets": [
+				15,
+				-31
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "EpicoF left"
+		},
+		{
+			"offsets": [
+				-118,
+				-7
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "EpicoF right"
+		},
+		{
+			"offsets": [
+				-159,
+				147
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "EpicoF up"
+		},
+		{
+			"offsets": [
+				-40,
+				-40
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "EpicoF down"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/EpicoF",
+	"position": [
+		-300,
+		-20
+	],
+	"healthicon": "icon-pico-erect",
+	"flip_x": false,
+	"healthbar_colors": [
+		183,
+		216,
+		85
+	],
+	"camera_position": [
+		150,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

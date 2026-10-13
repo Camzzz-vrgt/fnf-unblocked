@@ -1,0 +1,89 @@
+{
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"position": [
+		1500,
+		-300
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/marvin-shucks-shadow",
+	"sing_duration": 4,
+	"healthicon": "marvin-shucks-shadow",
+	"flip_x": true,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "i"
+        },
+        {
+            "offsets": [
+                0,
+                90
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "u"
+        },
+        {
+            "offsets": [
+                50,
+                50
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "l"
+        },
+        {
+            "offsets": [
+                0,
+                15
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "r"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "d"
+        },
+        {
+            "offsets": [
+                45,
+                40
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "anim",
+            "indices": [],
+            "name": "n"
+        }
+    ]
+}

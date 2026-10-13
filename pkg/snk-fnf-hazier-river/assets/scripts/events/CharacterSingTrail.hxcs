@@ -1,0 +1,181 @@
+import funkin.play.event.SongEvent;
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.group.FlxTypedSpriteGroup;
+
+using funkin.util.AnsiUtil;
+
+// this adds a toggleable trail effect
+class CharacterSingTrails extends SongEvent
+{
+  /**
+   * The default trail target.
+   */
+  public static final DEFAULT_TARGET:String = 'bf';
+
+  /**
+   * The default "active" value.
+   */
+  public static final DEFAULT_ACTIVE:Bool = true;
+
+  public function new()
+  {
+    super('CharacterSingTrails');
+  }
+
+  override public function getTitle():String
+  {
+    return 'Character Trail Event';
+  }
+
+  var bfTrail:FlxTypedSpriteGroup;
+  var bfSpawnTimer:Float = 0;
+  var bfChar:BaseCharacter;
+
+  function onCountdownStart()
+  {
+    var curStage = PlayState.instance.currentStage;
+
+    if (curStage.getBoyfriend() != null)
+    {
+      var char = curStage.getBoyfriend();
+      if (char.trailChar != null) char = curStage.getBoyfriend().trailChar;
+
+      bfChar = char;
+
+      if (bfTrail == null)
+      {
+        bfTrail = new FlxTypedSpriteGroup();
+        bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1;
+        curStage.add(bfTrail);
+      }
+    }
+  }
+
+  function onSongRetry()
+  {
+    bfSpawnTimer = 0;
+  }
+
+  override function handleEvent(ev)
+  {
+    var target = ev.getString('target') ?? DEFAULT_TARGET;
+    var isActive = ev.getBool('isActive');
+    trace('${" HAZIER RIVER ".bold().bg_bright_cyan()} Set ${target}Trail to ${(isActive ? 'visible' : 'invisible')}');
+
+    switch (target)
+    {
+      case 'bf':
+        spawnBFClone();
+        bfSpawnTimer = (isActive ? 1 : 0);
+        //     bfTrail.alpha = (isActive ? 0.35 : 0);
+        // case 'gf':
+        //     gfTrail.alpha = (isActive ? 0.35 : 0);
+        // case 'dad':
+        //     dadTrail.alpha = (isActive ? 0.35 : 0);
+    }
+  }
+
+  var bfElapsed:Float = 0;
+
+  function onUpdate(ev)
+  {
+    if (bfSpawnTimer > 0)
+    {
+      bfElapsed += ev.elapsed;
+
+      if (bfElapsed >= Conductor.instance.stepLengthMs / 1000)
+      {
+        bfElapsed = 0;
+
+        spawnBFClone();
+      }
+    }
+  }
+
+  function onDestroy()
+  {
+    bfTrail = null;
+    bfSpawnTimer = 0;
+  }
+
+  function spawnBFClone()
+  {
+    var copy:FunkinSprite;
+    var recycled:Bool = false;
+
+    for (i in bfTrail.members)
+    {
+      if (!i.alive)
+      {
+        recycled = true;
+        copy = i;
+        i.revive();
+        // trace('recycled sprite! ${bfTrail.length}');
+      }
+    }
+
+    if (!recycled)
+    {
+      copy = new FunkinSprite(bfChar.x, bfChar.y);
+      copy.frames = bfChar.frames;
+      copy.color = 0x66FFFF;
+      bfTrail.add(copy);
+    }
+
+    var curOffsets = bfChar.animationOffsets[bfChar.animation.curAnim.name];
+    copy.x = bfChar.x;
+    copy.offset.x = curOffsets[0];
+    copy.y = bfChar.y;
+    copy.offset.y = curOffsets[1];
+
+    copy.animation.frameIndex = bfChar.animation.frameIndex;
+    copy.alpha = 1;
+    var moveAmount = 60;
+    var xx = 0;
+    var yy = 0;
+
+    switch (bfChar.animation.curAnim.name)
+    {
+      case 'singDOWN':
+        yy = moveAmount;
+      case 'singUP':
+        yy = -moveAmount;
+      case 'singLEFT':
+        xx = -moveAmount;
+      case 'singRIGHT':
+        xx = moveAmount;
+    }
+
+    FlxTween.tween(copy, {x: copy.x + xx, y: copy.y + yy, alpha: 0}, Conductor.instance.beatLengthMs / 1000 * 2,
+      {
+        ease: FlxEase.circOut,
+        onComplete: function() {
+          copy.kill(); // can't destroy it for some reason so now we recycling them >:(
+        }
+      });
+  }
+
+  function getEventSchema()
+  {
+    return [
+      {
+        name: 'target',
+        title: 'Target',
+        type: 'enum',
+        defaultValue: DEFAULT_TARGET,
+        keys: ['Boyfriend' => 'bf', 'Girlfriend' => 'gf', 'Dad' => 'dad']
+      },
+      {
+        name: 'isActive',
+        title: 'Active?',
+        defaultValue: DEFAULT_ACTIVE,
+        type: 'bool'
+      }
+    ];
+  }
+}

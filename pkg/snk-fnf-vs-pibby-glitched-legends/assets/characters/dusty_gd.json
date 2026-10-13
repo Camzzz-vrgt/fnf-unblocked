@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				236,
+				110
+			],
+			"indices": [],
+			"fps": 42,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "dusty_pibby_right instancia "
+		},
+		{
+			"offsets": [
+				760,
+				140
+			],
+			"indices": [],
+			"fps": 42,
+			"anim": "singUP",
+			"loop": false,
+			"name": "dusty_pibby_up instancia "
+		},
+		{
+			"offsets": [
+				950,
+				253
+			],
+			"indices": [],
+			"fps": 42,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "dusty_pibby_down instancia "
+		},
+		{
+			"offsets": [
+				490,
+				400
+			],
+			"indices": [],
+			"fps": 42,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "dusty_pibby_left instancia "
+		},
+		{
+			"offsets": [
+				20,
+				10
+			],
+			"indices": [],
+			"fps": 26,
+			"anim": "idle",
+			"loop": true,
+			"name": "dusty_pibby_idle instancia "
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dtdustty_pibby",
+	"position": [
+		20,
+		30
+	],
+	"healthicon": "dusty_corrupted",
+	"flip_x": false,
+	"healthbar_colors": [
+		141,
+		147,
+		207
+	],
+	"camera_position": [
+		-990,
+		-570
+	],
+	"sing_duration": 6.1,
+	"scale": 1.6
+}

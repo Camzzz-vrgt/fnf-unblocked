@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				-62
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "WhatYouKnowAboutRollingDownInTheDeep",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-110,
+				-20
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "timmy_idle"
+		},
+		{
+			"offsets": [
+				-116,
+				400
+			],
+			"loop": false,
+			"fps": 32,
+			"anim": "singUP",
+			"indices": [],
+			"name": "timmy_up"
+		},
+		{
+			"offsets": [
+				510,
+				-80
+			],
+			"loop": false,
+			"fps": 32,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "timmy_down"
+		},
+		{
+			"offsets": [
+				291,
+				40
+			],
+			"loop": false,
+			"fps": 32,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "timmy_left"
+		},
+		{
+			"offsets": [
+				-70,
+				287
+			],
+			"loop": false,
+			"fps": 32,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "timmy_right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/timmy_pibby_turner",
+	"position": [
+		-150,
+		-130
+	],
+	"healthicon": "tymmy",
+	"flip_x": false,
+	"healthbar_colors": [
+		190,
+		60,
+		175
+	],
+	"camera_position": [
+		-520,
+		-97
+	],
+	"sing_duration": 6.1,
+	"scale": 1.45
+}

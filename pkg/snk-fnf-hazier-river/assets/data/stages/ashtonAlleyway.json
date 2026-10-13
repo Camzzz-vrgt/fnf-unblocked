@@ -1,0 +1,115 @@
+{
+  "version": "1.0.2",
+  "name": "ashtonAlleyway",
+  "props": [
+    {
+      "assetPath": "AshtonAlleyway/bgstars",
+      "name": "bgstars",
+      "position": [-789, -339],
+      "scale": 0.75,
+      "scroll": [0.1, 0.1],
+      "zIndex": 1
+    },
+    {
+      "assetPath": "AshtonAlleyway/dayburn buildings",
+      "name": "dayburn buildings",
+      "position": [-784, -345],
+      "scale": 0.75,
+      "scroll": [0.35, 0.35],
+      "zIndex": 2
+    },
+    {
+      "assetPath": "AshtonAlleyway/hill asf",
+      "name": "hill asf",
+      "position": [-791, -341],
+      "scale": 0.75,
+      "scroll": [0.5, 0.5],
+      "zIndex": 2
+    },
+    {
+      "assetPath": "AshtonAlleyway/bench n road",
+      "name": "bench n road",
+      "position": [-783, -341],
+      "scale": 0.75,
+      "scroll": [0.6, 0.6],
+      "zIndex": 3
+    },
+    {
+      "assetPath": "AshtonAlleyway/mediocre cinema",
+      "name": "mediocre cinema",
+      "position": [-762, -339],
+      "scale": 0.75,
+      "scroll": [0.75, 0.75],
+      "zIndex": 4
+    },
+    {
+      "assetPath": "AshtonAlleyway/bg buildings",
+      "name": "bg buldings",
+      "position": [-792, -347],
+      "scale": 0.75,
+      "scroll": [0.85, 0.85],
+      "zIndex": 6
+    },
+    {
+      "assetPath": "AshtonAlleyway/blue ambient shader",
+      "blend": "add",
+      "name": "blueshader",
+      "position": [-733, -398],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 7
+    },
+    {
+      "assetPath": "AshtonAlleyway/lampost",
+      "name": "lamposts",
+      "position": [-787, -345],
+      "scale": 0.75,
+      "scroll": [0.9, 0.9],
+      "zIndex": 8
+    },
+    {
+      "assetPath": "AshtonAlleyway/foreground",
+      "name": "foreground",
+      "position": [-792, -340],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 10
+    },
+    {
+      "assetPath": "AshtonAlleyway/lamp lightsADD",
+      "blend": "add",
+      "name": "lamp lights",
+      "position": [-785, -357],
+      "scale": 0.75,
+      "scroll": [0.9, 0.9],
+      "zIndex": 50
+    },
+    {
+      "assetPath": "AshtonAlleyway/vingette i think",
+      "blend": "hardlight",
+      "name": "vingette",
+      "position": [-781, -360],
+      "scale": [0.75, 1],
+      "zIndex": 60
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-100, -70],
+      "position": [989.5, 785],
+      "zIndex": 40
+    },
+    "dad": {
+      "cameraOffsets": [100, -70],
+      "position": [180, 785],
+      "zIndex": 40
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [651.5, 687],
+      "zIndex": 30
+    }
+  },
+  "cameraZoom": 0.9,
+  "directory": "shared"
+}

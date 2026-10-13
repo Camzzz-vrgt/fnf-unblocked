@@ -1,0 +1,100 @@
+{
+	"healthbar_colors": [
+		190,
+		94,
+		43
+	],
+	"position": [
+		100,
+		-50
+	],
+	"no_antialiasing": false,
+	"scale": 0.4,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/detg-run",
+	"sing_duration": 4,
+	"healthicon": "detg",
+	"flip_x": false,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "i"
+        },
+        {
+            "offsets": [
+                -53,
+                213
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "u"
+        },
+        {
+            "offsets": [
+                203,
+                -8
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "l"
+        },
+        {
+            "offsets": [
+                -131,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "r"
+        },
+        {
+            "offsets": [
+                -150,
+                -82
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "d"
+        },
+        {
+            "offsets": [
+                350,
+                75
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "fall",
+            "indices": [],
+            "name": "fall"
+        },
+        {
+            "offsets": [
+                306,
+                265
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "intro",
+            "indices": [],
+            "name": "start"
+        }
+    ]
+}

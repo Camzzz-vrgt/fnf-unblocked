@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				65,
+				90
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BFJ idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				55,
+				114
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BFJ left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				99
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BFJ down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				104,
+				107
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BFJ up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				22,
+				123
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BFJ right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				105,
+				94
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "BFJ missleft"
+		},
+		{
+			"offsets": [
+				12,
+				123
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "BFJ missright"
+		},
+		{
+			"offsets": [
+				101,
+				84
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "BFJ missup"
+		},
+		{
+			"offsets": [
+				80,
+				99
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "BFJ missdown"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/BFJ",
+	"position": [
+		-150,
+		90
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		210,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

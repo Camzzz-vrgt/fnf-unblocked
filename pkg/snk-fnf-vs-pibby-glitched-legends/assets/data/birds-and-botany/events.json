@@ -1,0 +1,104 @@
+{
+	"song": {
+		"speed": 3.5,
+		"stage": "garden",
+		"player1": "bf_pibby",
+		"player2": "missingcharacter",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Camera Follow Pos",
+						"-900",
+						"-100"
+					]
+				]
+			],
+			[
+				115.384615384615,
+				[
+					[
+						"Black flash",
+						"35",
+						""
+					],
+					[
+						"Set Cam Zoom",
+						"0.9",
+						""
+					]
+				]
+			],
+			[
+				24000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				28178.5714285714,
+				[
+					[
+						"Black flash",
+						"15",
+						""
+					]
+				]
+			],
+			[
+				47653.8461538461,
+				[
+					[
+						"Set Cam Zoom",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				47769.2307692308,
+				[
+					[
+						"Flash Camera",
+						"5",
+						""
+					]
+				]
+			],
+			[
+				47884.6153846154,
+				[
+					[
+						"Change Character",
+						"gf",
+						"peashooter_pibby"
+					]
+				]
+			],
+			[
+				47942.3076923077,
+				[
+					[
+						"Change Character",
+						"dad",
+						"red_pibby"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "missingcharacter",
+		"bpm": 140,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "birds-and-botany"
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-10,
+				-250
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "pico_pibby_idle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-140
+			],
+			"anim": "attack",
+			"fps": 52,
+			"name": "pico_pibby_attack",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-120,
+				-280
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "pico_pibby_right"
+		},
+		{
+			"offsets": [
+				-30,
+				-250
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singUP",
+			"loop": false,
+			"name": "pico_pibby_up"
+		},
+		{
+			"offsets": [
+				-30,
+				-290
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "pico_pibby_down"
+		},
+		{
+			"offsets": [
+				50,
+				-270
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "pico_pibby_left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pico_pibby",
+	"position": [
+		-50,
+		0
+	],
+	"healthicon": "pico_pibby",
+	"flip_x": false,
+	"healthbar_colors": [
+		207,
+		238,
+		52
+	],
+	"camera_position": [
+		-110,
+		220
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

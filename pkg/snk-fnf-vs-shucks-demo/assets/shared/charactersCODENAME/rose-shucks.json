@@ -1,0 +1,122 @@
+{
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"position": [
+		785,
+		-530
+	],
+	"no_antialiasing": false,
+	"scale": 1.2,
+	"camera_position": [
+		400,
+		200
+	],
+	"image": "characters/rose-shucks",
+	"sing_duration": 4,
+	"healthicon": "rose-shucks",
+	"flip_x": false,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 12,
+            "anim": "idle-left",
+            "indices": [],
+            "name": "idleleft"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 12,
+            "anim": "idle-right",
+            "indices": [],
+            "name": "idleright"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "left"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "right"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "up"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "down"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 12,
+            "anim": "look-left",
+            "indices": [],
+            "name": "lookleft"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 12,
+            "anim": "look-right",
+            "indices": [],
+            "name": "lookright"
+        },
+        {
+            "offsets": [
+                -49,
+                -384
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "voiceline",
+            "indices": [],
+            "name": "voiceline"
+        }
+    ]
+}

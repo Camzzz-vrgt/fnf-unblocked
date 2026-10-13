@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				90
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "Bfdeathp death",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				90
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Bfdeathp confirm",
+			"indices": []
+		},
+		{
+			"offsets": [
+				50,
+				90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "Bfdeathp loop"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Bfdeathp",
+	"position": [
+		-610,
+		-50
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-310,
+		-40
+	],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

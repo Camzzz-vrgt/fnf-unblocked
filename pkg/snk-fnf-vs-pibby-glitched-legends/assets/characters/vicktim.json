@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-81,
+				-20
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "vicky_attack"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				-10
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "vicky_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-170,
+				20
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "vicky_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				40
+			],
+			"anim": "singUP",
+			"fps": 20,
+			"name": "vicky_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-200,
+				-23
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "vicky_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-138,
+				50
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "vicky_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-420,
+				-20
+			],
+			"anim": "attack",
+			"fps": 24,
+			"name": "vicky_attack",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/vicky_pibby",
+	"position": [
+		-140,
+		30
+	],
+	"healthicon": "timvickicon",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		0
+	],
+	"camera_position": [
+		-1030,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

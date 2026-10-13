@@ -1,0 +1,122 @@
+{
+	"healthbar_colors": [
+		174,
+		33,
+		27
+	],
+	"position": [
+		1450,
+		730
+	],
+	"no_antialiasing": false,
+	"scale": 1.15,
+	"camera_position": [
+		700,
+		550
+	],
+	"image": "characters/marvin-shucks-chair",
+	"sing_duration": 4,
+	"healthicon": "marvin-shucks-bloody",
+	"flip_x": true,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "i"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "u"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "l"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "r"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "d"
+        },
+        {
+            "offsets": [
+                -3,
+                425
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUPmiss",
+            "indices": [],
+            "name": "mu"
+        },
+        {
+            "offsets": [
+                48,
+                319
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFTmiss",
+            "indices": [],
+            "name": "ml"
+        },
+        {
+            "offsets": [
+                11,
+                281
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHTmiss",
+            "indices": [],
+            "name": "mr"
+        },
+        {
+            "offsets": [
+                33,
+                206
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWNmiss",
+            "indices": [],
+            "name": "md"
+        }
+    ]
+}

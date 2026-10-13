@@ -1,0 +1,257 @@
+{
+	"song": {
+		"song": "TONE IT DOWN",
+		"notes": [],
+		"events": [
+			[
+				68000,
+				[
+					[
+						"Play Animation",
+						"drinky",
+						"dad"
+					]
+				]
+			],
+			[
+				70000,
+				[
+					[
+						"blinds",
+						"",
+						""
+					]
+				]
+			],
+			[
+				71000,
+				[
+					[
+						"changetown",
+						"",
+						""
+					]
+				]
+			],
+			[
+				76439.5424836601,
+				[
+					[
+						"Change Character",
+						"dad",
+						"bigrascal"
+					],
+					[
+						"Change Character",
+						"bf",
+						"nobf"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					]
+				]
+			],
+			[
+				76522.8758169935,
+				[
+					[
+						"unblinds",
+						"",
+						""
+					],
+					[
+						"rocks",
+						"",
+						""
+					],
+					[
+						"Add Camera Zoom",
+						"0.05",
+						"0.05"
+					],
+					[
+						"Screen Shake",
+						"8, 0.005",
+						"8, 0.005"
+					],
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"0"
+					]
+				]
+			],
+			[
+				99856.2091503267,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100189.54248366,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				100522.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				103189.54248366,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				105189.54248366,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				105522.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				105856.209150327,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				117856.209150327,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				118522.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				118856.209150327,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				119189.54248366,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				128522.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				129022.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				129522.875816993,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				129856.209150327,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				131500,
+				[
+					[
+						"blinds",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"bpm": 120,
+		"needsVoices": true,
+		"speed": 2.2,
+		"player1": "bf",
+		"player2": "lilrascal",
+		"player3": null,
+		"gfVersion": "gf",
+		"stage": "legacy",
+		"validScore": false
+	}
+}

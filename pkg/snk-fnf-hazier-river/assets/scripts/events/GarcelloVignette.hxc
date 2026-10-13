@@ -1,0 +1,114 @@
+import funkin.play.event.SongEvent;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+import flixel.math.FlxMath;
+import funkin.Conductor;
+
+class HazierGarcelloVignetteEvent extends SongEvent
+{
+  public var pulseSprite:FunkinSprite;
+
+  var pulseStrength:Float = 0;
+  var pulseActive:Bool = false;
+
+  public function new()
+  {
+    super('HazierGarcelloVignetteEvent');
+  }
+
+  override public function getTitle():String
+  {
+    return 'Garello Vignette (Hazier River)';
+  }
+
+  override public function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    if (pulseSprite != null) return;
+
+    pulseSprite = FunkinSprite.create(0, 0, 'gameplay/garvignette');
+    pulseSprite.setGraphicSize(FlxG.width);
+    pulseSprite.updateHitbox();
+    pulseSprite.color = 0xFF00FF90;
+    pulseSprite.camera = PlayState.instance?.camCutscene;
+    pulseSprite.alpha = 0.0001;
+    pulseSprite.zIndex = 100;
+    PlayState.instance?.add(pulseSprite);
+  }
+
+  override public function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+
+    pulseSprite = null;
+    pulseActive = false;
+  }
+
+  override public function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+
+    pulseSprite.alpha = 0;
+    pulseActive = false;
+  }
+
+  override public function onUpdate(event:SongRetryEvent):Void
+  {
+    final zoomRate:Float = PlayState.instance?.cameraZoomRate ?? 0.0;
+
+    if (pulseSprite != null && zoomRate > 0.0)
+    {
+      var decayRate:Float = 0.95;
+      var dt:Float = event.elapsed * 60;
+
+      pulseSprite.alpha = FlxMath.lerp(0, pulseSprite.alpha, Math.pow(decayRate, dt));
+    }
+
+    super.onUpdate(event);
+  }
+
+  override public function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    if (!pulseActive) return;
+
+    if (pulseStrength > 0
+      && (Conductor.instance.currentStep
+        + PlayState.instance.cameraZoomRateOffset * Constants.STEPS_PER_BEAT) % (PlayState.instance.cameraZoomRate * Constants.STEPS_PER_BEAT) == 0)
+    {
+      pulseSprite.alpha += pulseStrength;
+    }
+
+    super.onStepHit(event);
+  }
+
+  override public function handleEvent(data:SongEventData):Void
+  {
+    var isActive:Bool = data.getBool('isActive');
+    var tempStrength:Int = data.getInt('strength');
+
+    pulseActive = isActive;
+    pulseStrength = tempStrength / 100;
+  }
+
+  override public function getEventSchema():SongEventSchema
+  {
+    return [
+      {
+        name: 'isActive',
+        title: 'Active?',
+        defaultValue: false,
+        type: 'bool'
+      },
+      {
+        name: 'strength',
+        title: 'Intensity',
+        defaultValue: 20,
+        type: 'integer',
+        min: 0,
+        max: 100,
+        step: 5,
+        units: '%'
+      }
+    ];
+  }
+}

@@ -1,0 +1,36 @@
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.stage.Stage;
+import funkin.play.character.CharacterType;
+
+class AshtonParkingLotStage extends Stage
+{
+  function new()
+  {
+    super('ashtonParkingLot');
+  }
+
+  public function onGameOver(event:ScriptEvent)
+  {
+    super.onGameOver(event);
+    getBoyfriend().shader = null;
+  }
+
+  var colorShader:AdjustColorShader;
+
+  function buildStage()
+  {
+    super.buildStage();
+    colorShader = new AdjustColorShader();
+    colorShader.brightness = -15;
+    colorShader.hue = 15;
+    colorShader.contrast = 15;
+    colorShader.saturation = -15;
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+    character.shader = colorShader;
+  }
+}

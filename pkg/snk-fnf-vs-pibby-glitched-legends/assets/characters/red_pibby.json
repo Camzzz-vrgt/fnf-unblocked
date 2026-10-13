@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				180,
+				-60
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "red_pibby_idle instancia ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				420,
+				-20
+			],
+			"anim": "singLEFT",
+			"fps": 32,
+			"name": "red_pibby_left instancia ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				390,
+				-50
+			],
+			"anim": "singDOWN",
+			"fps": 32,
+			"name": "red_pibby_down instancia ",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				470
+			],
+			"anim": "singUP",
+			"fps": 32,
+			"name": "red_pibby_up instancia ",
+			"indices": []
+		},
+		{
+			"offsets": [
+				180,
+				80
+			],
+			"loop": false,
+			"fps": 42,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "red_pibby_right instancia "
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/red_pibby",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "red_icon_pibby",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		21,
+		35
+	],
+	"camera_position": [
+		-610,
+		110
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

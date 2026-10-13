@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				340,
+				-60
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "sansandre_pibby_idle instancia "
+		},
+		{
+			"offsets": [
+				490,
+				-50
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "sansandre_pibby_left instancia "
+		},
+		{
+			"offsets": [
+				250,
+				-60
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "sansandre_pibby_down instancia "
+		},
+		{
+			"offsets": [
+				190,
+				230
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singUP",
+			"loop": false,
+			"name": "sansandre_pibby_up instancia "
+		},
+		{
+			"offsets": [
+				260,
+				-80
+			],
+			"indices": [],
+			"fps": 32,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "sansandre_pibby_right instancia "
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sansandre_pibby",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "sansandre_corrupted",
+	"flip_x": false,
+	"healthbar_colors": [
+		186,
+		0,
+		238
+	],
+	"camera_position": [
+		-440,
+		-90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

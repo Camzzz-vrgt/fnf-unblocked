@@ -1,0 +1,61 @@
+import funkin.play.stage.Stage;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.CharacterType;
+import flixel.effects.FlxFlicker;
+
+class AshtonAlleywayStage extends Stage
+{
+  public function new()
+  {
+    super('ashtonAlleyway');
+  }
+
+  public function onGameOver(event:ScriptEvent)
+  {
+    super.onGameOver(event);
+    getBoyfriend().shader = null;
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    var colorShader:AdjustColorShader = new AdjustColorShader();
+    switch (charType)
+    {
+      case CharacterType.BF, CharacterType.DAD:
+        colorShader.brightness = -40;
+        colorShader.contrast = -30;
+      case CharacterType.GF:
+        colorShader.brightness = -40;
+        colorShader.contrast = -40;
+    }
+    character.shader = colorShader;
+    super.addCharacter(character, charType);
+  }
+
+  var lightFlicker:FlxFlicker = null;
+
+  override function onBeatHit(event)
+  {
+    super.onBeatHit(event);
+
+    if (FlxG.random.bool(1.5))
+    {
+      lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, (_) -> {
+        // called on finish
+        lightFlicker = null;
+      });
+    }
+  }
+
+  override function onPause(event:ScriptEvent):Void
+  {
+    super.onPause(event);
+    if (lightFlicker != null) lightFlicker.pause();
+  }
+
+  override function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+    if (lightFlicker != null) lightFlicker.resume();
+  }
+}

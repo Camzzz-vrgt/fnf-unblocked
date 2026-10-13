@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				260,
+				-130
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "mabel_idle instancia "
+		},
+		{
+			"offsets": [
+				440,
+				-240
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "mabel_left instancia "
+		},
+		{
+			"offsets": [
+				340,
+				-240
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "mabel_down instancia "
+		},
+		{
+			"offsets": [
+				310,
+				-40
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "mabel_up instancia "
+		},
+		{
+			"offsets": [
+				80,
+				-100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "mabel_right instancia "
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mabel_pibby",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "mabel_icon_pibby",
+	"flip_x": false,
+	"healthbar_colors": [
+		240,
+		38,
+		99
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

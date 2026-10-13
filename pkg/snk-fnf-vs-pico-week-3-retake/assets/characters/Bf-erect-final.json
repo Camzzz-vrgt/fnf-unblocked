@@ -1,0 +1,168 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-34,
+				-9
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "EBFFF idle"
+		},
+		{
+			"offsets": [
+				-35,
+				24
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "EBFFF left"
+		},
+		{
+			"offsets": [
+				-20,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "EBFFF down"
+		},
+		{
+			"offsets": [
+				-16,
+				77
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "EBFFF up"
+		},
+		{
+			"offsets": [
+				-28,
+				3
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "EBFFF right"
+		},
+		{
+			"offsets": [
+				60,
+				50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "EBFFF altleft"
+		},
+		{
+			"offsets": [
+				10,
+				40
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "EBFFF altdown"
+		},
+		{
+			"offsets": [
+				20,
+				100
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "EBFFF altup"
+		},
+		{
+			"offsets": [
+				40,
+				50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "EBFFF altright"
+		},
+		{
+			"offsets": [
+				10,
+				20
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "EBFFF mleft"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "EBFFF mdown"
+		},
+		{
+			"offsets": [
+				0,
+				50
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "EBFFF mup"
+		},
+		{
+			"offsets": [
+				-10,
+				30
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "EBFFF mright"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/EBFFF",
+	"position": [
+		-430,
+		-60
+	],
+	"healthicon": "erect-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		215,
+		215
+	],
+	"camera_position": [
+		190,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1.24,
+	"_editor_isPlayer": true
+}

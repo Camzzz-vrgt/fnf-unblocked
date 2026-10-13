@@ -1,0 +1,64 @@
+{
+	"song": {
+		"speed": 2,
+		"stage": "forest",
+		"player1": "bf_pibby",
+		"player2": "dipper_pibby",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Black flash",
+						"5",
+						""
+					]
+				]
+			],
+			[
+				100,
+				[
+					[
+						"imageshow",
+						"disney_xd",
+						"1000000"
+					]
+				]
+			],
+			[
+				82285.7142857143,
+				[
+					[
+						"Change Character",
+						"dad",
+						"m_d_pibby"
+					],
+					[
+						"Change Character",
+						"gf",
+						"mabel_pibby"
+					]
+				]
+			],
+			[
+				150964.285714286,
+				[
+					[
+						"Black flash",
+						"",
+						"15"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "missingcharacter",
+		"bpm": 140,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "glitched-falls"
+	}
+}

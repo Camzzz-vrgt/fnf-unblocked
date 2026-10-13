@@ -1,0 +1,40 @@
+{
+	"storyName": "chasing",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "tom",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"songs": [
+		[
+			"mouse-chase",
+			"tom",
+			[
+				20,
+				20,
+				40
+			]
+		],
+		[
+			"pratfallen",
+			"tom",
+			[
+				20,
+				20,
+				40
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekName": "where are you tom?"
+}

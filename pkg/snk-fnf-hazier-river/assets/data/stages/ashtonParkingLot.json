@@ -1,0 +1,107 @@
+{
+  "version": "1.0.2",
+  "name": "Ashton Parking Lot",
+  "props": [
+    {
+      "assetPath": "AshtonParkingLot/skyshit",
+      "name": "skyshit",
+      "position": [-744, -421],
+      "scale": 0.75,
+      "scroll": [0.2, 0.2],
+      "zIndex": 0
+    },
+    {
+      "assetPath": "AshtonParkingLot/backbuildings",
+      "name": "backbuildings",
+      "position": [-727, -398],
+      "scale": 0.75,
+      "scroll": [0.6, 0.6],
+      "zIndex": 1
+    },
+    {
+      "assetPath": "AshtonParkingLot/buildings",
+      "name": "buidlings",
+      "position": [-650, -370],
+      "scale": 0.7,
+      "scroll": [0.7, 0.7],
+      "zIndex": 2
+    },
+    {
+      "assetPath": "AshtonParkingLot/colorseperatorthing",
+      "name": "colorthing",
+      "position": [-745, -408],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 3
+    },
+    {
+      "assetPath": "AshtonParkingLot/roadnfence",
+      "name": "roadandfence",
+      "position": [-748, -414],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 4
+    },
+    {
+      "assetPath": "AshtonParkingLot/lamplights",
+      "name": "lamplights",
+      "position": [-747, -415],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 5
+    },
+    {
+      "assetPath": "AshtonParkingLot/lightinglamps",
+      "blend": "add",
+      "name": "lightinglamps",
+      "position": [-744, -430],
+      "scale": 0.75,
+      "scroll": [1, 1],
+      "zIndex": 6
+    },
+    {
+      "assetPath": "AshtonParkingLot/truck1",
+      "name": "truck1",
+      "position": [-626, -315],
+      "scale": 0.75,
+      "scroll": [1.2, 1.2],
+      "zIndex": 310
+    },
+    {
+      "assetPath": "AshtonParkingLot/truck2",
+      "name": "truck2",
+      "position": [-856, -321],
+      "scale": 0.75,
+      "scroll": [1.2, 1.2],
+      "zIndex": 320
+    },
+    {
+      "assetPath": "AshtonParkingLot/vingettepart2",
+      "blend": "hardlight",
+      "name": "vingette",
+      "position": [-1287, -423],
+      "scale": [1, 0.75],
+      "scroll": [0.75, 1],
+      "zIndex": 350
+    }
+  ],
+  "characters": {
+    "bf": {
+      "cameraOffsets": [-100, -100],
+      "position": [1200, 785],
+      "zIndex": 300
+    },
+    "dad": {
+      "cameraOffsets": [190, -10],
+      "position": [180, 785],
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [700, 687],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.7,
+  "directory": "shared"
+}

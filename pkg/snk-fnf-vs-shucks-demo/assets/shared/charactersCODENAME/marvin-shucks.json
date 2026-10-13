@@ -1,0 +1,279 @@
+{
+	"healthbar_colors": [
+		174,
+		33,
+		27
+	],
+	"position": [
+		1450,
+		-25
+	],
+	"no_antialiasing": false,
+	"scale": 1.2,
+	"camera_position": [
+		100,
+		200
+	],
+	"image": "characters/marvin-shucks",
+	"sing_duration": 4,
+	"healthicon": "marvin-shucks",
+	"flip_x": true,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "i"
+        },
+        {
+            "offsets": [
+                400,
+                24
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "u"
+        },
+        {
+            "offsets": [
+                -20,
+                1
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "l"
+        },
+        {
+            "offsets": [
+                -1,
+                4
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "r"
+        },
+        {
+            "offsets": [
+                4,
+                -261
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "d"
+        },
+        {
+            "offsets": [
+                400,
+                24
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUPmiss",
+            "indices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "name": "mu"
+        },
+        {
+            "offsets": [
+                -20,
+                1
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFTmiss",
+            "indices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "name": "ml"
+        },
+        {
+            "offsets": [
+                -1,
+                4
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHTmiss",
+            "indices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "name": "mr"
+        },
+        {
+            "offsets": [
+                4,
+                -261
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWNmiss",
+            "indices": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "name": "md"
+        },
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "idle-alt",
+            "indices": [],
+            "name": "alti"
+        },
+        {
+            "offsets": [
+                400,
+                24
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP-alt",
+            "indices": [],
+            "name": "altu"
+        },
+        {
+            "offsets": [
+                -20,
+                1
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT-alt",
+            "indices": [],
+            "name": "altl"
+        },
+        {
+            "offsets": [
+                -1,
+                4
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT-alt",
+            "indices": [],
+            "name": "altr"
+        },
+        {
+            "offsets": [
+                4,
+                -261
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN-alt",
+            "indices": [],
+            "name": "altd"
+        },
+        {
+            "offsets": [
+                400,
+                24
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUPmiss-alt",
+            "indices": [],
+            "name": "altmu"
+        },
+        {
+            "offsets": [
+                -20,
+                1
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFTmiss-alt",
+            "indices": [],
+            "name": "altml"
+        },
+        {
+            "offsets": [
+                -1,
+                4
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHTmiss-alt",
+            "indices": [],
+            "name": "altmr"
+        },
+        {
+            "offsets": [
+                4,
+                -261
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWNmiss-alt",
+            "indices": [],
+            "name": "altmd"
+        },
+        {
+            "offsets": [
+                1,
+                -134
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "intro",
+            "indices": [],
+            "name": "hellohottie"
+        },
+        {
+            "offsets": [
+                71,
+                -23
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "voiceline",
+            "indices": [],
+            "name": "voiceline"
+        }
+    ]
+}

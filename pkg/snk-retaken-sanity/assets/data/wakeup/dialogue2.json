@@ -1,0 +1,39 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Hey, um, I know it's been like, only a week\\nsince you came back from the hospital, but\\n how about we have a chill time at the\\n   beach? I'll bring snacks.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
+		},
+		{
+			"expression": "talk",
+			"text": "   What snacks are we talking about?",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
+		},
+		{
+			"expression": "talk",
+			"text": "   Tuna sandwiches and sweet tea.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
+		},
+		{
+			"expression": "talk",
+			"text": "    Make it BLT sandwiches and I am\\ in.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonerebecca"
+		},
+		{
+			"expression": "talk",
+			"text": "  Heh, deal.",
+			"boxState": "angry",
+			"speed": 0.05,
+			"portrait": "phonegiz"
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-350,
+		-280
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"loop_name": "Yosh ayo",
+			"idle_offsets": [
+				0,
+				-10
+			],
+			"idle_name": "Yosh ayo0003",
+			"anim": "ayo",
+			"loop_offsets": [
+				0,
+				-10
+			]
+		},
+		{
+			"loop_name": "Yosh yhe",
+			"idle_offsets": [
+				0,
+				-10
+			],
+			"idle_name": "Yosh yhe0003",
+			"anim": "ehe",
+			"loop_offsets": [
+				0,
+				-10
+			]
+		},
+		{
+			"loop_name": "Yosh rh",
+			"idle_offsets": [
+				0,
+				-10
+			],
+			"idle_name": "Yosh rh0003",
+			"anim": "rh",
+			"loop_offsets": [
+				0,
+				-10
+			]
+		},
+		{
+			"loop_name": "Yosh fault",
+			"idle_offsets": [
+				0,
+				-10
+			],
+			"idle_name": "Yosh fault0003",
+			"anim": "fault",
+			"loop_offsets": [
+				0,
+				-10
+			]
+		},
+		{
+			"loop_name": "Yosh ex",
+			"idle_offsets": [
+				0,
+				-10
+			],
+			"idle_name": "Yosh ex0003",
+			"anim": "expo",
+			"loop_offsets": [
+				0,
+				-10
+			]
+		}
+	],
+	"image": "Yosh"
+}

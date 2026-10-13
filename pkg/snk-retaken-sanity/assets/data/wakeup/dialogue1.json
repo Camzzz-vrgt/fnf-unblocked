@@ -1,0 +1,95 @@
+{
+	"dialogue": [
+		{
+			"expression": "talk",
+			"text": "Why is everyone in my room?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
+		},
+		{
+			"expression": "sad",
+			"text": "You are in the hospital! Making everyone worried cause you collapsed due to overworking AGAIN!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
+		},
+		{
+			"expression": "nervous",
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
+		},
+		{
+			"expression": "talk",
+			"text": "I wasn't worried, if it would make you feel any better.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
+		},
+		{
+			"expression": "angry",
+			"text": "SEB!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
+		},
+		{
+			"expression": "talk",
+			"text": "Really? She's half demon.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
+		},
+		{
+			"expression": "talk",
+			"text": "I've seen ordinary humans survive worse in this world.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Seb"
+		},
+		{
+			"expression": "talk",
+			"text": "...",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "Oh gosh, I am so sorry. You commissioned me and all I did was collapse in front of you.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Rebeccaenemy"
+		},
+		{
+			"expression": "talkhappy",
+			"text": "Don't worry, we are used to this by now.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talkhappy",
+			"text": " Weird stuff tends to happen when we sing against people. It's like our thing.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		},
+		{
+			"expression": "talk",
+			"text": "While the others eat, how about I jam with you to thank you for being so chill about all this?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "Giz"
+		},
+		{
+			"expression": "talkexcited",
+			"text": "I am up for it!",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "bf"
+		}
+	]
+}

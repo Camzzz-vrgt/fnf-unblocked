@@ -1,0 +1,78 @@
+{
+	"healthbar_colors": [
+		190,
+		94,
+		43
+	],
+	"position": [
+		640,
+		1045
+	],
+	"no_antialiasing": false,
+	"scale": 2.13,
+	"camera_position": [
+		0,
+		0
+	],
+	"image": "characters/detg-saw",
+	"sing_duration": 4,
+	"healthicon": "detg-saw",
+	"flip_x": false,
+    "animations": [
+        {
+            "offsets": [
+                0,
+                0
+            ],
+            "loop": true,
+            "fps": 24,
+            "anim": "idle",
+            "indices": [],
+            "name": "idle"
+        },
+        {
+            "offsets": [
+                13,
+                151
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singUP",
+            "indices": [],
+            "name": "up"
+        },
+        {
+            "offsets": [
+                66,
+                -7
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singLEFT",
+            "indices": [],
+            "name": "left"
+        },
+        {
+            "offsets": [
+                6,
+                42
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singRIGHT",
+            "indices": [],
+            "name": "right"
+        },
+        {
+            "offsets": [
+                19,
+                1
+            ],
+            "loop": false,
+            "fps": 24,
+            "anim": "singDOWN",
+            "indices": [],
+            "name": "down"
+        }
+    ]
+}

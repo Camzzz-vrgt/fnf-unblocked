@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				300,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "dipper_left"
+		},
+		{
+			"offsets": [
+				190,
+				-110
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "dipper_down"
+		},
+		{
+			"offsets": [
+				200,
+				420
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "dipper_up"
+		},
+		{
+			"offsets": [
+				210,
+				180
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "dipper_right"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				150,
+				-10
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "dipper_idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/dipper_pibbygf",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "dipper_pibby_icon",
+	"flip_x": false,
+	"healthbar_colors": [
+		85,
+		99,
+		247
+	],
+	"camera_position": [
+		-250,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

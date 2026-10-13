@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				-4
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Gizleft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-10
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Gizdown"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				9
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Gizup"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				-6
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Gizright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Gizidle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Gizmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Gizmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Gizmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Gizmiss"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/wakeupGiz",
+	"position": [
+		250,
+		-50
+	],
+	"healthicon": "giz",
+	"flip_x": true,
+	"healthbar_colors": [
+		215,
+		122,
+		146
+	],
+	"camera_position": [
+		380,
+		80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
