@@ -21,7 +21,10 @@ import re
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 
-CDN = "https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/main/"
+import subprocess
+_SHA = subprocess.run(["git","rev-parse","HEAD"],cwd=HERE,
+                     capture_output=True,text=True).stdout.strip()
+CDN = f"https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/{_SHA}/"
 GAME_HOST_DEFAULT = "http://127.0.0.1:8642"
 
 
