@@ -61,7 +61,9 @@ HOME = """
         <img class="hero-logo" src="__CDN__assets/modstext.png" alt="Mods" />
       </a>
     </main>
-    <button id="dl-fab" title="Download the single-file build">DL</button>
+    <button id="dl-fab" title="Download the single-file build" aria-label="Download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11"/><path d="M6.5 9.5 12 15l5.5-5.5"/><path d="M4 19h16"/></svg>
+    </button>
     <a class="discord-fab" href="https://discord.gg/kSVynDwX9f" target="_blank" rel="noopener" title="Join the Discord">
       <img src="__CDN__assets/discord.png" alt="Discord" />
     </a>
@@ -170,11 +172,13 @@ body { display: block; }
 #dl-fab {
   position: fixed; bottom: 18px; right: 18px; z-index: 15;
   width: 72px; height: 72px; border-radius: 18px;
-  font-family: "FNF", sans-serif; font-size: 30px; color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
   background: var(--panel); border: 3px solid #000; cursor: pointer;
   box-shadow: 4px 4px 0 rgba(0,0,0,.5);
   transition: transform .12s ease, box-shadow .12s ease;
 }
+#dl-fab svg { width: 36px; height: 36px; }
 #dl-fab:hover { transform: translateY(-5px) scale(1.08);
   box-shadow: 4px 8px 0 rgba(0,0,0,.5), 0 0 22px rgba(49,176,209,.7); color: var(--blue); }
 #dl-modal {
@@ -429,17 +433,16 @@ function prepGame(html, slug) {
 async function launchGame(slug) {
   let w = null;
   try { w = window.open("about:blank", "_blank"); } catch (e) {}
-  if (!games) await ensureGrid();
-  if (repoSet.has(slug)) {
-    try {
-      const url = CDN + "games/" + encodeURIComponent(slug) + "/index.html";
-      const html = await (await fetch(url)).text();
-      const out = prepGame(html, slug);
-      const t = w || window;
-      t.document.open(); t.document.write(out); t.document.close();
-      return;
-    } catch (e) { /* fall through to host */ }
-  }
+  try {
+    const url = CDN + "games/" + encodeURIComponent(slug) + "/index.html";
+    const r = await fetch(url);
+    if (!r.ok) throw new Error("cdn " + r.status);
+    const html = await r.text();
+    const out = prepGame(html, slug);
+    const t = w || window;
+    t.document.open(); t.document.write(out); t.document.close();
+    return;
+  } catch (e) { /* fall through to host */ }
   const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
   if (w) w.location.href = u; else location.href = u;
 }

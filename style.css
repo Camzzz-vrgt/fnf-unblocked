@@ -479,11 +479,13 @@ body {
 #dl-fab {
   position: fixed; bottom: 18px; right: 18px; z-index: 15;
   width: 72px; height: 72px; border-radius: 18px;
-  font-family: "FNF", sans-serif; font-size: 30px; color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
   background: var(--panel); border: 3px solid #000; cursor: pointer;
   box-shadow: 4px 4px 0 rgba(0,0,0,.5);
   transition: transform .12s ease, box-shadow .12s ease;
 }
+#dl-fab svg { width: 36px; height: 36px; }
 #dl-fab:hover { transform: translateY(-5px) scale(1.08);
   box-shadow: 4px 8px 0 rgba(0,0,0,.5), 0 0 22px rgba(49,176,209,.7); color: var(--blue); }
 #dl-modal {
