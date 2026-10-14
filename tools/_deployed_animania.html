@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>/* fnf-cdn-shim */
+(function(){
+  var CH=null;
+  if(!CH)return;
+  var PM="/pkg/snk-fnf-animania/";
+  function key(u){try{
+    var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
+    var i=r.pathname.indexOf(PM);
+    return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
+  }catch(e){return null}}
+  function part(u,i){return u+".part"+(i<10?"0":"")+i}
+  function blob(u){var n=CH[key(u)],ps=[];
+    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){
+      if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
+    return Promise.all(ps).then(function(a){return new Blob(a)})}
+  var of=window.fetch&&window.fetch.bind(window);
+  if(of)window.fetch=function(u,o){
+    var k=key(u);
+    return k&&CH[k]?blob(u).then(function(b){return new Response(b)})
+                   :of(u,o)};
+  var X=window.XMLHttpRequest;
+  window.XMLHttpRequest=function(){
+    var r=new X(),self=this;self._u=null;self._c=false;self._l={};
+    ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
+     "onerror","onabort","ontimeout"].forEach(function(ev){
+      Object.defineProperty(self,ev,{
+        set:function(f){self["_"+ev]=f;
+          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
+        get:function(){return self["_"+ev]}})});
+    self.addEventListener=function(t,f){if(self._c){
+      (self._l[t]=self._l[t]||[]).push(f)}else r.addEventListener(t,f)};
+    self.removeEventListener=function(t,f){if(!self._c)
+      r.removeEventListener(t,f)};
+    self.dispatchEvent=function(){return true};
+    function fire(t){(self._l[t]||[]).forEach(function(f){
+      f.call(self,{type:t,target:self})})}
+    ["status","statusText","readyState","response","responseText",
+     "responseXML","upload","timeout","withCredentials","responseType",
+     "responseURL"].forEach(function(p){
+      Object.defineProperty(self,p,{
+        get:function(){return self._c?self["$"+p]:r[p]},
+        set:function(v){self["$"+p]=v;
+          try{if(p!=="status"&&p!=="statusText"&&p!=="readyState"&&
+               p!=="response"&&p!=="responseText"&&p!=="responseXML"&&
+               p!=="responseURL")r[p]=v}catch(e){}}})});
+    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);
+      if(!self._c)r.open.apply(r,arguments)};
+    self.setRequestHeader=function(){if(!self._c)
+      r.setRequestHeader.apply(r,arguments)};
+    self.getResponseHeader=function(){return self._c?null:
+      r.getResponseHeader.apply(r,arguments)};
+    self.getAllResponseHeaders=function(){return self._c?"":
+      r.getAllResponseHeaders.apply(r,arguments)};
+    self.abort=function(){if(!self._c)r.abort()};
+    self.send=function(){
+      if(!self._c)return r.send.apply(r,arguments);
+      blob(self._u).then(function(b){
+        self.$readyState=4;self.$status=200;self.$statusText="OK";
+        var rt=self.$responseType||self.responseType||"";
+        function fin(){fire("readystatechange");fire("load");
+          self._onreadystatechange&&self._onreadystatechange();
+          self._onload&&self._onload({type:"load",target:self})}
+        if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
+          self.$response=a;self.$responseText="";fin()});
+        else if(rt==="blob"){self.$response=b;self.$responseText="";fin()}
+        else b.text().then(function(t){
+          self.$response=self.$responseText=t;fin()});
+      }).catch(function(){
+        self.$readyState=4;self.$status=404;
+        fire("readystatechange");fire("error");
+        self._onreadystatechange&&self._onreadystatechange();
+        self._onerror&&self._onerror({type:"error",target:self})});
+    };
+    return self;
+  };
+})();
+</script>
+
+	<meta charset="utf-8">
+
+	<title>Animania</title>
+
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="canonical" href="https://www.snokido.com/game/fnf-animania" />
+
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+
+
+	<script type="text/javascript" src="./Funkin.js"></script>
+
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+		window.addEventListener("keydown", function(e) {if(["Tab","Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {e.preventDefault(); }}, false);
+	</script>
+
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		#openfl-content { background: #000000; width: 100%; height: 100%; }
+		@font-face {
+			font-family: '5by7';
+			src: url('assets/fonts/5by7.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/5by7.woff') format('woff'),
+			url('assets/fonts/5by7.ttf') format('truetype'),
+			url('assets/fonts/5by7.svg#5by7') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: '5by7 Bold';
+			src: url('assets/fonts/5by7_b.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/5by7_b.woff') format('woff'),
+			url('assets/fonts/5by7_b.ttf') format('truetype'),
+			url('assets/fonts/5by7_b.svg#5by7%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Blueprint Medium';
+			src: url('assets/fonts/Blueprint.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Blueprint.woff') format('woff'),
+			url('assets/fonts/Blueprint.ttf') format('truetype'),
+			url('assets/fonts/Blueprint.svg#Blueprint%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Consolas Italic';
+			src: url('assets/fonts/Consolas.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Consolas.woff') format('woff'),
+			url('assets/fonts/Consolas.ttf') format('truetype'),
+			url('assets/fonts/Consolas.svg#Consolas%20Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital';
+			src: url('assets/fonts/DS-DIGI.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/DS-DIGI.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Bold';
+			src: url('assets/fonts/DS-DIGIB.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/DS-DIGIB.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Italic';
+			src: url('assets/fonts/DS-DIGII.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/DS-DIGII.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'DS-Digital Bold Italic';
+			src: url('assets/fonts/DS-DIGIT.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/DS-DIGIT.TTF') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Black';
+			src: url('assets/fonts/Inconsolata-Black.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-Black.woff') format('woff'),
+			url('assets/fonts/Inconsolata-Black.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-Black.svg#Inconsolata%20Black') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Bold';
+			src: url('assets/fonts/Inconsolata-Bold.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-Bold.woff') format('woff'),
+			url('assets/fonts/Inconsolata-Bold.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-Bold.svg#Inconsolata%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata ExtraBold';
+			src: url('assets/fonts/Inconsolata-ExtraBold.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-ExtraBold.woff') format('woff'),
+			url('assets/fonts/Inconsolata-ExtraBold.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-ExtraBold.svg#Inconsolata%20ExtraBold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata ExtraLight';
+			src: url('assets/fonts/Inconsolata-ExtraLight.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-ExtraLight.woff') format('woff'),
+			url('assets/fonts/Inconsolata-ExtraLight.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-ExtraLight.svg#Inconsolata%20ExtraLight') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Medium';
+			src: url('assets/fonts/Inconsolata-Medium.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-Medium.woff') format('woff'),
+			url('assets/fonts/Inconsolata-Medium.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-Medium.svg#Inconsolata%20Medium') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata Regular';
+			src: url('assets/fonts/Inconsolata-Regular.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-Regular.woff') format('woff'),
+			url('assets/fonts/Inconsolata-Regular.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-Regular.svg#Inconsolata%20Regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Inconsolata SemiBold';
+			src: url('assets/fonts/Inconsolata-SemiBold.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Inconsolata-SemiBold.woff') format('woff'),
+			url('assets/fonts/Inconsolata-SemiBold.ttf') format('truetype'),
+			url('assets/fonts/Inconsolata-SemiBold.svg#Inconsolata%20SemiBold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'MP Manga Font Bold';
+			src: url('assets/fonts/MP Manga.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/MP Manga.woff') format('woff'),
+			url('assets/fonts/MP Manga.ttf') format('truetype'),
+			url('assets/fonts/MP Manga.svg#MP%20Manga%20Font%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Pixel Arial 11 Bold';
+			src: url('assets/fonts/pixel.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/pixel.woff') format('woff'),
+			url('assets/fonts/pixel.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-Bold';
+			src: url('assets/fonts/Quantico-Bold.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Quantico-Bold.woff') format('woff'),
+			url('assets/fonts/Quantico-Bold.ttf') format('truetype'),
+			url('assets/fonts/Quantico-Bold.svg#Quantico-Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-BoldItalic';
+			src: url('assets/fonts/Quantico-BoldItalic.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Quantico-BoldItalic.woff') format('woff'),
+			url('assets/fonts/Quantico-BoldItalic.ttf') format('truetype'),
+			url('assets/fonts/Quantico-BoldItalic.svg#Quantico-BoldItalic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico-Italic';
+			src: url('assets/fonts/Quantico-Italic.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Quantico-Italic.woff') format('woff'),
+			url('assets/fonts/Quantico-Italic.ttf') format('truetype'),
+			url('assets/fonts/Quantico-Italic.svg#Quantico-Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Quantico';
+			src: url('assets/fonts/Quantico-Regular.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/Quantico-Regular.woff') format('woff'),
+			url('assets/fonts/Quantico-Regular.ttf') format('truetype'),
+			url('assets/fonts/Quantico-Regular.svg#Quantico') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Ruthless Sketch';
+			src: url('assets/fonts/RuthlessSketch.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/RuthlessSketch.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Share Tech Mono';
+			src: url('assets/fonts/ShareTechMono-Regular.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/ShareTechMono-Regular.woff') format('woff'),
+			url('assets/fonts/ShareTechMono-Regular.ttf') format('truetype'),
+			url('assets/fonts/ShareTechMono-Regular.svg#Share%20Tech%20Mono') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono Bold';
+			src: url('assets/fonts/vcr-bold.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr-bold.woff') format('woff'),
+			url('assets/fonts/vcr-bold.ttf') format('truetype'),
+			url('assets/fonts/vcr-bold.svg#VCR%20OSD%20Mono%20Bold') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono Bold Italic';
+			src: url('assets/fonts/vcr-bolditalic.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr-bolditalic.woff') format('woff'),
+			url('assets/fonts/vcr-bolditalic.ttf') format('truetype'),
+			url('assets/fonts/vcr-bolditalic.svg#VCR%20OSD%20Mono%20Bold%20Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono Italic';
+			src: url('assets/fonts/vcr-italic.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr-italic.woff') format('woff'),
+			url('assets/fonts/vcr-italic.ttf') format('truetype'),
+			url('assets/fonts/vcr-italic.svg#VCR%20OSD%20Mono%20Italic') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'VCR OSD Mono';
+			src: url('assets/fonts/vcr.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/vcr.woff') format('woff'),
+			url('assets/fonts/vcr.ttf') format('truetype'),
+			url('assets/fonts/vcr.svg#VCR%20OSD%20Mono') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'YoureGone-Regular';
+			src: url('assets/fonts/YoureGone-Regular.eot?#iefix') format('embedded-opentype'),
+			url('assets/fonts/YoureGone-Regular.woff') format('woff'),
+			url('assets/fonts/YoureGone-Regular.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Nokia Cellphone FC Small';
+			src: url('flixel/fonts/nokiafc22.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/nokiafc22.woff') format('woff'),
+			url('flixel/fonts/nokiafc22.ttf') format('truetype'),
+			url('flixel/fonts/nokiafc22.svg#Nokia%20Cellphone%20FC%20Small') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Monsterrat';
+			src: url('flixel/fonts/monsterrat.eot?#iefix') format('embedded-opentype'),
+			url('flixel/fonts/monsterrat.woff') format('woff'),
+			url('flixel/fonts/monsterrat.ttf') format('truetype'),
+			url('flixel/fonts/monsterrat.svg#Monsterrat') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+
+	<div id="openfl-content"></div>
+
+	<script type="text/javascript">
+		lime.embed ("Funkin", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+
+
+<style>
+.fnf-nav{position:fixed;top:10px;right:10px;z-index:99999;display:flex;gap:8px}
+.fnf-nav button{width:44px;height:44px;border-radius:10px;border:0;cursor:pointer;
+  background:rgba(15,12,24,.72);color:#fff;font-size:19px;opacity:.45;
+  transition:opacity .15s}
+.fnf-nav button:hover{opacity:1}
+</style>
+<div class="fnf-nav" id="fnf-nav-overlay">
+  <button onclick="window.close();setTimeout(function(){history.back()},200)" title="Back to site">&#8592;</button>
+  <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen">&#9938;</button>
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5ca5718e134b4d57ac5dea327bf435cc","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

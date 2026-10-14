@@ -22,6 +22,9 @@ OMARK = "fnf-nav-overlay"
 
 SHIM = r"""<script>/* fnf-cdn-shim */
 (function(){
+  try{if("navigation" in window)navigation.addEventListener("navigate",
+    function(e){var u="";try{u=e.destination&&e.destination.url||""}catch(_){}
+      if(/^about:/.test(u))e.preventDefault()})}catch(_){}
   var CH=__CHUNKS__;
   if(!CH)return;
   var PM="/pkg/__SLUG__/";
@@ -106,7 +109,7 @@ OVERLAY = r"""<style>
 .fnf-nav button:hover{opacity:1}
 </style>
 <div class="fnf-nav" id="fnf-nav-overlay">
-  <button onclick="window.close();setTimeout(function(){history.back()},200)" title="Back to site">&#8592;</button>
+  <button onclick="history.back();window.close()" title="Back to site">&#8592;</button>
   <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen">&#9938;</button>
 </div>"""
 

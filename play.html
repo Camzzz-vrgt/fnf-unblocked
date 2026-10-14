@@ -39,8 +39,7 @@
       const set = await repoSet;
       const url = (set.has(slug) ? "pkg/" : "games/") +
         encodeURIComponent(slug) + "/index.html";
-      const w = window.open(url, "_blank");
-      if (!w) location.href = url;
+      location.href = url;
     }
 
     // click-to-play gate: the click is the user gesture browsers require

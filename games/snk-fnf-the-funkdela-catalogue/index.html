@@ -1,6 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>/* fnf-cdn-shim */
+(function(){
+  try{if("navigation" in window)navigation.addEventListener("navigate",
+    function(e){var u="";try{u=e.destination&&e.destination.url||""}catch(_){}
+      if(/^about:/.test(u))e.preventDefault()})}catch(_){}
+  var CH=null;
+  if(!CH)return;
+  var PM="/games/snk-fnf-the-funkdela-catalogue/";
+  function key(u){try{
+    var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
+    var i=r.pathname.indexOf(PM);
+    return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
+  }catch(e){return null}}
+  function part(u,i){return u+".part"+(i<10?"0":"")+i}
+  function blob(u){var n=CH[key(u)],ps=[];
+    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){
+      if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
+    return Promise.all(ps).then(function(a){return new Blob(a)})}
+  var of=window.fetch&&window.fetch.bind(window);
+  if(of)window.fetch=function(u,o){
+    var k=key(u);
+    return k&&CH[k]?blob(u).then(function(b){return new Response(b)})
+                   :of(u,o)};
+  var X=window.XMLHttpRequest;
+  window.XMLHttpRequest=function(){
+    var r=new X(),self=this;self._u=null;self._c=false;self._l={};
+    ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
+     "onerror","onabort","ontimeout"].forEach(function(ev){
+      Object.defineProperty(self,ev,{
+        set:function(f){self["_"+ev]=f;
+          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
+        get:function(){return self["_"+ev]}})});
+    self.addEventListener=function(t,f){if(self._c){
+      (self._l[t]=self._l[t]||[]).push(f)}else r.addEventListener(t,f)};
+    self.removeEventListener=function(t,f){if(!self._c)
+      r.removeEventListener(t,f)};
+    self.dispatchEvent=function(){return true};
+    function fire(t){(self._l[t]||[]).forEach(function(f){
+      f.call(self,{type:t,target:self})})}
+    ["status","statusText","readyState","response","responseText",
+     "responseXML","upload","timeout","withCredentials","responseType",
+     "responseURL"].forEach(function(p){
+      Object.defineProperty(self,p,{
+        get:function(){return self._c?self["$"+p]:r[p]},
+        set:function(v){self["$"+p]=v;
+          try{if(p!=="status"&&p!=="statusText"&&p!=="readyState"&&
+               p!=="response"&&p!=="responseText"&&p!=="responseXML"&&
+               p!=="responseURL")r[p]=v}catch(e){}}})});
+    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);
+      if(!self._c)r.open.apply(r,arguments)};
+    self.setRequestHeader=function(){if(!self._c)
+      r.setRequestHeader.apply(r,arguments)};
+    self.getResponseHeader=function(){return self._c?null:
+      r.getResponseHeader.apply(r,arguments)};
+    self.getAllResponseHeaders=function(){return self._c?"":
+      r.getAllResponseHeaders.apply(r,arguments)};
+    self.abort=function(){if(!self._c)r.abort()};
+    self.send=function(){
+      if(!self._c)return r.send.apply(r,arguments);
+      blob(self._u).then(function(b){
+        self.$readyState=4;self.$status=200;self.$statusText="OK";
+        var rt=self.$responseType||self.responseType||"";
+        function fin(){fire("readystatechange");fire("load");
+          self._onreadystatechange&&self._onreadystatechange();
+          self._onload&&self._onload({type:"load",target:self})}
+        if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
+          self.$response=a;self.$responseText="";fin()});
+        else if(rt==="blob"){self.$response=b;self.$responseText="";fin()}
+        else b.text().then(function(t){
+          self.$response=self.$responseText=t;fin()});
+      }).catch(function(){
+        self.$readyState=4;self.$status=404;
+        fire("readystatechange");fire("error");
+        self._onreadystatechange&&self._onreadystatechange();
+        self._onerror&&self._onerror({type:"error",target:self})});
+    };
+    return self;
+  };
+})();
+</script>
 	<base href="./pkg/">
 	
 	<meta charset="utf-8">
@@ -104,5 +184,16 @@
   else nav();
 })();
 </script>
+<style>
+.fnf-nav{position:fixed;top:10px;right:10px;z-index:99999;display:flex;gap:8px}
+.fnf-nav button{width:44px;height:44px;border-radius:10px;border:0;cursor:pointer;
+  background:rgba(15,12,24,.72);color:#fff;font-size:19px;opacity:.45;
+  transition:opacity .15s}
+.fnf-nav button:hover{opacity:1}
+</style>
+<div class="fnf-nav" id="fnf-nav-overlay">
+  <button onclick="history.back();window.close()" title="Back to site">&#8592;</button>
+  <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen">&#9938;</button>
+</div>
 </body>
 </html>

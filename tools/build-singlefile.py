@@ -332,14 +332,11 @@ function gateHtml(title, sub) {
     '"color:#9a92b8">' + sub + '</p></div>';
 }
 async function launchGame(slug) {
-  let w = null;
-  try { w = window.open("about:blank", "_blank"); } catch (e) {}
-  const t = w || window;
   try {  // instant feedback — never leave the tab blank while fetching
-    t.document.open();
-    t.document.write(gateHtml("loading " + slug + "…",
+    document.open();
+    document.write(gateHtml("loading " + slug + "…",
       "pulling the game from the cdn"));
-    t.document.close();
+    document.close();
   } catch (e) {}
   try {
     const es = encodeURIComponent(slug);
@@ -353,16 +350,16 @@ async function launchGame(slug) {
     html = /<base[^>]*>/i.test(html)
       ? html.replace(/<base[^>]*>/i, base)
       : html.replace(/<head[^>]*>/i, m => m + base);
-    // navigate via blob url — more reliable than document.write
+    // same-tab blob navigation — no popups, history.back() returns here
     const u2 = URL.createObjectURL(new Blob([html],
       { type: "text/html" }));
-    if (w) w.location.href = u2; else location.href = u2;
+    location.href = u2;
   } catch (e) {
     try {
-      t.document.open();
-      t.document.write(gateHtml("load failed",
+      document.open();
+      document.write(gateHtml("load failed",
         slug + " — " + e.message));
-      t.document.close();
+      document.close();
     } catch (e2) {}
   }
 }
