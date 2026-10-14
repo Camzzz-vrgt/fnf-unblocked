@@ -1,1 +1,1 @@
-const CDN_PIN = 'https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/bd79655481615385b1b8f06182e09e59c74480ac/';
+const CDN_PIN = 'https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/c0b5695acc6acf76eed0c91ee3b1253364007812/';
