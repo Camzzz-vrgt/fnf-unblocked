@@ -1,14 +1,84 @@
 <!DOCTYPE html>
-
-
-
-<!-- Ultimate Game Stash file--> 
-<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
-
-
 <html lang="en">
 <head>
-	<base href="https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/city-tales/">
+<script>/* fnf-cdn-shim */
+(function(){
+  var CH=null;
+  if(!CH)return;
+  var PM="/pkg/fnf-late-night-city-tales/";
+  function key(u){try{
+    var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
+    var i=r.pathname.indexOf(PM);
+    return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
+  }catch(e){return null}}
+  function part(u,i){return u+".part"+(i<10?"0":"")+i}
+  function blob(u){var n=CH[key(u)],ps=[];
+    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){
+      if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
+    return Promise.all(ps).then(function(a){return new Blob(a)})}
+  var of=window.fetch&&window.fetch.bind(window);
+  if(of)window.fetch=function(u,o){
+    var k=key(u);
+    return k&&CH[k]?blob(u).then(function(b){return new Response(b)})
+                   :of(u,o)};
+  var X=window.XMLHttpRequest;
+  window.XMLHttpRequest=function(){
+    var r=new X(),self=this;self._u=null;self._c=false;self._l={};
+    ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
+     "onerror","onabort","ontimeout"].forEach(function(ev){
+      Object.defineProperty(self,ev,{
+        set:function(f){self["_"+ev]=f;
+          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
+        get:function(){return self["_"+ev]}})});
+    self.addEventListener=function(t,f){if(self._c){
+      (self._l[t]=self._l[t]||[]).push(f)}else r.addEventListener(t,f)};
+    self.removeEventListener=function(t,f){if(!self._c)
+      r.removeEventListener(t,f)};
+    self.dispatchEvent=function(){return true};
+    function fire(t){(self._l[t]||[]).forEach(function(f){
+      f.call(self,{type:t,target:self})})}
+    ["status","statusText","readyState","response","responseText",
+     "responseXML","upload","timeout","withCredentials","responseType",
+     "responseURL"].forEach(function(p){
+      Object.defineProperty(self,p,{
+        get:function(){return self._c?self["$"+p]:r[p]},
+        set:function(v){self["$"+p]=v;
+          try{if(p!=="status"&&p!=="statusText"&&p!=="readyState"&&
+               p!=="response"&&p!=="responseText"&&p!=="responseXML"&&
+               p!=="responseURL")r[p]=v}catch(e){}}})});
+    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);
+      if(!self._c)r.open.apply(r,arguments)};
+    self.setRequestHeader=function(){if(!self._c)
+      r.setRequestHeader.apply(r,arguments)};
+    self.getResponseHeader=function(){return self._c?null:
+      r.getResponseHeader.apply(r,arguments)};
+    self.getAllResponseHeaders=function(){return self._c?"":
+      r.getAllResponseHeaders.apply(r,arguments)};
+    self.abort=function(){if(!self._c)r.abort()};
+    self.send=function(){
+      if(!self._c)return r.send.apply(r,arguments);
+      blob(self._u).then(function(b){
+        self.$readyState=4;self.$status=200;self.$statusText="OK";
+        var rt=self.$responseType||self.responseType||"";
+        function fin(){fire("readystatechange");fire("load");
+          self._onreadystatechange&&self._onreadystatechange();
+          self._onload&&self._onload({type:"load",target:self})}
+        if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
+          self.$response=a;self.$responseText="";fin()});
+        else if(rt==="blob"){self.$response=b;self.$responseText="";fin()}
+        else b.text().then(function(t){
+          self.$response=self.$responseText=t;fin()});
+      }).catch(function(){
+        self.$readyState=4;self.$status=404;
+        fire("readystatechange");fire("error");
+        self._onreadystatechange&&self._onreadystatechange();
+        self._onerror&&self._onerror({type:"error",target:self})});
+    };
+    return self;
+  };
+})();
+</script>
+	
 	<meta charset="utf-8">
 	
 	<title>Game 24852</title>
@@ -90,30 +160,15 @@
 	</script>
 		
 <style>
-#fnf-nav{position:fixed;top:10px;right:12px;z-index:2147483647;display:flex;gap:8px;font-family:Arial,sans-serif;opacity:.55;transition:opacity .15s}
-#fnf-nav:hover,#fnf-nav:focus-within{opacity:1}
-#fnf-nav a,#fnf-nav button{width:40px;height:40px;background:rgba(20,15,30,.85);border:2px solid rgba(255,255,255,.15);border-radius:10px;color:#fff;font-size:17px;font-weight:bold;line-height:36px;text-align:center;text-decoration:none;cursor:pointer;display:block;box-sizing:border-box}
-#fnf-nav a:hover,#fnf-nav button:hover{border-color:#3fc1ff;color:#3fc1ff}
+.fnf-nav{position:fixed;top:10px;right:10px;z-index:99999;display:flex;gap:8px}
+.fnf-nav button{width:44px;height:44px;border-radius:10px;border:0;cursor:pointer;
+  background:rgba(15,12,24,.72);color:#fff;font-size:19px;opacity:.45;
+  transition:opacity .15s}
+.fnf-nav button:hover{opacity:1}
 </style>
-<script>
-(function(){
-  function nav(){
-    if(document.getElementById("fnf-nav"))return;
-    var wrap=document.createElement("div");wrap.id="fnf-nav";
-    var p=location.pathname,i=p.indexOf("/games/");
-    var root=i>=0?p.slice(0,i+1):p.replace(/[^/]*$/,"");
-    var back=document.createElement("a");back.textContent="\u2190";back.title="Back to games";
-    back.href=root+"mods.html";
-    var nt=document.createElement("a");nt.textContent="\u2197";nt.title="Open in new tab";
-    nt.href=location.href;nt.target="_blank";nt.rel="noopener";
-    var fs=document.createElement("button");fs.textContent="\u26f6";fs.title="Fullscreen";
-    fs.onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else(document.documentElement.requestFullscreen||function(){}).call(document.documentElement);};
-    wrap.appendChild(back);wrap.appendChild(nt);wrap.appendChild(fs);
-    (document.body||document.documentElement).appendChild(wrap);
-  }
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",nav);
-  else nav();
-})();
-</script>
+<div class="fnf-nav" id="fnf-nav-overlay">
+  <button onclick="window.close();setTimeout(function(){history.back()},200)" title="Back to site">&#8592;</button>
+  <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen">&#9938;</button>
+</div>
 </body>
 </html>

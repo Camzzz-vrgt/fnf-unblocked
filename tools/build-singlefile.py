@@ -7,9 +7,8 @@ Everything external resolves to raw.githubusercontent.com:
 Games whose packages are committed under pkg/<slug>/ (see pack-games.py)
 launch by fetching the staged wrapper html, rebasing it onto the CDN pkg
 dir, and writing it into a new tab. A fetch/XHR/src shim reassembles
->19MB files that pack-games split into .partNN chunks. Games not in the
-repo fall back to GAME_HOST (configurable in settings or localStorage
-key fnf-game-host).
+>19MB files that pack-games split into .partNN chunks. Games not staged
+under pkg/ load their raw package from games/<slug>/ on the same CDN.
 
   python tools/build-singlefile.py
 """
@@ -25,7 +24,6 @@ import subprocess
 _SHA = subprocess.run(["git","rev-parse","HEAD"],cwd=HERE,
                      capture_output=True,text=True).stdout.strip()
 CDN = f"https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/{_SHA}/"
-GAME_HOST_DEFAULT = "http://127.0.0.1:8642"
 
 
 def read(name):
@@ -123,13 +121,6 @@ SETTINGS = """
           </select>
         </label>
       </section>
-      <section class="panel">
-        <h2>Game Host</h2>
-        <p class="hint">games not bundled on the cdn load from here instead</p>
-        <label class="opt"><span>host url</span>
-          <input id="set-host" type="text" placeholder="__GAME_HOST__" style="flex:1;background:var(--bg2);color:var(--ink);border:2px solid rgba(255,255,255,.15);border-radius:8px;padding:6px 10px;font-size:15px" />
-        </label>
-      </section>
     </main>
   </section>
 """
@@ -222,9 +213,7 @@ body { display: block; }
 # fetch(), XHR and media/image src=.
 APP_JS = r"""
 "use strict";
-// CDN + GAME_HOST_DEFAULT are declared by the generator prelude.
-const gameHost = () =>
-  (window.FNFSettings && FNFSettings.get("game-host", "")) || GAME_HOST_DEFAULT;
+// CDN is declared by the generator prelude.
 
 /* ---------- hash router ---------- */
 const VIEWS = { home:"view-home", mods:"view-mods", play:"view-play",
@@ -353,11 +342,14 @@ async function launchGame(slug) {
     t.document.close();
   } catch (e) {}
   try {
-    const url = CDN + "pkg/" + encodeURIComponent(slug) + "/index.html";
+    const es = encodeURIComponent(slug);
+    // staged pkgs live under pkg/; the rest ship raw under games/
+    const dir = repoSet.has(slug) ? "pkg/" : "games/";
+    const url = CDN + dir + es + "/index.html";
     const r = await fetch(url);
     if (!r.ok) throw new Error("cdn " + r.status);
     let html = await r.text();
-    const base = `<base href="${CDN}pkg/${encodeURIComponent(slug)}/">`;
+    const base = `<base href="${CDN}${dir}${es}/">`;
     html = /<base[^>]*>/i.test(html)
       ? html.replace(/<base[^>]*>/i, base)
       : html.replace(/<head[^>]*>/i, m => m + base);
@@ -366,15 +358,12 @@ async function launchGame(slug) {
       { type: "text/html" }));
     if (w) w.location.href = u2; else location.href = u2;
   } catch (e) {
-    const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
     try {
       t.document.open();
-      t.document.write(gateHtml("cdn failed — " + e.message,
-        "trying your local game host…"));
+      t.document.write(gateHtml("load failed",
+        slug + " — " + e.message));
       t.document.close();
     } catch (e2) {}
-    setTimeout(() => { if (w) w.location.href = u;
-      else location.href = u; }, 900);
   }
 }
 document.addEventListener("click", e => {
@@ -424,7 +413,6 @@ bind("set-bgm-vol", "bgm-vol", "15");
 bind("set-sfx", "sfx", "1");
 bind("set-sfx-vol", "sfx-vol", "100");
 bind("set-cloak", "cloak", "");
-bind("set-host", "game-host", "");
 { const [name, arg] = parseHash();
   if (name === "play") playSlug = arg;
   show(name); }
@@ -435,15 +423,14 @@ bind("set-host", "game-host", "");
 def build_html():
     css = rewrite_css(read("style.css")) + EXTRA_CSS
     js = "\n".join([
-        "const CDN=" + json.dumps(CDN) + ";\n" +
-        "const GAME_HOST_DEFAULT=" + json.dumps(GAME_HOST_DEFAULT) + ";",
+        "const CDN=" + json.dumps(CDN) + ";",
         rewrite_js(read("settings.js")),
         rewrite_js(read("bgm.js")),
         rewrite_js(read("sfx.js")),
         APP_JS,
     ])
     markup = (HOME + MODS + PLAY + SETTINGS + CREDITS + DL_MODAL) \
-        .replace("__CDN__", CDN).replace("__GAME_HOST__", GAME_HOST_DEFAULT)
+        .replace("__CDN__", CDN)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
