@@ -3,43 +3,82 @@
 <head>
 <script>/* fnf-cdn-shim */
 (function(){
+  // site-locks try to kill the page via about:blank — block that nav only
   try{if("navigation" in window)navigation.addEventListener("navigate",
     function(e){var u="";try{u=e.destination&&e.destination.url||""}catch(_){}
       if(/^about:/.test(u))e.preventDefault()})}catch(_){}
   var CH=null;
-  if(!CH)return;
   var PM="/games/snk-fnf-flavor-rave-v2/";
   function key(u){try{
     var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
     var i=r.pathname.indexOf(PM);
     return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
   }catch(e){return null}}
+  // flaky hosts 502 under the preload burst — retry package assets a few
+  // times with backoff before surfacing a failure to the engine
+  var RETRY=5;
   function part(u,i){return u+".part"+(i<10?"0":"")+i}
+  var of=window.fetch&&window.fetch.bind(window);
+  function rfetch(u,o){var t=0;
+    function g(){return of(u,o).then(function(r){
+        return r.status>=500&&t++<RETRY?new Promise(function(res){
+          setTimeout(function(){res(g())},350*t)}):r},
+      function(e){if(t++<RETRY)return new Promise(function(res){
+          setTimeout(function(){res(g())},350*t)});throw e})}
+    return g()}
   function blob(u){var n=CH[key(u)],ps=[];
-    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){
+    for(var i=0;i<n;i++)ps.push(rfetch(part(u,i)).then(function(r){
       if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
     return Promise.all(ps).then(function(a){return new Blob(a)})}
-  var of=window.fetch&&window.fetch.bind(window);
   if(of)window.fetch=function(u,o){
     var k=key(u);
-    return k&&CH[k]?blob(u).then(function(b){return new Response(b)})
-                   :of(u,o)};
+    if(k!=null&&CH&&CH[k])return blob(u).then(function(b){
+      return new Response(b)});
+    return k!=null?rfetch(u,o):of(u,o)};
+  // retry <img>/<audio>/<video>/<source> loads — elements bypass fetch/XHR.
+  // capture-phase error listener runs before the engine's own handlers, so
+  // retryable failures never surface as errors; the last failure passes through.
+  try{
+    var SRC={};
+    [window.HTMLImageElement,window.HTMLMediaElement,
+     window.HTMLSourceElement].forEach(function(T){
+      if(!T)return;
+      try{var d=Object.getOwnPropertyDescriptor(T.prototype,"src");
+        if(!d||!d.set)return;
+        SRC[T.name]=d;
+        Object.defineProperty(T.prototype,"src",{get:d.get,set:function(v){
+          this.__fnfSrc=v;d.set.call(this,v)}})}catch(e){}});
+    window.addEventListener("error",function(ev){
+      var el=ev.target;
+      if(!el||!el.tagName||!/^(IMG|AUDIO|VIDEO|SOURCE)$/.test(el.tagName))
+        return;
+      var t=el.__t||0;
+      var v=el.__fnfSrc!==undefined?el.__fnfSrc:
+            (el.getAttribute&&el.getAttribute("src"));
+      if(t<RETRY&&v!=null&&key(el.src||"")!=null){
+        ev.stopImmediatePropagation();ev.preventDefault();
+        el.__t=t+1;
+        setTimeout(function(){el.src=v},350*(t+1))}
+    },true);
+  }catch(e){}
   var X=window.XMLHttpRequest;
   window.XMLHttpRequest=function(){
-    var r=new X(),self=this;self._u=null;self._c=false;self._l={};
+    var r=new X(),self=this;
+    self._u=null;self._c=false;self._k=null;self._l={};
+    self._m="GET";self._a=true;self._h=null;self._t=0;self._dead=false;
     ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
      "onerror","onabort","ontimeout"].forEach(function(ev){
       Object.defineProperty(self,ev,{
-        set:function(f){self["_"+ev]=f;
-          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
+        set:function(f){self["_"+ev]=f},
         get:function(){return self["_"+ev]}})});
-    self.addEventListener=function(t,f){if(self._c){
-      (self._l[t]=self._l[t]||[]).push(f)}else r.addEventListener(t,f)};
-    self.removeEventListener=function(t,f){if(!self._c)
-      r.removeEventListener(t,f)};
+    self.addEventListener=function(t,f){
+      (self._l[t]=self._l[t]||[]).push(f)};
+    self.removeEventListener=function(t,f){
+      var a=self._l[t]||[],i=a.indexOf(f);if(i>=0)a.splice(i,1)};
     self.dispatchEvent=function(){return true};
-    function fire(t){(self._l[t]||[]).forEach(function(f){
-      f.call(self,{type:t,target:self})})}
+    function fire(t,e){var ev=e||{type:t,target:self};
+      var h=self["_"+t];if(h)h.call(self,ev);
+      (self._l[t]||[]).slice().forEach(function(f){f.call(self,ev)})}
     ["status","statusText","readyState","response","responseText",
      "responseXML","upload","timeout","withCredentials","responseType",
      "responseURL"].forEach(function(p){
@@ -49,33 +88,56 @@
           try{if(p!=="status"&&p!=="statusText"&&p!=="readyState"&&
                p!=="response"&&p!=="responseText"&&p!=="responseXML"&&
                p!=="responseURL")r[p]=v}catch(e){}}})});
-    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);
-      if(!self._c)r.open.apply(r,arguments)};
-    self.setRequestHeader=function(){if(!self._c)
-      r.setRequestHeader.apply(r,arguments)};
+    self.open=function(m,u,a){self._m=m;self._u=u;self._a=a;
+      self._k=key(u);self._c=!!(self._k&&CH&&CH[self._k]);
+      self._t=0;self._dead=false};
+    self.setRequestHeader=function(k,v){
+      (self._h=self._h||[]).push([k,v])};
     self.getResponseHeader=function(){return self._c?null:
       r.getResponseHeader.apply(r,arguments)};
     self.getAllResponseHeaders=function(){return self._c?"":
       r.getAllResponseHeaders.apply(r,arguments)};
-    self.abort=function(){if(!self._c)r.abort()};
-    self.send=function(){
-      if(!self._c)return r.send.apply(r,arguments);
-      blob(self._u).then(function(b){
+    self.abort=function(){self._dead=true;if(!self._c)r.abort()};
+    function again(){return self._k!=null&&self._t<RETRY&&!self._dead}
+    function go(){
+      try{
+        r.open(self._m,self._u,self._a!==false);
+        if(self._h)self._h.forEach(function(h){
+          try{r.setRequestHeader(h[0],h[1])}catch(e){}});
+        ["timeout","withCredentials","responseType"].forEach(function(p){
+          if(self["$"+p]!==undefined)try{r[p]=self["$"+p]}catch(e){}});
+        r.send(self._b);
+      }catch(e){fire("error");fire("loadend")}}
+    // swallow per-attempt events; only the final outcome reaches the engine
+    r.onreadystatechange=function(){};
+    r.onloadstart=function(){};
+    r.onprogress=function(){};
+    r.onload=function(e){
+      if(r.status>=500&&again()){self._t++;setTimeout(go,350*self._t);return}
+      fire("readystatechange",e);fire("load",e);fire("loadend")};
+    r.onerror=function(e){
+      if(again()){self._t++;setTimeout(go,350*self._t);return}
+      fire("error",e);fire("loadend")};
+    r.ontimeout=function(e){
+      if(again()){self._t++;setTimeout(go,350*self._t);return}
+      fire("timeout",e);fire("loadend")};
+    r.onabort=function(e){fire("abort",e);fire("loadend")};
+    self.send=function(b){
+      self._b=b;
+      if(!self._c)return go();
+      blob(self._u).then(function(bl){
         self.$readyState=4;self.$status=200;self.$statusText="OK";
         var rt=self.$responseType||self.responseType||"";
         function fin(){fire("readystatechange");fire("load");
-          self._onreadystatechange&&self._onreadystatechange();
-          self._onload&&self._onload({type:"load",target:self})}
-        if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
+          fire("loadend")}
+        if(rt==="arraybuffer")bl.arrayBuffer().then(function(a){
           self.$response=a;self.$responseText="";fin()});
-        else if(rt==="blob"){self.$response=b;self.$responseText="";fin()}
-        else b.text().then(function(t){
+        else if(rt==="blob"){self.$response=bl;self.$responseText="";fin()}
+        else bl.text().then(function(t){
           self.$response=self.$responseText=t;fin()});
       }).catch(function(){
         self.$readyState=4;self.$status=404;
-        fire("readystatechange");fire("error");
-        self._onreadystatechange&&self._onreadystatechange();
-        self._onerror&&self._onerror({type:"error",target:self})});
+        fire("readystatechange");fire("error");fire("loadend")});
     };
     return self;
   };
@@ -197,13 +259,14 @@
 <style>
 .fnf-nav{position:fixed;top:10px;right:10px;z-index:99999;display:flex;gap:8px}
 .fnf-nav button{width:44px;height:44px;border-radius:10px;border:0;cursor:pointer;
-  background:rgba(15,12,24,.72);color:#fff;font-size:19px;opacity:.45;
-  transition:opacity .15s}
+  background:rgba(15,12,24,.72);color:#fff;opacity:.45;
+  transition:opacity .15s;display:flex;align-items:center;justify-content:center}
 .fnf-nav button:hover{opacity:1}
+.fnf-nav svg{display:block}
 </style>
 <div class="fnf-nav" id="fnf-nav-overlay">
-  <button onclick="history.back();window.close()" title="Back to site">&#8592;</button>
-  <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen">&#9938;</button>
+  <button onclick="if(history.length>1)history.back();else if(location.protocol!=='blob:')location.href='../../index.html'" title="Back to site"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <button onclick="(document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen())()" title="Fullscreen"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 9V5h4M19 9V5h-4M5 15v4h4M19 15v4h-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div>
 </body>
 </html>
