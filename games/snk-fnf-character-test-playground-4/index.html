@@ -8,24 +8,28 @@
     function(e){var u="";try{u=e.destination&&e.destination.url||""}catch(_){}
       if(/^about:/.test(u))e.preventDefault()})}catch(_){}
   var CH=null;
-  var PM="/games/snk-fnf-character-test-playground-4/";
+  var PM="/pkg/snk-fnf-character-test-playground-4/";
   function key(u){try{
     var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
     var i=r.pathname.indexOf(PM);
     return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
   }catch(e){return null}}
-  // flaky hosts 502 under the preload burst — retry package assets a few
-  // times with backoff before surfacing a failure to the engine
-  var RETRY=5;
+  // flaky hosts 502 under the preload burst — throttle same-package
+  // requests to a few in flight and retry failures with backoff
+  var RETRY=5,MAXC=6,_active=0,_queue=[];
+  function gate(f){if(_active<MAXC){_active++;f()}else _queue.push(f)}
+  function ungate(){_active--;var f=_queue.shift();
+    if(f){_active++;f()}}
+  function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
   function part(u,i){return u+".part"+(i<10?"0":"")+i}
   var of=window.fetch&&window.fetch.bind(window);
   function rfetch(u,o){var t=0;
     function g(){return of(u,o).then(function(r){
-        return r.status>=500&&t++<RETRY?new Promise(function(res){
-          setTimeout(function(){res(g())},350*t)}):r},
-      function(e){if(t++<RETRY)return new Promise(function(res){
-          setTimeout(function(){res(g())},350*t)});throw e})}
-    return g()}
+        return (r.status>=500||r.status==0)&&t++<RETRY?wait(350*t).then(g):r},
+      function(e){return t++<RETRY?wait(350*t).then(g):Promise.reject(e)})}
+    return new Promise(function(res,rej){
+      gate(function(){g().then(function(v){ungate();res(v)},
+                             function(e){ungate();rej(e)})})})}
   function blob(u){var n=CH[key(u)],ps=[];
     for(var i=0;i<n;i++)ps.push(rfetch(part(u,i)).then(function(r){
       if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
@@ -37,17 +41,26 @@
     return k!=null?rfetch(u,o):of(u,o)};
   // retry <img>/<audio>/<video>/<source> loads — elements bypass fetch/XHR.
   // capture-phase error listener runs before the engine's own handlers, so
-  // retryable failures never surface as errors; the last failure passes through.
+  // retryable failures never surface as errors; the last failure passes
+  // through. img src-sets are also gated on the shared concurrency limit.
+  function rel(el){if(el.__g){el.__g=false;ungate()}}
   try{
-    var SRC={};
     [window.HTMLImageElement,window.HTMLMediaElement,
      window.HTMLSourceElement].forEach(function(T){
       if(!T)return;
       try{var d=Object.getOwnPropertyDescriptor(T.prototype,"src");
         if(!d||!d.set)return;
-        SRC[T.name]=d;
+        var isImg=T===window.HTMLImageElement;
         Object.defineProperty(T.prototype,"src",{get:d.get,set:function(v){
-          this.__fnfSrc=v;d.set.call(this,v)}})}catch(e){}});
+          var el=this;el.__fnfSrc=v;
+          if(isImg&&key(v)!=null){
+            if(!el.__fnfRel){el.__fnfRel=1;
+              el.addEventListener("load",function(){rel(el)});}
+            el.__g=true;
+            gate(function(){d.set.call(el,v);
+              // watchdog: never let a stuck element pin a slot
+              setTimeout(function(){rel(el)},4000)})}
+          else d.set.call(el,v)}})}catch(e){}});
     window.addEventListener("error",function(ev){
       var el=ev.target;
       if(!el||!el.tagName||!/^(IMG|AUDIO|VIDEO|SOURCE)$/.test(el.tagName))
@@ -57,8 +70,10 @@
             (el.getAttribute&&el.getAttribute("src"));
       if(t<RETRY&&v!=null&&key(el.src||"")!=null){
         ev.stopImmediatePropagation();ev.preventDefault();
+        rel(el);
         el.__t=t+1;
         setTimeout(function(){el.src=v},350*(t+1))}
+      else rel(el)
     },true);
   }catch(e){}
   var X=window.XMLHttpRequest;
@@ -97,8 +112,9 @@
       r.getResponseHeader.apply(r,arguments)};
     self.getAllResponseHeaders=function(){return self._c?"":
       r.getAllResponseHeaders.apply(r,arguments)};
-    self.abort=function(){self._dead=true;if(!self._c)r.abort()};
+    self.abort=function(){self._dead=true;fin();if(!self._c)r.abort()};
     function again(){return self._k!=null&&self._t<RETRY&&!self._dead}
+    function fin(){if(self._gated){self._gated=false;ungate()}}
     function go(){
       try{
         r.open(self._m,self._u,self._a!==false);
@@ -114,17 +130,20 @@
     r.onprogress=function(){};
     r.onload=function(e){
       if(r.status>=500&&again()){self._t++;setTimeout(go,350*self._t);return}
-      fire("readystatechange",e);fire("load",e);fire("loadend")};
+      fin();fire("readystatechange",e);fire("load",e);fire("loadend")};
     r.onerror=function(e){
       if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fire("error",e);fire("loadend")};
+      fin();fire("error",e);fire("loadend")};
     r.ontimeout=function(e){
       if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fire("timeout",e);fire("loadend")};
-    r.onabort=function(e){fire("abort",e);fire("loadend")};
+      fin();fire("timeout",e);fire("loadend")};
+    r.onabort=function(e){fin();fire("abort",e);fire("loadend")};
     self.send=function(b){
       self._b=b;
-      if(!self._c)return go();
+      if(!self._c){
+        if(self._k!=null){self._gated=true;gate(go)}
+        else go();
+        return}
       blob(self._u).then(function(bl){
         self.$readyState=4;self.$status=200;self.$statusText="OK";
         var rt=self.$responseType||self.responseType||"";

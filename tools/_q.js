@@ -1,17 +1,16 @@
-const fs=require('fs');
-const src=fs.readFileSync('pkg/snk-fnf-animania/Funkin.js','utf8');
-// All methods on the GatePulse object (_0x55eb4b) and on backend_Sk internal (_0x454858)
-for(const obj of ['_0x55eb4b','_0x454858']){
-  const re=new RegExp(obj.replace(/\$/g,'\\$')+"\\[['\"]([\\w$]+)['\"]\\]\\s*=\\s*function",'g');
-  let m;console.log('=== methods on',obj);
-  while(m=re.exec(src)){
-    const after=src.slice(m.index+m[0].length,m.index+m[0].length+45);
-    console.log(' ',m[1],'@',m.index, after.trimStart().startsWith('return')?'[dead]':'[LIVE]');
+const { chromium } = require('../../node_modules/playwright-core');
+(async () => {
+  const b = await chromium.launch({ headless: true });
+  const p = await b.newPage();
+  const errs = [];
+  p.on('console', m => { if (m.type() === 'error') errs.push(m.text().slice(0, 160)); });
+  for (const s of ['friday-night-funkin', 'snk-fnf-animania']) {
+    errs.length = 0;
+    const t0 = Date.now();
+    await p.goto('http://127.0.0.1:8690/pkg/' + s + '/index.html', { waitUntil: 'load', timeout: 60000 });
+    await p.waitForTimeout(25000);
+    const st = await p.evaluate(() => ({ c: !!document.querySelector('canvas'), u: location.href.slice(0, 60) })).catch(e => ({ err: String(e) }));
+    console.log(s, JSON.stringify(st), ((Date.now() - t0) / 1000) + 's', 'errs=' + errs.length, errs.slice(0, 3).join(' | '));
   }
-}
-// GatePulse call sites with encoded names: find all backend_GatePulse[...] usages
-let i=-1,c=0;
-while((i=src.indexOf('backend_GatePulse[',i+1))>=0&&c<20){
-  console.log('GP call @'+i, JSON.stringify(src.slice(i,i+120).replace(/\r?\n/g,' ')));
-  c++;
-}
+  await b.close(); process.exit(0);
+})().catch(e => { console.log('FAIL', e.message); process.exit(1) });
