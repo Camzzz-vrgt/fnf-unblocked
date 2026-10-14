@@ -317,8 +317,9 @@ document.addEventListener("input", e => {
 });
 
 /* ---------- play gate + launcher ---------- */
-function openGate(slug) {
+async function openGate(slug) {
   document.getElementById("gate-name").textContent = "Loading…";
+  if (!games) await ensureGrid();
   const g = games && games.find(x => x.slug === slug);
   if (g) {
     document.title = g.name + " — FNF";
@@ -328,6 +329,8 @@ function openGate(slug) {
       document.getElementById("gate-bg").style.backgroundImage =
         `url("${CDN}${g.cover}?v=4")`;
     }
+  } else {
+    document.getElementById("gate-name").textContent = slug;
   }
 }
 
