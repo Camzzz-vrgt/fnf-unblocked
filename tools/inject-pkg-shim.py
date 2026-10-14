@@ -117,24 +117,35 @@ def inject(path, slug):
     chunks = io.open(cj, encoding="utf-8").read().strip() \
         if os.path.isfile(cj) else "null"
     shim = SHIM.replace("__SLUG__", slug).replace("__CHUNKS__", chunks)
+    changed = False
     if MARK in s:  # replace existing shim block
-        s = re.sub(r"<script>/\* fnf-cdn-shim \*/.*?</script>", shim,
-                   s, count=1, flags=re.S)
-        io.open(path, "w", encoding="utf-8").write(s)
-        return True
-    if re.search(r"<head[^>]*>", s, re.I):
-        s = re.sub(r"(<head[^>]*>)", r"\1\n" + shim, s, count=1,
-                   flags=re.I)
+        s2 = re.sub(r"<script>/\* fnf-cdn-shim \*/.*?</script>", shim,
+                    s, count=1, flags=re.S)
+        changed |= s2 != s
+        s = s2
     else:
-        s = shim + s
-    if OMARK not in s:
-        if re.search(r"</body>", s, re.I):
-            s = re.sub(r"</body>", OVERLAY + "\n</body>", s, count=1,
+        if re.search(r"<head[^>]*>", s, re.I):
+            s = re.sub(r"(<head[^>]*>)", r"\1\n" + shim, s, count=1,
                        flags=re.I)
         else:
-            s += OVERLAY
-    io.open(path, "w", encoding="utf-8").write(s)
-    return True
+            s = shim + s
+        changed = True
+    # refresh overlay block if it exists, otherwise append it
+    if OMARK in s:
+        s2 = re.sub(r"<style>\s*\.fnf-nav.*?</div>", OVERLAY, s,
+                    count=1, flags=re.S)
+        changed |= s2 != s
+        s = s2
+    elif re.search(r"</body>", s, re.I):
+        s = re.sub(r"</body>", OVERLAY + "\n</body>", s, count=1,
+                   flags=re.I)
+        changed = True
+    else:
+        s += OVERLAY
+        changed = True
+    if changed:
+        io.open(path, "w", encoding="utf-8").write(s)
+    return changed
 
 
 def main():
