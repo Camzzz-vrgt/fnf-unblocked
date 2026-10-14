@@ -331,10 +331,24 @@ function openGate(slug) {
   }
 }
 
+function gateHtml(title, sub) {
+  return '<!doctype html><meta charset="utf-8"><title>' + title +
+    '</title><body style="margin:0;background:#0c0714;color:#eee;' +
+    'display:flex;align-items:center;justify-content:center;' +
+    'height:100vh;font-family:sans-serif"><div style=' +
+    '"text-align:center"><h2>' + title + '</h2><p style=' +
+    '"color:#9a92b8">' + sub + '</p></div>';
+}
 async function launchGame(slug) {
   let w = null;
   try { w = window.open("about:blank", "_blank"); } catch (e) {}
   const t = w || window;
+  try {  // instant feedback — never leave the tab blank while fetching
+    t.document.open();
+    t.document.write(gateHtml("loading " + slug + "…",
+      "pulling the game from the cdn"));
+    t.document.close();
+  } catch (e) {}
   try {
     const url = CDN + "pkg/" + encodeURIComponent(slug) + "/index.html";
     const r = await fetch(url);
@@ -344,10 +358,20 @@ async function launchGame(slug) {
     html = /<base[^>]*>/i.test(html)
       ? html.replace(/<base[^>]*>/i, base)
       : html.replace(/<head[^>]*>/i, m => m + base);
-    t.document.open(); t.document.write(html); t.document.close();
+    // navigate via blob url — more reliable than document.write
+    const u2 = URL.createObjectURL(new Blob([html],
+      { type: "text/html" }));
+    if (w) w.location.href = u2; else location.href = u2;
   } catch (e) {
     const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
-    if (w) w.location.href = u; else location.href = u;
+    try {
+      t.document.open();
+      t.document.write(gateHtml("cdn failed — " + e.message,
+        "trying your local game host…"));
+      t.document.close();
+    } catch (e2) {}
+    setTimeout(() => { if (w) w.location.href = u;
+      else location.href = u; }, 900);
   }
 }
 document.addEventListener("click", e => {

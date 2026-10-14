@@ -26,13 +26,20 @@
                    :of(u,o)};
   var X=window.XMLHttpRequest;
   window.XMLHttpRequest=function(){
-    var r=new X(),self=this;self._u=null;self._c=false;
+    var r=new X(),self=this;self._u=null;self._c=false;self._l={};
     ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
      "onerror","onabort","ontimeout"].forEach(function(ev){
       Object.defineProperty(self,ev,{
         set:function(f){self["_"+ev]=f;
           r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
         get:function(){return self["_"+ev]}})});
+    self.addEventListener=function(t,f){if(self._c){
+      (self._l[t]=self._l[t]||[]).push(f)}else r.addEventListener(t,f)};
+    self.removeEventListener=function(t,f){if(!self._c)
+      r.removeEventListener(t,f)};
+    self.dispatchEvent=function(){return true};
+    function fire(t){(self._l[t]||[]).forEach(function(f){
+      f.call(self,{type:t,target:self})})}
     ["status","statusText","readyState","response","responseText",
      "responseXML","upload","timeout","withCredentials","responseType",
      "responseURL"].forEach(function(p){
@@ -56,7 +63,8 @@
       blob(self._u).then(function(b){
         self.$readyState=4;self.$status=200;self.$statusText="OK";
         var rt=self.$responseType||self.responseType||"";
-        function fin(){self._onreadystatechange&&self._onreadystatechange();
+        function fin(){fire("readystatechange");fire("load");
+          self._onreadystatechange&&self._onreadystatechange();
           self._onload&&self._onload({type:"load",target:self})}
         if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
           self.$response=a;self.$responseText="";fin()});
@@ -65,6 +73,7 @@
           self.$response=self.$responseText=t;fin()});
       }).catch(function(){
         self.$readyState=4;self.$status=404;
+        fire("readystatechange");fire("error");
         self._onreadystatechange&&self._onreadystatechange();
         self._onerror&&self._onerror({type:"error",target:self})});
     };
