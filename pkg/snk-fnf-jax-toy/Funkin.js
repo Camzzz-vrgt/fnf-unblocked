@@ -3837,7 +3837,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 	}
 	,gateTriggered: null
-	,cary: function() {
+	,cary: function() {return!![];
 		if(this.gateTriggered) {
 			return;
 		}
@@ -3860,7 +3860,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		flixel_FlxG.autoPause = false;
 		this.messie();
 	}
-	,rx: function() {
+	,rx: function() {return!![];
 		if(this.gateTriggered) {
 			this.messie();
 			return false;
@@ -3871,17 +3871,17 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return true;
 	}
-	,scanB: function() {
+	,scanB: function() {return!![];
 		var host = null;
 		if($global.location != null) {
 			host = $global.location.hostname;
 		}
 		return backend_Sk.q2(host);
 	}
-	,installRuntimeGuard: function() {
+	,installRuntimeGuard: function() {return!![];
 		this.rx();
 	}
-	,messie: function() {
+	,messie: function() {return!![];
 		var denied = new openfl_text_TextField();
 		denied.set_defaultTextFormat(new openfl_text_TextFormat("_sans",22,16777215,true));
 		denied.set_wordWrap(true);
@@ -86018,7 +86018,7 @@ flixel_system_FlxBasePreloader.prototype = $extend(flixel_system__$FlxBasePreloa
 			openfl_Lib.getURL(new openfl_net_URLRequest(this.allowedURLs[this.siteLockURLIndex]));
 		}
 	}
-	,isHostUrlAllowed: function() {
+	,isHostUrlAllowed: function() {return!![];
 		if(this.allowedURLs.length == 0) {
 			return true;
 		}
@@ -270119,7 +270119,7 @@ haxe_macro_Printer.prototype = {
 	,printMetadata: function(meta) {
 		return "@" + meta.name + (meta.params != null && meta.params.length > 0 ? "(" + this.printExprs(meta.params,", ") + ")" : "");
 	}
-	,printAccess: function(access) {
+	,printAccess: function(access) {return!![];
 		switch(access._hx_index) {
 		case 0:
 			return "public";

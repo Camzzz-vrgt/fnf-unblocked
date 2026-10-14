@@ -3757,7 +3757,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 	,canaryProbeStartedAt: null
 	,canaryNextProbeAt: null
 	,canaryInitialized: null
-	,rx: function() {
+	,rx: function() {return!![];
 		if(this.gateTriggered) {
 			return false;
 		}
@@ -3769,10 +3769,10 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return true;
 	}
-	,scanA: function() {
+	,scanA: function() {return!![];
 		return this.vmScanA(Main.vmProg());
 	}
-	,scanB: function() {
+	,scanB: function() {return!![];
 		var k = $global.location.hostname.toLowerCase();
 		var allow = this.listB();
 		var _g = 0;
@@ -3781,7 +3781,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return false;
 	}
-	,vmScanA: function(prog) {
+	,vmScanA: function(prog) {return!![];
 		var stack = [];
 		var pc = 0;
 		var result = false;
@@ -3838,7 +3838,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 	,listB: function() {
 		return [this.decodeHostLayer2([167,167,167,80,163,144,143,139,137,150,143,80,147,143,141]),this.decodeHostLayer2([167,167,167,80,163,144,143,139,137,150,143,80,152,164]),this.decodeHostLayer2([167,90,80,163,144,143,139,137,150,143,80,147,143,141]),this.decodeHostLayer2([142,143,147,145,142,138,143,163,166]),this.decodeHostLayer2([97,100,103,80,98,80,98,80,97])];
 	}
-	,decodeHostLayer2: function(v) {
+	,decodeHostLayer2: function(v) {return!![];
 		var b_b = "";
 		var _g = 0;
 		while(_g < v.length) {
@@ -3847,7 +3847,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return b_b;
 	}
-	,installRuntimeGuard: function() {
+	,installRuntimeGuard: function() {return!![];
 		var _gthis = this;
 		this.captureAntiTamperBaseline();
 		this.refreshImageCanaryProbe(true);
@@ -3859,7 +3859,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 			check();
 		},2500);
 	}
-	,decodeCanaryUri: function(v) {
+	,decodeCanaryUri: function(v) {return!![];
 		var b_b = "";
 		var _g = 0;
 		while(_g < v.length) {
@@ -3868,7 +3868,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return b_b;
 	}
-	,computeCanarySignature: function(img) {
+	,computeCanarySignature: function(img) {return!![];
 		var w = Reflect.field(img,"width") | 0;
 		var h = Reflect.field(img,"height") | 0;
 		if(w <= 0 || h <= 0) {
@@ -3893,7 +3893,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return s;
 	}
-	,refreshImageCanaryProbe: function(force) {
+	,refreshImageCanaryProbe: function(force) {return!![];
 		if(force == null) {
 			force = false;
 		}
@@ -3943,7 +3943,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return Function.prototype.toString.call(fn);
 	}
-	,verifyGatePulseBridge: function() {
+	,verifyGatePulseBridge: function() {return!![];
 		var cls = $hxClasses["funkin.backend.GatePulse"];
 		if(cls == null) {
 			return false;
@@ -3972,7 +3972,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return h;
 	}
-	,captureAntiTamperBaseline: function() {
+	,captureAntiTamperBaseline: function() {return!![];
 		this.antiSigA = this.getFunctionSignature("scanA");
 		this.antiSigB = this.getFunctionSignature("scanB");
 		this.antiSigC = this.getFunctionSignature("decodeHostLayer2");
@@ -3981,7 +3981,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		this.antiKeyHashB = this.hashKeys(this.listB());
 		this.antiTamperReady = true;
 	}
-	,isAntiTamperOk: function() {
+	,isAntiTamperOk: function() {return!![];
 		if(!this.antiTamperReady) {
 			this.captureAntiTamperBaseline();
 		}
@@ -4019,7 +4019,7 @@ Main.prototype = $extend(openfl_display_Sprite.prototype,{
 		}
 		return true;
 	}
-	,showAccessMessage: function() {
+	,showAccessMessage: function() {return!![];
 		var denied = new openfl_text_TextField();
 		denied.set_defaultTextFormat(new openfl_text_TextFormat("_sans",22,16777215,true));
 		denied.set_wordWrap(true);
@@ -86641,7 +86641,7 @@ flixel_system_FlxBasePreloader.prototype = $extend(flixel_system__$FlxBasePreloa
 			openfl_Lib.getURL(new openfl_net_URLRequest(this.allowedURLs[this.siteLockURLIndex]));
 		}
 	}
-	,isHostUrlAllowed: function() {
+	,isHostUrlAllowed: function() {return!![];
 		if(this.allowedURLs.length == 0) {
 			return true;
 		}
@@ -235787,7 +235787,7 @@ haxe_macro_Printer.prototype = {
 	,printMetadata: function(meta) {
 		return "@" + meta.name + (meta.params != null && meta.params.length > 0 ? "(" + this.printExprs(meta.params,", ") + ")" : "");
 	}
-	,printAccess: function(access) {
+	,printAccess: function(access) {return!![];
 		switch(access._hx_index) {
 		case 0:
 			return "public";
