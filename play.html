@@ -22,13 +22,14 @@
     <button id="btn-back" class="back" title="Back" aria-label="Back"></button>
   </div>
 
+  <script src="cdn-pin.js?v=1"></script>
   <script src="settings.js?v=2"></script>
   <script src="nav.js?v=2"></script>
 
   <script>
     const params = new URLSearchParams(location.search);
     const slug = params.get("g") || "friday-night-funkin";
-    const CDN = "https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/9b26e7c953ed80a82f4ac9c5864491dcaf90bea9/";
+    const CDN = window.CDN_PIN;
     const GAME_HOST_DEFAULT = "http://127.0.0.1:8642";
     const gameHost = () =>
       (window.FNFSettings && FNFSettings.get("game-host", "")) || GAME_HOST_DEFAULT;

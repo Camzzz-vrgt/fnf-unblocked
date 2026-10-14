@@ -535,7 +535,12 @@ def main():
     with io.open(os.path.join(SITE, "single-file.svg"), "w",
                  encoding="utf-8") as f:
         f.write(build_svg(html))
-    print("wrote single-file.html + single-file.svg")
+    # shared CDN pin for the multi-page site (play.html reads this so the
+    # normal site and the single-file can never drift onto different commits)
+    with io.open(os.path.join(SITE, "cdn-pin.js"), "w",
+                 encoding="utf-8") as f:
+        f.write("const CDN_PIN = " + repr(CDN) + ";\n")
+    print("wrote single-file.html + single-file.svg + cdn-pin.js")
 
 
 if __name__ == "__main__":

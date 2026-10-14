@@ -1,7 +1,7 @@
 // Verify host-locked games boot past the deny screen via the real blob-launch path
 import { chromium } from 'playwright-core';
 
-const SHA = '74705108f51ae35724b6c0925afe5ad100409f71';
+const SHA = '84478abb3eefb1da21bc9d4baf8c334f62099ec2';
 const CDN = `https://rawcdn.githack.com/Camzzz-vrgt/fnf-unblocked/${SHA}/`;
 const slugs = process.argv.slice(2);
 
