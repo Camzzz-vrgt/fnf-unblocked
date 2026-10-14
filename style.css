@@ -274,10 +274,10 @@ body {
   gap: 8px;
   opacity: 0;
   transition: opacity 0.15s;
-  z-index: 20;
+  z-index: 50;
 }
 .play-page:hover .play-fab, .play-fab:focus-within { opacity: 1; }
-.play-fab button {
+.play-fab button, .play-fab a {
   background: rgba(20, 15, 30, 0.85);
   border: 2px solid rgba(255, 255, 255, 0.15);
   color: var(--ink);
@@ -289,7 +289,9 @@ body {
   display: grid;
   place-items: center;
 }
-.play-fab button:hover { border-color: var(--blue); color: var(--blue); }
+.play-fab button:hover, .play-fab a:hover { border-color: var(--blue); color: var(--blue); }
+.play-fab a { text-decoration: none; color: var(--ink); display: grid; place-items: center; }
+.play-fab a:hover { color: var(--blue); }
 
 /* chunky css-drawn fab icons — match the .back chevron */
 #btn-newtab::before {
