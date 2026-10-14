@@ -3,9 +3,10 @@
 <head>
 <script>/* fnf-cdn-shim */
 (function(){
-  var CH;
-  try{var x=new XMLHttpRequest();x.open("GET","chunks.json",false);x.send();
-      if(x.status>=200&&x.status<300)CH=JSON.parse(x.responseText);}catch(e){}
+  var CH={
+"assets/songs/sense-goodman/Inst.wav": 4,
+"assets/songs/sense-goodman/Voices.wav": 4
+};
   if(!CH)return;
   var PM="/pkg/snk-vs-nonsense/";
   function key(u){try{

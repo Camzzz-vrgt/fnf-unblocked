@@ -331,11 +331,24 @@ function openGate(slug) {
   }
 }
 
-function launchGame(slug) {
-  const w = window.open(CDN + "pkg/" + encodeURIComponent(slug) +
-                        "/index.html", "_blank");
-  if (!w) location.href = CDN + "pkg/" + encodeURIComponent(slug) +
-                        "/index.html";
+async function launchGame(slug) {
+  let w = null;
+  try { w = window.open("about:blank", "_blank"); } catch (e) {}
+  const t = w || window;
+  try {
+    const url = CDN + "pkg/" + encodeURIComponent(slug) + "/index.html";
+    const r = await fetch(url);
+    if (!r.ok) throw new Error("cdn " + r.status);
+    let html = await r.text();
+    const base = `<base href="${CDN}pkg/${encodeURIComponent(slug)}/">`;
+    html = /<base[^>]*>/i.test(html)
+      ? html.replace(/<base[^>]*>/i, base)
+      : html.replace(/<head[^>]*>/i, m => m + base);
+    t.document.open(); t.document.write(html); t.document.close();
+  } catch (e) {
+    const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
+    if (w) w.location.href = u; else location.href = u;
+  }
 }
 document.addEventListener("click", e => {
   if (e.target.id === "gate-play" || e.target.id === "gate" ||

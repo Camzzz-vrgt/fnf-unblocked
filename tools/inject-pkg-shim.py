@@ -22,9 +22,7 @@ OMARK = "fnf-nav-overlay"
 
 SHIM = r"""<script>/* fnf-cdn-shim */
 (function(){
-  var CH;
-  try{var x=new XMLHttpRequest();x.open("GET","chunks.json",false);x.send();
-      if(x.status>=200&&x.status<300)CH=JSON.parse(x.responseText);}catch(e){}
+  var CH=__CHUNKS__;
   if(!CH)return;
   var PM="/pkg/__SLUG__/";
   function key(u){try{
@@ -106,9 +104,15 @@ OVERLAY = r"""<style>
 
 def inject(path, slug):
     s = io.open(path, encoding="utf-8", errors="replace").read()
-    if MARK in s:
-        return False
-    shim = SHIM.replace("__SLUG__", slug)
+    cj = os.path.join(os.path.dirname(path), "chunks.json")
+    chunks = io.open(cj, encoding="utf-8").read().strip() \
+        if os.path.isfile(cj) else "null"
+    shim = SHIM.replace("__SLUG__", slug).replace("__CHUNKS__", chunks)
+    if MARK in s:  # replace existing shim block
+        s = re.sub(r"<script>/\* fnf-cdn-shim \*/.*?</script>", shim,
+                   s, count=1, flags=re.S)
+        io.open(path, "w", encoding="utf-8").write(s)
+        return True
     if re.search(r"<head[^>]*>", s, re.I):
         s = re.sub(r"(<head[^>]*>)", r"\1\n" + shim, s, count=1,
                    flags=re.I)
