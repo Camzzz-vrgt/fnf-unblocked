@@ -293,6 +293,31 @@ body {
 .play-fab a { text-decoration: none; color: var(--ink); display: grid; place-items: center; }
 .play-fab a:hover { color: var(--blue); }
 
+/* chunky css-drawn house — matches the .back chevron weight */
+.home-btn { position: relative; }
+.home-btn::before {
+  content: "";
+  width: 15px;
+  height: 12px;
+  background: var(--ink);
+  border-radius: 2px;
+  margin-top: 9px;
+}
+.home-btn::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--ink);
+  border-radius: 3px;
+  transform: rotate(45deg);
+  top: 8px;
+  left: 50%;
+  margin-left: -8px;
+}
+.home-btn:hover { background: var(--blue); border-color: var(--blue); }
+.home-btn:hover::before, .home-btn:hover::after { background: #06222b; }
+
 /* chunky css-drawn fab icons — match the .back chevron */
 #btn-newtab::before {
   content: "";

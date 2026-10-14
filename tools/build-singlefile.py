@@ -93,7 +93,7 @@ PLAY = """
         <button id="gate-play">CLICK TO PLAY</button>
       </div>
     </div>
-    <div class="play-fab"><a class="home-btn" href="#/home" data-nav title="Home" aria-label="Home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></a><button id="btn-back" class="back" title="Back" aria-label="Back"></button></div>
+    <div class="play-fab"><a class="home-btn" href="#/home" data-nav title="Home" aria-label="Home"></a><button id="btn-back" class="back" title="Back" aria-label="Back"></button></div>
   </section>
 """
 
