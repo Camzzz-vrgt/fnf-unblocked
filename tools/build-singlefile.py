@@ -371,14 +371,16 @@ function bind(id, key, val) {
 }
 
 /* ---------- download popup ---------- */
+const DL_BASE = "https://raw.githubusercontent.com/Camzzz-vrgt/" +
+  "fnf-unblocked/main/";
 function dl(name) {
-  fetch(CDN + name).then(r => r.blob()).then(b => {
+  fetch(DL_BASE + name).then(r => r.blob()).then(b => {
     const a = document.createElement("a");
     a.href = URL.createObjectURL(b);
     a.download = name;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 5000);
-  }).catch(() => window.open(CDN + name, "_blank"));
+  }).catch(() => window.open(DL_BASE + name, "_blank"));
 }
 document.addEventListener("click", e => {
   const dlBtn = e.target.closest("#dl-fab");
