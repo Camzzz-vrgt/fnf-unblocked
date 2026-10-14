@@ -220,88 +220,6 @@ body { display: block; }
 # Injected at the top of every game doc written by the launcher. Reads
 # chunks.json (sync, pre-script), then reassembles .partNN files for
 # fetch(), XHR and media/image src=.
-CHUNK_SHIM = r"""
-(function(){
-  var CH;
-  try{var x=new XMLHttpRequest();x.open("GET","chunks.json",false);x.send();
-      if(x.status>=200&&x.status<300)CH=JSON.parse(x.responseText);}catch(e){}
-  if(!CH)return;
-  var PM="/pkg/__SLUG__/";
-  function key(u){try{
-    var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
-    var i=r.pathname.indexOf(PM);
-    return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
-  }catch(e){return null}}
-  function part(u,i){return u+".part"+(i<10?"0":"")+i}
-  function blob(u){var n=CH[key(u)],ps=[];
-    for(var i=0;i<n;i++)ps.push(fetch(part(u,i)).then(function(r){
-      if(!r.ok)throw new Error("part "+r.status);return r.blob()}));
-    return Promise.all(ps).then(function(a){return new Blob(a)})}
-  var of=window.fetch&&window.fetch.bind(window);
-  if(of)window.fetch=function(u,o){
-    return key(u)&&CH[key(u)]
-      ?blob(u).then(function(b){return new Response(b)})
-      :of(u,o)};
-  var X=window.XMLHttpRequest;
-  window.XMLHttpRequest=function(){
-    var r=new X(),self=this;self._u=null;self._c=false;
-    ["onreadystatechange","onload","onloadstart","onloadend","onprogress",
-     "onerror","onabort","ontimeout"].forEach(function(ev){
-      Object.defineProperty(self,ev,{
-        set:function(f){self["_"+ev]=f;
-          r[ev]=function(){if(!self._c&&f)f.apply(self,arguments)}},
-        get:function(){return self["_"+ev]}})});
-    ["status","statusText","readyState","response","responseText",
-     "responseXML","upload","timeout","withCredentials","responseType",
-     "responseURL"].forEach(function(p){
-      Object.defineProperty(self,p,{
-        get:function(){return self._c?self["$"+p]:r[p]},
-        set:function(v){self["$"+p]=v;
-          try{if(p!=="status"&&p!=="statusText"&&p!=="readyState"&&
-               p!=="response"&&p!=="responseText"&&p!=="responseXML"&&
-               p!=="responseURL")r[p]=v}catch(e){}}})});
-    self.open=function(m,u){self._u=u;self._c=!!(key(u)&&CH[key(u)]);
-      if(!self._c)r.open.apply(r,arguments)};
-    self.setRequestHeader=function(){if(!self._c)
-      r.setRequestHeader.apply(r,arguments)};
-    self.getResponseHeader=function(){return self._c?null:
-      r.getResponseHeader.apply(r,arguments)};
-    self.getAllResponseHeaders=function(){return self._c?"":
-      r.getAllResponseHeaders.apply(r,arguments)};
-    self.abort=function(){if(!self._c)r.abort()};
-    self.send=function(){
-      if(!self._c)return r.send.apply(r,arguments);
-      blob(self._u).then(function(b){
-        self.$readyState=4;self.$status=200;self.$statusText="OK";
-        var rt=self.$responseType||self.responseType||"";
-        function fin(ev){self._onreadystatechange&&self._onreadystatechange();
-          self._onload&&self._onload({type:"load",target:self})}
-        if(rt==="arraybuffer")b.arrayBuffer().then(function(a){
-          self.$response=a;self.$responseText="";fin()});
-        else if(rt==="blob"){self.$response=b;self.$responseText="";fin()}
-        else if(rt==="json")b.text().then(function(t){
-          try{self.$response=JSON.parse(t)}catch(e){self.$response=null}
-          self.$responseText=t;fin()});
-        else b.text().then(function(t){self.$response=t;self.$responseText=t;fin()});
-      }).catch(function(e){self.$status=0;
-        self._onerror&&self._onerror({type:"error",target:self})})};
-  };
-  function srcPatch(proto,prop){
-    var d=Object.getOwnPropertyDescriptor(proto,prop);
-    if(!d||!d.set)return;
-    Object.defineProperty(proto,prop,{configurable:true,enumerable:d.enumerable,
-      get:d.get?function(){return d.get.call(this)}:undefined,
-      set:function(v){var k=key(v);
-        if(k&&CH[k]){var t=this;blob(v).then(function(b){
-          d.set.call(t,URL.createObjectURL(b))});}
-        else d.set.call(this,v)}})}
-  srcPatch(HTMLMediaElement.prototype,"src");
-  srcPatch(HTMLImageElement.prototype,"src");
-})();
-"""
-
-# -------------------------------------------------------------- app js
-
 APP_JS = r"""
 "use strict";
 // CDN + GAME_HOST_DEFAULT are declared by the generator prelude.
@@ -413,38 +331,11 @@ function openGate(slug) {
   }
 }
 
-const SHIM = __SHIM__;
-
-function prepGame(html, slug) {
-  const base = `<base href="${CDN}pkg/${slug}/">`;
-  if (/<base[^>]*>/i.test(html))
-    html = html.replace(/<base[^>]*>/i, base);
-  else
-    html = html.replace(/<head[^>]*>/i, m => m + base);
-  // run the chunk reassembly shim before any game script
-  html = html.replace(/<base[^>]*>/i,
-    m => m + `<script>${SHIM.replace(/__SLUG__/g, slug).replace(/__CDN__/g, CDN)}<\/script>`);
-  // back button closes the game tab (site lives in the opener tab)
-  html = html.replace(/back\.href=root\+"mods\.html";/,
-                      'back.href="javascript:window.close()";');
-  return html;
-}
-
-async function launchGame(slug) {
-  let w = null;
-  try { w = window.open("about:blank", "_blank"); } catch (e) {}
-  try {
-    const url = CDN + "games/" + encodeURIComponent(slug) + "/index.html";
-    const r = await fetch(url);
-    if (!r.ok) throw new Error("cdn " + r.status);
-    const html = await r.text();
-    const out = prepGame(html, slug);
-    const t = w || window;
-    t.document.open(); t.document.write(out); t.document.close();
-    return;
-  } catch (e) { /* fall through to host */ }
-  const u = gameHost() + "/games/" + encodeURIComponent(slug) + "/";
-  if (w) w.location.href = u; else location.href = u;
+function launchGame(slug) {
+  const w = window.open(CDN + "pkg/" + encodeURIComponent(slug) +
+                        "/index.html", "_blank");
+  if (!w) location.href = CDN + "pkg/" + encodeURIComponent(slug) +
+                        "/index.html";
 }
 document.addEventListener("click", e => {
   if (e.target.id === "gate-play" || e.target.id === "gate" ||
@@ -487,7 +378,7 @@ document.addEventListener("click", e => {
 
 /* ---------- boot ---------- */
 bind("set-bgm", "bgm", "1");
-bind("set-bgm-vol", "bgm-vol", "55");
+bind("set-bgm-vol", "bgm-vol", "15");
 bind("set-sfx", "sfx", "1");
 bind("set-sfx-vol", "sfx-vol", "100");
 bind("set-cloak", "cloak", "");
@@ -507,7 +398,7 @@ def build_html():
         rewrite_js(read("settings.js")),
         rewrite_js(read("bgm.js")),
         rewrite_js(read("sfx.js")),
-        APP_JS.replace("__SHIM__", json.dumps(CHUNK_SHIM)),
+        APP_JS,
     ])
     markup = (HOME + MODS + PLAY + SETTINGS + CREDITS + DL_MODAL) \
         .replace("__CDN__", CDN).replace("__GAME_HOST__", GAME_HOST_DEFAULT)

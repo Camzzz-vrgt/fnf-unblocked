@@ -37,7 +37,7 @@
   window.FNFSettings = {
     get, set, applyCloak, CLOAKS,
     bgmOn:  () => get("bgm", "1") === "1",
-    bgmVol: () => Math.min(1, Math.max(0, parseFloat(get("bgm-vol", "55")) / 100)),
+    bgmVol: () => Math.min(1, Math.max(0, parseFloat(get("bgm-vol", "15")) / 100)),
     sfxOn:  () => get("sfx", "1") === "1",
     sfxVol: () => Math.min(1, Math.max(0, parseFloat(get("sfx-vol", "100")) / 100)),
   };
