@@ -1,0 +1,14 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({ headless: true });
+const p = await b.newPage();
+const done = new Set(), pending = new Map(), fails = [];
+p.on('request', r => pending.set(r.url(), Date.now()));
+p.on('requestfinished', r => { pending.delete(r.url()); done.add(r.url()); });
+p.on('requestfailed', r => { pending.delete(r.url()); fails.push(r.url().slice(-70) + ' ' + (r.failure()?.errorText || '')); });
+await p.goto('https://fnf.booksforschool.online/pkg/friday-night-funkin/index.html', { waitUntil: 'load', timeout: 60000 });
+await p.waitForTimeout(40000);
+console.log('done=' + done.size, 'pending=' + pending.size, 'fails=' + fails.length);
+console.log('--- pending:');
+for (const [u, t] of pending) console.log('  ' + ((Date.now() - t) / 1000).toFixed(0) + 's', u.slice(-90));
+console.log('--- fails:', fails.slice(0, 8).join('\n  '));
+await b.close(); process.exit(0);

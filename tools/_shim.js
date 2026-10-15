@@ -1,23 +1,24 @@
 /* fnf-cdn-shim */
 (function(){
-  // site-locks try to kill the page via about:blank â€” block that nav only
+  // site-locks try to kill the page via about:blank — block that nav only
   try{if("navigation" in window)navigation.addEventListener("navigate",
     function(e){var u="";try{u=e.destination&&e.destination.url||""}catch(_){}
       if(/^about:/.test(u))e.preventDefault()})}catch(_){}
-  var CH=null;
-  var PM="/pkg/x/";
+  var CH=__CHUNKS__;
+  var PM="/pkg/__SLUG__/";
   function key(u){try{
     var r=new URL(typeof u==="string"?u:(u&&u.url)||"",document.baseURI);
     var i=r.pathname.indexOf(PM);
     return i>=0?decodeURIComponent(r.pathname.slice(i+PM.length)):null;
   }catch(e){return null}}
-  // flaky hosts 502 under the preload burst â€” throttle same-package
+  // flaky hosts 502 under the preload burst — throttle same-package
   // requests to a few in flight and retry failures with backoff
   var RETRY=5,MAXC=6,_active=0,_queue=[];
   function gate(f){if(_active<MAXC){_active++;f()}else _queue.push(f)}
   function ungate(){_active--;var f=_queue.shift();
     if(f){_active++;f()}}
   function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+  window.__gate=function(){return {a:_active,q:_queue.length}}
   function part(u,i){return u+".part"+(i<10?"0":"")+i}
   var of=window.fetch&&window.fetch.bind(window);
   function rfetch(u,o){var t=0;
@@ -36,7 +37,7 @@
     if(k!=null&&CH&&CH[k])return blob(u).then(function(b){
       return new Response(b)});
     return k!=null?rfetch(u,o):of(u,o)};
-  // retry <img>/<audio>/<video>/<source> loads â€” elements bypass fetch/XHR.
+  // retry <img>/<audio>/<video>/<source> loads — elements bypass fetch/XHR.
   // capture-phase error listener runs before the engine's own handlers, so
   // retryable failures never surface as errors; the last failure passes
   // through. img src-sets are also gated on the shared concurrency limit.
@@ -113,6 +114,8 @@
     function again(){return self._k!=null&&self._t<RETRY&&!self._dead}
     function fin(){if(self._gated){self._gated=false;ungate()}}
     function go(){
+      if(self._dead)return;
+      self._done=false;
       try{
         r.open(self._m,self._u,self._a!==false);
         if(self._h)self._h.forEach(function(h){
@@ -121,20 +124,31 @@
           if(self["$"+p]!==undefined)try{r[p]=self["$"+p]}catch(e){}});
         r.send(self._b);
       }catch(e){fire("error");fire("loadend")}}
-    // swallow per-attempt events; only the final outcome reaches the engine
-    r.onreadystatechange=function(){};
-    r.onloadstart=function(){};
-    r.onprogress=function(){};
+    // swallow only retried attempts — progress and intermediate states
+    // must reach the engine (it counts loaded bytes via progress events)
+    function retry(){self._done="retry";self._t++;setTimeout(go,350*self._t)}
+    r.onreadystatechange=function(e){
+      if(r.readyState!==4){fire("readystatechange",e);return}
+      if(self._done===true){fire("readystatechange",e);return}
+      if(self._done==="retry")return;
+      if(r.status>=500&&again()){retry();return}
+      self._done=true;fin();fire("readystatechange",e)};
+    r.onloadstart=function(e){fire("loadstart",e)};
+    r.onprogress=function(e){fire("progress",e)};
     r.onload=function(e){
-      if(r.status>=500&&again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("readystatechange",e);fire("load",e);fire("loadend")};
+      if(self._done==="retry")return;
+      if(r.status>=500&&again()&&self._done!==true){retry();return}
+      if(self._done!==true){self._done=true;fin()}
+      fire("load",e);fire("loadend")};
     r.onerror=function(e){
-      if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("error",e);fire("loadend")};
+      if(self._done)return;
+      if(again()){retry();return}
+      self._done=true;fin();fire("error",e);fire("loadend")};
     r.ontimeout=function(e){
-      if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("timeout",e);fire("loadend")};
-    r.onabort=function(e){fin();fire("abort",e);fire("loadend")};
+      if(self._done)return;
+      if(again()){retry();return}
+      self._done=true;fin();fire("timeout",e);fire("loadend")};
+    r.onabort=function(e){self._done=true;fin();fire("abort",e);fire("loadend")};
     self.send=function(b){
       self._b=b;
       if(!self._c){

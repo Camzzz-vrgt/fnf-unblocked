@@ -91,7 +91,7 @@
       var a=self._l[t]||[],i=a.indexOf(f);if(i>=0)a.splice(i,1)};
     self.dispatchEvent=function(){return true};
     function fire(t,e){var ev=e||{type:t,target:self};
-      var h=self["_"+t];if(h)h.call(self,ev);
+      var h=self["on"+t];if(h)h.call(self,ev);
       (self._l[t]||[]).slice().forEach(function(f){f.call(self,ev)})}
     ["status","statusText","readyState","response","responseText",
      "responseXML","upload","timeout","withCredentials","responseType",
@@ -115,6 +115,8 @@
     function again(){return self._k!=null&&self._t<RETRY&&!self._dead}
     function fin(){if(self._gated){self._gated=false;ungate()}}
     function go(){
+      if(self._dead)return;
+      self._done=false;
       try{
         r.open(self._m,self._u,self._a!==false);
         if(self._h)self._h.forEach(function(h){
@@ -123,20 +125,31 @@
           if(self["$"+p]!==undefined)try{r[p]=self["$"+p]}catch(e){}});
         r.send(self._b);
       }catch(e){fire("error");fire("loadend")}}
-    // swallow per-attempt events; only the final outcome reaches the engine
-    r.onreadystatechange=function(){};
-    r.onloadstart=function(){};
-    r.onprogress=function(){};
+    // swallow only retried attempts — progress and intermediate states
+    // must reach the engine (it counts loaded bytes via progress events)
+    function retry(){self._done="retry";self._t++;setTimeout(go,350*self._t)}
+    r.onreadystatechange=function(e){
+      if(r.readyState!==4){fire("readystatechange",e);return}
+      if(self._done===true){fire("readystatechange",e);return}
+      if(self._done==="retry")return;
+      if(r.status>=500&&again()){retry();return}
+      self._done=true;fin();fire("readystatechange",e)};
+    r.onloadstart=function(e){fire("loadstart",e)};
+    r.onprogress=function(e){fire("progress",e)};
     r.onload=function(e){
-      if(r.status>=500&&again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("readystatechange",e);fire("load",e);fire("loadend")};
+      if(self._done==="retry")return;
+      if(r.status>=500&&again()&&self._done!==true){retry();return}
+      if(self._done!==true){self._done=true;fin()}
+      fire("load",e);fire("loadend")};
     r.onerror=function(e){
-      if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("error",e);fire("loadend")};
+      if(self._done)return;
+      if(again()){retry();return}
+      self._done=true;fin();fire("error",e);fire("loadend")};
     r.ontimeout=function(e){
-      if(again()){self._t++;setTimeout(go,350*self._t);return}
-      fin();fire("timeout",e);fire("loadend")};
-    r.onabort=function(e){fin();fire("abort",e);fire("loadend")};
+      if(self._done)return;
+      if(again()){retry();return}
+      self._done=true;fin();fire("timeout",e);fire("loadend")};
+    r.onabort=function(e){self._done=true;fin();fire("abort",e);fire("loadend")};
     self.send=function(b){
       self._b=b;
       if(!self._c){

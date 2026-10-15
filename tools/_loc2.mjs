@@ -1,0 +1,10 @@
+import { chromium } from "playwright-core";
+const b = await chromium.launch({ headless: true });
+const p = await b.newPage();
+const reqs = [];
+p.on('request', r => reqs.push(r.url()));
+await p.goto('http://127.0.0.1:8690/games/friday-night-funkin/index.html', { waitUntil: 'load', timeout: 60000 });
+await p.waitForTimeout(25000);
+console.log('total=' + reqs.length);
+console.log(reqs.slice(-15).map(u => u.split('/').slice(-2).join('/')).join('\n'));
+await b.close(); process.exit(0);
